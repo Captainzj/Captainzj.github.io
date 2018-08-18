@@ -14,20 +14,20 @@
     
     
     
-    <title>编译原理知识汇总 | Go Further | Stay Hungry, Stay Foolish</title>
+    <title>编译原理知识点 | Go Further | Stay Hungry, Stay Foolish</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#142421">
     
     
     <meta name="keywords" content="Compiler">
-    <meta name="description" content="第一章 引言1.从面向机器的语言到面向人类的语言汇编指令：用符号表示的指令被称为汇编指令汇编语言：汇编指令的集合称为汇编语言">
+    <meta name="description" content="【阅读时间】20min 11001words【阅读内容】XD编译原理教材知识汇总">
 <meta name="keywords" content="Compiler">
 <meta property="og:type" content="article">
-<meta property="og:title" content="编译原理知识汇总">
+<meta property="og:title" content="编译原理知识点">
 <meta property="og:url" content="http://yoursite.com/2018/08/18/编译原理知识汇总/index.html">
 <meta property="og:site_name" content="Go Further">
-<meta property="og:description" content="第一章 引言1.从面向机器的语言到面向人类的语言汇编指令：用符号表示的指令被称为汇编指令汇编语言：汇编指令的集合称为汇编语言">
+<meta property="og:description" content="【阅读时间】20min 11001words【阅读内容】XD编译原理教材知识汇总">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/5267500-d4008e57f6e52e2c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/5267500-cbf938bbdf9e6dc1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
@@ -39,10 +39,10 @@
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/5267500-4fbb189fad81f346.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/5267500-48f1ed06a22fec8e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/5267500-4801bd8adeba1c8b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-08-17T18:01:17.733Z">
+<meta property="og:updated_time" content="2018-08-18T03:22:02.614Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="编译原理知识汇总">
-<meta name="twitter:description" content="第一章 引言1.从面向机器的语言到面向人类的语言汇编指令：用符号表示的指令被称为汇编指令汇编语言：汇编指令的集合称为汇编语言">
+<meta name="twitter:title" content="编译原理知识点">
+<meta name="twitter:description" content="【阅读时间】20min 11001words【阅读内容】XD编译原理教材知识汇总">
 <meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/5267500-d4008e57f6e52e2c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
     
         <link rel="alternate" type="application/atom+xml" title="Go Further" href="/atom.xml">
@@ -124,13 +124,13 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">编译原理知识汇总</div>
+        <div class="flex-col header-title ellipsis">编译原理知识点</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="検索">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -146,7 +146,7 @@
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">编译原理知识汇总</h1>
+        <h1 class="title">编译原理知识点</h1>
         <h5 class="subtitle">
             
                 <time datetime="2018-08-17T17:32:07.000Z" itemprop="datePublished" class="page-time">
@@ -180,7 +180,7 @@
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">编译原理知识汇总</h1>
+        <h1 class="post-card-title">编译原理知识点</h1>
         <div class="post-meta">
             <time class="post-time" title="2018-08-18 01:32:07" datetime="2018-08-17T17:32:07.000Z"  itemprop="datePublished">2018-08-18</time>
 
@@ -197,8 +197,9 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h2 id="第一章-引言"><a href="#第一章-引言" class="headerlink" title="第一章 引言"></a>第一章 引言</h2><h3 id="1-从面向机器的语言到面向人类的语言"><a href="#1-从面向机器的语言到面向人类的语言" class="headerlink" title="1.从面向机器的语言到面向人类的语言"></a>1.从面向机器的语言到面向人类的语言</h3><p><strong>汇编指令：</strong>用符号表示的指令被称为汇编指令<br><strong>汇编语言：</strong>汇编指令的集合称为汇编语言</p>
+            <p>【阅读时间】20min 11001words<br>【阅读内容】XD编译原理教材知识汇总</p>
 <a id="more"></a>
+<h2 id="第一章-引言"><a href="#第一章-引言" class="headerlink" title="第一章 引言"></a>第一章 引言</h2><h3 id="1-从面向机器的语言到面向人类的语言"><a href="#1-从面向机器的语言到面向人类的语言" class="headerlink" title="1.从面向机器的语言到面向人类的语言"></a>1.从面向机器的语言到面向人类的语言</h3><p><strong>汇编指令：</strong>用符号表示的指令被称为汇编指令<br><strong>汇编语言：</strong>汇编指令的集合称为汇编语言</p>
 <h3 id="2-语言之间的翻译"><a href="#2-语言之间的翻译" class="headerlink" title="2.语言之间的翻译"></a>2.语言之间的翻译</h3><p><strong>转换</strong>(也被称为<strong>预处理</strong>)：高级语言之间的翻译，如<code>FORTRAN</code>到<code>ADA</code>的转换<br><strong>编译：</strong>高级语言可以直接翻译成机器语言，也可以翻译成汇编语言，这两个翻译过程称为编译<br><strong>汇编：</strong>从汇编语言到机器语言的翻译被称为汇编<br><strong>交叉汇编：</strong>将一个汇编语言程序汇编成为可在另一机器上运行的机器指令成为交叉汇编<br><strong>反汇编：</strong>把机器语言翻译成汇编语言<br><strong>反编译：</strong>把汇编语言翻译成高级语言</p>
 <figure class="image-bubble">
                 <div class="img-lightbox">
@@ -657,7 +658,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2018-08-17T18:01:17.733Z" itemprop="dateUpdated">2018-08-18 02:01:17</time>
+    最終更新：<time datetime="2018-08-18T03:22:02.614Z" itemprop="dateUpdated">2018-08-18 11:22:02</time>
 </span><br>
 
 
@@ -691,7 +692,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/08/18/编译原理知识汇总/&title=《编译原理知识汇总》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/08/18/编译原理知识汇总/&title=《编译原理知识点》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -701,7 +702,7 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/08/18/编译原理知识汇总/&title=《编译原理知识汇总》 — Go Further&source=第一章 引言1.从面向机器的语言到面向人类的语言汇编指令：用符号表示的指令被称为汇编指令汇编语言：汇编指令的集合称为汇编语言" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/08/18/编译原理知识汇总/&title=《编译原理知识点》 — Go Further&source=【阅读时间】20min 11001words【阅读内容】XD编译原理教材知识汇总" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -711,7 +712,7 @@
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《编译原理知识汇总》 — Go Further&url=http://yoursite.com/2018/08/18/编译原理知识汇总/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《编译原理知识点》 — Go Further&url=http://yoursite.com/2018/08/18/编译原理知识汇总/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
@@ -818,7 +819,7 @@
             
                 <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
             
-            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+            <span>このブログの内容物は<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja">クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際ライセンスの下に提供されています</a></span>
         </p>
     </div>
     <div class="bottom">
@@ -840,7 +841,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/08/18/编译原理知识汇总/&title=《编译原理知识汇总》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/08/18/编译原理知识汇总/&title=《编译原理知识点》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -850,7 +851,7 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/08/18/编译原理知识汇总/&title=《编译原理知识汇总》 — Go Further&source=第一章 引言1.从面向机器的语言到面向人类的语言汇编指令：用符号表示的指令被称为汇编指令汇编语言：汇编指令的集合称为汇编语言" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/08/18/编译原理知识汇总/&title=《编译原理知识点》 — Go Further&source=【阅读时间】20min 11001words【阅读内容】XD编译原理教材知识汇总" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -860,7 +861,7 @@
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《编译原理知识汇总》 — Go Further&url=http://yoursite.com/2018/08/18/编译原理知识汇总/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《编译原理知识点》 — Go Further&url=http://yoursite.com/2018/08/18/编译原理知识汇总/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
