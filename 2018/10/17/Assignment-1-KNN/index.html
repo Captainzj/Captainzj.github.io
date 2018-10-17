@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>Assignment_1_KNN | Go Further | Stay Hungry, Stay Foolish</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#142421">
+    
+    
+    <meta name="keywords" content="CS231n">
+    <meta name="description" content="【阅读时间】XXX min XXX words【阅读内容】……">
+<meta name="keywords" content="CS231n">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Assignment_1_KNN">
+<meta property="og:url" content="http://yoursite.com/2018/10/17/Assignment-1-KNN/index.html">
+<meta property="og:site_name" content="Go Further">
+<meta property="og:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/5267500-c13d6a6b322baa1a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2018-10-17T11:19:58.542Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Assignment_1_KNN">
+<meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/5267500-c13d6a6b322baa1a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+    
+        <link rel="alternate" type="application/atom+xml" title="Go Further" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">CaptainSE</h5>
+          <a href="mailto:841145636@qq.com" title="841145636@qq.com" class="mail">841145636@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                Home
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/Captainzj" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Assignment_1_KNN</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header page-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Assignment_1_KNN</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-10-17T09:39:40.000Z" itemprop="datePublished" class="page-time">
+  2018-10-17
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/MachineLearning/">MachineLearning</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    <article class="page-article fade" itemprop="blogPage">
+        <div class="post-content page-content" id="page-content" itemprop="pageContent">
+            <p>【阅读时间】XXX min XXX words<br>【阅读内容】……</p>
+<a id="more"></a>
+<h5 id="代码实现部分"><a href="#代码实现部分" class="headerlink" title="代码实现部分"></a>代码实现部分</h5><ul>
+<li>计算test样本与training样本的L2距离.<br>L2距离的定义：$$ L_2(I_1,I_2) = \sqrt{{\sum_p{(I_1^p - I_2^p)^2}}} $$ </li>
+</ul>
+<div class="card">
+<ol>
+<li><code>Open cs231n/classifiers/k_nearest_neighbor.py and implement compute_distances_two_loops.</code><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">compute_distances_two_loops</span><span class="params">(self, X)</span>:</span></span><br><span class="line">    num_test = X.shape[<span class="number">0</span>]</span><br><span class="line">    num_train = self.X_train.shape[<span class="number">0</span>]</span><br><span class="line">    dists = np.zeros((num_test, num_train))</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(num_test):</span><br><span class="line">      <span class="keyword">for</span> j <span class="keyword">in</span> range(num_train):</span><br><span class="line"></span><br><span class="line">        <span class="comment">#####################################################################</span></span><br><span class="line">        <span class="comment"># <span class="doctag">TODO:</span>                                                             #</span></span><br><span class="line">        <span class="comment"># Compute the l2 distance between the ith test point and the jth    #</span></span><br><span class="line">        <span class="comment"># training point, and store the result in dists[i, j]. You should   #</span></span><br><span class="line">        <span class="comment"># not use a loop over dimension.                                    #</span></span><br><span class="line">        <span class="comment">#####################################################################</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line">        <span class="comment">### X - X_test.shape == (500,3072)  X_train.shape = (5000,3072)</span></span><br><span class="line">        <span class="comment"># dists[i][j] = np.sqrt(np.sum((X[i]-self.X_train[j])**2))    </span></span><br><span class="line">        dists[i][j] = np.sqrt(np.sum(np.square(X[i,:] - self.X_train[j,:])))</span><br><span class="line">        <span class="comment">#####################################################################</span></span><br><span class="line">        <span class="comment">#                       END OF YOUR CODE                            #</span></span><br><span class="line">        <span class="comment">#####################################################################</span></span><br><span class="line">    <span class="keyword">return</span> dists  <span class="comment">#dists.shape = (500, 5000)</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</div>
+<div class="card">
+<ol start="2">
+<li><code>Now lets speed up distance matrix computation by using partial vectorization with one loop. Implement the function compute_distances_one_loop</code></li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">compute_distances_one_loop</span><span class="params">(self, X)</span>:</span></span><br><span class="line">  num_test = X.shape[<span class="number">0</span>]</span><br><span class="line">  num_train = self.X_train.shape[<span class="number">0</span>]</span><br><span class="line">  dists = np.zeros((num_test, num_train))</span><br><span class="line">  <span class="keyword">for</span> i <span class="keyword">in</span> range(num_test):</span><br><span class="line">    <span class="comment">#######################################################################</span></span><br><span class="line">    <span class="comment"># <span class="doctag">TODO:</span>                                                               #</span></span><br><span class="line">    <span class="comment"># Compute the l2 distance between the ith test point and all training #</span></span><br><span class="line">    <span class="comment"># points, and store the result in dists[i, :].                        #</span></span><br><span class="line">    <span class="comment">#######################################################################</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line">    <span class="comment"># dists[i] = np.sqrt(np.sum((self.X_train - X[i]) ** 2, 1))</span></span><br><span class="line">    dists[i] = np.sqrt(np.sum(np.square(self.X_train - X[i]), axis=<span class="number">1</span>))</span><br><span class="line">    </span><br><span class="line">    <span class="comment">#######################################################################</span></span><br><span class="line">    <span class="comment">#                         END OF YOUR CODE                            #</span></span><br><span class="line">    <span class="comment">#######################################################################</span></span><br><span class="line">  <span class="keyword">return</span> dists  <span class="comment"># dists.shape = (500, 5000)</span></span><br></pre></td></tr></table></figure>
+</div>
+<div class="card">
+<ol start="3">
+<li><code>Now implement the fully vectorized version inside compute_distances_no_loops</code></li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">compute_distances_no_loops</span><span class="params">(self, X)</span>:</span></span><br><span class="line"></span><br><span class="line">    num_test = X.shape[<span class="number">0</span>]</span><br><span class="line">    num_train = self.X_train.shape[<span class="number">0</span>]</span><br><span class="line">    dists = np.zeros((num_test, num_train)) </span><br><span class="line">    <span class="comment">#########################################################################</span></span><br><span class="line">    <span class="comment"># <span class="doctag">TODO:</span>                                                                 #</span></span><br><span class="line">    <span class="comment"># Compute the l2 distance between all test points and all training      #</span></span><br><span class="line">    <span class="comment"># points without using any explicit loops, and store the result in      #</span></span><br><span class="line">    <span class="comment"># dists.                                                                #</span></span><br><span class="line">    <span class="comment">#                                                                       #</span></span><br><span class="line">    <span class="comment"># You should implement this function using only basic array operations; #</span></span><br><span class="line">    <span class="comment"># in particular you should not use functions from scipy.                #</span></span><br><span class="line">    <span class="comment">#                                                                       #</span></span><br><span class="line">    <span class="comment"># HINT: Try to formulate the l2 distance using matrix multiplication    #</span></span><br><span class="line">    <span class="comment">#       and two broadcast sums.                                         #</span></span><br><span class="line">    <span class="comment">#########################################################################</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">    dists += np.sum(self.X_train ** <span class="number">2</span>, axis=<span class="number">1</span>).reshape(<span class="number">1</span>, num_train)</span><br><span class="line">    dists += np.sum(X ** <span class="number">2</span>, axis=<span class="number">1</span>).reshape(num_test, <span class="number">1</span>) <span class="comment"># reshape for broadcasting</span></span><br><span class="line">    dists -= <span class="number">2</span> * np.dot(X, self.X_train.T)</span><br><span class="line">    dists = np.sqrt(dists)</span><br><span class="line">    <span class="comment">#########################################################################</span></span><br><span class="line">    <span class="comment">#                         END OF YOUR CODE                              #</span></span><br><span class="line">    <span class="comment">#########################################################################</span></span><br><span class="line">    <span class="keyword">return</span> dists</span><br></pre></td></tr></table></figure>
+</div>
+<div class="card">
+<ol start="4">
+<li><code>Now implement the function predict_labels</code></li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">predict_labels</span><span class="params">(self, dists, k=<span class="number">1</span>)</span>:</span></span><br><span class="line">    </span><br><span class="line">    num_test = dists.shape[<span class="number">0</span>]</span><br><span class="line">    y_pred = np.zeros(num_test)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(num_test):</span><br><span class="line">      <span class="comment"># A list of length k storing the labels of the k nearest neighbors to</span></span><br><span class="line">      <span class="comment"># the ith test point.</span></span><br><span class="line">      closest_y = []</span><br><span class="line">      <span class="comment">#########################################################################</span></span><br><span class="line">      <span class="comment"># <span class="doctag">TODO:</span>                                                                 #</span></span><br><span class="line">      <span class="comment"># Use the distance matrix to find the k nearest neighbors of the ith    #</span></span><br><span class="line">      <span class="comment"># testing point, and use self.y_train to find the labels of these       #</span></span><br><span class="line">      <span class="comment"># neighbors. Store these labels in closest_y.                           #</span></span><br><span class="line">      <span class="comment"># Hint: Look up the function numpy.argsort.                             #</span></span><br><span class="line">      <span class="comment">#########################################################################</span></span><br><span class="line">      <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">      <span class="comment"># sorted_index = np.argsort(dists[i])</span></span><br><span class="line">      <span class="comment"># closest_y = self.y_train[sorted_index[:k]]</span></span><br><span class="line"></span><br><span class="line">      closest_y = self.y_train[np.argsort(dists[i])[:k]]</span><br><span class="line"></span><br><span class="line">      <span class="comment">#########################################################################</span></span><br><span class="line">      <span class="comment"># <span class="doctag">TODO:</span>                                                                 #</span></span><br><span class="line">      <span class="comment"># Now that you have found the labels of the k nearest neighbors, you    #</span></span><br><span class="line">      <span class="comment"># need to find the most common label in the list closest_y of labels.   #</span></span><br><span class="line">      <span class="comment"># Store this label in y_pred[i]. Break ties by choosing the smaller     #</span></span><br><span class="line">      <span class="comment"># label.                                                                #</span></span><br><span class="line">      <span class="comment">#########################################################################</span></span><br><span class="line">      <span class="keyword">pass</span></span><br><span class="line">      y_pred[i] = np.bincount(closest_y).argmax()</span><br><span class="line"></span><br><span class="line">      <span class="comment"># timeLabel = sorted([(np.sum(np.array(closest_y) == y_), y_) for y_ in set(closest_y)])[-1]</span></span><br><span class="line">      <span class="comment"># y_pred[i] = timeLabel[1]</span></span><br><span class="line"></span><br><span class="line">      <span class="comment"># appear_times = &#123;&#125;</span></span><br><span class="line">      <span class="comment"># for label in closest_y:</span></span><br><span class="line">      <span class="comment">#   if label in appear_times:</span></span><br><span class="line">      <span class="comment">#     appear_times[label] += 1</span></span><br><span class="line">      <span class="comment">#   else:</span></span><br><span class="line">      <span class="comment">#     appear_times[label] = 0</span></span><br><span class="line"></span><br><span class="line">      <span class="comment"># # find most commen label</span></span><br><span class="line">      <span class="comment"># y_pred[i] = max(appear_times, key=lambda x: appear_times[x])</span></span><br><span class="line">      <span class="comment">#########################################################################</span></span><br><span class="line">      <span class="comment">#                           END OF YOUR CODE                            # </span></span><br><span class="line">      <span class="comment">#########################################################################</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> y_pred</span><br></pre></td></tr></table></figure>
+</div>
+<div class="card">
+<ol start="5">
+<li><p><code>We will now determine the best value of this hyperparameter with cross-validation.</code><br>使用cross validation的方法，来选择hyper-parameter超参数k的值.<br>cross validation的原理是，将training样本集分成n份（如下图中的例子，是5份），每一份叫做一个fold，然后依次迭代这n个fold，将其作为validation集合，其余的n-1个fold一起作为training集合，然后进行训练并计算准确率。<br>选择一组候选k值，依次迭代执行上面描述的过程，最终根据准确率，进行评估选择最合适的k值.</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/5267500-c13d6a6b322baa1a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line">num_folds = <span class="number">5</span></span><br><span class="line">k_choices = [<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">8</span>, <span class="number">10</span>, <span class="number">12</span>, <span class="number">15</span>, <span class="number">20</span>, <span class="number">50</span>, <span class="number">100</span>]</span><br><span class="line"></span><br><span class="line">X_train_folds = []</span><br><span class="line">y_train_folds = []</span><br><span class="line"><span class="comment">################################################################################</span></span><br><span class="line"><span class="comment"># <span class="doctag">TODO:</span>                                                                        #</span></span><br><span class="line"><span class="comment"># Split up the training data into folds. After splitting, X_train_folds and    #</span></span><br><span class="line"><span class="comment"># y_train_folds should each be lists of length num_folds, where                #</span></span><br><span class="line"><span class="comment"># y_train_folds[i] is the label vector for the points in X_train_folds[i].     #</span></span><br><span class="line"><span class="comment"># Hint: Look up the numpy array_split function.                                #</span></span><br><span class="line"><span class="comment">################################################################################</span></span><br><span class="line"><span class="comment"># Your code</span></span><br><span class="line">X_train_folds = np.array_split(X_train, num_folds)</span><br><span class="line">y_train_folds = np.array_split(y_train, num_folds)</span><br><span class="line"></span><br><span class="line"><span class="comment">################################################################################</span></span><br><span class="line"><span class="comment">#                                 END OF YOUR CODE                             #</span></span><br><span class="line"><span class="comment">################################################################################</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># A dictionary holding the accuracies for different values of k that we find</span></span><br><span class="line"><span class="comment"># when running cross-validation. After running cross-validation,</span></span><br><span class="line"><span class="comment"># k_to_accuracies[k] should be a list of length num_folds giving the different</span></span><br><span class="line"><span class="comment"># accuracy values that we found when using that value of k.</span></span><br><span class="line">k_to_accuracies = &#123;&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">################################################################################</span></span><br><span class="line"><span class="comment"># <span class="doctag">TODO:</span>                                                                        #</span></span><br><span class="line"><span class="comment"># Perform k-fold cross validation to find the best value of k. For each        #</span></span><br><span class="line"><span class="comment"># possible value of k, run the k-nearest-neighbor algorithm num_folds times,   #</span></span><br><span class="line"><span class="comment"># where in each case you use all but one of the folds as training data and the #</span></span><br><span class="line"><span class="comment"># last fold as a validation set. Store the accuracies for all fold and all     #</span></span><br><span class="line"><span class="comment"># values of k in the k_to_accuracies dictionary.                               #</span></span><br><span class="line"><span class="comment">################################################################################</span></span><br><span class="line"><span class="comment"># Your code</span></span><br><span class="line"><span class="keyword">for</span> k_candi <span class="keyword">in</span> k_choices:</span><br><span class="line">    k_to_accuracies[k_candi] = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(num_folds):</span><br><span class="line">        X_test_hy = X_train_folds[i]</span><br><span class="line">        y_test_hy = y_train_folds[i]</span><br><span class="line">        </span><br><span class="line">        X_train_hy = np.vstack(X_train_folds[<span class="number">0</span>:i]+X_train_folds[i+<span class="number">1</span>:])</span><br><span class="line">        y_train_hy = np.hstack(y_train_folds[<span class="number">0</span>:i]+y_train_folds[i+<span class="number">1</span>:])</span><br><span class="line">        </span><br><span class="line"><span class="comment">#         x_trai = np.array(X_train_folds[:f] + X_train_folds[f+1:])</span></span><br><span class="line"><span class="comment">#         y_trai = np.array(Y_train_folds[:f] + Y_train_folds[f+1:])</span></span><br><span class="line">        </span><br><span class="line"><span class="comment">#         x_trai = x_trai.reshape(-1, x_trai.shape[2])</span></span><br><span class="line"><span class="comment">#         y_trai = y_trai.reshape(-1)</span></span><br><span class="line">        </span><br><span class="line">        classifier.train(X_train_hy, y_train_hy)</span><br><span class="line">        dists_hy = classifier.compute_distances_no_loops(X_test_hy)</span><br><span class="line">        y_test_pred_hy = classifier.predict_labels(dists_hy, k=k_candi)</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># Compute the fraction of correctly predicted examples</span></span><br><span class="line">        num_correct_hy = np.sum(y_test_pred_hy == y_test_hy)</span><br><span class="line">        accuracy_hy = float(num_correct_hy) / len(y_test_hy)</span><br><span class="line">        k_to_accuracies[k_candi].append(accuracy_hy)</span><br><span class="line"></span><br><span class="line"><span class="comment">################################################################################</span></span><br><span class="line"><span class="comment">#                                 END OF YOUR CODE                             #</span></span><br><span class="line"><span class="comment">################################################################################</span></span><br><span class="line"></span><br><span class="line">print(k_to_accuracies)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Print out the computed accuracies</span></span><br><span class="line"><span class="keyword">for</span> k <span class="keyword">in</span> sorted(k_to_accuracies):</span><br><span class="line">    <span class="keyword">for</span> accuracy <span class="keyword">in</span> k_to_accuracies[k]:</span><br><span class="line">        print(<span class="string">'k = %d, accuracy = %f'</span> % (k, accuracy))</span><br></pre></td></tr></table></figure>
+</div>
+<div class="card">
+<h5 id="numpy-matplotlib-部分函数说明"><a href="#numpy-matplotlib-部分函数说明" class="headerlink" title="numpy/matplotlib 部分函数说明"></a>numpy/matplotlib 部分函数说明</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> numpy.flatnonzero():  输入一个矩阵，返回了其中非零元素的位置</span><br><span class="line"></span><br><span class="line"><span class="number">2.</span> numpy.random.choice(a, size=<span class="keyword">None</span>, replace=<span class="keyword">True</span>, p=<span class="keyword">None</span>)</span><br><span class="line">  - a: If an ndarray, a random sample <span class="keyword">is</span> generated <span class="keyword">from</span> its elements. </span><br><span class="line">       If an int, the random sample <span class="keyword">is</span> generated <span class="keyword">as</span> <span class="keyword">if</span> a was np.arange(n) </span><br><span class="line">  - size : int <span class="keyword">or</span> tuple of ints, optional</span><br><span class="line">  - replace : boolean, optional </span><br><span class="line">    If you want only unique samples then this should be false.</span><br><span class="line">  - p : <span class="number">1</span>-D array-like, optional </span><br><span class="line">   The probabilities associated <span class="keyword">with</span> each entry <span class="keyword">in</span> a. If <span class="keyword">not</span> given the sample assumes a uniform distribution over all entries <span class="keyword">in</span> a.</span><br><span class="line"></span><br><span class="line"><span class="number">3.</span> matplotlib.pyplot.subplot(X,X,X)：</span><br><span class="line">  - 前两个数表示子图组成的矩阵的行列数，比如有<span class="number">6</span>个子图，排列成<span class="number">3</span>行<span class="number">2</span>列，那就是subplot(<span class="number">3</span>,<span class="number">2</span>,X)。最后一个数表示要画第X个图了。</span><br><span class="line"></span><br><span class="line"><span class="number">4.</span> matplotlib.pyplot.imshow(X,interpolation=<span class="string">'none'</span>,cmap=<span class="keyword">None</span>)</span><br><span class="line">  - X: 要绘制的图像或数组.</span><br><span class="line">  - interpolation 插值方式 [<span class="keyword">None</span>, <span class="string">'none'</span>, <span class="string">'nearest'</span>, <span class="string">'bilinear'</span>, <span class="string">'bicubic'</span>, <span class="string">'spline16'</span>,</span><br><span class="line">           <span class="string">'spline36'</span>, <span class="string">'hanning'</span>, <span class="string">'hamming'</span>, <span class="string">'hermite'</span>, <span class="string">'kaiser'</span>, <span class="string">'quadric'</span>,</span><br><span class="line">           <span class="string">'catrom'</span>, <span class="string">'gaussian'</span>, <span class="string">'bessel'</span>, <span class="string">'mitchell'</span>, <span class="string">'sinc'</span>, <span class="string">'lanczos'</span>]</span><br><span class="line">  - cmap: 颜色图谱（colormap), 默认绘制为RGB(A)颜色空间.</span><br><span class="line"></span><br><span class="line"><span class="number">5.</span> numpy.reshape(a, newshape, order=<span class="string">'C'</span>)</span><br><span class="line">  - 注：给出一个m*n的矩阵，如果newshape给的参数是（x, <span class="number">-1</span>）,那么函数会自动判别newshape为（x, m*n/x）,这里的x一定要能被m*n整除！</span><br><span class="line"></span><br><span class="line"><span class="number">6.</span> numpy.argsort()：输出排好序的元素下标, a[np.argsort(a)]的结果才是最终排好序的结果.</span><br><span class="line"></span><br><span class="line"><span class="number">7.</span> numpy.binicount(x, weight = <span class="keyword">None</span>, minlength = <span class="keyword">None</span>) </span><br><span class="line">    &gt;&gt;&gt; x = np.array([<span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">7</span>])</span><br><span class="line">    &gt;&gt;&gt; np.bincount(x)</span><br><span class="line">        array([<span class="number">1</span>, <span class="number">3</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>])</span><br><span class="line"></span><br><span class="line"><span class="number">8.</span> x_norm=np.linalg.norm(x, ord=<span class="keyword">None</span>, axis=<span class="keyword">None</span>, keepdims=<span class="keyword">False</span>)  </span><br><span class="line">  - linalg=linear（线性）+algebra（代数），norm则表示范数</span><br><span class="line">  - x: 表示矩阵（也可以是一维）</span><br><span class="line">  - ord：范数类型</span><br><span class="line">    - ord=<span class="number">1</span>：列和的最大值</span><br><span class="line">    - ord=<span class="number">2</span>：|λE-ATA|=<span class="number">0</span>，求特征值，然后求最大特征值的算术平方根</span><br><span class="line">    - ord=np.inf：行和的最大值</span><br><span class="line">  - axis：处理类型</span><br><span class="line">    - axis=<span class="number">1</span>表示按行向量处理，求多个行向量的范数</span><br><span class="line">    - axis=<span class="number">0</span>表示按列向量处理，求多个列向量的范数</span><br><span class="line">    - axis=<span class="keyword">None</span>表示矩阵范数</span><br><span class="line">  - keepding：是否保持矩阵的二维特性</span><br><span class="line">    - <span class="keyword">True</span>表示保持矩阵的二维特性，<span class="keyword">False</span>相反</span><br><span class="line"></span><br><span class="line"><span class="number">9.</span>  np.dot(A, B)：对于二维矩阵，计算真正意义上的矩阵乘积，同线性代数中矩阵乘法的定义.</span><br><span class="line"></span><br><span class="line"><span class="number">10.</span> sum(a, axis=<span class="keyword">None</span>, dtype=<span class="keyword">None</span>, out=<span class="keyword">None</span>, keepdims=&lt;<span class="class"><span class="keyword">class</span> '<span class="title">numpy</span>.<span class="title">_globals</span>.<span class="title">_NoValue</span>'&gt;)</span></span><br><span class="line"><span class="class">  - <span class="title">axis</span> :</span></span><br><span class="line">    - axis = <span class="keyword">None</span>: 对所有元素求和</span><br><span class="line">    - axis = <span class="number">0</span>: 对所有在同一列的元素求和</span><br><span class="line">    - axis = <span class="number">1</span>: 对所有在同一行的元素求和</span><br><span class="line"></span><br><span class="line"><span class="number">11.</span> np.vstack(tup): 沿着竖直方向将矩阵堆叠起来</span><br><span class="line">  - Note: the arrays must have the same shape along all but the first axis. 除开第一维外，被堆叠的矩阵各维度要一致.</span><br><span class="line"></span><br><span class="line"><span class="number">12.</span> np.hstack(tup):沿着水平方向将数组堆叠起来</span><br><span class="line"></span><br><span class="line"><span class="number">13.</span> plt.scatter(X, Y)： 散点图 (x,y)即坐标</span><br></pre></td></tr></table></figure>
+</div>
+<div class="card">
+<h5 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h5><p>即使经过调优，knn算法的准确率也不足30%，可以知道knn算法并不适合用于图像分类学习任务.</p>
+</div>
+<p>参考：<a href="https://www.jianshu.com/p/4f062ba508f0" target="_blank" rel="noopener">cs231n - assignment1 - knn</a>、<a href="https://www.jianshu.com/p/0424cb9ae0d0" target="_blank" rel="noopener">Stanford cs231n Assignment #1 (a) 实现KNN</a></p>
+
+        </div>
+
+        
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </article>
+    
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢老板~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>CaptainSE &copy; 2015 - 2018</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/10/17/Assignment-1-KNN/&title=《Assignment_1_KNN》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/10/17/Assignment-1-KNN/&title=《Assignment_1_KNN》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/10/17/Assignment-1-KNN/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Assignment_1_KNN》 — Go Further&url=http://yoursite.com/2018/10/17/Assignment-1-KNN/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/10/17/Assignment-1-KNN/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACLElEQVR42u3aS5LDIAwFwNz/0pkDOCZPgkyVob1K5WPUXigC6fWKr/flun569/3rd8b3ub6/7MLAwHgs4z28xt+5Y1RXqa77YUUMDIwDGHcL54Hmvxqn7N4dMDAwMJKFx/fJyz4MDAyMeUa+Na2+kxedGBgYZzLy21UPxfKw/mkvjoGB8UDGTCi/fv2T/gYGBsajGL3D+qSkmy8NC1FhYGBszeg1IJOBicVHaUE8GBgYJzNmhiHyX43bD1GxiIGBsSmjV9L1ishVTYUPd8bAwNiaUW1k9pZMRjHyLNr898DAwHgso7c17aXj5NFUebf/GxgYGNsxegVcPvowQ4pWwcDA2JpRHXT4dei9ohMDA+MERu9GM6H0tsrRpxgYGAcwZpqdeVLO25zldI+BgbEdY23TMR+kqKbmqWELDAyMhzPmt6Yzjcxk81wYtsDAwNiUUS3Fes3OmeZltPXFwMA4jJEE3Rut6D2m5rAFBgbGRozxYnm4M63KXjH65dQQAwNjO0Z+uJa3Hlcd3hUaFRgYGMcwZhoASVGYpPWkJXDbyMTAwDiGkSfH+VKvml6/jFxgYGBsx+gdouXscbirxjUwMDD2Zswku2oROT9gkReOGBgY+zF6Sba30V31yJo9BAwMjIcz8sTXK/Kqj6AaLQYGBkY1+VaphXBXJVwMDIwDGNUB0+phXPkgDwMD4wBGPqKatyrz4q+6ZcXAwDiN0au7qiVgHnR1yAwDA2Nrxh8uR/oIxfJXbwAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = 'Go Further | Stay Hungry, Stay Foolish';
+            clearTimeout(titleTime);
+        } else {
+            document.title = 'Go Further | Stay Hungry, Stay Foolish';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
