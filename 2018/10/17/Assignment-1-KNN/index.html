@@ -21,19 +21,19 @@
     
     
     <meta name="keywords" content="CS231n">
-    <meta name="description" content="【阅读时间】XXX min XXX words【阅读内容】……">
+    <meta name="description" content="【阅读时间】8 min 2043 words【阅读内容】……">
 <meta name="keywords" content="CS231n">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Assignment_1_KNN">
 <meta property="og:url" content="http://yoursite.com/2018/10/17/Assignment-1-KNN/index.html">
 <meta property="og:site_name" content="Go Further">
-<meta property="og:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
+<meta property="og:description" content="【阅读时间】8 min 2043 words【阅读内容】……">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/5267500-c13d6a6b322baa1a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-10-17T13:16:44.245Z">
+<meta property="og:updated_time" content="2018-10-17T13:57:56.438Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Assignment_1_KNN">
-<meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
+<meta name="twitter:description" content="【阅读时间】8 min 2043 words【阅读内容】……">
 <meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/5267500-c13d6a6b322baa1a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
     
         <link rel="alternate" type="application/atom+xml" title="Go Further" href="/atom.xml">
@@ -160,10 +160,10 @@
 <div class="container body-wrap">
     <article class="page-article fade" itemprop="blogPage">
         <div class="post-content page-content" id="page-content" itemprop="pageContent">
-            <p>【阅读时间】XXX min XXX words<br>【阅读内容】……</p>
+            <p>【阅读时间】8 min 2043 words<br>【阅读内容】……</p>
 <a id="more"></a>
-<h5 id="代码实现部分"><a href="#代码实现部分" class="headerlink" title="代码实现部分"></a><a href="https://github.com/Captainzj/CS231n_Assignment/tree/master/assignment1/cs231n/classifiers" target="_blank" rel="noopener">代码实现部分</a></h5><ul>
-<li>计算test样本与training样本的L2距离.<br>L2距离的定义：$$ L_2(I_1,I_2) = \sqrt{{\sum_p{(I_1^p - I_2^p)^2}}} $$ </li>
+<h5 id="效果演示"><a href="#效果演示" class="headerlink" title="效果演示"></a><a href="https://github.com/Captainzj/CS231n_Assignment/blob/master/assignment1/knn.pdf" target="_blank" rel="noopener">效果演示</a></h5><h5 id="代码实现部分"><a href="#代码实现部分" class="headerlink" title="代码实现部分"></a><a href="https://github.com/Captainzj/CS231n_Assignment/tree/master/assignment1/cs231n/classifiers" target="_blank" rel="noopener">代码实现部分</a></h5><ul>
+<li>计算test样本与training样本的L2距离.<br>L2距离的定义：$$ L_2(I_1,I_2) = \sqrt{{\sum_p{(I_1^p - I_2^p)^2}}} $$</li>
 </ul>
 <div class="card">
 <ol>
@@ -179,7 +179,7 @@
 </div>
 <div class="card">
 <ol start="3">
-<li><code>Now implement the fully vectorized version inside compute_distances_no_loops</code><a href="https://blog.csdn.net/zhyh1435589631/article/details/54236643/#2234-computedistancesnoloops" target="_blank" rel="noopener">数学说明</a></li>
+<li><code>Now implement the fully vectorized version inside compute_distances_no_loops</code> <a href="https://blog.csdn.net/zhyh1435589631/article/details/54236643/#2234-computedistancesnoloops" target="_blank" rel="noopener">数学说明</a></li>
 </ol>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">compute_distances_no_loops</span><span class="params">(self, X)</span>:</span></span><br><span class="line"></span><br><span class="line">    num_test = X.shape[<span class="number">0</span>]</span><br><span class="line">    num_train = self.X_train.shape[<span class="number">0</span>]</span><br><span class="line">    dists = np.zeros((num_test, num_train)) </span><br><span class="line">    <span class="comment">#########################################################################</span></span><br><span class="line">    <span class="comment"># <span class="doctag">TODO:</span>                                                                 #</span></span><br><span class="line">    <span class="comment"># Compute the l2 distance between all test points and all training      #</span></span><br><span class="line">    <span class="comment"># points without using any explicit loops, and store the result in      #</span></span><br><span class="line">    <span class="comment"># dists.                                                                #</span></span><br><span class="line">    <span class="comment">#                                                                       #</span></span><br><span class="line">    <span class="comment"># You should implement this function using only basic array operations; #</span></span><br><span class="line">    <span class="comment"># in particular you should not use functions from scipy.                #</span></span><br><span class="line">    <span class="comment">#                                                                       #</span></span><br><span class="line">    <span class="comment"># HINT: Try to formulate the l2 distance using matrix multiplication    #</span></span><br><span class="line">    <span class="comment">#       and two broadcast sums.                                         #</span></span><br><span class="line">    <span class="comment">#########################################################################</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">    dists += np.sum(self.X_train ** <span class="number">2</span>, axis=<span class="number">1</span>).reshape(<span class="number">1</span>, num_train)</span><br><span class="line">    dists += np.sum(X ** <span class="number">2</span>, axis=<span class="number">1</span>).reshape(num_test, <span class="number">1</span>) <span class="comment"># reshape for broadcasting</span></span><br><span class="line">    dists -= <span class="number">2</span> * np.dot(X, self.X_train.T)</span><br><span class="line">    dists = np.sqrt(dists)</span><br><span class="line">    <span class="comment">#########################################################################</span></span><br><span class="line">    <span class="comment">#                         END OF YOUR CODE                              #</span></span><br><span class="line">    <span class="comment">#########################################################################</span></span><br><span class="line">    <span class="keyword">return</span> dists	<span class="comment"># dists.shape = (500, 5000)</span></span><br></pre></td></tr></table></figure>
 </div>
@@ -322,7 +322,7 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/10/17/Assignment-1-KNN/&title=《Assignment_1_KNN》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/10/17/Assignment-1-KNN/&title=《Assignment_1_KNN》 — Go Further&source=【阅读时间】8 min 2043 words【阅读内容】……" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
