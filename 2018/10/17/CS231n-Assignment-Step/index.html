@@ -14,7 +14,7 @@
     
     
     
-    <title>Python_Note | Go Further | Stay Hungry, Stay Foolish</title>
+    <title>CS231n_Assignment_Step | Go Further | Stay Hungry, Stay Foolish</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#142421">
@@ -23,14 +23,14 @@
     <meta name="keywords" content="">
     <meta name="description" content="【阅读时间】XXX min XXX words【阅读内容】……">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python_Note">
-<meta property="og:url" content="http://yoursite.com/2018/10/04/Python-Note/index.html">
+<meta property="og:title" content="CS231n_Assignment_Step">
+<meta property="og:url" content="http://yoursite.com/2018/10/17/CS231n-Assignment-Step/index.html">
 <meta property="og:site_name" content="Go Further">
 <meta property="og:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-06T06:25:05.122Z">
+<meta property="og:updated_time" content="2018-10-17T13:03:27.060Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python_Note">
+<meta name="twitter:title" content="CS231n_Assignment_Step">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
     
         <link rel="alternate" type="application/atom+xml" title="Go Further" href="/atom.xml">
@@ -112,7 +112,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">Python_Note</div>
+        <div class="flex-col header-title ellipsis">CS231n_Assignment_Step</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -134,11 +134,11 @@
 <header class="content-header page-header">
 
     <div class="container fade-scale">
-        <h1 class="title">Python_Note</h1>
+        <h1 class="title">CS231n_Assignment_Step</h1>
         <h5 class="subtitle">
             
-                <time datetime="2018-10-04T05:28:48.000Z" itemprop="datePublished" class="page-time">
-  2018-10-04
+                <time datetime="2018-10-17T12:57:13.000Z" itemprop="datePublished" class="page-time">
+  2018-10-17
 </time>
 
 
@@ -157,26 +157,14 @@
         <div class="post-content page-content" id="page-content" itemprop="pageContent">
             <p>【阅读时间】XXX min XXX words<br>【阅读内容】……</p>
 <a id="more"></a>
-<h5 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h5><ul>
-<li><p>字符串是一个sequence</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">word = <span class="string">'hello'</span></span><br><span class="line"><span class="keyword">for</span> letter <span class="keyword">in</span> word:</span><br><span class="line">    print(letter)</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h4 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h4><ul>
-<li>python函数参数传递可以理解为就是变量传值操作</li>
-</ul>
-<h4 id="enumerate-使用"><a href="#enumerate-使用" class="headerlink" title="enumerate()使用"></a>enumerate()使用</h4><ul>
-<li>如果对一个列表，既要遍历索引又要遍历元素时，首先可以这样写：</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">list1 = [<span class="string">"这"</span>, <span class="string">"是"</span>, <span class="string">"一个"</span>, <span class="string">"测试"</span>]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range (len(list1)):</span><br><span class="line">    <span class="keyword">print</span> i ,list1[i]<span class="number">123</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>上述方法有些累赘，利用enumerate()会更加直接和优美：</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">list1 = [<span class="string">"这"</span>, <span class="string">"是"</span>, <span class="string">"一个"</span>, <span class="string">"测试"</span>]</span><br><span class="line"><span class="keyword">for</span> index, item <span class="keyword">in</span> enumerate(list1):</span><br><span class="line">    <span class="keyword">print</span> index, item</span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line"><span class="number">0</span> 这</span><br><span class="line"><span class="number">1</span> 是</span><br><span class="line"><span class="number">2</span> 一个</span><br><span class="line"><span class="number">3</span> 测试<span class="number">12345678</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>enumerate还可以接收第二个参数，用于指定索引起始值，如：</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">list1 = [<span class="string">"这"</span>, <span class="string">"是"</span>, <span class="string">"一个"</span>, <span class="string">"测试"</span>]</span><br><span class="line"><span class="keyword">for</span> index, item <span class="keyword">in</span> enumerate(list1, <span class="number">1</span>):</span><br><span class="line">    <span class="keyword">print</span> index, item</span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line"><span class="number">1</span> 这</span><br><span class="line"><span class="number">2</span> 是</span><br><span class="line"><span class="number">3</span> 一个</span><br><span class="line"><span class="number">4</span> 测试</span><br></pre></td></tr></table></figure>
+<div class="card">
+<ol>
+<li>完成代码，跑通 （保存page.pdf）</li>
+<li>查找资料(多找些博客，择优)，理解细节</li>
+<li>理清思路，写博客总结</li>
+<li>upload博客、 git push “CS231n_ssignment”</li>
+</ol>
+</div>
 
         </div>
 
@@ -277,7 +265,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/10/04/Python-Note/&title=《Python_Note》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/10/17/CS231n-Assignment-Step/&title=《CS231n_Assignment_Step》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -287,22 +275,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/10/04/Python-Note/&title=《Python_Note》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/10/17/CS231n-Assignment-Step/&title=《CS231n_Assignment_Step》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/10/04/Python-Note/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/10/17/CS231n-Assignment-Step/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Python_Note》 — Go Further&url=http://yoursite.com/2018/10/04/Python-Note/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《CS231n_Assignment_Step》 — Go Further&url=http://yoursite.com/2018/10/17/CS231n-Assignment-Step/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/10/04/Python-Note/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/10/17/CS231n-Assignment-Step/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -313,7 +301,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACMklEQVR42u3aSW7DMBAEQP//0wqQayKle+gYEFU6GYK2YgBmttcrPo7v4+zMz99n11+fP7vmbQcGBsZtGcflccZoP27lvREVAwPjAYzrTTZ5dLsTni1EvnwYGBgYbcCXfEr7iRgYGBgrG+56IJgEmhgYGBjryWSyHLNg8R9zcQwMjBsy2sbAJ3//Y38DAwPjJozjTUe7BLM2wOm9GBgYWzOuS2nJ/taOTSQlvDahxcDA2JuRvHI2hBEVyEYtgV+ux8DA2JpxXehv97T83vXtOFonDAyM7RgrjcykrL+y1UatCAwMjE0Zs+GG2VBFHlzWaS0GBsbWjPVkMk+AZ1WydgvGwMB4AqMF5KlvPimRB6YYGBgYnwkK28C0DgoxMDC2Y7QNyHzM63pR2sJc3TbAwMC4LWM22jUrgSW8hF38l8DAwNiCsTIwMUt92xJe1IPFwMB4ACNvKLapaR4y1r2L2d8BAwNjI0a+zbVnZqOrUbCIgYHxAEZblE/As7Gw/AkYGBjPZLQDFskrV9qldWiIgYGxNaPl1aHbwghFPXWLgYGxHWOWOs7GUtvntMVBDAyM/RhHebSfkie3syV4Jb0IDAyMmzNWMsT1oa71oPMNiS4GBsZNGO0mmwSCs7Jd20LAwMB4GiPPeou24ruK/klYiYGBgRGPjs3uzUc6Tt+LgYGBMRrzur6mzbP/CDoxMDAewEiS2GQ8It8iV8ZbMTAwnsaYjTisNBpnwWVb1MPAwNiC8QVxD7wqGfUpBQAAAABJRU5ErkJggg==" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJklEQVR42u3awXLrIAwF0P7/T6fbN/Oa9F5BF4bDKuM4geOFLIS+vuLx+me01/+/p/23bQMDA+OxjNfHkdzzeeIWkM+LgYFxGyOZPo97yaKTuZK1YWBgYKwsbvZoMDAwMPYyPvPWE0cMDAyMdhO7Uqrb9cg27MUxMDAeyFhZyl9//pPzDQwMjEcxXuVoU8AkcLfHDz+sCgMD42hGWybLSbvSxKL5AwMD42hG+4NZE8YsKdzW74aBgXEcoy3QJ4Ww/Nv8QfzCw8DAOJqRJIVJyrgSNLe9MTAwMB7OmB1bzgpk62W4tw8OAwPjaEae9q0UyFYKcEWDBQYGxjWMPCFbKbq1KWb0SsDAwDia0cauHNAGzdm8GBgYNzA+B8FiGxkUy2ZHnlEZDgMD4wJGHvLakT+I5IG+vY6BgXEooyhmlVvNWaqX/xsGBsZtjPVmi+QYMr+Sf1vchIGB8VhGPsEsdM42yfkm9petLAYGxnGMtm+hbe1qY+Os7QMDA+NURl7kSpbVBu71Jg8MDIzbGCtp36zQnxyFJivBwMC4gbFSjGurYXl4rQMuBgbGcYxZ20SbJs62ssWBKAYGxtGMvYFydgCwkg5iYGDcw2jbT2cb1DwBzdcQ7cUxMDAOYrSBLz/U3NA2kbwrMDAwMMrjgVniuHKAioGBgZGnhnnwnTVYvP0tBgbGBYy2bWLWmp+niXULGgYGxtGMla1j0ba1vIi6AIeBgXEC4xt7VzaU7O4rTQAAAABJRU5ErkJggg==" alt="微信分享二维码">
 </div>
 
 
