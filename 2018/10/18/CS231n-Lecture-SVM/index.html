@@ -14,7 +14,7 @@
     
     
     
-    <title>CS231n_Assignment1_SVM | Go Further | Stay Hungry, Stay Foolish</title>
+    <title>CS231n_Lecture_SVM | Go Further | Stay Hungry, Stay Foolish</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#142421">
@@ -24,7 +24,7 @@
     <meta name="description" content="【阅读时间】XXX min XXX words【阅读内容】……">
 <meta name="keywords" content="CS231n">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CS231n_Assignment1_SVM">
+<meta property="og:title" content="CS231n_Lecture_SVM">
 <meta property="og:url" content="http://yoursite.com/2018/10/18/CS231n-Lecture-SVM/index.html">
 <meta property="og:site_name" content="Go Further">
 <meta property="og:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
@@ -36,16 +36,10 @@
 <meta property="og:image" content="http://cs231n.github.io/assets/margin.jpg">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/5267500-69a890113e7bf295.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://github.com/HusterHope/blogimage/raw/master/CS231n3-3.png">
-<meta property="og:image" content="https://www.zhihu.com/equation?tex=W%3D0">
-<meta property="og:image" content="https://www.zhihu.com/equation?tex=f%28x_i%3BW%29%3DWx_i">
-<meta property="og:image" content="https://www.zhihu.com/equation?tex=L_i%3D-f_%7By_i%7D%2Blog%28%5Csum_je%5E%7Bf_j%7D%29">
-<meta property="og:image" content="https://www.zhihu.com/equation?tex=f_j%28z%29%3D%5Cfrac%7Be%5E%7Bz_j%7D%7D%7B%5Csum_ke%5E%7Bz_k%7D%7D)被称作**softmax">
-<meta property="og:image" content="https://www.zhihu.com/equation?tex=P%28y_i%7Cx_i%2CW%29%3D%5Cfrac%7Be%5E%7Bf_%7By_i%7D%7D%7D%7B%5Csum_je%5E%7Bf_j%7D%7D">
-<meta property="og:image" content="https://www.zhihu.com/equation?tex=y_i)的**归一化概率**。从概率论的角度来理解，我们就是在`最小化正确分类的负对数概率`(令正确分类的概率尽趋近于1，即令错误分类的概率均趋近于0">
 <meta property="og:image" content="http://cs231n.github.io/assets/svmvssoftmax.png">
-<meta property="og:updated_time" content="2018-10-20T08:37:02.627Z">
+<meta property="og:updated_time" content="2018-10-20T08:50:48.533Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CS231n_Assignment1_SVM">
+<meta name="twitter:title" content="CS231n_Lecture_SVM">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
 <meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/5267500-a17e4ca30a831bd0.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
     
@@ -128,13 +122,13 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">CS231n_Assignment1_SVM</div>
+        <div class="flex-col header-title ellipsis">CS231n_Lecture_SVM</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="検索">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -150,7 +144,7 @@
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">CS231n_Assignment1_SVM</h1>
+        <h1 class="title">CS231n_Lecture_SVM</h1>
         <h5 class="subtitle">
             
                 <time datetime="2018-10-18T12:01:32.000Z" itemprop="datePublished" class="page-time">
@@ -175,7 +169,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#课程链接"><span class="post-toc-number">1.</span> <span class="post-toc-text">课程链接</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#线性分类器"><span class="post-toc-number">2.</span> <span class="post-toc-text">线性分类器</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#评分函数-score-function"><span class="post-toc-number">3.</span> <span class="post-toc-text">评分函数 score function</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#线性映射"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">线性映射</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#偏差和权重的合并技巧Bias-trick"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">偏差和权重的合并技巧Bias trick</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#将线性分类器看作模板匹配"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">将线性分类器看作模板匹配</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#图像数据预处理-Image-data-preprocessing"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">图像数据预处理 Image data preprocessing</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#损失函数-Loss-function"><span class="post-toc-number">4.</span> <span class="post-toc-text">损失函数 Loss function</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#多类支持向量机损失-Multiclass-Support-Vector-Machine-Loss"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">多类支持向量机损失 Multiclass Support Vector Machine Loss</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Data-Loss"><span class="post-toc-number">4.1.1.</span> <span class="post-toc-text">Data Loss</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#正则化-Regularization"><span class="post-toc-number">4.1.2.</span> <span class="post-toc-text">正则化 Regularization</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#完整的多类SVM损失函数"><span class="post-toc-number">4.1.3.</span> <span class="post-toc-text">完整的多类SVM损失函数</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#设置超参△和λ"><span class="post-toc-number">4.1.4.</span> <span class="post-toc-text">设置超参△和λ</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Softmax分类器"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">Softmax分类器</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#softmax函数"><span class="post-toc-number">4.2.1.</span> <span class="post-toc-text">softmax函数</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#交叉熵"><span class="post-toc-number">4.2.2.</span> <span class="post-toc-text">交叉熵</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#SVM和Softmax的比较"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">SVM和Softmax的比较</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#小结"><span class="post-toc-number">5.</span> <span class="post-toc-text">小结</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#课程链接"><span class="post-toc-number">1.</span> <span class="post-toc-text">课程链接</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#线性分类器"><span class="post-toc-number">2.</span> <span class="post-toc-text">线性分类器</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#评分函数-Score-function"><span class="post-toc-number">3.</span> <span class="post-toc-text">评分函数 Score function</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#线性映射"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">线性映射</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#偏差和权重的合并Bias-trick"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">偏差和权重的合并Bias trick</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#将线性分类器看作模板匹配"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">将线性分类器看作模板匹配</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#图像数据预处理-Image-data-preprocessing"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">图像数据预处理 Image data preprocessing</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#损失函数-Loss-function"><span class="post-toc-number">4.</span> <span class="post-toc-text">损失函数 Loss function</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#多类支持向量机损失-Multiclass-Support-Vector-Machine-Loss"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">多类支持向量机损失 Multiclass Support Vector Machine Loss</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Data-Loss"><span class="post-toc-number">4.1.1.</span> <span class="post-toc-text">Data Loss</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#正则化-Regularization"><span class="post-toc-number">4.1.2.</span> <span class="post-toc-text">正则化 Regularization</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#完整的多类SVM损失函数"><span class="post-toc-number">4.1.3.</span> <span class="post-toc-text">完整的多类SVM损失函数</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#设置超参-Delta-和λ"><span class="post-toc-number">4.1.4.</span> <span class="post-toc-text">设置超参$\Delta$和λ</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Softmax分类器"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">Softmax分类器</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#softmax函数"><span class="post-toc-number">4.2.1.</span> <span class="post-toc-text">softmax函数</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#交叉熵"><span class="post-toc-number">4.2.2.</span> <span class="post-toc-text">交叉熵</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#SVM和Softmax的比较"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">SVM和Softmax的比较</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#小结"><span class="post-toc-number">5.</span> <span class="post-toc-text">小结</span></a></li></ol>
         </nav>
     </aside>
 
@@ -184,7 +178,7 @@
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">CS231n_Assignment1_SVM</h1>
+        <h1 class="post-card-title">CS231n_Lecture_SVM</h1>
         <div class="post-meta">
             <time class="post-time" title="2018-10-18 20:01:32" datetime="2018-10-18T12:01:32.000Z"  itemprop="datePublished">2018-10-18</time>
 
@@ -212,18 +206,18 @@
 <h3 id="线性分类器"><a href="#线性分类器" class="headerlink" title="线性分类器"></a>线性分类器</h3><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="https://upload-images.jianshu.io/upload_images/5267500-a17e4ca30a831bd0.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="classifier.jpeg" title="">
+                    <img src="https://upload-images.jianshu.io/upload_images/5267500-a17e4ca30a831bd0.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" title="">
                 </div>
-                <div class="image-caption">classifier.jpeg</div>
+                <div class="image-caption"></div>
             </figure>
 <p>图像空间的示意图,其中每个图像是一个点,且有3个分类器.以红色的汽车分类器为例，红线表示空间中汽车分类分数为0的点的集合，红色的箭头表示分值上升的方向。所有红线右边的点的分数值均为正，且线性升高。红线左边的点分值为负，且线性降低.   <a href="http://vision.stanford.edu/teaching/cs231n-demos/linear-classify/" target="_blank" rel="noopener">Interactive web demo</a></p>
 <hr>
-<h3 id="评分函数-score-function"><a href="#评分函数-score-function" class="headerlink" title="评分函数 score function"></a>评分函数 score function</h3><h4 id="线性映射"><a href="#线性映射" class="headerlink" title="线性映射"></a>线性映射</h4><figure class="image-bubble">
+<h3 id="评分函数-Score-function"><a href="#评分函数-Score-function" class="headerlink" title="评分函数 Score function"></a>评分函数 Score function</h3><h4 id="线性映射"><a href="#线性映射" class="headerlink" title="线性映射"></a>线性映射</h4><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="https://upload-images.jianshu.io/upload_images/5267500-1bd42914c6f44015.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="score map.jpg" title="">
+                    <img src="https://upload-images.jianshu.io/upload_images/5267500-1bd42914c6f44015.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" title="">
                 </div>
-                <div class="image-caption">score map.jpg</div>
+                <div class="image-caption"></div>
             </figure>
 <p>$$ 
 f(x_i,W,b)=Wx_i+b
@@ -237,12 +231,12 @@ $$ </p>
 <li>我们的目的就是找到最优化的参数W、b,即为每一个分类找到最好的模板.</li>
 <li>评分函数在正确的分类的位置应当得到最高的评分（score）</li>
 </ol>
-<h4 id="偏差和权重的合并技巧Bias-trick"><a href="#偏差和权重的合并技巧Bias-trick" class="headerlink" title="偏差和权重的合并技巧Bias trick"></a>偏差和权重的合并技巧Bias trick</h4><figure class="image-bubble">
+<h4 id="偏差和权重的合并Bias-trick"><a href="#偏差和权重的合并Bias-trick" class="headerlink" title="偏差和权重的合并Bias trick"></a>偏差和权重的合并Bias trick</h4><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://cs231n.github.io/assets/wb.jpeg" alt="img" title="">
+                    <img src="http://cs231n.github.io/assets/wb.jpeg" alt="" title="">
                 </div>
-                <div class="image-caption">img</div>
+                <div class="image-caption"></div>
             </figure>
 <p>$$ 
 f(x_i,W,b)=Wx_i+b\rightarrow f(x_i,W) = Wx_i
@@ -288,7 +282,7 @@ $$ </p>
             </figure>针对第i个数据的多类SVM的损失函数定义：<br>$$ 
 L_i=\sum_{j\not=y_i}max(0,s_j-s_{y_i}+\Delta)
 $$ 
-<h5 id="Data-Loss"><a href="#Data-Loss" class="headerlink" title="Data Loss"></a>Data Loss</h5><figure class="image-bubble">
+<h5 id="Data-Loss"><a href="#Data-Loss" class="headerlink" title="Data Loss"></a><strong>Data Loss</strong></h5><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
                     <img src="https://github.com/HusterHope/blogimage/raw/master/CS231n3-3.png" alt="" title="">
@@ -299,54 +293,20 @@ $$
 L =  { \frac{1}{N} \sum_i L_i }
 $$ </p>
 <h5 id="正则化-Regularization"><a href="#正则化-Regularization" class="headerlink" title="正则化 Regularization"></a><strong>正则化 Regularization</strong></h5><p><strong>防止过拟合</strong>：向损失函数增加一个<strong>正则化惩罚（regularization penalty） R(W)</strong>部分，使其不能完全匹配训练集.<br>最常用的正则化惩罚是L2范式，L2范式通过对所有参数进行逐元素的平方惩罚来<strong>抑制大数值的权重</strong>.对大数值权重进行惩罚，可以提升其泛化能力，因为这就意味着没有哪个维度能够独自对于整体分值有过大的影响.<br>$$<br>R(W) = \sum_k\sum_l W_{k,l}^2<br>$$</p>
-<p>需要注意的是，和权重不同，偏差没有这样的效果，因为它们并不控制输入维度上的影响强度。因此通常<code>只</code>对权重<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://www.zhihu.com/equation?tex=W%3D0" alt="W](https://www.zhihu.com/equation?tex=W)正则化，而不正则化偏差![b](https://www.zhihu.com/equation?tex=b)。因为正则化惩罚的存在，不可能在所有的例子中得到0的损失值，这是因为只有当![W=0" title="">
-                </div>
-                <div class="image-caption">W](https://www.zhihu.com/equation?tex=W)正则化，而不正则化偏差![b](https://www.zhihu.com/equation?tex=b)。因为正则化惩罚的存在，不可能在所有的例子中得到0的损失值，这是因为只有当![W=0</div>
-            </figure>的特殊情况下，才能得到损失值为0</p>
-<h5 id="完整的多类SVM损失函数"><a href="#完整的多类SVM损失函数" class="headerlink" title="完整的多类SVM损失函数"></a>完整的多类SVM损失函数</h5><p>$$<br>L =  \underbrace{ \frac{1}{N} \sum_i L_i }<em>\text{data loss} + \underbrace{ \lambda R(W) }</em>\text{regularization loss} \\<br>$$</p>
-<p>将其展开完整公式是：<br>$$<br>L = \frac{1}{N} \sum_i \sum_{j\neq y_i} \left[ \max(0, f(x_i; W)_j - f(x_i; W)_{y_i} + \Delta) \right] + \lambda \sum_k\sum_l W_{k,l}^2<br>$$</p>
-<p>对于每一个输入数据x_i都有一个L值</p>
-<h5 id="设置超参△和λ"><a href="#设置超参△和λ" class="headerlink" title="设置超参△和λ"></a>设置超参△和λ</h5><p>超参数△和λ失函数中的数据损失和正则化损失之间的权衡。理解这一点的关键是要知道，权重<strong>W</strong>的大小对于分类分值有直接影响（当然对他们的差异也有直接影响）：当我们将<strong>W</strong>中值缩小，分类分值之间的差异也变小，反之亦然。因此，不同分类分值之间的边界的具体值（比如△=1或△=100).从某些角度来看是没意义的，因为<code>权重自己就可以控制差异变大和缩小</code>。也就是说，真正的权衡是我们允许权重能够变大到何种程度（通过<code>正则化强度λ</code>来控制）</p>
+<p>需要注意的是，和权重不同，偏差没有这样的效果，因为它们并不控制输入维度上的影响强度。因此通常<code>只</code>对权重$W$正则化，而不正则化偏差$b$。因为正则化惩罚的存在，不可能在所有的例子中得到0的损失值，这是因为只有当$W=0$的特殊情况下，才能得到损失值为0</p>
+<h5 id="完整的多类SVM损失函数"><a href="#完整的多类SVM损失函数" class="headerlink" title="完整的多类SVM损失函数"></a>完整的多类SVM损失函数</h5><p>$$ 
+L =  \underbrace{ \frac{1}{N} \sum_i L_i }_\text{data loss} + \underbrace{ \lambda R(W) }_\text{regularization loss} \\\\
+$$ </p>
+<p>将其展开完整公式是：<br>$$ 
+L = \frac{1}{N} \sum_i \sum_{j\neq y_i} \left[ \max(0, f(x_i; W)_j - f(x_i; W)_{y_i} + \Delta) \right] + \lambda \sum_k\sum_l W_{k,l}^2
+$$ </p>
+<p>对于每一个输入数据$x_i$都有一个L值</p>
+<h5 id="设置超参-Delta-和λ"><a href="#设置超参-Delta-和λ" class="headerlink" title="设置超参$\Delta$和λ"></a>设置超参$\Delta$和λ</h5><p>超参数$\Delta$和λ失函数中的数据损失和正则化损失之间的权衡。理解这一点的关键是要知道，权重<strong>W</strong>的大小对于分类分值有直接影响（当然对他们的差异也有直接影响）：当我们将<strong>W</strong>中值缩小，分类分值之间的差异也变小，反之亦然。因此，不同分类分值之间的边界的具体值（比如$\Delta$=1或$\Delta$=100).从某些角度来看是没意义的，因为<code>权重自己就可以控制差异变大和缩小</code>。也就是说，真正的权衡是我们允许权重能够变大到何种程度（通过<code>正则化强度λ</code>来控制）</p>
 <hr>
-<h4 id="Softmax分类器"><a href="#Softmax分类器" class="headerlink" title="Softmax分类器"></a>Softmax分类器</h4><p>与SVM不同，Softmax的输出（归一化的分类概率）更加直观，并且从概率上可以解释。在Softmax分类器中，函数映射<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://www.zhihu.com/equation?tex=f%28x_i%3BW%29%3DWx_i" alt="f(x_i;W)=Wx_i" title="">
-                </div>
-                <div class="image-caption">f(x_i;W)=Wx_i</div>
-            </figure>保持不变，但将这些评分值视为每个分类的未归一化的对数概率，并且将<em>折叶损失（hinge loss）</em>替换为<strong>交叉熵损失</strong>（<strong>cross-entropy loss）</strong></p>
-<p>公式如下：<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://www.zhihu.com/equation?tex=L_i%3D-f_%7By_i%7D%2Blog%28%5Csum_je%5E%7Bf_j%7D%29" alt="displaystyle Li=-log(frac{e^{f_{y_i}}}{sum_je^{f_j}})](https://www.zhihu.com/equation?tex=%5Cdisplaystyle+Li%3D-log%28%5Cfrac%7Be%5E%7Bf_%7By_i%7D%7D%7D%7B%5Csum_je%5E%7Bf_j%7D%7D%29) 或等价的 ![L_i=-f_{y_i}+log(sum_je^{f_j})" title="">
-                </div>
-                <div class="image-caption">displaystyle Li=-log(frac{e^{f_{y_i}}}{sum_je^{f_j}})](https://www.zhihu.com/equation?tex=%5Cdisplaystyle+Li%3D-log%28%5Cfrac%7Be%5E%7Bf_%7By_i%7D%7D%7D%7B%5Csum_je%5E%7Bf_j%7D%7D%29) 或等价的 ![L_i=-f_{y_i}+log(sum_je^{f_j})</div>
-            </figure></p>
-<h5 id="softmax函数"><a href="#softmax函数" class="headerlink" title="softmax函数"></a>softmax函数</h5><p>函数<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://www.zhihu.com/equation?tex=f_j%28z%29%3D%5Cfrac%7Be%5E%7Bz_j%7D%7D%7B%5Csum_ke%5E%7Bz_k%7D%7D)被称作**softmax" alt="f_j(z)=frac{e^{z_j}}{sum_ke^{z_k}}" title="函数**.函数对输入向量z(score值">
-                </div>
-                <div class="image-caption">函数**.函数对输入向量z(score值</div>
-            </figure>进行压缩，输出一个向量，其中每个元素值在0到1之间，且所有元素之和为1.</p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://www.zhihu.com/equation?tex=P%28y_i%7Cx_i%2CW%29%3D%5Cfrac%7Be%5E%7Bf_%7By_i%7D%7D%7D%7B%5Csum_je%5E%7Bf_j%7D%7D" alt="P(y_i|x_i,W)=frac{e^{f_{y_i}}}{sum_je^{f_j}}" title="">
-                </div>
-                <div class="image-caption">P(y_i|x_i,W)=frac{e^{f_{y_i}}}{sum_je^{f_j}}</div>
-            </figure>
-<p>可以解释为是给定图像数据<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://www.zhihu.com/equation?tex=y_i)的**归一化概率**。从概率论的角度来理解，我们就是在`最小化正确分类的负对数概率`(令正确分类的概率尽趋近于1，即令错误分类的概率均趋近于0" alt="x_i](https://www.zhihu.com/equation?tex=x_i)，以![W](https://www.zhihu.com/equation?tex=W)为参数，分配给正确分类标签![y_i" title="">
-                </div>
-                <div class="image-caption">x_i](https://www.zhihu.com/equation?tex=x_i)，以![W](https://www.zhihu.com/equation?tex=W)为参数，分配给正确分类标签![y_i</div>
-            </figure>，这可以看做是在进行<em>最大似然估计</em>（MLE）。</p>
-<h5 id="交叉熵"><a href="#交叉熵" class="headerlink" title="交叉熵"></a>交叉熵</h5><p>在“真实”分布(未知)$p$和估计分布(样本分布)$q$之间的<em>交叉熵</em>定义如下： $\displaystyle H(p,q)=-\sum_xp(x) logq(x)$</p>
+<h4 id="Softmax分类器"><a href="#Softmax分类器" class="headerlink" title="Softmax分类器"></a>Softmax分类器</h4><p>与SVM不同，Softmax的输出（归一化的分类概率）更加直观，并且从概率上可以解释。在Softmax分类器中，函数映射$f(x_i;W)=Wx_i$保持不变，但将这些评分值视为每个分类的未归一化的对数概率，并且将<em>折叶损失（hinge loss）</em>替换为<strong>交叉熵损失</strong>（<strong>cross-entropy loss）</strong></p>
+<p>公式如下：$\displaystyle Li=-log(\frac{e^{f_{y_i}}}{\sum_je^{f_j}})$ 或等价于 $L_i=-f_{y_i}+log(\sum_je^{f_j})$</p>
+<h5 id="softmax函数"><a href="#softmax函数" class="headerlink" title="softmax函数"></a>softmax函数</h5><p>函数$f_j(z)=\frac{e^{z_j}}{\sum_ke^{z_k}}$被称作<strong>softmax 函数</strong>.函数对输入向量z(score值)进行压缩，输出一个向量，其中每个元素值在0到1之间，且所有元素之和为1.<br>$$<br>P(y_i|x_i,W)=\frac{e^{f_{y_i}}}{\sum_je^{f_j}}<br>$$<br>可以解释为是给定图像数据$x_i$，以$W$为参数，分配给正确分类标签$y_i$的<strong>归一化概率</strong>。从概率论的角度来理解，我们就是在<code>最小化正确分类的负对数概率</code>(令正确分类的概率尽趋近于1，即令错误分类的概率均趋近于0)，这可以看做是在进行<em>最大似然估计</em>（MLE）。</p>
+<h5 id="交叉熵"><a href="#交叉熵" class="headerlink" title="交叉熵"></a>交叉熵</h5><p>在“真实”分布(未知)$p$和估计分布(样本分布)$q$之间的<strong>交叉熵</strong>定义： $\displaystyle H(p,q)=-\sum_xp(x) logq(x)$</p>
 <p>交叉熵损失函数“想要”<strong>预测分布的所有概率密度都在正确分类</strong>上,让预测分布与真实分布保持一致。Softmax分类器所做的就是<code>最小化</code>在<code>估计分类概率</code>（就是上面的$e^{f_{y_i}}/\sum_je^{f_j}$）和<code>“真实”分布</code>之间的<code>交叉熵</code>，在这个解释中，“真实”分布就是所有概率密度都分布在正确的类别上（比如：$p=[0,…1,…,0]$中在$y_i$的位置就有一个单独的1）</p>
 <hr>
 <h4 id="SVM和Softmax的比较"><a href="#SVM和Softmax的比较" class="headerlink" title="SVM和Softmax的比较"></a>SVM和Softmax的比较</h4><figure class="image-bubble">
@@ -363,7 +323,7 @@ $$ </p>
 <p><strong>Softmax分类器为每个分类提供了“可能性”</strong>：可能性分布的集中或离散程度是由正则化参数λ直接决定的，λ是你能直接控制的一个输入参数。随着正则化参数λ不断增强，权重数值会越来越小，最后输出的概率会接近于均匀分布。这就是说，softmax分类器算出来的概率最好是看成一种对于分类正确性的置信水平。</p>
 <hr>
 <p><strong>在实际使用中，SVM和Softmax经常是相似的</strong>：通常说来，两种分类器的表现差别很小，不同的人对于哪个分类器更好有不同的看法。</p>
-<p>SVM更加“局部目标化（local objective）”.<code>SVM对于数字个体的细节是不关心的</code>：如果分数是[10, -100, -100]或者[10, 9, 9]，对于SVM(△=1)来说没什么不同，只要满足超过边界值等于1，那么损失值就等于0。SVM只要边界值被满足了就满意了，不会超过限制去细微地操作具体分数。举例说来，一个汽车的分类器应该把他的大量精力放在如何分辨小轿车和大卡车上，而不应该纠结于如何与青蛙进行区分，因为区分青蛙得到的评分已经足够低了。</p>
+<p>SVM更加“局部目标化（local objective）”.<code>SVM对于数字个体的细节是不关心的</code>：如果分数是[10, -100, -100]或者[10, 9, 9]，对于SVM($\Delta$=1)来说没什么不同，只要满足超过边界值等于1，那么损失值就等于0。SVM只要边界值被满足了就满意了，不会超过限制去细微地操作具体分数。举例说来，一个汽车的分类器应该把他的大量精力放在如何分辨小轿车和大卡车上，而不应该纠结于如何与青蛙进行区分，因为区分青蛙得到的评分已经足够低了。</p>
 <p>softmax分类器对于分数是永远不会满意的：正确分类总能得到更高的可能性，错误分类总能得到更低的可能性，损失值总是能够更小。</p>
 <hr>
 <h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><ul>
@@ -382,7 +342,7 @@ $$ </p>
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-10-20T08:37:02.627Z" itemprop="dateUpdated">2018-10-20 16:37:02</time>
+    最終更新：<time datetime="2018-10-20T08:50:48.533Z" itemprop="dateUpdated">2018-10-20 16:50:48</time>
 </span><br>
 
 
@@ -416,7 +376,7 @@ $$ </p>
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/10/18/CS231n-Lecture-SVM/&title=《CS231n_Assignment1_SVM》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/10/18/CS231n-Lecture-SVM/&title=《CS231n_Lecture_SVM》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -426,7 +386,7 @@ $$ </p>
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/10/18/CS231n-Lecture-SVM/&title=《CS231n_Assignment1_SVM》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/10/18/CS231n-Lecture-SVM/&title=《CS231n_Lecture_SVM》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -436,7 +396,7 @@ $$ </p>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《CS231n_Assignment1_SVM》 — Go Further&url=http://yoursite.com/2018/10/18/CS231n-Lecture-SVM/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《CS231n_Lecture_SVM》 — Go Further&url=http://yoursite.com/2018/10/18/CS231n-Lecture-SVM/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
@@ -543,7 +503,7 @@ $$ </p>
             
                 <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
             
-            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+            <span>このブログの内容物は<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja">クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際ライセンスの下に提供されています</a></span>
         </p>
     </div>
     <div class="bottom">
@@ -565,7 +525,7 @@ $$ </p>
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/10/18/CS231n-Lecture-SVM/&title=《CS231n_Assignment1_SVM》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/10/18/CS231n-Lecture-SVM/&title=《CS231n_Lecture_SVM》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -575,7 +535,7 @@ $$ </p>
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/10/18/CS231n-Lecture-SVM/&title=《CS231n_Assignment1_SVM》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/10/18/CS231n-Lecture-SVM/&title=《CS231n_Lecture_SVM》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -585,7 +545,7 @@ $$ </p>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《CS231n_Assignment1_SVM》 — Go Further&url=http://yoursite.com/2018/10/18/CS231n-Lecture-SVM/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《CS231n_Lecture_SVM》 — Go Further&url=http://yoursite.com/2018/10/18/CS231n-Lecture-SVM/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
