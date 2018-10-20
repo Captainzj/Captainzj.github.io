@@ -21,18 +21,21 @@
     
     
     <meta name="keywords" content="CS231n">
-    <meta name="description" content="【阅读时间】XXX min XXX words【阅读内容】……">
+    <meta name="description" content="【阅读时间】XXX min XXX words【阅读内容】…… 课程链接参考课程笔记：Optimization: Stochastic Gradient Descent 笔记翻译：最优化笔记（上）、最优化笔记（下） 损失函数可视化损失函数的分段线性结构">
 <meta name="keywords" content="CS231n">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CS231n_Lecture_Optimization">
 <meta property="og:url" content="http://yoursite.com/2018/10/20/CS231n-Lecture-Optimization/index.html">
 <meta property="og:site_name" content="Go Further">
-<meta property="og:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
+<meta property="og:description" content="【阅读时间】XXX min XXX words【阅读内容】…… 课程链接参考课程笔记：Optimization: Stochastic Gradient Descent 笔记翻译：最优化笔记（上）、最优化笔记（下） 损失函数可视化损失函数的分段线性结构">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-20T09:18:50.527Z">
+<meta property="og:image" content="https://pic3.zhimg.com/80/3f6fbcd487b1c214e8fea1ea66eb413e_hd.jpg">
+<meta property="og:image" content="http://cs231n.github.io/assets/dataflow.jpeg">
+<meta property="og:updated_time" content="2018-10-20T11:21:45.621Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CS231n_Lecture_Optimization">
-<meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
+<meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】…… 课程链接参考课程笔记：Optimization: Stochastic Gradient Descent 笔记翻译：最优化笔记（上）、最优化笔记（下） 损失函数可视化损失函数的分段线性结构">
+<meta name="twitter:image" content="https://pic3.zhimg.com/80/3f6fbcd487b1c214e8fea1ea66eb413e_hd.jpg">
     
         <link rel="alternate" type="application/atom+xml" title="Go Further" href="/atom.xml">
     
@@ -119,7 +122,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="検索">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -157,6 +160,13 @@
 
 <div class="container body-wrap">
     
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#课程链接参考"><span class="post-toc-number">1.</span> <span class="post-toc-text">课程链接参考</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#损失函数可视化"><span class="post-toc-number">2.</span> <span class="post-toc-text">损失函数可视化</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#损失函数的分段线性结构"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">损失函数的分段线性结构</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#最优化-Optimization"><span class="post-toc-number">3.</span> <span class="post-toc-text">最优化 Optimization</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#策略-1：一个差劲的初始方案：随机搜索"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">策略#1：一个差劲的初始方案：随机搜索</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#策略-2：随机本地搜索"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">策略#2：随机本地搜索</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#策略-3：跟随梯度"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">策略#3：跟随梯度</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#梯度计算"><span class="post-toc-number">4.</span> <span class="post-toc-text">梯度计算</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#利用有限差值计算梯度"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">利用有限差值计算梯度</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#微分分析计算梯度"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">微分分析计算梯度</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#梯度下降"><span class="post-toc-number">5.</span> <span class="post-toc-text">梯度下降</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#小批量数据梯度下降（Mini-batch-gradient-descent）"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">小批量数据梯度下降（Mini-batch gradient descent）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#随机梯度下降（Stochastic-Gradient-Descent-简称SGD）"><span class="post-toc-number">5.1.1.</span> <span class="post-toc-text">随机梯度下降（Stochastic Gradient Descent 简称SGD）</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#小结"><span class="post-toc-number">6.</span> <span class="post-toc-text">小结</span></a></li></ol>
+        </nav>
+    </aside>
+
 
 <article id="post-CS231n-Lecture-Optimization"
   class="post-article article-type-post fade" itemprop="blogPost">
@@ -180,6 +190,57 @@
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
             <p>【阅读时间】XXX min XXX words<br>【阅读内容】……</p>
+<h4 id="课程链接参考"><a href="#课程链接参考" class="headerlink" title="课程链接参考"></a>课程链接参考</h4><p>课程笔记：<a href="http://cs231n.github.io/optimization-1/" target="_blank" rel="noopener">Optimization: Stochastic Gradient Descent</a></p>
+<p>笔记翻译：<a href="https://zhuanlan.zhihu.com/p/21360434?refer=intelligentunit" target="_blank" rel="noopener">最优化笔记（上）</a>、<a href="https://zhuanlan.zhihu.com/p/21387326?refer=intelligentunit" target="_blank" rel="noopener">最优化笔记（下）</a></p>
+<h4 id="损失函数可视化"><a href="#损失函数可视化" class="headerlink" title="损失函数可视化"></a>损失函数可视化</h4><h5 id="损失函数的分段线性结构"><a href="#损失函数的分段线性结构" class="headerlink" title="损失函数的分段线性结构"></a>损失函数的分段线性结构</h5><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://pic3.zhimg.com/80/3f6fbcd487b1c214e8fea1ea66eb413e_hd.jpg" alt="img" title="">
+                </div>
+                <div class="image-caption">img</div>
+            </figure>
+<p>从一个维度方向上对数据损失值的展示。x轴方向就是一个权重，y轴就是损失值。数据损失是多个部分组合而成。其中每个部分要么是某个权重的<code>独立部分</code>，要么是该权重的线性函数与0阈值的比较。</p>
+<h4 id="最优化-Optimization"><a href="#最优化-Optimization" class="headerlink" title="最优化 Optimization"></a>最优化 Optimization</h4><ul>
+<li>最优化的目标就是找到能够最小化损失函数值的<strong>W</strong></li>
+</ul>
+<h5 id="策略-1：一个差劲的初始方案：随机搜索"><a href="#策略-1：一个差劲的初始方案：随机搜索" class="headerlink" title="策略#1：一个差劲的初始方案：随机搜索"></a>策略#1：一个差劲的初始方案：随机搜索</h5><p>既然确认参数集<strong>W</strong>的好坏蛮简单的，那第一个想到的（差劲）方法，就是可以<code>随机尝试</code>很多不同的权重，然后看其中哪个最好。</p>
+<p><strong>核心思路：迭代优化</strong>。我们的策略是从随机权重开始，然后迭代取优，从而获得更低的损失值。</p>
+<h5 id="策略-2：随机本地搜索"><a href="#策略-2：随机本地搜索" class="headerlink" title="策略#2：随机本地搜索"></a><strong>策略#2：随机本地搜索</strong></h5><p>第一个策略可以看做是每走一步都尝试几个随机方向，如果某个方向是向山下的，就向该方向走一步。这次我们从一个随机$W$开始，然后生成一个<code>随机的扰动</code>$\delta W$ ，只有当$W+\delta W$的损失值变低，我们才会更新。</p>
+<p>评价： 较策略一准确率更高些，但依然不够高，且过于浪费计算资源</p>
+<h5 id="策略-3：跟随梯度"><a href="#策略-3：跟随梯度" class="headerlink" title="策略#3：跟随梯度"></a><strong>策略#3：跟随梯度</strong></h5><p>前两个策略中，我们是尝试在权重空间中找到一个方向，沿着该方向能降低损失函数的损失值。其实不需要随机寻找方向，因为可以<code>直接计算出最好的方向</code>，这就是从数学上计算出最陡峭的方向。在蒙眼徒步者的比喻中，这个方法就好比是感受我们脚下山体的倾斜程度，然后向着<code>最陡峭</code>的下降方向下山。这个方向就是损失函数的<strong>梯度（gradient）</strong>.注：梯度就是在每个维度上偏导数所形成的向量。</p>
+<h4 id="梯度计算"><a href="#梯度计算" class="headerlink" title="梯度计算"></a>梯度计算</h4><ol>
+<li>缓慢的<code>近似</code>方法（<strong>数值梯度法</strong>），实现相对简单，但耗费计算资源太多</li>
+<li><strong>分析梯度法</strong> 计算迅速，结果<code>精确</code>，但是实现时容易出错，且需要使用微分</li>
+</ol>
+<p>在实际操作时常常将<code>分析梯度法</code>的结果和<code>数值梯度法</code>的结果作比较，以此来<code>检查</code>其实现的正确性，这个步骤叫做<strong>梯度检查</strong></p>
+<h5 id="利用有限差值计算梯度"><a href="#利用有限差值计算梯度" class="headerlink" title="利用有限差值计算梯度"></a><strong>利用有限差值计算梯度</strong></h5><p><strong>实践考量</strong>：实际中用<strong>中心差值公式（centered difference formula）</strong>$[f(x+h)-f(x-h)]/2h$效果较好</p>
+<p><strong>步长的影响</strong>：梯度指明了函数在哪个方向是变化率最大的，但是没有指明在这个方向上应该走多远。小步长下降稳定但进度慢，大步长进展快但是风险更大。采取大步长可能导致错过最优点，让损失值上升。步长（后面会称其为<strong>学习率</strong>）将会是我们在调参中最重要的超参数之一。</p>
+<p><strong>效率问题</strong>：这个策略不适合大规模数据，我们需要更好的策略。</p>
+<h5 id="微分分析计算梯度"><a href="#微分分析计算梯度" class="headerlink" title="微分分析计算梯度"></a>微分分析计算梯度</h5><p>一旦将梯度的公式微分出来，代码实现公式并用于梯度更新就比较顺畅了.</p>
+<h4 id="梯度下降"><a href="#梯度下降" class="headerlink" title="梯度下降"></a>梯度下降</h4><p>现在可以计算损失函数的梯度了，程序重复地计算梯度然后对参数进行更新，这一过程称为<em>梯度下降</em>.</p>
+<p>核心思想不变，那就是我们一直跟着梯度走，直到结果不再变化。</p>
+<h5 id="小批量数据梯度下降（Mini-batch-gradient-descent）"><a href="#小批量数据梯度下降（Mini-batch-gradient-descent）" class="headerlink" title="小批量数据梯度下降（Mini-batch gradient descent）"></a>小批量数据梯度下降（Mini-batch gradient descent）</h5><p>小批量数据的梯度就是对整个数据集梯度的一个近似。因此，在实践中通过计算小批量数据的梯度可以实现更快速地收敛，并以此来进行更频繁的参数更新。(提高计算效率)</p>
+<p>小批量数据的大小是一个超参数，但是一般并不需要通过交叉验证来调参。它一般由存储器的限制来决定的，或者干脆设置为同样大小，比如32，64，128等。</p>
+<h6 id="随机梯度下降（Stochastic-Gradient-Descent-简称SGD）"><a href="#随机梯度下降（Stochastic-Gradient-Descent-简称SGD）" class="headerlink" title="随机梯度下降（Stochastic Gradient Descent 简称SGD）"></a><strong>随机梯度下降</strong>（Stochastic Gradient Descent 简称SGD）</h6><p>小批量数据策略有个极端情况，那就是每个批量中只有1个数据样本，这种策略被称为<strong>随机梯度下降（Stochastic Gradient Descent 简称SGD）</strong>。这种策略在实际情况中相对少见，因为向量化操作的代码一次计算100个数据 比100次计算1个数据要高效很多。</p>
+<p>你有时会听到人们使用SGD来指代小批量数据梯度下降（或者用MGD来指代小批量数据梯度下降，而BGD来指代则相对少见）。</p>
+<h4 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h4><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://cs231n.github.io/assets/dataflow.jpeg" alt="Summary of the information flow" title="">
+                </div>
+                <div class="image-caption">Summary of the information flow</div>
+            </figure>
+<p>数据集中的(x,y)是给定的.<code>权重</code>从一个随机数字开始，且可以改变。在前向传播时，评分函数计算出类别的<code>分类评分</code>并存储在向量<strong>f</strong>中。<code>损失函数</code>包含两个部分：数据损失和正则化损失。其中，数据损失计算的是分类评分f和实际标签y之间的差异，<code>正则化损失只是一个关于权重的函数</code>。在梯度下降过程中，我们计算<code>权重的梯度</code>（如果愿意的话，也可以计算<code>数据上的梯度</code>），然后使用它们来实现参数的更新。</p>
+<hr>
+<ul>
+<li>将<code>损失函数</code>比作了一个<strong>高维度的最优化地形</strong>，并尝试到达它的最底部。最优化的工作过程可以看做一个蒙着眼睛的徒步者希望摸索着走到山的底部。在例子中，可见SVM的损失函数是分段线性的，并且是碗状的。</li>
+<li>提出了迭代优化的思想，从一个随机的权重开始，然后一步步地让损失值变小，直到最小。</li>
+<li>函数的<strong>梯度</strong>给出了该函数最陡峭的上升方向。介绍了利用有限的差值来近似计算梯度的方法，该方法实现简单但是效率较低（有限差值就是<em>h</em>，用来计算数值梯度）。</li>
+<li>参数更新需要有技巧地设置<strong>步长</strong>。也叫学习率。如果步长太小，进度稳定但是缓慢，如果步长太大，进度快但是可能有风险。</li>
+<li>讨论权衡了数值梯度法和分析梯度法。数值梯度法计算简单，但结果只是近似且耗费计算资源。分析梯度法计算准确迅速但是实现容易出错，而且需要对梯度公式进行推导的数学基本功。因此，在实际中使用分析梯度法，然后使用<strong>梯度检查</strong>来检查其实现正确与否，其本质就是将分析梯度法的结果与数值梯度法的计算结果对比。</li>
+<li>介绍了<strong>梯度下降</strong>算法，它在循环中迭代地计算梯度并更新参数。</li>
+</ul>
+<p>这节课的核心内容是：理解并能计算损失函数<strong>关于权重的梯度</strong>，是设计、训练和理解神经网络的核心能力。</p>
 
         </div>
 
@@ -188,7 +249,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2018-10-20T09:18:50.527Z" itemprop="dateUpdated">2018-10-20 17:18:50</time>
+    最終更新：<time datetime="2018-10-20T11:21:45.621Z" itemprop="dateUpdated">2018-10-20 19:21:45</time>
 </span><br>
 
 
@@ -349,7 +410,7 @@
             
                 <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
             
-            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+            <span>このブログの内容物は<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja">クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際ライセンスの下に提供されています</a></span>
         </p>
     </div>
     <div class="bottom">
