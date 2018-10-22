@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>Lecture-backpropagation | Go Further | Stay Hungry, Stay Foolish</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#142421">
+    
+    
+    <meta name="keywords" content="CS231n">
+    <meta name="description" content="【阅读时间】XXX min XXX words【阅读内容】……">
+<meta name="keywords" content="CS231n">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Lecture-backpropagation">
+<meta property="og:url" content="http://yoursite.com/2018/10/22/Lecture-backpropagation/index.html">
+<meta property="og:site_name" content="Go Further">
+<meta property="og:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/5267500-0c9de63f20983077.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/5267500-83b12b83edf6b42b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/5267500-ec4f09b059f37c5b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2018-10-22T05:07:44.508Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Lecture-backpropagation">
+<meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/5267500-0c9de63f20983077.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+    
+        <link rel="alternate" type="application/atom+xml" title="Go Further" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">CaptainSE</h5>
+          <a href="mailto:841145636@qq.com" title="841145636@qq.com" class="mail">841145636@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                Home
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/Captainzj" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Lecture-backpropagation</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Lecture-backpropagation</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-10-22T02:54:04.000Z" itemprop="datePublished" class="page-time">
+  2018-10-22
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/MachineLearning/">MachineLearning</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#简介"><span class="post-toc-number">1.</span> <span class="post-toc-text">简介</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#简单表达式和理解梯度"><span class="post-toc-number">2.</span> <span class="post-toc-text">简单表达式和理解梯度</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#复合表达式，链式法则，反向传播"><span class="post-toc-number">3.</span> <span class="post-toc-text">复合表达式，链式法则，反向传播</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#直观理解反向传播"><span class="post-toc-number">4.</span> <span class="post-toc-text">直观理解反向传播</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#模块：Sigmoid例子"><span class="post-toc-number">5.</span> <span class="post-toc-text">模块：Sigmoid例子</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#反向传播实践：分段计算"><span class="post-toc-number">6.</span> <span class="post-toc-text">反向传播实践：分段计算</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#回传流中的模式"><span class="post-toc-number">7.</span> <span class="post-toc-text">回传流中的模式</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#用户向量化操作的梯度"><span class="post-toc-number">8.</span> <span class="post-toc-text">用户向量化操作的梯度</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#小结"><span class="post-toc-number">9.</span> <span class="post-toc-text">小结</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-Lecture-backpropagation"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Lecture-backpropagation</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-10-22 10:54:04" datetime="2018-10-22T02:54:04.000Z"  itemprop="datePublished">2018-10-22</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/MachineLearning/">MachineLearning</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>【阅读时间】XXX min XXX words<br>【阅读内容】……</p>
+<a id="more"></a>
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>本节将帮助读者对<strong>反向传播</strong>形成直观而专业的理解。反向传播是利用<strong>链式法则</strong>递归计算表达式的梯度的方法。</p>
+<h2 id="简单表达式和理解梯度"><a href="#简单表达式和理解梯度" class="headerlink" title="简单表达式和理解梯度"></a>简单表达式和理解梯度</h2><p>函数关于每个变量的导数指明了整个表达式对于该变量的敏感程度。</p>
+<h2 id="复合表达式，链式法则，反向传播"><a href="#复合表达式，链式法则，反向传播" class="headerlink" title="复合表达式，链式法则，反向传播"></a>复合表达式，链式法则，反向传播</h2><p><strong>链式法则</strong>指出将这些梯度表达式链接起来的正确方式是相乘，比如$\frac{\partial f}{\partial x} = \frac{\partial f}{\partial q} \frac{\partial q}{\partial x}$。在实际操作中，这只是简单地将两个梯度数值相乘.</p>
+<hr>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://upload-images.jianshu.io/upload_images/5267500-0c9de63f20983077.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<p>上图的真实值计算线路展示了计算的视觉化过程。<strong>前向传播</strong>从输入计算到输出（绿色），<strong>反向传播</strong>从尾部开始，根据链式法则递归地向前计算梯度（显示为红色），一直到网络的输入端。可以认为，梯度是从计算链路中回流。</p>
+<hr>
+<h2 id="直观理解反向传播"><a href="#直观理解反向传播" class="headerlink" title="直观理解反向传播"></a>直观理解反向传播</h2><p>这里对于每个输入的乘法操作是基于链式法则的。该操作让一个相对独立的门单元变成复杂计算线路中不可或缺的一部分，这个复杂计算线路可以是神经网络等。</p>
+<p>反向传播可以看做是门单元之间在通过梯度信号相互通信，只要让它们的输入<code>沿着梯度方向变化</code>，无论它们自己的输出值在何种程度上升或降低，都是为了让整个网络的<code>输出值更高</code>.</p>
+<p>任何可微分的函数都可以看做门。可以根据需要将一个函数分拆成多个简单门(计算反向传播就简单了)；也可以将多个门组合成一个门从而可以进行简化(让代码量更少，效率更高).</p>
+<h2 id="模块：Sigmoid例子"><a href="#模块：Sigmoid例子" class="headerlink" title="模块：Sigmoid例子"></a>模块：Sigmoid例子</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://upload-images.jianshu.io/upload_images/5267500-83b12b83edf6b42b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<p>$$ 
+f(w,x) = \frac{1}{1+e^{-(w_0x_0 + w_1x_1 + w_2)}}
+$$ </p>
+<p>使用sigmoid激活函数的2维神经元的例子。输入是[x0, x1]，可学习的权重是[w0, w1, w2]。一会儿会看见，这个神经元对输入数据做点积运算，然后其激活数据被sigmoid函数挤压到0到1之间。<br>$$ 
+\sigma(x) = \frac{1}{1+e^{-x}} \\\\
+\rightarrow \hspace{0.3in} \frac{d\sigma(x)}{dx} = \frac{e^{-x}}{(1+e^{-x})^2} = \left( \frac{1 + e^{-x} - 1}{1 + e^{-x}} \right) \left( \frac{1}{1+e^{-x}} \right) 
+= \left( 1 - \sigma(x) \right) \sigma(x)
+$$ <br>和之前的计算流程比起来，现在的计算使用一个单独的简单表达式即可。因此，在实际的应用中将这些操作装进一个单独的门单元中将会非常有用。</p>
+<h2 id="反向传播实践：分段计算"><a href="#反向传播实践：分段计算" class="headerlink" title="反向传播实践：分段计算"></a>反向传播实践：分段计算</h2><p>$$ 
+f(x,y) = \frac{x + \sigma(y)}{\sigma(x) + (x+y)^2}
+$$ </p>
+<p>构建前向传播的代码模式：(<strong>对前向传播变量进行缓存</strong>)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="number">3</span> <span class="comment"># 例子数值</span></span><br><span class="line">y = <span class="number">-4</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 前向传播</span></span><br><span class="line">sigy = <span class="number">1.0</span> / (<span class="number">1</span> + math.exp(-y)) <span class="comment"># 分子中的sigmoi          #(1)</span></span><br><span class="line">num = x + sigy <span class="comment"># 分子                                    #(2)</span></span><br><span class="line">sigx = <span class="number">1.0</span> / (<span class="number">1</span> + math.exp(-x)) <span class="comment"># 分母中的sigmoid         #(3)</span></span><br><span class="line">xpy = x + y                                              <span class="comment">#(4)</span></span><br><span class="line">xpysqr = xpy**<span class="number">2</span>                                          <span class="comment">#(5)</span></span><br><span class="line">den = sigx + xpysqr <span class="comment"># 分母                                #(6)</span></span><br><span class="line">invden = <span class="number">1.0</span> / den                                       <span class="comment">#(7)</span></span><br><span class="line">f = num * invden <span class="comment"># 搞定！                                 #(8)</span></span><br></pre></td></tr></table></figure>
+<p>反向传播的代码模式：(<strong>在不同分支的梯度要相加</strong>)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 回传 f = num * invden</span></span><br><span class="line">dnum = invden <span class="comment"># 分子的梯度                                         #(8)</span></span><br><span class="line">dinvden = num                                                     <span class="comment">#(8)</span></span><br><span class="line"><span class="comment"># 回传 invden = 1.0 / den </span></span><br><span class="line">dden = (<span class="number">-1.0</span> / (den**<span class="number">2</span>)) * dinvden                                <span class="comment">#(7)</span></span><br><span class="line"><span class="comment"># 回传 den = sigx + xpysqr</span></span><br><span class="line">dsigx = (<span class="number">1</span>) * dden                                                <span class="comment">#(6)</span></span><br><span class="line">dxpysqr = (<span class="number">1</span>) * dden                                              <span class="comment">#(6)</span></span><br><span class="line"><span class="comment"># 回传 xpysqr = xpy**2</span></span><br><span class="line">dxpy = (<span class="number">2</span> * xpy) * dxpysqr                                        <span class="comment">#(5)</span></span><br><span class="line"><span class="comment"># 回传 xpy = x + y</span></span><br><span class="line">dx = (<span class="number">1</span>) * dxpy                                                   <span class="comment">#(4)</span></span><br><span class="line">dy = (<span class="number">1</span>) * dxpy                                                   <span class="comment">#(4)</span></span><br><span class="line"><span class="comment"># 回传 sigx = 1.0 / (1 + math.exp(-x))</span></span><br><span class="line">dx += ((<span class="number">1</span> - sigx) * sigx) * dsigx <span class="comment"># Notice += !! See notes below  #(3)</span></span><br><span class="line"><span class="comment"># 回传 num = x + sigy</span></span><br><span class="line">dx += (<span class="number">1</span>) * dnum                                                  <span class="comment">#(2)</span></span><br><span class="line">dsigy = (<span class="number">1</span>) * dnum                                                <span class="comment">#(2)</span></span><br><span class="line"><span class="comment"># 回传 sigy = 1.0 / (1 + math.exp(-y))</span></span><br><span class="line">dy += ((<span class="number">1</span> - sigy) * sigy) * dsigy                                 <span class="comment">#(1)</span></span><br><span class="line"><span class="comment"># 完成! 嗷~~</span></span><br></pre></td></tr></table></figure>
+<h2 id="回传流中的模式"><a href="#回传流中的模式" class="headerlink" title="回传流中的模式"></a>回传流中的模式</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://upload-images.jianshu.io/upload_images/5267500-ec4f09b059f37c5b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<p>一个展示反向传播的例子。加法操作将梯度相等地分发给它的输入。取最大操作将梯度路由给更大的输入。乘法门拿取输入激活数据，对它们进行交换，然后乘以梯度。</p>
+<h2 id="用户向量化操作的梯度"><a href="#用户向量化操作的梯度" class="headerlink" title="用户向量化操作的梯度"></a>用户向量化操作的梯度</h2><p><strong>矩阵相乘的梯度</strong>：可能最有技巧的操作是矩阵相乘（也适用于矩阵和向量，向量和向量相乘）的乘法操作：(<em>分析维度</em>)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 前向传播</span></span><br><span class="line">W = np.random.randn(<span class="number">5</span>, <span class="number">10</span>)</span><br><span class="line">X = np.random.randn(<span class="number">10</span>, <span class="number">3</span>)</span><br><span class="line">D = W.dot(X)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 假设我们得到了D的梯度</span></span><br><span class="line">dD = np.random.randn(*D.shape) <span class="comment"># 和D一样的尺寸</span></span><br><span class="line">dW = dD.dot(X.T) <span class="comment">#.T就是对矩阵进行转置</span></span><br><span class="line">dX = W.T.dot(dD)</span><br></pre></td></tr></table></figure>
+<p><strong>使用小而具体的例子</strong>：有些读者可能觉得向量化操作的梯度计算比较困难，建议是写出一个很小很明确的向量化例子，在纸上演算梯度，然后对其一般化，得到一个高效的向量化操作形式。</p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><ul>
+<li>对梯度的含义有了<code>直观理解</code>，知道了梯度是如何在网络中<code>反向传播</code>的，知道了它们是如何与网络的不同部分通信并控制其升高或者降低，并使得<code>最终输出值更高</code>的。</li>
+<li>讨论了<strong>分段计算</strong>在反向传播的实现中的重要性。应该将函数分成不同的模块，这样<code>计算局部梯度相对容易</code>，然后基于链式法则将其“链”起来。重要的是，不需要把这些表达式写在纸上然后演算它的完整求导公式，因为实际上并不需要关于输入变量的梯度的数学公式。只需要将表达式<code>分</code>成不同的可以求导的模块（模块可以是矩阵向量的乘法操作，或者取最大值操作，或者加法操作等），然后在反向传播中<code>一步一步地计算梯度</code>。</li>
+</ul>
+<p>在下节课中，将会开始定义神经网络，而反向传播使我们能高效计算神经网络各个节点<code>关于损失函数的梯度</code>。换句话说，我们现在已经准备好训练神经网络了，本课程最困难的部分已经过去了！ConvNets相比只是向前走了一小步。</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2018-10-22T05:07:44.508Z" itemprop="dateUpdated">2018-10-22 13:07:44</time>
+</span><br>
+
+
+        
+    </div>
+    
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/avatar.jpg" alt="CaptainSE">
+            CaptainSE
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CS231n/">CS231n</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/10/22/Lecture-backpropagation/&title=《Lecture-backpropagation》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/10/22/Lecture-backpropagation/&title=《Lecture-backpropagation》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/10/22/Lecture-backpropagation/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Lecture-backpropagation》 — Go Further&url=http://yoursite.com/2018/10/22/Lecture-backpropagation/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/10/22/Lecture-backpropagation/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/10/20/CS231n-Lecture-Optimization/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">CS231n_Lecture_Optimization</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢老板~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>CaptainSE &copy; 2015 - 2018</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/10/22/Lecture-backpropagation/&title=《Lecture-backpropagation》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/10/22/Lecture-backpropagation/&title=《Lecture-backpropagation》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/10/22/Lecture-backpropagation/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Lecture-backpropagation》 — Go Further&url=http://yoursite.com/2018/10/22/Lecture-backpropagation/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/10/22/Lecture-backpropagation/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACLUlEQVR42u3azXKDMAxF4bz/S9OZTncN5ugKFsiHVaYhxh8L1fr5fPB1/F7VO/9/Pvv27J6bLxkyZLyWcSyv9T1kzfWLyJ77ZTUZMmRswCChk8MIso+XIUOGjPUhj1DX95BXIEOGDBkZY/1bsi1yEJQhQ4aMLIklx0RSPuNB9pFcXIYMGS9k9Mv9z31+sL8hQ4aMlzCO4nX2q6zE39/P3zoyZMgYzSDb4uV7EihJSS5bQYYMGVMZPL3MEst+2wAV3WTIkDGaUQ15naMeh2WFORkyZExl9EcoqikuSVzL7QoZMmRsxujnxCSAVjGFJFaGDBlDGYXiO05Qs/ZA1maQIUPGbAYfG+1sJQupJPOWIUPGDgyydBaC+dGQh9TCzIgMGTLGMXhq2v97dsS8CMcyZMgYzeChsDpCUU10Oy1SGTJkzGbwg1pWxEchcrlyedhChgwZoxl8qIKntXe1MC+eK0OGjM0YqJNQ5PGXxXciQ4aMfRjVliRPU0lg5QCUi8uQIWMoozo20TkC8uDL02AZMmTI4GktD6ydlufpPTJkyBjNyNqN1XS3U4YrY2TIkDGO0SmZVYct1k/stEhlyJAxm5EFRN7I7A9k8BaCDBkyZjOy1mM27HVXulv+7yFDhowRjCwI8t9WD5HkpXwJuDJkyNiekSWrWRJL9iZDhgwZJHHNGgzZMMfFHmTIkLEBo5rE3lDDw8EaFfhkyJAxmnFvYyB8AH41rfVlyJDxPsYPgK/MUtMV1rwAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = 'Go Further | Stay Hungry, Stay Foolish';
+            clearTimeout(titleTime);
+        } else {
+            document.title = 'Go Further | Stay Hungry, Stay Foolish';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

@@ -30,8 +30,11 @@
 <meta property="og:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://cs231n.github.io/assets/svmbowl.png">
+<meta property="og:image" content="https://github.com/HusterHope/blogimage/raw/master/CS231n3-9.png">
+<meta property="og:image" content="https://github.com/HusterHope/blogimage/raw/master/CS231n3-10.png">
+<meta property="og:image" content="https://github.com/HusterHope/blogimage/raw/master/CS231n3-11.png">
 <meta property="og:image" content="http://cs231n.github.io/assets/dataflow.jpeg">
-<meta property="og:updated_time" content="2018-10-20T11:30:16.832Z">
+<meta property="og:updated_time" content="2018-10-22T02:54:39.199Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CS231n_Lecture_Optimization">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
@@ -163,7 +166,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#课程链接参考"><span class="post-toc-number">1.</span> <span class="post-toc-text">课程链接参考</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#损失函数可视化"><span class="post-toc-number">2.</span> <span class="post-toc-text">损失函数可视化</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#损失函数的分段线性结构"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">损失函数的分段线性结构</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#最优化-Optimization"><span class="post-toc-number">3.</span> <span class="post-toc-text">最优化 Optimization</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#策略-1：一个差劲的初始方案：随机搜索"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">策略#1：一个差劲的初始方案：随机搜索</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#策略-2：随机本地搜索"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">策略#2：随机本地搜索</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#策略-3：跟随梯度"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">策略#3：跟随梯度</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#梯度计算"><span class="post-toc-number">4.</span> <span class="post-toc-text">梯度计算</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#利用有限差值计算梯度"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">利用有限差值计算梯度</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#微分分析计算梯度"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">微分分析计算梯度</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#梯度下降"><span class="post-toc-number">5.</span> <span class="post-toc-text">梯度下降</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#小批量数据梯度下降（Mini-batch-gradient-descent）"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">小批量数据梯度下降（Mini-batch gradient descent）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#随机梯度下降（Stochastic-Gradient-Descent-简称SGD）"><span class="post-toc-number">5.1.1.</span> <span class="post-toc-text">随机梯度下降（Stochastic Gradient Descent 简称SGD）</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#小结"><span class="post-toc-number">6.</span> <span class="post-toc-text">小结</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#课程链接参考"><span class="post-toc-number">1.</span> <span class="post-toc-text">课程链接参考</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#损失函数可视化"><span class="post-toc-number">2.</span> <span class="post-toc-text">损失函数可视化</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#损失函数的分段线性结构"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">损失函数的分段线性结构</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#最优化-Optimization"><span class="post-toc-number">3.</span> <span class="post-toc-text">最优化 Optimization</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#策略-1：一个差劲的初始方案：随机搜索"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">策略#1：一个差劲的初始方案：随机搜索</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#策略-2：随机本地搜索"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">策略#2：随机本地搜索</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#策略-3：跟随梯度"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">策略#3：跟随梯度</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#梯度计算"><span class="post-toc-number">4.</span> <span class="post-toc-text">梯度计算</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#利用有限差值计算梯度"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">利用有限差值计算梯度</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#微分分析计算梯度"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">微分分析计算梯度</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#梯度下降"><span class="post-toc-number">5.</span> <span class="post-toc-text">梯度下降</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#小批量数据梯度下降（Mini-batch-gradient-descent）"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">小批量数据梯度下降（Mini-batch gradient descent）</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#随机梯度下降（Stochastic-Gradient-Descent-简称SGD）"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">随机梯度下降（Stochastic Gradient Descent 简称SGD）</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#提取图片特征（Image-Features）"><span class="post-toc-number">5.3.</span> <span class="post-toc-text">提取图片特征（Image Features）</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#小结"><span class="post-toc-number">6.</span> <span class="post-toc-text">小结</span></a></li></ol>
         </nav>
     </aside>
 
@@ -217,13 +220,26 @@
 <h5 id="利用有限差值计算梯度"><a href="#利用有限差值计算梯度" class="headerlink" title="利用有限差值计算梯度"></a><strong>利用有限差值计算梯度</strong></h5><p><strong>实践考量</strong>：实际中用<strong>中心差值公式（centered difference formula）</strong>$[f(x+h)-f(x-h)]/2h$效果较好</p>
 <p><strong>步长的影响</strong>：梯度指明了函数在哪个方向是变化率最大的，但是没有指明在这个方向上应该走多远。小步长下降稳定但进度慢，大步长进展快但是风险更大。采取大步长可能导致错过最优点，让损失值上升。步长（后面会称其为<strong>学习率</strong>）将会是我们在调参中最重要的超参数之一。</p>
 <p><strong>效率问题</strong>：这个策略不适合大规模数据，我们需要更好的策略。</p>
-<h5 id="微分分析计算梯度"><a href="#微分分析计算梯度" class="headerlink" title="微分分析计算梯度"></a>微分分析计算梯度</h5><p>一旦将梯度的公式微分出来，代码实现公式并用于梯度更新就比较顺畅了.</p>
+<h5 id="微分分析计算梯度"><a href="#微分分析计算梯度" class="headerlink" title="微分分析计算梯度"></a><strong>微分分析计算梯度</strong></h5><p>一旦将梯度的公式微分出来，代码实现公式并用于梯度更新就比较顺畅了.</p>
 <h4 id="梯度下降"><a href="#梯度下降" class="headerlink" title="梯度下降"></a>梯度下降</h4><p>现在可以计算损失函数的梯度了，程序重复地计算梯度然后对参数进行更新，这一过程称为<em>梯度下降</em>.</p>
 <p>核心思想不变，那就是我们一直跟着梯度走，直到结果不再变化。</p>
-<h5 id="小批量数据梯度下降（Mini-batch-gradient-descent）"><a href="#小批量数据梯度下降（Mini-batch-gradient-descent）" class="headerlink" title="小批量数据梯度下降（Mini-batch gradient descent）"></a>小批量数据梯度下降（Mini-batch gradient descent）</h5><p>小批量数据的梯度就是对整个数据集梯度的一个近似。因此，在实践中通过计算小批量数据的梯度可以实现更快速地收敛，并以此来进行更频繁的参数更新。(提高计算效率)</p>
+<h5 id="小批量数据梯度下降（Mini-batch-gradient-descent）"><a href="#小批量数据梯度下降（Mini-batch-gradient-descent）" class="headerlink" title="小批量数据梯度下降（Mini-batch gradient descent）"></a><strong>小批量数据梯度下降（Mini-batch gradient descent）</strong></h5><p>小批量数据的梯度就是对整个数据集梯度的一个近似。因此，在实践中通过计算小批量数据的梯度可以实现更快速地收敛，并以此来进行更频繁的参数更新。(提高计算效率)</p>
 <p>小批量数据的大小是一个超参数，但是一般并不需要通过交叉验证来调参。它一般由存储器的限制来决定的，或者干脆设置为同样大小，比如32，64，128等。</p>
-<h6 id="随机梯度下降（Stochastic-Gradient-Descent-简称SGD）"><a href="#随机梯度下降（Stochastic-Gradient-Descent-简称SGD）" class="headerlink" title="随机梯度下降（Stochastic Gradient Descent 简称SGD）"></a><strong>随机梯度下降</strong>（Stochastic Gradient Descent 简称SGD）</h6><p>小批量数据策略有个极端情况，那就是每个批量中只有1个数据样本，这种策略被称为<strong>随机梯度下降（Stochastic Gradient Descent 简称SGD）</strong>。这种策略在实际情况中相对少见，因为向量化操作的代码一次计算100个数据 比100次计算1个数据要高效很多。</p>
+<h5 id="随机梯度下降（Stochastic-Gradient-Descent-简称SGD）"><a href="#随机梯度下降（Stochastic-Gradient-Descent-简称SGD）" class="headerlink" title="随机梯度下降（Stochastic Gradient Descent 简称SGD）"></a><strong>随机梯度下降</strong>（Stochastic Gradient Descent 简称SGD）</h5><p>小批量数据策略有个极端情况，那就是每个批量中只有1个数据样本，这种策略被称为<strong>随机梯度下降（Stochastic Gradient Descent 简称SGD）</strong>。这种策略在实际情况中相对少见，因为向量化操作的代码一次计算100个数据 比100次计算1个数据要高效很多。</p>
 <p>你有时会听到人们使用SGD来指代小批量数据梯度下降（或者用MGD来指代小批量数据梯度下降，而BGD来指代则相对少见）。</p>
+<h5 id="提取图片特征（Image-Features）"><a href="#提取图片特征（Image-Features）" class="headerlink" title="提取图片特征（Image Features）"></a>提取图片特征（Image Features）</h5><ul>
+<li><p>颜色直方图（Color Histogram）</p>
+<p><img src="https://github.com/HusterHope/blogimage/raw/master/CS231n3-9.png" alt=""></p>
+</li>
+<li><p>定向梯度直方图（Histogram of Oriented Gradient）</p>
+<p><img src="https://github.com/HusterHope/blogimage/raw/master/CS231n3-10.png" alt=""></p>
+</li>
+</ul>
+<ul>
+<li><p>词袋模型（Bag of Words）</p>
+<p><img src="https://github.com/HusterHope/blogimage/raw/master/CS231n3-11.png" alt=""></p>
+</li>
+</ul>
 <h4 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h4><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
@@ -250,7 +266,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2018-10-20T11:30:16.832Z" itemprop="dateUpdated">2018-10-20 19:30:16</time>
+    Last updated: <time datetime="2018-10-22T02:54:39.199Z" itemprop="dateUpdated">2018-10-22 10:54:39</time>
 </span><br>
 
 
@@ -329,7 +345,14 @@
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2018/10/22/Lecture-backpropagation/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Lecture-backpropagation</h4>
+      </a>
+    </div>
   
 
   
