@@ -32,7 +32,7 @@
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/5267500-0c9de63f20983077.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/5267500-83b12b83edf6b42b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/5267500-ec4f09b059f37c5b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-10-22T05:07:44.508Z">
+<meta property="og:updated_time" content="2018-10-22T05:28:21.232Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Lecture-backpropagation">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
@@ -246,6 +246,7 @@ $$ </p>
 <li>讨论了<strong>分段计算</strong>在反向传播的实现中的重要性。应该将函数分成不同的模块，这样<code>计算局部梯度相对容易</code>，然后基于链式法则将其“链”起来。重要的是，不需要把这些表达式写在纸上然后演算它的完整求导公式，因为实际上并不需要关于输入变量的梯度的数学公式。只需要将表达式<code>分</code>成不同的可以求导的模块（模块可以是矩阵向量的乘法操作，或者取最大值操作，或者加法操作等），然后在反向传播中<code>一步一步地计算梯度</code>。</li>
 </ul>
 <p>在下节课中，将会开始定义神经网络，而反向传播使我们能高效计算神经网络各个节点<code>关于损失函数的梯度</code>。换句话说，我们现在已经准备好训练神经网络了，本课程最困难的部分已经过去了！ConvNets相比只是向前走了一小步。</p>
+<p>参考链接：<a href="https://zhuanlan.zhihu.com/p/21407711?refer=intelligentunit" target="_blank" rel="noopener">反向传播笔记</a></p>
 
         </div>
 
@@ -254,7 +255,7 @@ $$ </p>
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2018-10-22T05:07:44.508Z" itemprop="dateUpdated">2018-10-22 13:07:44</time>
+    Last updated: <time datetime="2018-10-22T05:28:21.232Z" itemprop="dateUpdated">2018-10-22 13:28:21</time>
 </span><br>
 
 
@@ -333,14 +334,21 @@ $$ </p>
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2018/10/22/Lecture-Neural-Networks-Part-1/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Lecture_Neural Networks Part 1</h4>
+      </a>
+    </div>
   
 
   
     <div class="waves-block waves-effect next">
       <a href="/2018/10/20/CS231n-Lecture-Optimization/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">CS231n_Lecture_Optimization</h4>
+        <h4 class="title">Lecture_Optimization</h4>
       </a>
     </div>
   

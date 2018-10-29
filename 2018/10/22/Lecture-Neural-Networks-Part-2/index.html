@@ -14,7 +14,7 @@
     
     
     
-    <title>Concept_Note | Go Further | Stay Hungry, Stay Foolish</title>
+    <title>Lecture_Neural Networks Part 2 | Go Further | Stay Hungry, Stay Foolish</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#142421">
@@ -24,15 +24,18 @@
     <meta name="description" content="【阅读时间】XXX min XXX words【阅读内容】……">
 <meta name="keywords" content="CS231n">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Concept_Note">
-<meta property="og:url" content="http://yoursite.com/2018/10/18/Concept-Note/index.html">
+<meta property="og:title" content="Lecture_Neural Networks Part 2">
+<meta property="og:url" content="http://yoursite.com/2018/10/22/Lecture-Neural-Networks-Part-2/index.html">
 <meta property="og:site_name" content="Go Further">
 <meta property="og:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-20T09:21:07.452Z">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/5267500-df918c8372752302.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/5267500-f7389c2994251ec6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2018-10-23T03:02:13.843Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Concept_Note">
+<meta name="twitter:title" content="Lecture_Neural Networks Part 2">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/5267500-df918c8372752302.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
     
         <link rel="alternate" type="application/atom+xml" title="Go Further" href="/atom.xml">
     
@@ -113,7 +116,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">Concept_Note</div>
+        <div class="flex-col header-title ellipsis">Lecture_Neural Networks Part 2</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -135,11 +138,11 @@
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">Concept_Note</h1>
+        <h1 class="title">Lecture_Neural Networks Part 2</h1>
         <h5 class="subtitle">
             
-                <time datetime="2018-10-18T08:48:07.000Z" itemprop="datePublished" class="page-time">
-  2018-10-18
+                <time datetime="2018-10-22T08:27:27.000Z" itemprop="datePublished" class="page-time">
+  2018-10-22
 </time>
 
 
@@ -160,18 +163,18 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Linear-classification"><span class="post-toc-number">1.</span> <span class="post-toc-text">Linear classification</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#设置数据和模型"><span class="post-toc-number">1.</span> <span class="post-toc-text">设置数据和模型</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数据预处理"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">数据预处理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#权重初始化"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">权重初始化</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#批量归一化（Batch-Normalization）"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">批量归一化（Batch Normalization）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#正则化（L2-L1-Maxnorm-Dropout）"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">正则化（L2/L1/Maxnorm/Dropout）</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#损失函数"><span class="post-toc-number">2.</span> <span class="post-toc-text">损失函数</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#小结"><span class="post-toc-number">3.</span> <span class="post-toc-text">小结</span></a></li></ol>
         </nav>
     </aside>
 
 
-<article id="post-Concept-Note"
+<article id="post-Lecture-Neural-Networks-Part-2"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">Concept_Note</h1>
+        <h1 class="post-card-title">Lecture_Neural Networks Part 2</h1>
         <div class="post-meta">
-            <time class="post-time" title="2018-10-18 16:48:07" datetime="2018-10-18T08:48:07.000Z"  itemprop="datePublished">2018-10-18</time>
+            <time class="post-time" title="2018-10-22 16:27:27" datetime="2018-10-22T08:27:27.000Z"  itemprop="datePublished">2018-10-22</time>
 
             
 	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/MachineLearning/">MachineLearning</a></li></ul>
@@ -188,18 +191,47 @@
         <div class="post-content" id="post-content" itemprop="postContent">
             <p>【阅读时间】XXX min XXX words<br>【阅读内容】……</p>
 <a id="more"></a>
-<p>@card{</p>
-<h4 id="Linear-classification"><a href="#Linear-classification" class="headerlink" title="Linear classification"></a><a href="http://cs231n.github.io/linear-classify/" target="_blank" rel="noopener">Linear classification</a></h4><ul>
-<li><a href="https://blog.csdn.net/tangyudi/article/details/80124771" target="_blank" rel="noopener">score function</a>:<ul>
-<li>得分函数的目的：我们要做的就是对于一个给定的输入，比如一张小猫的图片，通过一系列复杂的变换（中间的过程咱们暂且当做一个黑盒子）能得到这个输入对应于每个类别的得分数值.</li>
+<h2 id="设置数据和模型"><a href="#设置数据和模型" class="headerlink" title="设置数据和模型"></a>设置数据和模型</h2><p>具体来说，神经网络就是进行了一系列的线性映射与非线性激活函数交织的运算。</p>
+<h3 id="数据预处理"><a href="#数据预处理" class="headerlink" title="数据预处理"></a>数据预处理</h3><ul>
+<li><p><strong>均值减法（Mean subtraction）</strong>是预处理最常用的形式。</p>
+</li>
+<li><p><strong>归一化（Normalization）</strong>是指将数据的所有维度都归一化，使其数值范围都近似相等。</p>
+<ul>
+<li>零中心化（zero-centered）+ 每个维度都除以其标准差</li>
+<li>对每个维度都做归一化，使得每个维度的最大和最小值是1和-1</li>
 </ul>
 </li>
-<li><a href="http://leohope.com/%E5%81%9A%E7%AC%94%E8%AE%B0/2017/08/22/CS231n-3/" target="_blank" rel="noopener">Loss Fuction</a>:<ul>
-<li>量化我们对训练结果的满意程度，换句话说，是衡量分类器的错误程度</li>
 </ul>
-</li>
+<hr>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://upload-images.jianshu.io/upload_images/5267500-df918c8372752302.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<p>一般数据预处理流程：</p>
+<p>左边：原始的2维输入数据。</p>
+<p>中间：在每个维度上都减去平均值后得到零中心化数据，现在数据云是以原点为中心的。</p>
+<p>右边：每个维度都除以其标准差来调整其数值范围。红色的线指出了数据各维度的数值范围，在中间的零中心化数据的数值范围不同，但在右边归一化数据中数值范围相同。</p>
+<hr>
+<ul>
+<li><strong>PCA和白化（Whitening）</strong>是另一种预处理形式。在这种处理中，先对数据进行<code>零中心化</code>处理，然后计算<code>协方差</code>矩阵，它展示了数据中的相关性结构</li>
 </ul>
-<p>}</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://upload-images.jianshu.io/upload_images/5267500-f7389c2994251ec6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<p>PCA/白化。<strong>左边</strong>是二维的原始数据。<strong>中间</strong>：经过PCA操作的数据。可以看出数据首先是零中心的，然后变换到了数据<code>协方差</code>矩阵的基准轴上。这样就对数据进行了解相关（协方差矩阵变成对角阵）。<strong>右边</strong>：每个维度都被特征值调整数值范围，将数据协方差矩阵变为单位矩阵。从几何上看，就是对数据在各个方向上拉伸压缩，使之变成服从<code>高斯分布</code>的一个数据点分布。</p>
+<hr>
+<p><strong>强调：</strong> 任何预处理策略（比如数据均值）都只能在训练集数据上进行计算，算法训练完毕后再应用到验证集或者测试集上。即<strong>应该先分成训练/验证/测试集，只是从训练集中求图片平均值，然后各个集（训练/验证/测试集）中的图像再减去这个平均值</strong></p>
+<h3 id="权重初始化"><a href="#权重初始化" class="headerlink" title="权重初始化"></a>权重初始化</h3><p><strong>错误：全零初始化.</strong> 如果权重被初始化为同样的值，神经元之间就失去了不对称性的源头。</p>
+<p><strong>小随机数初始化</strong>权重初始值要非常接近0又不能等于0。解决方法就是将权重初始化为很小的数值，以此来<em>打破对称性</em>。<strong>W = 0.01 * np.random.randn(D,H)</strong></p>
+<p><strong>使用1/sqrt(n)校准方差</strong>：<strong>w = np.random.randn(n) / sqrt(n)</strong>(其中<strong>n</strong>是输入数据的数量)这样就保证了网络中所有神经元起始时有近似同样的输出分布。实践经验证明，这样做可以提高收敛的速度.</p>
+<h3 id="批量归一化（Batch-Normalization）"><a href="#批量归一化（Batch-Normalization）" class="headerlink" title="批量归一化（Batch Normalization）"></a>批量归一化（Batch Normalization）</h3><h3 id="正则化（L2-L1-Maxnorm-Dropout）"><a href="#正则化（L2-L1-Maxnorm-Dropout）" class="headerlink" title="正则化（L2/L1/Maxnorm/Dropout）"></a>正则化（L2/L1/Maxnorm/Dropout）</h3><h2 id="损失函数"><a href="#损失函数" class="headerlink" title="损失函数"></a>损失函数</h2><h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>参考链接：<a href="https://zhuanlan.zhihu.com/p/21560667?refer=intelligentunit" target="_blank" rel="noopener">神经网络笔记 2</a></p>
 
         </div>
 
@@ -208,7 +240,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2018-10-20T09:21:07.452Z" itemprop="dateUpdated">2018-10-20 17:21:07</time>
+    Last updated: <time datetime="2018-10-23T03:02:13.843Z" itemprop="dateUpdated">2018-10-23 11:02:13</time>
 </span><br>
 
 
@@ -242,7 +274,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/10/18/Concept-Note/&title=《Concept_Note》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/10/22/Lecture-Neural-Networks-Part-2/&title=《Lecture_Neural Networks Part 2》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -252,22 +284,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/10/18/Concept-Note/&title=《Concept_Note》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/10/22/Lecture-Neural-Networks-Part-2/&title=《Lecture_Neural Networks Part 2》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/10/18/Concept-Note/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/10/22/Lecture-Neural-Networks-Part-2/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Concept_Note》 — Go Further&url=http://yoursite.com/2018/10/18/Concept-Note/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Lecture_Neural Networks Part 2》 — Go Further&url=http://yoursite.com/2018/10/22/Lecture-Neural-Networks-Part-2/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/10/18/Concept-Note/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/10/22/Lecture-Neural-Networks-Part-2/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -290,18 +322,18 @@
 <nav class="post-nav flex-row flex-justify-between">
   
     <div class="waves-block waves-effect prev">
-      <a href="/2018/10/18/CS231n-Lecture-SVM/" id="post-prev" class="post-nav-link">
+      <a href="/2018/10/29/Note-About-Tensorflow/" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">Lecture_SVM</h4>
+        <h4 class="title">Note About Tensorflow</h4>
       </a>
     </div>
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/2018/10/17/CS231n-Assignment-Step/" id="post-next" class="post-nav-link">
+      <a href="/2018/10/22/Lecture-Neural-Networks-Part-1/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">Assignment_Step</h4>
+        <h4 class="title">Lecture_Neural Networks Part 1</h4>
       </a>
     </div>
   
@@ -398,7 +430,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/10/18/Concept-Note/&title=《Concept_Note》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/10/22/Lecture-Neural-Networks-Part-2/&title=《Lecture_Neural Networks Part 2》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -408,22 +440,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/10/18/Concept-Note/&title=《Concept_Note》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/10/22/Lecture-Neural-Networks-Part-2/&title=《Lecture_Neural Networks Part 2》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/10/18/Concept-Note/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/10/22/Lecture-Neural-Networks-Part-2/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Concept_Note》 — Go Further&url=http://yoursite.com/2018/10/18/Concept-Note/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Lecture_Neural Networks Part 2》 — Go Further&url=http://yoursite.com/2018/10/22/Lecture-Neural-Networks-Part-2/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/10/18/Concept-Note/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/10/22/Lecture-Neural-Networks-Part-2/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -434,7 +466,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACHklEQVR42u3aMXKEQAwEwPv/p3HqwIdHEmcXoolc+IDtRKXd0esVX8ebK/n99zvv/nt+/7ILAwPjtozj9Eo+kHw4f//5/bcrwcDAeADjfHHJq8+fqpLytWFgYGAkjV1SjvO2DwMDA2POuBb8bwUXAwPjhoy8XauW3V6z+MG9OAYGxg0Z+an73//9kXwDAwPjVoyjeOXvmTSC5VVhYGCsZkwCyGRZlx2lBcMcGBgYWxnV7eL5VjYvjnlTmGyMMTAwdjMmdToZ6qoutPcsBgbGbkayTa0W3yTIrJ6hlY/bMDAwFjHmoxXVKDRHNre4GBgY6xi9cLEaHlSHJMqDYhgYGKsZeZfVO9zPi2ny+2oIgYGBsZVRfUVOzcc1qjAMDIzdjMnWcdIIXhWXNheHgYFxc8b5Z/KAoRd5VltJDAyM5zB6kUB+cDY5RCsPW2BgYKxjVLejvTGLSXhZiAEwMDBWM3qw3uYzDyGqIQEGBsYzGfOoIHk2ecMFGSwGBsbNGZP8s1pMe8Ne0VMYGBgPYFQXPR+hqEaevzSOGBgYj2H0to7V0tnrWKOJNgwMjHWMo3hdW0Z7m+QfvoiBgbGaMU8D82L96UAUAwNjNyMvsh+MG+ftIwYGxgMY1eP45AN5Ca4iMTAwMHpxYzUkaC43GbbAwMDAGAyN9VrGQoSJgYGxmpGHAdUB08lyC+UbAwNjNaPaqPXigQsWETepGBgYixhffEudO0ouP1oAAAAASUVORK5CYII=" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJUlEQVR42u3aQW7DMAwF0dz/0u62QBthPqk2EDVaBYlj83lBkKJeL7ye5fp+zc/rya/r77ctGTJkHMvgIdYwJNDac2XIkHEb410GW1/DX0cnNa9jkyFDhgyeRsndSOqUIUOGjF0Jt1M+rp8iQ4YMGZ0mlrejPNAP9OIyZMg4kMF33f//85/MN2TIkHEU4wnXOoHuSsFxVDJkyBjNqG36p41oJ3EH8ciQIeMCBmks+5tupGWttcoyZMiYytg7pEyb4TTct7/KkCFjNCO9NX8MLxZrxagMGTJk8LDSrTeeiOMjIDJkyBjNSLfjazNEPhxdv6Bt40wZMmQcwqilSzKA5MVlWlb+8lmGDBmjGWnqrJV0/SY2vqcMGTLGMdLjXDysWilZGyHIkCFjNiPtBElTmh57rb1QGTJk3MNIm0xeAvLXURsDoMNhMmTIOJzBG8Xalj0/AlvLnDJkyLiBQTbiSTnYScSdEUIwr5AhQ8ZQBin10sKxzwuaWBkyZIxj1I44kMKO34cfIHvbi8uQIWM0gw8L+fCSB9c/0iFDhozbGGno6fGLdCwaN7EyZMgYxHjCxTf904TbOa4hQ4aM2Qy+Ulg6kiTXd8YVMmTIOJ3BD1XwR3bSYrF8lCFDxgWMWuIjiZiPEDb34jJkyLieUUvQadrd8AcZMmRcyeCYzvV8S06GDBn3MPhGPy/s0qB5ypYhQ8ZtjLTu6h+VqI02O62vDBkyjmV8AdgMnTurBcxfAAAAAElFTkSuQmCC" alt="微信分享二维码">
 </div>
 
 

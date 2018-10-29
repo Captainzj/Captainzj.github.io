@@ -14,7 +14,7 @@
     
     
     
-    <title>Assignment_Step | Go Further | Stay Hungry, Stay Foolish</title>
+    <title>Note About Tensorflow | Go Further | Stay Hungry, Stay Foolish</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#142421">
@@ -23,14 +23,14 @@
     <meta name="keywords" content="">
     <meta name="description" content="【阅读时间】XXX min XXX words【阅读内容】……">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Assignment_Step">
-<meta property="og:url" content="http://yoursite.com/2018/10/17/CS231n-Assignment-Step/index.html">
+<meta property="og:title" content="Note About Tensorflow">
+<meta property="og:url" content="http://yoursite.com/2018/10/29/Note-About-Tensorflow/index.html">
 <meta property="og:site_name" content="Go Further">
 <meta property="og:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-22T05:10:21.664Z">
+<meta property="og:updated_time" content="2018-10-29T12:52:50.219Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Assignment_Step">
+<meta name="twitter:title" content="Note About Tensorflow">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
     
         <link rel="alternate" type="application/atom+xml" title="Go Further" href="/atom.xml">
@@ -112,7 +112,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">Assignment_Step</div>
+        <div class="flex-col header-title ellipsis">Note About Tensorflow</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -134,11 +134,11 @@
 <header class="content-header page-header">
 
     <div class="container fade-scale">
-        <h1 class="title">Assignment_Step</h1>
+        <h1 class="title">Note About Tensorflow</h1>
         <h5 class="subtitle">
             
-                <time datetime="2018-10-17T12:57:13.000Z" itemprop="datePublished" class="page-time">
-  2018-10-17
+                <time datetime="2018-10-29T12:47:37.000Z" itemprop="datePublished" class="page-time">
+  2018-10-29
 </time>
 
 
@@ -157,14 +157,16 @@
         <div class="post-content page-content" id="page-content" itemprop="pageContent">
             <p>【阅读时间】XXX min XXX words<br>【阅读内容】……</p>
 <a id="more"></a>
-<div class="card">
-<ol>
-<li>完成代码，跑通 （保存page.pdf）</li>
-<li>查找资料(多找些博客，择优)，理解细节</li>
-<li>理清思路，写博客总结</li>
-<li>upload博客(博客代码标题链接到git code 以及 pdf 链接)、 git push “CS231n_ssignment”</li>
-</ol>
-</div>
+<h2 id="Installing-TensorFlow-on-Mac-OS-X"><a href="#Installing-TensorFlow-on-Mac-OS-X" class="headerlink" title="Installing TensorFlow on Mac OS X"></a>Installing TensorFlow on Mac OS X</h2><p><strong>链接：<a href="https://www.tensorflow.org/versions/r1.1/install/install_mac" target="_blank" rel="noopener">在 macOS 上安装 TensorFlow</a></strong></p>
+<p><strong>注意事项：</strong></p>
+<ul>
+<li><p>不支持python3.7</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">(tensorflow) ➜  NiftyNet-dev python</span><br><span class="line">Python 3.7.1 (default, Oct 23 2018, 14:07:42)</span><br><span class="line">[Clang 4.0.1 (tags/RELEASE_401/final)] :: Anaconda, Inc. on darwin</span><br><span class="line">Type "help", "copyright", "credits" or "license" for more information.</span><br><span class="line"><span class="meta">&gt;</span>&gt;&gt; import tensorflow as tf</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File "&lt;stdin&gt;", line 1, in &lt;module&gt;</span><br><span class="line">  File "/Users/Captain/anaconda3/envs/tensorflow/lib/python3.7/site-packages/tensorflow/__init__.py", line 24, in &lt;module&gt;</span><br><span class="line">    from tensorflow.python import pywrap_tensorflow  # pylint: disable=unused-import</span><br><span class="line">  File "/Users/Captain/anaconda3/envs/tensorflow/lib/python3.7/site-packages/tensorflow/python/__init__.py", line 49, in &lt;module&gt;</span><br><span class="line">    from tensorflow.python import pywrap_tensorflow</span><br><span class="line">  File "/Users/Captain/anaconda3/envs/tensorflow/lib/python3.7/site-packages/tensorflow/python/pywrap_tensorflow.py", line 58, in &lt;module&gt;</span><br><span class="line">    from tensorflow.python.pywrap_tensorflow_internal import *</span><br><span class="line">  File "/Users/Captain/anaconda3/envs/tensorflow/lib/python3.7/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 114</span><br><span class="line">    def TFE_ContextOptionsSetAsync(arg1, async):</span><br><span class="line">                                             ^</span><br><span class="line">SyntaxError: invalid syntax</span><br><span class="line"><span class="meta">&gt;</span>&gt;&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Python 3.6.3 (v3.6.3:2c5fed86e0, Oct  3 2017, 00:32:08)</span><br><span class="line">[GCC 4.2.1 (Apple Inc. build 5666) (dot 3)] on darwin</span><br><span class="line">Type "help", "copyright", "credits" or "license" for more information.</span><br><span class="line"><span class="meta">&gt;</span>&gt;&gt; import tensorflow as tf</span><br><span class="line"><span class="meta">&gt;</span>&gt;&gt; hello = tf.constant('Hello, TensorFlow!')</span><br><span class="line"><span class="meta">&gt;</span>&gt;&gt; sess = tf.Session()</span><br><span class="line">2018-10-29 19:55:55.341316: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA</span><br><span class="line"><span class="meta">&gt;</span>&gt;&gt; print(sess.run(hello))</span><br><span class="line">b'Hello, TensorFlow!'</span><br><span class="line"><span class="meta">&gt;</span>&gt;&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 
         </div>
 
@@ -265,7 +267,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/10/17/CS231n-Assignment-Step/&title=《Assignment_Step》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/10/29/Note-About-Tensorflow/&title=《Note About Tensorflow》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -275,22 +277,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/10/17/CS231n-Assignment-Step/&title=《Assignment_Step》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/10/29/Note-About-Tensorflow/&title=《Note About Tensorflow》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/10/17/CS231n-Assignment-Step/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/10/29/Note-About-Tensorflow/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Assignment_Step》 — Go Further&url=http://yoursite.com/2018/10/17/CS231n-Assignment-Step/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Note About Tensorflow》 — Go Further&url=http://yoursite.com/2018/10/29/Note-About-Tensorflow/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/10/17/CS231n-Assignment-Step/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/10/29/Note-About-Tensorflow/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -301,7 +303,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJklEQVR42u3awXLrIAwF0P7/T6fbN/Oa9F5BF4bDKuM4geOFLIS+vuLx+me01/+/p/23bQMDA+OxjNfHkdzzeeIWkM+LgYFxGyOZPo97yaKTuZK1YWBgYKwsbvZoMDAwMPYyPvPWE0cMDAyMdhO7Uqrb9cg27MUxMDAeyFhZyl9//pPzDQwMjEcxXuVoU8AkcLfHDz+sCgMD42hGWybLSbvSxKL5AwMD42hG+4NZE8YsKdzW74aBgXEcoy3QJ4Ww/Nv8QfzCw8DAOJqRJIVJyrgSNLe9MTAwMB7OmB1bzgpk62W4tw8OAwPjaEae9q0UyFYKcEWDBQYGxjWMPCFbKbq1KWb0SsDAwDia0cauHNAGzdm8GBgYNzA+B8FiGxkUy2ZHnlEZDgMD4wJGHvLakT+I5IG+vY6BgXEooyhmlVvNWaqX/xsGBsZtjPVmi+QYMr+Sf1vchIGB8VhGPsEsdM42yfkm9petLAYGxnGMtm+hbe1qY+Os7QMDA+NURl7kSpbVBu71Jg8MDIzbGCtp36zQnxyFJivBwMC4gbFSjGurYXl4rQMuBgbGcYxZ20SbJs62ssWBKAYGxtGMvYFydgCwkg5iYGDcw2jbT2cb1DwBzdcQ7cUxMDAOYrSBLz/U3NA2kbwrMDAwMMrjgVniuHKAioGBgZGnhnnwnTVYvP0tBgbGBYy2bWLWmp+niXULGgYGxtGMla1j0ba1vIi6AIeBgXEC4xt7VzaU7O4rTQAAAABJRU5ErkJggg==" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACNklEQVR42u3ay07DMBAFUP7/p4vECqmQ3GuniE6OVxW0iY8Xo3n44yNej6/1/fPzev7vb98/fs7371y8MDAw3paRPO748/OLj5+Q7KGmYmBg3ICRBNnkV22ATo7p+PkYGBgYxwExCa/tcWBgYGDsB9y1F7cVKAYGBsZaEZsE3LWUMW/VXVCLY2BgvCFjbTDwN59fPt/AwMD494zH0spL0Lz1trMwMDBmM47HkHkIzgcAeULZDkExMDBmM5JtXZtcXtW2i3qHGBgYb85Yu+yVl7h5Opjvoa6wMTAw3pyxfxli7TjWxglRhouBgTGOkV8z3R9n7rfwTrqGGBgYQxn5FYc2XWsxya9OQjAGBsZtGHmbPmnfX5W9RgeKgYExlNHOENauQVybJv7wdwwMjBsw2pFA3p7L223tsf4QcDEwMG7DaMeZ+SbaMWdxfBgYGKMZO1cr8tZYO7xcvPaBgYExlNEOKaOSshwAJE87CeIYGBijGfmAMC9rX9ewOzkCDAyM0Yz2qkQeCvNydK0kPtkPBgbGIEb70LZMbZtu+RWQIq5jYGCMYOSJWt7032G0SScGBsZsRtsCuyrhK4JpnttiYGCMY+w0v9o2WZ7w1WUtBgbGaEa+2qRtLRFcC+gYGBh3YLwidO5MJ9o9YGBg3IfRhsv8WsZOyC7ehYGBgVFmly0sD+gnFTkGBsbtGde2/ttjKu6MYGBgDGXkw4A1ZDtsqNNHDAyM0Yz9wUC7iXyQmRwTBgbGaMYn++myUNJ8jskAAAAASUVORK5CYII=" alt="微信分享二维码">
 </div>
 
 
