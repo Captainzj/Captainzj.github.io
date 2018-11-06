@@ -14,7 +14,7 @@
     
     
     
-    <title>Concept_Note | Go Further | Stay Hungry, Stay Foolish</title>
+    <title>Lecture_Neural Networks Part 3 | Go Further | Stay Hungry, Stay Foolish</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#142421">
@@ -24,14 +24,14 @@
     <meta name="description" content="【阅读时间】XXX min XXX words【阅读内容】……">
 <meta name="keywords" content="CS231n">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Concept_Note">
-<meta property="og:url" content="http://yoursite.com/2018/10/18/Concept-Note/index.html">
+<meta property="og:title" content="Lecture_Neural Networks Part 3">
+<meta property="og:url" content="http://yoursite.com/2018/11/04/Lecture-Neural-Networks-Part-3/index.html">
 <meta property="og:site_name" content="Go Further">
 <meta property="og:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-20T09:21:07.452Z">
+<meta property="og:updated_time" content="2018-11-05T06:58:40.410Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Concept_Note">
+<meta name="twitter:title" content="Lecture_Neural Networks Part 3">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
     
         <link rel="alternate" type="application/atom+xml" title="Go Further" href="/atom.xml">
@@ -113,7 +113,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">Concept_Note</div>
+        <div class="flex-col header-title ellipsis">Lecture_Neural Networks Part 3</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -135,11 +135,11 @@
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">Concept_Note</h1>
+        <h1 class="title">Lecture_Neural Networks Part 3</h1>
         <h5 class="subtitle">
             
-                <time datetime="2018-10-18T08:48:07.000Z" itemprop="datePublished" class="page-time">
-  2018-10-18
+                <time datetime="2018-11-04T07:07:12.000Z" itemprop="datePublished" class="page-time">
+  2018-11-04
 </time>
 
 
@@ -160,18 +160,18 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Linear-classification"><span class="post-toc-number">1.</span> <span class="post-toc-text">Linear classification</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#梯度检查"><span class="post-toc-number">1.</span> <span class="post-toc-text">梯度检查</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#合理性（Sanity）检查"><span class="post-toc-number">2.</span> <span class="post-toc-text">合理性（Sanity）检查</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#检查学习过程"><span class="post-toc-number">3.</span> <span class="post-toc-text">检查学习过程</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#损失函数"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">损失函数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#训练集与验证集准确率"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">训练集与验证集准确率</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#权重：更新比例"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">权重：更新比例</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#每层的激活数据与梯度分布"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">每层的激活数据与梯度分布</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#可视化"><span class="post-toc-number">3.5.</span> <span class="post-toc-text">可视化</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#参数更新"><span class="post-toc-number">4.</span> <span class="post-toc-text">参数更新</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#一阶（随机梯度下降）方法，动量方法，Nesterov动量方法"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">一阶（随机梯度下降）方法，动量方法，Nesterov动量方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#学习率退火"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">学习率退火</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#二阶方法"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">二阶方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#逐参数适应学习率方法（Adagrad，RMSProp）"><span class="post-toc-number">4.4.</span> <span class="post-toc-text">逐参数适应学习率方法（Adagrad，RMSProp）</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#超参数调优"><span class="post-toc-number">5.</span> <span class="post-toc-text">超参数调优</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#评价"><span class="post-toc-number">6.</span> <span class="post-toc-text">评价</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#模型集成"><span class="post-toc-number">6.1.</span> <span class="post-toc-text">模型集成</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#总结"><span class="post-toc-number">7.</span> <span class="post-toc-text">总结</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#拓展引用"><span class="post-toc-number">8.</span> <span class="post-toc-text">拓展引用</span></a></li></ol>
         </nav>
     </aside>
 
 
-<article id="post-Concept-Note"
+<article id="post-Lecture-Neural-Networks-Part-3"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">Concept_Note</h1>
+        <h1 class="post-card-title">Lecture_Neural Networks Part 3</h1>
         <div class="post-meta">
-            <time class="post-time" title="2018-10-18 16:48:07" datetime="2018-10-18T08:48:07.000Z"  itemprop="datePublished">2018-10-18</time>
+            <time class="post-time" title="2018-11-04 15:07:12" datetime="2018-11-04T07:07:12.000Z"  itemprop="datePublished">2018-11-04</time>
 
             
 	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/MachineLearning/">MachineLearning</a></li></ul>
@@ -188,18 +188,7 @@
         <div class="post-content" id="post-content" itemprop="postContent">
             <p>【阅读时间】XXX min XXX words<br>【阅读内容】……</p>
 <a id="more"></a>
-<p>@card{</p>
-<h4 id="Linear-classification"><a href="#Linear-classification" class="headerlink" title="Linear classification"></a><a href="http://cs231n.github.io/linear-classify/" target="_blank" rel="noopener">Linear classification</a></h4><ul>
-<li><a href="https://blog.csdn.net/tangyudi/article/details/80124771" target="_blank" rel="noopener">score function</a>:<ul>
-<li>得分函数的目的：我们要做的就是对于一个给定的输入，比如一张小猫的图片，通过一系列复杂的变换（中间的过程咱们暂且当做一个黑盒子）能得到这个输入对应于每个类别的得分数值.</li>
-</ul>
-</li>
-<li><a href="http://leohope.com/%E5%81%9A%E7%AC%94%E8%AE%B0/2017/08/22/CS231n-3/" target="_blank" rel="noopener">Loss Fuction</a>:<ul>
-<li>量化我们对训练结果的满意程度，换句话说，是衡量分类器的错误程度</li>
-</ul>
-</li>
-</ul>
-<p>}</p>
+<h2 id="梯度检查"><a href="#梯度检查" class="headerlink" title="梯度检查"></a>梯度检查</h2><h2 id="合理性（Sanity）检查"><a href="#合理性（Sanity）检查" class="headerlink" title="合理性（Sanity）检查"></a>合理性（Sanity）检查</h2><h2 id="检查学习过程"><a href="#检查学习过程" class="headerlink" title="检查学习过程"></a>检查学习过程</h2><h3 id="损失函数"><a href="#损失函数" class="headerlink" title="损失函数"></a>损失函数</h3><h3 id="训练集与验证集准确率"><a href="#训练集与验证集准确率" class="headerlink" title="训练集与验证集准确率"></a>训练集与验证集准确率</h3><h3 id="权重：更新比例"><a href="#权重：更新比例" class="headerlink" title="权重：更新比例"></a>权重：更新比例</h3><h3 id="每层的激活数据与梯度分布"><a href="#每层的激活数据与梯度分布" class="headerlink" title="每层的激活数据与梯度分布"></a>每层的激活数据与梯度分布</h3><h3 id="可视化"><a href="#可视化" class="headerlink" title="可视化"></a>可视化</h3><h2 id="参数更新"><a href="#参数更新" class="headerlink" title="参数更新"></a>参数更新</h2><h3 id="一阶（随机梯度下降）方法，动量方法，Nesterov动量方法"><a href="#一阶（随机梯度下降）方法，动量方法，Nesterov动量方法" class="headerlink" title="一阶（随机梯度下降）方法，动量方法，Nesterov动量方法"></a>一阶（随机梯度下降）方法，动量方法，Nesterov动量方法</h3><h3 id="学习率退火"><a href="#学习率退火" class="headerlink" title="学习率退火"></a>学习率退火</h3><h3 id="二阶方法"><a href="#二阶方法" class="headerlink" title="二阶方法"></a>二阶方法</h3><h3 id="逐参数适应学习率方法（Adagrad，RMSProp）"><a href="#逐参数适应学习率方法（Adagrad，RMSProp）" class="headerlink" title="逐参数适应学习率方法（Adagrad，RMSProp）"></a>逐参数适应学习率方法（Adagrad，RMSProp）</h3><h2 id="超参数调优"><a href="#超参数调优" class="headerlink" title="超参数调优"></a>超参数调优</h2><h2 id="评价"><a href="#评价" class="headerlink" title="评价"></a>评价</h2><h3 id="模型集成"><a href="#模型集成" class="headerlink" title="模型集成"></a>模型集成</h3><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><h2 id="拓展引用"><a href="#拓展引用" class="headerlink" title="拓展引用"></a>拓展引用</h2><p>参考链接：<a href="http://link.zhihu.com/?target=http%3A//cs231n.github.io/neural-networks-3/" target="_blank" rel="noopener">Neural Nets notes 3</a>、神经网络笔记3<a href="https://zhuanlan.zhihu.com/p/21741716?refer=intelligentunit" target="_blank" rel="noopener">（上）</a><a href="https://zhuanlan.zhihu.com/p/21798784?refer=intelligentunit" target="_blank" rel="noopener">（下）</a></p>
 
         </div>
 
@@ -208,7 +197,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2018-10-20T09:21:07.452Z" itemprop="dateUpdated">2018-10-20 17:21:07</time>
+    Last updated: <time datetime="2018-11-05T06:58:40.410Z" itemprop="dateUpdated">2018-11-05 14:58:40</time>
 </span><br>
 
 
@@ -242,7 +231,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/10/18/Concept-Note/&title=《Concept_Note》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/11/04/Lecture-Neural-Networks-Part-3/&title=《Lecture_Neural Networks Part 3》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -252,22 +241,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/10/18/Concept-Note/&title=《Concept_Note》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/11/04/Lecture-Neural-Networks-Part-3/&title=《Lecture_Neural Networks Part 3》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/10/18/Concept-Note/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/11/04/Lecture-Neural-Networks-Part-3/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Concept_Note》 — Go Further&url=http://yoursite.com/2018/10/18/Concept-Note/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Lecture_Neural Networks Part 3》 — Go Further&url=http://yoursite.com/2018/11/04/Lecture-Neural-Networks-Part-3/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/10/18/Concept-Note/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/11/04/Lecture-Neural-Networks-Part-3/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -287,21 +276,14 @@
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between">
-  
-    <div class="waves-block waves-effect prev">
-      <a href="/2018/10/18/CS231n-Lecture-SVM/" id="post-prev" class="post-nav-link">
-        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">Lecture_SVM</h4>
-      </a>
-    </div>
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/2018/10/17/CS231n-Assignment-Step/" id="post-next" class="post-nav-link">
+      <a href="/2018/10/29/Note-About-NiftyNet-dev/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">Assignment_Step</h4>
+        <h4 class="title">Note About NiftyNet_dev</h4>
       </a>
     </div>
   
@@ -398,7 +380,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/10/18/Concept-Note/&title=《Concept_Note》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/11/04/Lecture-Neural-Networks-Part-3/&title=《Lecture_Neural Networks Part 3》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -408,22 +390,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/10/18/Concept-Note/&title=《Concept_Note》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/11/04/Lecture-Neural-Networks-Part-3/&title=《Lecture_Neural Networks Part 3》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/10/18/Concept-Note/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/11/04/Lecture-Neural-Networks-Part-3/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Concept_Note》 — Go Further&url=http://yoursite.com/2018/10/18/Concept-Note/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Lecture_Neural Networks Part 3》 — Go Further&url=http://yoursite.com/2018/11/04/Lecture-Neural-Networks-Part-3/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/10/18/Concept-Note/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/11/04/Lecture-Neural-Networks-Part-3/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -434,7 +416,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACHklEQVR42u3aMXKEQAwEwPv/p3HqwIdHEmcXoolc+IDtRKXd0esVX8ebK/n99zvv/nt+/7ILAwPjtozj9Eo+kHw4f//5/bcrwcDAeADjfHHJq8+fqpLytWFgYGAkjV1SjvO2DwMDA2POuBb8bwUXAwPjhoy8XauW3V6z+MG9OAYGxg0Z+an73//9kXwDAwPjVoyjeOXvmTSC5VVhYGCsZkwCyGRZlx2lBcMcGBgYWxnV7eL5VjYvjnlTmGyMMTAwdjMmdToZ6qoutPcsBgbGbkayTa0W3yTIrJ6hlY/bMDAwFjHmoxXVKDRHNre4GBgY6xi9cLEaHlSHJMqDYhgYGKsZeZfVO9zPi2ny+2oIgYGBsZVRfUVOzcc1qjAMDIzdjMnWcdIIXhWXNheHgYFxc8b5Z/KAoRd5VltJDAyM5zB6kUB+cDY5RCsPW2BgYKxjVLejvTGLSXhZiAEwMDBWM3qw3uYzDyGqIQEGBsYzGfOoIHk2ecMFGSwGBsbNGZP8s1pMe8Ne0VMYGBgPYFQXPR+hqEaevzSOGBgYj2H0to7V0tnrWKOJNgwMjHWMo3hdW0Z7m+QfvoiBgbGaMU8D82L96UAUAwNjNyMvsh+MG+ftIwYGxgMY1eP45AN5Ca4iMTAwMHpxYzUkaC43GbbAwMDAGAyN9VrGQoSJgYGxmpGHAdUB08lyC+UbAwNjNaPaqPXigQsWETepGBgYixhffEudO0ouP1oAAAAASUVORK5CYII=" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJElEQVR42u3aS27DMAwFwNz/0u62QGvnkXRTWBqtisRwNFqw4uf1itcRr5/Pf//k7Nvrz29bGBgYj2VMtpVsN9lo8rtnz2BgYOzDOItg189MNpeH5uu9YWBgYFRfd/1kEjoxMDAw7mIk4fXNZa4YfDEwMDCSJDa/8OUb/YdcHAMD44GMvOr++b//pL+BgYHxKMZRXPkb8kS3GmR/+S0MDIylGXmA67U254G70IrAwMDYhpEX+pMAmqemveGMUXUQAwPjsYxe4SxPO5MrZvOIMTAwFmUkyWfvopZfFguXv7NDwcDAWJpRDXw5ex6IJ8NqGBgYKzHuKoolSWwvAY6CLwYGxtKM3jUuz48no2P5pRMDA2M3Rt62rMImSWz0TgwMjI0Zva1XD6gamqMWJgYGxhKMyQBENVBOktVCDxYDA2NpRj5CMQmR1aHVwrAFBgbGoozrkta8VZk3PnuXTgwMjH0YvcJZdVtJuX+SGGNgYOzAyH9+0h6Y895gMDAwFmXkZfpe2lkdJqvGUgwMjH0Yefk+326+uSQZjgIuBgbGloxqEW3e4MzTbAwMjB0YR3Elp5K3DaqTEqchHgMDY2lGviZDY9XA2ivwYWBgrM3Iy229glr1zJrXRwwMjA0YvcGL65bkvYG43IPFwMDAKKam1dW8vWJgYGCM25DVYlwhuGNgYGzAqI6FJYBJkyA/OAwMjB0Y1XtXb7A1D813/RvAwMBYgvEFwlk2lHt6aQwAAAAASUVORK5CYII=" alt="微信分享二维码">
 </div>
 
 

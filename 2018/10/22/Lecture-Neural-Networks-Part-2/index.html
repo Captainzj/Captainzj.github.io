@@ -31,7 +31,8 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/5267500-df918c8372752302.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/5267500-f7389c2994251ec6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-10-23T03:02:13.843Z">
+<meta property="og:image" content="http://cs231n.github.io/assets/nn2/dropout.jpeg">
+<meta property="og:updated_time" content="2018-11-04T07:05:27.492Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Lecture_Neural Networks Part 2">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
@@ -122,7 +123,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="検索">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -231,7 +232,58 @@
 <h3 id="权重初始化"><a href="#权重初始化" class="headerlink" title="权重初始化"></a>权重初始化</h3><p><strong>错误：全零初始化.</strong> 如果权重被初始化为同样的值，神经元之间就失去了不对称性的源头。</p>
 <p><strong>小随机数初始化</strong>权重初始值要非常接近0又不能等于0。解决方法就是将权重初始化为很小的数值，以此来<em>打破对称性</em>。<strong>W = 0.01 * np.random.randn(D,H)</strong></p>
 <p><strong>使用1/sqrt(n)校准方差</strong>：<strong>w = np.random.randn(n) / sqrt(n)</strong>(其中<strong>n</strong>是输入数据的数量)这样就保证了网络中所有神经元起始时有近似同样的输出分布。实践经验证明，这样做可以提高收敛的速度.</p>
-<h3 id="批量归一化（Batch-Normalization）"><a href="#批量归一化（Batch-Normalization）" class="headerlink" title="批量归一化（Batch Normalization）"></a>批量归一化（Batch Normalization）</h3><h3 id="正则化（L2-L1-Maxnorm-Dropout）"><a href="#正则化（L2-L1-Maxnorm-Dropout）" class="headerlink" title="正则化（L2/L1/Maxnorm/Dropout）"></a>正则化（L2/L1/Maxnorm/Dropout）</h3><h2 id="损失函数"><a href="#损失函数" class="headerlink" title="损失函数"></a>损失函数</h2><h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>参考链接：<a href="https://zhuanlan.zhihu.com/p/21560667?refer=intelligentunit" target="_blank" rel="noopener">神经网络笔记 2</a></p>
+<p><a href="https://link.zhihu.com/?target=http%3A//arxiv-web3.library.cornell.edu/abs/1502.01852" target="_blank" rel="noopener">Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification</a>文中给出了一种针对ReLU神经元的特殊初始化，并给出结论：网络中神经元的方差应该是$2.0/n$。代码为<strong>w = np.random.randn(n) * sqrt(2.0/n)</strong>。这个形式是神经网络算法使用ReLU神经元时的当前最佳推荐。</p>
+<p><strong>稀疏初始化（**</strong>Sparse initialization<strong>**）。</strong>另一个处理非标定方差的方法是将所有权重矩阵设为0，但是为了打破对称性，每个神经元都同下一层固定数目的神经元随机连接（其权重数值由一个小的高斯分布生成）。一个比较典型的连接数目是10个。</p>
+<p><strong>偏置（biases）的初始化。</strong>通常将偏置初始化为0，这是因为随机小数值权重矩阵已经打破了对称性。</p>
+<h3 id="批量归一化（Batch-Normalization）"><a href="#批量归一化（Batch-Normalization）" class="headerlink" title="批量归一化（Batch Normalization）"></a>批量归一化（Batch Normalization）</h3><p>在神经网络中使用批量归一化已经变得非常常见。在实践中，使用了批量归一化的网络对于不好的初始值有更强的鲁棒性。最后一句话总结：批量归一化可以理解为在网络的每一层之前都做预处理，只是这种操作以另一种方式与网络集成在了一起。</p>
+<h3 id="正则化（L2-L1-Maxnorm-Dropout）"><a href="#正则化（L2-L1-Maxnorm-Dropout）" class="headerlink" title="正则化（L2/L1/Maxnorm/Dropout）"></a>正则化（L2/L1/Maxnorm/Dropout）</h3><p><strong>L2正则化</strong>可能是最常用的正则化方法.可以通过<code>惩罚</code>目标函数中所有参数的平方将其实现。即对于网络中的每个权重$w$，向目标函数中增加一个$\frac{1}{2}\lambda w^2$，其中$\lambda$是正则化强度。L2正则化可以直观理解为它对于大数值的权重向量进行严厉惩罚，倾向于更加分散的权重向量。</p>
+<p><strong>L1正则化</strong>是另一个相对常用的正则化方法。对于每个$w$我们都向目标函数增加一个$\lambda|w|$。在实践中，如果不是特别关注某些明确的特征选择，一般说来L2正则化都会比L1正则化效果好。</p>
+<p><strong>最大范式约束（Max norm constraints）</strong>是给每个神经元中权重向量的量级设定上限，并使用投影梯度下降来确保这一约束。在实践中，与之对应的是参数更新方式不变，然后要求神经元中的权重向量$\overrightarrow{w}$必须满足$||\overrightarrow{w}||_2&lt;c$这一条件，一般$c$值为3或者4。即使在学习率设置过高的时候，网络中也不会出现数值“爆炸”，这是因为它的参数更新始终是被限制着的。</p>
+<p><strong>随机失活（Dropout）</strong>是一个简单又极其有效的正则化方法。与L1正则化，L2正则化和最大范式约束等方法互为补充。在训练的时候，随机失活的实现方法是让神经元以超参数$p$的概率被激活或者被设置为0。</p>
+<hr>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://cs231n.github.io/assets/nn2/dropout.jpeg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<p>在训练过程中，随机失活可以被认为是对完整的神经网络抽样出一些子集，每次基于输入数据只更新子网络的参数（然而，数量巨大的子网络们并不是相互独立的，因为它们都共享参数）。在测试过程中不使用随机失活，可以理解为是对数量巨大的子网络们做了模型集成（model ensemble），以此来计算出一个平均的预测。</p>
+<hr>
+<p>实际更倾向使用<strong>反向随机失活（inverted dropout）</strong>，它是在训练时就进行数值范围调整，从而让前向传播在测试时保持不变。这样做还有一个好处，无论你决定是否使用随机失活，预测方法的代码可以保持不变。</p>
+<h2 id="损失函数"><a href="#损失函数" class="headerlink" title="损失函数"></a>损失函数</h2><p>我们已经讨论过损失函数的正则化损失部分，它可以看做是对模型复杂程度的某种惩罚。损失函数的第二个部分是<em>数据损失</em>，它是一个有监督学习问题，用于衡量分类算法的预测结果（即分类评分）和真实标签结果之间的一致性。数据损失是对所有样本的数据损失求平均。也就是说，$L=\frac{1}{N}\sum_iL_i$中，$N$是训练集数据的样本数。</p>
+<ul>
+<li><p><strong>分类问题</strong> 在该问题中，假设有一个装满样本的数据集，每个样本都有一个唯一的正确标签（是固定分类标签之一）.</p>
+<ul>
+<li>最常见的损失函数就是SVM.$\displaystyle L_i=\sum_{j\not=y_i}max(0,f_j-f_{y_i}+1)$<ul>
+<li>平方折叶损失（即使用$ max(0,f_j-f_{y_i}+1)^2$）算法的结果会更好</li>
+</ul>
+</li>
+<li>第二个常用的损失函数是Softmax分类器.   它使用交叉熵损失：$\displaystyle L_i=-log(\frac{e^{f_{y_i}}}{\sum_je^{f_j}})$</li>
+</ul>
+</li>
+<li><p><strong>属性（Attribute）分类</strong> 若每个样本的标签$y_i$是一个二值向量，每个样本可能有，也可能没有某个属性，而且属性之间并不相互排斥，此时应为每个属性创建一个独立的二分类的分类器。$\displaystyle L_i=\sum_jmax(0,1-y_{ij}f_j)$</p>
+</li>
+<li><p><strong>回归问题</strong>是预测实数的值的问题.</p>
+<ul>
+<li>L2范式 $L_i=||f-y_i||^2_2$</li>
+<li>L1范式则是要将每个维度上的绝对值加起来：$L_i=||f-y_i||_1=\sum_j|f_j-(y_i)_j|$</li>
+</ul>
+<blockquote>
+<p>当面对一个回归任务，首先考虑是不是必须这样。一般而言，尽量把你的输出变成二分类，然后对它们进行分类，从而变成一个分类问题。</p>
+</blockquote>
+</li>
+<li><p><strong>结构化预测（structured prediction）</strong>结构化损失是指标签可以是任意的结构，例如图表、树或者其他复杂物体的情况。</p>
+</li>
+</ul>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><ul>
+<li>推荐的预处理操作是对数据的每个特征都进行零中心化，然后将其数值范围都归一化到[-1,1]范围之内。</li>
+<li>使用标准差为$\sqrt{2/n}$的高斯分布来初始化权重，其中$n$是输入的神经元数。例如用numpy可以写作：<strong>w = np.random.randn(n) * sqrt(2.0/n)</strong>。</li>
+<li>使用L2正则化和随机失活的倒置版本。</li>
+<li>使用批量归一化。</li>
+<li>讨论了在实践中可能要面对的不同任务，以及每个任务对应的常用损失函数。</li>
+</ul>
+<p>参考链接：<a href="https://zhuanlan.zhihu.com/p/21560667?refer=intelligentunit" target="_blank" rel="noopener">神经网络笔记 2</a></p>
 
         </div>
 
@@ -240,7 +292,7 @@
     <div class="content">
         
 <span class="post-time">
-    最終更新：<time datetime="2018-10-23T03:02:13.843Z" itemprop="dateUpdated">2018-10-23 11:02:13</time>
+    Last updated: <time datetime="2018-11-04T07:05:27.492Z" itemprop="dateUpdated">2018-11-04 15:05:27</time>
 </span><br>
 
 
@@ -408,7 +460,7 @@
             
                 <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
             
-            <span>このブログの内容物は<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja">クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際ライセンスの下に提供されています</a></span>
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
         </p>
     </div>
     <div class="bottom">
