@@ -36,8 +36,8 @@
 <meta property="og:image" content="http://cs231n.github.io/assets/margin.jpg">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/5267500-69a890113e7bf295.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://github.com/HusterHope/blogimage/raw/master/CS231n3-3.png">
-<meta property="og:image" content="http://cs231n.github.io/assets/svmvssoftmax.png">
-<meta property="og:updated_time" content="2018-10-22T05:10:06.724Z">
+<meta property="og:image" content="http://yoursite.com/2018/10/18/CS231n-Lecture-SVM/SVM">
+<meta property="og:updated_time" content="2018-11-17T12:32:35.357Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Lecture_SVM">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
@@ -303,7 +303,7 @@ $$ </p>
 <p>对于每一个输入数据$x_i$都有一个L值</p>
 <h5 id="设置超参-Delta-和λ"><a href="#设置超参-Delta-和λ" class="headerlink" title="设置超参$\Delta$和λ"></a>设置超参$\Delta$和λ</h5><p>超参数$\Delta$和λ失函数中的数据损失和正则化损失之间的权衡。理解这一点的关键是要知道，权重<strong>W</strong>的大小对于分类分值有直接影响（当然对他们的差异也有直接影响）：当我们将<strong>W</strong>中值缩小，分类分值之间的差异也变小，反之亦然。因此，不同分类分值之间的边界的具体值（比如$\Delta$=1或$\Delta$=100).从某些角度来看是没意义的，因为<code>权重自己就可以控制差异变大和缩小</code>。也就是说，真正的权衡是我们允许权重能够变大到何种程度（通过<code>正则化强度λ</code>来控制）</p>
 <hr>
-<h4 id="Softmax分类器"><a href="#Softmax分类器" class="headerlink" title="Softmax分类器"></a>Softmax分类器</h4><p>与SVM不同，Softmax的输出（归一化的分类概率）更加直观，并且从概率上可以解释。在Softmax分类器中，函数映射$f(x_i;W)=Wx_i$保持不变，但将这些评分值视为每个分类的未归一化的对数概率，并且将<em>折叶损失（hinge loss）</em>替换为<strong>交叉熵损失</strong>（<strong>cross-entropy loss）</strong></p>
+<h4 id="Softmax分类器"><a href="#Softmax分类器" class="headerlink" title="Softmax分类器"></a>Softmax分类器</h4><p>与SVM不同，Softmax的输出（归一化的分类概率）更加直观，并且<code>从概率上可以解释</code>。在Softmax分类器中，函数映射$f(x_i;W)=Wx_i$保持不变，但将这些评分值视为每个分类的<code>未归一化</code>的对数概率，并且将<em>折叶损失（hinge loss）</em>替换为<strong>交叉熵损失</strong>（<strong>cross-entropy loss）</strong></p>
 <p>公式如下：$\displaystyle Li=-log(\frac{e^{f_{y_i}}}{\sum_je^{f_j}})$ 或等价于 $L_i=-f_{y_i}+log(\sum_je^{f_j})$</p>
 <h5 id="softmax函数"><a href="#softmax函数" class="headerlink" title="softmax函数"></a>softmax函数</h5><p>函数$f_j(z)=\frac{e^{z_j}}{\sum_ke^{z_k}}$被称作<strong>softmax 函数</strong>.函数对输入向量z(score值)进行压缩，输出一个向量，其中每个元素值在0到1之间，且所有元素之和为1.<br>$$<br>P(y_i|x_i,W)=\frac{e^{f_{y_i}}}{\sum_je^{f_j}}<br>$$<br>可以解释为是给定图像数据$x_i$，以$W$为参数，分配给正确分类标签$y_i$的<strong>归一化概率</strong>。从概率论的角度来理解，我们就是在<code>最小化正确分类的负对数概率</code>(令正确分类的概率尽趋近于1，即令错误分类的概率均趋近于0)，这可以看做是在进行<em>最大似然估计</em>（MLE）。</p>
 <h5 id="交叉熵"><a href="#交叉熵" class="headerlink" title="交叉熵"></a>交叉熵</h5><p>在“真实”分布(未知)$p$和估计分布(样本分布)$q$之间的<strong>交叉熵</strong>定义： $\displaystyle H(p,q)=-\sum_xp(x) logq(x)$</p>
@@ -312,9 +312,9 @@ $$ </p>
 <h4 id="SVM和Softmax的比较"><a href="#SVM和Softmax的比较" class="headerlink" title="SVM和Softmax的比较"></a>SVM和Softmax的比较</h4><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://cs231n.github.io/assets/svmvssoftmax.png" alt="" title="">
+                    <img src="/2018/10/18/CS231n-Lecture-SVM/SVM" alt="vs." title="">
                 </div>
-                <div class="image-caption"></div>
+                <div class="image-caption">vs.</div>
             </figure>
 <p>针对一个数据点，SVM和Softmax分类器的不同处理方式的例子。两个分类器都计算了同样的分值向量<strong>f</strong>（本节中是通过矩阵乘来实现）。不同之处在于对<strong>f</strong>中分值的解释：</p>
 <p>SVM分类器将它们看做是分类评分，它的损失函数鼓励正确的分类（本例中是蓝色的类别2）的分值比其他分类的分值高出至少一个边界值。SVM的最终的损失值是1.58。</p>
@@ -342,7 +342,7 @@ $$ </p>
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2018-10-22T05:10:06.724Z" itemprop="dateUpdated">2018-10-22 13:10:06</time>
+    Last updated: <time datetime="2018-11-17T12:32:35.357Z" itemprop="dateUpdated">2018-11-17 20:32:35</time>
 </span><br>
 
 
