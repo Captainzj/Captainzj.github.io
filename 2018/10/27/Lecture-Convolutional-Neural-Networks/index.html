@@ -51,7 +51,7 @@
 <meta property="og:image" content="http://www.zhihu.com/equation?tex=3%5Ctimes+%28C%5Ctimes+%283%5Ctimes+3%5Ctimes+C%29%29%3D27C%5E2">
 <meta property="og:image" content="http://www.zhihu.com/equation?tex=P%3D%28F-1%29%2F2">
 <meta property="og:image" content="http://www.zhihu.com/equation?tex=S%3D2">
-<meta property="og:updated_time" content="2018-11-19T13:26:01.228Z">
+<meta property="og:updated_time" content="2018-11-19T15:56:01.060Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Lecture_Convolutional_Neural_Networks">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
@@ -142,7 +142,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="検索">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -358,9 +358,9 @@
 <hr>
 <p><a href="/demo/Convolution demo.webarchive">Convolution demo.webarchive</a></p>
 <hr>
-<p><strong>用矩阵乘法实现</strong>：卷积运算本质上就是在滤波器和输入数据的局部区域间做点积.卷积层的常用实现方式就是利用这一点，将卷积层的前向传播变成一个巨大的矩阵乘法：</p>
+<p><strong>用矩阵乘法实现</strong>：卷积运算本质上就是在滤波器和输入数据的局部区域间做<code>点积</code>.卷积层的常用实现方式就是利用这一点，将卷积层的前向传播变成一个巨大的矩阵乘法：</p>
 <ol>
-<li>输入图像的局部区域被<strong>im2col</strong>操作拉伸为列.比如，如果输入是[227x227x3]，要与尺寸为11x11x3的滤波器以步长为4进行卷积，就取输入中的[11x11x3]数据块，然后将其拉伸为长度为11x11x3=363的列向量.重复进行这一过程，因为步长为4，所以输出的宽高为(227-11)/4+1=55，所以得到<em>im2col</em>操作的输出矩阵<strong>X_col</strong>的尺寸是[363x3025]，其中每列是拉伸的感受野，共有55x55=3,025个.注意因为感受野之间有重叠，所以输入数据体中的数字在不同的列中可能有重复.</li>
+<li>输入图像的局部区域被<strong>im2col</strong>操作拉伸为列.比如，如果输入是[227x227x3]，要与尺寸为11x11x3的滤波器以步长为4进行卷积，就取输入中的[11x11x3]数据块，然后将其<code>拉伸</code>为长度为11x11x3=363的列向量.重复进行这一过程，因为步长为4，所以输出的宽高为(227-11)/4+1=55，所以得到im2col操作的输出矩阵<strong>X_col</strong>的尺寸是[363x3025]，其中每列是拉伸的感受野，共有55x55=3,025个.注意因为感受野之间有重叠，所以输入数据体中的数字在不同的列中可能有重复.</li>
 <li>卷积层的权重也同样被拉伸成行.举例，如果有96个尺寸为[11x11x3]的滤波器，就生成一个矩阵<strong>W_row</strong>，尺寸为[96x363].</li>
 <li>现在卷积的结果和进行一个大矩阵乘<strong>np.dot(W_row, X_col)</strong>是等价的了，能得到每个滤波器和每个感受野间的点积.在我们的例子中，这个操作的输出是[96x3025]，给出了每个滤波器在每个位置的点积输出.</li>
 <li>结果最后必须被重新变为合理的输出尺寸[55x55x96].</li>
@@ -518,7 +518,7 @@
     <div class="content">
         
 <span class="post-time">
-    最終更新：<time datetime="2018-11-19T13:26:01.228Z" itemprop="dateUpdated">2018-11-19 21:26:01</time>
+    Last updated: <time datetime="2018-11-19T15:56:01.060Z" itemprop="dateUpdated">2018-11-19 23:56:01</time>
 </span><br>
 
 
@@ -686,7 +686,7 @@
             
                 <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
             
-            <span>このブログの内容物は<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja">クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際ライセンスの下に提供されています</a></span>
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
         </p>
     </div>
     <div class="bottom">
