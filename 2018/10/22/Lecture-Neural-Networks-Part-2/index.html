@@ -32,7 +32,7 @@
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/5267500-df918c8372752302.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/5267500-f7389c2994251ec6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://cs231n.github.io/assets/nn2/dropout.jpeg">
-<meta property="og:updated_time" content="2018-11-04T07:05:27.492Z">
+<meta property="og:updated_time" content="2018-11-19T07:01:32.821Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Lecture_Neural Networks Part 2">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
@@ -233,13 +233,14 @@
 <p><strong>小随机数初始化</strong>权重初始值要非常接近0又不能等于0。解决方法就是将权重初始化为很小的数值，以此来<em>打破对称性</em>。<strong>W = 0.01 * np.random.randn(D,H)</strong></p>
 <p><strong>使用1/sqrt(n)校准方差</strong>：<strong>w = np.random.randn(n) / sqrt(n)</strong>(其中<strong>n</strong>是输入数据的数量)这样就保证了网络中所有神经元起始时有近似同样的输出分布。实践经验证明，这样做可以提高收敛的速度.</p>
 <p><a href="https://link.zhihu.com/?target=http%3A//arxiv-web3.library.cornell.edu/abs/1502.01852" target="_blank" rel="noopener">Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification</a>文中给出了一种针对ReLU神经元的特殊初始化，并给出结论：网络中神经元的方差应该是$2.0/n$。代码为<strong>w = np.random.randn(n) * sqrt(2.0/n)</strong>。这个形式是神经网络算法使用ReLU神经元时的当前最佳推荐。</p>
-<p><strong>稀疏初始化（**</strong>Sparse initialization<strong>**）。</strong>另一个处理非标定方差的方法是将所有权重矩阵设为0，但是为了打破对称性，每个神经元都同下一层固定数目的神经元随机连接（其权重数值由一个小的高斯分布生成）。一个比较典型的连接数目是10个。</p>
+<p><strong>稀疏初始化（Sparse initialization）</strong>另一个处理非标定方差的方法是将所有权重矩阵设为0，但是为了打破对称性，每个神经元都同下一层固定数目的神经元随机连接（其权重数值由一个小的高斯分布生成）。一个比较典型的连接数目是10个。</p>
 <p><strong>偏置（biases）的初始化。</strong>通常将偏置初始化为0，这是因为随机小数值权重矩阵已经打破了对称性。</p>
 <h3 id="批量归一化（Batch-Normalization）"><a href="#批量归一化（Batch-Normalization）" class="headerlink" title="批量归一化（Batch Normalization）"></a>批量归一化（Batch Normalization）</h3><p>在神经网络中使用批量归一化已经变得非常常见。在实践中，使用了批量归一化的网络对于不好的初始值有更强的鲁棒性。最后一句话总结：批量归一化可以理解为在网络的每一层之前都做预处理，只是这种操作以另一种方式与网络集成在了一起。</p>
-<h3 id="正则化（L2-L1-Maxnorm-Dropout）"><a href="#正则化（L2-L1-Maxnorm-Dropout）" class="headerlink" title="正则化（L2/L1/Maxnorm/Dropout）"></a>正则化（L2/L1/Maxnorm/Dropout）</h3><p><strong>L2正则化</strong>可能是最常用的正则化方法.可以通过<code>惩罚</code>目标函数中所有参数的平方将其实现。即对于网络中的每个权重$w$，向目标函数中增加一个$\frac{1}{2}\lambda w^2$，其中$\lambda$是正则化强度。L2正则化可以直观理解为它对于大数值的权重向量进行严厉惩罚，倾向于更加分散的权重向量。</p>
+<h3 id="正则化（L2-L1-Maxnorm-Dropout）"><a href="#正则化（L2-L1-Maxnorm-Dropout）" class="headerlink" title="正则化（L2/L1/Maxnorm/Dropout）"></a>正则化（L2/L1/Maxnorm/Dropout）</h3><p>正则化：<code>防止过拟合</code></p>
+<p><strong>L2正则化</strong>可能是最常用的正则化(Regularization)方法.可以通过<code>惩罚</code>目标函数中所有参数的平方将其实现。即对于网络中的每个权重$w$，向目标函数中增加一个$\frac{1}{2}\lambda w^2$，其中$\lambda$是正则化强度。L2正则化可以直观理解为它对于<u>大数值的权重向量进行严厉惩罚</u>，倾向于更加分散的权重向量。</p>
 <p><strong>L1正则化</strong>是另一个相对常用的正则化方法。对于每个$w$我们都向目标函数增加一个$\lambda|w|$。在实践中，如果不是特别关注某些明确的特征选择，一般说来L2正则化都会比L1正则化效果好。</p>
-<p><strong>最大范式约束（Max norm constraints）</strong>是给每个神经元中权重向量的量级设定上限，并使用投影梯度下降来确保这一约束。在实践中，与之对应的是参数更新方式不变，然后要求神经元中的权重向量$\overrightarrow{w}$必须满足$||\overrightarrow{w}||_2&lt;c$这一条件，一般$c$值为3或者4。即使在学习率设置过高的时候，网络中也不会出现数值“爆炸”，这是因为它的参数更新始终是被限制着的。</p>
-<p><strong>随机失活（Dropout）</strong>是一个简单又极其有效的正则化方法。与L1正则化，L2正则化和最大范式约束等方法互为补充。在训练的时候，随机失活的实现方法是让神经元以超参数$p$的概率被激活或者被设置为0。</p>
+<p><strong>最大范式约束（Max norm constraints）</strong>是给每个神经元中权重向量的量级<code>设定上限</code>，并使用投影梯度下降来确保这一约束。在实践中，与之对应的是参数更新方式不变，然后要求神经元中的权重向量$\overrightarrow{w}$必须满足$||\overrightarrow{w}||_2&lt;c$这一条件，一般$c$值为3或者4。即使在学习率设置过高的时候，网络中也不会出现数值“爆炸”，这是因为它的参数更新始终是被限制着的。</p>
+<p><strong>随机失活（Dropout）</strong>是一个简单又<code>极其有效</code>的正则化方法。与L1正则化，L2正则化和最大范式约束等方法互为补充。在训练的时候，随机失活的实现方法是让神经元以超参数$p$的概率被激活或者被设置为0。</p>
 <hr>
 <figure class="image-bubble">
                 <div class="img-lightbox">
@@ -292,7 +293,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2018-11-04T07:05:27.492Z" itemprop="dateUpdated">2018-11-04 15:05:27</time>
+    Last updated: <time datetime="2018-11-19T07:01:32.821Z" itemprop="dateUpdated">2018-11-19 15:01:32</time>
 </span><br>
 
 
@@ -374,9 +375,9 @@
 <nav class="post-nav flex-row flex-justify-between">
   
     <div class="waves-block waves-effect prev">
-      <a href="/2018/10/27/Note-About-ADNI/" id="post-prev" class="post-nav-link">
+      <a href="/2018/10/24/Lecture-Neural-Networks-Part-3/" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">Note_About_ADNI</h4>
+        <h4 class="title">Lecture_Neural Networks Part 3</h4>
       </a>
     </div>
   

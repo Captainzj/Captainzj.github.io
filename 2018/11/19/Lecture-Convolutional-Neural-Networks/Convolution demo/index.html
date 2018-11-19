@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>No title | Go Further | Stay Hungry, Stay Foolish</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#142421">
+    
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="Convolution demo      body {   margin: 0;   padding: 0; }     var W1 = 7; var H1 = 7; var D1 = 3;  var K = 2; var F = 3; var S = 2; // stride  var cs = 25; // cell size  var X = new U.Vol(W1, H1, D">
+<meta property="og:type" content="article">
+<meta property="og:title" content="No title">
+<meta property="og:url" content="http://yoursite.com/2018/11/19/Lecture-Convolutional-Neural-Networks/Convolution demo/index.html">
+<meta property="og:site_name" content="Go Further">
+<meta property="og:description" content="Convolution demo      body {   margin: 0;   padding: 0; }     var W1 = 7; var H1 = 7; var D1 = 3;  var K = 2; var F = 3; var S = 2; // stride  var cs = 25; // cell size  var X = new U.Vol(W1, H1, D">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-11-19T10:50:56.245Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="No title">
+<meta name="twitter:description" content="Convolution demo      body {   margin: 0;   padding: 0; }     var W1 = 7; var H1 = 7; var D1 = 3;  var K = 2; var F = 3; var S = 2; // stride  var cs = 25; // cell size  var X = new U.Vol(W1, H1, D">
+    
+        <link rel="alternate" type="application/atom+xml" title="Go Further" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">CaptainSE</h5>
+          <a href="mailto:841145636@qq.com" title="841145636@qq.com" class="mail">841145636@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                Home
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/Captainzj" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis"></div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title"></h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-11-19T10:50:56.244Z" itemprop="datePublished" class="page-time">
+  2018-11-19
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+
+<article id="post-Lecture-Convolutional-Neural-Networks/Convolution demo"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title"></h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-11-19 18:50:56" datetime="2018-11-19T10:50:56.244Z"  itemprop="datePublished">2018-11-19</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            
+<html>
+<head>
+<title>Convolution demo</title>
+
+<script type="text/javascript" src="external/d3.min.js"></script>
+<script type="text/javascript" src="utils.js"></script>
+
+<style type="text/css">
+body {
+  margin: 0;
+  padding: 0;
+}
+</style>
+
+<script type="text/javascript">
+
+var W1 = 7;
+var H1 = 7;
+var D1 = 3;
+
+var K = 2;
+var F = 3;
+var S = 2; // stride
+
+var cs = 25; // cell size
+
+var X = new U.Vol(W1, H1, D1); // input volume
+for(var q=0;q<X.w.length;q++) {
+  X.w[q] = Math.floor(Math.random()*3);
+  // 0 pad with P = 1
+  for(var d=0;d<X.depth;d++) {
+    for(var x=0;x<X.sx;x++) {
+      for(var y=0;y<X.sy;y++) {
+        if(x === 0 || x === (X.sx - 1) || y === 0 || y === (X.sy - 1)) {
+          X.set(x,y,d,0);
+        }
+      }  
+    }
+  }
+}
+
+var Ws = [];
+var bs = [];
+for(var k=0;k<K;k++) {
+  var W = new U.Vol(F, F, D1);
+  for(var q=0;q<W.w.length;q++) {
+    W.w[q] = Math.floor(Math.random()*3) - 1;
+  }
+  Ws.push(W);
+  var b = new U.Vol(1,1,1);
+  b.w[0] = 1 - k;
+  bs.push(b);
+}
+
+var conv_forward = function(V, Ws, bs, stride) {
+  // optimized code by @mdda that achieves 2x speedup over previous version
+  var out_sy = ((V.sy-W.sy)/stride +1);
+  var out_sx = ((V.sx-W.sx)/stride +1);
+  var A = new U.Vol(out_sx |0, out_sy |0, Ws.length |0, 0.0);
+  
+  var V_sx = V.sx |0;
+  var V_sy = V.sy |0;
+  var xy_stride = stride |0;
+
+  for(var d=0;d<Ws.length;d++) {
+    var f = Ws[d];
+    var x = 0;
+    var y = 0;
+    for(var ay=0; ay<out_sy; y+=xy_stride,ay++) {  // xy_stride
+      x = 0;
+      for(var ax=0; ax<out_sx; x+=xy_stride,ax++) {  // xy_stride
+
+        // convolve centered at this particular location
+        var a = 0.0;
+        for(var fy=0;fy<f.sy;fy++) {
+          var oy = y+fy; // coordinates in the original input array coordinates
+          for(var fx=0;fx<f.sx;fx++) {
+            var ox = x+fx;
+            if(oy>=0 && oy<V_sy && ox>=0 && ox<V_sx) {
+              for(var fd=0;fd<f.depth;fd++) {
+                // avoid function call overhead (x2) for efficiency, compromise modularity :(
+                a += f.w[((f.sx * fy)+fx)*f.depth+fd] * V.w[((V_sx * oy)+ox)*V.depth+fd];
+              }
+            }
+          }
+        }
+        a += bs[d].w[0];
+        A.set(ax, ay, d, a);
+      }
+    }
+  }
+  return A;
+}
+
+function renderVol(svg, V, xoff, yoff, col, title, vid) {
+
+  var pad = 3;
+  var dpad = 20;
+
+  var gyoff = 20;
+
+  var txt = title + ' (' + V.sx + 'x' + V.sy + 'x' + V.depth + ')';
+  // 1 padding exception
+  //if(vid === 'x') { txt = title + ' (' + (V.sx-2) + 'x' + (V.sy-2) + 'x' + V.depth + ')'; }
+
+  svg.append('text')
+    .attr('x', xoff)
+    .attr('y', yoff - 5)
+    .attr('font-size', 16)
+    .attr('fill', 'black')
+    .text(txt);
+
+  for(var d = 0; d < V.depth; d++) {
+
+    svg.append('text')
+      .attr('x', xoff)
+      .attr('y', yoff + d * (V.sy * (cs + pad) + dpad) + gyoff - 5)
+      .attr('font-size', 16)
+      .attr('fill', 'black')
+      .attr('style', 'font-family: courier;')
+      .text(vid + '[:,:,'+d+']');
+
+    for(var x = 0; x < V.sx; x++) {
+      for(var y = 0; y < V.sy; y++) {
+
+        var xcoord = xoff + x * (cs + pad);
+        var ycoord = yoff + y * (cs + pad) + d * (V.sy * (cs + pad) + dpad) + gyoff;
+
+        var thecol = col;
+        if(vid === 'x' && (x === 0 || y === 0 || x === V.sx - 1 || y === V.sy - 1)) {thecol = '#DDD';}
+
+        svg.append('rect')
+          .attr('x', xcoord)
+          .attr('y', ycoord)
+          .attr('height', cs)
+          .attr('width', cs)
+          .attr('fill', thecol)
+          .attr('stroke', 'none')
+          .attr('stroke-width', '2')
+          .attr('id', vid+'_'+x+'_'+y+'_'+d)
+          .attr('class', vid);
+
+        svg.append('text')
+          .attr('x', xcoord + 5)
+          .attr('y', ycoord + 15)
+          .attr('font-size', 16)
+          .attr('fill', 'black')
+          .text(V.get(x,y,d).toFixed(0));
+
+      }
+    }
+  }
+}
+
+function draw() {
+  var d3elt = d3.select('#draw');
+  svg = d3elt.append('svg').attr('width', '100%').attr('height', '100%')
+        .append('g').attr('transform', 'scale(1)');
+
+  var yoff = 20;
+  // render input volume
+  renderVol(svg, X, 10, yoff, '#DDF', 'Input Volume (+pad 1)', 'x');
+
+  for(var i=0;i<Ws.length;i++) {
+    // render weights
+    renderVol(svg, Ws[i], 270 + i*170, yoff, '#FDD', 'Filter W'+i, 'w'+i);
+    // render biases
+    renderVol(svg, bs[i], 270 + i*170, 350 + yoff, '#FDD', 'Bias b'+i, 'b'+i);
+  }
+
+  // render output
+  renderVol(svg, O, 600, yoff, '#DFD', 'Output Volume', 'o');
+
+  // render controls
+  
+  svg.append('text')
+    .attr('x', 520)
+    .attr('y', 470)
+    .attr('font-size', 16)
+    .attr('fill', 'black')
+    .text('toggle movement');
+  svg.append('rect')
+    .attr('x', 500)
+    .attr('y', 450)
+    .attr('height', 30)
+    .attr('width', 150)
+    .attr('fill', "rgba(200, 200, 200, 0.1)")
+    .attr('stroke', 'black')
+    .attr('stroke-width', '2')
+    .attr('style', 'cursor:pointer;')
+    .on('click', function() {
+      // toggle 
+      if(iid === -1) {
+        iid = setInterval(focusCell, 1000);
+      } else {
+        clearInterval(iid);
+        iid = -1;
+      }
+    });
+}
+
+var fxg = 0;
+var fyg = 0;
+var fdg = 0;
+function focusCell() {
+  
+  // first unfocus all
+  for(var i=0;i<Ws.length;i++) {
+    d3.selectAll('.w'+i).attr('stroke', 'none');
+    d3.selectAll('.b'+i).attr('stroke', 'none');
+  }
+  d3.selectAll('.x').attr('stroke', 'none');
+  d3.selectAll('.o').attr('stroke', 'none');
+
+  var fx = fxg;
+  var fy = fyg;
+  var fd = fdg;
+
+  // highlight the output cell
+  var csel = d3.select('#o'+'_'+fx+'_'+fy+'_'+fd);
+  csel.attr('stroke', '#0A0');
+
+  // highlight the weights
+  d3.selectAll('.w'+fd).attr('stroke', '#A00');
+  // highlight the bias
+  d3.selectAll('.b'+fd).attr('stroke', '#A00');
+
+  d3.selectAll('.ll').remove();
+
+  // highlight the input cell
+  for(var d=0;d<D1;d++) {
+    for(var x=0;x<F;x++) {
+      for(var y=0;y<F;y++) {
+        var ix = fx * S + x;
+        var iy = fy * S + y;
+        var id = d;
+        var csel = d3.select('#x'+'_'+ix+'_'+iy+'_'+id);
+        csel.attr('stroke', '#00A');
+
+        // connect with line
+        if(x === 0 && y === 0) {
+          var wsel = d3.select('#w'+fd+'_'+x+'_'+y+'_'+d);
+          svg.append('line')
+            .attr('x1', csel.attr('x'))
+            .attr('y1', csel.attr('y'))
+            .attr('x2', wsel.attr('x'))
+            .attr('y2', wsel.attr('y'))
+            .attr('stroke', 'black')
+            .attr('stroke-width', '1')
+            .attr('class', 'll');
+        }
+        if(x === 0 && y === (F-1)) {
+          var wsel = d3.select('#w'+fd+'_'+x+'_'+y+'_'+d);
+          svg.append('line')
+            .attr('x1', csel.attr('x'))
+            .attr('y1', parseFloat(csel.attr('y')) + cs)
+            .attr('x2', wsel.attr('x'))
+            .attr('y2', parseFloat(wsel.attr('y')) + cs)
+            .attr('stroke', 'black')
+            .attr('stroke-width', '1')
+            .attr('class', 'll');
+        }
+        if(x === (F-1) && y === 0) {
+          var wsel = d3.select('#w'+fd+'_'+x+'_'+y+'_'+d);
+          svg.append('line')
+            .attr('x1', parseFloat(csel.attr('x')) + cs)
+            .attr('y1', csel.attr('y'))
+            .attr('x2', parseFloat(wsel.attr('x')) + cs)
+            .attr('y2', wsel.attr('y'))
+            .attr('stroke', 'black')
+            .attr('stroke-width', '1')
+            .attr('class', 'll');
+        }
+        if(x === (F-1) && y === (F-1)) {
+          var wsel = d3.select('#w'+fd+'_'+x+'_'+y+'_'+d);
+          svg.append('line')
+            .attr('x1', parseFloat(csel.attr('x')) + cs)
+            .attr('y1', parseFloat(csel.attr('y')) + cs)
+            .attr('x2', parseFloat(wsel.attr('x')) + cs)
+            .attr('y2', parseFloat(wsel.attr('y')) + cs)
+            .attr('stroke', 'black')
+            .attr('stroke-width', '1')
+            .attr('class', 'll');
+        }
+        
+      }
+    }
+  }
+
+  // output focus cycle
+  fxg++;
+  if(fxg >= O.sx) {
+    fxg = 0;
+    fyg++;
+    if(fyg >=O.sy) {
+      fyg = 0;
+      fdg++;
+      if(fdg >= O.depth) {
+        fdg = 0;
+      }
+    }
+  }
+
+}
+
+iid = -1;
+function start() {
+  O = conv_forward(X, Ws, bs, S);
+  draw();
+  iid = setInterval(focusCell, 1000);
+}
+
+</script>
+
+
+
+</head>
+
+<body onload="start()">
+
+<div id="draw">
+</div>
+
+</body>
+</html>
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2018-11-19T10:50:56.245Z" itemprop="dateUpdated">2018-11-19 18:50:56</time>
+</span><br>
+
+
+        
+    </div>
+    
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/avatar.jpg" alt="CaptainSE">
+            CaptainSE
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/11/19/Lecture-Convolutional-Neural-Networks/Convolution demo/&title=Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/11/19/Lecture-Convolutional-Neural-Networks/Convolution demo/&title=Go Further&source=CaptainSE" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/11/19/Lecture-Convolutional-Neural-Networks/Convolution demo/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=Go Further&url=http://yoursite.com/2018/11/19/Lecture-Convolutional-Neural-Networks/Convolution demo/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/11/19/Lecture-Convolutional-Neural-Networks/Convolution demo/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/11/12/ADNI-Publications-digest/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">ADNI_Publications_digest</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢老板~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>CaptainSE &copy; 2015 - 2018</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/11/19/Lecture-Convolutional-Neural-Networks/Convolution demo/&title=《No title》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/11/19/Lecture-Convolutional-Neural-Networks/Convolution demo/&title=《No title》 — Go Further&source=CaptainSE" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/11/19/Lecture-Convolutional-Neural-Networks/Convolution demo/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《No title》 — Go Further&url=http://yoursite.com/2018/11/19/Lecture-Convolutional-Neural-Networks/Convolution demo/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/11/19/Lecture-Convolutional-Neural-Networks/Convolution demo/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAADL0lEQVR42u3ay2rjQBAF0Pz/T2dgmN3Eyr3VMtjlo1VwZHWfFriox9dXfH3/vdrP///vd3Dldz5a5bYLGxsb+03Y+SauSY8OItnW7GntYWFjY2PvZl8vef3oPDq0B9QeWRFosbGxsT+SnQSM64QkDz/nuQM2NjY29vXjZgWgk4JRe6zY2NjYn8bON3qeNuQpyr0Hio2Njb2V3TZ6X/nvJ/a3sbGxsV+S/T26kmSgLUK15aSj/WNjY2MvYidLngxcJmnGbEwnbzZEYQwbGxv7zdltczcp1icFnbwsdd5m/uXVYmNjY69gP6OxmjxhFt6SZnCU6mBjY2MvYufjku24z/PGdE5eADY2NvYmdjugc31yeen/rnGcYbEMGxsbewV7tthJKWqW0iTHl5eisLGxsTexky+fDOgkhzILYO0BYWNjY29lt2X6PA3IG7T5ps/v//cJNjY29iL2ScGoLeIXbdfRGFC9FjY2NvYK9l0F+iT9OEke8iOOXhU2Njb2InY7/pg/elbZalOdWdsAGxsbexM7H3xptzgbpsnTjDzc/rArbGxs7HXsk0LPbHyniKhx0+Io8cDGxsZ+W3YSrvIg0SYPbcs2+e/sVWFjY2O/L7ttl54cx0mz9vw1YGNjY29lz0Ze8hbC7ODa1dsQiI2Njb2VnSQkbUEq38QsCM2GgbCxsbH3sdtHnzRZ23vadfPxI2xsbOxN7PymZwzT5MWmpPRfN5WxsbGxF7FnjdU2UM0O9yQdKvrb2NjY2G/IHv7c31TiScLSydDnw29hY2NjL2KfDESe/D0LUbPECRsbG/tz2EVJvWystinNyf1t2oONjY29mz0j5XWsfK28xdsGSGxsbOxN7Pznvk0DZkWiWRug/hY2Njb2m7PvGrg5adA+I9T9chDY2NjYi9j51YaiWVk/H7uZFY+wsbGxt7KfEbROWrx3HUdUP8PGxsZexM63cr2t5M48lrb3F0UrbGxs7A9mz8JVHibzIZ62/fxDKoKNjY39Yez2zlnDeBb28rCKjY2NvZWdh5Y2DWgTlVlIa5vN2NjY2JvYs0ZvW0Jqg1zeJMgTmxv629jY2Nivxf4DUFdFKDbgR7YAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = 'Go Further | Stay Hungry, Stay Foolish';
+            clearTimeout(titleTime);
+        } else {
+            document.title = 'Go Further | Stay Hungry, Stay Foolish';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
