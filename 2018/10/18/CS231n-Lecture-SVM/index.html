@@ -35,9 +35,10 @@
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/5267500-5e1fbbb3ebc2d9c4.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://cs231n.github.io/assets/margin.jpg">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/5267500-69a890113e7bf295.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://yoursite.com/2018/10/18/CS231n-Lecture-SVM/loss_i.png">
 <meta property="og:image" content="https://github.com/HusterHope/blogimage/raw/master/CS231n3-3.png">
 <meta property="og:image" content="http://yoursite.com/2018/10/18/CS231n-Lecture-SVM/SVMvsSoftmax.jpg">
-<meta property="og:updated_time" content="2018-11-19T02:58:05.361Z">
+<meta property="og:updated_time" content="2018-11-20T09:08:24.409Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Lecture_Linear_classification">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
@@ -128,7 +129,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="検索">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -169,7 +170,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#课程链接"><span class="post-toc-number">1.</span> <span class="post-toc-text">课程链接</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#线性分类器"><span class="post-toc-number">2.</span> <span class="post-toc-text">线性分类器</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#评分函数-Score-function"><span class="post-toc-number">3.</span> <span class="post-toc-text">评分函数 Score function</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#线性映射"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">线性映射</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#偏差和权重的合并Bias-trick"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">偏差和权重的合并Bias trick</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#将线性分类器看作模板匹配"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">将线性分类器看作模板匹配</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#图像数据预处理-Image-data-preprocessing"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">图像数据预处理 Image data preprocessing</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#损失函数-Loss-function"><span class="post-toc-number">4.</span> <span class="post-toc-text">损失函数 Loss function</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#多类支持向量机损失-Multiclass-Support-Vector-Machine-Loss"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">多类支持向量机损失 Multiclass Support Vector Machine Loss</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Data-Loss"><span class="post-toc-number">4.1.1.</span> <span class="post-toc-text">Data Loss</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#正则化-Regularization"><span class="post-toc-number">4.1.2.</span> <span class="post-toc-text">正则化 Regularization</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#完整的多类SVM损失函数"><span class="post-toc-number">4.1.3.</span> <span class="post-toc-text">完整的多类SVM损失函数</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#设置超参-Delta-和λ"><span class="post-toc-number">4.1.4.</span> <span class="post-toc-text">设置超参$\Delta$和λ</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Softmax分类器"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">Softmax分类器</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#softmax函数"><span class="post-toc-number">4.2.1.</span> <span class="post-toc-text">softmax函数</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#交叉熵"><span class="post-toc-number">4.2.2.</span> <span class="post-toc-text">交叉熵</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#SVM和Softmax的比较"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">SVM和Softmax的比较</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#小结"><span class="post-toc-number">5.</span> <span class="post-toc-text">小结</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#课程链接"><span class="post-toc-number">1.</span> <span class="post-toc-text">课程链接</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#线性分类器"><span class="post-toc-number">2.</span> <span class="post-toc-text">线性分类器</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#评分函数-Score-function"><span class="post-toc-number">3.</span> <span class="post-toc-text">评分函数 Score function</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#线性映射"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">线性映射</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#偏差和权重的合并Bias-trick"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">偏差和权重的合并Bias trick</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#将线性分类器看作模板匹配"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">将线性分类器看作模板匹配</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#图像数据预处理-Image-data-preprocessing"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">图像数据预处理 Image data preprocessing</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#损失函数-Loss-function"><span class="post-toc-number">4.</span> <span class="post-toc-text">损失函数 Loss function</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#多类支持向量机损失-Multiclass-Support-Vector-Machine-Loss"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">多类支持向量机损失 Multiclass Support Vector Machine Loss</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Data-Loss"><span class="post-toc-number">4.1.1.</span> <span class="post-toc-text">Data Loss</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#正则化-Regularization"><span class="post-toc-number">4.1.2.</span> <span class="post-toc-text">正则化 Regularization</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#完整的多类SVM损失函数"><span class="post-toc-number">4.1.3.</span> <span class="post-toc-text">完整的多类SVM损失函数</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#设置超参-Delta-和λ"><span class="post-toc-number">4.1.4.</span> <span class="post-toc-text">设置超参$\Delta$和λ</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#SVM-梯度计算"><span class="post-toc-number">4.1.5.</span> <span class="post-toc-text">SVM 梯度计算</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Softmax分类器"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">Softmax分类器</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#softmax函数"><span class="post-toc-number">4.2.1.</span> <span class="post-toc-text">softmax函数</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#交叉熵"><span class="post-toc-number">4.2.2.</span> <span class="post-toc-text">交叉熵</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#SVM和Softmax的比较"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">SVM和Softmax的比较</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#小结"><span class="post-toc-number">5.</span> <span class="post-toc-text">小结</span></a></li></ol>
         </nav>
     </aside>
 
@@ -285,6 +286,13 @@ $$
 <h5 id="Data-Loss"><a href="#Data-Loss" class="headerlink" title="Data Loss"></a><strong>Data Loss</strong></h5><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
+                    <img src="/2018/10/18/CS231n-Lecture-SVM/loss_i.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
                     <img src="https://github.com/HusterHope/blogimage/raw/master/CS231n3-3.png" alt="" title="">
                 </div>
                 <div class="image-caption"></div>
@@ -292,16 +300,25 @@ $$
 <p>$$ 
 L =  { \frac{1}{N} \sum_i L_i }
 $$ </p>
-<h5 id="正则化-Regularization"><a href="#正则化-Regularization" class="headerlink" title="正则化 Regularization"></a><strong>正则化 Regularization</strong></h5><p><strong>防止过拟合</strong>：向损失函数增加一个<strong>正则化惩罚（regularization penalty） R(W)</strong>部分，使其不能完全匹配训练集.<br>最常用的正则化惩罚是L2范式，L2范式通过对所有参数进行逐元素的平方惩罚来<strong>抑制大数值的权重</strong>.对大数值权重进行惩罚，可以提升其泛化能力，因为这就意味着没有哪个维度能够独自对于整体分值有过大的影响.<br>$$<br>R(W) = \sum_k\sum_l W_{k,l}^2<br>$$</p>
+<h5 id="正则化-Regularization"><a href="#正则化-Regularization" class="headerlink" title="正则化 Regularization"></a><strong>正则化 Regularization</strong></h5><p><strong>防止过拟合</strong>：向损失函数增加一个<strong>正则化惩罚（regularization penalty） R(W)</strong>部分，使其不能完全匹配训练集.<br>最常用的正则化惩罚是L2范式，L2范式通过<code>对所有参数进行逐元素的平方惩罚</code>来<strong>抑制大数值的权重</strong>.对大数值权重进行惩罚，可以提升其泛化能力，因为这就意味着没有哪个维度能够独自对于整体分值有过大的影响.<br>$$<br>R(W) = \sum_k\sum_l W_{k,l}^2<br>$$</p>
 <p>需要注意的是，和权重不同，偏差没有这样的效果，因为它们并不控制输入维度上的影响强度。因此通常<code>只</code>对权重$W$正则化，而不正则化偏差$b$。因为正则化惩罚的存在，不可能在所有的例子中得到0的损失值，这是因为只有当$W=0$的特殊情况下，才能得到损失值为0</p>
 <h5 id="完整的多类SVM损失函数"><a href="#完整的多类SVM损失函数" class="headerlink" title="完整的多类SVM损失函数"></a>完整的多类SVM损失函数</h5><p>$$ 
-L =  \underbrace{ \frac{1}{N} \sum_i L_i }_\text{data loss} + \underbrace{ \lambda R(W) }_\text{regularization loss} \\\\
+L =  \underbrace{ \frac{1}{N} \sum_i L_i }_\text{data loss} + \underbrace{ \frac{\lambda}{2} R(W) }_\text{regularization loss} \\\\
 $$ </p>
 <p>将其展开完整公式是：<br>$$ 
 L = \frac{1}{N} \sum_i \sum_{j\neq y_i} \left[ \max(0, f(x_i; W)_j - f(x_i; W)_{y_i} + \Delta) \right] + \lambda \sum_k\sum_l W_{k,l}^2
 $$ </p>
 <p>对于每一个输入数据$x_i$都有一个L值</p>
 <h5 id="设置超参-Delta-和λ"><a href="#设置超参-Delta-和λ" class="headerlink" title="设置超参$\Delta$和λ"></a>设置超参$\Delta$和λ</h5><p>超参数$\Delta$和λ失函数中的数据损失和正则化损失之间的权衡。理解这一点的关键是要知道，权重<strong>W</strong>的大小对于分类分值有直接影响（当然对他们的差异也有直接影响）：当我们将<strong>W</strong>中值缩小，分类分值之间的差异也变小，反之亦然。因此，不同分类分值之间的边界的具体值（比如$\Delta$=1或$\Delta$=100).从某些角度来看是没意义的，因为<code>权重自己就可以控制差异变大和缩小</code>。也就是说，真正的权衡是我们允许权重能够变大到何种程度（通过<code>正则化强度λ</code>来控制）</p>
+<h5 id="SVM-梯度计算"><a href="#SVM-梯度计算" class="headerlink" title="SVM 梯度计算"></a>SVM 梯度计算</h5><p>$$ 
+L_i = \sum_{j\neq y_i} \left[ \max(0, w_j^Tx_i - w_{y_i}^Tx_i + \Delta) \right]
+$$ </p>
+<p>$$ 
+\left\{\begin{aligned}
+\nabla_{w_{y_i}} L_i = & -\left(\sum_{j \ne y_i} \mathbb{1}(w_j^Tx_i - w_{y_i}^Tx_i + \Delta > 0)\right)x_i & j = y_i \\
+\nabla_{w_j} L_i = & 1(w_j^Tx_i - w_{y_i}^Tx_i + \Delta > 0) x_i & j \ne y_i
+\end{aligned}\right.
+$$ <br>其中$\mathbb{1}$是一个示性函数，如果括号中的条件为真，那么函数值为1，如果为假，则函数值为0。</p>
 <hr>
 <h4 id="Softmax分类器"><a href="#Softmax分类器" class="headerlink" title="Softmax分类器"></a>Softmax分类器</h4><p>与SVM不同，Softmax的输出（归一化的分类概率）更加直观，并且<code>从概率上可以解释</code>。在Softmax分类器中，函数映射$f(x_i;W)=Wx_i$保持不变，但将这些评分值视为每个分类的<code>未归一化</code>的对数概率，并且将<em>折叶损失（hinge loss）</em>替换为<strong>交叉熵损失</strong>（<strong>cross-entropy loss）</strong></p>
 <p>公式如下：$\displaystyle Li=-log(\frac{e^{f_{y_i}}}{\sum_je^{f_j}})$ 或等价于 $L_i=-f_{y_i}+log(\sum_je^{f_j})$</p>
@@ -342,7 +359,7 @@ $$ </p>
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2018-11-19T02:58:05.361Z" itemprop="dateUpdated">2018-11-19 10:58:05</time>
+    最終更新：<time datetime="2018-11-20T09:08:24.409Z" itemprop="dateUpdated">2018-11-20 17:08:24</time>
 </span><br>
 
 
@@ -510,7 +527,7 @@ $$ </p>
             
                 <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
             
-            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+            <span>このブログの内容物は<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja">クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際ライセンスの下に提供されています</a></span>
         </p>
     </div>
     <div class="bottom">
