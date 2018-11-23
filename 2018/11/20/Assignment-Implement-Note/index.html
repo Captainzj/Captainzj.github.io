@@ -29,7 +29,7 @@
 <meta property="og:site_name" content="Go Further">
 <meta property="og:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-23T11:50:13.622Z">
+<meta property="og:updated_time" content="2018-11-23T12:02:27.921Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Assignment_Implement_Note">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
@@ -119,7 +119,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="検索">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -196,32 +196,32 @@ $$ <br>其中$\mathbb{1}$是一个示性函数，如果括号中的条件为真�
 <li>此处解释仅关注dW(即对权重的梯度计算) <code>np.dot(X.T, margins)</code>  </li>
 </ul>
 <p>$$ 
-\underbrace{\underbrace{\begin{bmatrix}\overrightarrow{X_C}&\overrightarrow{X_D} &\overrightarrow{X_A}& \overrightarrow{X_B}\end{bmatrix}}_\text{可看作dW (D,C)}
+\underbrace{\underbrace{\begin{bmatrix}\overrightarrow{W_C}&\overrightarrow{W_D} &\overrightarrow{W_A}& \overrightarrow{W_B}\end{bmatrix}}_\text{可看作dW (D,C)}
 =\underbrace{\begin{bmatrix}\overrightarrow{X_c}&\overrightarrow{X_d}&\overrightarrow{X_a}&\overrightarrow{X_b}\end{bmatrix}}_\text{可看作X.T (D,N)}
-\underbrace{\begin{bmatrix}  1&1  &-3  &1 \\ 1 & 1 &  1&-3\\-3&  1&  1& 1\\  1&  -3&1  &1  \end{bmatrix}}_\text{可看作margins (N,C)}}_\text{svm_loss_vectorized dW计算过程}
-=\underbrace{\begin{bmatrix}   \overrightarrow{X_a}+\overrightarrow{X_b}-3\overrightarrow{X_c}+\overrightarrow{X_d}&\overrightarrow{X_a}+\overrightarrow{X_b}+\overrightarrow{X_c}-3\overrightarrow{X_d} &-3\overrightarrow{X_a}+\overrightarrow{X_b}+\overrightarrow{X_c}+\overrightarrow{X_d}&\overrightarrow{X_a}-3\overrightarrow{X_b}+\overrightarrow{X_c}+\overrightarrow{X_d}   \end{bmatrix}}_\text{svm_loss_naive dW计算过程}
+\underbrace{\begin{bmatrix}  1&1  &-9  &1 \\ 1 & 1 &  1&-9\\-9&  1&  1& 1\\  1&  -9&1  &1  \end{bmatrix}}_\text{可看作margins (N,C)}}_\text{可看作svm_loss_vectorized dW计算过程}
+=\underbrace{\begin{bmatrix}   \overrightarrow{X_a}+\overrightarrow{X_b}-9\overrightarrow{X_c}+\overrightarrow{X_d}&\overrightarrow{X_a}+\overrightarrow{X_b}+\overrightarrow{X_c}-9\overrightarrow{X_d} &-9\overrightarrow{X_a}+\overrightarrow{X_b}+\overrightarrow{X_c}+\overrightarrow{X_d}&\overrightarrow{X_a}-9\overrightarrow{X_b}+\overrightarrow{X_c}+\overrightarrow{X_d}   \end{bmatrix}}_\text{可看作svm_loss_naive dW计算过程}
 $$ </p>
-<p>$margins.shape==scores.shape$    $-row_sum=-3(代码中为-9) $</p>
+<p>$margins.shape==scores.shape$    $-row_sum=-9 $</p>
 <p>矩阵基本知识：<br>$$ 
 (1)\begin{bmatrix}\overrightarrow{A}&\overrightarrow{B}  &\overrightarrow{C}  & \overrightarrow{D}\end{bmatrix}
-=\begin{bmatrix}\overrightarrow{a}&\overrightarrow{b}  &\overrightarrow{c}&\overrightarrow{d}\end{bmatrix}\begin{bmatrix} -3&  1&  1& 1\\  1&  -3&1  &1 \\  1&1  &-3  &1 \\ 1 & 1 &  1&-3 \end{bmatrix}
-=\begin{bmatrix} -3\overrightarrow{a}+\overrightarrow{b}+\overrightarrow{c}+\overrightarrow{d}&\overrightarrow{a}-3\overrightarrow{b}+\overrightarrow{c}+\overrightarrow{d}  & \overrightarrow{a}+\overrightarrow{b}-3\overrightarrow{c}+\overrightarrow{d}&\overrightarrow{a}+\overrightarrow{b}+\overrightarrow{c}-3\overrightarrow{d}  \end{bmatrix}
+=\begin{bmatrix}\overrightarrow{a}&\overrightarrow{b}  &\overrightarrow{c}&\overrightarrow{d}\end{bmatrix}\begin{bmatrix} -9&  1&  1& 1\\  1&  -9&1  &1 \\  1&1  &-9  &1 \\ 1 & 1 &  1&-9 \end{bmatrix}
+=\begin{bmatrix} -9\overrightarrow{a}+\overrightarrow{b}+\overrightarrow{c}+\overrightarrow{d}&\overrightarrow{a}-9\overrightarrow{b}+\overrightarrow{c}+\overrightarrow{d}  & \overrightarrow{a}+\overrightarrow{b}-9\overrightarrow{c}+\overrightarrow{d}&\overrightarrow{a}+\overrightarrow{b}+\overrightarrow{c}-9\overrightarrow{d}  \end{bmatrix}
 $$ <br>$$ 
 (2)\begin{bmatrix}\overrightarrow{C}&\overrightarrow{D} &\overrightarrow{A}& \overrightarrow{B}\end{bmatrix}
 =\begin{bmatrix}\overrightarrow{c}&\overrightarrow{d}&\overrightarrow{a}&\overrightarrow{b}\end{bmatrix}
-\begin{bmatrix}  1&1  &-3  &1 \\ 1 & 1 &  1&-3\\-3&  1&  1& 1\\  1&  -3&1  &1  \end{bmatrix}
-=\begin{bmatrix}   \overrightarrow{a}+\overrightarrow{b}-3\overrightarrow{c}+\overrightarrow{d}&\overrightarrow{a}+\overrightarrow{b}+\overrightarrow{c}-3\overrightarrow{d} &-3\overrightarrow{a}+\overrightarrow{b}+\overrightarrow{c}+\overrightarrow{d}&\overrightarrow{a}-3\overrightarrow{b}+\overrightarrow{c}+\overrightarrow{d}   \end{bmatrix}
+\begin{bmatrix}  1&1  &-9  &1 \\ 1 & 1 &  1&-9\\-9&  1&  1& 1\\  1&  -9&1  &1  \end{bmatrix}
+=\begin{bmatrix}   \overrightarrow{a}+\overrightarrow{b}-9\overrightarrow{c}+\overrightarrow{d}&\overrightarrow{a}+\overrightarrow{b}+\overrightarrow{c}-9\overrightarrow{d} &-9\overrightarrow{a}+\overrightarrow{b}+\overrightarrow{c}+\overrightarrow{d}&\overrightarrow{a}-9\overrightarrow{b}+\overrightarrow{c}+\overrightarrow{d}   \end{bmatrix}
 $$ </p>
 <p>$$ 
 (3) \begin{bmatrix}\overrightarrow{A}\\\overrightarrow{B}\\\overrightarrow{C}\\\overrightarrow{D}\end{bmatrix}
-=\begin{bmatrix} -3&  1&  1& 1\\  1&  -3&1  &1 \\  1&1  &-3  &1 \\ 1 & 1 &  1&-3 \end{bmatrix}\begin{bmatrix}\overrightarrow{a}\\\overrightarrow{b}\\\overrightarrow{c}\\\overrightarrow{d}\end{bmatrix}
-=\begin{bmatrix}-3\overrightarrow{a}+\overrightarrow{b}+\overrightarrow{c}+\overrightarrow{d}\\\overrightarrow{a}-3\overrightarrow{b}+\overrightarrow{c}+\overrightarrow{d}\\ \overrightarrow{a}+\overrightarrow{b}-3\overrightarrow{c}+\overrightarrow{d}\\\overrightarrow{a}+\overrightarrow{b}+\overrightarrow{c}-3\overrightarrow{d}  \end{bmatrix}
+=\begin{bmatrix} -9&  1&  1& 1\\  1&  -9&1  &1 \\  1&1  &-9  &1 \\ 1 & 1 &  1&-9 \end{bmatrix}\begin{bmatrix}\overrightarrow{a}\\\overrightarrow{b}\\\overrightarrow{c}\\\overrightarrow{d}\end{bmatrix}
+=\begin{bmatrix}-9\overrightarrow{a}+\overrightarrow{b}+\overrightarrow{c}+\overrightarrow{d}\\\overrightarrow{a}-9\overrightarrow{b}+\overrightarrow{c}+\overrightarrow{d}\\ \overrightarrow{a}+\overrightarrow{b}-9\overrightarrow{c}+\overrightarrow{d}\\\overrightarrow{a}+\overrightarrow{b}+\overrightarrow{c}-9\overrightarrow{d}  \end{bmatrix}
 $$ </p>
 <p>$$ 
 (4) \begin{bmatrix}\overrightarrow{C}\\\overrightarrow{D}\\\overrightarrow{A}\\\overrightarrow{B}\end{bmatrix}
-=\begin{bmatrix}   1&1  &-3  &1 \\ 1 & 1 &  1&-3 \\-3&  1&  1& 1\\  1&  -3&1  &1\end{bmatrix}
+=\begin{bmatrix}   1&1  &-9  &1 \\ 1 & 1 &  1&-9 \\-9&  1&  1& 1\\  1&  -9&1  &1\end{bmatrix}
 \begin{bmatrix}\overrightarrow{c}\\\overrightarrow{d}\\\overrightarrow{a}\\\overrightarrow{b}\end{bmatrix}
-=\begin{bmatrix} \overrightarrow{a}+\overrightarrow{b}-3\overrightarrow{c}+\overrightarrow{d}\\\overrightarrow{a}+\overrightarrow{b}+\overrightarrow{c}-3\overrightarrow{d}\\-3\overrightarrow{a}+\overrightarrow{b}+\overrightarrow{c}+\overrightarrow{d}\\\overrightarrow{a}-3\overrightarrow{b}+\overrightarrow{c}+\overrightarrow{d}  \end{bmatrix}
+=\begin{bmatrix} \overrightarrow{a}+\overrightarrow{b}-9\overrightarrow{c}+\overrightarrow{d}\\\overrightarrow{a}+\overrightarrow{b}+\overrightarrow{c}-9\overrightarrow{d}\\-9\overrightarrow{a}+\overrightarrow{b}+\overrightarrow{c}+\overrightarrow{d}\\\overrightarrow{a}-9\overrightarrow{b}+\overrightarrow{c}+\overrightarrow{d}  \end{bmatrix}
 $$ </p>
 <ul>
 <li>$C = A B $ 等价于 $C^T = B^T    A^T$</li>
@@ -234,7 +234,7 @@ $$ </p>
     <div class="content">
         
 <span class="post-time">
-    最終更新：<time datetime="2018-11-23T11:50:13.622Z" itemprop="dateUpdated">2018-11-23 19:50:13</time>
+    Last updated: <time datetime="2018-11-23T12:02:27.921Z" itemprop="dateUpdated">2018-11-23 20:02:27</time>
 </span><br>
 
 
@@ -402,7 +402,7 @@ $$ </p>
             
                 <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
             
-            <span>このブログの内容物は<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja">クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際ライセンスの下に提供されています</a></span>
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
         </p>
     </div>
     <div class="bottom">
