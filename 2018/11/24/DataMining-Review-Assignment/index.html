@@ -31,7 +31,7 @@
 <meta property="og:image" content="http://yoursite.com/2018/11/24/DataMining-Review-Assignment/DecisionTree_exampleTree.png">
 <meta property="og:image" content="http://yoursite.com/2018/11/24/DataMining-Review-Assignment/概念图示.png">
 <meta property="og:image" content="http://yoursite.com/2018/11/24/DataMining-Review-Assignment/GINIvsENTROPY.jpg">
-<meta property="og:updated_time" content="2018-11-24T15:08:51.661Z">
+<meta property="og:updated_time" content="2018-11-24T15:15:05.292Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DataMining_Review_Assignment">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
@@ -122,7 +122,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="検索">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -190,10 +190,51 @@
 <h1 id="决策树"><a href="#决策树" class="headerlink" title="决策树"></a>决策树</h1><ul>
 <li><p>决策树是一种机器学习的方法。决策树的生成算法有ID3, C4.5和C5.0等。决策树是一种树形结构，其中每个内部节点表示一个属性上的判断，每个分支代表一个判断结果的输出，最后每个叶节点代表一种分类结果。决策树是一种十分常用的监督学习分类方法，监管学习就是给出一堆样本，每个样本都有一组属性和一个分类结果，也就是分类结果已知，那么通过学习这些样本得到一个决策树，这个决策树能够对新的数据给出正确的分类。这里通过一个简单的例子来说明决策树的构成思路：</p>
 <p>给出如下的一组数据，一共有五个样本，每个样本有’不浮出水面是否可以生存’，’是否有脚蹼’属性，最后判断这些样本是否是鱼类。最后一列给出了人工分类结果。</p>
-<p>| 序号ID | 不浮出水面是否可以生存No Surfacing? | 是否有脚蹼Flippers？ | 是否为鱼类Fish？ |<br>| :—-: | :———————————: | :——————: | :————–: |<br>|   1    |               是  Yes               |       是  Yes        |     是  Yes      |<br>|   2    |               是  Yes               |       是  Yes        |     是  Yes      |<br>|   3    |               是  Yes               |        否  No        |      否  No      |<br>|   4    |               否  No                |       是  Yes        |      否  No      |<br>|   5    |               否  No                |       是  Yes        |      否  No      |</p>
-<p><img src="/2018/11/24/DataMining-Review-Assignment/DecisionTree_exampleTree.png" alt="决策树范例"></p>
 </li>
 </ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">序号ID</th>
+<th style="text-align:center">不浮出水面是否可以生存No Surfacing?</th>
+<th style="text-align:center">是否有脚蹼Flippers？</th>
+<th style="text-align:center">是否为鱼类Fish？</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">是  Yes</td>
+<td style="text-align:center">是  Yes</td>
+<td style="text-align:center">是  Yes</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">是  Yes</td>
+<td style="text-align:center">是  Yes</td>
+<td style="text-align:center">是  Yes</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">是  Yes</td>
+<td style="text-align:center">否  No</td>
+<td style="text-align:center">否  No</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">否  No</td>
+<td style="text-align:center">是  Yes</td>
+<td style="text-align:center">否  No</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">否  No</td>
+<td style="text-align:center">是  Yes</td>
+<td style="text-align:center">否  No</td>
+</tr>
+</tbody>
+</table>
+<p>  <img src="/2018/11/24/DataMining-Review-Assignment/DecisionTree_exampleTree.png" alt="决策树范例"></p>
 <h2 id="构建决策树"><a href="#构建决策树" class="headerlink" title="构建决策树"></a>构建决策树</h2><h3 id="决策树生成过程"><a href="#决策树生成过程" class="headerlink" title="决策树生成过程"></a>决策树生成过程</h3><ol>
 <li><strong>特征选择</strong>：特征选择是指从训练数据中众多的特征中选择一个特征作为当前节点的分裂标准，如何选择特征有着很多不同量化评估标准标准，从而衍生出不同的决策树算法。</li>
 <li><strong>决策树生成</strong>： 根据选择的特征评估标准，从上至下递归地生成子节点，直到数据集不可分则停止决策树停止生长。 树结构来说，递归结构是最容易理解的方式。</li>
@@ -427,7 +468,7 @@ $$ <br>​    当$α=0$或者$α$很小时，$C_{\alpha}(T_t) &lt; C_{\alpha}(T)
     <div class="content">
         
 <span class="post-time">
-    最終更新：<time datetime="2018-11-24T15:08:51.661Z" itemprop="dateUpdated">2018-11-24 23:08:51</time>
+    Last updated: <time datetime="2018-11-24T15:15:05.292Z" itemprop="dateUpdated">2018-11-24 23:15:05</time>
 </span><br>
 
 
@@ -586,7 +627,7 @@ $$ <br>​    当$α=0$或者$α$很小时，$C_{\alpha}(T_t) &lt; C_{\alpha}(T)
             
                 <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
             
-            <span>このブログの内容物は<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja">クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際ライセンスの下に提供されています</a></span>
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
         </p>
     </div>
     <div class="bottom">
