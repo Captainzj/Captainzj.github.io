@@ -118,7 +118,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="検索">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -187,7 +187,7 @@
 <ul>
 <li>更换镜像（<a href="https://www.jianshu.com/p/d54546ab315e" target="_blank" rel="noopener">Mac下通过Anaconda安装Tensorflow</a>）</li>
 </ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 添加Anaconda的TUNA镜像</span><br><span class="line"><span class="meta">$</span> conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/  </span><br><span class="line"><span class="meta">#</span> 设置搜索时显示通道地址</span><br><span class="line"><span class="meta">$</span> conda config --set show_channel_urls yes</span><br><span class="line"><span class="meta">$</span> conda install numpy   #测试是否添加成功</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 之后会自动在用户根目录生成“.condarc”文件，可以在终端用 </span><br><span class="line"><span class="meta">$</span> ls -a </span><br><span class="line"><span class="meta">#</span> 命令查看该文件，如果要删除镜像，直接删除“.condarc”文件即可： </span><br><span class="line"><span class="meta">$</span> rm .condarc</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 添加Anaconda的TUNA镜像</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/  </span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 设置搜索时显示通道地址</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> conda config --<span class="built_in">set</span> show_channel_urls yes</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> conda install numpy   <span class="comment">#测试是否添加成功</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 之后会自动在用户根目录生成“.condarc”文件，可以在终端用 </span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ls -a </span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 命令查看该文件，如果要删除镜像，直接删除“.condarc”文件即可： </span></span><br><span class="line"><span class="meta">$</span><span class="bash"> rm .condarc</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>Mac Pycharm配置Anaconda环境</li>
 </ul>
@@ -195,10 +195,10 @@
 <p>#### </p>
 <ul>
 <li><p>shell 使用Anaconda的python</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> vim ~/.bash_profile</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>Anaconda3</span><br><span class="line">export PATH=~/anaconda3/bin:$PATH  #若想使用系统自带的python版本，将此行注释即可</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> vim ~/.bash_profile</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">Anaconda3</span></span><br><span class="line">export PATH=~/anaconda3/bin:$PATH  #若想使用系统自带的python版本，将此行注释即可</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Anaconda/env下 安装包路径</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> ~/anaconda3/envs/tensorflow/lib/python3.6/site-packages/keras/  #keras</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> ~/anaconda3/envs/tensorflow/lib/python3.6/site-packages/keras/  <span class="comment">#keras</span></span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h4 id="TensorFlow"><a href="#TensorFlow" class="headerlink" title="TensorFlow"></a>TensorFlow</h4><p><a href="https://www.tensorflow.org/versions/r1.1/install/install_mac" target="_blank" rel="noopener">TensorFlow on MacOS</a></p>
@@ -222,7 +222,7 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> keras</span><br><span class="line">Using TensorFlow backend.</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(keras.__version__)</span><br><span class="line"><span class="number">2.2</span><span class="number">.4</span></span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p><strong>切换Keras后端backend</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 创建或打开如下Keras配置文件</span><br><span class="line"><span class="meta">$</span> ~/.keras/keras.json</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 默认配置如下：  (将backend字段的值改为theano或者tensorflow，即可切换到相应的后端)</span><br><span class="line">&#123; </span><br><span class="line">    "floatx": "float32",</span><br><span class="line">    "epsilon": 1e-07,</span><br><span class="line">    "backend": "tensorflow", # "backend": "theano"</span><br><span class="line">    "image_data_format": "channels_last"</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 创建或打开如下Keras配置文件</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ~/.keras/keras.json</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 默认配置如下：  (将backend字段的值改为theano或者tensorflow，即可切换到相应的后端)</span></span><br><span class="line">&#123; </span><br><span class="line">    "floatx": "float32",</span><br><span class="line">    "epsilon": 1e-07,</span><br><span class="line">    "backend": "tensorflow", # "backend": "theano"</span><br><span class="line">    "image_data_format": "channels_last"</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>离线下载cifar数据集</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1.通过源码\keras\datasets\cifar10.py可以看到文件下载地址:&apos;https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz &apos;</span><br><span class="line">2.  通过源码keras\utils\data_utils.py可以看到下载后的文件保存至&apos;~/.keras/datasets/&quot;fname&quot;.tar.gz&apos;  (Anaconda 的env环境下的keras文件 保存路径亦如此)</span><br><span class="line"></span><br><span class="line">- 小结：</span><br><span class="line">手动下载数据集，然后移动到 ~\.keras\datasets目录下，并改名（包括后缀名）为cifar-10-batches-py.tar.gz，并且用到其他时依次类推。  注：&quot;改后缀名!!!&quot;</span><br></pre></td></tr></table></figure>
@@ -251,7 +251,7 @@
     <div class="content">
         
 <span class="post-time">
-    最終更新：<time datetime="2018-11-26T02:15:06.546Z" itemprop="dateUpdated">2018-11-26 10:15:06</time>
+    Last updated: <time datetime="2018-11-26T02:15:06.546Z" itemprop="dateUpdated">2018-11-26 10:15:06</time>
 </span><br>
 
 
@@ -328,7 +328,14 @@
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2018/11/26/DeepLearningwithKeras-Code/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">DeepLearningwithKeras_Code</h4>
+      </a>
+    </div>
   
 
   
@@ -410,7 +417,7 @@
             
                 <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
             
-            <span>このブログの内容物は<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja">クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際ライセンスの下に提供されています</a></span>
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
         </p>
     </div>
     <div class="bottom">
