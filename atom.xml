@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-11-26T02:50:37.202Z</updated>
+  <updated>2018-11-26T03:00:27.046Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://yoursite.com/2018/11/26/DeepLearningwithKeras-Code/"/>
     <id>http://yoursite.com/2018/11/26/DeepLearningwithKeras-Code/</id>
     <published>2018-11-26T02:44:25.000Z</published>
-    <updated>2018-11-26T02:50:37.202Z</updated>
+    <updated>2018-11-26T03:00:27.046Z</updated>
     
-    <content type="html"><![CDATA[<p>【阅读时间】XXX min XXX words<br>【阅读内容】……</p><a id="more"></a><ul><li><p>keras_CIFAR10_simple</p><p><img src="/2018/11/26/DeepLearningwithKeras-Code/keras_CIFAR10_simple_0.png" alt=""></p><p><img src="/2018/11/26/DeepLearningwithKeras-Code/keras_CIFAR10_simple_1.png" alt=""></p><p><img src="/2018/11/26/DeepLearningwithKeras-Code/keras_CIFAR10_simple_modleAccuracy.png" alt=""></p><p><img src="/2018/11/26/DeepLearningwithKeras-Code/keras_CIFAR10_simple_modleLoss.png" alt=""></p></li></ul>]]></content>
+    <content type="html"><![CDATA[<p>【阅读时间】XXX min XXX words<br>【阅读内容】……</p><a id="more"></a><ul><li><p>keras_CIFAR10_simple</p><p><img src="/2018/11/26/DeepLearningwithKeras-Code/keras_CIFAR10_simple_0.png" alt=""></p><p><img src="/2018/11/26/DeepLearningwithKeras-Code/keras_CIFAR10_simple_1.png" alt=""></p><center class="half"><br><img src="https://captainzj.github.io/2018/11/26/DeepLearningwithKeras-Code/keras_CIFAR10_simple_modleAccuracy.png" width="300"><br><img src="https://captainzj.github.io/2018/11/26/DeepLearningwithKeras-Code/keras_CIFAR10_simple_modleLoss.png" width="300"><br></center></li></ul>]]></content>
     
     <summary type="html">
     
