@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>MachineLearning_Environment configuration | Go Further | Stay Hungry, Stay Foolish</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#142421">
+    
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="【阅读时间】XXX min XXX words【阅读内容】……">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MachineLearning_Environment configuration">
+<meta property="og:url" content="http://yoursite.com/2018/11/25/MachineLearning_EnvironmentConfiguration/index.html">
+<meta property="og:site_name" content="Go Further">
+<meta property="og:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-11-26T02:10:51.707Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="MachineLearning_Environment configuration">
+<meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
+    
+        <link rel="alternate" type="application/atom+xml" title="Go Further" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">CaptainSE</h5>
+          <a href="mailto:841145636@qq.com" title="841145636@qq.com" class="mail">841145636@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                Home
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/Captainzj" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">MachineLearning_Environment configuration</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">MachineLearning_Environment configuration</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-11-25T11:13:41.000Z" itemprop="datePublished" class="page-time">
+  2018-11-25
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Anaconda"><span class="post-toc-number">1.</span> <span class="post-toc-text">Anaconda</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#TensorFlow"><span class="post-toc-number">2.</span> <span class="post-toc-text">TensorFlow</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Therno"><span class="post-toc-number">3.</span> <span class="post-toc-text">Therno</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Keras"><span class="post-toc-number">4.</span> <span class="post-toc-text">Keras</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#pip"><span class="post-toc-number">5.</span> <span class="post-toc-text">pip</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-MachineLearning_EnvironmentConfiguration"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">MachineLearning_Environment configuration</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-11-25 19:13:41" datetime="2018-11-25T11:13:41.000Z"  itemprop="datePublished">2018-11-25</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>【阅读时间】XXX min XXX words<br>【阅读内容】……</p>
+<a id="more"></a>
+<h4 id="Anaconda"><a href="#Anaconda" class="headerlink" title="Anaconda"></a>Anaconda</h4><p><a href="http://www.cnblogs.com/harvey888/p/5465452.html" target="_blank" rel="noopener">Anaconda多环境多版本python配置指导</a></p>
+<ul>
+<li>更换镜像（<a href="https://www.jianshu.com/p/d54546ab315e" target="_blank" rel="noopener">Mac下通过Anaconda安装Tensorflow</a>）</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 添加Anaconda的TUNA镜像</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/  </span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 设置搜索时显示通道地址</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> conda config --<span class="built_in">set</span> show_channel_urls yes</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> conda install numpy   <span class="comment">#测试是否添加成功</span></span></span><br><span class="line"></span><br><span class="line">之后会自动在用户根目录生成“.condarc”文件，可以在终端用 </span><br><span class="line"><span class="meta">$</span><span class="bash"> ls -a </span></span><br><span class="line">命令查看该文件，如果要删除镜像，直接删除“.condarc”文件即可： </span><br><span class="line"><span class="meta">$</span><span class="bash"> rm .condarc</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>Mac Pycharm配置Anaconda环境</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">- Command + ,</span><br><span class="line">- Project → Project Interpreter </span><br><span class="line">- 齿轮 → Add → System Interpreter </span><br><span class="line">- 齿轮 → <span class="string">'/Users/Captain/anaconda3/python.app/Contents/MacOS/python'</span></span><br></pre></td></tr></table></figure>
+<p>#### </p>
+<ul>
+<li><p>shell 使用Anaconda的python</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> vim ~/.bash_profile</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">Anaconda3</span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="built_in">export</span> PATH=~/anaconda3/bin:<span class="variable">$PATH</span></span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Anaconda/env下 安装包路径</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> ~/anaconda3/envs/tensorflow/lib/python3.6/site-packages/keras/  <span class="comment">#keras</span></span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="TensorFlow"><a href="#TensorFlow" class="headerlink" title="TensorFlow"></a>TensorFlow</h4><p><a href="https://www.tensorflow.org/versions/r1.1/install/install_mac" target="_blank" rel="noopener">TensorFlow on MacOS</a></p>
+<ul>
+<li><p>暂不支持python3.7</p>
+</li>
+<li><p>查看TensorFlow版本</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>tf.__version__</span><br><span class="line"><span class="string">'1.8.0'</span></span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>测试是否安装成功</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>hello = tf.constant(<span class="string">'Hello, TensorFlow!'</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>sess = tf.Session()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(sess.run(hello))</span><br><span class="line">Hello,TensorFlow!</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">- I tensorflow/core/platform/cpu_feature_guard.cc:<span class="number">140</span>] Your CPU supports instructions that this TensorFlow binary was <span class="keyword">not</span> compiled to use: AVX2 FMA</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="Therno"><a href="#Therno" class="headerlink" title="Therno"></a>Therno</h4><ul>
+<li><p>测试Therno</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> theano</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> theano.tensor <span class="keyword">as</span> T</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>x = T.dmatrix(<span class="string">'x'</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>s = <span class="number">1</span>/(<span class="number">1</span>+T.exp(-x))</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>logistic = theano.function([x],s)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>logistic([[<span class="number">0</span>,<span class="number">1</span>],[<span class="number">-1</span>,<span class="number">-2</span>]])</span><br><span class="line">array([[<span class="number">0.5</span>       , <span class="number">0.73105858</span>],</span><br><span class="line">       [<span class="number">0.26894142</span>, <span class="number">0.11920292</span>]])</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="Keras"><a href="#Keras" class="headerlink" title="Keras"></a>Keras</h4><ul>
+<li><p>查看Keras版本号</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> keras</span><br><span class="line">Using TensorFlow backend.</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(keras.__version__)</span><br><span class="line"><span class="number">2.2</span><span class="number">.4</span></span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>切换Keras后端backend</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 创建或打开如下Keras配置文件</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ~/.keras/keras.json</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 默认配置如下：  (将backend字段的值改为theano或者tensorflow，即可切换到相应的后端)</span></span><br><span class="line">&#123; </span><br><span class="line">    "floatx": "float32",</span><br><span class="line">    "epsilon": 1e-07,</span><br><span class="line">    "backend": "tensorflow", # "backend": "theano"</span><br><span class="line">    "image_data_format": "channels_last"</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>离线下载cifar数据集</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1.通过源码\keras\datasets\cifar10.py可以看到文件下载地址:&apos;https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz &apos;</span><br><span class="line">2.  通过源码keras\utils\data_utils.py可以看到下载后的文件保存至&apos;~/.keras/datasets/&quot;fname&quot;.tar.gz&apos;  (Anaconda 的env环境下的keras文件 保存路径亦如此)</span><br><span class="line"></span><br><span class="line">- 小结：</span><br><span class="line">手动下载数据集，然后移动到 ~\.keras\datasets目录下，并改名（包括后缀名）为cifar-10-batches-py.tar.gz，并且用到其他时依次类推。  注：&apos;改后缀名!!!&apos;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>测试</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> keras.datasets <span class="keyword">import</span> cifar10</span><br><span class="line"></span><br><span class="line">(x_train, y_train), (x_test, y_test) = cifar10.load_data()</span><br><span class="line">print(y_train[:<span class="number">4</span>])</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="pip"><a href="#pip" class="headerlink" title="pip"></a>pip</h4><ul>
+<li><p>下载速度慢</p>
+<ul>
+<li><p>临时使用： 可以在使用pip的时候加参数-i <a href="https://pypi.tuna.tsinghua.edu.cn/simple" target="_blank" rel="noopener">https://pypi.tuna.tsinghua.edu.cn/simple</a></p>
+<p><code>pip install -i https://pypi.tuna.tsinghua.edu.cn/simple tensorflow</code></p>
+</li>
+<li><p>永久修改，一劳永逸：<br>Linux下，修改 ~/.pip/pip.conf (没有就创建一个文件夹及文件。文件夹要加“.”表示隐藏文件夹) 内容如下:</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[global]</span><br><span class="line">index-url = https://pypi.tuna.tsinghua.edu.cn/simple</span><br><span class="line">[install]</span><br><span class="line">trusted-host=mirrors.aliyun.com</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2018-11-26T02:10:51.707Z" itemprop="dateUpdated">2018-11-26 10:10:51</time>
+</span><br>
+
+
+        
+    </div>
+    
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/avatar.jpg" alt="CaptainSE">
+            CaptainSE
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/11/25/MachineLearning_EnvironmentConfiguration/&title=《MachineLearning_Environment configuration》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/11/25/MachineLearning_EnvironmentConfiguration/&title=《MachineLearning_Environment configuration》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/11/25/MachineLearning_EnvironmentConfiguration/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《MachineLearning_Environment configuration》 — Go Further&url=http://yoursite.com/2018/11/25/MachineLearning_EnvironmentConfiguration/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/11/25/MachineLearning_EnvironmentConfiguration/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/11/24/DataMining-Review-Assignment/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">DataMining_Review_Assignment</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢老板~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>CaptainSE &copy; 2015 - 2018</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/11/25/MachineLearning_EnvironmentConfiguration/&title=《MachineLearning_Environment configuration》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/11/25/MachineLearning_EnvironmentConfiguration/&title=《MachineLearning_Environment configuration》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/11/25/MachineLearning_EnvironmentConfiguration/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《MachineLearning_Environment configuration》 — Go Further&url=http://yoursite.com/2018/11/25/MachineLearning_EnvironmentConfiguration/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/11/25/MachineLearning_EnvironmentConfiguration/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACsElEQVR42u3aQU4DMQwFUO5/aZDYocL0f2dMu3hZVdOS5hkpTu18fMTj83skTx6fJ59/HPnMNww8PDy80dKvv+bxdbLcNljJaEODh4eHt8e7XsR1YrjGnwQrmeGJBQ8PD++lvGTpycm2TRVJuPHw8PDek9cuui1ktGHFw8PDey0v//E/w7dJ5QW1Fjw8PLyY1zbA3uH1Yn8PDw8P76CrftLaz4/aszmjFeLh4eEt8E6uNLWNq+R5XqooEgYeHh7erbxZ2ykvIpwng1nr60few8PDw1vj5VeszpNKMnMelD9nw8PDw1vmtdv3LG0k33KdMIqA4uHh4S3wjrbd+Ch8F6MtUuDh4eFt8GbxaEMwa4zNyse/9Pfw8PDw1nhtqbQt2p6fe9sw4eHh4W3w8q28LcvOLku1n8fDw8N7Fa9tU+WXqGbFi5NvnP1L8PDw8HLe7EB8vpVfz5Af95+sDQ8PD2+BNyuhzppVJ1cWZg02PDw8vD3eyaacl1/bxlhe0i1uRuDh4eHdxMsLuHmF4wST1E7ysgUeHh7eHm+41d5bLDjYz/Hw8PD+k9e2rGalh7YukpePi/8bHh4e3gJvBs4Lsm2DLS/m/vkEDw8Pb4032+jzS1f5dYF2ticpBw8PD2+BlySAk8TQFi82kg0eHh7eNq9t2LdLb8sTJ+/i4eHhbfDOS7fJQbktNyQhSMKNh4eHt8dr21HJMTd/t1hum9jw8PDwbuV9luP8glRb3m2f4+Hh4W3z8tG2xJLZZlcH8itZeHh4eHu82c/+/HCcb/GzoBQ3I/Dw8PBu5bUN/pPQtJt+i6/vRODh4eEt8/KN+4b2VXmAxsPDw3s3Xn50bq8FzNJPdEDHw8PDW+PlUyR/mxde27AOm1t4eHh4t/LOLwQki5ht7m177Ib+Hh4eHt4V7wvQ9pxxXZQixQAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = 'Go Further | Stay Hungry, Stay Foolish';
+            clearTimeout(titleTime);
+        } else {
+            document.title = 'Go Further | Stay Hungry, Stay Foolish';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

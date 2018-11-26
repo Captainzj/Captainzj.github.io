@@ -29,9 +29,9 @@
 <meta property="og:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2018/11/24/DataMining-Review-Assignment/DecisionTree_exampleTree.png">
-<meta property="og:image" content="http://yoursite.com/2018/11/24/DataMining-Review-Assignment/概念图示.png">
+<meta property="og:image" content="http://yoursite.com/2018/11/24/DataMining-Review-Assignment/%E6%A6%82%E5%BF%B5%E5%9B%BE%E7%A4%BA.png">
 <meta property="og:image" content="http://yoursite.com/2018/11/24/DataMining-Review-Assignment/GINIvsENTROPY.jpg">
-<meta property="og:updated_time" content="2018-11-24T15:17:21.521Z">
+<meta property="og:updated_time" content="2018-11-25T08:11:09.607Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DataMining_Review_Assignment">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
@@ -187,11 +187,8 @@
         <div class="post-content" id="post-content" itemprop="postContent">
             <p>【阅读时间】XXX min XXX words<br>【阅读内容】……</p>
 <a id="more"></a>
-<h1 id="决策树"><a href="#决策树" class="headerlink" title="决策树"></a>决策树</h1><ul>
-<li><p>决策树是一种机器学习的方法。决策树的生成算法有ID3, C4.5和C5.0等。决策树是一种树形结构，其中每个内部节点表示一个属性上的判断，每个分支代表一个判断结果的输出，最后每个叶节点代表一种分类结果。决策树是一种十分常用的监督学习分类方法，监管学习就是给出一堆样本，每个样本都有一组属性和一个分类结果，也就是分类结果已知，那么通过学习这些样本得到一个决策树，这个决策树能够对新的数据给出正确的分类。这里通过一个简单的例子来说明决策树的构成思路：</p>
-<p>给出如下的一组数据，一共有五个样本，每个样本有’不浮出水面是否可以生存’，’是否有脚蹼’属性，最后判断这些样本是否是鱼类。最后一列给出了人工分类结果。</p>
-</li>
-</ul>
+<h1 id="决策树"><a href="#决策树" class="headerlink" title="决策树"></a>决策树</h1><p>​    决策树是一种机器学习的方法。决策树的生成算法有ID3, C4.5和C5.0等。决策树是一种树形结构，其中每个内部节点表示一个属性上的判断，每个分支代表一个判断结果的输出，最后每个叶节点代表一种分类结果。决策树是一种十分常用的监督学习分类方法，监管学习就是给出一堆样本，每个样本都有一组属性和一个分类结果，也就是分类结果已知，那么通过学习这些样本得到一个决策树，这个决策树能够对新的数据给出正确的分类。</p>
+<p>​    这里通过一个简单的例子来说明决策树的构成思路：给出如下的一组数据，一共有五个样本，每个样本有’不浮出水面是否可以生存’，’是否有脚蹼’属性，最后判断这些样本是否是鱼类。最后一列给出了人工分类结果。</p>
 <table>
 <thead>
 <tr>
@@ -240,28 +237,28 @@
 <li><strong>决策树生成</strong>： 根据选择的特征评估标准，从上至下递归地生成子节点，直到数据集不可分则停止决策树停止生长。 树结构来说，递归结构是最容易理解的方式。</li>
 <li><strong>剪枝</strong>：决策树容易过拟合，一般来需要剪枝，缩小树结构规模、缓解过拟合.剪枝技术有<code>预剪枝</code>和<code>后剪枝</code>两种.</li>
 </ol>
-<p>在非结束的条件下，首先选择出<code>合适的特征</code>，然后根据其分类。分类开始时，记录分类的特征到决策树中，然后在特征标签集中删除该特征，表示已经使用过该特征。<code>根据选中的特征将数据集分为若干个子数据集</code>，然后将子数据集作为参数<code>递归创建决策树</code>，最终生成一棵完整的决策树。</p>
+<p>​    在非结束的条件下，首先选择出<code>合适的特征</code>，然后根据其分类。分类开始时，记录分类的特征到决策树中，然后在特征标签集中删除该特征，表示已经使用过该特征。<code>根据选中的特征将数据集分为若干个子数据集</code>，然后将子数据集作为参数<code>递归创建决策树</code>，最终生成一棵完整的决策树。</p>
 <p>注：理想条件下，任何到达叶子节点的数据必然属于叶子结点的分类</p>
 <h3 id="递归结束的条件"><a href="#递归结束的条件" class="headerlink" title="递归结束的条件"></a>递归结束的条件</h3><ul>
 <li><p>每个分支下的所有实例都具有<code>相同的分类</code></p>
 </li>
 <li><p>程序遍历完所有划分数据集的<code>属性</code></p>
-<p>​    遍历完全部属性，划分的数据有可能不全属于一个类，这个时候需要根据<strong>多数表决准则</strong>确定这个子数据集的分类。</p>
+<p>遍历完全部属性，划分的数据有可能不全属于一个类，这个时候需要根据<strong>多数表决准则</strong>确定该子数据集的分类</p>
 </li>
 </ul>
 <h3 id="决策树优缺点"><a href="#决策树优缺点" class="headerlink" title="决策树优缺点"></a>决策树优缺点</h3><ul>
 <li>优点：决策树计算复杂度不高、便于使用、而且高效，决策树可处理具有不相关特征的数据、可很容易地构造出易于理解的规则，而规则通常易于解释和理解。</li>
-<li>缺点：存在处理缺失数据时的困难、过度拟合以及忽略数据集中属性之间的相关性等问题.</li>
+<li>缺点：存在处理缺失数据时的困难、过度拟合以及忽略数据集中属性之间的相关性等问题。</li>
 </ul>
 <h2 id="决策树算法"><a href="#决策树算法" class="headerlink" title="决策树算法"></a>决策树算法</h2><h3 id="ID3算法"><a href="#ID3算法" class="headerlink" title="ID3算法"></a>ID3算法</h3><p><strong>特点</strong>：使用<code>信息增益</code>来选择特征，信息增益<code>大</code>的优先选择</p>
 <p><strong>算法步骤</strong>：</p>
 <p>1）初始化信息增益的阈值$ϵ$</p>
 <p>2）判断样本是否为同一类输出$D_i$，如果是则返回单节点树$T$。标记类别为$D_i$</p>
-<p>3）判断特征是否为空，如果是则返回单节点树🌲$T$，标记类别为样本中输出类别$D$实例数最多的类别。</p>
+<p>3）判断特征是否为空，如果是则返回单节点树🌲$T$，标记类别为样本中输出类别$D$实例数最多的类别</p>
 <p>4）计算$A$中的各个特征（一共$n$个）对输出$D$的信息增益，选择信息增益最大的特征$A_g$</p>
-<p>5）如果$A_g$的信息增益小于阈值$ϵ$，则返回单节点树🌲$T$，标记类别为样本中输出类别$D$实例数最多的类别。</p>
-<p>6）否则，按特征$A_g$的不同取值$A_{gi}$将对应的样本输出$D$分成不同的类别$D_i$。每个类别产生一个子节点。对应特征值为$A_{gi}$。返回增加了节点的树🌲$T$。</p>
-<p>7）对于所有的子节点，令$D=D_i$,$A=A−{A_g}$递归调用2-6步，得到子树🌲$T_i$并返回。</p>
+<p>5）如果$A_g$的信息增益小于阈值$ϵ$，则返回单节点树🌲$T$，标记类别为样本中输出类别$D$实例数最多的类别</p>
+<p>6）否则，按特征$A_g$的不同取值$A_{gi}$将对应的样本输出$D$分成不同的类别$D_i$。每个类别产生一个子节点。对应特征值为$A_{gi}$。返回增加了节点的树🌲$T$</p>
+<p>7）对于所有的子节点，令$D=D_i$,$A=A−{A_g}$递归调用2-6步，得到子树🌲$T_i$并返回</p>
 <p><strong>不足</strong>：</p>
 <p>a）ID3没有考虑<code>连续特征</code>，比如长度，密度都是连续值，无法在ID3运用。这大大限制了ID3的用途。</p>
 <p>b）ID3采用信息增益大的特征优先建立决策树的节点。很快就被人发现，在相同条件下，取值比较多的特征比取值少的特征信息增益大（即<code>用信息增益作为标准容易偏向于取值较多的特征</code>）。比如一个变量有2个值，各为1/2，另一个变量为3个值，各为1/3，其实他们都是完全不确定的变量，但是取3个值的比取2个值的信息增益大。如果校正这个问题呢？</p>
@@ -418,13 +415,7 @@ $$ <br>​    当$α=0$或者$α$很小时，$C_{\alpha}(T_t) &lt; C_{\alpha}(T)
 </ul>
 <hr>
 <p><strong>关系梳理</strong>：$H(X)$度量了X的不确定性，条件熵$H(X|Y)$度量了我们在知道$Y$以后$X$剩下的不确定性，$H(X)-H(X|Y)$为信息增益$I(X,Y)$</p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="/2018/11/24/DataMining-Review-Assignment/概念图示.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
+<p><img src="/2018/11/24/DataMining-Review-Assignment/%E6%A6%82%E5%BF%B5%E5%9B%BE%E7%A4%BA.png" style="zoom:80%"></p>
 <p>左边的椭圆代表$H(X)$,右边的椭圆代表$H(Y)$,中间重合的部分就是我们的互信息或者信息增益$I(X,Y)$, 左边的椭圆去掉重合部分就是$H(X|Y)$,右边的椭圆去掉重合部分就是$H(Y|X)$。两个椭圆的并就是$H(X,Y)$。</p>
 <hr>
 <h3 id="信息增益比-Information-gain-Ratio"><a href="#信息增益比-Information-gain-Ratio" class="headerlink" title="信息增益比 Information gain Ratio"></a>信息增益比 Information gain Ratio</h3><ul>
@@ -454,7 +445,7 @@ $$ <br>​    当$α=0$或者$α$很小时，$C_{\alpha}(T_t) &lt; C_{\alpha}(T)
   $$ <br>特别的，对于样本$D$,如果根据特征$A$的某个值$a$,把$D$分成$D_1$和$D_2$两部分，则在特征$A$的条件下，$D$的基尼系数表达式为：<br>$$ 
   Gini(D,A) = \frac{|D_1|}{|D|}Gini(D_1) + \frac{|D_2|}{|D|}Gini(D_2)
   $$ <br>和熵模型的度量方式比，基尼系数对应的误差有多大呢？对于二类分类，基尼系数和熵之半的曲线如下：</p>
-<p><img src="/2018/11/24/DataMining-Review-Assignment/GINIvsENTROPY.jpg" alt=""></p>
+<p><img src="/2018/11/24/DataMining-Review-Assignment/GINIvsENTROPY.jpg" style="zoom:80%"></p>
 <p>从上图可以看出，基尼系数和熵之半的曲线非常接近，仅仅在45度角附近误差稍大。因此，基尼系数可以做为熵模型的一个近似替代。而<strong>CART分类树算法就是使用的基尼系数来选择决策树的特征</strong>。同时，为了进一步简化，CART分类树算法每次仅仅对某个特征的值进行二分，而不是多分，这样CART分类树算法建立起来的是二叉树，而不是多叉树。这样一可以进一步简化基尼系数的计算，二可以建立一个更加优雅的二叉树模型。</p>
 </li>
 </ul>
@@ -468,7 +459,7 @@ $$ <br>​    当$α=0$或者$α$很小时，$C_{\alpha}(T_t) &lt; C_{\alpha}(T)
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2018-11-24T15:17:21.521Z" itemprop="dateUpdated">2018-11-24 23:17:21</time>
+    Last updated: <time datetime="2018-11-25T08:11:09.607Z" itemprop="dateUpdated">2018-11-25 16:11:09</time>
 </span><br>
 
 
@@ -545,7 +536,14 @@ $$ <br>​    当$α=0$或者$α$很小时，$C_{\alpha}(T_t) &lt; C_{\alpha}(T)
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2018/11/25/MachineLearning_EnvironmentConfiguration/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">MachineLearning_Environment configuration</h4>
+      </a>
+    </div>
   
 
   
