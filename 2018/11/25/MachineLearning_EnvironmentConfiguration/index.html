@@ -28,7 +28,7 @@
 <meta property="og:site_name" content="Go Further">
 <meta property="og:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-26T02:15:06.546Z">
+<meta property="og:updated_time" content="2018-11-28T12:45:31.199Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MachineLearning_Environment configuration">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
@@ -200,13 +200,19 @@
 <li><p>Anaconda/env下 安装包路径</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> ~/anaconda3/envs/tensorflow/lib/python3.6/site-packages/keras/  <span class="comment">#keras</span></span></span><br></pre></td></tr></table></figure>
 </li>
+<li><p>anaconda_downgrade Failed</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">download low_version Anaconda</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><a href="https://repo.anaconda.com/archive/" target="_blank" rel="noopener">Anaconda installer archive</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Anaconda2-5.3.0-MacOSX-x86_64.pkg  # 对应python3.6</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
 <h4 id="TensorFlow"><a href="#TensorFlow" class="headerlink" title="TensorFlow"></a>TensorFlow</h4><p><a href="https://www.tensorflow.org/versions/r1.1/install/install_mac" target="_blank" rel="noopener">TensorFlow on MacOS</a></p>
 <ul>
 <li><p>暂不支持python3.7</p>
 </li>
 <li><p>查看TensorFlow版本</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>tf.__version__</span><br><span class="line"><span class="string">'1.8.0'</span></span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>tf.__version__</span><br><span class="line"><span class="string">'1.12.0'</span></span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>测试是否安装成功</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>hello = tf.constant(<span class="string">'Hello, TensorFlow!'</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>sess = tf.Session()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(sess.run(hello))</span><br><span class="line">Hello,TensorFlow!</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">- I tensorflow/core/platform/cpu_feature_guard.cc:<span class="number">140</span>] Your CPU supports instructions that this TensorFlow binary was <span class="keyword">not</span> compiled to use: AVX2 FMA</span><br></pre></td></tr></table></figure>
@@ -218,6 +224,9 @@
 </li>
 </ul>
 <h4 id="Keras"><a href="#Keras" class="headerlink" title="Keras"></a>Keras</h4><ul>
+<li><p>安装Keras</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> pip install keras</span></span><br></pre></td></tr></table></figure>
+</li>
 <li><p>查看Keras版本号</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> keras</span><br><span class="line">Using TensorFlow backend.</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(keras.__version__)</span><br><span class="line"><span class="number">2.2</span><span class="number">.4</span></span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
 </li>
@@ -231,6 +240,12 @@
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> keras.datasets <span class="keyword">import</span> cifar10</span><br><span class="line"></span><br><span class="line">(x_train, y_train), (x_test, y_test) = cifar10.load_data()</span><br><span class="line">print(y_train[:<span class="number">4</span>])</span><br></pre></td></tr></table></figure>
 </li>
+<li><p>downgrade Keras/upgrade keras</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> you can downgrade your keras with pip install keras==1.2.2 <span class="keyword">if</span> you don<span class="string">'t want to bother about keras 2 much. Otherwise, you have to write keras 2 go through the release notes and check the fresh API.</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> pip install keras==1.2.2</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> upgrade keras</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> pip install --upgrade keras</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>RunTime Error</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">- TypeError: softmax() got an unexpected keyword argument <span class="string">'axis'</span></span><br><span class="line">	 - pip install --upgrade keras==<span class="number">2.1</span>.<span class="number">3</span></span><br><span class="line">     </span><br><span class="line">- <span class="string">'python matplotlib framework under macosx'</span></span><br><span class="line">ImportError: Python is not installed as a framework. The Mac OS X backend will not be able to <span class="keyword">function</span> correctly <span class="keyword">if</span> Python is not installed as a framework. See the Python documentation <span class="keyword">for</span> more information on installing Python as a framework on Mac OS X. Please either reinstall Python as a framework, or <span class="keyword">try</span> one of the other backends. <span class="keyword">If</span> you are using (Ana)Conda please install python.app and replace the use of <span class="string">'python'</span> with <span class="string">'pythonw'</span>. See <span class="string">'Working with Matplotlib on OSX'</span> <span class="keyword">in</span> the Matplotlib FAQ <span class="keyword">for</span> more information.</span><br><span class="line">	- Create a file ~/.matplotlib/matplotlibrc there and add the following code: backend: TkAgg</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
 <h4 id="pip"><a href="#pip" class="headerlink" title="pip"></a>pip</h4><ul>
 <li><p>下载速度慢</p>
@@ -242,6 +257,9 @@
 </li>
 </ul>
 </li>
+<li><p>列出所有可升级的包</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> pip list --outdate</span></span><br></pre></td></tr></table></figure>
+</li>
 </ul>
 
         </div>
@@ -251,7 +269,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2018-11-26T02:15:06.546Z" itemprop="dateUpdated">2018-11-26 10:15:06</time>
+    Last updated: <time datetime="2018-11-28T12:45:31.199Z" itemprop="dateUpdated">2018-11-28 20:45:31</time>
 </span><br>
 
 

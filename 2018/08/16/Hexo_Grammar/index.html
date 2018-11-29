@@ -28,7 +28,7 @@
 <meta property="og:site_name" content="Go Further">
 <meta property="og:description" content="【阅读时间】2min 122words【阅读内容】Hexo 的基础操作——new、clean、generate、server、deploy">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-26T02:57:40.207Z">
+<meta property="og:updated_time" content="2018-11-26T03:07:25.797Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hello World">
 <meta name="twitter:description" content="【阅读时间】2min 122words【阅读内容】Hexo 的基础操作——new、clean、generate、server、deploy">
@@ -199,10 +199,16 @@
 <p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 <h3 id="HTML语法"><a href="#HTML语法" class="headerlink" title="HTML语法"></a>HTML语法</h3><ul>
 <li><p>放缩图片尺寸</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"xxxx"</span> <span class="attr">style</span>=<span class="string">"zoom:80%"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"xxx.png"</span> <span class="attr">style</span>=<span class="string">"zoom:80%"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>并排显示图片</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">center</span> <span class="attr">class</span>=<span class="string">"half"</span>&gt;</span>    </span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"https://captainzj.github.io/2018/10/24/Lecture-Neural-Networks-Part-3/opt0.gif"</span> <span class="attr">width</span>=<span class="string">"300"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"https://captainzj.github.io/2018/10/24/Lecture-Neural-Networks-Part-3/opt.gif"</span> <span class="attr">width</span>=<span class="string">"300"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">center</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<li><p>固定图片宽度/高度</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"http://xxx.png"</span> <span class="attr">title</span>=<span class="string">"Logo"</span> <span class="attr">width</span>=<span class="string">"100"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>两张图片并排显示</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!----左对齐-----&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">figure</span> <span class="attr">class</span>=<span class="string">"half"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"http://xxx.jpg"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"http://yyy.jpg"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">figure</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!----居中-----&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">center</span> <span class="attr">class</span>=<span class="string">"half"</span>&gt;</span>    </span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"https://captainzj.github.io/2018/10/24/Lecture-Neural-Networks-Part-3/opt0.gif"</span> <span class="attr">width</span>=<span class="string">"300"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"https://captainzj.github.io/2018/10/24/Lecture-Neural-Networks-Part-3/opt.gif"</span> <span class="attr">width</span>=<span class="string">"300"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">center</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>三张并排显示</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!----左对齐-----&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">figure</span> <span class="attr">class</span>=<span class="string">"third"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"http://xxx.jpg"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"http://yyy.jpg"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"http://zzz.jpg"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">figure</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
@@ -223,7 +229,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2018-11-26T02:57:40.207Z" itemprop="dateUpdated">2018-11-26 10:57:40</time>
+    Last updated: <time datetime="2018-11-26T03:07:25.797Z" itemprop="dateUpdated">2018-11-26 11:07:25</time>
 </span><br>
 
 
