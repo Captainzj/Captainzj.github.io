@@ -28,18 +28,18 @@
 <meta property="og:site_name" content="Go Further">
 <meta property="og:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://captainzj.github.io/2018/11/30/VGG-paper-summary//Mini-network replacing the 5x5 convolutions.jpg">
+<meta property="og:image" content="https://captainzj.github.io/2018/11/30/VGG_Introduction/Mini-network replacing the 5x5 convolutions.jpg">
 <meta property="og:image" content="https://pic2.zhimg.com/v2-7a0f9391fbdab0f5c3e8c61693ebe205_r.jpg">
 <meta property="og:image" content="https://captainzj.github.io/2018/11/30/VGG_Introduction/ConvNet performance at a single test scale.jpg">
 <meta property="og:image" content="https://captainzj.github.io/2018/11/30/VGG_Introduction/ConvNet performance at a multiple test scale.jpg">
 <meta property="og:image" content="https://captainzj.github.io/2018/11/30/VGG_Introduction/ConvNet evaluation techniques comparison.jpg">
 <meta property="og:image" content="https://captainzj.github.io/2018/11/30/VGG_Introduction/Multiple ConvNet fusion results.jpg">
 <meta property="og:image" content="https://captainzj.github.io/2018/11/30/VGG_Introduction/Comparison with the state of the art in ILSVRC classification.jpg">
-<meta property="og:updated_time" content="2018-11-30T09:10:20.595Z">
+<meta property="og:updated_time" content="2018-11-30T09:12:26.958Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="VGG_Introduction">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
-<meta name="twitter:image" content="https://captainzj.github.io/2018/11/30/VGG-paper-summary//Mini-network replacing the 5x5 convolutions.jpg">
+<meta name="twitter:image" content="https://captainzj.github.io/2018/11/30/VGG_Introduction/Mini-network replacing the 5x5 convolutions.jpg">
     
         <link rel="alternate" type="application/atom+xml" title="Go Further" href="/atom.xml">
     
@@ -126,7 +126,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="検索">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -198,7 +198,7 @@
 <p>比如，3个步长为1的3x3卷积核的一层层叠加作用可看成一个大小为7的感受野（其实就表示3个3x3连续卷积相当于一个7x7卷积），其参数总量为 $3\times(3^2C^2)= 27C^2$，如果直接使用7x7卷积核，其参数总量为  $7^2C^2 = 49C^2$，这里 C 指的是输入和输出的通道数。很明显，$27C^2$小于$49C^2$，即减少了参数；而且3x3卷积核有利于更好地保持图像性质。</p>
 <p><strong>这里解释一下为什么使用2个3x3卷积核可以来代替5*5卷积核：</strong></p>
 <p>5x5卷积看做一个小的全连接网络在5x5区域滑动，我们可以先用一个3x3的卷积滤波器卷积，然后再用一个全连接层连接这个3x3卷积输出，这个全连接层我们也可以看做一个3x3卷积层。这样我们就可以用两个3x3卷积级联（叠加）起来代替一个 5x5卷积。</p>
-<center><br>    <img src="https://captainzj.github.io/2018/11/30/VGG-paper-summary//Mini-network replacing the 5x5 convolutions.jpg" alt="missing"><br>    <figcaption>Mini-network replacing the 5x5 convolutions</figcaption><br></center>
+<center><br>    <img src="https://captainzj.github.io/2018/11/30/VGG_Introduction/Mini-network replacing the 5x5 convolutions.jpg" alt="missing"><br>    <figcaption>Mini-network replacing the 5x5 convolutions</figcaption><br></center>
 
 <h5 id="VGG优缺点"><a href="#VGG优缺点" class="headerlink" title="VGG优缺点"></a><strong>VGG优缺点</strong></h5><p><strong>VGG优点</strong></p>
 <ul>
@@ -269,7 +269,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2018-11-30T09:10:20.595Z" itemprop="dateUpdated">2018-11-30 17:10:20</time>
+    最終更新：<time datetime="2018-11-30T09:12:26.958Z" itemprop="dateUpdated">2018-11-30 17:12:26</time>
 </span><br>
 
 
@@ -346,7 +346,14 @@
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2018/11/30/ADNI模态数据概念整理/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">ADNI模态数据概念整理</h4>
+      </a>
+    </div>
   
 
   
@@ -428,7 +435,7 @@
             
                 <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
             
-            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+            <span>このブログの内容物は<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja">クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際ライセンスの下に提供されています</a></span>
         </p>
     </div>
     <div class="bottom">
