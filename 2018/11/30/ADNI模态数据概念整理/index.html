@@ -21,12 +21,12 @@
     
     
     <meta name="keywords" content="">
-    <meta name="description" content="【阅读时间】XXX min XXX words【阅读内容】…… 最近需要查看ADNI（Alzheimer’s Disease Neuroimaging Initiative）数据集，刚在网站上注册和提交了申请（审核通过了才能下载数据集），审核时间大概是一周。 Data TypesClinical DataADNI临床数据集包括关于每个受试者的临床信息，包括招募，人口统计学，身体检查和认知评估数据。">
+    <meta name="description" content="【阅读时间】XXX min XXX words【阅读内容】……">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ADNI模态数据概念整理">
 <meta property="og:url" content="http://yoursite.com/2018/11/30/ADNI模态数据概念整理/index.html">
 <meta property="og:site_name" content="Go Further">
-<meta property="og:description" content="【阅读时间】XXX min XXX words【阅读内容】…… 最近需要查看ADNI（Alzheimer’s Disease Neuroimaging Initiative）数据集，刚在网站上注册和提交了申请（审核通过了才能下载数据集），审核时间大概是一周。 Data TypesClinical DataADNI临床数据集包括关于每个受试者的临床信息，包括招募，人口统计学，身体检查和认知评估数据。">
+<meta property="og:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://adni.loni.usc.edu/wp-content/uploads/2010/09/clinical-data-chart.png">
 <meta property="og:image" content="http://adni.loni.usc.edu/wp-content/uploads/2012/08/MRI.png">
@@ -35,10 +35,10 @@
 <meta property="og:image" content="http://adni.loni.usc.edu/wp-content/uploads/2012/08/PET-Image-Data.png">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/5267500-508b820355abe639.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://yoursite.com/2018/11/30/ADNI模态数据概念整理/show">
-<meta property="og:updated_time" content="2018-11-30T13:34:35.412Z">
+<meta property="og:updated_time" content="2018-11-30T13:37:59.112Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ADNI模态数据概念整理">
-<meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】…… 最近需要查看ADNI（Alzheimer’s Disease Neuroimaging Initiative）数据集，刚在网站上注册和提交了申请（审核通过了才能下载数据集），审核时间大概是一周。 Data TypesClinical DataADNI临床数据集包括关于每个受试者的临床信息，包括招募，人口统计学，身体检查和认知评估数据。">
+<meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
 <meta name="twitter:image" content="http://adni.loni.usc.edu/wp-content/uploads/2010/09/clinical-data-chart.png">
     
         <link rel="alternate" type="application/atom+xml" title="Go Further" href="/atom.xml">
@@ -126,7 +126,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="検索">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -190,6 +190,7 @@
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
             <p>【阅读时间】XXX min XXX words<br>【阅读内容】……</p>
+<a id="more"></a>
 <p>最近需要查看ADNI（Alzheimer’s Disease Neuroimaging Initiative）数据集，刚在网站上注册和提交了<a href="https://ida.loni.usc.edu/services/Menu/IdaData.jsp?page=DATA&amp;subPage=AVAILABLE_DATA" target="_blank" rel="noopener">申请</a>（审核通过了才能下载数据集），审核时间大概是一周。</p>
 <h4 id="Data-Types"><a href="#Data-Types" class="headerlink" title="Data Types"></a>Data Types</h4><h5 id="Clinical-Data"><a href="#Clinical-Data" class="headerlink" title="Clinical Data"></a>Clinical Data</h5><p>ADNI临床数据集包括关于每个受试者的<code>临床信息</code>，包括招募，人口统计学，身体检查和认知评估数据。可以将整套临床数据作为逗号分隔值（CSV）文件批量下载。</p>
 <p><img src="http://adni.loni.usc.edu/wp-content/uploads/2010/09/clinical-data-chart.png" style="zoom:60%"></p>
@@ -246,7 +247,7 @@
 <p>此外，adni生物标记核心所执行的几项分析结果将在数据存档中提供如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">- Homocysteine</span><br><span class="line">- Species of isoprostanes</span><br><span class="line">- CSF tau, sAPPβ levels, BACE levels, and enzyme activity</span><br><span class="line">- Plasma Aβ 40 and Aβ 42</span><br><span class="line">- Other promising CSF and plasma based on ongoing multiplex immunoassay studies and mass - spectrometry MRM studies</span><br></pre></td></tr></table></figure>
 <h4 id="python-读取nifti数据"><a href="#python-读取nifti数据" class="headerlink" title="python 读取nifti数据"></a>python 读取nifti数据</h4><ul>
-<li>使用nifti数据 23.6 MB </li>
+<li>使用nifti数据 23.6 MB   </li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> nibabel <span class="keyword">as</span> nib</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line"><span class="comment"># show the nii_data.shape</span></span><br><span class="line">nii_file = <span class="string">"ADNI_011_S_0010_MR_MPR__GradWarp__B1_Correction__N3__Scaled_Br_20061208114538147_S8800_I32270.nii"</span></span><br><span class="line">data = nib.load(nii_file)</span><br><span class="line">img = data.get_fdata()</span><br><span class="line">img = np.squeeze(img)</span><br><span class="line">print(<span class="string">"img.shape"</span>,img.shape) <span class="comment"># img.shape (192, 192, 160)</span></span><br><span class="line">print(<span class="string">"data.shape"</span>,data.shape) <span class="comment"># data.shape (192, 192, 160)</span></span><br><span class="line">print(<span class="string">"data.affine.shape"</span>,data.affine.shape)  <span class="comment"># data.affine.shape (4, 4)</span></span><br><span class="line"><span class="comment"># print(data.header) #数据头信息  输出信息于Result列出</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取slice信息生成图像</span></span><br><span class="line"><span class="comment"># 把slice数据生成图片的方法</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">show_img</span><span class="params">(slices)</span>:</span></span><br><span class="line"></span><br><span class="line">    fig, axes = plt.subplots(<span class="number">1</span>, len(slices))</span><br><span class="line">    <span class="keyword">for</span> i, slice <span class="keyword">in</span> enumerate(slices):</span><br><span class="line">        axes[i].imshow(slice.T, cmap=<span class="string">"gray"</span>, origin=<span class="string">"lower"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#读取nifti文件中的slice数据</span></span><br><span class="line">data = nib.load(nii_file)</span><br><span class="line">img = data.get_fdata()</span><br><span class="line"></span><br><span class="line"><span class="comment">#获取单张slice数据</span></span><br><span class="line">slice_0 = img[<span class="number">26</span>, :, :]</span><br><span class="line">slice_1 = img[:, <span class="number">30</span>, :]</span><br><span class="line">slice_2 = img[:, :, <span class="number">16</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">#生成图表</span></span><br><span class="line">show_img([slice_0, slice_1, slice_2])</span><br><span class="line">plt.suptitle(<span class="string">"show slice image"</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 <p><strong>Result：</strong></p>
@@ -265,7 +266,7 @@
     <div class="content">
         
 <span class="post-time">
-    最終更新：<time datetime="2018-11-30T13:34:35.412Z" itemprop="dateUpdated">2018-11-30 21:34:35</time>
+    Last updated: <time datetime="2018-11-30T13:37:59.112Z" itemprop="dateUpdated">2018-11-30 21:37:59</time>
 </span><br>
 
 
@@ -307,7 +308,7 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/11/30/ADNI模态数据概念整理/&title=《ADNI模态数据概念整理》 — Go Further&source=CaptainSE" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/11/30/ADNI模态数据概念整理/&title=《ADNI模态数据概念整理》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -424,7 +425,7 @@
             
                 <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
             
-            <span>このブログの内容物は<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja">クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際ライセンスの下に提供されています</a></span>
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
         </p>
     </div>
     <div class="bottom">
@@ -456,7 +457,7 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/11/30/ADNI模态数据概念整理/&title=《ADNI模态数据概念整理》 — Go Further&source=CaptainSE" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/11/30/ADNI模态数据概念整理/&title=《ADNI模态数据概念整理》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
