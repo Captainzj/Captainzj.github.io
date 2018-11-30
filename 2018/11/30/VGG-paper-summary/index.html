@@ -28,18 +28,18 @@
 <meta property="og:site_name" content="Go Further">
 <meta property="og:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2018/11/30/VGG-paper-summary/Mini-network">
+<meta property="og:image" content="https://captainzj.github.io/2018/11/30/VGG-paper-summary//Mini-network replacing the 5x5 convolutions.jpg">
 <meta property="og:image" content="https://pic2.zhimg.com/v2-7a0f9391fbdab0f5c3e8c61693ebe205_r.jpg">
-<meta property="og:image" content="http://yoursite.com/2018/11/30/VGG-paper-summary/ConvNet">
-<meta property="og:image" content="http://yoursite.com/2018/11/30/VGG-paper-summary/ConvNet">
-<meta property="og:image" content="http://yoursite.com/2018/11/30/VGG-paper-summary/ConvNet%20evaluation%20techniques%20comparison.jpg">
-<meta property="og:image" content="http://yoursite.com/2018/11/30/VGG-paper-summary/Multiple">
-<meta property="og:image" content="http://yoursite.com/2018/11/30/VGG-paper-summary/Comparison">
-<meta property="og:updated_time" content="2018-11-30T08:45:18.497Z">
+<meta property="og:image" content="https://captainzj.github.io/2018/11/30/VGG-paper-summary/ConvNet performance at a single test scale.jpg">
+<meta property="og:image" content="https://captainzj.github.io/2018/11/30/VGG-paper-summary/ConvNet performance at a multiple test scale.jpg">
+<meta property="og:image" content="https://captainzj.github.io/2018/11/30/VGG-paper-summary/ConvNet evaluation techniques comparison.jpg">
+<meta property="og:image" content="https://captainzj.github.io/2018/11/30/VGG-paper-summary/Multiple ConvNet fusion results.jpg">
+<meta property="og:image" content="https://captainzj.github.io/2018/11/30/VGG-paper-summary/Comparison with the state of the art in ILSVRC classification.jpg">
+<meta property="og:updated_time" content="2018-11-30T08:57:36.490Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="VGG_paper">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
-<meta name="twitter:image" content="http://yoursite.com/2018/11/30/VGG-paper-summary/Mini-network">
+<meta name="twitter:image" content="https://captainzj.github.io/2018/11/30/VGG-paper-summary//Mini-network replacing the 5x5 convolutions.jpg">
     
         <link rel="alternate" type="application/atom+xml" title="Go Further" href="/atom.xml">
     
@@ -165,7 +165,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#原理"><span class="post-toc-number">1.</span> <span class="post-toc-text">原理</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#VGG优缺点"><span class="post-toc-number">2.</span> <span class="post-toc-text">VGG优缺点</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#摘要"><span class="post-toc-number">3.</span> <span class="post-toc-text">摘要</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#介绍"><span class="post-toc-number">4.</span> <span class="post-toc-text">介绍</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#卷积网络配置"><span class="post-toc-number">5.</span> <span class="post-toc-text">卷积网络配置</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#架构"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">架构</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#配置"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">配置</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#讨论"><span class="post-toc-number">5.3.</span> <span class="post-toc-text">讨论</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#分类框架"><span class="post-toc-number">6.</span> <span class="post-toc-text">分类框架</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#训练"><span class="post-toc-number">6.1.</span> <span class="post-toc-text">训练</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#测试"><span class="post-toc-number">6.2.</span> <span class="post-toc-text">测试</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#实现细节"><span class="post-toc-number">6.3.</span> <span class="post-toc-text">实现细节</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#分类实验"><span class="post-toc-number">7.</span> <span class="post-toc-text">分类实验</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#单尺度评估"><span class="post-toc-number">7.1.</span> <span class="post-toc-text">单尺度评估</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#多尺度评估"><span class="post-toc-number">7.2.</span> <span class="post-toc-text">多尺度评估</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#多裁切图像评估"><span class="post-toc-number">7.3.</span> <span class="post-toc-text">多裁切图像评估</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#卷积网络融合"><span class="post-toc-number">7.4.</span> <span class="post-toc-text">卷积网络融合</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#与当前最先进的技术相比较"><span class="post-toc-number">7.5.</span> <span class="post-toc-text">与当前最先进的技术相比较</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#结论"><span class="post-toc-number">8.</span> <span class="post-toc-text">结论</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#简述"><span class="post-toc-number">1.</span> <span class="post-toc-text">简述</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#原理"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">原理</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#VGG优缺点"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">VGG优缺点</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#摘要"><span class="post-toc-number">2.</span> <span class="post-toc-text">摘要</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#介绍"><span class="post-toc-number">3.</span> <span class="post-toc-text">介绍</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#卷积网络配置"><span class="post-toc-number">4.</span> <span class="post-toc-text">卷积网络配置</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#架构"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">架构</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#配置"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">配置</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#讨论"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">讨论</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#分类框架"><span class="post-toc-number">5.</span> <span class="post-toc-text">分类框架</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#训练"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">训练</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#测试"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">测试</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#实现细节"><span class="post-toc-number">5.3.</span> <span class="post-toc-text">实现细节</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#分类实验"><span class="post-toc-number">6.</span> <span class="post-toc-text">分类实验</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#单尺度评估"><span class="post-toc-number">6.1.</span> <span class="post-toc-text">单尺度评估</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#多尺度评估"><span class="post-toc-number">6.2.</span> <span class="post-toc-text">多尺度评估</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#多裁切图像评估"><span class="post-toc-number">6.3.</span> <span class="post-toc-text">多裁切图像评估</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#卷积网络融合"><span class="post-toc-number">6.4.</span> <span class="post-toc-text">卷积网络融合</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#与当前最先进的技术相比较"><span class="post-toc-number">6.5.</span> <span class="post-toc-text">与当前最先进的技术相比较</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#结论"><span class="post-toc-number">7.</span> <span class="post-toc-text">结论</span></a></li></ol>
         </nav>
     </aside>
 
@@ -193,19 +193,14 @@
 <a id="more"></a>
 <p>论文出处：<a href="http://link.zhihu.com/?target=https%3A//arxiv.org/abs/1409.1556" target="_blank" rel="noopener">Very Deep Convolutional Networks for Large-Scale Image Recognition</a></p>
 <p>参考链接：<a href="https://zhuanlan.zhihu.com/p/41423739" target="_blank" rel="noopener">一文读懂VGG网络</a>\VGG模型论文译文<a href="https://zhuanlan.zhihu.com/p/34851133" target="_blank" rel="noopener">上</a>\<a href="https://zhuanlan.zhihu.com/p/35516173" target="_blank" rel="noopener">下</a></p>
-<h4 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h4><p>VGG16相比AlexNet的一个改进是<strong>采用连续的几个3x3的卷积核代替AlexNet中的较大卷积核（11x11，7x7，5x5）</strong>。对于给定的感受野（与输出有关的输入图片的局部大小），采用堆积的小卷积核是优于采用大的卷积核，因为多层非线性层可以增加网络深度来保证学习更复杂的模式，而且代价还比较小（参数更少）。</p>
+<h4 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h4><h5 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h5><p>VGG16相比AlexNet的一个改进是<strong>采用连续的几个3x3的卷积核代替AlexNet中的较大卷积核（11x11，7x7，5x5）</strong>。对于给定的感受野（与输出有关的输入图片的局部大小），采用堆积的小卷积核是优于采用大的卷积核，因为多层非线性层可以增加网络深度来保证学习更复杂的模式，而且代价还比较小（参数更少）。</p>
 <p>简单来说，在VGG中，使用了3个3x3卷积核来代替7x7卷积核，使用了2个3x3卷积核来代替5*5卷积核，这样做的主要目的是在保证具有相同感知野的条件下，提升了网络的深度，在一定程度上提升了神经网络的效果。</p>
 <p>比如，3个步长为1的3x3卷积核的一层层叠加作用可看成一个大小为7的感受野（其实就表示3个3x3连续卷积相当于一个7x7卷积），其参数总量为 $3\times(3^2C^2)= 27C^2$，如果直接使用7x7卷积核，其参数总量为  $7^2C^2 = 49C^2$，这里 C 指的是输入和输出的通道数。很明显，$27C^2$小于$49C^2$，即减少了参数；而且3x3卷积核有利于更好地保持图像性质。</p>
 <p><strong>这里解释一下为什么使用2个3x3卷积核可以来代替5*5卷积核：</strong></p>
 <p>5x5卷积看做一个小的全连接网络在5x5区域滑动，我们可以先用一个3x3的卷积滤波器卷积，然后再用一个全连接层连接这个3x3卷积输出，这个全连接层我们也可以看做一个3x3卷积层。这样我们就可以用两个3x3卷积级联（叠加）起来代替一个 5x5卷积。</p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="/2018/11/30/VGG-paper-summary/Mini-network" alt="Mini-network replacing the 5x5 convolutions" title="replacing">
-                </div>
-                <div class="image-caption">replacing</div>
-            </figure>
-<h4 id="VGG优缺点"><a href="#VGG优缺点" class="headerlink" title="VGG优缺点"></a><strong>VGG优缺点</strong></h4><p><strong>VGG优点</strong></p>
+<center><br>    <img src="https://captainzj.github.io/2018/11/30/VGG-paper-summary//Mini-network replacing the 5x5 convolutions.jpg" alt="missing"><br>    <figcaption>Mini-network replacing the 5x5 convolutions</figcaption><br></center>
+
+<h5 id="VGG优缺点"><a href="#VGG优缺点" class="headerlink" title="VGG优缺点"></a><strong>VGG优缺点</strong></h5><p><strong>VGG优点</strong></p>
 <ul>
 <li>VGGNet的结构非常简洁，整个网络都使用了同样大小的卷积核尺寸（3x3）和最大池化尺寸（2x2）。</li>
 <li>几个小滤波器（3x3）卷积层的组合比一个大滤波器（5x5或7x7）卷积层好：</li>
@@ -252,43 +247,19 @@
 <p>由于卷积边界条件不同，<code>多裁剪图像评估</code>与<code>密集评估</code>是互补的：将ConvNet应用于裁剪图像时，卷积后的特征映射用零填充，而在密集评估的情况下，同一裁切图像的填充天然地来自于图像的相邻部分（由于卷积和空间池化），这大大增加了整个网络的感受野，因此捕获更多的上下文信息。</p>
 <h5 id="实现细节"><a href="#实现细节" class="headerlink" title="实现细节"></a>实现细节</h5><p>实现源自公开发布的<code>C ++ Caffe工具箱</code>（Jia，2013）（2013年12月推出），但包含许多重大修改，使得我们能在装有<code>多个GPU</code>的单系统中执行训练和评估，以及能够对<code>多种规模的全尺寸（未裁剪）图像</code>（如上所述）进行训练和评估。与使用单个GPU相比，我们概念更简单的方案在现成的<code>4 GPU系统上已经提供了3.75倍的加速</code>。在配备四个NVIDIA Titan Black GPU的系统上，根据架构的不同，训练一个网络需要<strong>2-3周</strong>的时间。</p>
 <h4 id="分类实验"><a href="#分类实验" class="headerlink" title="分类实验"></a>分类实验</h4><p>该数据集包括1000种分类的图像，并且被分成三组：训练集（1.3M张图像），验证集（50K张图像）和测试集（100K张标签被去除的图像）。</p>
-<h5 id="单尺度评估"><a href="#单尺度评估" class="headerlink" title="单尺度评估"></a>单尺度评估</h5><figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="/2018/11/30/VGG-paper-summary/ConvNet" alt="performance" title="">
-                </div>
-                <div class="image-caption">performance</div>
-            </figure>
+<h5 id="单尺度评估"><a href="#单尺度评估" class="headerlink" title="单尺度评估"></a>单尺度评估</h5><p><img src="https://captainzj.github.io/2018/11/30/VGG-paper-summary/ConvNet performance at a single test scale.jpg"></p>
 <ul>
 <li>虽然额外的非线性确实有帮助（C比B好），但使用感受野范围不少的卷积核（D比C好）捕获空间上下文也很重要。</li>
 <li>带有小型卷积核的深网优于具有更大卷积核的浅网。</li>
 <li>通过尺度抖动来增强训练集确实有助于捕获多尺度图像统计信息。</li>
 </ul>
-<h5 id="多尺度评估"><a href="#多尺度评估" class="headerlink" title="多尺度评估"></a>多尺度评估</h5><figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="/2018/11/30/VGG-paper-summary/ConvNet" alt="performance" title="">
-                </div>
-                <div class="image-caption">performance</div>
-            </figure>
-<h5 id="多裁切图像评估"><a href="#多裁切图像评估" class="headerlink" title="多裁切图像评估"></a>多裁切图像评估</h5><p><img src="/2018/11/30/VGG-paper-summary/ConvNet evaluation techniques comparison.jpg" alt=""></p>
+<h5 id="多尺度评估"><a href="#多尺度评估" class="headerlink" title="多尺度评估"></a>多尺度评估</h5><p><img src="https://captainzj.github.io/2018/11/30/VGG-paper-summary/ConvNet performance at a multiple test scale.jpg"></p>
+<h5 id="多裁切图像评估"><a href="#多裁切图像评估" class="headerlink" title="多裁切图像评估"></a>多裁切图像评估</h5><p><img src="https://captainzj.github.io/2018/11/30/VGG-paper-summary/ConvNet evaluation techniques comparison.jpg"> </p>
 <ul>
 <li>多裁切图像与密集评估，这两种方法确实是互补，因为它们的组合优于其中的每一种。</li>
 </ul>
-<h5 id="卷积网络融合"><a href="#卷积网络融合" class="headerlink" title="卷积网络融合"></a>卷积网络融合</h5><figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="/2018/11/30/VGG-paper-summary/Multiple" alt="ConvNet" title="">
-                </div>
-                <div class="image-caption">ConvNet</div>
-            </figure>
-<h5 id="与当前最先进的技术相比较"><a href="#与当前最先进的技术相比较" class="headerlink" title="与当前最先进的技术相比较"></a>与当前最先进的技术相比较</h5><figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="/2018/11/30/VGG-paper-summary/Comparison" alt="with" title="">
-                </div>
-                <div class="image-caption">with</div>
-            </figure>
+<h5 id="卷积网络融合"><a href="#卷积网络融合" class="headerlink" title="卷积网络融合"></a>卷积网络融合</h5><p><img src="https://captainzj.github.io/2018/11/30/VGG-paper-summary/Multiple ConvNet fusion results.jpg"></p>
+<h5 id="与当前最先进的技术相比较"><a href="#与当前最先进的技术相比较" class="headerlink" title="与当前最先进的技术相比较"></a>与当前最先进的技术相比较</h5><p><img src="https://captainzj.github.io/2018/11/30/VGG-paper-summary/Comparison with the state of the art in ILSVRC classification.jpg"></p>
 <h4 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h4><p>在这项工作中，我们评估了用于大规模图像分类的深层卷积网络（多达<code>19个权值层</code>）。 已经证明，<code>表示层的深度有利于分类准确性</code>，并且通过大幅增加网络深度便可以使用传统的ConvNet架构来实现ImageNet挑战数据集上的最新性能（LeCun等，1989; Krizhevsky等， 2012）。 在附录中，我们还展示了我们的模型能很好地<code>泛化应用</code>于其他的任务和数据集，不亚于甚至性能优于那些深度略浅、更复杂的识别流水线。 我们的结果再一次证实了视觉表示中<code>深度的重要性</code>。</p>
 
         </div>
@@ -298,7 +269,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2018-11-30T08:45:18.497Z" itemprop="dateUpdated">2018-11-30 16:45:18</time>
+    Last updated: <time datetime="2018-11-30T08:57:36.490Z" itemprop="dateUpdated">2018-11-30 16:57:36</time>
 </span><br>
 
 
