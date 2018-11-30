@@ -14,7 +14,7 @@
     
     
     
-    <title>VGG_paper | Go Further | Stay Hungry, Stay Foolish</title>
+    <title>VGG_Introduction | Go Further | Stay Hungry, Stay Foolish</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#142421">
@@ -23,21 +23,21 @@
     <meta name="keywords" content="">
     <meta name="description" content="【阅读时间】XXX min XXX words【阅读内容】……">
 <meta property="og:type" content="article">
-<meta property="og:title" content="VGG_paper">
-<meta property="og:url" content="http://yoursite.com/2018/11/30/VGG-paper-summary/index.html">
+<meta property="og:title" content="VGG_Introduction">
+<meta property="og:url" content="http://yoursite.com/2018/11/30/VGG_Introduction/index.html">
 <meta property="og:site_name" content="Go Further">
 <meta property="og:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://captainzj.github.io/2018/11/30/VGG-paper-summary//Mini-network replacing the 5x5 convolutions.jpg">
 <meta property="og:image" content="https://pic2.zhimg.com/v2-7a0f9391fbdab0f5c3e8c61693ebe205_r.jpg">
-<meta property="og:image" content="https://captainzj.github.io/2018/11/30/VGG-paper-summary/ConvNet performance at a single test scale.jpg">
-<meta property="og:image" content="https://captainzj.github.io/2018/11/30/VGG-paper-summary/ConvNet performance at a multiple test scale.jpg">
-<meta property="og:image" content="https://captainzj.github.io/2018/11/30/VGG-paper-summary/ConvNet evaluation techniques comparison.jpg">
-<meta property="og:image" content="https://captainzj.github.io/2018/11/30/VGG-paper-summary/Multiple ConvNet fusion results.jpg">
-<meta property="og:image" content="https://captainzj.github.io/2018/11/30/VGG-paper-summary/Comparison with the state of the art in ILSVRC classification.jpg">
-<meta property="og:updated_time" content="2018-11-30T09:01:07.694Z">
+<meta property="og:image" content="https://captainzj.github.io/2018/11/30/VGG_Introduction/ConvNet performance at a single test scale.jpg">
+<meta property="og:image" content="https://captainzj.github.io/2018/11/30/VGG_Introduction/ConvNet performance at a multiple test scale.jpg">
+<meta property="og:image" content="https://captainzj.github.io/2018/11/30/VGG_Introduction/ConvNet evaluation techniques comparison.jpg">
+<meta property="og:image" content="https://captainzj.github.io/2018/11/30/VGG_Introduction/Multiple ConvNet fusion results.jpg">
+<meta property="og:image" content="https://captainzj.github.io/2018/11/30/VGG_Introduction/Comparison with the state of the art in ILSVRC classification.jpg">
+<meta property="og:updated_time" content="2018-11-30T09:10:20.595Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="VGG_paper">
+<meta name="twitter:title" content="VGG_Introduction">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
 <meta name="twitter:image" content="https://captainzj.github.io/2018/11/30/VGG-paper-summary//Mini-network replacing the 5x5 convolutions.jpg">
     
@@ -120,7 +120,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">VGG_paper</div>
+        <div class="flex-col header-title ellipsis">VGG_Introduction</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -142,7 +142,7 @@
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">VGG_paper</h1>
+        <h1 class="title">VGG_Introduction</h1>
         <h5 class="subtitle">
             
                 <time datetime="2018-11-30T07:13:36.000Z" itemprop="datePublished" class="page-time">
@@ -170,11 +170,11 @@
     </aside>
 
 
-<article id="post-VGG-paper-summary"
+<article id="post-VGG_Introduction"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">VGG_paper</h1>
+        <h1 class="post-card-title">VGG_Introduction</h1>
         <div class="post-meta">
             <time class="post-time" title="2018-11-30 15:13:36" datetime="2018-11-30T07:13:36.000Z"  itemprop="datePublished">2018-11-30</time>
 
@@ -247,19 +247,19 @@
 <p>由于卷积边界条件不同，<code>多裁剪图像评估</code>与<code>密集评估</code>是互补的：将ConvNet应用于裁剪图像时，卷积后的特征映射用零填充，而在密集评估的情况下，同一裁切图像的填充天然地来自于图像的相邻部分（由于卷积和空间池化），这大大增加了整个网络的感受野，因此捕获更多的上下文信息。</p>
 <h5 id="实现细节"><a href="#实现细节" class="headerlink" title="实现细节"></a>实现细节</h5><p>实现源自公开发布的<code>C ++ Caffe工具箱</code>（Jia，2013）（2013年12月推出），但包含许多重大修改，使得我们能在装有<code>多个GPU</code>的单系统中执行训练和评估，以及能够对<code>多种规模的全尺寸（未裁剪）图像</code>（如上所述）进行训练和评估。与使用单个GPU相比，我们概念更简单的方案在现成的<code>4 GPU系统上已经提供了3.75倍的加速</code>。在配备四个NVIDIA Titan Black GPU的系统上，根据架构的不同，训练一个网络需要<strong>2-3周</strong>的时间。</p>
 <h4 id="分类实验"><a href="#分类实验" class="headerlink" title="分类实验"></a>分类实验</h4><p>该数据集包括1000种分类的图像，并且被分成三组：训练集（1.3M张图像），验证集（50K张图像）和测试集（100K张标签被去除的图像）。</p>
-<h5 id="单尺度评估"><a href="#单尺度评估" class="headerlink" title="单尺度评估"></a>单尺度评估</h5><p><img src="https://captainzj.github.io/2018/11/30/VGG-paper-summary/ConvNet performance at a single test scale.jpg"></p>
+<h5 id="单尺度评估"><a href="#单尺度评估" class="headerlink" title="单尺度评估"></a>单尺度评估</h5><p><img src="https://captainzj.github.io/2018/11/30/VGG_Introduction/ConvNet performance at a single test scale.jpg"></p>
 <ul>
 <li>虽然额外的非线性确实有帮助（C比B好），但使用感受野范围不少的卷积核（D比C好）捕获空间上下文也很重要。</li>
 <li>带有小型卷积核的深网优于具有更大卷积核的浅网。</li>
 <li>通过尺度抖动来增强训练集确实有助于捕获多尺度图像统计信息。</li>
 </ul>
-<h5 id="多尺度评估"><a href="#多尺度评估" class="headerlink" title="多尺度评估"></a>多尺度评估</h5><p><img src="https://captainzj.github.io/2018/11/30/VGG-paper-summary/ConvNet performance at a multiple test scale.jpg"></p>
-<h5 id="多裁切图像评估"><a href="#多裁切图像评估" class="headerlink" title="多裁切图像评估"></a>多裁切图像评估</h5><p><img src="https://captainzj.github.io/2018/11/30/VGG-paper-summary/ConvNet evaluation techniques comparison.jpg"> </p>
+<h5 id="多尺度评估"><a href="#多尺度评估" class="headerlink" title="多尺度评估"></a>多尺度评估</h5><p><img src="https://captainzj.github.io/2018/11/30/VGG_Introduction/ConvNet performance at a multiple test scale.jpg"></p>
+<h5 id="多裁切图像评估"><a href="#多裁切图像评估" class="headerlink" title="多裁切图像评估"></a>多裁切图像评估</h5><p><img src="https://captainzj.github.io/2018/11/30/VGG_Introduction/ConvNet evaluation techniques comparison.jpg"> </p>
 <ul>
 <li>多裁切图像与密集评估，这两种方法确实是互补，因为它们的组合优于其中的每一种。</li>
 </ul>
-<h5 id="卷积网络融合"><a href="#卷积网络融合" class="headerlink" title="卷积网络融合"></a>卷积网络融合</h5><p><img src="https://captainzj.github.io/2018/11/30/VGG-paper-summary/Multiple ConvNet fusion results.jpg"></p>
-<h5 id="与当前最先进的技术相比较"><a href="#与当前最先进的技术相比较" class="headerlink" title="与当前最先进的技术相比较"></a>与当前最先进的技术相比较</h5><p><img src="https://captainzj.github.io/2018/11/30/VGG-paper-summary/Comparison with the state of the art in ILSVRC classification.jpg"></p>
+<h5 id="卷积网络融合"><a href="#卷积网络融合" class="headerlink" title="卷积网络融合"></a>卷积网络融合</h5><p><img src="https://captainzj.github.io/2018/11/30/VGG_Introduction/Multiple ConvNet fusion results.jpg"></p>
+<h5 id="与当前最先进的技术相比较"><a href="#与当前最先进的技术相比较" class="headerlink" title="与当前最先进的技术相比较"></a>与当前最先进的技术相比较</h5><p><img src="https://captainzj.github.io/2018/11/30/VGG_Introduction/Comparison with the state of the art in ILSVRC classification.jpg"></p>
 <h4 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h4><p>在这项工作中，我们评估了用于大规模图像分类的深层卷积网络（多达<code>19个权值层</code>）。 已经证明，<code>表示层的深度有利于分类准确性</code>，并且通过大幅增加网络深度便可以使用传统的ConvNet架构来实现ImageNet挑战数据集上的最新性能（LeCun等，1989; Krizhevsky等， 2012）。 在附录中，我们还展示了我们的模型能很好地<code>泛化应用</code>于其他的任务和数据集，不亚于甚至性能优于那些深度略浅、更复杂的识别流水线。 我们的结果再一次证实了视觉表示中<code>深度的重要性</code>。</p>
 
         </div>
@@ -269,7 +269,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2018-11-30T09:01:07.694Z" itemprop="dateUpdated">2018-11-30 17:01:07</time>
+    Last updated: <time datetime="2018-11-30T09:10:20.595Z" itemprop="dateUpdated">2018-11-30 17:10:20</time>
 </span><br>
 
 
@@ -301,7 +301,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/11/30/VGG-paper-summary/&title=《VGG_paper》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/11/30/VGG_Introduction/&title=《VGG_Introduction》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -311,22 +311,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/11/30/VGG-paper-summary/&title=《VGG_paper》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/11/30/VGG_Introduction/&title=《VGG_Introduction》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/11/30/VGG-paper-summary/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/11/30/VGG_Introduction/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《VGG_paper》 — Go Further&url=http://yoursite.com/2018/11/30/VGG-paper-summary/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《VGG_Introduction》 — Go Further&url=http://yoursite.com/2018/11/30/VGG_Introduction/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/11/30/VGG-paper-summary/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/11/30/VGG_Introduction/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -346,21 +346,14 @@
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between">
-  
-    <div class="waves-block waves-effect prev">
-      <a href="/2018/11/30/VGG_Introduction/" id="post-prev" class="post-nav-link">
-        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">VGG_Introduction</h4>
-      </a>
-    </div>
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/2018/11/26/MachineLearningInAction-Code/" id="post-next" class="post-nav-link">
+      <a href="/2018/11/30/VGG-paper-summary/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">MachineLearningInAction_Code</h4>
+        <h4 class="title">VGG_paper</h4>
       </a>
     </div>
   
@@ -457,7 +450,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/11/30/VGG-paper-summary/&title=《VGG_paper》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/11/30/VGG_Introduction/&title=《VGG_Introduction》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -467,22 +460,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/11/30/VGG-paper-summary/&title=《VGG_paper》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/11/30/VGG_Introduction/&title=《VGG_Introduction》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/11/30/VGG-paper-summary/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/11/30/VGG_Introduction/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《VGG_paper》 — Go Further&url=http://yoursite.com/2018/11/30/VGG-paper-summary/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《VGG_Introduction》 — Go Further&url=http://yoursite.com/2018/11/30/VGG_Introduction/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/11/30/VGG-paper-summary/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/11/30/VGG_Introduction/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -493,7 +486,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACLklEQVR42u3ay44CIRQFQP//p51ktkY8B1qThmI1cVqkekHu6/GI1/N/vX7yutr/vtvz8Y2FgYFxW8ZzuF4Z735m/Mx4z/E+47NhYGCcw1jZbnxFtvu0VAwMDIzxM+8ON75kx3gMDAyM9Qs3T2t/k2liYGCcw2jLZ2NMvn/CuDgXx8DAuCGjbQz88u8v9jcwMDBuwniWaz3RTYLI+lQYGBhbM/LwLi+rJUFemypHLwsDA2NTRj4SsZJ2rgSFyaWMgYFxDiO5CvMn2/LZXDr9mDscBgbGbRl5IJg8vxL21SEmBgbGYYykEJZcnXPp6+SwGgYGxtaMPBBMrss8GV4JNzEwME5jzI045K3NtlUZpaxtuQ0DA2MLRjvWcNXYxGUJMAYGxtaMvLjfXr4toGgDYGBgHMmYK6utFMja1xSV2zAwMDZltIlrftVeVciLdsbAwDiA0YZ3K0nmXNr84TwYGBhbM/JRhraR2b6OuVEMDAyMcxhzRf925aHeZS0BDAyMLRhtQ3EMzq/vNm3+8EIxMDAOYFwV0rVpZzty8ZaEgYGxNWP9y/kR2+O24x0YGBi7MlbK9EnQtt5UiEY6MDAwtmbMpZRJhyEp0rWpb9HCxMDA2I6RXLIroxUrLYQifMTAwDiAkZfm50K69tfzSx8DAwMjD9fmuoqXJdUYGBgYZesxbwYkF24xHIaBgbE1Ix+tmGsGrAxVRDtjYGBszWgTyLmQsS3ktUNpGBgYmzL+ANVnddNXoFBXAAAAAElFTkSuQmCC" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJklEQVR42u3aQW7DMAwEwP7/0+61QBtlSToFLI1Ohp1YGh8IitTXVzyuH+PV0/Xvf18n/7p5YGBgPJZxLcddEydvzp/+MSMGBsYBjHUYTa7Xy00CdPL+l/cxMDAwlhMn71kni/m8GBgYGNXXJRvX5E7yFAMDAyPZTOaBdRJAP74Xx8DAeCAjr7r///VH+hsYGBiPYlzFUS2xVe/0BgYGxt6M3ga1WvSfNxuiNBQDA2NrRh74JvnYOsgmoRwDA+NMRn48q9qq7AXZXkqKgYGxN6NXaOstN5/yIxVEDAyM7Ri9ZK6XVuZ3ykgMDIwtGL1CWxIo8zf0MIUKHwYGxhaMfImT7egaPEk6MTAw9mbk4TIJf3dtYnMYBgbGOYy8AXBXia3XBnjz0TEwMLZmVKfJS2x5+piX2EabWwwMjAcyekfBqmG6ug3OZ8TAwDiBMQmv1YXmd3ppKwYGxq6MXvjrtQF6zYDyYQsMDIztGNWifH44I29VVg9bFNoMGBgYGzHyP+cHuapHJfJv/HIuDAyMYxi9Mn3ehUiSy17xDgMD40xGfnirmjjelXRiYGCcwLiKI/82yaepluFGnVgMDIzHMqqBNVlWHpTnv8fAwDiHkR+zqIbXXtLZTB8xMDAOYPQ2qFXwpCXwBoOBgYExaGF+rs2AgYGB0TvgVU0uqy2BN/0NDAyMrRn50dJJk+CuhigGBsZpjN7WcY2cLCJpbY76GxgYGE9ifAPH6JNheL5HawAAAABJRU5ErkJggg==" alt="微信分享二维码">
 </div>
 
 
