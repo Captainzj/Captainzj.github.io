@@ -35,7 +35,7 @@
 <meta property="og:image" content="https://captainzj.github.io/2018/11/30/VGG-paper-summary/ConvNet evaluation techniques comparison.jpg">
 <meta property="og:image" content="https://captainzj.github.io/2018/11/30/VGG-paper-summary/Multiple ConvNet fusion results.jpg">
 <meta property="og:image" content="https://captainzj.github.io/2018/11/30/VGG-paper-summary/Comparison with the state of the art in ILSVRC classification.jpg">
-<meta property="og:updated_time" content="2018-11-30T08:57:36.490Z">
+<meta property="og:updated_time" content="2018-11-30T09:01:07.694Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="VGG_paper">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
@@ -192,7 +192,7 @@
             <p>【阅读时间】XXX min XXX words<br>【阅读内容】……</p>
 <a id="more"></a>
 <p>论文出处：<a href="http://link.zhihu.com/?target=https%3A//arxiv.org/abs/1409.1556" target="_blank" rel="noopener">Very Deep Convolutional Networks for Large-Scale Image Recognition</a></p>
-<p>参考链接：<a href="https://zhuanlan.zhihu.com/p/41423739" target="_blank" rel="noopener">一文读懂VGG网络</a>\VGG模型论文译文<a href="https://zhuanlan.zhihu.com/p/34851133" target="_blank" rel="noopener">上</a>\<a href="https://zhuanlan.zhihu.com/p/35516173" target="_blank" rel="noopener">下</a></p>
+<p>参考链接：<a href="https://zhuanlan.zhihu.com/p/41423739" target="_blank" rel="noopener">一文读懂VGG网络</a>\VGG模型论文译文<a href="https://zhuanlan.zhihu.com/p/34851133" target="_blank" rel="noopener">(上)</a><a href="https://zhuanlan.zhihu.com/p/35516173" target="_blank" rel="noopener">(下)</a></p>
 <h4 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h4><h5 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h5><p>VGG16相比AlexNet的一个改进是<strong>采用连续的几个3x3的卷积核代替AlexNet中的较大卷积核（11x11，7x7，5x5）</strong>。对于给定的感受野（与输出有关的输入图片的局部大小），采用堆积的小卷积核是优于采用大的卷积核，因为多层非线性层可以增加网络深度来保证学习更复杂的模式，而且代价还比较小（参数更少）。</p>
 <p>简单来说，在VGG中，使用了3个3x3卷积核来代替7x7卷积核，使用了2个3x3卷积核来代替5*5卷积核，这样做的主要目的是在保证具有相同感知野的条件下，提升了网络的深度，在一定程度上提升了神经网络的效果。</p>
 <p>比如，3个步长为1的3x3卷积核的一层层叠加作用可看成一个大小为7的感受野（其实就表示3个3x3连续卷积相当于一个7x7卷积），其参数总量为 $3\times(3^2C^2)= 27C^2$，如果直接使用7x7卷积核，其参数总量为  $7^2C^2 = 49C^2$，这里 C 指的是输入和输出的通道数。很明显，$27C^2$小于$49C^2$，即减少了参数；而且3x3卷积核有利于更好地保持图像性质。</p>
@@ -269,7 +269,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2018-11-30T08:57:36.490Z" itemprop="dateUpdated">2018-11-30 16:57:36</time>
+    Last updated: <time datetime="2018-11-30T09:01:07.694Z" itemprop="dateUpdated">2018-11-30 17:01:07</time>
 </span><br>
 
 
