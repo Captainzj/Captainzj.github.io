@@ -35,7 +35,7 @@
 <meta property="og:image" content="http://yoursite.com/2018/11/30/VGG-paper-summary/ConvNet%20evaluation%20techniques%20comparison.jpg">
 <meta property="og:image" content="http://yoursite.com/2018/11/30/VGG-paper-summary/Multiple">
 <meta property="og:image" content="http://yoursite.com/2018/11/30/VGG-paper-summary/Comparison">
-<meta property="og:updated_time" content="2018-11-30T08:39:51.967Z">
+<meta property="og:updated_time" content="2018-11-30T08:45:18.497Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="VGG_paper">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
@@ -126,7 +126,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="検索">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -192,6 +192,7 @@
             <p>【阅读时间】XXX min XXX words<br>【阅读内容】……</p>
 <a id="more"></a>
 <p>论文出处：<a href="http://link.zhihu.com/?target=https%3A//arxiv.org/abs/1409.1556" target="_blank" rel="noopener">Very Deep Convolutional Networks for Large-Scale Image Recognition</a></p>
+<p>参考链接：<a href="https://zhuanlan.zhihu.com/p/41423739" target="_blank" rel="noopener">一文读懂VGG网络</a>\VGG模型论文译文<a href="https://zhuanlan.zhihu.com/p/34851133" target="_blank" rel="noopener">上</a>\<a href="https://zhuanlan.zhihu.com/p/35516173" target="_blank" rel="noopener">下</a></p>
 <h4 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h4><p>VGG16相比AlexNet的一个改进是<strong>采用连续的几个3x3的卷积核代替AlexNet中的较大卷积核（11x11，7x7，5x5）</strong>。对于给定的感受野（与输出有关的输入图片的局部大小），采用堆积的小卷积核是优于采用大的卷积核，因为多层非线性层可以增加网络深度来保证学习更复杂的模式，而且代价还比较小（参数更少）。</p>
 <p>简单来说，在VGG中，使用了3个3x3卷积核来代替7x7卷积核，使用了2个3x3卷积核来代替5*5卷积核，这样做的主要目的是在保证具有相同感知野的条件下，提升了网络的深度，在一定程度上提升了神经网络的效果。</p>
 <p>比如，3个步长为1的3x3卷积核的一层层叠加作用可看成一个大小为7的感受野（其实就表示3个3x3连续卷积相当于一个7x7卷积），其参数总量为 $3\times(3^2C^2)= 27C^2$，如果直接使用7x7卷积核，其参数总量为  $7^2C^2 = 49C^2$，这里 C 指的是输入和输出的通道数。很明显，$27C^2$小于$49C^2$，即减少了参数；而且3x3卷积核有利于更好地保持图像性质。</p>
@@ -289,7 +290,6 @@
                 <div class="image-caption">with</div>
             </figure>
 <h4 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h4><p>在这项工作中，我们评估了用于大规模图像分类的深层卷积网络（多达<code>19个权值层</code>）。 已经证明，<code>表示层的深度有利于分类准确性</code>，并且通过大幅增加网络深度便可以使用传统的ConvNet架构来实现ImageNet挑战数据集上的最新性能（LeCun等，1989; Krizhevsky等， 2012）。 在附录中，我们还展示了我们的模型能很好地<code>泛化应用</code>于其他的任务和数据集，不亚于甚至性能优于那些深度略浅、更复杂的识别流水线。 我们的结果再一次证实了视觉表示中<code>深度的重要性</code>。</p>
-<p>参考链接：<a href="https://zhuanlan.zhihu.com/p/41423739" target="_blank" rel="noopener">一文读懂VGG网络</a>\VGG模型论文译文<a href="https://zhuanlan.zhihu.com/p/34851133" target="_blank" rel="noopener">上</a>\<a href="https://zhuanlan.zhihu.com/p/35516173" target="_blank" rel="noopener">下</a></p>
 
         </div>
 
@@ -298,7 +298,7 @@
     <div class="content">
         
 <span class="post-time">
-    最終更新：<time datetime="2018-11-30T08:39:51.967Z" itemprop="dateUpdated">2018-11-30 16:39:51</time>
+    Last updated: <time datetime="2018-11-30T08:45:18.497Z" itemprop="dateUpdated">2018-11-30 16:45:18</time>
 </span><br>
 
 
@@ -457,7 +457,7 @@
             
                 <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
             
-            <span>このブログの内容物は<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja">クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際ライセンスの下に提供されています</a></span>
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
         </p>
     </div>
     <div class="bottom">
