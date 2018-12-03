@@ -33,12 +33,14 @@
 <meta property="og:image" content="http://yoursite.com/2018/12/02/ResNet-Introduction/Figure%202.png">
 <meta property="og:image" content="http://yoursite.com/2018/12/02/ResNet-Introduction/shortcuts_1.png">
 <meta property="og:image" content="http://yoursite.com/2018/12/02/ResNet-Introduction/distribution%20of%20path%20length.png">
+<meta property="og:image" content="http://yoursite.com/2018/12/02/ResNet-Introduction/gradient%20magnitude%20per%20path%20length.png">
+<meta property="og:image" content="http://yoursite.com/2018/12/02/ResNet-Introduction/total%20gradient%20magnitude%20per%20path%20length.png">
 <meta property="og:image" content="http://yoursite.com/2018/12/02/ResNet-Introduction/Figure%203.png">
 <meta property="og:image" content="http://yoursite.com/2018/12/02/ResNet-Introduction/Figure%204.png">
 <meta property="og:image" content="http://yoursite.com/2018/12/02/ResNet-Introduction/Table%203.png">
 <meta property="og:image" content="http://yoursite.com/2018/12/02/ResNet-Introduction/Table%204.png">
 <meta property="og:image" content="http://yoursite.com/2018/12/02/ResNet-Introduction/Table%206.png">
-<meta property="og:updated_time" content="2018-12-03T08:32:03.371Z">
+<meta property="og:updated_time" content="2018-12-03T14:35:38.115Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ResNet_Introduction">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
@@ -129,7 +131,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="検索">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -168,7 +170,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Network-Architectures"><span class="post-toc-number">1.</span> <span class="post-toc-text">Network Architectures</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Experiments"><span class="post-toc-number">2.</span> <span class="post-toc-text">Experiments</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#引入"><span class="post-toc-number">1.</span> <span class="post-toc-text">引入</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Network-Architectures"><span class="post-toc-number">2.</span> <span class="post-toc-text">Network Architectures</span></a></li></ol>
         </nav>
     </aside>
 
@@ -196,22 +198,23 @@
 <a id="more"></a>
 <p>论文出处：<a href="https://arxiv.org/abs/1512.03385" target="_blank" rel="noopener">Deep Residual Learning for Image Recognition</a></p>
 <p>译文链接：<a href="http://blog.csdn.net/wspba/article/details/57074389" target="_blank" rel="noopener">http://blog.csdn.net/wspba/article/details/57074389</a></p>
-<p>参考链接：<a href="https://zhuanlan.zhihu.com/p/32085715" target="_blank" rel="noopener">ResNet学习笔记</a>、<a href="https://www.jianshu.com/p/46d76bd56766" target="_blank" rel="noopener">深度详解ResNet及其六大变体</a>、<a href="https://www.jianshu.com/p/e58437f39f65" target="_blank" rel="noopener">残差网络ResNet笔记</a></p>
-<p>随着CNN网络的发展，尤其的VGG网络的提出，大家发现网络的层数是一个关键因素，貌似越深的网络效果越好。但是<code>随着网络层数的增加，问题也随之而来</code>。</p>
+<p>参考链接：<a href="https://zhuanlan.zhihu.com/p/32085715" target="_blank" rel="noopener">ResNet学习笔记</a>、<a href="https://www.jianshu.com/p/46d76bd56766" target="_blank" rel="noopener">深度详解ResNet及其六大变体</a>、<a href="https://www.jianshu.com/p/e58437f39f65" target="_blank" rel="noopener">残差网络ResNet笔记</a>、<a href="https://zhuanlan.zhihu.com/p/30756859" target="_blank" rel="noopener">残差系列网络</a></p>
+<h4 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h4><p>随着CNN网络的发展，尤其的VGG网络的提出，大家发现网络的层数是一个关键因素，貌似越深的网络效果越好。但是<code>随着网络层数的增加，问题也随之而来</code>。</p>
 <p>首先出现的问题是<strong>梯度消失/梯度爆炸</strong>，这就导致训练难以收敛。<code>归一初始化</code>（normalized initialization）和<code>中间归一化</code>（intermediate normalization）在很大程度上解决了这一问题，它使得数十层的网络在反向传播的随机梯度下降（SGD）上能够收敛。</p>
 <p>当深层网络能够收敛时，一个<strong>退化</strong>问题又出现了：随着网络深度的增加，准确率达到饱和然后迅速退化。意外的是，这种退化<strong>并不是由过拟合造成的</strong>，并且在一个合理的深度模型中增加更多的层却导致了<strong>更高的错误率</strong>。<strong>Fig.1</strong>展示了一个典型的例子：</p>
-<center><br>    <img src="/2018/12/02/ResNet-Introduction/Figure 1.jpg" style="zoom:80%"><br></center><br>对于更深的模型，这有一种通过构建的解决方案：<strong>恒等映射identity mapping</strong>(所谓的恒等映射，即输入$x$经过某一个函数（设为$G(x)$）作用输出还是$x$本身，即$G(x)=x$)，来构建增加的层，而其它层直接从浅层模型中复制而来。这个构建的解决方案也表明了，一个更深的模型不应当产生比它的浅层版本更高的训练错误率。但是，<strong>相关的实验结果说明传统的网络（”plain” networks）很难去学习恒等映射</strong>，即会出现因为深度增加而导致性能下降的问题（即使采用了恒等映射方法）。<br><br>——<br><br>#### Identity Mapping by Shortcuts<br><br>本文中，我们提出了一种<strong>深度残差学习</strong>框架来解决这种因为深度增加而导致性能下降的问题。<br>我们假设$F(x)$代表某个只包含有两三层的block的映射函数， $x$ 是block的输入，$F(x)$ 是block的输出。假设他们具有相同的维度。在训练的过程中我们希望能够通过修改网络中的 $w$ 和 $b$ 去拟合一个理想的 $\mathcal{H}(x)$ (从输入到输出的一个理想的映射函数)。也就是我们的目标是修改 $\mathcal{F}(x)$ 中的 $w$ 和 $b$ 逼近 $\mathcal{H}(x)$ 。<br>如果我们改变思路，用$\mathcal{F}(x)$  来逼近$\mathcal{H}(x)-x$，那么我们最终得到bolck的输出$\mathcal{H}(x)$就由 $\mathcal{F}(x)$ 变为$\mathcal{F}(x)+x$ （这里的加指的是对应位置上的元素相加，也就是element-wise addition），这里的直接将输入连接到输出的结构也称为shortcut。 这里我们假设优化残差映射$\mathcal{F}({x})$比优化原来的映射 $\mathcal{H}({x})$容易。<br><br>- 改变前目标： 训练$\mathcal{F}(x)$ 逼近 $\mathcal{H}(x)$<br>- 改变后目标：训练 $\mathcal{F}(x)$ 逼近$\mathcal{H}(x)-x$   (即 $\mathcal{F}(x)+x$ 逼近$\mathcal{H}(x)$)<br><br><center><br><img src="/2018/12/02/ResNet-Introduction/Figure 2.1.jpg" style="zoom:80%"><br></center><br>左边的original block需要调整其内部参数，使得输入的x经过卷积操作后最终输出的F(x)等于x，即实现了恒等映射F(x)=x，等号左边是block的输出，右边是block的输入。但是这种结构的卷积网络很难调整其参数完美地实现F(x)=x。再看右边的Res block。因为shortcut的引入，整个block的输出变成了F(x)+x，block的输入还是x。此时网络需要调整其内部参数使得F(x)+x=x，也就是直接令其内部的所有参数为0，使得F(x)=0，F(x)+x=x就变成了0+x = x，等号左边是block的输出，右边是block的输入。输出等于输入，即<strong>完美地完成了恒等映射</strong>。因此使用ResNet结构搭建的深度网络至少与浅层网络具有相同的拟合能力，不会出现之前的网络退化问题。<br><br>——<br><br><center><br>    <img src="/2018/12/02/ResNet-Introduction/Figure 2.png" style="zoom:40%"><br></center><br><strong>We consider a building block defined as</strong>：  $\begin{equation} {y}= \mathcal{F}({x}, {W_{i}}) + W_{s}{x}. \end{equation}$<br><br>##### Shortcut的三种方式<br><br>由于ResNet要求 $F(x)$与 $x$ 的维度大小要一致才能够相加，因此在$F(x)$ 与$x$ 维度不相同时就需要对$x$的维度做调整，文章中提出了三种调整的方式：<br><br>1. 如果 $x$ 的维度增加，就使用0来填充增加出来的维度（A方式）<br>2. 如果 $x$ 的维度增加，使用线性变换来增加多出来的维度，在程序里表现为使用一个1x1的卷积核进行调整维度（B方式）<br>3. 对于所有的shortcut，都使用线性变换，也就是1x1的卷积（C方式）<br><br>由下面的实验结果可以，分析ABC这三种方式。A方式采用0填充.，完全不存在任何的残差学习能力。B方式与C方式相比，错误率略高。但是B方式的模型复杂度要远低于C方式，因此，作者最终在所有的网络中采用方式B。B方式在 $x$ 的维度与$F(x)$的维度相同时，直接用 $x$ 加上 $F(x)$，在 $x$ 的维度与 $F(x)$的维度不同时，才采用1x1的卷积层对 $x$ 的维度进行调整。<br><br>——<br><br>##### 对Shortcuts的解读<br><br><center><br>    <img src="/2018/12/02/ResNet-Introduction/shortcuts_1.png" style="zoom:80%"><br></center>
+<center><br>    <img src="/2018/12/02/ResNet-Introduction/Figure 1.jpg" style="zoom:80%"><br></center><br>对于更深的模型，这有一种通过构建的解决方案：<strong>恒等映射identity mapping</strong>(所谓的恒等映射，即输入$x$经过某一个函数（设为$G(x)$）作用输出还是$x$本身，即$G(x)=x$)，来构建增加的层，而其它层直接从浅层模型中复制而来。这个构建的解决方案也表明了，一个更深的模型不应当产生比它的浅层版本更高的训练错误率。但是，<strong>相关的实验结果说明传统的网络（”plain” networks）很难去学习恒等映射</strong>，即会出现因为深度增加而导致性能下降的问题（即使采用了恒等映射方法）。<br><br>#### Identity Mapping by Shortcuts<br><br>本文中，我们提出了一种<strong>深度残差学习</strong>框架来解决这种因为深度增加而导致性能下降的问题。<br>我们假设$F(x)$代表某个只包含有两三层的block的映射函数， $x$ 是block的输入，$F(x)$ 是block的输出。假设他们具有相同的维度。在训练的过程中我们希望能够通过修改网络中的 $w$ 和 $b$ 去拟合一个理想的 $\mathcal{H}(x)$ (从输入到输出的一个理想的映射函数)。也就是我们的目标是修改 $\mathcal{F}(x)$ 中的 $w$ 和 $b$ 逼近 $\mathcal{H}(x)$ 。<br>如果我们改变思路，用$\mathcal{F}(x)$  来逼近$\mathcal{H}(x)-x$，那么我们最终得到bolck的输出$\mathcal{H}(x)$就由 $\mathcal{F}(x)$ 变为$\mathcal{F}(x)+x$ （这里的加指的是对应位置上的元素相加，也就是element-wise addition），这里的直接将输入连接到输出的结构也称为shortcut。 这里我们假设优化残差映射$\mathcal{F}({x})$比优化原来的映射 $\mathcal{H}({x})$容易。<br><br>- 改变前目标： 训练$\mathcal{F}(x)$ 逼近 $\mathcal{H}(x)$<br>- 改变后目标：训练 $\mathcal{F}(x)$ 逼近$\mathcal{H}(x)-x$   (即 $\mathcal{F}(x)+x$ 逼近$\mathcal{H}(x)$)<br><br><center><br><img src="/2018/12/02/ResNet-Introduction/Figure 2.1.jpg" style="zoom:80%"><br></center><br>左边的original block需要调整其内部参数，使得输入的x经过卷积操作后最终输出的F(x)等于x，即实现了恒等映射F(x)=x，等号左边是block的输出，右边是block的输入。但是这种结构的卷积网络很难调整其参数完美地实现F(x)=x。再看右边的Res block。因为shortcut的引入，整个block的输出变成了F(x)+x，block的输入还是x。此时网络需要调整其内部参数使得F(x)+x=x，也就是直接令其内部的所有参数为0，使得F(x)=0，F(x)+x=x就变成了0+x = x，等号左边是block的输出，右边是block的输入。输出等于输入，即<strong>完美地完成了恒等映射</strong>。因此使用ResNet结构搭建的深度网络至少与浅层网络具有相同的拟合能力，不会出现之前的网络退化问题。<br><br>——<br><br><br><br><center><br>    <img src="/2018/12/02/ResNet-Introduction/Figure 2.png" style="zoom:40%"><br></center><br><strong>We consider a building block defined as</strong>：  $\begin{equation} {y}= \mathcal{F}({x}, {W_{i}}) + W_{s}{x}. \end{equation}$<br><br><br>#### Shortcut的三种方式<br><br>由于ResNet要求 $F(x)$与 $x$ 的维度大小要一致才能够相加，因此在$F(x)$ 与$x$ 维度不相同时就需要对$x$的维度做调整，文章中提出了三种调整的方式：<br><br>1. 如果 $x$ 的维度增加，就使用0来填充增加出来的维度（A方式）<br>2. 如果 $x$ 的维度增加，使用线性变换来增加多出来的维度，在程序里表现为使用一个1x1的卷积核进行调整维度（B方式）<br>3. 对于所有的shortcut，都使用线性变换，也就是1x1的卷积（C方式）<br><br>由下面的实验结果可以，分析ABC这三种方式。A方式采用0填充.，完全不存在任何的残差学习能力。B方式与C方式相比，错误率略高。但是B方式的模型复杂度要远低于C方式，因此，作者最终在所有的网络中采用方式B。B方式在 $x$ 的维度与$F(x)$的维度相同时，直接用 $x$ 加上 $F(x)$，在 $x$ 的维度与 $F(x)$的维度不同时，才采用1x1的卷积层对 $x$ 的维度进行调整。<br><br>——<br><br>#### 对ResNet的解读<br><br><center><br>    <img src="/2018/12/02/ResNet-Introduction/shortcuts_1.png" style="zoom:80%"><br></center>
 
-<p>残差网络单元其中可以分解成右图的形式，从图中可以看出，残差网络其实是由多种路径组合的一个网络，直白了说，残差网络其实是很多并行子网络的组合，整个残差网络其实相当于一个多人投票系统（Ensembling）</p>
-<center><br><img src="/2018/12/02/ResNet-Introduction/distribution of path length.png" style="zoom:90%"><br></center>
 
-<p>其实ResNet是由大多数中度网络和一小部分浅度网络和深度网络组成的，说明虽然表面上ResNet网络很深，但是其实起实际作用的网络层数并没有很深。<a href="https://blog.csdn.net/buyi_shizi/article/details/53336192#resnet的真面目" target="_blank" rel="noopener">ResNet的真面目</a></p>
+<p>ResNet架构有很多独立有效路径（或者说残差网络其实是很多并行子网络的组合），而且大部分路径在移除了部分层之后会保持完整无损。相反，VGG网络只有一个有效路径，因此移除一个层都会对它的唯一路径的性能产生极大的影响。</p>
+<center><br>    <img src="/2018/12/02/ResNet-Introduction/distribution of path length.png" width="200"><br>    <img src="/2018/12/02/ResNet-Introduction/gradient magnitude per path length.png" width="200"><br>    <img src="/2018/12/02/ResNet-Introduction/total gradient magnitude per path length.png" width="200"><br></center>
+
+
+
+<p>图(左)大部分的路径都流经了19到35个残差块。为了得到路径长度k的梯度幅度，作者们首先向网络输入了一批数据，然后任意采样了k个残差块。当反向传递梯度时，他们仅将采样的残差块通过权重层进行传递。图(中)表示随着路径长度的增加，梯度幅度会迅速下降。我们现在可以将每一路径长度与其期望的梯度大小相乘，看每一路径长度在训练中起到多大的作用，就像图(右)。</p>
+<p>令人惊讶的是，大多分布都来自于9到18的路径长度，但它们都只包含少量的总路径（或者说ResNet是由大多数中度网络和一小部分浅度网络和深度网络组成的，说明虽然表面上ResNet网络很深，但是其实起实际作用的网络层数并没有很深。），如图(左)。这是一个非常有趣的发现，因为这暗示着<code>ResNet无法解决过长路径的梯度消失问题</code>，<strong>ResNet的成功实际上源自于它缩短了它的有效路径(effective path)的长度</strong>。</p>
+<p> Stochastic depth通过在训练期间随机丢弃层来改善深度残留网络的训练。这表明并不是所有的层都是需要的，并且强调在深度（剩余）网络中存在大量的冗余。</p>
 <hr>
-<h4 id="Network-Architectures"><a href="#Network-Architectures" class="headerlink" title="Network Architectures"></a>Network Architectures</h4><center><br><img src="/2018/12/02/ResNet-Introduction/Figure 3.png" style="zoom:40%"><br></center>
-
-<p>Plain Network 主要是受 VGG 网络启发，主要采用<strong>3*3滤波器</strong>，遵循两个设计原则：1）对于相同输出特征图尺寸，卷积层有相同个数的滤波器，2）如果特征图尺寸缩小一半，滤波器个数加倍以保持每个层的计算复杂度。通过<strong>步长为2的卷积</strong>来进行降采样。一共<strong>34个权重层</strong>。<br>需要指出，我们这个网络<code>与VGG相比，滤波器要少，复杂度要小</code>。</p>
-<p>Residual Network 主要是在 上述的 plain network上加入 shortcut connections。<strong>ResNet的结构使得网络具有与学习恒等映射的能力，同时也具有学习其他映射的能力。因此ResNet的结构要优于传统的卷积网络（plain networks）结构。</strong></p>
-<h4 id="Experiments"><a href="#Experiments" class="headerlink" title="Experiments"></a>Experiments</h4><center><br><img src="/2018/12/02/ResNet-Introduction/Figure 4.png" style="zoom:70%"><br></center>
+<h4 id="Network-Architectures"><a href="#Network-Architectures" class="headerlink" title="Network Architectures"></a>Network Architectures</h4><center><br><img src="/2018/12/02/ResNet-Introduction/Figure 3.png" style="zoom:40%"><br></center><br>Plain Network 主要是受 VGG 网络启发，主要采用<strong>3*3滤波器</strong>，遵循两个设计原则：1）对于相同输出特征图尺寸，卷积层有相同个数的滤波器，2）如果特征图尺寸缩小一半，滤波器个数加倍以保持每个层的计算复杂度。通过<strong>步长为2的卷积</strong>来进行降采样。一共<strong>34个权重层</strong>。<br>需要指出，我们这个网络<code>与VGG相比，滤波器要少，复杂度要小</code>。<br><br>Residual Network 主要是在 上述的 plain network上加入 shortcut connections。<strong>ResNet的结构使得网络具有与学习恒等映射的能力，同时也具有学习其他映射的能力。因此ResNet的结构要优于传统的卷积网络（plain networks）结构。</strong><br><br>#### Experiments<br><br><center><br><img src="/2018/12/02/ResNet-Introduction/Figure 4.png" style="zoom:70%"><br></center>
 
 <center><br><img src="/2018/12/02/ResNet-Introduction/Table 3.png" style="zoom:70%"><br></center>
 
@@ -225,7 +228,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2018-12-03T08:32:03.371Z" itemprop="dateUpdated">2018-12-03 16:32:03</time>
+    最終更新：<time datetime="2018-12-03T14:35:38.115Z" itemprop="dateUpdated">2018-12-03 22:35:38</time>
 </span><br>
 
 
@@ -302,7 +305,14 @@
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2018/12/03/DenseNet-Introduction/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">DenseNet_Introduction</h4>
+      </a>
+    </div>
   
 
   
@@ -384,7 +394,7 @@
             
                 <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
             
-            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+            <span>このブログの内容物は<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja">クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際ライセンスの下に提供されています</a></span>
         </p>
     </div>
     <div class="bottom">

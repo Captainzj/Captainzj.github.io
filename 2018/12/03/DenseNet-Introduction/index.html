@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>DenseNet_Introduction | Go Further | Stay Hungry, Stay Foolish</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#142421">
+    
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="【阅读时间】XXX min XXX words【阅读内容】……">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DenseNet_Introduction">
+<meta property="og:url" content="http://yoursite.com/2018/12/03/DenseNet-Introduction/index.html">
+<meta property="og:site_name" content="Go Further">
+<meta property="og:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2018/12/03/DenseNet-Introduction/Figure1.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/12/03/DenseNet-Introduction/Figure4_left.png">
+<meta property="og:image" content="http://yoursite.com/2018/12/03/DenseNet-Introduction/Figure2.png">
+<meta property="og:image" content="http://yoursite.com/2018/12/03/DenseNet-Introduction/Table1.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/12/03/DenseNet-Introduction/Figure4.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/12/03/DenseNet-Introduction/Figure5.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/12/03/DenseNet-Introduction/Table2.jpg">
+<meta property="og:updated_time" content="2018-12-03T15:19:21.295Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="DenseNet_Introduction">
+<meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
+<meta name="twitter:image" content="http://yoursite.com/2018/12/03/DenseNet-Introduction/Figure1.jpg">
+    
+        <link rel="alternate" type="application/atom+xml" title="Go Further" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">CaptainSE</h5>
+          <a href="mailto:841145636@qq.com" title="841145636@qq.com" class="mail">841145636@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                Home
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/Captainzj" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">DenseNet_Introduction</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="検索">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">DenseNet_Introduction</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-12-03T08:39:14.000Z" itemprop="datePublished" class="page-time">
+  2018-12-03
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Dense-block"><span class="post-toc-number">1.</span> <span class="post-toc-text">Dense block</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Transition-layer"><span class="post-toc-number">2.</span> <span class="post-toc-text">Transition layer</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Growth-rate"><span class="post-toc-number">3.</span> <span class="post-toc-text">Growth rate</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Bottleneck-layers"><span class="post-toc-number">4.</span> <span class="post-toc-text">Bottleneck layers </span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Compression"><span class="post-toc-number">5.</span> <span class="post-toc-text">Compression</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#算法分析"><span class="post-toc-number"></span> <span class="post-toc-text">算法分析</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Model-compactness"><span class="post-toc-number">1.</span> <span class="post-toc-text">Model compactness</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Implicit-Deep-Supervision"><span class="post-toc-number">2.</span> <span class="post-toc-text">Implicit Deep Supervision</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Feature-Reuse"><span class="post-toc-number">3.</span> <span class="post-toc-text">Feature Reuse</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#实现结果"><span class="post-toc-number"></span> <span class="post-toc-text">实现结果</span></a>
+        </nav>
+    </aside>
+
+
+<article id="post-DenseNet-Introduction"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">DenseNet_Introduction</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-12-03 16:39:14" datetime="2018-12-03T08:39:14.000Z"  itemprop="datePublished">2018-12-03</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>【阅读时间】XXX min XXX words<br>【阅读内容】……</p>
+<a id="more"></a>
+<p>原文链接：<a href="https://arxiv.org/abs/1608.06993" target="_blank" rel="noopener">Densely Connected Convolutional Netwroks</a></p>
+<p>译文链接：<a href="https://zhuanlan.zhihu.com/p/31647627" target="_blank" rel="noopener">DenseNet论文翻译及pytorch实现解析（上）</a>、<a href="https://blog.csdn.net/tumi678/article/details/78667966" target="_blank" rel="noopener">Densely Connected Convolutional Networks翻译</a></p>
+<p>参考链接：<a href="https://blog.csdn.net/u014380165/article/details/75142664" target="_blank" rel="noopener">DenseNet算法详解(ToRead  评价最高)</a>、<a href="https://zhuanlan.zhihu.com/p/28190802" target="_blank" rel="noopener">《Densely Connected Convolutional Networks》论文笔记（精而简）</a>、<a href="https://zhuanlan.zhihu.com/p/30756859" target="_blank" rel="noopener">残差系列网络（简明）</a>、<a href="https://www.leiphone.com/news/201708/0MNOwwfvWiAu43WO.html" target="_blank" rel="noopener">DenseNet 的“what”、“why”和“how”(思路清晰)</a>、<a href="https://zhuanlan.zhihu.com/p/43057737" target="_blank" rel="noopener">DenseNet详解(图解清晰)</a></p>
+<p>ToRead：<a href="https://blog.csdn.net/Bryan__/article/details/77337109" target="_blank" rel="noopener">DenseNet 简介(数学说明)</a>、<a href="https://zhuanlan.zhihu.com/p/37189203" target="_blank" rel="noopener">DenseNet：比ResNet更优的CNN模型(形象细致)</a></p>
+<p><strong>DenseNet的优点</strong>：</p>
+<ul>
+<li>减轻梯度消失的问题；</li>
+<li>加强了特征的<code>传导</code>和<code>利用</code>；</li>
+<li>减少了参数量（与ResNet相比，在实现同等准确率的条件下，DenseNet的参数量要小于ResNet）</li>
+<li>减少了计算量</li>
+</ul>
+<p>DenseNet主要有以下改进：</p>
+<h5 id="Dense-block"><a href="#Dense-block" class="headerlink" title="Dense block"></a><strong>Dense block</strong></h5><p>​    网络的每一层都直接与其前面层相连（可以直接将梯度从后层传向前层），实现<code>特征的重复利用</code>，这就使得网络更加“参数高效”。</p>
+<center><br>    <img src="/2018/12/03/DenseNet-Introduction/Figure1.jpg" style="zoom:80%"><br></center>
+
+
+
+<h5 id="Transition-layer"><a href="#Transition-layer" class="headerlink" title="Transition layer"></a><strong>Transition layer</strong></h5><p>​    该层位于两个dense block之间，由conv层和pooling层组成。之前说过，在一个dense block里，空间维度是保持不变的，为了能进行下采样，故而在两个dense block之间插入transition layer，进一步减少特征图的数量，提升模型的紧凑程度。</p>
+<h5 id="Growth-rate"><a href="#Growth-rate" class="headerlink" title="Growth rate"></a><strong>Growth rate</strong></h5><p>​    论文里涉及到growth rate这个概念。它指的是一个dense block里各个层输出feature maps的通道数，在同一个dense block里bn-relu-conv输出的通道数都是一样的。如上图，它的growth rate=4。一般，为了不使网络变得太宽，以及增加参数的利用效率，growth rate一般不会设得太大。</p>
+<h5 id="Bottleneck-layers"><a href="#Bottleneck-layers" class="headerlink" title="Bottleneck layers "></a><strong>Bottleneck layers </strong></h5><p>​    在一个dense block里，尽管每层输出的通道数并不大（growth rate一般不会设得很大），但是输入是由前面层的feature maps串接起来的，所以输入的通道数会很大。为了提高计算效率，作者<code>引进1*1 conv层作为bottleneck layer，放置在每层的前面，用来降低通道数(减小参数量)</code>。带有bottleneck layer的DenseNet被称为DenseNet-B。</p>
+<h5 id="Compression"><a href="#Compression" class="headerlink" title="Compression"></a><strong>Compression</strong></h5><p>​    如果transition layer对上一个dense block进行了通道数的降维（即压缩），则称这类DenseNet为    <code>DenseNet-C</code>。同时使用了bottleneck layer和compression的DenseNet称为<code>DenseNet-BC</code>。</p>
+<center><br>    <img src="/2018/12/03/DenseNet-Introduction/Figure4_left.png"><br></center>
+
+<p>上图是DenseNet和它的几种变体进行parameter efficiency 的比较，可以看出在实现同等accuracy的条件下，DenseNet-BC所用的参数量最少，实现最大的parameter efficiency。</p>
+<hr>
+<p>完整的DenseNet网络结构：</p>
+<center><br>    <img src="/2018/12/03/DenseNet-Introduction/Figure2.png"><br>    <figcaption>Figure 2</figcaption><br></center>
+
+<p>上图是由三个dense block组成的，两个block之间的conv+pool为transition layer。dense block3后面的pooling是global average pooling，然后再接一个全连接层+softmax。</p>
+<hr>
+<center><br>    <img src="/2018/12/03/DenseNet-Introduction/Table1.jpg"><br></center>
+
+<h4 id="算法分析"><a href="#算法分析" class="headerlink" title="算法分析"></a><strong>算法分析</strong></h4><h5 id="Model-compactness"><a href="#Model-compactness" class="headerlink" title="Model compactness"></a>Model compactness</h5><p>由于DenseNet对输入进行cat操作,一个直观的影响就是每一层学到的feature map都能被之后所有层直接使用,这使得特征可以在整个网络中重用,也使得模型更加简洁.</p>
+<center><br><img src="/2018/12/03/DenseNet-Introduction/Figure4.jpg"><br></center>
+
+<p>从上图中我们可以看出DenseNet的参数效率:左图包含了对多种DenseNet结构参数和最终性能的统计,我们可以看出当模型实现相同的test error时,原始的DenseNet往往要比DenseNet-BC拥有2-3倍的参数量.中间图为DenseNet-BC与ResNet的对比,在相同的模型精度下,DenseNet-BC只需要ResNet约三分之一的参数数量.右图为1001层超过10M参数量的ResNet与100层只有0.8M参数量的DenseNet-BC在训练时的对比,虽然他们在约相同的训练epoch时收敛,但DenseNet-BC却只需要ResNet不足十分之一的参数量.</p>
+<h5 id="Implicit-Deep-Supervision"><a href="#Implicit-Deep-Supervision" class="headerlink" title="Implicit Deep Supervision"></a>Implicit Deep Supervision</h5><p>解释DenseNet为何拥有如此高性能的另一个原因是网络中的每一层不仅接受了原始网络中来自loss的监督,同时由于存在多个bypass与shortcut,网络的监督是多样的.Deep supervision的优势同样在deeply-supervised nets (DSN)中也被证实.(DSN中每一个Hidden layer都有一个分类器,强迫其学习一些有区分度的特征).与DSN不同的是,DenseNet拥有单一的loss function, 模型构造和梯度计算更加简易.</p>
+<h5 id="Feature-Reuse"><a href="#Feature-Reuse" class="headerlink" title="Feature Reuse"></a>Feature Reuse</h5><p>在设计初,DenseNet便被设计成让一层网络可以使用所有之前层网络feature map的网络结构,为了探索feature的复用情况,作者进行了相关实验.作者训练的L=40,K=12的DenseNet,对于任意Denseblock中的所有卷积层,计算之前某层feature map在该层权重的绝对值平均数.这一平均数表明了这一层对于之前某一层feature的利用率,下图为由该平均数绘制出的热力图:</p>
+<center><br><img src="/2018/12/03/DenseNet-Introduction/Figure5.jpg" style="zoom:60%"><br></center>
+
+<p>从图中我们可以得出以下结论:</p>
+<p>a) 一些较早层提取出的特征仍可能被较深层直接使用<br>b) 即使是Transition layer也会使用到之前Denseblock中所有层的特征<br>c) 第2-3个Denseblock中的层对之前Transition layer利用率很低,说明transition layer输出大量冗余特征.这也为DenseNet-BC提供了证据支持,即Compression的必要性.<br>d) 最后的分类层虽然使用了之前Denseblock中的多层信息,但更偏向于使用最后几个feature map的特征,说明在网络的最后几层,某些high-level的特征可能被产生.</p>
+<h4 id="实现结果"><a href="#实现结果" class="headerlink" title="实现结果"></a>实现结果</h4><p>作者在多个benchmark数据集上训练了多种DenseNet模型,并与state-of-art的模型(主要是ResNet和其变种)对比:</p>
+<center><br>    <img src="/2018/12/03/DenseNet-Introduction/Table2.jpg"><br></center>
+
+<p>由上表我们可以看出,DenseNet只需要较小的Growth rate(12,24)便可以实现state-of-art的性能,结合了Bottleneck和Compression的DenseNet-BC具有远小于ResNet及其变种的参数数量,且无论DenseNet或者DenseNet-BC,都在原始数据集和增广数据集上实现了超越ResNet的性能.</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最終更新：<time datetime="2018-12-03T15:19:21.295Z" itemprop="dateUpdated">2018-12-03 23:19:21</time>
+</span><br>
+
+
+        
+    </div>
+    
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/avatar.jpg" alt="CaptainSE">
+            CaptainSE
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/12/03/DenseNet-Introduction/&title=《DenseNet_Introduction》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/12/03/DenseNet-Introduction/&title=《DenseNet_Introduction》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/12/03/DenseNet-Introduction/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《DenseNet_Introduction》 — Go Further&url=http://yoursite.com/2018/12/03/DenseNet-Introduction/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/12/03/DenseNet-Introduction/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/12/02/ResNet-Introduction/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">ResNet_Introduction</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢老板~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>このブログの内容物は<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja">クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際ライセンスの下に提供されています</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>CaptainSE &copy; 2015 - 2018</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/12/03/DenseNet-Introduction/&title=《DenseNet_Introduction》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/12/03/DenseNet-Introduction/&title=《DenseNet_Introduction》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/12/03/DenseNet-Introduction/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《DenseNet_Introduction》 — Go Further&url=http://yoursite.com/2018/12/03/DenseNet-Introduction/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/12/03/DenseNet-Introduction/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACL0lEQVR42u3ay27DMAwEwP7/T6dATwWKGLuiU8DS+GTkZY8PDLXU11d8vH6O5N3Xr+PvK9ev//3MzQcGBsZjGcnPvTu/fuX6W9f3UFMxMDAOYCRldFKskxvNr4uBgYGRNHw5e61YY2BgYEwK7vV5W5rzlhQDAwMjb+DaAprf9PWjuW0tjoGB8UBGOxj4z/MPzjcwMDAewngtHZNlal5wi/vBwMDYmrG2+Gwvn5MmQ1AMDIwTGHl8NonV5iOBt/eAgYGxKWNyK20Al4RlbXjXfAgDA+OpjDbFSpq2fKiZfytpNDEwMHZltHF8vtTM8WvFOuptMTAwtmBMSm1STHNkO+CMMBgYGFswkgI3CciSZ9a2jxgYGKcx2lhtbcCZF+72KovpIAYGxqMY+daufBjQxm1rY8u3/xsYGBhbM5JSuBbJtdF//oCiFBADA2MjRhuEzdvHyeYMDAyMcxjt5om8pLbjzBu2gmFgYBzAWFtetsXxVR7FHwMGBsbWjM9tsJjEeYvjCgwMjE0ZbYiWF9l2M0fb6dUdJQYGxsMZbYvWFtn5sjbKDjEwMDZlrBXEOay9VjGEwMDA2IhxV/j1ifFkHvlhYGDszZjMB9uNFGuj0KRYY2BgnMCYFNm14nhXwcXAwDiN0Ra+djlahGXx8hUDAwNjLSabbClrl7tR94qBgXEYo908kbzbXgsDA+NkRrKIXds8kfxau/0CAwPjNMZdcX8b/bfN5c3zDQwMjGcwvgE/1NsZmrcATgAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = 'Go Further | Stay Hungry, Stay Foolish';
+            clearTimeout(titleTime);
+        } else {
+            document.title = 'Go Further | Stay Hungry, Stay Foolish';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
