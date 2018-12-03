@@ -35,7 +35,7 @@
 <meta property="og:image" content="http://yoursite.com/2018/12/03/DenseNet-Introduction/Figure4.jpg">
 <meta property="og:image" content="http://yoursite.com/2018/12/03/DenseNet-Introduction/Figure5.jpg">
 <meta property="og:image" content="http://yoursite.com/2018/12/03/DenseNet-Introduction/Table2.jpg">
-<meta property="og:updated_time" content="2018-12-03T15:19:21.295Z">
+<meta property="og:updated_time" content="2018-12-03T15:22:49.201Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DenseNet_Introduction">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
@@ -126,7 +126,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="検索">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -165,7 +165,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Dense-block"><span class="post-toc-number">1.</span> <span class="post-toc-text">Dense block</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Transition-layer"><span class="post-toc-number">2.</span> <span class="post-toc-text">Transition layer</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Growth-rate"><span class="post-toc-number">3.</span> <span class="post-toc-text">Growth rate</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Bottleneck-layers"><span class="post-toc-number">4.</span> <span class="post-toc-text">Bottleneck layers </span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Compression"><span class="post-toc-number">5.</span> <span class="post-toc-text">Compression</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#算法分析"><span class="post-toc-number"></span> <span class="post-toc-text">算法分析</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Model-compactness"><span class="post-toc-number">1.</span> <span class="post-toc-text">Model compactness</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Implicit-Deep-Supervision"><span class="post-toc-number">2.</span> <span class="post-toc-text">Implicit Deep Supervision</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Feature-Reuse"><span class="post-toc-number">3.</span> <span class="post-toc-text">Feature Reuse</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#实现结果"><span class="post-toc-number"></span> <span class="post-toc-text">实现结果</span></a>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#概念介绍"><span class="post-toc-number">1.</span> <span class="post-toc-text">概念介绍</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Dense-block"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Dense block</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Transition-layer"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Transition layer</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Growth-rate"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">Growth rate</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Bottleneck-layers"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">Bottleneck layers </span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Compression"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">Compression</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#算法分析"><span class="post-toc-number">2.</span> <span class="post-toc-text">算法分析</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Model-compactness"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">Model compactness</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Implicit-Deep-Supervision"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">Implicit Deep Supervision</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Feature-Reuse"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">Feature Reuse</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#实现结果"><span class="post-toc-number">3.</span> <span class="post-toc-text">实现结果</span></a></li></ol>
         </nav>
     </aside>
 
@@ -202,8 +202,7 @@
 <li>减少了参数量（与ResNet相比，在实现同等准确率的条件下，DenseNet的参数量要小于ResNet）</li>
 <li>减少了计算量</li>
 </ul>
-<p>DenseNet主要有以下改进：</p>
-<h5 id="Dense-block"><a href="#Dense-block" class="headerlink" title="Dense block"></a><strong>Dense block</strong></h5><p>​    网络的每一层都直接与其前面层相连（可以直接将梯度从后层传向前层），实现<code>特征的重复利用</code>，这就使得网络更加“参数高效”。</p>
+<h4 id="概念介绍"><a href="#概念介绍" class="headerlink" title="概念介绍"></a>概念介绍</h4><h5 id="Dense-block"><a href="#Dense-block" class="headerlink" title="Dense block"></a><strong>Dense block</strong></h5><p>​    网络的每一层都直接与其前面层相连（可以直接将梯度从后层传向前层），实现<code>特征的重复利用</code>，这就使得网络更加“参数高效”。</p>
 <center><br>    <img src="/2018/12/03/DenseNet-Introduction/Figure1.jpg" style="zoom:80%"><br></center>
 
 
@@ -245,7 +244,7 @@
     <div class="content">
         
 <span class="post-time">
-    最終更新：<time datetime="2018-12-03T15:19:21.295Z" itemprop="dateUpdated">2018-12-03 23:19:21</time>
+    Last updated: <time datetime="2018-12-03T15:22:49.201Z" itemprop="dateUpdated">2018-12-03 23:22:49</time>
 </span><br>
 
 
@@ -404,7 +403,7 @@
             
                 <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
             
-            <span>このブログの内容物は<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja">クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際ライセンスの下に提供されています</a></span>
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
         </p>
     </div>
     <div class="bottom">
