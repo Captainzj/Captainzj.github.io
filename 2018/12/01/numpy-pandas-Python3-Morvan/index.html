@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>numpy&amp;pandas_Python3_Morvan | Go Further | Stay Hungry, Stay Foolish</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#142421">
+    
+    
+    <meta name="keywords" content="Morvan">
+    <meta name="description" content="【阅读时间】XXX min XXX words【阅读内容】Not Completed……">
+<meta name="keywords" content="Morvan">
+<meta property="og:type" content="article">
+<meta property="og:title" content="numpy&amp;pandas_Python3_Morvan">
+<meta property="og:url" content="http://yoursite.com/2018/12/01/numpy-pandas-Python3-Morvan/index.html">
+<meta property="og:site_name" content="Go Further">
+<meta property="og:description" content="【阅读时间】XXX min XXX words【阅读内容】Not Completed……">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-12-01T14:16:13.563Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="numpy&amp;pandas_Python3_Morvan">
+<meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】Not Completed……">
+    
+        <link rel="alternate" type="application/atom+xml" title="Go Further" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">CaptainSE</h5>
+          <a href="mailto:841145636@qq.com" title="841145636@qq.com" class="mail">841145636@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                Home
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/Captainzj" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">numpy&amp;pandas_Python3_Morvan</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">numpy&amp;pandas_Python3_Morvan</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-12-01T12:10:48.000Z" itemprop="datePublished" class="page-time">
+  2018-12-01
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Numpy-和-Pandas-安装"><span class="post-toc-number">1.</span> <span class="post-toc-text">Numpy 和 Pandas 安装</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#numpy-安装"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">numpy 安装</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#pandas安装"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">pandas安装</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Numpy属性"><span class="post-toc-number">2.</span> <span class="post-toc-text">Numpy属性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Numpy-的创建array"><span class="post-toc-number">3.</span> <span class="post-toc-text">Numpy 的创建array</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#关键字"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">关键字</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#创建数组"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">创建数组</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#指定数据-dtype"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">指定数据 dtype</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#创建特定数据"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">创建特定数据</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Numpy-基础运算"><span class="post-toc-number">4.</span> <span class="post-toc-text">Numpy 基础运算</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Numpy索引"><span class="post-toc-number">5.</span> <span class="post-toc-text">Numpy索引</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-numpy-pandas-Python3-Morvan"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">numpy&pandas_Python3_Morvan</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-12-01 20:10:48" datetime="2018-12-01T12:10:48.000Z"  itemprop="datePublished">2018-12-01</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>【阅读时间】XXX min XXX words<br>【阅读内容】Not Completed……</p>
+<a id="more"></a>
+<hr>
+<p>链接：<a href="https://morvanzhou.github.io/tutorials/data-manipulation/np-pd/" target="_blank" rel="noopener">https://morvanzhou.github.io/tutorials/data-manipulation/np-pd/</a></p>
+<h3 id="Numpy-和-Pandas-安装"><a href="#Numpy-和-Pandas-安装" class="headerlink" title="Numpy 和 Pandas 安装"></a>Numpy 和 Pandas 安装</h3><h4 id="numpy-安装"><a href="#numpy-安装" class="headerlink" title="numpy 安装"></a>numpy 安装</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 使用 python 3+:</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> pip3 install numpy</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 使用 python 2+:</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> pip install numpy</span></span><br></pre></td></tr></table></figure>
+<h4 id="pandas安装"><a href="#pandas安装" class="headerlink" title="pandas安装"></a>pandas安装</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 使用 python 3+:</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> pip3 install pandas</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 使用 python 2+:</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> pip install pandas</span></span><br></pre></td></tr></table></figure>
+<h3 id="Numpy属性"><a href="#Numpy属性" class="headerlink" title="Numpy属性"></a>Numpy属性</h3><ul>
+<li><code>ndim</code>：维度</li>
+<li><code>shape</code>：行数和列数</li>
+<li><code>size</code>：元素个数</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np <span class="comment">#为了方便使用numpy 采用np简写</span></span><br><span class="line">array = np.array([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]])  <span class="comment">#列表转化为矩阵</span></span><br><span class="line">print(array)</span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">array([[1, 2, 3],</span></span><br><span class="line"><span class="string">       [2, 3, 4]])</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line">print(<span class="string">'number of dim:'</span>,array.ndim)  <span class="comment"># 维度</span></span><br><span class="line"><span class="comment"># number of dim: 2</span></span><br><span class="line"></span><br><span class="line">print(<span class="string">'shape :'</span>,array.shape)    <span class="comment"># 行数和列数</span></span><br><span class="line"><span class="comment"># shape : (2, 3)</span></span><br><span class="line"></span><br><span class="line">print(<span class="string">'size:'</span>,array.size)   <span class="comment"># 元素个数</span></span><br><span class="line"><span class="comment"># size: 6</span></span><br></pre></td></tr></table></figure>
+<h3 id="Numpy-的创建array"><a href="#Numpy-的创建array" class="headerlink" title="Numpy 的创建array"></a>Numpy 的创建array</h3><ul>
+<li>创建 array 有很多 <a href="https://docs.scipy.org/doc/numpy-dev/user/quickstart.html" target="_blank" rel="noopener">形式</a></li>
+</ul>
+<h4 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a><strong>关键字</strong></h4><ul>
+<li><code>array</code>：创建数组</li>
+<li><code>dtype</code>：指定数据类型</li>
+<li><code>zeros</code>：创建数据全为0</li>
+<li><code>ones</code>：创建数据全为1</li>
+<li><code>empty</code>：创建数据接近0</li>
+<li><code>arrange</code>：按指定范围创建数据</li>
+<li><code>linspace</code>：创建线段</li>
+</ul>
+<h4 id="创建数组"><a href="#创建数组" class="headerlink" title="创建数组"></a>创建数组</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = np.array([<span class="number">2</span>,<span class="number">23</span>,<span class="number">4</span>])  <span class="comment"># list 1d</span></span><br><span class="line">print(a)</span><br><span class="line"><span class="comment"># [2 23 4]</span></span><br></pre></td></tr></table></figure>
+<h4 id="指定数据-dtype"><a href="#指定数据-dtype" class="headerlink" title="指定数据 dtype"></a>指定数据 dtype</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">a = np.array([<span class="number">2</span>,<span class="number">23</span>,<span class="number">4</span>],dtype=np.int)</span><br><span class="line">print(a.dtype)</span><br><span class="line"><span class="comment"># int 64</span></span><br><span class="line"></span><br><span class="line">a = np.array([<span class="number">2</span>,<span class="number">23</span>,<span class="number">4</span>],dtype=np.int32)</span><br><span class="line">print(a.dtype)</span><br><span class="line"><span class="comment"># int32</span></span><br><span class="line"></span><br><span class="line">a = np.array([<span class="number">2</span>,<span class="number">23</span>,<span class="number">4</span>],dtype=np.float)</span><br><span class="line">print(a.dtype)</span><br><span class="line"><span class="comment"># float64</span></span><br><span class="line"></span><br><span class="line">a = np.array([<span class="number">2</span>,<span class="number">23</span>,<span class="number">4</span>],dtype=np.float32)</span><br><span class="line">print(a.dtype)</span><br><span class="line"><span class="comment"># float32</span></span><br></pre></td></tr></table></figure>
+<h4 id="创建特定数据"><a href="#创建特定数据" class="headerlink" title="创建特定数据"></a>创建特定数据</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a = np.array([[<span class="number">2</span>,<span class="number">23</span>,<span class="number">4</span>],[<span class="number">2</span>,<span class="number">32</span>,<span class="number">4</span>]])  <span class="comment"># 2d 矩阵 2行3列</span></span><br><span class="line">print(a)</span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">[[ 2 23  4]</span></span><br><span class="line"><span class="string"> [ 2 32  4]]</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>创建全零数组</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a = np.zeros((<span class="number">3</span>,<span class="number">4</span>)) <span class="comment"># 数据全为0，3行4列</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">array([[ 0.,  0.,  0.,  0.],</span></span><br><span class="line"><span class="string">       [ 0.,  0.,  0.,  0.],</span></span><br><span class="line"><span class="string">       [ 0.,  0.,  0.,  0.]])</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>创建全一数组, 同时也能指定这些特定数据的 dtype:</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a = np.ones((<span class="number">3</span>,<span class="number">4</span>),dtype = np.int)   <span class="comment"># 数据为1，3行4列</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">array([[1, 1, 1, 1],</span></span><br><span class="line"><span class="string">       [1, 1, 1, 1],</span></span><br><span class="line"><span class="string">       [1, 1, 1, 1]])</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>创建全空数组, 其实每个值都是接近于零的数:</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a = np.empty((<span class="number">3</span>,<span class="number">4</span>)) <span class="comment"># 数据为empty，3行4列</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">array([[  0.00000000e+000,   4.94065646e-324,   9.88131292e-324,   1.48219694e-323],</span></span><br><span class="line"><span class="string">       [  1.97626258e-323,   2.47032823e-323,   2.96439388e-323,   3.45845952e-323],</span></span><br><span class="line"><span class="string">       [  3.95252517e-323,   4.44659081e-323,   4.94065646e-323,   5.43472210e-323]])</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>用 <code>arange</code> 创建连续数组:</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = np.arange(<span class="number">10</span>,<span class="number">20</span>,<span class="number">2</span>) <span class="comment"># 10-19 的数据，2步长</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">array([10, 12, 14, 16, 18])</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>使用 <code>reshape</code> 改变数据的形状</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a = np.arange(<span class="number">12</span>).reshape((<span class="number">3</span>,<span class="number">4</span>))    <span class="comment"># 3行4列，0到11</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">array([[ 0,  1,  2,  3],</span></span><br><span class="line"><span class="string">       [ 4,  5,  6,  7],</span></span><br><span class="line"><span class="string">       [ 8,  9, 10, 11]])</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>用 <code>linspace</code> 创建线段型数据:</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">a = np.linspace(<span class="number">1</span>,<span class="number">10</span>,<span class="number">20</span>)    <span class="comment"># 开始端1，结束端10，且分割成20个数据，生成线段</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">array([  1.        ,   1.47368421,   1.94736842,   2.42105263,</span></span><br><span class="line"><span class="string">         2.89473684,   3.36842105,   3.84210526,   4.31578947,</span></span><br><span class="line"><span class="string">         4.78947368,   5.26315789,   5.73684211,   6.21052632,</span></span><br><span class="line"><span class="string">         6.68421053,   7.15789474,   7.63157895,   8.10526316,</span></span><br><span class="line"><span class="string">         8.57894737,   9.05263158,   9.52631579,  10.        ])</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>同样也能进行 <code>reshape</code> 工作:</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">a = np.linspace(<span class="number">1</span>,<span class="number">10</span>,<span class="number">20</span>).reshape((<span class="number">5</span>,<span class="number">4</span>)) <span class="comment"># 更改shape</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">array([[  1.        ,   1.47368421,   1.94736842,   2.42105263],</span></span><br><span class="line"><span class="string">       [  2.89473684,   3.36842105,   3.84210526,   4.31578947],</span></span><br><span class="line"><span class="string">       [  4.78947368,   5.26315789,   5.73684211,   6.21052632],</span></span><br><span class="line"><span class="string">       [  6.68421053,   7.15789474,   7.63157895,   8.10526316],</span></span><br><span class="line"><span class="string">       [  8.57894737,   9.05263158,   9.52631579,  10.        ]])</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+<h3 id="Numpy-基础运算"><a href="#Numpy-基础运算" class="headerlink" title="Numpy 基础运算"></a>Numpy 基础运算</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">a=np.array([<span class="number">10</span>,<span class="number">20</span>,<span class="number">30</span>,<span class="number">40</span>])   <span class="comment"># array([10, 20, 30, 40])</span></span><br><span class="line">b=np.arange(<span class="number">4</span>) 				<span class="comment"># array([0, 1, 2, 3])</span></span><br><span class="line"></span><br><span class="line">c=a-b  <span class="comment"># array([10, 19, 28, 37])   矩阵的减法</span></span><br><span class="line">c=a+b   <span class="comment"># array([10, 21, 32, 43])	矩阵的加法</span></span><br><span class="line">c=a*b   <span class="comment"># array([  0,  20,  60, 120])  矩阵的乘法</span></span><br><span class="line"></span><br><span class="line">c=b**<span class="number">2</span>  <span class="comment"># array([0, 1, 4, 9])  乘方</span></span><br><span class="line">c=<span class="number">10</span>*np.sin(a)  <span class="comment"># array([-5.44021111,  9.12945251, -9.88031624,  7.4511316 ]) 三角函数</span></span><br><span class="line">print(b&lt;<span class="number">3</span>)  <span class="comment"># array([ True,  True,  True, False], dtype=bool)  print()逻辑判断</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>对多行多维度的矩阵进行操作</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">a=np.array([[<span class="number">1</span>,<span class="number">1</span>],[<span class="number">0</span>,<span class="number">1</span>]])</span><br><span class="line">b=np.arange(<span class="number">4</span>).reshape((<span class="number">2</span>,<span class="number">2</span>))</span><br><span class="line"></span><br><span class="line">print(a)</span><br><span class="line"><span class="comment"># array([[1, 1],</span></span><br><span class="line"><span class="comment">#       [0, 1]])</span></span><br><span class="line"></span><br><span class="line">print(b)</span><br><span class="line"><span class="comment"># array([[0, 1],</span></span><br><span class="line"><span class="comment">#       [2, 3]])</span></span><br><span class="line"></span><br><span class="line">c_dot = np.dot(a,b)     <span class="comment"># 矩阵乘法，即对应行乘对应列得到相应元素</span></span><br><span class="line"><span class="comment"># array([[2, 4],</span></span><br><span class="line"><span class="comment">#       [2, 3]])</span></span><br><span class="line">c_dot_2 = a.dot(b)		<span class="comment"># 矩阵乘法(另一写法)</span></span><br><span class="line"><span class="comment"># array([[2, 4],</span></span><br><span class="line"><span class="comment">#       [2, 3]])</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">a=np.random.random((<span class="number">2</span>,<span class="number">4</span>))</span><br><span class="line">print(a)</span><br><span class="line"><span class="comment"># array([[ 0.94692159,  0.20821798,  0.35339414,  0.2805278 ],</span></span><br><span class="line"><span class="comment">#       [ 0.04836775,  0.04023552,  0.44091941,  0.21665268]])</span></span><br><span class="line">np.sum(a)   <span class="comment"># 4.4043622002745959   对矩阵中所有元素进行求和</span></span><br><span class="line">np.min(a)   <span class="comment"># 0.23651223533671784  对矩阵中所有元素寻找最小值</span></span><br><span class="line">np.max(a)   <span class="comment"># 0.90438450240606416  对矩阵中所有元素寻找最大值</span></span><br><span class="line"></span><br><span class="line">a=np.random.random((<span class="number">2</span>,<span class="number">4</span>))</span><br><span class="line">print(<span class="string">"a ="</span>,a)</span><br><span class="line"><span class="comment"># a = [[ 0.23651224  0.41900661  0.84869417  0.46456022]</span></span><br><span class="line"><span class="comment"># [ 0.60771087  0.9043845   0.36603285  0.55746074]]</span></span><br><span class="line"></span><br><span class="line">print(<span class="string">"sum ="</span>,np.sum(a,axis=<span class="number">1</span>))   <span class="comment"># 当axis的值为1的时候，将会以行作为查找单元</span></span><br><span class="line"><span class="comment"># sum = [ 1.96877324  2.43558896]</span></span><br><span class="line"></span><br><span class="line">print(<span class="string">"min ="</span>,np.min(a,axis=<span class="number">0</span>))   <span class="comment"># 当axis的值为0的时候，将会以列作为查找单元</span></span><br><span class="line"><span class="comment"># min = [ 0.23651224  0.41900661  0.36603285  0.46456022]</span></span><br><span class="line"></span><br><span class="line">print(<span class="string">"max ="</span>,np.max(a,axis=<span class="number">1</span>))</span><br><span class="line"><span class="comment"># max = [ 0.84869417  0.9043845 ]</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>对应元素的<code>索引</code>也是非常重要的</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">A = np.arange(<span class="number">2</span>,<span class="number">14</span>).reshape((<span class="number">3</span>,<span class="number">4</span>)) </span><br><span class="line"><span class="comment"># array([[ 2, 3, 4, 5]</span></span><br><span class="line"><span class="comment">#        [ 6, 7, 8, 9]</span></span><br><span class="line"><span class="comment">#        [10,11,12,13]])</span></span><br><span class="line">         </span><br><span class="line">print(np.argmin(A))    <span class="comment"># 0    求矩阵中最小元素的索引</span></span><br><span class="line">print(np.argmax(A))    <span class="comment"># 11   求矩阵中最大元素的索引</span></span><br><span class="line"></span><br><span class="line">print(np.mean(A))        <span class="comment"># 7.5  计算均值    </span></span><br><span class="line"><span class="comment"># print(A.mean())          # 7.5</span></span><br><span class="line">print(np.average(A))     <span class="comment"># 7.5</span></span><br><span class="line"></span><br><span class="line">print(A.median())       <span class="comment"># 7.5  求解中位数</span></span><br><span class="line"></span><br><span class="line">print(np.cumsum(A)) 	<span class="comment"># [2 5 9 14 20 27 35 44 54 65 77 90]   累加函数</span></span><br><span class="line"></span><br><span class="line">print(np.diff(A))    <span class="comment"># 累差运算</span></span><br><span class="line"><span class="comment"># [[1 1 1]</span></span><br><span class="line"><span class="comment">#  [1 1 1]</span></span><br><span class="line"><span class="comment">#  [1 1 1]]</span></span><br><span class="line"></span><br><span class="line">print(np.nonzero(A))    <span class="comment"># 这个函数将所有非零元素的行与列坐标分割开，重构成两个分别关于行和列的矩阵。</span></span><br><span class="line"><span class="comment"># (array([0,0,0,0,1,1,1,1,2,2,2,2]),array([0,1,2,3,0,1,2,3,0,1,2,3]))</span></span><br><span class="line">B = np.array([[<span class="number">0</span>, <span class="number">11</span>, <span class="number">22</span>, <span class="number">33</span>],[<span class="number">11</span>, <span class="number">0</span>, <span class="number">22</span>, <span class="number">33</span>],[<span class="number">11</span>, <span class="number">22</span>, <span class="number">0</span>, <span class="number">33</span>]])</span><br><span class="line">print(np.nonzero(B))	<span class="comment">#遍历每一个元素，若其非0，则返回其行/列索引   第一(二)个array返回行(列)索引</span></span><br><span class="line"><span class="comment"># (array([0, 0, 0, 1, 1, 1, 2, 2, 2]), array([1, 2, 3, 0, 2, 3, 0, 1, 3]))</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>排序操作</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">A = np.arange(<span class="number">14</span>,<span class="number">2</span>, <span class="number">-1</span>).reshape((<span class="number">3</span>,<span class="number">4</span>)) </span><br><span class="line"><span class="comment"># array([[14, 13, 12, 11],</span></span><br><span class="line"><span class="comment">#       [10,  9,  8,  7],</span></span><br><span class="line"><span class="comment">#       [ 6,  5,  4,  3]])</span></span><br><span class="line"></span><br><span class="line">print(np.sort(A))    	<span class="comment"># 仅针对每一行进行从小到大排序操作</span></span><br><span class="line"><span class="comment"># array([[11,12,13,14]</span></span><br><span class="line"><span class="comment">#        [ 7, 8, 9,10]</span></span><br><span class="line"><span class="comment">#        [ 3, 4, 5, 6]])</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>矩阵的转置有两种表示方法：</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">print(np.transpose(A))    </span><br><span class="line">print(A.T)</span><br><span class="line"></span><br><span class="line"><span class="comment"># array([[14,10, 6]</span></span><br><span class="line"><span class="comment">#        [13, 9, 5]</span></span><br><span class="line"><span class="comment">#        [12, 8, 4]</span></span><br><span class="line"><span class="comment">#        [11, 7, 3]])</span></span><br><span class="line"><span class="comment"># array([[14,10, 6]</span></span><br><span class="line"><span class="comment">#        [13, 9, 5]</span></span><br><span class="line"><span class="comment">#        [12, 8, 4]</span></span><br><span class="line"><span class="comment">#        [11, 7, 3]])</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>在Numpy中具有<code>clip(Array,Array_min,Array_max)</code>函数：将Array中大于Array_max的元素转换成Array_max，将Array中小于Array_min的元素转换成Array_min</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">print(A)</span><br><span class="line"><span class="comment"># array([[14,13,12,11]</span></span><br><span class="line"><span class="comment">#        [10, 9, 8, 7]</span></span><br><span class="line"><span class="comment">#        [ 6, 5, 4, 3]])</span></span><br><span class="line"></span><br><span class="line">print(np.clip(A,<span class="number">5</span>,<span class="number">9</span>))    </span><br><span class="line"><span class="comment"># array([[ 9, 9, 9, 9]</span></span><br><span class="line"><span class="comment">#        [ 9, 9, 8, 7]</span></span><br><span class="line"><span class="comment">#        [ 6, 5, 5, 5]])</span></span><br></pre></td></tr></table></figure>
+<h3 id="Numpy索引"><a href="#Numpy索引" class="headerlink" title="Numpy索引"></a>Numpy索引</h3><p><a href="https://morvanzhou.github.io/tutorials/data-manipulation/np-pd/2-5-np-indexing/" target="_blank" rel="noopener">https://morvanzhou.github.io/tutorials/data-manipulation/np-pd/2-5-np-indexing/</a></p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2018-12-01T14:16:13.563Z" itemprop="dateUpdated">2018-12-01 22:16:13</time>
+</span><br>
+
+
+        
+    </div>
+    
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/avatar.jpg" alt="CaptainSE">
+            CaptainSE
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Morvan/">Morvan</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/12/01/numpy-pandas-Python3-Morvan/&title=《numpy&pandas_Python3_Morvan》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/12/01/numpy-pandas-Python3-Morvan/&title=《numpy&pandas_Python3_Morvan》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】Not Completed……" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/12/01/numpy-pandas-Python3-Morvan/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《numpy&pandas_Python3_Morvan》 — Go Further&url=http://yoursite.com/2018/12/01/numpy-pandas-Python3-Morvan/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/12/01/numpy-pandas-Python3-Morvan/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2018/12/01/Matplotlib-Python3-Morvan/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Matplotlib_Python3_Morvan</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/12/01/Communication-Technology-Basics-Experiment/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Communication-Technology-Basics-Experiment</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢老板~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>CaptainSE &copy; 2015 - 2018</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/12/01/numpy-pandas-Python3-Morvan/&title=《numpy&pandas_Python3_Morvan》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/12/01/numpy-pandas-Python3-Morvan/&title=《numpy&pandas_Python3_Morvan》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】Not Completed……" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/12/01/numpy-pandas-Python3-Morvan/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《numpy&pandas_Python3_Morvan》 — Go Further&url=http://yoursite.com/2018/12/01/numpy-pandas-Python3-Morvan/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/12/01/numpy-pandas-Python3-Morvan/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJ0lEQVR42u3aQW7DQAgF0Nz/0u4BosQfcCoZv1lVTTKe5wWCgdcrXsfb+vSd9+9/+vT7U16/WBgYGLdlHF/X9+98P8R852QHDAyM5zCSAJocNwnTV4VmDAwMjOTB1QP1QjYGBgZGlTEvbvN9MDAwMKql5qctjmBNGBfX4hgYGDdk5Lfu///3T/obGBgYt2IcxVUtaK8K1ienwsDAWM3IA1yvbZkH8eT/J+fBwMBYzchDYbLdVWE6eX3Ru8HAwFjE6LUKquH12qu6k+diYGCsYORl5yQ17F3lJ7/CwMB4AiNPvyZDYNVPmyMgGBgYSxnJj/PCclKsVl/fq3doDAyMFYxqWpaPfOVPLAdfDAyMBzDyFG3eKqg2KaOgj4GBsZpxVXMxv2KbtAEKYxYYGBjrGNWxid6gRrUJUR6twMDAeABjchGWlK95oVtNEDEwMJ7J6A2VJtdn1VZElY2BgbGPUR3hmo9fTHY7aWFiYGAsZSSB8nek6vBrobWAgYGxjtFLB3sDZPNGQjlBxMDAWMSYJHBVcF4SlzsbGBgYqxlJaLsqA+0NikUzIxgYGOsYR3FVL/STYFp9ZSe5LQYGxjpGvpIxr14KmLcwLxsXw8DAuCEjCbKJezKW0RvUiN40BgbGIkZ+DVctVnvXdtXTYmBgYFRzyfmxyuEbAwMDY3zt1St9CyQMDIwHMPILtd7R503Nk1eAgYGxmtFL4Cabzlubo/4GBgbGnRh/gxWdOx+WCmsAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = 'Go Further | Stay Hungry, Stay Foolish';
+            clearTimeout(titleTime);
+        } else {
+            document.title = 'Go Further | Stay Hungry, Stay Foolish';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
