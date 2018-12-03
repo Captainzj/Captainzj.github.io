@@ -29,13 +29,13 @@
 <meta property="og:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2018/12/03/DenseNet-Introduction/Figure1.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/12/03/DenseNet-Introduction/Table1.jpg">
 <meta property="og:image" content="http://yoursite.com/2018/12/03/DenseNet-Introduction/Figure4_left.png">
 <meta property="og:image" content="http://yoursite.com/2018/12/03/DenseNet-Introduction/Figure2.png">
-<meta property="og:image" content="http://yoursite.com/2018/12/03/DenseNet-Introduction/Table1.jpg">
 <meta property="og:image" content="http://yoursite.com/2018/12/03/DenseNet-Introduction/Figure4.jpg">
 <meta property="og:image" content="http://yoursite.com/2018/12/03/DenseNet-Introduction/Figure5.jpg">
 <meta property="og:image" content="http://yoursite.com/2018/12/03/DenseNet-Introduction/Table2.jpg">
-<meta property="og:updated_time" content="2018-12-03T15:22:49.201Z">
+<meta property="og:updated_time" content="2018-12-03T15:26:59.184Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DenseNet_Introduction">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
@@ -126,7 +126,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="検索">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -209,6 +209,8 @@
 
 <h5 id="Transition-layer"><a href="#Transition-layer" class="headerlink" title="Transition layer"></a><strong>Transition layer</strong></h5><p>​    该层位于两个dense block之间，由conv层和pooling层组成。之前说过，在一个dense block里，空间维度是保持不变的，为了能进行下采样，故而在两个dense block之间插入transition layer，进一步减少特征图的数量，提升模型的紧凑程度。</p>
 <h5 id="Growth-rate"><a href="#Growth-rate" class="headerlink" title="Growth rate"></a><strong>Growth rate</strong></h5><p>​    论文里涉及到growth rate这个概念。它指的是一个dense block里各个层输出feature maps的通道数，在同一个dense block里bn-relu-conv输出的通道数都是一样的。如上图，它的growth rate=4。一般，为了不使网络变得太宽，以及增加参数的利用效率，growth rate一般不会设得太大。</p>
+<center><br>    <img src="/2018/12/03/DenseNet-Introduction/Table1.jpg"><br></center>
+
 <h5 id="Bottleneck-layers"><a href="#Bottleneck-layers" class="headerlink" title="Bottleneck layers "></a><strong>Bottleneck layers </strong></h5><p>​    在一个dense block里，尽管每层输出的通道数并不大（growth rate一般不会设得很大），但是输入是由前面层的feature maps串接起来的，所以输入的通道数会很大。为了提高计算效率，作者<code>引进1*1 conv层作为bottleneck layer，放置在每层的前面，用来降低通道数(减小参数量)</code>。带有bottleneck layer的DenseNet被称为DenseNet-B。</p>
 <h5 id="Compression"><a href="#Compression" class="headerlink" title="Compression"></a><strong>Compression</strong></h5><p>​    如果transition layer对上一个dense block进行了通道数的降维（即压缩），则称这类DenseNet为    <code>DenseNet-C</code>。同时使用了bottleneck layer和compression的DenseNet称为<code>DenseNet-BC</code>。</p>
 <center><br>    <img src="/2018/12/03/DenseNet-Introduction/Figure4_left.png"><br></center>
@@ -220,8 +222,6 @@
 
 <p>上图是由三个dense block组成的，两个block之间的conv+pool为transition layer。dense block3后面的pooling是global average pooling，然后再接一个全连接层+softmax。</p>
 <hr>
-<center><br>    <img src="/2018/12/03/DenseNet-Introduction/Table1.jpg"><br></center>
-
 <h4 id="算法分析"><a href="#算法分析" class="headerlink" title="算法分析"></a><strong>算法分析</strong></h4><h5 id="Model-compactness"><a href="#Model-compactness" class="headerlink" title="Model compactness"></a>Model compactness</h5><p>由于DenseNet对输入进行cat操作,一个直观的影响就是每一层学到的feature map都能被之后所有层直接使用,这使得特征可以在整个网络中重用,也使得模型更加简洁.</p>
 <center><br><img src="/2018/12/03/DenseNet-Introduction/Figure4.jpg"><br></center>
 
@@ -244,7 +244,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2018-12-03T15:22:49.201Z" itemprop="dateUpdated">2018-12-03 23:22:49</time>
+    最終更新：<time datetime="2018-12-03T15:26:59.184Z" itemprop="dateUpdated">2018-12-03 23:26:59</time>
 </span><br>
 
 
@@ -403,7 +403,7 @@
             
                 <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
             
-            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+            <span>このブログの内容物は<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja">クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際ライセンスの下に提供されています</a></span>
         </p>
     </div>
     <div class="bottom">
