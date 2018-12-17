@@ -28,7 +28,7 @@
 <meta property="og:site_name" content="Go Further">
 <meta property="og:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-15T12:28:25.386Z">
+<meta property="og:updated_time" content="2018-12-17T05:50:07.039Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PyTorch_Grammar">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
@@ -157,7 +157,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#torchvision-transforms"><span class="post-toc-number">1.</span> <span class="post-toc-text">torchvision.transforms</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#torchvision-transforms"><span class="post-toc-number">1.</span> <span class="post-toc-text">torchvision.transforms</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#torch-nn"><span class="post-toc-number">2.</span> <span class="post-toc-text">torch.nn</span></a></li></ol>
         </nav>
     </aside>
 
@@ -183,14 +183,32 @@
         <div class="post-content" id="post-content" itemprop="postContent">
             <p>【阅读时间】XXX min XXX words<br>【阅读内容】……</p>
 <a id="more"></a>
-<h4 id="torchvision-transforms"><a href="#torchvision-transforms" class="headerlink" title="torchvision.transforms"></a>torchvision.transforms</h4><p>(1) <strong>torchvision.transforms.Resize:</strong>用于对载入的图片数据按我们需求的大小进行缩放。 传递给这个类的参数可以是一个整型数据，也可以是一个类似于$ (h,w)$的序列， 其中 ， h 代表高度， w 代表宽度，但是如果使用的是 一 个整型数据，那么表示缩放的宽度和高度都是这个整型数据的值 。 </p>
-<p>( 2) <strong>torchvision.transforms.Scale</strong>: 用于对载入的图片数据按我 们 需求的大小进 行缩 放，用法和 torchvision.transforms.Resize类似。 </p>
-<p>( 3) <strong>torchvision.transforms.CenterCrop:</strong>用 于对载入的图片以图片中心为参考点 ， 按我们需要的大小进行裁剪 。传递给这个类 的参数可以是一个整型数据 ，也可以 是一个类似 于( h,w)的序列 。 </p>
-<p>( 4) <strong>torchvision.transforms.RandomCrop:</strong> 用于对载入的图片按我们需要的大小进行随机裁剪。传递给这个类的参数可以是一个整型数据，也可以是一个类似于$ (h,w)$的序列。 </p>
-<p>(5) <strong>torchvision.transforms.RandomHorizontaIFlip:</strong> 用于对载入的图片按随机概率进行水平翻转。我们可以通过传递给这个类的参数自定义随机概率 ，如果没有定义 ，则使用 默认的概率值 0.5。</p>
-<p>( 6) <strong>torchvision.transforms.RandomVerticalFlip:</strong> 用于对载入的图片按随机概率进行垂直翻转。 我们可以通过传递给这个类的参数自定义随机概率 ，如果没有定义 ，则 使用默 认的概率值 0.5。 </p>
-<p>( 7) <strong>torchvision.transforms.ToTensor:</strong> 用于对载入的图片数据进行类型转换 ， 将之前构成 PIL 图片的数据转换成 Tensor数据类型的变量 ，让 PyTorch 能够对其进行计算和处理。 </p>
-<p>(8) <strong>torchvision.transforms.ToPILlmage:</strong> 用于将 Tensor变量的数据转换成 PIL 图片数据， 主要是为了方便图片内容的显示。</p>
+<h4 id="torchvision-transforms"><a href="#torchvision-transforms" class="headerlink" title="torchvision.transforms"></a>torchvision.transforms</h4><ul>
+<li><p><strong>torchvision.transforms.Resize:</strong>用于对载入的图片数据按我们需求的大小进行缩放。 传递给这个类的参数可以是一个整型数据，也可以是一个类似于$ (h,w)$的序列， 其中 ， h 代表高度， w 代表宽度，但是如果使用的是 一 个整型数据，那么表示缩放的宽度和高度都是这个整型数据的值 。 </p>
+</li>
+<li><p><strong>torchvision.transforms.Scale</strong>: 用于对载入的图片数据按我 们 需求的大小进 行缩 放，用法和 torchvision.transforms.Resize类似。 </p>
+</li>
+<li><p><strong>torchvision.transforms.CenterCrop:</strong>用 于对载入的图片以图片中心为参考点 ， 按我们需要的大小进行裁剪 。传递给这个类 的参数可以是一个整型数据 ，也可以 是一个类似 于( h,w)的序列 。 </p>
+</li>
+<li><p><strong>torchvision.transforms.RandomCrop:</strong> 用于对载入的图片按我们需要的大小进行随机裁剪。传递给这个类的参数可以是一个整型数据，也可以是一个类似于$ (h,w)$的序列。 </p>
+</li>
+<li><p><strong>torchvision.transforms.RandomHorizontaIFlip:</strong> 用于对载入的图片按随机概率进行水平翻转。我们可以通过传递给这个类的参数自定义随机概率 ，如果没有定义 ，则使用 默认的概率值 0.5。</p>
+</li>
+<li><p><strong>torchvision.transforms.RandomVerticalFlip:</strong> 用于对载入的图片按随机概率进行垂直翻转。 我们可以通过传递给这个类的参数自定义随机概率 ，如果没有定义 ，则 使用默 认的概率值 0.5。 </p>
+</li>
+<li><p><strong>torchvision.transforms.ToTensor:</strong> 用于对载入的图片数据进行类型转换 ， 将之前构成 PIL 图片的数据转换成 Tensor数据类型的变量 ，让 PyTorch 能够对其进行计算和处理。 </p>
+</li>
+<li><p><strong>torchvision.transforms.ToPILlmage:</strong> 用于将 Tensor变量的数据转换成 PIL 图片数据， 主要是为了方便图片内容的显示。</p>
+</li>
+</ul>
+<h4 id="torch-nn"><a href="#torch-nn" class="headerlink" title="torch.nn"></a>torch.nn</h4><ul>
+<li><p><strong><a href="https://pytorch-cn.readthedocs.io/zh/latest/package_references/torch-nn/#class-torchnnconv2din95channels-out95channels-kernel95size-stride1-padding0-dilation1-groups1-biastrue" target="_blank" rel="noopener">torch.nn.Conv2d </a></strong> 用于搭建卷积神经网络的卷积层，主要的输入参数有输入通道数、输出通道数、卷积核大小、卷积核移动步长和 Padding的值。其中，输入通道数的数据类型是整型，用于确定输入数据的层数:输出通道数的数据类型也是整型，用于确定输出数据的层数;卷积核大小的数据类型是整型，用于确定卷积核的大小;卷积核移动步长的数据类型是整型，用于确定卷积核每次滑动的步长; Padding 的数据类型是整型，值为 0 时表示不进行边界像素的填充，如果值大于 0，那么增加数字所对应的边界像素层数。</p>
+</li>
+<li><p><strong><a href="https://pytorch-cn.readthedocs.io/zh/latest/package_references/torch-nn/#class-torchnnmaxpool2dkernel95size-stridenone-padding0-dilation1-return95indicesfalse-ceil95modefalse" target="_blank" rel="noopener">torch.nn.MaxPool2d</a></strong> 用于实现卷积神经网络中的最大池化层，主要的输入参数是池化窗口大 小、池化窗口移动步长和 Padding值。同样，池化窗口大小的数据类型是整型 ，用 于确定池化窗口的大 小 。池化窗口步长的数据类型也是整型，用于确定池化窗口<br>每次移动的步长 。 Padding值和在 torch.nn.Conv2d 中定义的 Padding值的用法和意义是一样的 。</p>
+</li>
+<li><p><strong><a href="https://pytorch-cn.readthedocs.io/zh/latest/package_references/torch-nn/#dropout-layers" target="_blank" rel="noopener">torch.nn.Dropout</a></strong> torch.nn.Dropout 类用于防止卷积神经网络在训练的过程中发生过拟合 ， 其工作原理简单来说就是在模型训练的过程中，以一定的随机概率将卷积神经网络模型的部分参数归零(“丢弃”)， 以达到减少相邻两层神经连接的目的。</p>
+</li>
+</ul>
 
         </div>
 
@@ -199,7 +217,7 @@
     <div class="content">
         
 <span class="post-time">
-    最終更新：<time datetime="2018-12-15T12:28:25.386Z" itemprop="dateUpdated">2018-12-15 20:28:25</time>
+    最終更新：<time datetime="2018-12-17T05:50:07.039Z" itemprop="dateUpdated">2018-12-17 13:50:07</time>
 </span><br>
 
 
@@ -276,7 +294,14 @@
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2018/12/17/深度学习之PyTorch实战计算机视觉/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">深度学习之PyTorch实战计算机视觉</h4>
+      </a>
+    </div>
   
 
   

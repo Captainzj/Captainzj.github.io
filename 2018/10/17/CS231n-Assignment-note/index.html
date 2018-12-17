@@ -164,13 +164,13 @@
 <p>可参考:</p>
 <p><a href="https://www.jianshu.com/u/0ee5409b18bf" target="_blank" rel="noopener">https://www.jianshu.com/u/0ee5409b18bf</a></p>
 <p><a href="standford-cs231n-assignment1">standford-cs231n-assignment1</a></p>
-<h4 id="Assignment1"><a href="#Assignment1" class="headerlink" title="Assignment1"></a>Assignment1</h4><h4 id="Assignment2"><a href="#Assignment2" class="headerlink" title="Assignment2"></a>Assignment2</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">- layers.py</span><br><span class="line">spatial_groupnorm_forward</span><br><span class="line">spatial_groupnorm_backward</span><br><span class="line">layernorm_forward</span><br><span class="line">layernorm_backward</span><br></pre></td></tr></table></figure>
+<h4 id="Assignment1"><a href="#Assignment1" class="headerlink" title="Assignment1"></a>Assignment1</h4><h4 id="Assignment2"><a href="#Assignment2" class="headerlink" title="Assignment2"></a>Assignment2</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">- layers.py</span><br><span class="line">spatial_groupnorm_forward</span><br><span class="line">spatial_groupnorm_backward</span><br><span class="line">layernorm_forward</span><br><span class="line">layernorm_backward</span><br></pre></td></tr></table></figure>
 <p><strong>Python Error: no module named ‘past’</strong></p>
 <p>由于目前普遍使用的是python3版本，其中已经移除 xrange 这一操作（具体来说是与range合并了）。但是在作业的实例代码中考虑python2和python3版本的兼容，仍然使用了xrange操作。于是对于python3版本用户来说就需要重新引入：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> past.builtins <span class="keyword">import</span> xrange</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> past.builtins <span class="keyword">import</span> xrange</span><br></pre></td></tr></table></figure>
 <p>但是在运行的时候就遇到了no module named ‘past’问题，原因是没有安装past库</p>
 <p>但是这里比较坑的一点就是安装past库使用的代码竟然是</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install future</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pip install future</span><br></pre></td></tr></table></figure>
 <p>竟然是future！！！</p>
 
         </div>

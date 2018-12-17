@@ -201,14 +201,14 @@
 <p><strong>使用中心化公式</strong>  在使用有限差值近似来计算数值梯度的时候，$\frac{df(x)}{dx}=\frac{f(x+h)-f(x-h)}{2h}$(use instead) 效果较好</p>
 <ul>
 <li><p><strong>使用相对误差来比较</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">- 相对误差&gt;1e-2：通常就意味着梯度可能出错。</span><br><span class="line">- 1e-2&gt;相对误差&gt;1e-4：要对这个值感到不舒服才行。</span><br><span class="line">- 1e-4&gt;相对误差：这个值的相对误差对于有不可导点的目标函数是OK的。但如果目标函数中没有kink（使用tanh和softmax），那么相对误差值还是太高。</span><br><span class="line">- 1e-7或者更小：好结果，可以高兴一把了。</span><br><span class="line"></span><br><span class="line">要知道的是网络的深度越深，相对误差就越高。所以如果你是在对一个10层网络的输入数据做梯度检查，那么1e-2的相对误差值可能就OK了，因为误差一直在累积。相反，如果一个可微函数的相对误差值是1e-2，那么通常说明梯度实现不正确。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">- 相对误差&gt;1e-2：通常就意味着梯度可能出错。</span><br><span class="line">- 1e-2&gt;相对误差&gt;1e-4：要对这个值感到不舒服才行。</span><br><span class="line">- 1e-4&gt;相对误差：这个值的相对误差对于有不可导点的目标函数是OK的。但如果目标函数中没有kink（使用tanh和softmax），那么相对误差值还是太高。</span><br><span class="line">- 1e-7或者更小：好结果，可以高兴一把了。</span><br><span class="line"></span><br><span class="line">要知道的是网络的深度越深，相对误差就越高。所以如果你是在对一个10层网络的输入数据做梯度检查，那么1e-2的相对误差值可能就OK了，因为误差一直在累积。相反，如果一个可微函数的相对误差值是1e-2，那么通常说明梯度实现不正确。</span><br></pre></td></tr></table></figure>
 </li>
 <li><p><strong>使用双精度</strong></p>
 <p>一个常见的错误是使用单精度浮点数来进行梯度检查。这样会导致即使梯度实现正确，相对误差值也会很高（比如1e-2）。在我的经验而言，出现过使用单精度浮点数时相对误差为1e-2，换成双精度浮点数时就降低为1e-8的情况。</p>
 </li>
 <li><p><strong>目标函数的不可导点（kinks）</strong></p>
 <p>不可导点是指目标函数不可导的部分，由ReLU（$max(0,x)$）等函数，或SVM损失，Maxout神经元等引入。考虑当$x=-1e6$时，对ReLU函数进行梯度检查。因为$x&lt;0$，所以解析梯度在该点的梯度为0。然而，在这里数值梯度会突然计算出一个非零的梯度值，因为$f(x+h)$可能越过了不可导点(例如：如果$h&gt;1e-6$)，导致了一个非零的结果。实际上这种情况很常见。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">注意，在计算损失的过程中是可以知道不可导点有没有被越过的。在具有max(x,y)形式的函数中持续跟踪所有“赢家”的身份，就可以实现这一点。其实就是看在前向传播时，到底x和y谁更大。如果在计算f(x+h)和f(x-h)的时候，至少有一个“赢家”的身份变了，那就说明不可导点被越过了，数值梯度会不准确。</span><br><span class="line"></span><br><span class="line">解决上面的不可导点问题的一个办法是使用更少的数据点。如果你的梯度检查对2-3个数据点都有效，那么基本上对整个批量数据进行梯度检查也是没问题的。所以使用很少量的数据点，能让梯度检查更迅速高效。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">注意，在计算损失的过程中是可以知道不可导点有没有被越过的。在具有max(x,y)形式的函数中持续跟踪所有“赢家”的身份，就可以实现这一点。其实就是看在前向传播时，到底x和y谁更大。如果在计算f(x+h)和f(x-h)的时候，至少有一个“赢家”的身份变了，那就说明不可导点被越过了，数值梯度会不准确。</span><br><span class="line"></span><br><span class="line">解决上面的不可导点问题的一个办法是使用更少的数据点。如果你的梯度检查对2-3个数据点都有效，那么基本上对整个批量数据进行梯度检查也是没问题的。所以使用很少量的数据点，能让梯度检查更迅速高效。</span><br></pre></td></tr></table></figure>
 </li>
 <li><p><strong>不要让正则化吞没数据。</strong></p>
 <p>推荐先关掉正则化对数据损失做单独检查，然后对正则化做单独检查。对于正则化的单独检查可以是修改代码，去掉其中数据损失的部分，也可以提高正则化强度，确认其效果在梯度检查中是无法忽略的，这样不正确的实现就会被观察到了。</p>
@@ -253,7 +253,7 @@
             </figure>
 <p>在训练集准确率和验证集准确率中间的空隙指明了<code>模型过拟合</code>的程度。在图中，蓝色的验证集曲线显示相较于训练集，验证集的准确率低了很多，这就说明模型有很强的过拟合。遇到这种情况，就应该增大正则化强度（更强的L2权重惩罚，更多的随机失活等）或收集更多的数据。另一种可能就是验证集曲线和训练集曲线如影随形，这种情况说明你的模型容量还不够大：应该通过增加参数数量让模型容量更大些。</p>
 <h3 id="权重：更新比例"><a href="#权重：更新比例" class="headerlink" title="权重：更新比例"></a>权重：更新比例</h3><p>最后一个应该跟踪的量是权重中<code>更新</code>值的数量和全部值的数量之间的比例。需要对每个参数集的更新比例进行单独的计算和跟踪。一个经验性的结论是这个比例应该在1e-3左右。如果更低，说明学习率可能太小，如果更高，说明学习率可能太高。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 假设参数向量为W，其梯度向量为dW</span></span><br><span class="line">param_scale = np.linalg.norm(W.ravel())</span><br><span class="line">update = -learning_rate*dW <span class="comment"># 简单SGD更新</span></span><br><span class="line">update_scale = np.linalg.norm(update.ravel())</span><br><span class="line">W += update <span class="comment"># 实际更新</span></span><br><span class="line"><span class="keyword">print</span> update_scale / param_scale <span class="comment"># 要得到1e-3左右</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 假设参数向量为W，其梯度向量为dW</span></span><br><span class="line">param_scale = np.linalg.norm(W.ravel())</span><br><span class="line">update = -learning_rate*dW <span class="comment"># 简单SGD更新</span></span><br><span class="line">update_scale = np.linalg.norm(update.ravel())</span><br><span class="line">W += update <span class="comment"># 实际更新</span></span><br><span class="line"><span class="keyword">print</span> update_scale / param_scale <span class="comment"># 要得到1e-3左右</span></span><br></pre></td></tr></table></figure>
 <h3 id="每层的激活数据与梯度分布"><a href="#每层的激活数据与梯度分布" class="headerlink" title="每层的激活数据与梯度分布"></a>每层的激活数据与梯度分布</h3><h4 id="第一层可视化"><a href="#第一层可视化" class="headerlink" title="第一层可视化"></a>第一层可视化</h4><p>如果数据是图像像素数据，那么把第一层特征可视化会有帮助：<figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
@@ -265,12 +265,12 @@
 <h2 id="参数更新"><a href="#参数更新" class="headerlink" title="参数更新"></a>参数更新</h2><p>一旦能使用反向传播计算解析梯度，梯度就能被用来进行参数更新了。进行参数更新有好几种方法，接下来都会进行讨论。</p>
 <h3 id="一阶（随机梯度下降）方法，动量方法，Nesterov动量方法"><a href="#一阶（随机梯度下降）方法，动量方法，Nesterov动量方法" class="headerlink" title="一阶（随机梯度下降）方法，动量方法，Nesterov动量方法"></a>一阶（随机梯度下降）方法，动量方法，Nesterov动量方法</h3><ul>
 <li><p><strong>普通更新</strong>. 最简单的更新形式是沿着负梯度方向改变参数（因为梯度指向的是上升方向，但是我们通常希望最小化损失函数）</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 普通更新</span></span><br><span class="line">x += - learning_rate * dx</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 普通更新</span></span><br><span class="line">x += - learning_rate * dx</span><br></pre></td></tr></table></figure>
 <p>其中learning_rate是一个超参数，它是一个固定的常量。当在整个数据集上进行计算时，只要学习率足够低，总是能在损失函数上得到非负的进展。</p>
 </li>
 <li><p><strong>动量（Momentum）更新</strong></p>
 <p>这样最优化过程可以看做是模拟参数向量（即质点）在地形上滚动的过程。在普通版本中，梯度直接影响位置。而在这个版本的更新中，物理观点建议梯度只是影响速度，然后速度再影响位置：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 动量更新</span></span><br><span class="line">v = mu * v - learning_rate * dx <span class="comment"># 与速度融合</span></span><br><span class="line">x += v <span class="comment"># 与位置融合</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 动量更新</span></span><br><span class="line">v = mu * v - learning_rate * dx <span class="comment"># 与速度融合</span></span><br><span class="line">x += v <span class="comment"># 与位置融合</span></span><br></pre></td></tr></table></figure>
 <p>在这里引入了一个初始化为0的变量<strong>v</strong>和一个超参数<strong>mu</strong>。说得不恰当一点，这个变量（mu）在最优化的过程中被看做<em>动量</em>（一般值设为0.9），但其物理意义与摩擦系数更一致。这个变量有效地抑制了速度，降低了系统的动能，不然质点在山底永远不会停下来。通过交叉验证，这个参数通常设为[0.5,0.9,0.95,0.99]中的一个。和学习率随着时间退火（下文有讨论）类似，动量随时间变化的设置有时能略微改善最优化的效果，其中动量在学习过程的后阶段会上升。一个<code>典型的设置</code>是刚开始将动量设为0.5而在后面的多个周期（epoch）中慢慢提升到0.99。</p>
 <blockquote>
 <p>通过动量更新，参数向量会在任何有持续梯度的方向上增加速度。</p>
@@ -280,9 +280,9 @@
 <p>Nesterov动量的核心思路是，当参数向量位于某个位置<strong>x</strong>时，观察上面的动量更新公式可以发现，动量部分（忽视带梯度的第二个部分）会通过<strong>mu * v</strong>稍微改变参数向量。因此，如果要计算梯度，那么可以将未来的近似位置<strong>x + mu * v</strong>看做是“向前看”，这个点在我们一会儿要停止的位置附近。因此，相比“旧”位置<strong>x</strong>的梯度，<code>计算x + mu \* v的梯度</code>会更有意义。</p>
 <p><img src="/2018/10/24/Lecture-Neural-Networks-Part-3/Nesterov动量.jpg" alt="Nesterov动量"></p>
 <p>既然我们知道动量将会把我们带到绿色箭头指向的点，我们就不要在原点（红色点）那里计算梯度了。使用Nesterov动量，我们就在这个“向前看”的地方计算梯度。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x_ahead = x + mu * v	<span class="comment"># 计算dx_ahead(在x_ahead处的梯度，而不是在x处的梯度)</span></span><br><span class="line">v = mu * v - learning_rate * dx_ahead</span><br><span class="line">x += v</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x_ahead = x + mu * v	<span class="comment"># 计算dx_ahead(在x_ahead处的梯度，而不是在x处的梯度)</span></span><br><span class="line">v = mu * v - learning_rate * dx_ahead</span><br><span class="line">x += v</span><br></pre></td></tr></table></figure>
 <p>然而在实践中，人们更喜欢和普通SGD或上面的动量方法一样简单的表达式。通过对<strong>x_ahead = x + mu * v</strong>使用变量变换进行改写是可以做到的，然后用<strong>x_ahead</strong>而不是<strong>x</strong>来表示上面的更新。也就是说，<code>实际存储的参数向量总是向前一步的那个版本</code>。<strong>x_ahead</strong>的公式（将其重新命名为<strong>x</strong>）就变成了：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">v_prev = v <span class="comment"># 存储备份</span></span><br><span class="line">v = mu * v - learning_rate * dx <span class="comment"># 速度更新保持不变</span></span><br><span class="line">x += -mu * v_prev + (<span class="number">1</span> + mu) * v <span class="comment"># 位置更新变了形式</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">v_prev = v <span class="comment"># 存储备份</span></span><br><span class="line">v = mu * v - learning_rate * dx <span class="comment"># 速度更新保持不变</span></span><br><span class="line">x += -mu * v_prev + (<span class="number">1</span> + mu) * v <span class="comment"># 位置更新变了形式</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h3 id="学习率退火"><a href="#学习率退火" class="headerlink" title="学习率退火"></a>学习率退火</h3><p>在训练深度网络的时候，让学习率随着时间退火通常是有帮助的。通常，实现学习率退火有3种方式：</p>
@@ -296,15 +296,15 @@
 <h3 id="逐参数适应学习率方法（Adagrad，RMSProp）"><a href="#逐参数适应学习率方法（Adagrad，RMSProp）" class="headerlink" title="逐参数适应学习率方法（Adagrad，RMSProp）"></a>逐参数适应学习率方法（Adagrad，RMSProp）</h3><p>前面讨论的所有方法都是对学习率进行全局地操作，并且对所有的参数都是一样的。学习率调参是很耗费计算资源的过程，所以很多工作投入到发明能够<code>适应性地对学习率调参</code>的方法，<code>甚至</code>是逐个参数适应学习率调参。</p>
 <ul>
 <li><p><strong>Adagrad</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 假设有梯度和参数向量x</span></span><br><span class="line">cache += dx**<span class="number">2</span></span><br><span class="line">x += - learning_rate * dx / (np.sqrt(cache) + eps)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 假设有梯度和参数向量x</span></span><br><span class="line">cache += dx**<span class="number">2</span></span><br><span class="line">x += - learning_rate * dx / (np.sqrt(cache) + eps)</span><br></pre></td></tr></table></figure>
 </li>
 <li><p><strong>RMSprop</strong></p>
 <p>用一种很简单的方式修改了Adagrad方法，让它不那么激进，单调地降低了学习率。具体说来，就是它使用了一个梯度平方的滑动平均：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cache =  decay_rate * cache + (<span class="number">1</span> - decay_rate) * dx**<span class="number">2</span></span><br><span class="line">x += - learning_rate * dx / (np.sqrt(cache) + eps)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">cache =  decay_rate * cache + (<span class="number">1</span> - decay_rate) * dx**<span class="number">2</span></span><br><span class="line">x += - learning_rate * dx / (np.sqrt(cache) + eps)</span><br></pre></td></tr></table></figure>
 </li>
 <li><p><strong>Adam</strong></p>
 <p>看起来像是RMSProp的动量版</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">m = beta1*m + (<span class="number">1</span>-beta1)*dx</span><br><span class="line">v = beta2*v + (<span class="number">1</span>-beta2)*(dx**<span class="number">2</span>)</span><br><span class="line">x += - learning_rate * m / (np.sqrt(v) + eps)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">m = beta1*m + (<span class="number">1</span>-beta1)*dx</span><br><span class="line">v = beta2*v + (<span class="number">1</span>-beta2)*(dx**<span class="number">2</span>)</span><br><span class="line">x += - learning_rate * m / (np.sqrt(v) + eps)</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <hr>

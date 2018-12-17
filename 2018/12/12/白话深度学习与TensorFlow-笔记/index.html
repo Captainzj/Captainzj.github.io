@@ -38,7 +38,7 @@
 <meta property="og:image" content="http://yoursite.com/2018/12/12/白话深度学习与TensorFlow-笔记/cat.jpg">
 <meta property="og:image" content="http://yoursite.com/2018/12/12/白话深度学习与TensorFlow-笔记/2-style1.jpg">
 <meta property="og:image" content="http://yoursite.com/2018/12/12/白话深度学习与TensorFlow-笔记/y-output.jpg">
-<meta property="og:updated_time" content="2018-12-15T08:33:29.987Z">
+<meta property="og:updated_time" content="2018-12-17T06:24:01.592Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="白话深度学习与TensorFlow_笔记">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读说明】这本书适合零基础的初学者">
@@ -250,7 +250,7 @@
 <blockquote>
 <p>在一轮训练阶段丢弃一部分网络节点 。</p>
 </blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># tensorflow</span></span><br><span class="line">keep_prob = tf.placeholder(tf.float32)</span><br><span class="line">h_fc1_drop = tf.nn.dropout(h_fc1,keep_prob)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># tensorflow</span></span><br><span class="line">keep_prob = tf.placeholder(tf.float32)</span><br><span class="line">h_fc1_drop = tf.nn.dropout(h_fc1,keep_prob)</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h4 id="第8章-循环神经网络"><a href="#第8章-循环神经网络" class="headerlink" title="第8章 循环神经网络"></a>第8章 循环神经网络</h4><ul>
@@ -318,8 +318,8 @@
 </li>
 <li><p>VGG</p>
 <p>Github link：<a href="https://github.com/anishathalye/neural-style" target="_blank" rel="noopener">https://github.com/anishathalye/neural-style</a></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">python neural_style.py --content &lt;content file&gt; --styles &lt;style file&gt; --output &lt;output file&gt;</span><br><span class="line"></span><br><span class="line">Example:</span><br><span class="line">python neural_style.py –content examples/cat.jpg –styles examples/2-style1.jpg –output y-output.jpg</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">(tensorflow) ➜  neural-style-master python neural_style.py --content examples/cat.jpg --styles examples/2-style1.jpg --output y-output.jpg --network imagenet-vgg-verydeep-19.mat</span><br><span class="line">Optimization started...</span><br><span class="line">Iteration    1/1000</span><br><span class="line">Iteration    2/1000 (16 sec elapsed, 4 hr 26 min remaining)</span><br><span class="line">Iteration    3/1000 (30 sec elapsed, 4 hr 10 min remaining)</span><br><span class="line">Iteration    4/1000 (43 sec elapsed, 4 hr 0 min remaining)</span><br><span class="line">Iteration    5/1000 (55 sec elapsed, 3 hr 50 min remaining)</span><br><span class="line">...</span><br><span class="line">Iteration  999/1000 (3 hr 22 min elapsed, 24 sec remaining)</span><br><span class="line">Iteration 1000/1000 (3 hr 23 min elapsed, 12 sec remaining)</span><br><span class="line">content loss: 796114</span><br><span class="line">  style loss: 234885</span><br><span class="line">     tv loss: 44175.5</span><br><span class="line">  total loss: 1.07517e+06</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">python neural_style.py --content &lt;content file&gt; --styles &lt;style file&gt; --output &lt;output file&gt;</span><br><span class="line"></span><br><span class="line">Example:</span><br><span class="line">python neural_style.py –content examples/cat.jpg –styles examples/2-style1.jpg –output y-output.jpg</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">(tensorflow) ➜  neural-style-master python neural_style.py --content examples/cat.jpg --styles examples/2-style1.jpg --output y-output.jpg --network imagenet-vgg-verydeep-19.mat</span><br><span class="line">Optimization started...</span><br><span class="line">Iteration    1/1000</span><br><span class="line">Iteration    2/1000 (16 sec elapsed, 4 hr 26 min remaining)</span><br><span class="line">Iteration    3/1000 (30 sec elapsed, 4 hr 10 min remaining)</span><br><span class="line">Iteration    4/1000 (43 sec elapsed, 4 hr 0 min remaining)</span><br><span class="line">Iteration    5/1000 (55 sec elapsed, 3 hr 50 min remaining)</span><br><span class="line">...</span><br><span class="line">Iteration  999/1000 (3 hr 22 min elapsed, 24 sec remaining)</span><br><span class="line">Iteration 1000/1000 (3 hr 23 min elapsed, 12 sec remaining)</span><br><span class="line">content loss: 796114</span><br><span class="line">  style loss: 234885</span><br><span class="line">     tv loss: 44175.5</span><br><span class="line">  total loss: 1.07517e+06</span><br></pre></td></tr></table></figure>
 <center class="third"><br>    <img src="/2018/12/12/白话深度学习与TensorFlow-笔记/cat.jpg" width="200"><br>    <img src="/2018/12/12/白话深度学习与TensorFlow-笔记/2-style1.jpg" width="200"><br>    <img src="/2018/12/12/白话深度学习与TensorFlow-笔记/y-output.jpg" width="200"><br></center>
 
 
@@ -340,7 +340,7 @@
     <div class="content">
         
 <span class="post-time">
-    最終更新：<time datetime="2018-12-15T08:33:29.987Z" itemprop="dateUpdated">2018-12-15 16:33:29</time>
+    最終更新：<time datetime="2018-12-17T06:24:01.592Z" itemprop="dateUpdated">2018-12-17 14:24:01</time>
 </span><br>
 
 
