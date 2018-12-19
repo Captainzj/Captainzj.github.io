@@ -28,7 +28,7 @@
 <meta property="og:site_name" content="Go Further">
 <meta property="og:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-16T11:59:12.786Z">
+<meta property="og:updated_time" content="2018-12-18T13:25:03.172Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="GraduationDesign">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
@@ -118,7 +118,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="検索">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -157,7 +157,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#代码调研"><span class="post-toc-number">1.</span> <span class="post-toc-text">代码调研</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#代码测试"><span class="post-toc-number">2.</span> <span class="post-toc-text">代码测试</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#毕设要求"><span class="post-toc-number">1.</span> <span class="post-toc-text">毕设要求</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#代码调研"><span class="post-toc-number">2.</span> <span class="post-toc-text">代码调研</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#代码测试"><span class="post-toc-number">3.</span> <span class="post-toc-text">代码测试</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Question"><span class="post-toc-number">4.</span> <span class="post-toc-text">Question</span></a></li></ol>
         </nav>
     </aside>
 
@@ -183,6 +183,20 @@
         <div class="post-content" id="post-content" itemprop="postContent">
             <p>【阅读时间】XXX min XXX words<br>【阅读内容】……</p>
 <a id="more"></a>
+<h4 id="毕设要求"><a href="#毕设要求" class="headerlink" title="毕设要求"></a>毕设要求</h4><table>
+<thead>
+<tr>
+<th>课题名称</th>
+<th>基于densenet的图像分类算法研究与实现</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>课题简介</td>
+<td>随着深度学习网络越来越深，架构越来越复杂，解决反向传播时梯度消失的问题也越来越严重。densenetdensenet的每一层都和损失函数的梯度以及原始输入直接相连，用更少的参数减轻了反向梯度消失，可以令网络规模更大。该课题研究基于densenet的图像分类算法，提高分类效率。</td>
+</tr>
+</tbody>
+</table>
 <h4 id="代码调研"><a href="#代码调研" class="headerlink" title="代码调研"></a>代码调研</h4><ul>
 <li><p><a href="https://blog.csdn.net/mdjxy63/article/details/76401145" target="_blank" rel="noopener">DenseNet的使用</a></p>
 <p>Github link: <a href="https://github.com/liuzhuang13/DenseNetCaffe" target="_blank" rel="noopener">https://github.com/liuzhuang13/DenseNetCaffe</a>  <strong>Star 243</strong></p>
@@ -209,6 +223,18 @@
 <li>PyTorch <a href="https://blog.csdn.net/u014380165/article/details/79119664" target="_blank" rel="noopener">https://blog.csdn.net/u014380165/article/details/79119664</a></li>
 </ul>
 <p><a href="https://pytorch.org/docs/master/torchvision/models.html" target="_blank" rel="noopener">https://pytorch.org/docs/master/torchvision/models.html</a></p>
+<ul>
+<li><p><a href="https://www.ctolib.com/article/wiki/34431" target="_blank" rel="noopener">DenseNet的一个PyTorch实现</a></p>
+</li>
+<li><p><a href="https://www.jianshu.com/p/9e5d68369a38" target="_blank" rel="noopener">Pytorch 使用预训练模型</a></p>
+</li>
+</ul>
+<p>Q: pytorch.model.densenet 使用</p>
+<h4 id="Question"><a href="#Question" class="headerlink" title="Question"></a>Question</h4><ul>
+<li><p>_DenseLayer  命名方式_</p>
+<p>$\hat{x}_\text{new} = (1 - \text{momentum}) \times \hat{x} + \text{momemtum} \times x_t$</p>
+</li>
+</ul>
 
         </div>
 
@@ -217,7 +243,7 @@
     <div class="content">
         
 <span class="post-time">
-    最終更新：<time datetime="2018-12-16T11:59:12.786Z" itemprop="dateUpdated">2018-12-16 19:59:12</time>
+    Last updated: <time datetime="2018-12-18T13:25:03.172Z" itemprop="dateUpdated">2018-12-18 21:25:03</time>
 </span><br>
 
 
@@ -297,9 +323,9 @@
 <nav class="post-nav flex-row flex-justify-between">
   
     <div class="waves-block waves-effect prev">
-      <a href="/2018/12/15/PyTorch-Grammar/" id="post-prev" class="post-nav-link">
+      <a href="/2018/12/15/PyTorch-Package/" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">PyTorch_Grammar</h4>
+        <h4 class="title">PyTorch_Docs</h4>
       </a>
     </div>
   
@@ -383,7 +409,7 @@
             
                 <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
             
-            <span>このブログの内容物は<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja">クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際ライセンスの下に提供されています</a></span>
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
         </p>
     </div>
     <div class="bottom">

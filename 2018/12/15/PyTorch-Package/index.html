@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>PyTorch_Docs | Go Further | Stay Hungry, Stay Foolish</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#142421">
+    
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="【阅读时间】XXX min XXX words【阅读内容】……">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PyTorch_Docs">
+<meta property="og:url" content="http://yoursite.com/2018/12/15/PyTorch-Package/index.html">
+<meta property="og:site_name" content="Go Further">
+<meta property="og:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-12-19T14:14:16.188Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PyTorch_Docs">
+<meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
+    
+        <link rel="alternate" type="application/atom+xml" title="Go Further" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">CaptainSE</h5>
+          <a href="mailto:841145636@qq.com" title="841145636@qq.com" class="mail">841145636@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                Home
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/Captainzj" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">PyTorch_Docs</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">PyTorch_Docs</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-12-15T12:22:24.000Z" itemprop="datePublished" class="page-time">
+  2018-12-15
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#torch-nn"><span class="post-toc-number">1.</span> <span class="post-toc-text">torch.nn</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#torch-nn-Conv1d"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">torch.nn.Conv1d</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#torch-nn-Conv2d"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">torch.nn.Conv2d</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#torch-nn-Conv3d"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">torch.nn.Conv3d</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#torchvision-transforms"><span class="post-toc-number">2.</span> <span class="post-toc-text">torchvision.transforms</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-PyTorch-Package"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">PyTorch_Docs</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-12-15 20:22:24" datetime="2018-12-15T12:22:24.000Z"  itemprop="datePublished">2018-12-15</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>【阅读时间】XXX min XXX words<br>【阅读内容】……</p>
+<a id="more"></a>
+<h3 id="torch-nn"><a href="#torch-nn" class="headerlink" title="torch.nn"></a>torch.nn</h3><h4 id="torch-nn-Conv1d"><a href="#torch-nn-Conv1d" class="headerlink" title="torch.nn.Conv1d"></a>torch.nn.Conv1d</h4><p> <a href="https://pytorch.org/docs/stable/nn.html#conv1d" target="_blank" rel="noopener">Docs</a></p>
+<p><strong>Examples:</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>m = nn.Conv1d(<span class="number">16</span>, <span class="number">33</span>, <span class="number">3</span>, stride=<span class="number">2</span>) <span class="comment"># (in_channels, out_channels, kernel_size, stride)</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>input = torch.randn(<span class="number">20</span>, <span class="number">16</span>, <span class="number">50</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>output = m(input)</span><br></pre></td></tr></table></figure>
+<p><strong>Explain：</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>input.size()</span><br><span class="line">torch.Size([<span class="number">20</span>, <span class="number">16</span>, <span class="number">50</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>output.size()</span><br><span class="line">torch.Size([<span class="number">20</span>, <span class="number">33</span>, <span class="number">24</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>m.weight.size()</span><br><span class="line">torch.Size([<span class="number">33</span>, <span class="number">16</span>, <span class="number">3</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>m.bias.size()</span><br><span class="line">torch.Size([<span class="number">33</span>])</span><br></pre></td></tr></table></figure>
+<ul>
+<li>$ (N, C_{\text{in}}, L)$  —  $\text{input.size :} (20, 16, 50)$</li>
+<li><p>$ (N, C_{\text{out}}, L_{\text{out}})$ — $\text{output.size :} (20,  33, 24)$ </p>
+<ul>
+<li>$C_{\text{out}}  \text{ : out_channels}$</li>
+<li>$L_{out} = \left\lfloor\frac{L_{in} + 2 \times \text{padding} - \text{dilation}<br>\times (\text{kernel_size} - 1) - 1}{\text{stride}} + 1\right\rfloor \Rightarrow  24 = \left\lfloor\frac{50 + 2 \times 0 - 1<br>\times (3 - 1) - 1}{2} + 1\right\rfloor$</li>
+</ul>
+</li>
+<li><p><strong>weight</strong> (<a href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" target="_blank" rel="noopener"><em>Tensor</em></a>) – the learnable weights of the module of shape $\text{(out_channels, in_channels, kernel_size)}$.</p>
+</li>
+<li><strong>bias</strong> (<a href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" target="_blank" rel="noopener"><em>Tensor</em></a>) –the learnable bias of the module of shape $\text{(out_channels)}$.</li>
+</ul>
+<h4 id="torch-nn-Conv2d"><a href="#torch-nn-Conv2d" class="headerlink" title="torch.nn.Conv2d"></a>torch.nn.Conv2d</h4><p><a href="https://pytorch.org/docs/stable/nn.html#conv2d" target="_blank" rel="noopener">Docs</a>  <a href="https://pytorch-cn.readthedocs.io/zh/latest/package_references/torch-nn/#class-torchnnconv2din95channels-out95channels-kernel95size-stride1-padding0-dilation1-groups1-biastrue" target="_blank" rel="noopener">文档说明</a></p>
+<p><strong>Examples:</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="comment"># With square kernels and equal stride</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>m = nn.Conv2d(<span class="number">16</span>, <span class="number">33</span>, <span class="number">3</span>, stride=<span class="number">2</span>) <span class="comment"># (in_channels, out_channels, kernel_size, stride)</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="comment"># non-square kernels and unequal stride and with padding</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>m = nn.Conv2d(<span class="number">16</span>, <span class="number">33</span>, (<span class="number">3</span>, <span class="number">5</span>), stride=(<span class="number">2</span>, <span class="number">1</span>), padding=(<span class="number">4</span>, <span class="number">2</span>))</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="comment"># non-square kernels and unequal stride and with padding and dilation</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>m = nn.Conv2d(<span class="number">16</span>, <span class="number">33</span>, (<span class="number">3</span>, <span class="number">5</span>), stride=(<span class="number">2</span>, <span class="number">1</span>), padding=(<span class="number">4</span>, <span class="number">2</span>), dilation=(<span class="number">3</span>, <span class="number">1</span>))</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>input = torch.randn(<span class="number">20</span>, <span class="number">16</span>, <span class="number">50</span>, <span class="number">100</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>output = m(input)</span><br></pre></td></tr></table></figure>
+<p><strong>Explain:</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>input.size()</span><br><span class="line">torch.Size([<span class="number">20</span>, <span class="number">16</span>, <span class="number">50</span>, <span class="number">100</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>output.size()</span><br><span class="line">torch.Size([<span class="number">20</span>, <span class="number">33</span>, <span class="number">26</span>, <span class="number">100</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>m.weight.size()</span><br><span class="line">torch.Size([<span class="number">33</span>, <span class="number">16</span>, <span class="number">3</span>, <span class="number">5</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>m.bias.size()</span><br><span class="line">torch.Size([<span class="number">33</span>])</span><br></pre></td></tr></table></figure>
+<ul>
+<li>$(N, C_{in}, H_{in}, W_{in})$  — $\text{input.size :} (20, 16, 50, 100)$</li>
+<li>$(N, C_{out}, H_{out}, W_{out})$ — $\text{output.size :} (20, 33, 26, 100)$<ul>
+<li>$C_{\text{out}}  \text{ : out_channels}$</li>
+<li>$H_{out} = \left\lfloor\frac{H_{in}  + 2 \times \text{padding}[0] - \text{dilation}[0]<br>\times (\text{kernel_size}[0] - 1) - 1}{\text{stride}[0]} + 1\right\rfloor  \Rightarrow 26  = \left\lfloor\frac{50  + 2 \times 4- 3<br>\times (3 - 1) - 1}{2} + 1\right\rfloor$</li>
+<li>$W_{out} = \left\lfloor\frac{W_{in}  + 2 \times \text{padding}[1] - \text{dilation}[1]<br>\times (\text{kernel_size}[1] - 1) - 1}{\text{stride}[1]} + 1\right\rfloor \Rightarrow 100 =  \left\lfloor\frac{100  + 2 \times 2 - 1<br>\times (5- 1) - 1}{1} + 1\right\rfloor$</li>
+</ul>
+</li>
+<li><strong>weight</strong> (<a href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" target="_blank" rel="noopener"><em>Tensor</em></a>) – the learnable weights of the module of shape $\text{(out_channels, in_channels, kernel_size[0], kernel_size[1])}$.</li>
+<li><strong>bias</strong> (<a href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" target="_blank" rel="noopener"><em>Tensor</em></a>) – the learnable bias of the module of shape $\text{(out_channels)}$. </li>
+</ul>
+<h4 id="torch-nn-Conv3d"><a href="#torch-nn-Conv3d" class="headerlink" title="torch.nn.Conv3d"></a>torch.nn.Conv3d</h4><p><a href="https://pytorch.org/docs/stable/nn.html#conv3d" target="_blank" rel="noopener">Docs</a></p>
+<p><strong>Examples:</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="comment"># With square kernels and equal stride</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>m = nn.Conv3d(<span class="number">16</span>, <span class="number">33</span>, <span class="number">3</span>, stride=<span class="number">2</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="comment"># non-square kernels and unequal stride and with padding</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>m = nn.Conv3d(<span class="number">16</span>, <span class="number">33</span>, (<span class="number">3</span>, <span class="number">5</span>, <span class="number">2</span>), stride=(<span class="number">2</span>, <span class="number">1</span>, <span class="number">1</span>), padding=(<span class="number">4</span>, <span class="number">2</span>, <span class="number">0</span>))</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>input = torch.randn(<span class="number">20</span>, <span class="number">16</span>, <span class="number">10</span>, <span class="number">50</span>, <span class="number">100</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>output = m(input)</span><br></pre></td></tr></table></figure>
+<p><strong>Explain:</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>input.size()</span><br><span class="line">torch.Size([<span class="number">20</span>, <span class="number">16</span>, <span class="number">10</span>, <span class="number">50</span>, <span class="number">100</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>output.size()</span><br><span class="line">torch.Size([<span class="number">20</span>, <span class="number">33</span>, <span class="number">8</span>, <span class="number">50</span>, <span class="number">99</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>m.weight.size()</span><br><span class="line">torch.Size([<span class="number">33</span>, <span class="number">16</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">2</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>m.bias.size()</span><br><span class="line">torch.Size([<span class="number">33</span>])</span><br></pre></td></tr></table></figure>
+<ul>
+<li>$(N, C_{in}, D_{in}, H_{in}, W_{in})$  — $\text{input.size :}20, 16, 10, 50, 100)$</li>
+<li><p>$(N, C_{out}, D_{out}, H_{out}, W_{out})$  — $\text{output.size :} (20, 33, 8, 50, 99)$ </p>
+<ul>
+<li>$D_{out} = \left\lfloor\frac{D_{in} + 2 \times \text{padding}[0] - \text{dilation}[0]<br>\times (\text{kernel_size}[0] - 1) - 1}{\text{stride}[0]} + 1\right\rfloor \Rightarrow 8 =  \left\lfloor\frac{10 + 2 \times 4 - 1<br>\times (3 - 1) - 1}{2} + 1\right\rfloor$</li>
+<li>$H_{out} = \left\lfloor\frac{H_{in} + 2 \times \text{padding}[1] - \text{dilation}[1]<br>\times (\text{kernel_size}[1] - 1) - 1}{\text{stride}[1]} + 1\right\rfloor \Rightarrow 50 =  \left\lfloor\frac{50 + 2 \times 2 - 1<br>\times (5- 1) - 1}{1} + 1\right\rfloor$</li>
+<li>$W_{out} = \left\lfloor\frac{W_{in} + 2 \times \text{padding}[2] - \text{dilation}[2]<br>\times (\text{kernel_size}[2] - 1) - 1}{\text{stride}[2]} + 1\right\rfloor \Rightarrow 99 = \left\lfloor\frac{100 + 2 \times 0 - 1<br>\times (2 - 1) - 1}{1} + 1\right\rfloor$</li>
+</ul>
+</li>
+<li><p><strong>weight</strong> (<a href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" target="_blank" rel="noopener"><em>Tensor</em></a>) – the learnable weights of the module of shape$\text{ (out_channels, in_channels, kernel_size[0], kernel_size[1], kernel_size[2])}$ </p>
+</li>
+<li><strong>bias</strong> (<a href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" target="_blank" rel="noopener"><em>Tensor</em></a>) – the learnable bias of the module of shape $\text{(out_channels)}$. </li>
+</ul>
+<ul>
+<li><p><strong><a href="https://pytorch-cn.readthedocs.io/zh/latest/package_references/torch-nn/#class-torchnnmaxpool2dkernel95size-stridenone-padding0-dilation1-return95indicesfalse-ceil95modefalse" target="_blank" rel="noopener">torch.nn.MaxPool2d</a></strong> 用于实现卷积神经网络中的最大池化层，主要的输入参数是池化窗口大 小、池化窗口移动步长和 Padding值。同样，池化窗口大小的数据类型是整型 ，用 于确定池化窗口的大 小 。池化窗口步长的数据类型也是整型，用于确定池化窗口<br>每次移动的步长 。 Padding值和在 torch.nn.Conv2d 中定义的 Padding值的用法和意义是一样的 。</p>
+</li>
+<li><p><strong><a href="https://pytorch-cn.readthedocs.io/zh/latest/package_references/torch-nn/#dropout-layers" target="_blank" rel="noopener">torch.nn.Dropout</a></strong> torch.nn.Dropout 类用于防止卷积神经网络在训练的过程中发生过拟合 ， 其工作原理简单来说就是在模型训练的过程中，以一定的随机概率将卷积神经网络模型的部分参数归零(“丢弃”)， 以达到减少相邻两层神经连接的目的。</p>
+</li>
+</ul>
+<h3 id="torchvision-transforms"><a href="#torchvision-transforms" class="headerlink" title="torchvision.transforms"></a>torchvision.transforms</h3><ul>
+<li><p><strong>torchvision.transforms.Resize:</strong>用于对载入的图片数据按我们需求的大小进行缩放。 传递给这个类的参数可以是一个整型数据，也可以是一个类似于$ (h,w)$的序列， 其中 ， h 代表高度， w 代表宽度，但是如果使用的是 一 个整型数据，那么表示缩放的宽度和高度都是这个整型数据的值 。 </p>
+</li>
+<li><p><strong>torchvision.transforms.Scale</strong>: 用于对载入的图片数据按我 们 需求的大小进 行缩 放，用法和 torchvision.transforms.Resize类似。 </p>
+</li>
+<li><p><strong>torchvision.transforms.CenterCrop:</strong>用 于对载入的图片以图片中心为参考点 ， 按我们需要的大小进行裁剪 。传递给这个类 的参数可以是一个整型数据 ，也可以 是一个类似 于( h,w)的序列 。 </p>
+</li>
+<li><p><strong>torchvision.transforms.RandomCrop:</strong> 用于对载入的图片按我们需要的大小进行随机裁剪。传递给这个类的参数可以是一个整型数据，也可以是一个类似于$ (h,w)$的序列。 </p>
+</li>
+<li><p><strong>torchvision.transforms.RandomHorizontaIFlip:</strong> 用于对载入的图片按随机概率进行水平翻转。我们可以通过传递给这个类的参数自定义随机概率 ，如果没有定义 ，则使用 默认的概率值 0.5。</p>
+</li>
+<li><p><strong>torchvision.transforms.RandomVerticalFlip:</strong> 用于对载入的图片按随机概率进行垂直翻转。 我们可以通过传递给这个类的参数自定义随机概率 ，如果没有定义 ，则 使用默 认的概率值 0.5。 </p>
+</li>
+<li><p><strong>torchvision.transforms.ToTensor:</strong> 用于对载入的图片数据进行类型转换 ， 将之前构成 PIL 图片的数据转换成 Tensor数据类型的变量 ，让 PyTorch 能够对其进行计算和处理。 </p>
+</li>
+<li><p><strong>torchvision.transforms.ToPILlmage:</strong> 用于将 Tensor变量的数据转换成 PIL 图片数据， 主要是为了方便图片内容的显示。</p>
+</li>
+</ul>
+<p>### </p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2018-12-19T14:14:16.188Z" itemprop="dateUpdated">2018-12-19 22:14:16</time>
+</span><br>
+
+
+        
+    </div>
+    
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/avatar.jpg" alt="CaptainSE">
+            CaptainSE
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/12/15/PyTorch-Package/&title=《PyTorch_Docs》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/12/15/PyTorch-Package/&title=《PyTorch_Docs》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/12/15/PyTorch-Package/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《PyTorch_Docs》 — Go Further&url=http://yoursite.com/2018/12/15/PyTorch-Package/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/12/15/PyTorch-Package/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2018/12/17/深度学习之PyTorch实战计算机视觉/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">深度学习之PyTorch实战计算机视觉</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/12/13/GraduationDesign/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">GraduationDesign</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢老板~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>CaptainSE &copy; 2015 - 2018</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/12/15/PyTorch-Package/&title=《PyTorch_Docs》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/12/15/PyTorch-Package/&title=《PyTorch_Docs》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/12/15/PyTorch-Package/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《PyTorch_Docs》 — Go Further&url=http://yoursite.com/2018/12/15/PyTorch-Package/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/12/15/PyTorch-Package/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACM0lEQVR42u3aS07DMBQF0O5/00ViBIKk9z4HpDrHoyhNWh8jmffx4xGP5+c4uv/105938vtHz1w2MDAw3pbxPB0/GcnPzJ4/X5QXVAwMjBsw2qnk22KyQO2SYWBgYBx93TmmvU7uYGBgYKxsuElCuxL8YWBgYMyS2GSis2AxKd5dlotjYGC8IaNtDPzn9R/2NzAwMN6E8RyNPAU9T4ZnzYBf3sLAwNiakSSfecraspMni40YAwNja0Y+rZV25lUtAQwMjLsxkuOkOTX/zpWmKQYGxt0YycvJndlUZkHk4Z8BAwNja8ZKENkGlLNWaHsUAwMDYz/G+cezlcinO9vco8YABgbGFow2HW03wSQRzQ97HX4zBgbGDRh5sWy90rWCfJGFY2BgbM1o08j8SEQbdOat0MP/GxgYGNsxkv0qb0m2DYNZoFn0YzEwMDZlzJqOl22as9AQAwPjZoxZ2JdvzXn6OuysYmBgbMdIDmPlae3KQbE29f12jYGBsTWjPpdR7nht+Lj0DAYGxi0ZyYbYluraiK4IKDEwMG7MaMtn+buzsLKeBAYGxhaM9ofbRHTleGvSOsXAwNib8SzHrAHZFunqgxcYGBhbM9bbnG25f+WtC5qgGBgYb8vIN9m23HZtjvkiScbAwLgBIy91rYeJs8DuBQwDAwNjoYjfluHa0h4GBgZGfvQhL8ytNAzqngYGBsZGjLYZMHs+X6bhAQsMDIxNGW1jYLaNtmFfvogYGBhbMz4Ant8sugHmIgsAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = 'Go Further | Stay Hungry, Stay Foolish';
+            clearTimeout(titleTime);
+        } else {
+            document.title = 'Go Further | Stay Hungry, Stay Foolish';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
