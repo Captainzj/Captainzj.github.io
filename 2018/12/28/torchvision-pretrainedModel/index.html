@@ -29,7 +29,7 @@
 <meta property="og:site_name" content="Go Further">
 <meta property="og:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-28T09:07:03.218Z">
+<meta property="og:updated_time" content="2018-12-28T12:38:56.689Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="torchvision_pretrainedModel">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
@@ -207,7 +207,8 @@
 <h3 id="简单预训练"><a href="#简单预训练" class="headerlink" title="简单预训练"></a>简单预训练</h3><p>我们先从torchvision中调用基本模型，加载预训练模型，然后，重点来了，<strong>将其中的层直接替换为我们需要的层即可</strong>：</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">resnet = torchvision.models.resnet152(pretrained=<span class="keyword">True</span>)</span><br><span class="line"><span class="comment"># 原本为1000类，改为10类</span></span><br><span class="line">resnet.fc = torch.nn.Linear(<span class="number">2048</span>, <span class="number">10</span>)</span><br></pre></td></tr></table></figure>
 <p>其中使用了pretrained参数，会直接加载预训练模型，内部实现和前文提到的加载预训练的方法一样。因为是先加载的预训练参数，相当于模型中已经有参数了，所以替换掉最后一层即可。OK！</p>
-<h3 id="使用预训练模型分类与特征提取"><a href="#使用预训练模型分类与特征提取" class="headerlink" title="使用预训练模型分类与特征提取"></a>使用预训练模型分类与特征提取</h3><p><strong>Reference：</strong></p>
+<h3 id="使用预训练模型分类与特征提取"><a href="#使用预训练模型分类与特征提取" class="headerlink" title="使用预训练模型分类与特征提取"></a>使用预训练模型分类与特征提取</h3><p># <strong>To  Completed</strong></p>
+<p><strong>Reference：</strong></p>
 <ul>
 <li><p><a href="https://zhuanlan.zhihu.com/p/25980324" target="_blank" rel="noopener">PyTorch预训练[知乎]</a></p>
 </li>
@@ -223,7 +224,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2018-12-28T09:07:03.218Z" itemprop="dateUpdated">2018-12-28 17:07:03</time>
+    Last updated: <time datetime="2018-12-28T12:38:56.689Z" itemprop="dateUpdated">2018-12-28 20:38:56</time>
 </span><br>
 
 
