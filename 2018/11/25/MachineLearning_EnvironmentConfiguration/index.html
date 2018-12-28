@@ -28,7 +28,7 @@
 <meta property="og:site_name" content="Go Further">
 <meta property="og:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-28T12:45:31.199Z">
+<meta property="og:updated_time" content="2018-12-27T10:51:31.518Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MachineLearning_Environment configuration">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
@@ -118,7 +118,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="検索">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -157,7 +157,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Anaconda"><span class="post-toc-number">1.</span> <span class="post-toc-text">Anaconda</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#TensorFlow"><span class="post-toc-number">2.</span> <span class="post-toc-text">TensorFlow</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Therno"><span class="post-toc-number">3.</span> <span class="post-toc-text">Therno</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Keras"><span class="post-toc-number">4.</span> <span class="post-toc-text">Keras</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#pip"><span class="post-toc-number">5.</span> <span class="post-toc-text">pip</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Anaconda"><span class="post-toc-number">1.</span> <span class="post-toc-text">Anaconda</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#TensorFlow"><span class="post-toc-number">2.</span> <span class="post-toc-text">TensorFlow</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Therno"><span class="post-toc-number">3.</span> <span class="post-toc-text">Therno</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Keras"><span class="post-toc-number">4.</span> <span class="post-toc-text">Keras</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#pip"><span class="post-toc-number">5.</span> <span class="post-toc-text">pip</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Jupyter-notebook"><span class="post-toc-number">6.</span> <span class="post-toc-text">Jupyter notebook</span></a></li></ol>
         </nav>
     </aside>
 
@@ -189,10 +189,9 @@
 </ul>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 添加Anaconda的TUNA镜像</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/  </span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 设置搜索时显示通道地址</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> conda config --<span class="built_in">set</span> show_channel_urls yes</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> conda install numpy   <span class="comment">#测试是否添加成功</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 之后会自动在用户根目录生成“.condarc”文件，可以在终端用 </span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ls -a </span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 命令查看该文件，如果要删除镜像，直接删除“.condarc”文件即可： </span></span><br><span class="line"><span class="meta">$</span><span class="bash"> rm .condarc</span></span><br></pre></td></tr></table></figure>
 <ul>
-<li>Mac Pycharm配置Anaconda环境</li>
+<li>Mac <strong>Pycharm</strong>配置Anaconda环境</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">- Command + ,</span><br><span class="line">- Project → Project Interpreter </span><br><span class="line">- 齿轮 → Add → System Interpreter </span><br><span class="line">- 齿轮 → <span class="string">'/Users/Captain/anaconda3/python.app/Contents/MacOS/python'</span></span><br></pre></td></tr></table></figure>
-<p>#### </p>
 <ul>
 <li><p>shell 使用Anaconda的python</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> vim ~/.bash_profile</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">Anaconda3</span></span><br><span class="line">export PATH=~/anaconda3/bin:$PATH  #若想使用系统自带的python版本，将此行注释即可</span><br></pre></td></tr></table></figure>
@@ -205,6 +204,9 @@
 </li>
 <li><p><a href="https://repo.anaconda.com/archive/" target="_blank" rel="noopener">Anaconda installer archive</a></p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Anaconda2-5.3.0-MacOSX-x86_64.pkg  # 对应python3.6</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><a href="https://blog.csdn.net/u011606714/article/details/77741324" target="_blank" rel="noopener">Anaconda_Jupyter</a></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> conda install ipykernel</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h4 id="TensorFlow"><a href="#TensorFlow" class="headerlink" title="TensorFlow"></a>TensorFlow</h4><p><a href="https://www.tensorflow.org/versions/r1.1/install/install_mac" target="_blank" rel="noopener">TensorFlow on MacOS</a></p>
@@ -261,6 +263,28 @@
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> pip list --outdate</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
+<h4 id="Jupyter-notebook"><a href="#Jupyter-notebook" class="headerlink" title="Jupyter notebook"></a>Jupyter notebook</h4><ul>
+<li><p>安装jupyter</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> pip install jupyter</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>运行jupyter</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> jupyter notebook</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>kernel 配置文件</p>
+</li>
+<li><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> python -m ipykernel install --user</span></span><br><span class="line">Installed kernelspec python2 in /Users/Captain/Library/Jupyter/kernels/python2</span><br><span class="line"><span class="meta">$</span><span class="bash"> python3 -m ipykernel install --user</span></span><br><span class="line">Installed kernelspec python3 in /Users/Captain/Library/Jupyter/kernels/python3</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> cat /Users/Captain/Library/Jupyter/kernels/python2/kernel.json</span></span><br><span class="line">&#123;</span><br><span class="line"> "display_name": "Python 2",</span><br><span class="line"> "language": "python",</span><br><span class="line"> "argv": [</span><br><span class="line">  "/Users/Captain/anaconda2/bin/python",</span><br><span class="line">  "-m",</span><br><span class="line">  "ipykernel_launcher",</span><br><span class="line">  "-f",</span><br><span class="line">  "&#123;connection_file&#125;"</span><br><span class="line"> ]</span><br><span class="line">&#125;%</span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash"> cat /Users/Captain/Library/Jupyter/kernels/python3/kernel.json</span></span><br><span class="line">&#123;</span><br><span class="line"> "display_name": "Python 3",</span><br><span class="line"> "language": "python"</span><br><span class="line"> "argv": [</span><br><span class="line">  "/Library/Frameworks/Python.framework/Versions/3.6/bin/python3",</span><br><span class="line">  "-m",</span><br><span class="line">  "ipykernel_launcher",</span><br><span class="line">  "-f",</span><br><span class="line">  "&#123;connection_file&#125;"</span><br><span class="line"> ],</span><br><span class="line">&#125;%</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看jupyter notebook内核列表</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> jupyter kernelspec list</span></span><br><span class="line">Available kernels:</span><br><span class="line">  python2    /Users/Captain/Library/Jupyter/kernels/python2</span><br><span class="line">  python3    /Users/Captain/Library/Jupyter/kernels/python3</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装或删除其他内核</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> python kernel install --name python2   <span class="comment">#安装python2  </span></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> jupyter kernelspec uninstall python2   <span class="comment">#删除python2</span></span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看使用的pyhton版本</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line">print(sys.executable)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 
         </div>
 
@@ -269,7 +293,7 @@
     <div class="content">
         
 <span class="post-time">
-    最終更新：<time datetime="2018-11-28T12:45:31.199Z" itemprop="dateUpdated">2018-11-28 20:45:31</time>
+    Last updated: <time datetime="2018-12-27T10:51:31.518Z" itemprop="dateUpdated">2018-12-27 18:51:31</time>
 </span><br>
 
 
@@ -435,7 +459,7 @@
             
                 <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
             
-            <span>このブログの内容物は<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja">クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際ライセンスの下に提供されています</a></span>
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
         </p>
     </div>
     <div class="bottom">

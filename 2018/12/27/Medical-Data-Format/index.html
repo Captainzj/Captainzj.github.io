@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>医学数据格式 | Go Further | Stay Hungry, Stay Foolish</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#142421">
+    
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="【阅读时间】XXX min XXX words【阅读内容】……">
+<meta property="og:type" content="article">
+<meta property="og:title" content="医学数据格式">
+<meta property="og:url" content="http://yoursite.com/2018/12/27/Medical-Data-Format/index.html">
+<meta property="og:site_name" content="Go Further">
+<meta property="og:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-12-27T11:56:24.036Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="医学数据格式">
+<meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
+    
+        <link rel="alternate" type="application/atom+xml" title="Go Further" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">CaptainSE</h5>
+          <a href="mailto:841145636@qq.com" title="841145636@qq.com" class="mail">841145636@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                Home
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/Captainzj" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">医学数据格式</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">医学数据格式</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-12-27T09:08:13.000Z" itemprop="datePublished" class="page-time">
+  2018-12-27
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#医学图像数据类型"><span class="post-toc-number">1.</span> <span class="post-toc-text">医学图像数据类型</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#MRI"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">MRI</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#CT"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">CT</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#PET"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">PET</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#医学图像数据格式"><span class="post-toc-number">2.</span> <span class="post-toc-text">医学图像数据格式</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#DICOM"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">DICOM</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#简介"><span class="post-toc-number">2.1.1.</span> <span class="post-toc-text">简介</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#分析DICOM图像"><span class="post-toc-number">2.1.2.</span> <span class="post-toc-text">分析DICOM图像</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#nii"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">nii</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Matlab-python-医学工具包"><span class="post-toc-number">3.</span> <span class="post-toc-text">Matlab/python 医学工具包</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#DICOM-1"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">DICOM</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#python-package"><span class="post-toc-number">3.1.1.</span> <span class="post-toc-text">python package</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#浏览image数据工具"><span class="post-toc-number">4.</span> <span class="post-toc-text">浏览image数据工具</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#参考"><span class="post-toc-number">5.</span> <span class="post-toc-text">参考</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-Medical-Data-Format"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">医学数据格式</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-12-27 17:08:13" datetime="2018-12-27T09:08:13.000Z"  itemprop="datePublished">2018-12-27</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>【阅读时间】XXX min XXX words<br>【阅读内容】……</p>
+<a id="more"></a>
+<p>ToRead：</p>
+<p><a href="http://link.zhihu.com/?target=https%3A//link.springer.com/chapter/10.1007/978-3-319-59050-9_12" target="_blank" rel="noopener">Unsupervised Anomaly Detection with Generative Adversarial Networks to Guide Marker Discovery</a></p>
+<p><a href="http://link.zhihu.com/?target=https%3A//link.springer.com/chapter/10.1007/978-3-319-59050-9_47" target="_blank" rel="noopener">Unsupervised Domain Adaptation in Brain Lesion Segmentation with Adversarial Networks</a></p>
+<p>Paper：</p>
+<p><a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=2&amp;ved=2ahUKEwjXyObB2r_fAhXjRt8KHROrC5cQFjABegQIAxAB&amp;url=https%3A%2F%2Farxiv.org%2Fabs%2F1702.05747&amp;usg=AOvVaw3kBlBAYVhnDhZxU1aBbgxG" target="_blank" rel="noopener">A Survey on Deep Learning in Medical Image Analysis</a></p>
+<table>
+<thead>
+<tr>
+<th>数据格式</th>
+<th>含义（字段）</th>
+<th>头部-&gt; 内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DICOM</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>nii</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>数据</th>
+<th>Kind</th>
+<th>knowledge point + theory</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MRI</td>
+<td>T1\T2\Flair</td>
+<td>区别， 各自针对的内容</td>
+</tr>
+<tr>
+<td>CT</td>
+<td>腹部CT\胸部\全身CT</td>
+<td>扫描方式</td>
+</tr>
+<tr>
+<td>PET</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="医学图像数据类型"><a href="#医学图像数据类型" class="headerlink" title="医学图像数据类型"></a>医学图像数据类型</h2><h3 id="MRI"><a href="#MRI" class="headerlink" title="MRI"></a>MRI</h3><h3 id="CT"><a href="#CT" class="headerlink" title="CT"></a>CT</h3><h3 id="PET"><a href="#PET" class="headerlink" title="PET"></a>PET</h3><h2 id="医学图像数据格式"><a href="#医学图像数据格式" class="headerlink" title="医学图像数据格式"></a>医学图像数据格式</h2><h3 id="DICOM"><a href="#DICOM" class="headerlink" title="DICOM"></a>DICOM</h3><h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>医学图像采用数字成像和通信（DICOM）作为存储和交换医学图像数据的标准解决方案。这个标准的第一个版本是在1985年发布的。发展到现在，该方案有了一些改变。该标准使用文件格式和通信协议。</p>
+<p><strong>文件格式</strong> - 所有患者医疗图像都以DICOM文件格式保存。除了其他图像相关数据（例如用于拍摄图像的设备以及医疗处理的一些背景）之外，该格式具有关于患者的PHI（受保护的健康信息），例如姓名，性别，年龄。医学影像设备创建DICOM文件。医生使用DICOM查看器，可显示DICOM图像的计算机软件应用程序，读取和诊断图像中的发现。</p>
+<p><strong>通信协议</strong> - DICOM通信协议用于搜索档案中的成像研究，并将成像研究恢复到工作站以显示。连接到医院网络的所有医疗成像应用程序都使用DICOM协议来交换信息，主要是DICOM图像，还包括患者和手术信息。还有更先进的网络命令，用于控制和跟踪治疗，调度程序，报告状态，分担医生和成像设备之间的工作量。关于DICOM标准细节，在这里推荐一个很好的博客<a href="http://link.zhihu.com/?target=http%3A//dicomiseasy.blogspot.com" target="_blank" rel="noopener">http://dicomiseasy.blogspot.com</a></p>
+<h4 id="分析DICOM图像"><a href="#分析DICOM图像" class="headerlink" title="分析DICOM图像"></a><strong>分析DICOM图像</strong></h4><ul>
+<li><strong>了解DICOM 格式数据</strong></li>
+</ul>
+<p>CT扫描的测量单位是Hounsfield单位（HU），它是放射性强度的量度。 仔细校准CT扫描仪以准确测量。 关于这方面的详细了解可以在这里到。<a href="https://web.archive.org/web/20070926231241/http://www.intl.elsevierhealth.com/e-books/pdf/940.pdf" target="_blank" rel="noopener">Introduction to CT physics</a></p>
+<p>每个像素被分配一个数值（CT值），它是相应体素中所有衰减值的平均值。 将这个数字与水的衰减值进行比较，并在戈弗雷·豪斯菲尔德爵士（Sir Godfrey Hounsfield）之后以胡恩斯菲尔德单位（Hounsfield units，HU）的任意单位的比例显示。</p>
+<ul>
+<li><p>获得DICOM 数据库</p>
+<ul>
+<li>kaggle competitions and Datasets</li>
+<li>Dicom Library</li>
+<li>Osirix Datasets</li>
+<li>Visible Human Datasets</li>
+<li><p>The Zubal Phantom</p>
+</li>
+<li><p>杜克大学他们有公开的数据集</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="nii"><a href="#nii" class="headerlink" title="nii"></a>nii</h3><h2 id="Matlab-python-医学工具包"><a href="#Matlab-python-医学工具包" class="headerlink" title="Matlab/python 医学工具包"></a>Matlab/python 医学工具包</h2><h3 id="DICOM-1"><a href="#DICOM-1" class="headerlink" title="DICOM"></a>DICOM</h3><h4 id="python-package"><a href="#python-package" class="headerlink" title="python package"></a>python package</h4><ul>
+<li><strong>pydiocm</strong></li>
+</ul>
+<h2 id="浏览image数据工具"><a href="#浏览image数据工具" class="headerlink" title="浏览image数据工具"></a>浏览image数据工具</h2><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://zhuanlan.zhihu.com/p/30915590" target="_blank" rel="noopener">医学图像处理与深度学习[知乎]</a></p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2018-12-27T11:56:24.036Z" itemprop="dateUpdated">2018-12-27 19:56:24</time>
+</span><br>
+
+
+        
+    </div>
+    
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/avatar.jpg" alt="CaptainSE">
+            CaptainSE
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/12/27/Medical-Data-Format/&title=《医学数据格式》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/12/27/Medical-Data-Format/&title=《医学数据格式》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/12/27/Medical-Data-Format/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《医学数据格式》 — Go Further&url=http://yoursite.com/2018/12/27/Medical-Data-Format/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/12/27/Medical-Data-Format/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2018/12/28/聚类综述/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">聚类综述</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/12/17/深度学习之PyTorch实战计算机视觉/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">深度学习之PyTorch实战计算机视觉</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢老板~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>CaptainSE &copy; 2015 - 2018</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/12/27/Medical-Data-Format/&title=《医学数据格式》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/12/27/Medical-Data-Format/&title=《医学数据格式》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/12/27/Medical-Data-Format/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《医学数据格式》 — Go Further&url=http://yoursite.com/2018/12/27/Medical-Data-Format/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/12/27/Medical-Data-Format/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACLElEQVR42u3awW6kMBAE0Pn/n2alnFaaHbaqGSJhP58iogCPQ6fd5dcrXsfP+nT97/Xp+vtvz+/2umNhYGA8lnGcrvcHvz/mnNG+YvI5/nEfDAyMDRj57a4U67xA5++GgYGB0baGedm9/lwMDAyMpOAWrVvAxsDAwDhn5KWz3aAe8fqlvTgGBsYDGbON6O/8fGO+gYGB8RDGUa78r2ZDt+FbYWBgLM04jySTwxCzJi/fKudRAQYGxqqMtozOBnBtkJkcFPtYajEwMJZj1LU5ft227Eaj/+T/BgYGxmaMvO2bAfKjGNEGGAMDYwPG3eFBuzXNx3YYGBhrM/Ki2caNV1rGepyHgYGxDSOJIWeMdjDXzvwxMDDWZrQltR2czT5Ncn8MDIzdGO1B1fzxbUlt4wEMDIx9GG0Dl4/GirF+WYjr6o6BgfFYRtv2tVeGYWQbHmBgYCzNaIPJWVSZN46XNq4YGBiLMpJt6h2FNT+CFpV+DAyMpRn5jWaYdivbIjEwMHZgtA+evVYbedZDOgwMjA0YyZCrPQyRD9Ta6PRjwcXAwFiUMTsElm9Kc1geZ/6nQcTAwFiOcZRrFiG0LWMbbWJgYKzNuB5k5gFAHknOAgYMDIy1GW0kMBuZtZ+sbh8xMDA2YLSh47eo3zqghoGBgZEczGo3n8kd6jMjGBgYGF9q+NrBWTSMw8DA2IDxrWDyyiitHbcN9+IYGBgPZHwrGMgbwbuPdGBgYCzE+AOyDX+tmnAwRAAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = 'Go Further | Stay Hungry, Stay Foolish';
+            clearTimeout(titleTime);
+        } else {
+            document.title = 'Go Further | Stay Hungry, Stay Foolish';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
