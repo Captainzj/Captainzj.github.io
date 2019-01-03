@@ -14,7 +14,7 @@
     
     
     
-    <title>Classification Algorithm | Go Further | Stay Hungry, Stay Foolish</title>
+    <title>Classification_Algorithm | Go Further | Stay Hungry, Stay Foolish</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#142421">
@@ -24,7 +24,7 @@
     <meta name="description" content="【阅读时间】XXX min XXX words【阅读内容】……">
 <meta name="keywords" content="数据分析与挖掘">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Classification Algorithm">
+<meta property="og:title" content="Classification_Algorithm">
 <meta property="og:url" content="http://yoursite.com/2018/11/24/Classification-Algorithm/index.html">
 <meta property="og:site_name" content="Go Further">
 <meta property="og:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
@@ -32,9 +32,9 @@
 <meta property="og:image" content="http://yoursite.com/2018/11/24/Classification-Algorithm/DecisionTree_exampleTree.png">
 <meta property="og:image" content="http://yoursite.com/2018/11/24/Classification-Algorithm/%E6%A6%82%E5%BF%B5%E5%9B%BE%E7%A4%BA.png">
 <meta property="og:image" content="http://yoursite.com/2018/11/24/Classification-Algorithm/GINIvsENTROPY.jpg">
-<meta property="og:updated_time" content="2019-01-03T03:55:10.397Z">
+<meta property="og:updated_time" content="2019-01-03T04:02:36.417Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Classification Algorithm">
+<meta name="twitter:title" content="Classification_Algorithm">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
 <meta name="twitter:image" content="http://yoursite.com/2018/11/24/Classification-Algorithm/DecisionTree_exampleTree.png">
     
@@ -117,7 +117,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">Classification Algorithm</div>
+        <div class="flex-col header-title ellipsis">Classification_Algorithm</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -139,7 +139,7 @@
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">Classification Algorithm</h1>
+        <h1 class="title">Classification_Algorithm</h1>
         <h5 class="subtitle">
             
                 <time datetime="2018-11-24T06:40:05.000Z" itemprop="datePublished" class="page-time">
@@ -173,7 +173,7 @@
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">Classification Algorithm</h1>
+        <h1 class="post-card-title">Classification_Algorithm</h1>
         <div class="post-meta">
             <time class="post-time" title="2018-11-24 14:40:05" datetime="2018-11-24T06:40:05.000Z"  itemprop="datePublished">2018-11-24</time>
 
@@ -419,8 +419,9 @@ $$ <br>​    当$α=0$或者$α$很小时，$C_{\alpha}(T_t) &lt; C_{\alpha}(T)
 </li>
 </ul>
 <hr>
-<p><strong>关系梳理</strong>：$H(X)$度量了X的不确定性，条件熵$H(X|Y)$度量了我们在知道$Y$以后$X$剩下的不确定性，$H(X)-H(X|Y)$为信息增益$I(X,Y)$</p>
-<p><img src="/2018/11/24/Classification-Algorithm/%E6%A6%82%E5%BF%B5%E5%9B%BE%E7%A4%BA.png" style="zoom:80%"></p>
+<p><strong>关系梳理</strong>：$H(X)$度量了X的不确定性，条件熵$H(X|Y)$度量了我们在知道$Y$以后$X$剩下的不确定性，$H(X)-H(X|Y)$为信息增益$I(X,Y)</p>
+<center><br>    <img src="/2018/11/24/Classification-Algorithm/%E6%A6%82%E5%BF%B5%E5%9B%BE%E7%A4%BA.png" style="zoom:80%"><br></center>
+
 <p>左边的椭圆代表$H(X)$,右边的椭圆代表$H(Y)$,中间重合的部分就是我们的互信息或者信息增益$I(X,Y)$, 左边的椭圆去掉重合部分就是$H(X|Y)$,右边的椭圆去掉重合部分就是$H(Y|X)$。两个椭圆的并就是$H(X,Y)$。</p>
 <hr>
 <h3 id="信息增益比-Information-gain-Ratio"><a href="#信息增益比-Information-gain-Ratio" class="headerlink" title="信息增益比 Information gain Ratio"></a>信息增益比 Information gain Ratio</h3><ul>
@@ -450,7 +451,8 @@ $$ <br>​    当$α=0$或者$α$很小时，$C_{\alpha}(T_t) &lt; C_{\alpha}(T)
   $$ <br>特别的，对于样本$D$,如果根据特征$A$的某个值$a$,把$D$分成$D_1$和$D_2$两部分，则在特征$A$的条件下，$D$的基尼系数表达式为：<br>$$ 
   Gini(D,A) = \frac{|D_1|}{|D|}Gini(D_1) + \frac{|D_2|}{|D|}Gini(D_2)
   $$ <br>和熵模型的度量方式比，基尼系数对应的误差有多大呢？对于二类分类，基尼系数和熵之半的曲线如下：</p>
-<p><img src="/2018/11/24/Classification-Algorithm/GINIvsENTROPY.jpg" style="zoom:80%"></p>
+<center><br>    <img src="/2018/11/24/Classification-Algorithm/GINIvsENTROPY.jpg" style="zoom:80%"><br></center>
+
 <p>从上图可以看出，基尼系数和熵之半的曲线非常接近，仅仅在45度角附近误差稍大。因此，基尼系数可以做为熵模型的一个近似替代。而<strong>CART分类树算法就是使用的基尼系数来选择决策树的特征</strong>。同时，为了进一步简化，CART分类树算法每次仅仅对某个特征的值进行二分，而不是多分，这样CART分类树算法建立起来的是二叉树，而不是多叉树。这样一可以进一步简化基尼系数的计算，二可以建立一个更加优雅的二叉树模型。</p>
 </li>
 </ul>
@@ -464,7 +466,7 @@ $$ <br>​    当$α=0$或者$α$很小时，$C_{\alpha}(T_t) &lt; C_{\alpha}(T)
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2019-01-03T03:55:10.397Z" itemprop="dateUpdated">2019-01-03 11:55:10</time>
+    Last updated: <time datetime="2019-01-03T04:02:36.417Z" itemprop="dateUpdated">2019-01-03 12:02:36</time>
 </span><br>
 
 
@@ -498,7 +500,7 @@ $$ <br>​    当$α=0$或者$α$很小时，$C_{\alpha}(T_t) &lt; C_{\alpha}(T)
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/11/24/Classification-Algorithm/&title=《Classification Algorithm》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/11/24/Classification-Algorithm/&title=《Classification_Algorithm》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -508,7 +510,7 @@ $$ <br>​    当$α=0$或者$α$很小时，$C_{\alpha}(T_t) &lt; C_{\alpha}(T)
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/11/24/Classification-Algorithm/&title=《Classification Algorithm》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/11/24/Classification-Algorithm/&title=《Classification_Algorithm》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -518,7 +520,7 @@ $$ <br>​    当$α=0$或者$α$很小时，$C_{\alpha}(T_t) &lt; C_{\alpha}(T)
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Classification Algorithm》 — Go Further&url=http://yoursite.com/2018/11/24/Classification-Algorithm/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Classification_Algorithm》 — Go Further&url=http://yoursite.com/2018/11/24/Classification-Algorithm/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
@@ -654,7 +656,7 @@ $$ <br>​    当$α=0$或者$α$很小时，$C_{\alpha}(T_t) &lt; C_{\alpha}(T)
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/11/24/Classification-Algorithm/&title=《Classification Algorithm》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/11/24/Classification-Algorithm/&title=《Classification_Algorithm》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -664,7 +666,7 @@ $$ <br>​    当$α=0$或者$α$很小时，$C_{\alpha}(T_t) &lt; C_{\alpha}(T)
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/11/24/Classification-Algorithm/&title=《Classification Algorithm》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/11/24/Classification-Algorithm/&title=《Classification_Algorithm》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -674,7 +676,7 @@ $$ <br>​    当$α=0$或者$α$很小时，$C_{\alpha}(T_t) &lt; C_{\alpha}(T)
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Classification Algorithm》 — Go Further&url=http://yoursite.com/2018/11/24/Classification-Algorithm/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Classification_Algorithm》 — Go Further&url=http://yoursite.com/2018/11/24/Classification-Algorithm/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
