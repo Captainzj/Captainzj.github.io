@@ -32,7 +32,7 @@
 <meta property="og:image" content="http://yoursite.com/2018/11/24/Classification-Algorithm/DecisionTree_exampleTree.png">
 <meta property="og:image" content="http://yoursite.com/2018/11/24/Classification-Algorithm/%E6%A6%82%E5%BF%B5%E5%9B%BE%E7%A4%BA.png">
 <meta property="og:image" content="http://yoursite.com/2018/11/24/Classification-Algorithm/GINIvsENTROPY.jpg">
-<meta property="og:updated_time" content="2019-01-03T07:40:04.090Z">
+<meta property="og:updated_time" content="2019-01-04T05:42:05.753Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Classification_Algorithm">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
@@ -123,7 +123,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="検索">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -164,7 +164,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#决策树"><span class="post-toc-number">1.</span> <span class="post-toc-text">决策树</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#构建决策树"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">构建决策树</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#决策树生成过程"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">决策树生成过程</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#递归结束的条件"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">递归结束的条件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#决策树优缺点"><span class="post-toc-number">1.1.3.</span> <span class="post-toc-text">决策树优缺点</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#决策树算法"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">决策树算法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ID3算法"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">ID3算法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#C4-5算法"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">C4.5算法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#CART算法"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">CART算法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#CART树算法的剪枝"><span class="post-toc-number">1.2.3.1.</span> <span class="post-toc-text">CART树算法的剪枝</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#算法小结"><span class="post-toc-number">1.2.4.</span> <span class="post-toc-text">算法小结</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#决策树相关概念"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">决策树相关概念</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#信息熵-Entropy"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">信息熵 Entropy</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#条件熵-Conditional-Entropy"><span class="post-toc-number">1.3.2.</span> <span class="post-toc-text">条件熵 Conditional Entropy</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#信息增益-Information-gain"><span class="post-toc-number">1.3.3.</span> <span class="post-toc-text">信息增益 Information gain</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#信息增益比-Information-gain-Ratio"><span class="post-toc-number">1.3.4.</span> <span class="post-toc-text">信息增益比 Information gain Ratio</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#基尼指数-GINI-index"><span class="post-toc-number">1.3.5.</span> <span class="post-toc-text">基尼指数 GINI index</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#贝叶斯、SVM、ANN"><span class="post-toc-number">2.</span> <span class="post-toc-text">贝叶斯、SVM、ANN</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#决策树"><span class="post-toc-number">1.</span> <span class="post-toc-text">决策树</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#构建决策树"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">构建决策树</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#决策树生成过程"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">决策树生成过程</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#递归结束的条件"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">递归结束的条件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#决策树优缺点"><span class="post-toc-number">1.1.3.</span> <span class="post-toc-text">决策树优缺点</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#决策树算法"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">决策树算法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ID3算法"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">ID3算法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#C4-5算法"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">C4.5算法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#CART算法"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">CART算法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#CART树算法的剪枝"><span class="post-toc-number">1.2.3.1.</span> <span class="post-toc-text">CART树算法的剪枝</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#算法小结"><span class="post-toc-number">1.2.4.</span> <span class="post-toc-text">算法小结</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#决策树相关概念"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">决策树相关概念</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#信息熵-Entropy"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">信息熵 Entropy</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#条件熵-Conditional-Entropy"><span class="post-toc-number">1.3.2.</span> <span class="post-toc-text">条件熵 Conditional Entropy</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#信息增益-Information-gain"><span class="post-toc-number">1.3.3.</span> <span class="post-toc-text">信息增益 Information gain</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#信息增益比-Information-gain-Ratio"><span class="post-toc-number">1.3.4.</span> <span class="post-toc-text">信息增益比 Information gain Ratio</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#基尼指数-GINI-index"><span class="post-toc-number">1.3.5.</span> <span class="post-toc-text">基尼指数 GINI index</span></a></li></ol></li></ol></li></ol>
         </nav>
     </aside>
 
@@ -458,7 +458,7 @@ $$ <br>​    当$α=0$或者$α$很小时，$C_{\alpha}(T_t) &lt; C_{\alpha}(T)
 </ul>
 <p>参考：<a href="https://blog.csdn.net/xuelabizp/article/details/50979469" target="_blank" rel="noopener">手把手生成决策树(dicision tree)</a>\决策树算法原理<a href="https://www.cnblogs.com/pinard/p/6050306.html" target="_blank" rel="noopener">(上)</a>、<a href="http://www.cnblogs.com/pinard/p/6053344.html" target="_blank" rel="noopener">(下)</a></p>
 <p>阅读链接：<a href="">决策树(Decision Tree)：通俗易懂之介绍</a></p>
-<h1 id="贝叶斯、SVM、ANN"><a href="#贝叶斯、SVM、ANN" class="headerlink" title="贝叶斯、SVM、ANN"></a>贝叶斯、SVM、ANN</h1>
+
         </div>
 
         <blockquote class="post-copyright">
@@ -466,7 +466,7 @@ $$ <br>​    当$α=0$或者$α$很小时，$C_{\alpha}(T_t) &lt; C_{\alpha}(T)
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2019-01-03T07:40:04.090Z" itemprop="dateUpdated">2019-01-03 15:40:04</time>
+    最終更新：<time datetime="2019-01-04T05:42:05.753Z" itemprop="dateUpdated">2019-01-04 13:42:05</time>
 </span><br>
 
 
@@ -634,7 +634,7 @@ $$ <br>​    当$α=0$或者$α$很小时，$C_{\alpha}(T_t) &lt; C_{\alpha}(T)
             
                 <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
             
-            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+            <span>このブログの内容物は<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja">クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際ライセンスの下に提供されています</a></span>
         </p>
     </div>
     <div class="bottom">
