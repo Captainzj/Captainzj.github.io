@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>数据分析与挖掘Exam | Go Further | Stay Hungry, Stay Foolish</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#142421">
+    
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="【阅读时间】XXX min XXX words【内容描述】《数据分析与挖掘》之后篇">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据分析与挖掘Exam">
+<meta property="og:url" content="http://yoursite.com/2019/01/06/数据分析与挖掘Exam/index.html">
+<meta property="og:site_name" content="Go Further">
+<meta property="og:description" content="【阅读时间】XXX min XXX words【内容描述】《数据分析与挖掘》之后篇">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2019/01/06/数据分析与挖掘Exam/DataStatistical.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/06/数据分析与挖掘Exam/SimilarityDissimilarityAndProximity.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/06/数据分析与挖掘Exam/dataPreprocess_mainTask.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/06/数据分析与挖掘Exam/DataQualityIssues.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/06/数据分析与挖掘Exam/Summary_datapreprocessing.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/06/数据分析与挖掘Exam/ProximityMeasureforBinaryAttributes.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/06/数据分析与挖掘Exam/Dissimilarity%20betweenAsymmetricBinaryVariables.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/06/数据分析与挖掘Exam/CalculatingCosineSimilarity.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/06/数据分析与挖掘Exam/CorrelationAnalysis.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/06/数据分析与挖掘Exam/CorrelationAnalysisExample.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/06/数据分析与挖掘Exam/CorrelationBetweenTwoNumericalVariables.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/06/数据分析与挖掘Exam/VarianceForSingleVariable.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/06/数据分析与挖掘Exam/CovarianceForTwoVariables.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/06/数据分析与挖掘Exam/Example_CalculationOfCovariance.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/06/数据分析与挖掘Exam/Normalization.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/06/数据分析与挖掘Exam/Binning.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/06/数据分析与挖掘Exam/BinningExample.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/06/数据分析与挖掘Exam/BinningvsClustering.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/06/数据分析与挖掘Exam/Example-AttributeSelection_withInformationGain.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/06/数据分析与挖掘Exam/ComputationOfGiniIndex.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/06/数据分析与挖掘Exam/ClassifierEvaluationMetrics.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/06/数据分析与挖掘Exam/ClassifierEvaluationMetrics1.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/06/数据分析与挖掘Exam/ClassifierEvaluationMetricsExample.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/06/数据分析与挖掘Exam/Naïve%20Bayesian%20Classifier0.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/06/数据分析与挖掘Exam/Naïve%20Bayesian%20Classifier1.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/06/数据分析与挖掘Exam/AvoidingtheZero-ProbabilityProblem.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/06/数据分析与挖掘Exam/Bayesian%20Network1.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/06/数据分析与挖掘Exam/Bayesian%20Network2.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/06/数据分析与挖掘Exam/Bayesian%20Network3.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/06/数据分析与挖掘Exam/Bayesian%20Network4.png">
+<meta property="og:updated_time" content="2019-01-06T10:34:21.712Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="数据分析与挖掘Exam">
+<meta name="twitter:description" content="【阅读时间】XXX min XXX words【内容描述】《数据分析与挖掘》之后篇">
+<meta name="twitter:image" content="http://yoursite.com/2019/01/06/数据分析与挖掘Exam/DataStatistical.png">
+    
+        <link rel="alternate" type="application/atom+xml" title="Go Further" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">CaptainSE</h5>
+          <a href="mailto:841145636@qq.com" title="841145636@qq.com" class="mail">841145636@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                Home
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/Captainzj" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">数据分析与挖掘Exam</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">数据分析与挖掘Exam</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-01-06T10:56:52.000Z" itemprop="datePublished" class="page-time">
+  2019-01-06
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/XD/">XD</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Exam"><span class="post-toc-number">1.</span> <span class="post-toc-text">Exam</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Introduction"><span class="post-toc-number">2.</span> <span class="post-toc-text">Introduction</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Data"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">Data</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Data-types"><span class="post-toc-number">2.1.1.</span> <span class="post-toc-text">Data types</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Data-statistics"><span class="post-toc-number">2.1.2.</span> <span class="post-toc-text">Data statistics</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Data-preprocessing"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">Data preprocessing</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Data-cleaning"><span class="post-toc-number">2.2.1.</span> <span class="post-toc-text">Data cleaning</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#How-to-Handle-Missing-Data"><span class="post-toc-number">2.2.1.1.</span> <span class="post-toc-text">How to Handle Missing Data?</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#How-to-Handle-Noisy-Data"><span class="post-toc-number">2.2.1.2.</span> <span class="post-toc-text">How to Handle Noisy Data?</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Data-integrating"><span class="post-toc-number">2.2.2.</span> <span class="post-toc-text">Data integrating</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Handling-Redundancy-in-Data-Integration"><span class="post-toc-number">2.2.2.1.</span> <span class="post-toc-text">Handling Redundancy in Data Integration</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Data-transforming"><span class="post-toc-number">2.2.3.</span> <span class="post-toc-text">Data transforming</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Data-Reduction"><span class="post-toc-number">2.2.4.</span> <span class="post-toc-text">Data Reduction</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Summary"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">Summary</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#classification"><span class="post-toc-number">3.</span> <span class="post-toc-text">classification</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Algorithms"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">Algorithms</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Decision-tree-ID3-C4-5-CART"><span class="post-toc-number">3.1.1.</span> <span class="post-toc-text">Decision tree-ID3,C4.5,CART</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#SVM"><span class="post-toc-number">3.1.2.</span> <span class="post-toc-text">SVM</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Bayes"><span class="post-toc-number">3.1.3.</span> <span class="post-toc-text">Bayes</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#ANN"><span class="post-toc-number">3.1.4.</span> <span class="post-toc-text">ANN</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Model-evaluation-and-selection"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">Model evaluation and selection</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Confusion-matrix-and-criteria"><span class="post-toc-number">3.2.1.</span> <span class="post-toc-text">Confusion matrix and criteria</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Cross-evaluation"><span class="post-toc-number">3.2.2.</span> <span class="post-toc-text">Cross-evaluation</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Ensemble-methods"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">Ensemble methods</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Bagging"><span class="post-toc-number">3.3.1.</span> <span class="post-toc-text">Bagging</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Boosting"><span class="post-toc-number">3.3.2.</span> <span class="post-toc-text">Boosting</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Random-Forest"><span class="post-toc-number">3.3.3.</span> <span class="post-toc-text">Random Forest</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Frequent-patterns"><span class="post-toc-number">4.</span> <span class="post-toc-text">Frequent patterns</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Algorithm"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">Algorithm</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Apriori"><span class="post-toc-number">4.1.1.</span> <span class="post-toc-text">Apriori</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#FP-growth"><span class="post-toc-number">4.1.2.</span> <span class="post-toc-text">FP-growth</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Clustering"><span class="post-toc-number">5.</span> <span class="post-toc-text">Clustering</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Algorithms-1"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">Algorithms</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Partition-based—k-means"><span class="post-toc-number">5.1.1.</span> <span class="post-toc-text">Partition-based—k-means</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Hierarchical-based—two-ways"><span class="post-toc-number">5.1.2.</span> <span class="post-toc-text">Hierarchical-based—two ways</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Density-based—DBSCAN"><span class="post-toc-number">5.1.3.</span> <span class="post-toc-text">Density-based—DBSCAN</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#AP-2007-Science"><span class="post-toc-number">5.1.4.</span> <span class="post-toc-text">AP (2007, Science)</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Local-density-based-2014-Science"><span class="post-toc-number">5.1.5.</span> <span class="post-toc-text">Local density-based (2014, Science)</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Graph-clustering"><span class="post-toc-number">6.</span> <span class="post-toc-text">Graph clustering</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Algorithms-2"><span class="post-toc-number">6.1.</span> <span class="post-toc-text">Algorithms</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#CPM"><span class="post-toc-number">6.1.1.</span> <span class="post-toc-text">CPM</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Spectral-clustering"><span class="post-toc-number">6.1.2.</span> <span class="post-toc-text">Spectral clustering</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#GNandQ"><span class="post-toc-number">6.1.3.</span> <span class="post-toc-text">GNandQ</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#MCL"><span class="post-toc-number">6.1.4.</span> <span class="post-toc-text">MCL</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Calculate"><span class="post-toc-number">7.</span> <span class="post-toc-text">Calculate</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#dataProcessing"><span class="post-toc-number">7.1.</span> <span class="post-toc-text">dataProcessing</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Proximity-Measure-for-Binary-Attributes"><span class="post-toc-number">7.1.1.</span> <span class="post-toc-text">Proximity Measure for Binary Attributes</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Correlation-Analysis"><span class="post-toc-number">7.1.2.</span> <span class="post-toc-text">Correlation Analysis</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Covariance"><span class="post-toc-number">7.1.3.</span> <span class="post-toc-text">Covariance</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Normalization"><span class="post-toc-number">7.1.4.</span> <span class="post-toc-text">Normalization</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Simple-Discretization-Binning"><span class="post-toc-number">7.1.5.</span> <span class="post-toc-text">Simple Discretization: Binning</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Example-Attribute-Selection-with-Information-Gain"><span class="post-toc-number">7.1.6.</span> <span class="post-toc-text">Example: Attribute Selection with Information Gain</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Computation-of-Gini-Index"><span class="post-toc-number">7.1.7.</span> <span class="post-toc-text">Computation of Gini Index</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Classifier-Evaluation-Metrics-Example"><span class="post-toc-number">7.1.8.</span> <span class="post-toc-text">Classifier Evaluation Metrics: Example</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Naïve-Bayesian-Classifier"><span class="post-toc-number">7.1.9.</span> <span class="post-toc-text">Naïve Bayesian Classifier</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Bayesian-Network"><span class="post-toc-number">7.1.10.</span> <span class="post-toc-text">Bayesian Network</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Todo"><span class="post-toc-number">8.</span> <span class="post-toc-text">Todo</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-数据分析与挖掘Exam"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">数据分析与挖掘Exam</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2019-01-06 18:56:52" datetime="2019-01-06T10:56:52.000Z"  itemprop="datePublished">2019-01-06</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/XD/">XD</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>【阅读时间】XXX min XXX words<br>【内容描述】<a href="https://captainzj.github.io/2019/01/06/数据分析与挖掘/" target="_blank" rel="noopener">《数据分析与挖掘》</a>之后篇</p>
+<a id="more"></a>
+<h2 id="Exam"><a href="#Exam" class="headerlink" title="Exam"></a>Exam</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">题型</th>
+<th style="text-align:center">题量（道）</th>
+<th style="text-align:center">分值（分）</th>
+<th style="text-align:center">总计（分）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">选择题</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">20</td>
+</tr>
+<tr>
+<td style="text-align:center">计算题</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">30</td>
+</tr>
+<tr>
+<td style="text-align:center">简答题</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">20</td>
+</tr>
+<tr>
+<td style="text-align:center">论述题</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">15</td>
+<td style="text-align:center">30</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><ul>
+<li><p>What is datamining </p>
+<p>从数据中发现知识</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"> 统计分析  +     分析报告      -&gt;&gt;     数据挖掘</span><br><span class="line">(数据统计) + (协同过滤关联分析) -&gt;&gt; (找寻事物的隐含规律)</span><br><span class="line"> (描述性)  +   (预测性概率)    -&gt;&gt;     (规范性)</span><br><span class="line"> </span><br><span class="line">- 分析报告一般是整个事件发生结束以后的总结（描述性）。</span><br><span class="line">- 统计分析能利用大量的历史样本来预测整个事件总体未来的走向（预测性概率）。</span><br><span class="line">- 数据挖掘则透过事件的表象发现隐藏在背后的蛛丝马迹，从而找到潜伏的规律以及看似无关事物之间背后的联系，用此来洞察未来（规范性）。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>What is machine learning</p>
+<p> 计算机程序基于数据自动地学习识别复杂的模式，并作出智能的决断。 允许程序可以根据提供的数据进行自动的学习，它可以使你的程序变得更”聪明”。</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">- 监督学习 (分类)</span><br><span class="line">- 无监督学习 (聚类)</span><br><span class="line">- 半监督学习: 在学习模型时，它使用标记(学习模型)和未标记(改进类边界)的实例。</span><br><span class="line">- 主动学习: 通过主动地从用户获取知识来提高模型质量</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>What is artificial intelligence </p>
+<p>在计算机科学的基础上，综合信息论、心理学、生理学、语言学、逻辑学和数学等知识，制造能<code>模拟人类智能行为</code>的计算机系统的边缘学科。</p>
+</li>
+</ul>
+<h3 id="Data"><a href="#Data" class="headerlink" title="Data"></a>Data</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">计算公式</span><br></pre></td></tr></table></figure>
+<h4 id="Data-types"><a href="#Data-types" class="headerlink" title="Data types"></a>Data types</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">* 'Relational records'  关系记录</span><br><span class="line">  - Relational tables, highly structured 关系表，高度结构化</span><br><span class="line">* 'Data matrix', e.g., numerical matrix, crosstabs 数据矩阵，例如数值矩阵，交叉表</span><br><span class="line">* 'Transaction data' 交易数据</span><br><span class="line">* 'Document data': Term-frequency vector (matrix) of text documents</span><br><span class="line">  文档数据：文本文档的术语 - 频率向量（矩阵）</span><br><span class="line">* 'Transportation network' 交通网络</span><br><span class="line">* 'World Wide Web' 万维网</span><br><span class="line">* 'Molecular Structures' 分子结构</span><br><span class="line">* 'Social or information networks' 社交或信息网络</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p><strong>Attribute Types</strong> </p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">* 'Nominal': categories, states, or “names of things” # 标称属性</span><br><span class="line">* 'Binary' : Nominal attribute with only 2 states (0 and 1)# 二元属性:仅有2个状态（0和1）的标称属性</span><br><span class="line">* 'Ordinal'  # 序数属性</span><br><span class="line">	- Values have a meaningful order (ranking) but magnitude between successive values is not known</span><br><span class="line">	  值具有有意义的顺序（排名），但连续值之间的大小未知</span><br><span class="line">* 'Numeric' # 数值属性</span><br><span class="line"> 	- `Interval`: Measured on a scale of equal-sized units 间隔: 按相同大小的单位测量</span><br><span class="line">	- `Ratio` 比率(倍数)</span><br><span class="line">	   We can speak of values as being an order of magnitude larger than the unit of measurement (10 K˚ is twice as high as 5 K˚).</span><br><span class="line">	   我们可以说价值比测量单位大一个数量级（10K˚是5K˚的两倍）</span><br><span class="line">* 'Discrete Attribute'  # 离散属性</span><br><span class="line">	- Sometimes, represented as integer variables 有时，表示为`整数变量`</span><br><span class="line">	- Note: Binary attributes are a special case of discrete attributes </span><br><span class="line">	  注意：二进制属性是离散属性的特例</span><br><span class="line">* 'Continuous Attribute'  # 连续属性</span><br><span class="line">	- Practically, real values can only be measured and represented using a finite number of digits</span><br><span class="line">	  实际上，只能使用有限数字来测量和表示实际值</span><br><span class="line">	- Continuous attributes are typically represented as floating-point variables</span><br><span class="line">	  连续属性通常表示为`浮点变量`</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="Data-statistics"><a href="#Data-statistics" class="headerlink" title="Data statistics"></a>Data statistics</h4><ul>
+<li><strong>Motivation</strong>: To better understand the data: central tendency, variation and spread</li>
+</ul>
+<center><br>    <img src="/2019/01/06/数据分析与挖掘Exam/DataStatistical.png" width="600"><br>    <img src="/2019/01/06/数据分析与挖掘Exam/SimilarityDissimilarityAndProximity.png" width="600"><br></center>
+
+<h3 id="Data-preprocessing"><a href="#Data-preprocessing" class="headerlink" title="Data preprocessing"></a>Data preprocessing</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">常用方法  缺失值 处理方法</span><br></pre></td></tr></table></figure>
+<center><br><img src="/2019/01/06/数据分析与挖掘Exam/dataPreprocess_mainTask.png" width="600"><br><img src="/2019/01/06/数据分析与挖掘Exam/DataQualityIssues.png" width="600"><br></center>
+
+<h4 id="Data-cleaning"><a href="#Data-cleaning" class="headerlink" title="Data cleaning"></a>Data cleaning</h4><ul>
+<li>Handle <code>missing data</code>(Incomplete), smooth <code>noisy data</code>,identify or remove <code>outliers</code>, and resolve <code>inconsistencies</code> 处理丢失的数据，平滑噪声数据，识别或删除异常值，并解决不一致问题</li>
+</ul>
+<h5 id="How-to-Handle-Missing-Data"><a href="#How-to-Handle-Missing-Data" class="headerlink" title="How to Handle Missing Data?"></a>How to Handle Missing Data?</h5><ul>
+<li>Data is not always available:  many tuples have <code>no recorded value</code> for several attributes</li>
+</ul>
+<blockquote>
+<p> 1.忽略元组  2.手动填充  3. 自动（以”unknown”/“均值”/“最可能的值’’）填充</p>
+</blockquote>
+<h5 id="How-to-Handle-Noisy-Data"><a href="#How-to-Handle-Noisy-Data" class="headerlink" title="How to Handle Noisy Data?"></a>How to Handle Noisy Data?</h5><ul>
+<li>Noise: random <code>error or variance</code> in a measured variable</li>
+</ul>
+<blockquote>
+<p>1.binning平滑  2.回归(拟合平滑) 3.聚类（无监督,检查并删除异常点） 4.半监督（检测可疑值并由人查验）</p>
+</blockquote>
+<h4 id="Data-integrating"><a href="#Data-integrating" class="headerlink" title="Data integrating"></a>Data integrating</h4><ul>
+<li>Integration of multiple databases, data cubes, or files 集成多个数据库，数据立方体或文件</li>
+</ul>
+<blockquote>
+<p>1.数据集成 2.模式集成 3.实体识别 4.检测和解决数据值的冲突</p>
+</blockquote>
+<h5 id="Handling-Redundancy-in-Data-Integration"><a href="#Handling-Redundancy-in-Data-Integration" class="headerlink" title="Handling Redundancy in Data Integration"></a>Handling Redundancy in Data Integration</h5><blockquote>
+<p>1.冗余原因（对象标识不同、派生数据）2.检测手段（相关性和协方差分析）3.仔细整合</p>
+</blockquote>
+<h4 id="Data-transforming"><a href="#Data-transforming" class="headerlink" title="Data transforming"></a>Data transforming</h4><ul>
+<li>A function that maps the entire set of values of a given attribute to a new set of replacement values s.t. each old value can be identified with one of the new values  一种函数，它将给定属性的整个值集映射到一组新的替换值 使得 可以使用其中一个新值标识每个旧值</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">- Methods</span><br><span class="line">  - 'Smoothing': Remove noise from data # 平滑</span><br><span class="line">  - 'Attribute/feature construction'  # 属性/特征构建</span><br><span class="line">    - New attributes constructed from the given ones</span><br><span class="line">  - 'Aggregation': Summarization, data cube construction  # 聚合</span><br><span class="line">  - 'Normalization': Scaled to fall within a smaller, specified range  # 归一化</span><br><span class="line">    - min-max normalization</span><br><span class="line">    - z-score normalization</span><br><span class="line">    - normalization by decimal scaling</span><br><span class="line">  - 'Discretization': Concept hierarchy climbing # 离散化</span><br></pre></td></tr></table></figure>
+<h4 id="Data-Reduction"><a href="#Data-Reduction" class="headerlink" title="Data Reduction"></a>Data Reduction</h4><ul>
+<li><p>Obtain a reduced representation of the data set  获得数据集的缩减表示</p>
+<ul>
+<li>much smaller in volume but yet produces almost the same analytical results 体积小得多，但产生几乎相同的分析结果</li>
+</ul>
+</li>
+<li><p><strong>Methods for data reduction</strong></p>
+</li>
+<li><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">- 'Regression and Log-Linear Models'  （Parametric methods）</span><br><span class="line">- 'Histograms, clustering, sampling'  （Non-parametric methods）</span><br><span class="line"><span class="meta">	&gt;</span><span class="bash"> sampling: 选择具有代表性的子集；简单随机、放回、不放回、分层抽样</span></span><br><span class="line">- 'Data cube aggregation' 数据立方体聚合</span><br><span class="line">- 'Data Compression'</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> Some typical dimensionality methods</span></span><br><span class="line">* Principal Component Analysis ('PCA') </span><br><span class="line">* Supervised and nonlinear techniques</span><br><span class="line">	- 'Feature subset selection' 找寻合适子集(仅收集与分析任务相关的属性)</span><br><span class="line">	- 'Feature creation'</span><br><span class="line">		- `Attribute extraction`  高维映射至低维(降维)</span><br><span class="line">		- `Attribute construction`</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><center><br><img src="/2019/01/06/数据分析与挖掘Exam/Summary_datapreprocessing.png" width="600"><br></center>
+
+<h2 id="classification"><a href="#classification" class="headerlink" title="classification"></a>classification</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">构建模型 应用模型(预测) 描述过程</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>What is classification?</p>
+<p>根据训练集和类标签（分类属性中的值）构建模型，并将其用于分类新数据，预测其标签。</p>
+<ul>
+<li><p>Supervised learning</p>
+<p><strong>监督学习</strong>是机器学习任务的一种。它<code>从有标记的训练数据中推导出预测标签</code>。有标记的训练数据是指每个训练实例都包括输入和期望的输出。一句话：<strong>给定数据，预测标签</strong>。(分类、回归)</p>
+<ul>
+<li><strong>无监督学习</strong>是机器学习任务的一种。它<code>从无标记的训练数据中推断结论</code>。最典型的无监督学习就是聚类分析，它可以在探索性数据分析阶段用于发现隐藏的模式或者对数据进行分组。一句话：<strong>给定数据，寻找隐藏的结构</strong>。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Steps</p>
+<ul>
+<li>模型构建：根据数据集特征构建合适的分类模型，并使用训练集样本进行模型训练</li>
+<li>模型验证与测试：将已知的测试样品<code>标签</code>与模型使用测试集所得的<code>分类结果</code>进行比较，而后使用验证集改进模型准确率</li>
+<li>模型部署：如果准确度可接受，便可使用此模型分类新数据</li>
+</ul>
+</li>
+</ul>
+<h3 id="Algorithms"><a href="#Algorithms" class="headerlink" title="Algorithms"></a>Algorithms</h3><figure class="highlight plain"><figcaption><span>思路 优缺点 </span></figcaption><table><tr><td class="code"><pre><span class="line">考 朴素贝叶斯</span><br><span class="line">解释 svm ann 大概了解DeepLearning 理论描述</span><br></pre></td></tr></table></figure>
+<h4 id="Decision-tree-ID3-C4-5-CART"><a href="#Decision-tree-ID3-C4-5-CART" class="headerlink" title="Decision tree-ID3,C4.5,CART"></a>Decision tree-ID3,C4.5,CART</h4><h4 id="SVM"><a href="#SVM" class="headerlink" title="SVM"></a>SVM</h4><h4 id="Bayes"><a href="#Bayes" class="headerlink" title="Bayes"></a>Bayes</h4><h4 id="ANN"><a href="#ANN" class="headerlink" title="ANN"></a>ANN</h4><h3 id="Model-evaluation-and-selection"><a href="#Model-evaluation-and-selection" class="headerlink" title="Model evaluation and selection"></a>Model evaluation and selection</h3><h4 id="Confusion-matrix-and-criteria"><a href="#Confusion-matrix-and-criteria" class="headerlink" title="Confusion matrix and criteria"></a>Confusion matrix and criteria</h4><h4 id="Cross-evaluation"><a href="#Cross-evaluation" class="headerlink" title="Cross-evaluation"></a>Cross-evaluation</h4><h3 id="Ensemble-methods"><a href="#Ensemble-methods" class="headerlink" title="Ensemble methods"></a>Ensemble methods</h3><h4 id="Bagging"><a href="#Bagging" class="headerlink" title="Bagging"></a>Bagging</h4><h4 id="Boosting"><a href="#Boosting" class="headerlink" title="Boosting"></a>Boosting</h4><h4 id="Random-Forest"><a href="#Random-Forest" class="headerlink" title="Random Forest"></a>Random Forest</h4><h2 id="Frequent-patterns"><a href="#Frequent-patterns" class="headerlink" title="Frequent patterns"></a>Frequent patterns</h2><ul>
+<li>What is a frequent pattern <ul>
+<li>Association rule </li>
+</ul>
+</li>
+</ul>
+<h3 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h3><h4 id="Apriori"><a href="#Apriori" class="headerlink" title="Apriori"></a>Apriori</h4><h4 id="FP-growth"><a href="#FP-growth" class="headerlink" title="FP-growth"></a>FP-growth</h4><h2 id="Clustering"><a href="#Clustering" class="headerlink" title="Clustering"></a>Clustering</h2><ul>
+<li>What is clustering<ul>
+<li>Unsupervised learning </li>
+</ul>
+</li>
+</ul>
+<h3 id="Algorithms-1"><a href="#Algorithms-1" class="headerlink" title="Algorithms"></a>Algorithms</h3><h4 id="Partition-based—k-means"><a href="#Partition-based—k-means" class="headerlink" title="Partition-based—k-means"></a>Partition-based—k-means</h4><h4 id="Hierarchical-based—two-ways"><a href="#Hierarchical-based—two-ways" class="headerlink" title="Hierarchical-based—two ways"></a>Hierarchical-based—two ways</h4><h4 id="Density-based—DBSCAN"><a href="#Density-based—DBSCAN" class="headerlink" title="Density-based—DBSCAN"></a>Density-based—DBSCAN</h4><h4 id="AP-2007-Science"><a href="#AP-2007-Science" class="headerlink" title="AP (2007, Science)"></a>AP (2007, Science)</h4><h4 id="Local-density-based-2014-Science"><a href="#Local-density-based-2014-Science" class="headerlink" title="Local density-based (2014, Science)"></a>Local density-based (2014, Science)</h4><h2 id="Graph-clustering"><a href="#Graph-clustering" class="headerlink" title="Graph clustering"></a>Graph clustering</h2><ul>
+<li>What is graph clustering <ul>
+<li>Complex network</li>
+<li>Graph clustering</li>
+<li>Community </li>
+<li>Module  </li>
+</ul>
+</li>
+</ul>
+<h3 id="Algorithms-2"><a href="#Algorithms-2" class="headerlink" title="Algorithms"></a>Algorithms</h3><h4 id="CPM"><a href="#CPM" class="headerlink" title="CPM"></a>CPM</h4><h4 id="Spectral-clustering"><a href="#Spectral-clustering" class="headerlink" title="Spectral clustering"></a>Spectral clustering</h4><h4 id="GNandQ"><a href="#GNandQ" class="headerlink" title="GNandQ"></a>GNandQ</h4><h4 id="MCL"><a href="#MCL" class="headerlink" title="MCL"></a>MCL</h4><h2 id="Calculate"><a href="#Calculate" class="headerlink" title="Calculate"></a>Calculate</h2><h3 id="dataProcessing"><a href="#dataProcessing" class="headerlink" title="dataProcessing"></a>dataProcessing</h3><h4 id="Proximity-Measure-for-Binary-Attributes"><a href="#Proximity-Measure-for-Binary-Attributes" class="headerlink" title="Proximity Measure for Binary Attributes"></a>Proximity Measure for Binary Attributes</h4><center><br><img src="/2019/01/06/数据分析与挖掘Exam/ProximityMeasureforBinaryAttributes.png" width="600"><br><img src="/2019/01/06/数据分析与挖掘Exam/Dissimilarity betweenAsymmetricBinaryVariables.png" width="600"><br><img src="/2019/01/06/数据分析与挖掘Exam/CalculatingCosineSimilarity.png" width="600"><br></center>
+
+<h4 id="Correlation-Analysis"><a href="#Correlation-Analysis" class="headerlink" title="Correlation Analysis"></a>Correlation Analysis</h4><center><br>    <img src="/2019/01/06/数据分析与挖掘Exam/CorrelationAnalysis.png" width="600"><br>    <img src="/2019/01/06/数据分析与挖掘Exam/CorrelationAnalysisExample.png" width="600"><br>    <img src="/2019/01/06/数据分析与挖掘Exam/CorrelationBetweenTwoNumericalVariables.png" width="600"><br></center>
+
+<h4 id="Covariance"><a href="#Covariance" class="headerlink" title="Covariance"></a>Covariance</h4><center><br>    <img src="/2019/01/06/数据分析与挖掘Exam/VarianceForSingleVariable.png" width="600"><br>    <img src="/2019/01/06/数据分析与挖掘Exam/CovarianceForTwoVariables.png" width="600"><br>    <img src="/2019/01/06/数据分析与挖掘Exam/Example_CalculationOfCovariance.png" width="600"><br></center>
+
+<h4 id="Normalization"><a href="#Normalization" class="headerlink" title="Normalization"></a>Normalization</h4><center><br><img src="/2019/01/06/数据分析与挖掘Exam/Normalization.png" width="600"><br></center>
+
+<h4 id="Simple-Discretization-Binning"><a href="#Simple-Discretization-Binning" class="headerlink" title="Simple Discretization: Binning"></a>Simple Discretization: Binning</h4><center><br><img src="/2019/01/06/数据分析与挖掘Exam/Binning.png" width="600"><br><img src="/2019/01/06/数据分析与挖掘Exam/BinningExample.png" width="600"><br><img src="/2019/01/06/数据分析与挖掘Exam/BinningvsClustering.png" width="600"><br></center>
+
+<h4 id="Example-Attribute-Selection-with-Information-Gain"><a href="#Example-Attribute-Selection-with-Information-Gain" class="headerlink" title="Example: Attribute Selection with Information Gain"></a>Example: Attribute Selection with Information Gain</h4><center><br>    <img src="/2019/01/06/数据分析与挖掘Exam/Example-AttributeSelection_withInformationGain.png" width="600"><br></center>
+
+<h4 id="Computation-of-Gini-Index"><a href="#Computation-of-Gini-Index" class="headerlink" title="Computation of Gini Index"></a>Computation of Gini Index</h4><center><br><img src="/2019/01/06/数据分析与挖掘Exam/ComputationOfGiniIndex.png" width="600"><br></center>
+
+<h4 id="Classifier-Evaluation-Metrics-Example"><a href="#Classifier-Evaluation-Metrics-Example" class="headerlink" title="Classifier Evaluation Metrics: Example"></a>Classifier Evaluation Metrics: Example</h4><center><br><img src="/2019/01/06/数据分析与挖掘Exam/ClassifierEvaluationMetrics.png" width="600"><br><img src="/2019/01/06/数据分析与挖掘Exam/ClassifierEvaluationMetrics1.png" width="600"><br><img src="/2019/01/06/数据分析与挖掘Exam/ClassifierEvaluationMetricsExample.png" width="600"><br></center>
+
+<h4 id="Naïve-Bayesian-Classifier"><a href="#Naïve-Bayesian-Classifier" class="headerlink" title="Naïve Bayesian Classifier"></a>Naïve Bayesian Classifier</h4><center><br><img src="/2019/01/06/数据分析与挖掘Exam/Naïve Bayesian Classifier0.png" width="600"><br><img src="/2019/01/06/数据分析与挖掘Exam/Naïve Bayesian Classifier1.png" width="600"><br><img src="/2019/01/06/数据分析与挖掘Exam/AvoidingtheZero-ProbabilityProblem.png" width="600"><br></center>
+
+<h4 id="Bayesian-Network"><a href="#Bayesian-Network" class="headerlink" title="Bayesian Network"></a>Bayesian Network</h4><center><br>    <img src="/2019/01/06/数据分析与挖掘Exam/Bayesian Network1.png" width="600"><br>    <img src="/2019/01/06/数据分析与挖掘Exam/Bayesian Network2.png" width="600"><br>    <img src="/2019/01/06/数据分析与挖掘Exam/Bayesian Network3.png" width="600"><br>    <img src="/2019/01/06/数据分析与挖掘Exam/Bayesian Network4.png" width="600"><br></center>
+
+<h2 id="Todo"><a href="#Todo" class="headerlink" title="Todo"></a>Todo</h2><ul>
+<li><p>看相关参考书目《数据挖掘：概念与技术》《数据挖掘导论》课后例题  着重看”简单计算”</p>
+</li>
+<li><p>Collaborative Filtering</p>
+<p><a href="https://www.cnblogs.com/pinard/p/6349233.html" target="_blank" rel="noopener">协同过滤推荐算法总结</a></p>
+<p><a href="https://www.cnblogs.com/pinard/p/6351319.html" target="_blank" rel="noopener">矩阵分解在协同过滤推荐算法中的应用</a></p>
+<p><a href="https://www.cnblogs.com/pinard/p/6362647.html" target="_blank" rel="noopener">SimRank协同过滤推荐算法</a></p>
+</li>
+<li><p><a href="https://www.cnblogs.com/pinard/p/6912636.html" target="_blank" rel="noopener">EM算法原理总结</a></p>
+</li>
+<li><p>特征工程</p>
+<p><a href="https://www.cnblogs.com/pinard/p/9032759.html" target="_blank" rel="noopener">特征工程之特征选择</a></p>
+<p><a href="https://www.cnblogs.com/pinard/p/9061549.html" target="_blank" rel="noopener">特征工程之特征表达</a></p>
+<p><a href="https://www.cnblogs.com/pinard/p/9093890.html" target="_blank" rel="noopener">特征工程之特征预处理</a></p>
+</li>
+</ul>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2019-01-06T10:34:21.712Z" itemprop="dateUpdated">2019-01-06 18:34:21</time>
+</span><br>
+
+
+        
+    </div>
+    
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/avatar.jpg" alt="CaptainSE">
+            CaptainSE
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/01/06/数据分析与挖掘Exam/&title=《数据分析与挖掘Exam》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/01/06/数据分析与挖掘Exam/&title=《数据分析与挖掘Exam》 — Go Further&source=【阅读时间】XXX min XXX words【内容描述】《数据分析与挖掘》之后篇" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/01/06/数据分析与挖掘Exam/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《数据分析与挖掘Exam》 — Go Further&url=http://yoursite.com/2019/01/06/数据分析与挖掘Exam/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2019/01/06/数据分析与挖掘Exam/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2019/01/01/数据分析与挖掘/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">数据分析与挖掘</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢老板~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>CaptainSE &copy; 2015 - 2019</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/01/06/数据分析与挖掘Exam/&title=《数据分析与挖掘Exam》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/01/06/数据分析与挖掘Exam/&title=《数据分析与挖掘Exam》 — Go Further&source=【阅读时间】XXX min XXX words【内容描述】《数据分析与挖掘》之后篇" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/01/06/数据分析与挖掘Exam/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《数据分析与挖掘Exam》 — Go Further&url=http://yoursite.com/2019/01/06/数据分析与挖掘Exam/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2019/01/06/数据分析与挖掘Exam/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACOklEQVR42u3awa7CMAxEUf7/p4v0Vk8qTWfGKSLOzQpVpeR0YezYr5e8jr91/vz/yvme87q6f3x92oIBA8ayjGO4xlsfU+fec7U3GDBg7MNQgqwbOt2tK6/v8joMGDBgmOmg+yKUJ8CAAQOGHnD1BM6tNGHAgAFjzNAPyLKfzBLNR2pxGDBgLMioNAae/vyl/gYMGDB+mHGYSy9N3bBb2hUMGDBaM/T2ZGWoItu0ewAHAwaMrows1I6DbCVMK+2HUmoIAwaMBRlKMHULTpen7MR4DgwYMLZhuGVqJUBnh3owYMDYjaEPNGTlq/600p0wYMBoynCDqVuOuoMUIQkGDBitGW4B+cTkg7QtN9GEAQNGa4a7IbfBqZSv9aIaBgwYnRjKtlySztaD7M0fAwwYMFoz3JahO0ZmdycKgRgGDBg7MGaVslkDQE80L18cDBgwmjKUcJbNblQKXeW7HzJcGDBgtGbogVVP5pREUw/EN68DBgwYrRlZ2WnnnnKzQX+a0dmAAQPG4gx96EFP1Oo8u5CGAQPGBoxs3MEdjKj8J9w8GQYMGK0Z2dfcUCs1IM0SOuxvwIABY0HGYS59i+7hWtZyuJxugwEDRiNGJdhl6aDe5qyPlMGAAaMTo3JwljUs9fakfmAHAwaMHRh6kH1izCsb9bg5boMBA8aWjCxY64f77tPCgAsDBowNGHbSVq6qpWANAwaMDRj6IVr9JE8anjAHMmDAgNGbMWFeQygy5x7YTWthwoAB49cZb3z3ddP+PTzSAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = 'Go Further | Stay Hungry, Stay Foolish';
+            clearTimeout(titleTime);
+        } else {
+            document.title = 'Go Further | Stay Hungry, Stay Foolish';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
