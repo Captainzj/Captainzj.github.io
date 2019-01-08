@@ -65,7 +65,7 @@
 <meta property="og:image" content="http://yoursite.com/2019/01/01/数据分析与挖掘/SpectralClustering.png">
 <meta property="og:image" content="http://yoursite.com/2019/01/01/数据分析与挖掘/graphMining_Summary.png">
 <meta property="og:image" content="http://yoursite.com/2019/01/01/数据分析与挖掘/CommunityDetection_Summary.png">
-<meta property="og:updated_time" content="2019-01-08T12:24:00.099Z">
+<meta property="og:updated_time" content="2019-01-08T13:38:03.068Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据分析与挖掘">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【内容描述】 基于《数据挖掘：概念与技术》的简述，欲了解细节，强烈建议读原书！！！">
@@ -156,7 +156,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="検索">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -638,7 +638,7 @@
 
 <p>谱聚类（Spectral Clustering），就是先用<code>Laplacian eigenmaps对数据降维</code>（简单地说，就是先将数据转换成邻接矩阵或相似性矩阵，再转换成Laplacian矩阵，再对Laplacian矩阵进行特征分解，把最小的K个特征向量排列在一起），然后再<code>使用k-means</code>完成聚类。谱聚类是个很好的方法，效果通常比k-means好，计算复杂度还低，这都要归功于降维的作用。 </p>
 <p><a href="https://www.cnblogs.com/pinard/p/6221564.html" target="_blank" rel="noopener">谱聚类（spectral clustering）原理总结_刘建平</a>、<a href="https://www.cnblogs.com/pinard/p/6235920.html" target="_blank" rel="noopener">用scikit-learn学习谱聚类</a></p>
-<h4 id="Modularity-based-methods-–-G-Nand-Q"><a href="#Modularity-based-methods-–-G-Nand-Q" class="headerlink" title="Modularity based methods – G Nand Q"></a>Modularity based methods – G Nand Q</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> Calculate the betweenness <span class="keyword">for</span> all edges <span class="keyword">in</span> the network</span><br><span class="line">   计算每一条边的边介数.</span><br><span class="line"><span class="number">2.</span> Remove the edge <span class="keyword">with</span> the highest betweenness.</span><br><span class="line">   删除边界数最大的边.</span><br><span class="line"><span class="number">3.</span> Recalculate betweennesses <span class="keyword">for</span> all edges affected by the removal.</span><br><span class="line">   重新计算网络中剩下的边的边阶数.</span><br><span class="line"><span class="number">4.</span> Repeat <span class="keyword">from</span> step <span class="number">2</span> until no edges remain.</span><br><span class="line">   从步骤<span class="number">2</span>重复，直到没有边剩余.</span><br></pre></td></tr></table></figure>
+<h4 id="Modularity-based-methods-–-G-Nand-Q"><a href="#Modularity-based-methods-–-G-Nand-Q" class="headerlink" title="Modularity based methods – G Nand Q"></a>Modularity based methods – G Nand Q</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> Calculate the betweenness <span class="keyword">for</span> all edges <span class="keyword">in</span> the network</span><br><span class="line">   计算每一条边的边介数.</span><br><span class="line"><span class="number">2.</span> Remove the edge <span class="keyword">with</span> the highest betweenness.</span><br><span class="line">   删除边介数最大的边.</span><br><span class="line"><span class="number">3.</span> Recalculate betweennesses <span class="keyword">for</span> all edges affected by the removal.</span><br><span class="line">   重新计算网络中剩下的边的边介数.</span><br><span class="line"><span class="number">4.</span> Repeat <span class="keyword">from</span> step <span class="number">2</span> until no edges remain.</span><br><span class="line">   从步骤<span class="number">2</span>重复，直到没有边剩余.</span><br></pre></td></tr></table></figure>
 <p><a href="https://blog.csdn.net/aspirinvagrant/article/details/45599071" target="_blank" rel="noopener">社区发现算法（二）</a></p>
 <h4 id="MCL"><a href="#MCL" class="headerlink" title="MCL"></a>MCL</h4><blockquote>
 <p>MCL (Markov Cluster Algorithm) is a graph clustering algorithm. </p>
@@ -688,7 +688,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2019-01-08T12:24:00.099Z" itemprop="dateUpdated">2019-01-08 20:24:00</time>
+    最終更新：<time datetime="2019-01-08T13:38:03.068Z" itemprop="dateUpdated">2019-01-08 21:38:03</time>
 </span><br>
 
 
@@ -854,7 +854,7 @@
             
                 <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
             
-            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+            <span>このブログの内容物は<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja">クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際ライセンスの下に提供されています</a></span>
         </p>
     </div>
     <div class="bottom">
