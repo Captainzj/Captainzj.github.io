@@ -65,7 +65,7 @@
 <meta property="og:image" content="http://yoursite.com/2019/01/01/数据分析与挖掘/SpectralClustering.png">
 <meta property="og:image" content="http://yoursite.com/2019/01/01/数据分析与挖掘/graphMining_Summary.png">
 <meta property="og:image" content="http://yoursite.com/2019/01/01/数据分析与挖掘/CommunityDetection_Summary.png">
-<meta property="og:updated_time" content="2019-01-08T08:40:03.539Z">
+<meta property="og:updated_time" content="2019-01-08T12:24:00.099Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据分析与挖掘">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【内容描述】 基于《数据挖掘：概念与技术》的简述，欲了解细节，强烈建议读原书！！！">
@@ -629,7 +629,7 @@
 </li>
 </ul>
 <h3 id="Community-detection-algorithms"><a href="#Community-detection-algorithms" class="headerlink" title="Community detection_algorithms"></a>Community detection_algorithms</h3><h4 id="CPM-（Clique-Percolation-Method）"><a href="#CPM-（Clique-Percolation-Method）" class="headerlink" title="CPM （Clique Percolation Method）"></a>CPM （Clique Percolation Method）</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># basic concept</span></span><br><span class="line"> <span class="string">'Clique'</span>: Complete graph  完全图(所有节点两两相连)</span><br><span class="line"> <span class="string">'k-clique'</span>: Complete graph <span class="keyword">with</span> k vertice(顶点) k-派系</span><br><span class="line"> <span class="string">'Adjacent k-cliques'</span>: Two k-cliques are adjacent when they `share k<span class="number">-1</span> nodes`</span><br><span class="line">   k-派系相邻：两个不同的k-派系共享k<span class="number">-1</span>个节点，认为他们相邻</span><br><span class="line"> <span class="string">'k-clique community'</span>: Union of all k-cliques that can be `reached <span class="keyword">from</span> each other` through a series of adjacent k-cliques.</span><br><span class="line">   k-派系连通：一个k-派系可以通过若干个相邻的k-派系到达另一个k-派系，则称这两个k-派系彼此联通</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">Step1: 找到网络中大小为K的完全子图 Locate maximal cliques </span><br><span class="line">Step2: 将每个完全子图定义为一个节点，建立一个重叠矩阵</span><br><span class="line">Step3: 将重叠矩阵变成社团邻接矩阵(其中重叠矩阵中对角线小于k、非对角线小于k<span class="number">-1</span>的元素全置为<span class="number">0</span>,所有非<span class="number">0</span>项置为<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">Step1: 找到网络中大小为K的完全子图 Locate maximal cliques </span><br><span class="line">Step2: 将每个完全子图定义为一个节点，建立一个重叠矩阵</span><br><span class="line">Step3: 将重叠矩阵变成社区邻接矩阵(其中重叠矩阵中对角线小于k、非对角线小于k<span class="number">-1</span>的元素全置为<span class="number">0</span>,所有非<span class="number">0</span>项置为<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
 <center class="half"><br><img src="/2019/01/01/数据分析与挖掘/CPM1.png" width="300"><br><img src="/2019/01/01/数据分析与挖掘/CPM2.png" width="300"><br></center>
 
 <p>从图中可以看出包含了两个社区{1，2，3，4}和{4，5，6，7，8}，节点4属于两个社区的重叠节点</p>
@@ -660,7 +660,7 @@
 <li>下一步骤的概率仅依赖于当前概率</li>
 </ul>
 <h5 id="MCL-Algorithm"><a href="#MCL-Algorithm" class="headerlink" title="MCL Algorithm"></a>MCL Algorithm</h5><p>在MCL中， <strong>Expansion</strong> 和 <strong>Inflation</strong> 将不断的交替进行，<strong>Expansion</strong> 使得不同的区域之间的联系加强，而 <strong>Inflation</strong> 则不断的<code>分化</code>各点之间的联系(强者恒强，弱者恒弱)。经过多次迭代，将渐渐出现聚集现象，以此便达到了聚类的效果。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> 输入：一个非全连通图，Expansion 时的参数e和 Inflation 的参数r</span><br><span class="line"><span class="number">2.</span> 建立邻接矩阵</span><br><span class="line"><span class="number">3.</span> 添加自环()</span><br><span class="line"><span class="number">4.</span> 标准化概率矩阵</span><br><span class="line"><span class="number">5.</span> Expansion操作，每次对矩阵进行e次幂方</span><br><span class="line"><span class="number">6.</span> Inflation操作，每次对矩阵内元素进行r次幂方，再进行标准化</span><br><span class="line"><span class="number">7.</span> 重复步骤<span class="number">5</span>和<span class="number">6</span>，直到达到稳定</span><br><span class="line"><span class="number">8.</span> 将结果矩阵转化为聚簇</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> 输入：一个非全连通图，Expansion 时的参数e和 Inflation 的参数r</span><br><span class="line"><span class="number">2.</span> 建立邻接矩阵</span><br><span class="line"><span class="number">3.</span> 添加自环(避免<span class="number">0</span>概率情况)</span><br><span class="line"><span class="number">4.</span> 标准化概率矩阵</span><br><span class="line"><span class="number">5.</span> Expansion操作，每次对矩阵进行e次幂方</span><br><span class="line"><span class="number">6.</span> Inflation操作，每次对矩阵内元素进行r次幂方，再进行标准化</span><br><span class="line"><span class="number">7.</span> 重复步骤<span class="number">5</span>和<span class="number">6</span>，直到达到稳定</span><br><span class="line"><span class="number">8.</span> 将结果矩阵转化为聚簇</span><br></pre></td></tr></table></figure>
 <p><a href="https://www.cnblogs.com/magle/p/7672957.html" target="_blank" rel="noopener">聚类算法——MCL</a></p>
 <h3 id="Summary-4"><a href="#Summary-4" class="headerlink" title="Summary"></a>Summary</h3><center><br><img src="/2019/01/01/数据分析与挖掘/graphMining_Summary.png" width="600"><br><img src="/2019/01/01/数据分析与挖掘/CommunityDetection_Summary.png" width="600"><br></center>
 
@@ -688,7 +688,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2019-01-08T08:40:03.539Z" itemprop="dateUpdated">2019-01-08 16:40:03</time>
+    Last updated: <time datetime="2019-01-08T12:24:00.099Z" itemprop="dateUpdated">2019-01-08 20:24:00</time>
 </span><br>
 
 
