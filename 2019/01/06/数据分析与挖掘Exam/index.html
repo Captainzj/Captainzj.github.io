@@ -90,7 +90,7 @@
 <meta property="og:image" content="http://yoursite.com/2019/01/06/数据分析与挖掘Exam/WeightedGraphs.png">
 <meta property="og:image" content="http://yoursite.com/2019/01/06/数据分析与挖掘Exam/MCL_SelfLoop.png">
 <meta property="og:image" content="http://yoursite.com/2019/01/06/数据分析与挖掘Exam/MCL_Inflation.png">
-<meta property="og:updated_time" content="2019-01-08T03:32:38.266Z">
+<meta property="og:updated_time" content="2019-01-08T08:40:56.190Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据分析与挖掘Exam">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【内容描述】《数据分析与挖掘》之后篇">
@@ -289,21 +289,21 @@
 <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><ul>
 <li><p>What is datamining </p>
 <p>从数据中发现知识</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"> 统计分析  +     分析报告      -&gt;&gt;     数据挖掘</span><br><span class="line">(数据统计) + (协同过滤关联分析) -&gt;&gt; (找寻事物的隐含规律)</span><br><span class="line"> (描述性)  +   (预测性概率)    -&gt;&gt;     (规范性)</span><br><span class="line"> </span><br><span class="line">- 分析报告一般是整个事件发生结束以后的总结（描述性）。</span><br><span class="line">- 统计分析能利用大量的历史样本来预测整个事件总体未来的走向（预测性概率）。</span><br><span class="line">- 数据挖掘则透过事件的表象发现隐藏在背后的蛛丝马迹，从而找到潜伏的规律以及看似无关事物之间背后的联系，用此来洞察未来（规范性）。</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"> 统计分析  +     分析报告      -&gt;&gt;     数据挖掘</span><br><span class="line">(数据统计) + (协同过滤关联分析) -&gt;&gt; (找寻事物的隐含规律)</span><br><span class="line"> (描述性)  +   (预测性概率)    -&gt;&gt;     (规范性)</span><br><span class="line"> </span><br><span class="line">- 分析报告一般是整个事件发生结束以后的总结（描述性）。</span><br><span class="line">- 统计分析能利用大量的历史样本来预测整个事件总体未来的走向（预测性概率）。</span><br><span class="line">- 数据挖掘则透过事件的表象发现隐藏在背后的蛛丝马迹，从而找到潜伏的规律以及看似无关事物之间背后的联系，用此来洞察未来（规范性）。</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>What is machine learning</p>
 <p> 计算机程序基于数据自动地学习识别复杂的模式，并作出智能的决断。 允许程序可以根据提供的数据进行自动的学习，它可以使你的程序变得更”聪明”。</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">- 监督学习 (分类)</span><br><span class="line">- 无监督学习 (聚类)</span><br><span class="line">- 半监督学习: 在学习模型时，它使用标记(学习模型)和未标记(改进类边界)的实例。</span><br><span class="line">- 主动学习: 通过主动地从用户获取知识来提高模型质量</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">- 监督学习 (分类)</span><br><span class="line">- 无监督学习 (聚类)</span><br><span class="line">- 半监督学习: 在学习模型时，它使用标记(学习模型)和未标记(改进类边界)的实例。</span><br><span class="line">- 主动学习: 通过主动地从用户获取知识来提高模型质量</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>What is artificial intelligence </p>
 <p>在计算机科学的基础上，综合信息论、心理学、生理学、语言学、逻辑学和数学等知识，制造能<code>模拟人类智能行为</code>的计算机系统的边缘学科。</p>
 </li>
 </ul>
 <h3 id="Data"><a href="#Data" class="headerlink" title="Data"></a>Data</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">计算公式</span><br></pre></td></tr></table></figure>
-<h4 id="Data-types"><a href="#Data-types" class="headerlink" title="Data types"></a>Data types</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">* 'Relational records'  关系记录</span><br><span class="line">  - Relational tables, highly structured 关系表，高度结构化</span><br><span class="line">* 'Data matrix', e.g., numerical matrix, crosstabs 数据矩阵，例如数值矩阵，交叉表</span><br><span class="line">* 'Transaction data' 交易数据</span><br><span class="line">* 'Document data': Term-frequency vector (matrix) of text documents</span><br><span class="line">  文档数据：文本文档的术语 - 频率向量（矩阵）</span><br><span class="line">* 'Transportation network' 交通网络</span><br><span class="line">* 'World Wide Web' 万维网</span><br><span class="line">* 'Molecular Structures' 分子结构</span><br><span class="line">* 'Social or information networks' 社交或信息网络</span><br></pre></td></tr></table></figure>
+<h4 id="Data-types"><a href="#Data-types" class="headerlink" title="Data types"></a>Data types</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">* <span class="string">'Relational records'</span>  关系记录</span><br><span class="line">  - Relational tables, highly structured 关系表，高度结构化</span><br><span class="line">* <span class="string">'Data matrix'</span>, e.g., numerical matrix, crosstabs 数据矩阵，例如数值矩阵，交叉表</span><br><span class="line">* <span class="string">'Transaction data'</span> 交易数据</span><br><span class="line">* <span class="string">'Document data'</span>: Term-frequency vector (matrix) of text documents</span><br><span class="line">  文档数据：文本文档的术语 - 频率向量（矩阵）</span><br><span class="line">* <span class="string">'Transportation network'</span> 交通网络</span><br><span class="line">* <span class="string">'World Wide Web'</span> 万维网</span><br><span class="line">* <span class="string">'Molecular Structures'</span> 分子结构</span><br><span class="line">* <span class="string">'Social or information networks'</span> 社交或信息网络</span><br></pre></td></tr></table></figure>
 <ul>
 <li><p><strong>Attribute Types</strong> </p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">* 'Nominal': categories, states, or “names of things” # 标称属性</span><br><span class="line">* 'Binary' : Nominal attribute with only 2 states (0 and 1)# 二元属性:仅有2个状态（0和1）的标称属性</span><br><span class="line">* 'Ordinal'  # 序数属性</span><br><span class="line">	- Values have a meaningful order (ranking) but magnitude between successive values is not known</span><br><span class="line">	  值具有有意义的顺序（排名），但连续值之间的大小未知</span><br><span class="line">* 'Numeric' # 数值属性</span><br><span class="line"> 	- `Interval`: Measured on a scale of equal-sized units 间隔: 按相同大小的单位测量</span><br><span class="line">	- `Ratio` 比率(倍数)</span><br><span class="line">	   We can speak of values as being an order of magnitude larger than the unit of measurement (10 K˚ is twice as high as 5 K˚).</span><br><span class="line">	   我们可以说价值比测量单位大一个数量级（10K˚是5K˚的两倍）</span><br><span class="line">* 'Discrete Attribute'  # 离散属性</span><br><span class="line">	- Sometimes, represented as integer variables 有时，表示为`整数变量`</span><br><span class="line">	- Note: Binary attributes are a special case of discrete attributes </span><br><span class="line">	  注意：二进制属性是离散属性的特例</span><br><span class="line">* 'Continuous Attribute'  # 连续属性</span><br><span class="line">	- Practically, real values can only be measured and represented using a finite number of digits</span><br><span class="line">	  实际上，只能使用有限数字来测量和表示实际值</span><br><span class="line">	- Continuous attributes are typically represented as floating-point variables</span><br><span class="line">	  连续属性通常表示为`浮点变量`</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">* <span class="string">'Nominal'</span>: categories, states, <span class="keyword">or</span> “names of things” <span class="comment"># 标称属性</span></span><br><span class="line">* <span class="string">'Binary'</span> : Nominal attribute <span class="keyword">with</span> only <span class="number">2</span> states (<span class="number">0</span> <span class="keyword">and</span> <span class="number">1</span>)<span class="comment"># 二元属性:仅有2个状态（0和1）的标称属性</span></span><br><span class="line">* <span class="string">'Ordinal'</span>  <span class="comment"># 序数属性</span></span><br><span class="line">	- Values have a meaningful order (ranking) but magnitude between successive values <span class="keyword">is</span> <span class="keyword">not</span> known</span><br><span class="line">	  值具有有意义的顺序（排名），但连续值之间的大小未知</span><br><span class="line">* <span class="string">'Numeric'</span> <span class="comment"># 数值属性</span></span><br><span class="line"> 	- `Interval`: Measured on a scale of equal-sized units 间隔: 按相同大小的单位测量</span><br><span class="line">	- `Ratio` 比率(倍数)</span><br><span class="line">	   We can speak of values <span class="keyword">as</span> being an order of magnitude larger than the unit of measurement (<span class="number">10</span> K˚ <span class="keyword">is</span> twice <span class="keyword">as</span> high <span class="keyword">as</span> <span class="number">5</span> K˚).</span><br><span class="line">	   我们可以说价值比测量单位大一个数量级（<span class="number">10</span>K˚是<span class="number">5</span>K˚的两倍）</span><br><span class="line">* <span class="string">'Discrete Attribute'</span>  <span class="comment"># 离散属性</span></span><br><span class="line">	- Sometimes, represented <span class="keyword">as</span> integer variables 有时，表示为`整数变量`</span><br><span class="line">	- Note: Binary attributes are a special case of discrete attributes </span><br><span class="line">	  注意：二进制属性是离散属性的特例</span><br><span class="line">* <span class="string">'Continuous Attribute'</span>  <span class="comment"># 连续属性</span></span><br><span class="line">	- Practically, real values can only be measured <span class="keyword">and</span> represented using a finite number of digits</span><br><span class="line">	  实际上，只能使用有限数字来测量和表示实际值</span><br><span class="line">	- Continuous attributes are typically represented <span class="keyword">as</span> floating-point variables</span><br><span class="line">	  连续属性通常表示为`浮点变量`</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h4 id="Data-statistics"><a href="#Data-statistics" class="headerlink" title="Data statistics"></a>Data statistics</h4><ul>
@@ -311,7 +311,7 @@
 </ul>
 <center><br>    <img src="/2019/01/06/数据分析与挖掘Exam/DataStatistical.png" width="600"><br>    <img src="/2019/01/06/数据分析与挖掘Exam/SimilarityDissimilarityAndProximity.png" width="600"><br></center>
 
-<h3 id="Data-preprocessing"><a href="#Data-preprocessing" class="headerlink" title="Data preprocessing"></a>Data preprocessing</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">常用方法  缺失值 处理方法</span><br></pre></td></tr></table></figure>
+<h3 id="Data-preprocessing"><a href="#Data-preprocessing" class="headerlink" title="Data preprocessing"></a>Data preprocessing</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">常用方法  缺失值 处理方法</span><br></pre></td></tr></table></figure>
 <center><br><img src="/2019/01/06/数据分析与挖掘Exam/dataPreprocess_mainTask.png" width="600"><br><img src="/2019/01/06/数据分析与挖掘Exam/DataQualityIssues.png" width="600"><br></center>
 
 <h4 id="Data-cleaning"><a href="#Data-cleaning" class="headerlink" title="Data cleaning"></a>Data cleaning</h4><ul>
@@ -341,7 +341,7 @@
 <h4 id="Data-transforming"><a href="#Data-transforming" class="headerlink" title="Data transforming"></a>Data transforming</h4><ul>
 <li>A function that maps the entire set of values of a given attribute to a new set of replacement values s.t. each old value can be identified with one of the new values  一种函数，它将给定属性的整个值集映射到一组新的替换值 使得 可以使用其中一个新值标识每个旧值</li>
 </ul>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">- Methods</span><br><span class="line">  - 'Smoothing': Remove noise from data # 平滑</span><br><span class="line">  - 'Attribute/feature construction'  # 属性/特征构建</span><br><span class="line">    - New attributes constructed from the given ones</span><br><span class="line">  - 'Aggregation': Summarization, data cube construction  # 聚合</span><br><span class="line">  - 'Normalization': Scaled to fall within a smaller, specified range  # 归一化</span><br><span class="line">    - min-max normalization</span><br><span class="line">    - z-score normalization</span><br><span class="line">    - normalization by decimal scaling</span><br><span class="line">  - 'Discretization': Concept hierarchy climbing # 离散化</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">- Methods</span><br><span class="line">  - <span class="string">'Smoothing'</span>: Remove noise <span class="keyword">from</span> data <span class="comment"># 平滑</span></span><br><span class="line">  - <span class="string">'Attribute/feature construction'</span>  <span class="comment"># 属性/特征构建</span></span><br><span class="line">    - New attributes constructed <span class="keyword">from</span> the given ones</span><br><span class="line">  - <span class="string">'Aggregation'</span>: Summarization, data cube construction  <span class="comment"># 聚合</span></span><br><span class="line">  - <span class="string">'Normalization'</span>: Scaled to fall within a smaller, specified range  <span class="comment"># 归一化</span></span><br><span class="line">    - min-max normalization</span><br><span class="line">    - z-score normalization</span><br><span class="line">    - normalization by decimal scaling</span><br><span class="line">  - <span class="string">'Discretization'</span>: Concept hierarchy climbing <span class="comment"># 离散化</span></span><br></pre></td></tr></table></figure>
 <h4 id="Data-Reduction"><a href="#Data-Reduction" class="headerlink" title="Data Reduction"></a>Data Reduction</h4><ul>
 <li><p>Obtain a reduced representation of the data set  获得数据集的缩减表示</p>
 <ul>
@@ -350,16 +350,16 @@
 </li>
 <li><p><strong>Methods for data reduction</strong></p>
 </li>
-<li><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">- 'Regression and Log-Linear Models'  （Parametric methods）</span><br><span class="line">- 'Histograms, clustering, sampling'  （Non-parametric methods）</span><br><span class="line"><span class="meta">	&gt;</span> sampling: 选择具有代表性的子集；简单随机、放回、不放回、分层抽样</span><br><span class="line">- 'Data cube aggregation' 数据立方体聚合</span><br><span class="line">- 'Data Compression'</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span> Some typical dimensionality methods</span><br><span class="line">* Principal Component Analysis ('PCA') </span><br><span class="line">* Supervised and nonlinear techniques</span><br><span class="line">	- 'Feature subset selection' 找寻合适子集(仅收集与分析任务相关的属性)</span><br><span class="line">	- 'Feature creation'</span><br><span class="line">		- `Attribute extraction`  高维映射至低维(降维)</span><br><span class="line">		- `Attribute construction`</span><br></pre></td></tr></table></figure>
+<li><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># data reduction </span></span><br><span class="line">- <span class="string">'Regression and Log-Linear Models'</span>  （Parametric methods）</span><br><span class="line">- <span class="string">'Histograms, clustering, sampling'</span>  （Non-parametric methods）</span><br><span class="line">	&gt; sampling: 选择具有代表性的子集；简单随机、放回、不放回、分层抽样</span><br><span class="line">- <span class="string">'Data cube aggregation'</span> 数据立方体聚合</span><br><span class="line">- <span class="string">'Data Compression'</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Some typical dimensionality methods</span></span><br><span class="line">* Principal Component Analysis (<span class="string">'PCA'</span>) </span><br><span class="line">* Supervised <span class="keyword">and</span> nonlinear techniques</span><br><span class="line">	- <span class="string">'Feature subset selection'</span> 找寻合适子集(仅收集与分析任务相关的属性)</span><br><span class="line">	- <span class="string">'Feature creation'</span></span><br><span class="line">		- `Attribute extraction`  高维映射至低维(降维)</span><br><span class="line">		- `Attribute construction`</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><center><br><img src="/2019/01/06/数据分析与挖掘Exam/Summary_datapreprocessing.png" width="600"><br></center>
 
-<h2 id="classification"><a href="#classification" class="headerlink" title="classification"></a>classification</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">构建模型 应用模型(预测) 描述过程</span><br></pre></td></tr></table></figure>
+<h2 id="classification"><a href="#classification" class="headerlink" title="classification"></a>classification</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">构建模型 应用模型(预测) 描述过程</span><br></pre></td></tr></table></figure>
 <ul>
 <li><p>What is classification?</p>
-<p>根据训练集和类标签（分类属性中的值）构建模型，并将其用于分类新数据，预测其标签。</p>
+<p>根据训练集和类标签（分类属性中的值）构建模型，并将其用于分析新数据，预测其标签。</p>
 <ul>
 <li><p>Supervised learning</p>
 <p><strong>监督学习</strong>是机器学习任务的一种。它<code>从有标记的训练数据中推导出预测标签</code>。有标记的训练数据是指每个训练实例都包括输入和期望的输出。一句话：<strong>给定数据，预测标签</strong>。(分类、回归)</p>
@@ -383,7 +383,7 @@
 <h3 id="Algorithms"><a href="#Algorithms" class="headerlink" title="Algorithms"></a>Algorithms</h3><blockquote>
 <p>1.决策树：基于规则   2.贝叶斯：基于概率  3.ANN: 机器学习最优化 </p>
 </blockquote>
-<figure class="highlight plain"><figcaption><span>思路 优缺点 </span></figcaption><table><tr><td class="code"><pre><span class="line">算法 思路 优缺点</span><br><span class="line">考 朴素贝叶斯</span><br><span class="line">解释 svm ann 大概了解DeepLearning 理论描述</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">算法 思路 优缺点</span><br><span class="line">考 朴素贝叶斯</span><br><span class="line">解释 svm ann 大概了解DeepLearning 理论描述</span><br></pre></td></tr></table></figure>
 <h4 id="Decision-tree-ID3-C4-5-CART"><a href="#Decision-tree-ID3-C4-5-CART" class="headerlink" title="Decision tree-ID3,C4.5,CART"></a>Decision tree-ID3,C4.5,CART</h4><ul>
 <li><p>Algorithm Step</p>
 <p>树以自上而下，递归，分而治之的方式构建</p>
@@ -399,7 +399,7 @@
 </ul>
 </li>
 <li><p>Basic Concepts</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">- Entropy 信息熵:  表征混乱程度 </span><br><span class="line">- Conditional Entropy条件熵: 在已知随机变量X的条件下随机变量Y的不确定性(概率)</span><br><span class="line">- Mutual Information互信息/Information gain信息增益: 得知特征X的信息而使得类Y的信息的不确定性减少的程度(越大越好) -&gt;&gt; 'ID3决策树'</span><br><span class="line">- Gain Ratio信息增益比: 解决使用信息增益存在偏向于选择取值较多的特征的问题(越大越好) -&gt;&gt; 'C4.5决策树' </span><br><span class="line">- GINI index基尼指数： 表征不纯度(越小越好)  -&gt;&gt;  'CART分类树'</span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">- Entropy 信息熵:  表征混乱程度 </span><br><span class="line">- Conditional Entropy条件熵: 在已知随机变量X的条件下随机变量Y的不确定性(概率)</span><br><span class="line">- Mutual Information互信息/Information gain信息增益: 得知特征X的信息而使得类Y的信息的不确定性减少的程度(越大越好) -&gt;&gt; 'ID3决策树'</span><br><span class="line">- Gain Ratio信息增益比: 解决使用信息增益存在偏向于选择取值较多的特征的问题(越大越好) -&gt;&gt; 'C4.5决策树' </span><br><span class="line">- GINI index基尼指数： 表征不纯度(越小越好)  -&gt;&gt;  'CART分类树'</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>决策树算法比较</p>
 <p>| 算法 |  支持模型  | 树结构 |     特征选择     | 连续值处理 | 缺失值处理 |  剪枝  |<br>| :–: | :——–: | :—-: | :————–: | :——–: | :——–: | :—-: |<br>| ID3  |    分类    | 多叉树 |     信息增益     |   不支持   |   不支持   | 不支持 |<br>| C4.5 |    分类    | 多叉树 |    信息增益比    |    支持    |    支持    |  支持  |<br>| CART | 分类，回归 | 二叉树 | 基尼系数，均方差 |    支持    |    支持    |  支持  |</p>
@@ -414,7 +414,7 @@
 <li><p><strong>贝叶斯定理：</strong> $P(H|X)=\frac{P(X|H)P(H)}{P(X)}$</p>
 </li>
 <li><p>Naïve Bayesian Classifier</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span> Advantages</span><br><span class="line"> Easy to implement  易于实现</span><br><span class="line"> Good results obtained in most of the cases 大多数情况下获得了良好的结果</span><br><span class="line"><span class="meta">#</span> Disadvantages</span><br><span class="line"> Assumption: class conditional independence, therefore loss of accuracy类条件独立-&gt;准确率缺失</span><br><span class="line"> Practically, dependencies exist among variables</span><br><span class="line">  实际上，变量之间存在'依赖'关系</span><br><span class="line">	 E.g., hospitals: patients: Profile: age, family history, etc. Symptoms: fever, cough etc., Disease: lung cancer, diabetes,etc.</span><br><span class="line">	 Dependencies among these cannot be modeled by Naïve Bayesian Classifier</span><br><span class="line">      这些依赖关系不能用朴素贝叶斯分类器建模</span><br><span class="line"><span class="meta">#</span> How to deal with these dependencies? Bayesian Belief Networks</span><br><span class="line">  如何处理这些依赖关系？贝叶斯置信网络</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Advantages</span></span><br><span class="line"> Easy to implement  易于实现</span><br><span class="line"> Good results obtained <span class="keyword">in</span> most of the cases 大多数情况下获得了良好的结果</span><br><span class="line"><span class="comment"># Disadvantages</span></span><br><span class="line"> Assumption: class conditional independence, therefore loss of accuracy类条件独立-&gt;准确率缺失</span><br><span class="line"> Practically, dependencies exist among variables</span><br><span class="line">  实际上，变量之间存在<span class="string">'依赖'</span>关系</span><br><span class="line">	 E.g., hospitals: patients: Profile: age, family history, etc. Symptoms: fever, cough etc., Disease: lung cancer, diabetes,etc.</span><br><span class="line">	 Dependencies among these cannot be modeled by Naïve Bayesian Classifier</span><br><span class="line">      这些依赖关系不能用朴素贝叶斯分类器建模</span><br><span class="line"><span class="comment"># How to deal with these dependencies? Bayesian Belief Networks</span></span><br><span class="line">  如何处理这些依赖关系？贝叶斯置信网络</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h4 id="ANN"><a href="#ANN" class="headerlink" title="ANN"></a>ANN</h4><ul>
@@ -440,7 +440,7 @@
 </blockquote>
 </li>
 </ul>
-<h4 id="Cross-evaluation"><a href="#Cross-evaluation" class="headerlink" title="Cross-evaluation"></a>Cross-evaluation</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span> Cross-validation (k-fold, where k = 10 is most popular)</span><br><span class="line">- 随机将数据划分为k个互斥的子集，每个子集的大小大致相等</span><br><span class="line">- 在第i次迭代中，使用Di作为测试集，使用其他作为训练集</span><br><span class="line">- 留一个：k折叠，其中k = '#' 元组的数量，对于小尺寸数据</span><br><span class="line">- *分层交叉验证*：折叠是分层的，因此每个折叠中的类分布与初始数据中的类别分布大致相同</span><br></pre></td></tr></table></figure>
+<h4 id="Cross-evaluation"><a href="#Cross-evaluation" class="headerlink" title="Cross-evaluation"></a>Cross-evaluation</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Cross-validation (k-fold, where k = 10 is most popular)</span></span><br><span class="line">- 随机将数据划分为k个互斥的子集，每个子集的大小大致相等</span><br><span class="line">- 在第i次迭代中，使用Di作为测试集，使用其他作为训练集</span><br><span class="line">- 留一个：k折叠，其中k = <span class="string">'#'</span> 元组的数量，对于小尺寸数据</span><br><span class="line">- *分层交叉验证*：折叠是分层的，因此每个折叠中的类分布与初始数据中的类别分布大致相同</span><br></pre></td></tr></table></figure>
 <h3 id="Ensemble-methods"><a href="#Ensemble-methods" class="headerlink" title="Ensemble methods"></a>Ensemble methods</h3><ul>
 <li>使用模型组合来提高准确性</li>
 </ul>
@@ -471,7 +471,7 @@
 </ul>
 <h3 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h3><h4 id="Apriori"><a href="#Apriori" class="headerlink" title="Apriori"></a>Apriori</h4><ul>
 <li><p>Apriori定律</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">1. 如果一个集合是频繁项集，则它的所有'子集'都是频繁项集。</span><br><span class="line">2. 如果一个集合不是频繁项集，则它的所有'超集'都不是频繁项集。</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> 如果一个集合是频繁项集，则它的所有<span class="string">'子集'</span>都是频繁项集。</span><br><span class="line"><span class="number">2.</span> 如果一个集合不是频繁项集，则它的所有<span class="string">'超集'</span>都不是频繁项集。</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Step</p>
 <center><br><img src="/2019/01/06/数据分析与挖掘Exam/AprioriExample.png" width="600"><br></center>
@@ -481,12 +481,12 @@
 <h4 id="FP-growth"><a href="#FP-growth" class="headerlink" title="FP-growth"></a>FP-growth</h4><p>FpGrowth算法通过构造一个树结构来压缩数据记录，使得挖掘频繁项集只需要<strong>扫描两次数据记录</strong>，而且该算法不需要生成候选集合，所以效率会比较高。</p>
 <ul>
 <li><p><strong>Method</strong></p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"> For each frequent item, construct its conditional pattern-base, and then its conditional FP-tree</span><br><span class="line">  对于每个频繁项，'构造其条件模式库'，然后'构造其条件FP树'</span><br><span class="line"> Repeat the process on 'each' newly created conditional FP-tree</span><br><span class="line">  对每个新创建的条件FP树重复此过程 ("Recursion: Mining Each Conditional FP-tree")</span><br><span class="line"> Until the resulting FP-tree is empty, or it contains only one path—single path will generate all the combinations of its sub-paths, each of which is a frequent pattern</span><br><span class="line">  在生成的FP树为空之前，或者它只包含一个路径 - 单个路径将生成其子路径的所有组合，'每个路径都是一个频繁的模式'</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"> For each frequent item, construct its conditional pattern-base, <span class="keyword">and</span> then its conditional FP-tree</span><br><span class="line">  对于每个频繁项，<span class="string">'构造其条件模式库'</span>，然后<span class="string">'构造其条件FP树'</span></span><br><span class="line"> Repeat the process on <span class="string">'each'</span> newly created conditional FP-tree</span><br><span class="line">  对每个新创建的条件FP树重复此过程 (<span class="string">"Recursion: Mining Each Conditional FP-tree"</span>)</span><br><span class="line"> Until the resulting FP-tree <span class="keyword">is</span> empty, <span class="keyword">or</span> it contains only one path—single path will generate all the combinations of its sub-paths, each of which <span class="keyword">is</span> a frequent pattern</span><br><span class="line">  在生成的FP树为空之前，或者它只包含一个路径 - 单个路径将生成其子路径的所有组合，<span class="string">'每个路径都是一个频繁的模式'</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h3 id="Summary-2"><a href="#Summary-2" class="headerlink" title="Summary"></a>Summary</h3><center><br><img src="/2019/01/06/数据分析与挖掘Exam/fp_Summary.png" width="600"><br></center>
 
-<h2 id="Clustering"><a href="#Clustering" class="headerlink" title="Clustering"></a>Clustering</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">kmeans 相关算法</span><br><span class="line">分析比较</span><br><span class="line">ap基本概念</span><br></pre></td></tr></table></figure>
+<h2 id="Clustering"><a href="#Clustering" class="headerlink" title="Clustering"></a>Clustering</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">kmeans 相关算法</span><br><span class="line">分析比较</span><br><span class="line">ap基本概念</span><br></pre></td></tr></table></figure>
 <ul>
 <li><p>What is clustering</p>
 <p>聚类就是按照某个特定标准(如距离准则)<strong>把一个数据集分割成不同的类或簇</strong>，使得同一个簇内的数据对象的<code>相似性</code>尽可能大，同时不在同一个簇中的数据对象的<code>差异性</code>也尽可能地大。即聚类后<code>同一类的数据尽可能聚集到一起，不同数据尽量分离</code>。</p>
@@ -521,7 +521,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="Hierarchical-based—two-ways"><a href="#Hierarchical-based—two-ways" class="headerlink" title="Hierarchical-based—two ways"></a>Hierarchical-based—two ways</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">- '凝聚'：从单一集群开始，一次连续合并两个集群，构建'自下而上'的集群层次结构</span><br><span class="line">- '分裂'：从一个庞大的宏集群开始，将其连续分成两组，生成一个'自上而下'的集群层次结构</span><br></pre></td></tr></table></figure>
+<h4 id="Hierarchical-based—two-ways"><a href="#Hierarchical-based—two-ways" class="headerlink" title="Hierarchical-based—two ways"></a>Hierarchical-based—two ways</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">- <span class="string">'凝聚'</span>：从单一集群开始，一次连续合并两个集群，构建<span class="string">'自下而上'</span>的集群层次结构</span><br><span class="line">- <span class="string">'分裂'</span>：从一个庞大的宏集群开始，将其连续分成两组，生成一个<span class="string">'自上而下'</span>的集群层次结构</span><br></pre></td></tr></table></figure>
 <h5 id="Brich"><a href="#Brich" class="headerlink" title="Brich"></a>Brich</h5><center><br><img src="/2019/01/06/数据分析与挖掘Exam/CFTree.png" width="500"><br></center>
 
 <h4 id="Density-based—DBSCAN"><a href="#Density-based—DBSCAN" class="headerlink" title="Density-based—DBSCAN"></a>Density-based—DBSCAN</h4><center><br><img src="/2019/01/06/数据分析与挖掘Exam/DBSCAN_BasicConcept.png" width="500"><br></center>
@@ -533,7 +533,7 @@
 </blockquote>
 <h3 id="Summary-3"><a href="#Summary-3" class="headerlink" title="Summary"></a>Summary</h3><center><br><img src="/2019/01/06/数据分析与挖掘Exam/clustering_Summary.png" width="600"><br><img src="/2019/01/06/数据分析与挖掘Exam/clustering_Summary2.png" width="600"><br></center>
 
-<h2 id="Graph-clustering"><a href="#Graph-clustering" class="headerlink" title="Graph clustering"></a>Graph clustering</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">谱聚类 modularity模块化 复杂网络的概念</span><br></pre></td></tr></table></figure>
+<h2 id="Graph-clustering"><a href="#Graph-clustering" class="headerlink" title="Graph clustering"></a>Graph clustering</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">谱聚类 modularity模块化 复杂网络的概念</span><br></pre></td></tr></table></figure>
 <ul>
 <li><p>What is graph clustering </p>
 <ul>
@@ -544,7 +544,7 @@
 <p>和特征聚类不同，图聚类比较难以观察，部分算法会以各点之间的距离作为突破口，可以这样形容：张三，是王五的好朋友，刚认识李四，对赵六很是反感。那么，对于该节点，我们无法直接得出他的特征，但能知道他的<code>活动圈</code>。利用图聚类，可以将同一社交范围的人聚合到一起。</p>
 </li>
 <li><p>Community </p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">'k-clique community': Union of all k-cliques that can be `reached from each other` through a series of adjacent k-cliques.</span><br><span class="line">k-派系连通：一个k-派系可以通过若干个相邻的k-派系到达另一个k-派系，则称这两个k-派系彼此联通</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">'k-clique community'</span>: Union of all k-cliques that can be `reached <span class="keyword">from</span> each other` through a series of adjacent k-cliques.</span><br><span class="line">k-派系连通：一个k-派系可以通过若干个相邻的k-派系到达另一个k-派系，则称这两个k-派系彼此联通</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Module  </p>
 </li>
@@ -553,9 +553,9 @@
 </ul>
 <h3 id="Algorithms-2"><a href="#Algorithms-2" class="headerlink" title="Algorithms"></a>Algorithms</h3><h4 id="CPM"><a href="#CPM" class="headerlink" title="CPM"></a>CPM</h4><center class="half"><br><img src="/2019/01/06/数据分析与挖掘Exam/CPM1.png" width="300"><br><img src="/2019/01/06/数据分析与挖掘Exam/CPM2.png" width="300"><br></center>
 
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">Step1: 找到网络中大小为K的完全子图 Locate maximal cliques </span><br><span class="line">Step2: 将每个完全子图定义为一个节点，建立一个重叠矩阵</span><br><span class="line">Step3: 将重叠矩阵变成社团邻接矩阵(其中重叠矩阵中对角线小于k、非对角线小于k-1的元素全置为0,所有非0项置为1)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">Step1: 找到网络中大小为K的完全子图 Locate maximal cliques </span><br><span class="line">Step2: 将每个完全子图定义为一个节点，建立一个重叠矩阵</span><br><span class="line">Step3: 将重叠矩阵变成社团邻接矩阵(其中重叠矩阵中对角线小于k、非对角线小于k<span class="number">-1</span>的元素全置为<span class="number">0</span>,所有非<span class="number">0</span>项置为<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
 <h4 id="Spectral-clustering"><a href="#Spectral-clustering" class="headerlink" title="Spectral clustering"></a>Spectral clustering</h4><p>谱聚类（Spectral Clustering），就是先用<code>Laplacian eigenmaps对数据降维</code>（简单地说，就是先将数据转换成邻接矩阵或相似性矩阵，再转换成Laplacian矩阵，再对Laplacian矩阵进行特征分解，把最小的K个特征向量排列在一起），然后再<code>使用k-means</code>完成聚类。谱聚类是个很好的方法，效果通常比k-means好，计算复杂度还低，这都要归功于降维的作用。 </p>
-<h4 id="GNandQ"><a href="#GNandQ" class="headerlink" title="GNandQ"></a>GNandQ</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">1. 计算网络中所有边缘的中介性.</span><br><span class="line">2. 去除间隙最大的边缘.</span><br><span class="line">3. 重新计算受移除影响的所有边缘的间隙.</span><br><span class="line">4. 从步骤2重复，直到没有边缘.</span><br></pre></td></tr></table></figure>
+<h4 id="GNandQ"><a href="#GNandQ" class="headerlink" title="GNandQ"></a>GNandQ</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> 计算网络中所有边缘的中介性.</span><br><span class="line"><span class="number">2.</span> 去除间隙最大的边缘.</span><br><span class="line"><span class="number">3.</span> 重新计算受移除影响的所有边缘的间隙.</span><br><span class="line"><span class="number">4.</span> 从步骤<span class="number">2</span>重复，直到没有边缘.</span><br></pre></td></tr></table></figure>
 <h4 id="MCL"><a href="#MCL" class="headerlink" title="MCL"></a>MCL</h4><p>在MCL中， <strong>Expansion</strong> 和 <strong>Inflation</strong> 将不断的交替进行，<strong>Expansion</strong> 使得不同的区域之间的联系加强，而 <strong>Inflation</strong> 则不断的<code>分化</code>各点之间的联系(强者恒强，弱者恒弱)。经过多次迭代，将渐渐出现聚集现象，以此便达到了聚类的效果。</p>
 <h3 id="Summary-4"><a href="#Summary-4" class="headerlink" title="Summary"></a>Summary</h3><center><br><img src="/2019/01/06/数据分析与挖掘Exam/graphMining_Summary.png" width="600"><br><img src="/2019/01/06/数据分析与挖掘Exam/CommunityDetection_Summary.png" width="600"><br></center>
 
@@ -619,7 +619,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2019-01-08T03:32:38.266Z" itemprop="dateUpdated">2019-01-08 11:32:38</time>
+    Last updated: <time datetime="2019-01-08T08:40:56.190Z" itemprop="dateUpdated">2019-01-08 16:40:56</time>
 </span><br>
 
 
