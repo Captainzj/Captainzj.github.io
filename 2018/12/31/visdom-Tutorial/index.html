@@ -30,7 +30,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2018/12/31/visdom-Tutorial/vis.text().png">
 <meta property="og:image" content="http://yoursite.com/2018/12/31/visdom-Tutorial/demo.png">
-<meta property="og:updated_time" content="2019-01-01T03:27:39.605Z">
+<meta property="og:updated_time" content="2019-01-10T09:17:29.763Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="visdom_Tutorial">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
@@ -121,7 +121,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="検索">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -187,13 +187,13 @@
             <p>【阅读时间】XXX min XXX words<br>【阅读内容】……</p>
 <a id="more"></a>
 <p>Github linkage: <a href="https://github.com/facebookresearch" target="_blank" rel="noopener">facebookresearch</a>/<a href="https://github.com/facebookresearch/visdom" target="_blank" rel="noopener">visdom</a></p>
+<p>Tutorial：<a href="https://www.pytorchtutorial.com/pytorch-visdom/" target="_blank" rel="noopener">PyTorch 可视化工具 Visdom 介绍</a></p>
 <h3 id="Setup"><a href="#Setup" class="headerlink" title="Setup"></a>Setup</h3><h4 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> Install Python server and client，如果您使用python的话，装这一个就可以了。</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> pip install visdom</span></span><br></pre></td></tr></table></figure>
 <h4 id="Startup"><a href="#Startup" class="headerlink" title="Startup"></a>Startup</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> visdom</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> or (The visdom <span class="built_in">command</span> is equivalent to running python -m visdom.server)</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> python -m visdom.server</span></span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>If the above does not work, try using an SSH tunnel to your server by adding the following line to your local <code>~/.ssh/config</code>: <code>LocalForward 127.0.0.1:8097 127.0.0.1:8097</code></p>
 </blockquote>
-<h4 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> visdom</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">vis = visdom.Visdom()</span><br><span class="line">vis.text(<span class="string">'Hello, world!'</span>)</span><br><span class="line">vis.image(np.ones((<span class="number">3</span>, <span class="number">10</span>, <span class="number">10</span>)))</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> visdom</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>vis = visdom.Visdom()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>vis.text(<span class="string">'Hello, world!'</span>)</span><br><span class="line"><span class="string">'window_36ef496c02a28c'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>vis.image(np.ones((<span class="number">3</span>, <span class="number">10</span>, <span class="number">10</span>)))</span><br><span class="line"><span class="string">'window_36ef496f76bad6'</span></span><br></pre></td></tr></table></figure>
+<h4 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> visdom</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>vis = visdom.Visdom()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>vis.text(<span class="string">'Hello, world!'</span>)</span><br><span class="line"><span class="string">'window_36ef496c02a28c'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>vis.image(np.ones((<span class="number">3</span>, <span class="number">10</span>, <span class="number">10</span>)))</span><br><span class="line"><span class="string">'window_36ef496f76bad6'</span></span><br></pre></td></tr></table></figure>
 <center><br>    <img src="/2018/12/31/visdom-Tutorial/vis.text().png" width="600"><br></center>
 
 <h4 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">python example/demo.py</span><br><span class="line">th example/demo1.lua</span><br><span class="line">th example/demo2.lua</span><br></pre></td></tr></table></figure>
@@ -222,7 +222,7 @@
     <div class="content">
         
 <span class="post-time">
-    最終更新：<time datetime="2019-01-01T03:27:39.605Z" itemprop="dateUpdated">2019-01-01 11:27:39</time>
+    Last updated: <time datetime="2019-01-10T09:17:29.763Z" itemprop="dateUpdated">2019-01-10 17:17:29</time>
 </span><br>
 
 
@@ -388,7 +388,7 @@
             
                 <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
             
-            <span>このブログの内容物は<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja">クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際ライセンスの下に提供されています</a></span>
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
         </p>
     </div>
     <div class="bottom">
