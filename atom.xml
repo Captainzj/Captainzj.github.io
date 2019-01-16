@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-01-16T07:43:47.901Z</updated>
+  <updated>2019-01-16T08:09:46.652Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2019/01/16/torchvision-models/"/>
     <id>http://yoursite.com/2019/01/16/torchvision-models/</id>
     <published>2019-01-16T06:41:27.000Z</published>
-    <updated>2019-01-16T07:43:47.901Z</updated>
+    <updated>2019-01-16T08:09:46.652Z</updated>
     
     <content type="html"><![CDATA[<p>【阅读时间】XXX min XXX words<br>【阅读内容】……</p><a id="more"></a><p><a href="https://pytorch.org/docs/stable/torchvision/models.html" target="_blank" rel="noopener">torchvision.models — PyTorch master documentation</a></p><p>The models subpackage contains definitions for the following model architectures:</p><ul><li><p><a href="https://arxiv.org/abs/1404.5997" target="_blank" rel="noopener">AlexNet</a></p><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/2019/01/16/torchvision-models/alexnet.png" alt="alexnet" title="">                </div>                <div class="image-caption">alexnet</div>            </figure></li><li><p><a href="https://arxiv.org/abs/1409.1556" target="_blank" rel="noopener">VGG</a></p><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/2019/01/16/torchvision-models/vgg.png" alt="vgg" title="">                </div>                <div class="image-caption">vgg</div>            </figure></li><li><p><a href="https://arxiv.org/abs/1512.03385" target="_blank" rel="noopener">ResNet</a></p><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/2019/01/16/torchvision-models/ResNet_Structure.png" alt="ResNet_Structure" title="">                </div>                <div class="image-caption">ResNet_Structure</div>            </figure></li><li><p><a href="https://arxiv.org/abs/1602.07360" target="_blank" rel="noopener">SqueezeNet</a></p><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/2019/01/16/torchvision-models/squeezenet.png" alt="squeezenet" title="">                </div>                <div class="image-caption">squeezenet</div>            </figure></li><li><p><a href="https://arxiv.org/abs/1608.06993" target="_blank" rel="noopener">DenseNet</a></p><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/2019/01/16/torchvision-models/DenseNet_Structure.png" alt="DenseNet_Structure" title="">                </div>                <div class="image-caption">DenseNet_Structure</div>            </figure></li><li><p><a href="https://arxiv.org/abs/1512.00567" target="_blank" rel="noopener">Inception v3</a></p><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/2019/01/16/torchvision-models/Inception.png" alt="Inception" title="">                </div>                <div class="image-caption">Inception</div>            </figure></li></ul>]]></content>
     
