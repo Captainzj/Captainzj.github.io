@@ -14,24 +14,32 @@
     
     
     
-    <title>Pokémon_Model | Go Further | Stay Hungry, Stay Foolish</title>
+    <title>torchvision.models.md | Go Further | Stay Hungry, Stay Foolish</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#142421">
     
     
-    <meta name="keywords" content="">
+    <meta name="keywords" content="PyTorch">
     <meta name="description" content="【阅读时间】XXX min XXX words【阅读内容】……">
+<meta name="keywords" content="PyTorch">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Pokémon_Model">
-<meta property="og:url" content="http://yoursite.com/2019/01/09/Pokemon-Model/index.html">
+<meta property="og:title" content="torchvision.models.md">
+<meta property="og:url" content="http://yoursite.com/2019/01/16/torchvision-models/index.html">
 <meta property="og:site_name" content="Go Further">
 <meta property="og:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-10T08:57:38.852Z">
+<meta property="og:image" content="http://yoursite.com/2019/01/16/torchvision-models/alexnet.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/16/torchvision-models/vgg.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/16/torchvision-models/ResNet_Structure.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/16/torchvision-models/squeezenet.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/16/torchvision-models/DenseNet_Structure.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/16/torchvision-models/Inception.png">
+<meta property="og:updated_time" content="2019-01-16T07:43:47.901Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Pokémon_Model">
+<meta name="twitter:title" content="torchvision.models.md">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
+<meta name="twitter:image" content="http://yoursite.com/2019/01/16/torchvision-models/alexnet.png">
     
         <link rel="alternate" type="application/atom+xml" title="Go Further" href="/atom.xml">
     
@@ -112,7 +120,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">Pokémon_Model</div>
+        <div class="flex-col header-title ellipsis">torchvision.models.md</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -134,15 +142,13 @@
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">Pokémon_Model</h1>
+        <h1 class="title">torchvision.models.md</h1>
         <h5 class="subtitle">
             
-                <time datetime="2019-01-09T13:27:32.000Z" itemprop="datePublished" class="page-time">
-  2019-01-09
+                <time datetime="2019-01-16T06:41:27.000Z" itemprop="datePublished" class="page-time">
+  2019-01-16
 </time>
 
-
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Have-Fun/">Have_Fun</a></li></ul>
 
             
         </h5>
@@ -157,17 +163,15 @@
 <div class="container body-wrap">
     
 
-<article id="post-Pokemon-Model"
+<article id="post-torchvision-models"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">Pokémon_Model</h1>
+        <h1 class="post-card-title">torchvision.models.md</h1>
         <div class="post-meta">
-            <time class="post-time" title="2019-01-09 21:27:32" datetime="2019-01-09T13:27:32.000Z"  itemprop="datePublished">2019-01-09</time>
+            <time class="post-time" title="2019-01-16 14:41:27" datetime="2019-01-16T06:41:27.000Z"  itemprop="datePublished">2019-01-16</time>
 
             
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Have-Fun/">Have_Fun</a></li></ul>
-
 
 
             
@@ -180,11 +184,64 @@
         <div class="post-content" id="post-content" itemprop="postContent">
             <p>【阅读时间】XXX min XXX words<br>【阅读内容】……</p>
 <a id="more"></a>
-<p>Tutorial：</p>
-<p><a href="https://zhuanlan.zhihu.com/p/25868154" target="_blank" rel="noopener">看图判断口袋妖怪属性，学会用卷积神经网络分类</a></p>
-<p>Model Source：</p>
-<p><a href="https://veekun.com/dex/downloads" target="_blank" rel="noopener">veekun</a></p>
-<p><a href="http://www.element3ds.com/thread-93669-1-1.html" target="_blank" rel="noopener">《口袋妖怪XY》全套3D模型</a></p>
+<p><a href="https://pytorch.org/docs/stable/torchvision/models.html" target="_blank" rel="noopener">torchvision.models — PyTorch master documentation</a></p>
+<p>The models subpackage contains definitions for the following model architectures:</p>
+<ul>
+<li><p><a href="https://arxiv.org/abs/1404.5997" target="_blank" rel="noopener">AlexNet</a></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/2019/01/16/torchvision-models/alexnet.png" alt="alexnet" title="">
+                </div>
+                <div class="image-caption">alexnet</div>
+            </figure>
+</li>
+<li><p><a href="https://arxiv.org/abs/1409.1556" target="_blank" rel="noopener">VGG</a></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/2019/01/16/torchvision-models/vgg.png" alt="vgg" title="">
+                </div>
+                <div class="image-caption">vgg</div>
+            </figure>
+</li>
+<li><p><a href="https://arxiv.org/abs/1512.03385" target="_blank" rel="noopener">ResNet</a></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/2019/01/16/torchvision-models/ResNet_Structure.png" alt="ResNet_Structure" title="">
+                </div>
+                <div class="image-caption">ResNet_Structure</div>
+            </figure>
+</li>
+<li><p><a href="https://arxiv.org/abs/1602.07360" target="_blank" rel="noopener">SqueezeNet</a></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/2019/01/16/torchvision-models/squeezenet.png" alt="squeezenet" title="">
+                </div>
+                <div class="image-caption">squeezenet</div>
+            </figure>
+</li>
+<li><p><a href="https://arxiv.org/abs/1608.06993" target="_blank" rel="noopener">DenseNet</a></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/2019/01/16/torchvision-models/DenseNet_Structure.png" alt="DenseNet_Structure" title="">
+                </div>
+                <div class="image-caption">DenseNet_Structure</div>
+            </figure>
+</li>
+<li><p><a href="https://arxiv.org/abs/1512.00567" target="_blank" rel="noopener">Inception v3</a></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/2019/01/16/torchvision-models/Inception.png" alt="Inception" title="">
+                </div>
+                <div class="image-caption">Inception</div>
+            </figure>
+</li>
+</ul>
 
         </div>
 
@@ -193,7 +250,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2019-01-10T08:57:38.852Z" itemprop="dateUpdated">2019-01-10 16:57:38</time>
+    Last updated: <time datetime="2019-01-16T07:43:47.901Z" itemprop="dateUpdated">2019-01-16 15:43:47</time>
 </span><br>
 
 
@@ -217,6 +274,8 @@
 
         <div class="post-footer">
             
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PyTorch/">PyTorch</a></li></ul>
+
 
             
 <div class="page-share-wrap">
@@ -225,7 +284,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/01/09/Pokemon-Model/&title=《Pokémon_Model》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/01/16/torchvision-models/&title=《torchvision.models.md》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -235,22 +294,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/01/09/Pokemon-Model/&title=《Pokémon_Model》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/01/16/torchvision-models/&title=《torchvision.models.md》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/01/09/Pokemon-Model/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/01/16/torchvision-models/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Pokémon_Model》 — Go Further&url=http://yoursite.com/2019/01/09/Pokemon-Model/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《torchvision.models.md》 — Go Further&url=http://yoursite.com/2019/01/16/torchvision-models/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2019/01/09/Pokemon-Model/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2019/01/16/torchvision-models/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -270,21 +329,14 @@
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between">
-  
-    <div class="waves-block waves-effect prev">
-      <a href="/2019/01/16/torchvision-models/" id="post-prev" class="post-nav-link">
-        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">torchvision.models.md</h4>
-      </a>
-    </div>
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/2019/01/06/数据分析与挖掘Exam/" id="post-next" class="post-nav-link">
+      <a href="/2019/01/09/Pokemon-Model/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">数据分析与挖掘Exam</h4>
+        <h4 class="title">Pokémon_Model</h4>
       </a>
     </div>
   
@@ -381,7 +433,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/01/09/Pokemon-Model/&title=《Pokémon_Model》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/01/16/torchvision-models/&title=《torchvision.models.md》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -391,22 +443,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/01/09/Pokemon-Model/&title=《Pokémon_Model》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/01/16/torchvision-models/&title=《torchvision.models.md》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/01/09/Pokemon-Model/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/01/16/torchvision-models/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Pokémon_Model》 — Go Further&url=http://yoursite.com/2019/01/09/Pokemon-Model/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《torchvision.models.md》 — Go Further&url=http://yoursite.com/2019/01/16/torchvision-models/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2019/01/09/Pokemon-Model/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2019/01/16/torchvision-models/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -417,7 +469,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACMUlEQVR42u3aQW7DMAwFUd//0inQVReNMl+UApsarwKnlv1cgKFIXhc+Xr/H+PPfM+T8a3hcOw4ZMmQ8lkGWe3d7vmb6DDFVhgwZBzB4kCXfktc0DsT82WTIkCGDBMT65/QFyZAhQ0YaUvlqt/vdkCFDxqMYPIGrbG7JFnf7XlyGDBkPZKxqDOxOGb/U35AhQ8bNGK+lBy/MLb6vDBkyWjPSlK6ewPFUkrygi0x5yJAhowVjXMYiW9lKGa7eFpUhQ0ZvBgmL4zM8NVwbjtG/RoYMGS0YvOmYXjXXKiitI0OGjKYMEljJorzZmZbnUMiWIUPGkYx0hIufTwtqQX9DhgwZTRlkboFnYvx85Y4yZMg4jbGjrFZJFtMXt7E6KEOGjFsy0q0pHxEja6ZtzrcBV4YMGa0ZOxoDacGOsNHvhgwZMhox+DBEunGdo/KUUYYMGecw6ltNUvQnKSNHXnNFRRkyZDyWMbdE2lAkgHTr++FpZciQcQAjvXG6TtpCSDfYMmTI6MfgQbbSJKhsZdFzypAh4wDGXBBMRy6CEYqwtCdDhozejLlSV2X8AmWpfNhChgwZrRmVJG9V45OsjGZGZMiQ0ZRR6QnWx8XScY16sJYhQ8ZzGfXQmZbG0rEw9CplyJBxAIM0Ayb7oosSuw8wGTJkyAhHItJr003yP/eVIUOGjKlEcPz36T57cmZEhgwZjRjkQfnABG8tpFfJkCHjTEalMcDDKJ/7qLwaGTJktGP8AMONapjwN1CgAAAAAElFTkSuQmCC" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACKklEQVR42u3aS5LCMAxFUfa/aXraE5z7JEOV5ZsRFQj2yUClj18vfL2X1/r3/+98+nZ9f9slQ4aMYxlki+ttdVb59G38+mTIkHEB49PC68/8qfWK6VoyZMiQQf6uliamW5QhQ4aMfsAl6SNPMWtUGTJk3MMgRSZvnNUC6I9qcRkyZBzI4M2y33/+ynxDhgwZRzHe4bVrnMBDKtqVDBkyRjN4gOPHI74xNkD7kSFDxgWM9BhELTdLk8KgZJUhQ8ZoBt9uGnw77TYSylHvUIYMGUMZJNjtGh7wVDIOuDJkyLiGUTtswVt1aVL4AJMhQ8ZQRlqgpsGRkPjYIO4IypAh43BG2t7iIZJvfb1dVNbKkCFjNKMWtdJmXK2FV2v5yZAhYx6jv2Q6JCDhNQ3KMmTIuIHRObdQS+PSEcLDHRkyZFzA6LTpU3BaHqPDFjJkyBjNSHvspGVfXLgxrpAhQ8ZsRq2I7edj/CkUmmXIkDGasWuLfCvpgDMYXsqQIWM0ozMe4MllWqCSdbdNOWTIkHEIg7fP0oJ211Gzh5coQ4aMCxh8lEjSu04rrXjIQ4YMGUMZ7/AizTKO5C8LDSxlyJAxlLEtZuPAyp/aOxCVIUPG6QweZGvtMF7EtgKuDBkyLmB0GmE8iewEYpTnypAhQ8Y3Ro94uw8pqQwZMmSEB7xqd9Ji+OGwhQwZMsYx+LZIkckHCbWhpgwZMm5jdErH9PhF54hGJzGVIUPGsYw/30d0chnC3TIAAAAASUVORK5CYII=" alt="微信分享二维码">
 </div>
 
 

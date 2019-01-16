@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>深度学习之PyTorch实战计算机视觉Code | Go Further | Stay Hungry, Stay Foolish</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#142421">
+    
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="【阅读时间】XXX min XXX words【阅读内容】……">
+<meta property="og:type" content="article">
+<meta property="og:title" content="深度学习之PyTorch实战计算机视觉Code">
+<meta property="og:url" content="http://yoursite.com/2018/12/17/深度学习之PyTorch实战计算机视觉Code/index.html">
+<meta property="og:site_name" content="Go Further">
+<meta property="og:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-01-16T03:49:02.552Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="深度学习之PyTorch实战计算机视觉Code">
+<meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
+    
+        <link rel="alternate" type="application/atom+xml" title="Go Further" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">CaptainSE</h5>
+          <a href="mailto:841145636@qq.com" title="841145636@qq.com" class="mail">841145636@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                Home
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/Captainzj" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">深度学习之PyTorch实战计算机视觉Code</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">深度学习之PyTorch实战计算机视觉Code</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-12-17T08:30:32.000Z" itemprop="datePublished" class="page-time">
+  2018-12-17
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-1-1-Tensor的数据类型"><span class="post-toc-number">1.</span> <span class="post-toc-text">6.1.1 Tensor的数据类型</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-1-2-Tensor的运算"><span class="post-toc-number">2.</span> <span class="post-toc-text">6.1.2 Tensor的运算</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-1-3-搭建一个简易神经网络"><span class="post-toc-number">3.</span> <span class="post-toc-text">6.1.3 搭建一个简易神经网络</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-2-1-torch-autograd和Variable"><span class="post-toc-number">4.</span> <span class="post-toc-text">6.2.1 torch.autograd和Variable</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-2-2-自定义传播函数"><span class="post-toc-number">5.</span> <span class="post-toc-text">6.2.2 自定义传播函数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-3-1-PyTorch之torch-nn"><span class="post-toc-number">6.</span> <span class="post-toc-text">6.3.1 PyTorch之torch.nn</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-3-2-PyTorch之torch-optim"><span class="post-toc-number">7.</span> <span class="post-toc-text">6.3.2 PyTorch之torch.optim</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-4-1-torch和torchvision"><span class="post-toc-number">8.</span> <span class="post-toc-text">6.4.1 torch和torchvision</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-深度学习之PyTorch实战计算机视觉Code"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">深度学习之PyTorch实战计算机视觉Code</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-12-17 16:30:32" datetime="2018-12-17T08:30:32.000Z"  itemprop="datePublished">2018-12-17</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>【阅读时间】XXX min XXX words<br>【阅读内容】……</p>
+<a id="more"></a>
+<p>code Linkage: <a href="https://github.com/Captainzj/PyTorch_Practice/blob/master/chapter-6/chapter-6.ipynb" target="_blank" rel="noopener">https://github.com/Captainzj/PyTorch_Practice/blob/master/chapter-6/chapter-6.ipynb</a><br><!-- more --></p>
+<h3 id="6-1-1-Tensor的数据类型"><a href="#6-1-1-Tensor的数据类型" class="headerlink" title="6.1.1 Tensor的数据类型"></a>6.1.1 Tensor的数据类型</h3><blockquote>
+<p>Tensor 张量：多维矩阵</p>
+</blockquote>
+<p><a href="https://pytorch.org/docs/stable/torch.html#tensors" target="_blank" rel="noopener">torch.tensor Docs</a></p>
+<ul>
+<li>torch.FloatTensor: 用于生成数据类型为浮点型的Tensor</li>
+<li>torch.IntTensor: 用于生成数据类型为整型的Tensor</li>
+<li>torch.rand: 随机生成的浮点数据在<code>0~1区间均匀分布</code></li>
+<li>torch.randn: 随机生成的浮点数的取值满足<code>均值为0、方差为1</code>的正态分布</li>
+<li>torch.arange(start=0, end, step=1): Returns a 1-D tensor of size  $ \left \lfloor \frac{end − start}{step} \right \rfloor$ with values from the interval <code>[start, end)</code> taken with common difference <code>step</code> beginning from start.</li>
+<li>torch.zeros: Returns a tensor filled with the scalar value 0, with the shape defined by the variable argument <code>sizes</code>.</li>
+</ul>
+<h3 id="6-1-2-Tensor的运算"><a href="#6-1-2-Tensor的运算" class="headerlink" title="6.1.2 Tensor的运算"></a>6.1.2 Tensor的运算</h3><p><a href="https://pytorch.org/docs/stable/torch.html#math-operations" target="_blank" rel="noopener">math-operations Docs</a></p>
+<ul>
+<li>torch.add()<ul>
+<li>torch.add(input, value, out=None): $out=input+value$</li>
+<li>torch.add(input, value=1, other, out=None): $out=input+value×other$</li>
+</ul>
+</li>
+<li>torch.clamp(input, min, max, out=None) → Tensor<br>Clamp(裁剪) all elements in input into the range <code>[ min, max ]</code></li>
+<li><p>torch.div()</p>
+<ul>
+<li>torch.div(input, value, out=None) → Tensor: $out_i = \frac{input_i}{value}$</li>
+<li>torch.div(input, other, out=None) → Tensor: $out_i = \frac{input_i}{other_i}$</li>
+</ul>
+</li>
+<li><p>torch.mul()</p>
+<ul>
+<li>torch.mul(input, value, out=None): $out_i=value×input_i​$ </li>
+<li>torch.mul(input, other, out=None):$out_i=input_i×other_i​$ </li>
+</ul>
+</li>
+<li>torch.pow(): $out_i=x_i^{exponent}$</li>
+<li>torch.mm(mat1, mat2, out=None) → Tensor: Performs a <code>matrix multiplication</code> of the matrices <code>mat1</code> and <code>mat2</code>.</li>
+<li>torch.mv(mat, vec, out=None) → Tensor: Performs a matrix-vector product of the matrix <code>mat</code> and the vector <code>vec</code>.</li>
+</ul>
+<h3 id="6-1-3-搭建一个简易神经网络"><a href="#6-1-3-搭建一个简易神经网络" class="headerlink" title="6.1.3 搭建一个简易神经网络"></a>6.1.3 搭建一个简易神经网络</h3><blockquote>
+<p>使用前向传播和后向传播实现了对这个模型的训练和对权重参数的优化</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line">batch_n = <span class="number">100</span> <span class="comment"># batch_n是在一个批次中输入数据的数量</span></span><br><span class="line">hidden_layer = <span class="number">100</span> <span class="comment"># hidden_layer定义经过隐藏层后保留的数据特征的个数</span></span><br><span class="line">input_data = <span class="number">1000</span> <span class="comment"># 输入数据包含的数据特征有input_data个</span></span><br><span class="line">output_data = <span class="number">10</span> <span class="comment"># 输出out_put个分类结果值</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># [100,1000] --[1000,100]-&gt;&gt; [100,100] --[100,10]-&gt;&gt; [100,10]</span></span><br><span class="line">x = torch.randn(batch_n, input_data) <span class="comment"># x: 100*1000</span></span><br><span class="line">y = torch.randn(batch_n, output_data) <span class="comment"># y: 100*10</span></span><br><span class="line"></span><br><span class="line">w1 = torch.randn(input_data, hidden_layer) <span class="comment"># w1: 1000*100</span></span><br><span class="line">w2 = torch.randn(hidden_layer, output_data) <span class="comment"># w2:100*10</span></span><br><span class="line"></span><br><span class="line">epoch_n = <span class="number">20</span>   <span class="comment"># 训练次数</span></span><br><span class="line">learning_rate = <span class="number">1e-6</span>  <span class="comment"># 学习率</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> epoch <span class="keyword">in</span> range(epoch_n):</span><br><span class="line">    h1 = x.mm(w1) <span class="comment">#100*100  </span></span><br><span class="line">    h1 = h1.clamp(min = <span class="number">0</span>)  <span class="comment"># ReLU activation Function</span></span><br><span class="line">    y_pred = h1.mm(w2) <span class="comment">#100*10  前向传播的预测结果</span></span><br><span class="line">    </span><br><span class="line">    loss = (y_pred - y).pow(<span class="number">2</span>).sum()   <span class="comment"># 均方误差函数计算loss</span></span><br><span class="line">    print(<span class="string">"Epoch:&#123;&#125;, Loss:&#123;:.4f&#125;"</span>.format(epoch,loss))  <span class="comment"># 可由输出观察到 Loss值逐渐减小</span></span><br><span class="line">    </span><br><span class="line">    <span class="string">'''</span></span><br><span class="line"><span class="string">    链式求导得w1、w2的梯度 grad_w1、grad_w2</span></span><br><span class="line"><span class="string">    '''</span></span><br><span class="line">    grad_y_pred = <span class="number">2</span>*(y_pred - y) <span class="comment"># 100*10</span></span><br><span class="line">    grad_w2 = h1.t().mm(grad_y_pred) <span class="comment"># 100*10</span></span><br><span class="line">    </span><br><span class="line">    grad_h = grad_y_pred.clone() <span class="comment"># 100*10</span></span><br><span class="line">    grad_h = grad_h.mm(w2.t()) <span class="comment"># 100*100 = 100*10 × 10*100</span></span><br><span class="line">    grad_h.clamp_(min=<span class="number">0</span>) </span><br><span class="line">    </span><br><span class="line">    grad_w1 = x.t().mm(grad_h) <span class="comment"># 1000*10 = 1000*100 × 100*10</span></span><br><span class="line">    w1 -= learning_rate*grad_w1 <span class="comment"># 1000*10</span></span><br><span class="line">w2 -= learning_rate*grad_w2 <span class="comment"># 100*10</span></span><br></pre></td></tr></table></figure>
+<h3 id="6-2-1-torch-autograd和Variable"><a href="#6-2-1-torch-autograd和Variable" class="headerlink" title="6.2.1 torch.autograd和Variable"></a>6.2.1 torch.autograd和Variable</h3><blockquote>
+<p>torch.autograd包可以使模型参数自动计算在优化过程中需要用到的梯度值，降低了实现后向传播代码的复杂度</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="keyword">from</span> torch.autograd <span class="keyword">import</span> Variable</span><br><span class="line">batch_n = <span class="number">100</span></span><br><span class="line">hidden_layer = <span class="number">100</span></span><br><span class="line">input_data = <span class="number">1000</span></span><br><span class="line">output_data = <span class="number">10</span></span><br><span class="line"></span><br><span class="line">x = Variable(torch.randn(batch_n, input_data), requires_grad = <span class="keyword">False</span>)</span><br><span class="line">y = Variable(torch.randn(batch_n, output_data), requires_grad = <span class="keyword">False</span>)</span><br><span class="line"></span><br><span class="line">w1 = Variable(torch.randn(input_data, hidden_layer), requires_grad = <span class="keyword">True</span>)</span><br><span class="line">w2 = Variable(torch.randn(hidden_layer, output_data), requires_grad = <span class="keyword">True</span>)</span><br><span class="line"></span><br><span class="line">epoch_n = <span class="number">20</span></span><br><span class="line">learning_rate = <span class="number">1e-6</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> epoch <span class="keyword">in</span> range(epoch_n):</span><br><span class="line">    y_pred = x.mm(w1).clamp(min = <span class="number">0</span>).mm(w2)</span><br><span class="line">    loss = (y_pred - y).pow(<span class="number">2</span>).sum()</span><br><span class="line">    print(<span class="string">"Epoch:&#123;&#125;, Loss:&#123;:.4f&#125;"</span>.format(epoch,loss))</span><br><span class="line">    </span><br><span class="line">    loss.backward()  <span class="comment">#让模型根据计算图自动计算每个节点的梯度值并根据需求进行保留</span></span><br><span class="line">    </span><br><span class="line">    w1.data -= learning_rate*w1.grad.data  </span><br><span class="line">    w2.data -= learning_rate*w2.grad.data</span><br><span class="line">    </span><br><span class="line">    w1.grad.data.zero_()  <span class="comment"># 置零</span></span><br><span class="line">    w2.grad.data.zero_()  <span class="comment"># 若不置零，则计算的梯度值会被一直累加</span></span><br></pre></td></tr></table></figure>
+<h3 id="6-2-2-自定义传播函数"><a href="#6-2-2-自定义传播函数" class="headerlink" title="6.2.2 自定义传播函数"></a>6.2.2 自定义传播函数</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="keyword">from</span> torch.autograd <span class="keyword">import</span> Variable</span><br><span class="line">batch_n = <span class="number">64</span></span><br><span class="line">hidden_layer = <span class="number">100</span></span><br><span class="line">input_data = <span class="number">1000</span></span><br><span class="line">output_data = <span class="number">10</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Model</span><span class="params">(torch.nn.Module)</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        super(Model, self).__init__()</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">forward</span><span class="params">(self, input, w1, w2)</span>:</span></span><br><span class="line">        x = torch.mm(input, w1)</span><br><span class="line">        x = torch.clamp(x, min = <span class="number">0</span>)</span><br><span class="line">        x =torch.mm(x, w2)</span><br><span class="line">        <span class="keyword">return</span> x</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">backward</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line">    </span><br><span class="line">model = Model()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">x = Variable(torch.randn(batch_n, input_data), requires_grad = <span class="keyword">False</span>)</span><br><span class="line">y = Variable(torch.randn(batch_n, output_data), requires_grad = <span class="keyword">False</span>)</span><br><span class="line"></span><br><span class="line">w1 = Variable(torch.randn(input_data, hidden_layer), requires_grad = <span class="keyword">True</span>)</span><br><span class="line">w2 = Variable(torch.randn(hidden_layer, output_data) ,requires_grad = <span class="keyword">True</span>)</span><br><span class="line"></span><br><span class="line">epoch_n = <span class="number">30</span></span><br><span class="line">learning_rate = <span class="number">1e-6</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> epoch <span class="keyword">in</span> range(epoch_n):</span><br><span class="line">    y_pred = model(x, w1, w2)  <span class="comment"># y_pred = x.mm(w1).clamp(min = 0).mm(w2)</span></span><br><span class="line">    </span><br><span class="line">    loss = (y_pred - y).pow(<span class="number">2</span>).sum()</span><br><span class="line">    print(<span class="string">"Epoch:&#123;&#125;, Loss:&#123;:.4f&#125;"</span>.format(epoch,loss))</span><br><span class="line">    loss.backward()</span><br><span class="line">    </span><br><span class="line">    w1.data -= learning_rate * w1.grad.data</span><br><span class="line">    w2.data -= learning_rate * w2.grad.data</span><br><span class="line">    </span><br><span class="line">    w1.grad.data.zero_()</span><br><span class="line">    w2.grad.data.zero_()</span><br></pre></td></tr></table></figure>
+<h3 id="6-3-1-PyTorch之torch-nn"><a href="#6-3-1-PyTorch之torch-nn" class="headerlink" title="6.3.1 PyTorch之torch.nn"></a>6.3.1 PyTorch之torch.nn</h3><ul>
+<li><p>torch.nn.Sequential</p>
+  <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">hidden_layer = <span class="number">100</span></span><br><span class="line">input_data = <span class="number">1000</span></span><br><span class="line">output_data = <span class="number">10</span></span><br><span class="line">models = torch.nn.Sequential(  <span class="comment"># 序列容器</span></span><br><span class="line">torch.nn.Linear(input_data, hidden_layer),  <span class="comment"># 从输入层到隐藏层的线性变换</span></span><br><span class="line">torch.nn.ReLU(),  <span class="comment"># 激活函数</span></span><br><span class="line">torch.nn.Linear(hidden_layer, output_data) <span class="comment"># 从隐藏层到输出层的线性变换</span></span><br><span class="line">)</span><br><span class="line">print(models)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>torch.nn.Sequential(OrderedDict([]))</p>
+  <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">hidden_layer = <span class="number">100</span></span><br><span class="line">input_data = <span class="number">1000</span></span><br><span class="line">output_data = <span class="number">10</span></span><br><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> OrderedDict  <span class="comment"># 有序字典</span></span><br><span class="line">models = torch.nn.Sequential(OrderedDict([  </span><br><span class="line">(<span class="string">"Line1"</span>,torch.nn.Linear(input_data, hidden_layer)),</span><br><span class="line">(<span class="string">"Relu1"</span>,torch.nn.ReLU()),</span><br><span class="line">(<span class="string">"Line2"</span>,torch.nn.Linear(hidden_layer, output_data))])</span><br><span class="line">)</span><br><span class="line">print(models)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>torch.nn.MSELoss()</p>
+  <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="keyword">from</span> torch.autograd <span class="keyword">import</span> Variable</span><br><span class="line">loss_f = torch.nn.MSELoss()  <span class="comment">#定义loss_f # 均方误差函数类MSELoss计算损失值</span></span><br><span class="line">x = Variable(torch.randn(<span class="number">100</span>,<span class="number">100</span>))</span><br><span class="line">y = Variable(torch.randn(<span class="number">100</span>,<span class="number">100</span>))</span><br><span class="line">loss = loss_f(x,y) <span class="comment">#x、yd的维度需要一致</span></span><br><span class="line">print(loss.data)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>torch.nn.L1Loss()</p>
+  <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="keyword">from</span> torch.autograd <span class="keyword">import</span> Variable</span><br><span class="line">loss_f = torch.nn.L1Loss()  <span class="comment"># 平均绝对误差函数</span></span><br><span class="line">x = Variable(torch.randn(<span class="number">100</span>,<span class="number">100</span>))</span><br><span class="line">y = Variable(torch.randn(<span class="number">100</span>,<span class="number">100</span>))</span><br><span class="line">loss = loss_f(x,y)</span><br><span class="line">print(loss.data)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>torch.nn.CrossEntropyLoss()</p>
+<pre><code class="python"><span class="keyword">import</span> torch
+<span class="keyword">from</span> torch.autograd <span class="keyword">import</span> Variable
+loss_f = torch.nn.CrossEntropyLoss()  <span class="comment"># 交叉熵</span>
+x = Variable(torch.randn(<span class="number">3</span>, <span class="number">5</span>))
+y = Variable(torch.LongTensor(<span class="number">3</span>).random_(<span class="number">5</span>))
+loss = loss_f(x,y)
+print(loss.data)
+</code></pre>
+</li>
+<li><p>torch.nn 构建模型</p>
+<pre><code class="python"><span class="keyword">import</span> torch
+<span class="keyword">from</span> torch.autograd <span class="keyword">import</span> Variable
+batch_n = <span class="number">100</span>
+hidden_layer = <span class="number">100</span>
+input_data = <span class="number">1000</span>
+output_data = <span class="number">10</span>
+x = Variable(torch.randn(batch_n, input_data), requires_grad = <span class="keyword">False</span>)
+y = Variable(torch.randn(batch_n, output_data), requires_grad = <span class="keyword">False</span>)
+
+models = torch.nn.Sequential(
+torch.nn.Linear(input_data, hidden_layer),
+torch.nn.ReLU(),
+torch.nn.Linear(hidden_layer, output_data)
+)
+
+epoch_n = <span class="number">10000</span>
+learning_rate = <span class="number">1e-4</span>
+loss_fn = torch.nn.MSELoss()
+
+<span class="keyword">for</span> epoch <span class="keyword">in</span> range(epoch_n):
+    y_pred = models(x)
+    loss = loss_fn(y_pred, y)
+    <span class="keyword">if</span> epoch%<span class="number">1000</span> == <span class="number">0</span>:
+        print(<span class="string">"Epoch:{}, Loss:{:.4f}"</span>.format(epoch,loss.data))
+    models.zero_grad()
+    loss.backward()
+    <span class="keyword">for</span> param <span class="keyword">in</span> models.parameters():  <span class="comment"># 遍历模型中的全部参数w1、w2</span>
+        param.data -= param.grad.data*learning_rate
+</code></pre>
+<h3 id="6-3-2-PyTorch之torch-optim"><a href="#6-3-2-PyTorch之torch-optim" class="headerlink" title="6.3.2 PyTorch之torch.optim"></a>6.3.2 PyTorch之torch.optim</h3></li>
+<li><p><a href="https://pytorch.org/docs/stable/optim.html#torch.optim.Adam" target="_blank" rel="noopener">torch.optim.Adam()</a></p>
+<blockquote>
+<p>optimzer = torch.optim.Adam(models.parameters(), lr = learning_rate)<br>optimzer.step()</p>
+</blockquote>
+<pre><code class="python"><span class="keyword">import</span> torch
+<span class="keyword">from</span> torch.autograd <span class="keyword">import</span> Variable
+batch_n = <span class="number">100</span>
+hidden_layer = <span class="number">100</span>
+input_data = <span class="number">1000</span>
+output_data = <span class="number">10</span>
+
+x = Variable(torch.randn(batch_n, input_data), requires_grad = <span class="keyword">False</span>)
+y = Variable(torch.randn(batch_n, output_data), requires_grad=<span class="keyword">False</span>)
+
+models = torch.nn.Sequential(
+torch.nn.Linear(input_data, hidden_layer),
+torch.nn.ReLU(),
+torch.nn.Linear(hidden_layer, output_data)
+)
+
+epoch_n = <span class="number">10000</span>
+learning_rate = <span class="number">1e-4</span>
+loss_fn = torch.nn.MSELoss()
+
+optimzer = torch.optim.Adam(models.parameters(), lr = learning_rate)
+
+<span class="keyword">for</span> epoch <span class="keyword">in</span> range(epoch_n):
+    y_pred = models(x)
+    loss = loss_fn(y_pred, y)
+    <span class="keyword">if</span> epoch%<span class="number">1000</span> == <span class="number">0</span>:
+        print(<span class="string">"Epoch:{}, Loss:{:.4f}"</span>.format(epoch,loss.data))
+    optimzer.zero_grad()
+
+    loss.backward()
+    optimzer.step()
+</code></pre>
+</li>
+</ul>
+<h3 id="6-4-1-torch和torchvision"><a href="#6-4-1-torch和torchvision" class="headerlink" title="6.4.1 torch和torchvision"></a>6.4.1 torch和torchvision</h3><ul>
+<li><code>torchvision</code>的主要功能是实现数据的处理、导入和预览</li>
+<li><a href="https://pytorch.org/docs/stable/torchvision/transforms.html#torchvision-transforms" target="_blank" rel="noopener"><code>torchvision.transforms</code></a> 指定导入数据集时需要对数据进行变换操作类型<br>例如，数据增强（对图片大小进行缩放、对图片进行水平或者垂直翻转…）可生成新的数据集</li>
+</ul>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2019-01-16T03:49:02.552Z" itemprop="dateUpdated">2019-01-16 11:49:02</time>
+</span><br>
+
+
+        
+    </div>
+    
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/avatar.jpg" alt="CaptainSE">
+            CaptainSE
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/12/17/深度学习之PyTorch实战计算机视觉Code/&title=《深度学习之PyTorch实战计算机视觉Code》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/12/17/深度学习之PyTorch实战计算机视觉Code/&title=《深度学习之PyTorch实战计算机视觉Code》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/12/17/深度学习之PyTorch实战计算机视觉Code/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《深度学习之PyTorch实战计算机视觉Code》 — Go Further&url=http://yoursite.com/2018/12/17/深度学习之PyTorch实战计算机视觉Code/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/12/17/深度学习之PyTorch实战计算机视觉Code/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2018/12/27/Medical-Data-Format/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">医学数据格式</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/12/17/深度学习之PyTorch实战计算机视觉/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">深度学习之PyTorch实战计算机视觉</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢老板~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>CaptainSE &copy; 2015 - 2019</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/12/17/深度学习之PyTorch实战计算机视觉Code/&title=《深度学习之PyTorch实战计算机视觉Code》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/12/17/深度学习之PyTorch实战计算机视觉Code/&title=《深度学习之PyTorch实战计算机视觉Code》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/12/17/深度学习之PyTorch实战计算机视觉Code/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《深度学习之PyTorch实战计算机视觉Code》 — Go Further&url=http://yoursite.com/2018/12/17/深度学习之PyTorch实战计算机视觉Code/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/12/17/深度学习之PyTorch实战计算机视觉Code/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACu0lEQVR42u3a0W7qQAwEUP7/p1vpvraBGXsDvdLhCRXY7EmljTX24xG/vv69fr6/+kvy6fNf/fxm/v36hYeHhzfa+tXripeAr36Vfz9f7fIW4OHh4d3GSx4GwwsEa87A0cMGDw8P76O8WcGdPzySehgPDw/v/+Jttp4zkk/x8PDw/gIvCSOS0nlTCudXvCVrwcPDw5tkBXUD7FPv39Tfw8PDwyu76rMD9ywgfxj8sls8PDy8G3jtENXzZlU+UNWSZuMLeHh4eHfw9i2oU9R2TCEKc/Hw8PBu4LXtqzYaeL7yPhqORrjw8PDwjvJmbafNaNQs5sivi4eHh/ceXj5i9Xxb+RE/G0eoC3c8PDy8G3h5PNqWvG2zP49F6hXw8PDwbuMlh34bECQPg9n6RdGPh4eHd5TXhgWzYHdToLeRLh4eHt57eG17qS2mc8bmdv+yHzw8PLwbeLO21ixWOHX01400PDw8vKO8WdspeWAkUezwoM/jXTw8PLwP8U6V0XmIkF/3xXs8PDy8G3j5K190H9rmN64dL8DDw8M7xdtcrA0aZlFIfqOLLh8eHh7eiDc7cNthgjbAbWOI6P+Gh4eHd4iXlLzFkNM6qN2EFy9uCh4eHt4h3iwyyAGbkax9mIuHh4d3Hy9vzG+GCTYBbl5YP2Y/xsPDwyt5efCal7x5aJvvoQ478PDw8G7g5Yu2JfhsQqEt0KOr4+Hh4R3ltQNM+/J6VjS3NyhaGg8PD2/NaxtRbVncrtw+Bi4nI/Dw8PCO8mYHbjLqtGlc5fgi0sXDw8M7ytsc2Uk5PlutDT6GTz88PDy8BW+2xVnQkG9u1pZ7kang4eHhvZF3ahxqX/sXf8fDw8P7A7w8qN0c6LMoeVVS4+Hh4ZW8ZLm2uTUsgstxhGMxLh4eHt5bGmB5i6u9KfkWV0MDeHh4eB3vG/okDQG2x9xfAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = 'Go Further | Stay Hungry, Stay Foolish';
+            clearTimeout(titleTime);
+        } else {
+            document.title = 'Go Further | Stay Hungry, Stay Foolish';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
