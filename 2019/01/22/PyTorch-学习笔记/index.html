@@ -29,7 +29,7 @@
 <meta property="og:site_name" content="Go Further">
 <meta property="og:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-22T15:00:32.304Z">
+<meta property="og:updated_time" content="2019-01-22T15:50:30.378Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PyTorch 学习笔记">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
@@ -158,7 +158,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#PyTorch-学习笔记（一）"><span class="post-toc-number">1.</span> <span class="post-toc-text">PyTorch 学习笔记（一）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何保存参数"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">如何保存参数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#neural-networks"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">neural networks</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#PyTorch-学习笔记（二）"><span class="post-toc-number">2.</span> <span class="post-toc-text">PyTorch 学习笔记（二）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#torch-autograd"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">torch.autograd</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#torch-optim"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">torch.optim</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#关于-backward"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">关于 backward()</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#PyTorch-学习笔记（三）"><span class="post-toc-number">3.</span> <span class="post-toc-text">PyTorch 学习笔记（三）</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Catalogue"><span class="post-toc-number">1.</span> <span class="post-toc-text">Catalogue</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#PyTorch-学习笔记（一）"><span class="post-toc-number">2.</span> <span class="post-toc-text">PyTorch 学习笔记（一）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何保存参数"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">如何保存参数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#neural-networks"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">neural networks</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#PyTorch-学习笔记（二）"><span class="post-toc-number">3.</span> <span class="post-toc-text">PyTorch 学习笔记（二）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#torch-autograd"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">torch.autograd</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#torch-optim"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">torch.optim</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#关于-backward"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">关于 backward()</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#PyTorch-学习笔记（三）"><span class="post-toc-number">4.</span> <span class="post-toc-text">PyTorch 学习笔记（三）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Backward过程中排除子图"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">Backward过程中排除子图</span></a></li></ol></li></ol>
         </nav>
     </aside>
 
@@ -184,7 +184,7 @@
         <div class="post-content" id="post-content" itemprop="postContent">
             <p>【阅读时间】XXX min XXX words<br>【阅读内容】……</p>
 <a id="more"></a>
-<p><strong><a href="https://www.pytorchtutorial.com/pytorch-note1-what-is-pytorch/" target="_blank" rel="noopener">PyTorch 学习笔记（一）：什么是 PyTorch</a></strong><br><strong><a href="https://www.pytorchtutorial.com/pytorch-note2-gradient/" target="_blank" rel="noopener">PyTorch 学习笔记（二）：关于Gradient</a></strong><br><strong><a href="https://www.pytorchtutorial.com/pytorch-note3-autograd/" target="_blank" rel="noopener">PyTorch 学习笔记（三）：自动求导</a></strong></p>
+<h2 id="Catalogue"><a href="#Catalogue" class="headerlink" title="Catalogue"></a>Catalogue</h2><p><strong><a href="https://www.pytorchtutorial.com/pytorch-note1-what-is-pytorch/" target="_blank" rel="noopener">PyTorch 学习笔记（一）：什么是 PyTorch</a></strong><br><strong><a href="https://www.pytorchtutorial.com/pytorch-note2-gradient/" target="_blank" rel="noopener">PyTorch 学习笔记（二）：关于Gradient</a></strong><br><strong><a href="https://www.pytorchtutorial.com/pytorch-note3-autograd/" target="_blank" rel="noopener">PyTorch 学习笔记（三）：自动求导</a></strong><br><strong><a href="https://www.pytorchtutorial.com/pytorch-note4-input-data-pipeline/" target="_blank" rel="noopener">PyTorch 学习笔记（四）：自定义 Dataset 和输入流</a></strong><br><strong><a href="https://www.pytorchtutorial.com/pytorch-note5-save-and-restore-models/" target="_blank" rel="noopener">PyTorch 学习笔记（五）：存储和恢复模型并查看参数</a></strong><br><strong><a href="https://www.pytorchtutorial.com/pytorch-note6-pytorch-hook-and-pytorch-backward/" target="_blank" rel="noopener">PyTorch 学习笔记（六）：PyTorch hook 和关于 PyTorch backward 过程的理解</a></strong></p>
 <h2 id="PyTorch-学习笔记（一）"><a href="#PyTorch-学习笔记（一）" class="headerlink" title="PyTorch 学习笔记（一）"></a>PyTorch 学习笔记（一）</h2><h3 id="如何保存参数"><a href="#如何保存参数" class="headerlink" title="如何保存参数"></a>如何保存参数</h3><p>pytorch中有两种变量类型，一个是Tensor，一个是Variable.</p>
 <blockquote>
 <p><code>Tensor</code>： 就像ndarray一样,一维Tensor叫Vector，二维Tensor叫Matrix，三维及以上称为Tensor<br><code>Variable</code>：是Tensor的一个<code>wrapper</code>，不仅保存了值，而且保存了这个值的creator，需要BP的网络都是Variable参与运算</p>
@@ -223,7 +223,27 @@
 <ul>
 <li><strong>retain_graph</strong> (bool, optional) – If <code>False</code>, the graph used to compute the grad will be <em>freed</em>. Note that in nearly all cases setting this option to <code>True</code> is <em>not needed</em> and often can be worked around in a much more efficient way. Defaults to the value of <code>create_graph</code>.</li>
 </ul>
-<h2 id="PyTorch-学习笔记（三）"><a href="#PyTorch-学习笔记（三）" class="headerlink" title="PyTorch 学习笔记（三）"></a>PyTorch 学习笔记（三）</h2>
+<h2 id="PyTorch-学习笔记（三）"><a href="#PyTorch-学习笔记（三）" class="headerlink" title="PyTorch 学习笔记（三）"></a>PyTorch 学习笔记（三）</h2><h3 id="Backward过程中排除子图"><a href="#Backward过程中排除子图" class="headerlink" title="Backward过程中排除子图"></a>Backward过程中排除子图</h3><p>pytorch的BP过程是由一个函数决定的，loss.backward()， 可以看到backward()函数里并没有传要求谁的梯度。那么我们可以大胆猜测，在BP的过程中，pytorch是<code>将所有影响loss的Variable都求了一次梯度</code>。但是有时候，我们并不想求所有Variable的梯度(浪费计算资源)。那就要<code>考虑如何在Backward过程中排除子图</code>（ie.排除没必要的梯度计算）。<br>如何BP过程中排除子图？ Variable的两个参数（<code>requires_grad</code>和<code>volatile挥发性</code>）</p>
+<ul>
+<li><p>requires_grad = False</p>
+<ul>
+<li><p>变量的requires_grad标记的运算就相当于or</p>
+<pre><code>x (x.requires_grad=False) + y (y.requires_grad=False) -&gt;&gt; a (a.requires_grad=False)
+a (a.requires_grad=False) + z (z.requires_grad=True) -&gt;&gt; b (b.requires_grad=True)
+</code></pre></li>
+</ul>
+</li>
+<li><p>volatile = True</p>
+<ul>
+<li><p>变量的volatile标记的运算也相当于or</p>
+<pre><code>k (k.volatile=False) + m (m.volatile=False) -&gt;&gt; n (n.volatile=False)
+k (k.volatile=False) + j (j.volatile=True) -&gt;&gt; o (o.volatile=True)
+</code></pre></li>
+</ul>
+</li>
+</ul>
+<p>注意：<code>volatile=True相当于requires_grad=False</code>。但是在纯推断模式的时候，只要是输入volatile=True，那么输出Variable的volatile必为True。这就比使用requires_grad=False方便(???)多了。    </p>
+
         </div>
 
         <blockquote class="post-copyright">
@@ -231,7 +251,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2019-01-22T15:00:32.304Z" itemprop="dateUpdated">2019-01-22 23:00:32</time>
+    Last updated: <time datetime="2019-01-22T15:50:30.378Z" itemprop="dateUpdated">2019-01-22 23:50:30</time>
 </span><br>
 
 
@@ -310,7 +330,14 @@
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2019/01/22/10分钟快速入门-PyTorch/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">10分钟快速入门 PyTorch</h4>
+      </a>
+    </div>
   
 
   
