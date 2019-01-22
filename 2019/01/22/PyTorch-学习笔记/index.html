@@ -14,7 +14,7 @@
     
     
     
-    <title>torchvision.models.md | Go Further | Stay Hungry, Stay Foolish</title>
+    <title>PyTorch 学习笔记 | Go Further | Stay Hungry, Stay Foolish</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#142421">
@@ -24,22 +24,15 @@
     <meta name="description" content="【阅读时间】XXX min XXX words【阅读内容】……">
 <meta name="keywords" content="PyTorch">
 <meta property="og:type" content="article">
-<meta property="og:title" content="torchvision.models.md">
-<meta property="og:url" content="http://yoursite.com/2019/01/16/torchvision-models/index.html">
+<meta property="og:title" content="PyTorch 学习笔记">
+<meta property="og:url" content="http://yoursite.com/2019/01/22/PyTorch-学习笔记/index.html">
 <meta property="og:site_name" content="Go Further">
 <meta property="og:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2019/01/16/torchvision-models/alexnet.png">
-<meta property="og:image" content="http://yoursite.com/2019/01/16/torchvision-models/vgg.png">
-<meta property="og:image" content="http://yoursite.com/2019/01/16/torchvision-models/ResNet_Structure.png">
-<meta property="og:image" content="http://yoursite.com/2019/01/16/torchvision-models/squeezenet.png">
-<meta property="og:image" content="http://yoursite.com/2019/01/16/torchvision-models/DenseNet_Structure.png">
-<meta property="og:image" content="http://yoursite.com/2019/01/16/torchvision-models/Inception.png">
-<meta property="og:updated_time" content="2019-01-16T08:09:46.652Z">
+<meta property="og:updated_time" content="2019-01-22T15:00:32.304Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="torchvision.models.md">
+<meta name="twitter:title" content="PyTorch 学习笔记">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
-<meta name="twitter:image" content="http://yoursite.com/2019/01/16/torchvision-models/alexnet.png">
     
         <link rel="alternate" type="application/atom+xml" title="Go Further" href="/atom.xml">
     
@@ -120,7 +113,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">torchvision.models.md</div>
+        <div class="flex-col header-title ellipsis">PyTorch 学习笔记</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -142,11 +135,11 @@
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">torchvision.models.md</h1>
+        <h1 class="title">PyTorch 学习笔记</h1>
         <h5 class="subtitle">
             
-                <time datetime="2019-01-16T06:41:27.000Z" itemprop="datePublished" class="page-time">
-  2019-01-16
+                <time datetime="2019-01-22T07:44:19.000Z" itemprop="datePublished" class="page-time">
+  2019-01-22
 </time>
 
 
@@ -162,14 +155,21 @@
 
 <div class="container body-wrap">
     
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#PyTorch-学习笔记（一）"><span class="post-toc-number">1.</span> <span class="post-toc-text">PyTorch 学习笔记（一）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何保存参数"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">如何保存参数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#neural-networks"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">neural networks</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#PyTorch-学习笔记（二）"><span class="post-toc-number">2.</span> <span class="post-toc-text">PyTorch 学习笔记（二）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#torch-autograd"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">torch.autograd</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#torch-optim"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">torch.optim</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#关于-backward"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">关于 backward()</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#PyTorch-学习笔记（三）"><span class="post-toc-number">3.</span> <span class="post-toc-text">PyTorch 学习笔记（三）</span></a></li></ol>
+        </nav>
+    </aside>
 
-<article id="post-torchvision-models"
+
+<article id="post-PyTorch-学习笔记"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">torchvision.models.md</h1>
+        <h1 class="post-card-title">PyTorch 学习笔记</h1>
         <div class="post-meta">
-            <time class="post-time" title="2019-01-16 14:41:27" datetime="2019-01-16T06:41:27.000Z"  itemprop="datePublished">2019-01-16</time>
+            <time class="post-time" title="2019-01-22 15:44:19" datetime="2019-01-22T07:44:19.000Z"  itemprop="datePublished">2019-01-22</time>
 
             
 
@@ -184,65 +184,46 @@
         <div class="post-content" id="post-content" itemprop="postContent">
             <p>【阅读时间】XXX min XXX words<br>【阅读内容】……</p>
 <a id="more"></a>
-<p><a href="https://pytorch.org/docs/stable/torchvision/models.html" target="_blank" rel="noopener">torchvision.models — PyTorch master documentation</a></p>
-<p>The models subpackage contains definitions for the following model architectures:</p>
-<ul>
-<li><p><a href="https://arxiv.org/abs/1404.5997" target="_blank" rel="noopener">AlexNet</a></p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="/2019/01/16/torchvision-models/alexnet.png" alt="alexnet" title="">
-                </div>
-                <div class="image-caption">alexnet</div>
-            </figure>
-</li>
-<li><p><a href="https://arxiv.org/abs/1409.1556" target="_blank" rel="noopener">VGG</a></p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="/2019/01/16/torchvision-models/vgg.png" alt="vgg" title="">
-                </div>
-                <div class="image-caption">vgg</div>
-            </figure>
-</li>
-<li><p><a href="https://arxiv.org/abs/1512.03385" target="_blank" rel="noopener">ResNet</a></p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="/2019/01/16/torchvision-models/ResNet_Structure.png" alt="ResNet_Structure" title="">
-                </div>
-                <div class="image-caption">ResNet_Structure</div>
-            </figure>
-</li>
-<li><p><a href="https://arxiv.org/abs/1602.07360" target="_blank" rel="noopener">SqueezeNet</a></p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="/2019/01/16/torchvision-models/squeezenet.png" alt="squeezenet" title="">
-                </div>
-                <div class="image-caption">squeezenet</div>
-            </figure>
-</li>
-<li><p><a href="https://arxiv.org/abs/1608.06993" target="_blank" rel="noopener">DenseNet</a></p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="/2019/01/16/torchvision-models/DenseNet_Structure.png" alt="DenseNet_Structure" title="">
-                </div>
-                <div class="image-caption">DenseNet_Structure</div>
-            </figure>
-</li>
-<li><p><a href="https://arxiv.org/abs/1512.00567" target="_blank" rel="noopener">Inception v3</a></p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="/2019/01/16/torchvision-models/Inception.png" alt="Inception" title="">
-                </div>
-                <div class="image-caption">Inception</div>
-            </figure>
-</li>
+<p><strong><a href="https://www.pytorchtutorial.com/pytorch-note1-what-is-pytorch/" target="_blank" rel="noopener">PyTorch 学习笔记（一）：什么是 PyTorch</a></strong><br><strong><a href="https://www.pytorchtutorial.com/pytorch-note2-gradient/" target="_blank" rel="noopener">PyTorch 学习笔记（二）：关于Gradient</a></strong><br><strong><a href="https://www.pytorchtutorial.com/pytorch-note3-autograd/" target="_blank" rel="noopener">PyTorch 学习笔记（三）：自动求导</a></strong></p>
+<h2 id="PyTorch-学习笔记（一）"><a href="#PyTorch-学习笔记（一）" class="headerlink" title="PyTorch 学习笔记（一）"></a>PyTorch 学习笔记（一）</h2><h3 id="如何保存参数"><a href="#如何保存参数" class="headerlink" title="如何保存参数"></a>如何保存参数</h3><p>pytorch中有两种变量类型，一个是Tensor，一个是Variable.</p>
+<blockquote>
+<p><code>Tensor</code>： 就像ndarray一样,一维Tensor叫Vector，二维Tensor叫Matrix，三维及以上称为Tensor<br><code>Variable</code>：是Tensor的一个<code>wrapper</code>，不仅保存了值，而且保存了这个值的creator，需要BP的网络都是Variable参与运算</p>
+</blockquote>
+<h3 id="neural-networks"><a href="#neural-networks" class="headerlink" title="neural networks"></a>neural networks</h3><p>使用torch.nn包中的工具来构建神经网络 需要以下几步：</p>
+<ol>
+<li>定义神经网络的权重,搭建网络结构</li>
+<li>遍历整个数据集进行训练</li>
+<li>将数据输入神经网络</li>
+<li>计算loss</li>
+<li>计算网络权重的梯度</li>
+<li>更新网络权重<ul>
+<li>weight = weight + learning_rate * gradient</li>
 </ul>
-
+</li>
+</ol>
+<h2 id="PyTorch-学习笔记（二）"><a href="#PyTorch-学习笔记（二）" class="headerlink" title="PyTorch 学习笔记（二）"></a>PyTorch 学习笔记（二）</h2><h3 id="torch-autograd"><a href="#torch-autograd" class="headerlink" title="torch.autograd"></a>torch.autograd</h3><blockquote>
+<p>torch.autograd包可以使模型参数自动计算在优化过程中需要用到的梯度值，降低了实现后向传播代码的复杂度</p>
+</blockquote>
+<ol>
+<li>w1 = Variable(…, requires_grad = True)</li>
+<li>loss.backward() #让模型根据计算图自动计算每个节点的梯度值并根据需求进行保留</li>
+<li>w1.grad.data.zero_() #将grad置零</li>
+</ol>
+<h3 id="torch-optim"><a href="#torch-optim" class="headerlink" title="torch.optim"></a>torch.optim</h3><blockquote>
+<p>如果每个参数的更新都要<code>w1.data.sub_(learning_rate*w1.grad.data)</code> (等价于<code>w1.data -= learning_rate * w1.grad.data</code>)，那就比较头疼了。还好，pytorch为我们提供了torch.optim包，这个包可以简化我们更新参数的操作。</p>
+</blockquote>
+<ol>
+<li>optimzer = torch.optim.Adam(models.parameters(), lr = learning_rate)</li>
+<li>optimzer.step()</li>
+</ol>
+<h3 id="关于-backward"><a href="#关于-backward" class="headerlink" title="关于 backward()"></a>关于 backward()</h3><blockquote>
+<p><a href="https://pytorch.org/docs/stable/autograd.html" target="_blank" rel="noopener">torch.autograd.backward(tensors, grad_tensors=None, retain_graph=None, create_graph=False, grad_variables=None)</a></p>
+</blockquote>
+<p><strong>Parameters:</strong> </p>
+<ul>
+<li><strong>retain_graph</strong> (bool, optional) – If <code>False</code>, the graph used to compute the grad will be <em>freed</em>. Note that in nearly all cases setting this option to <code>True</code> is <em>not needed</em> and often can be worked around in a much more efficient way. Defaults to the value of <code>create_graph</code>.</li>
+</ul>
+<h2 id="PyTorch-学习笔记（三）"><a href="#PyTorch-学习笔记（三）" class="headerlink" title="PyTorch 学习笔记（三）"></a>PyTorch 学习笔记（三）</h2>
         </div>
 
         <blockquote class="post-copyright">
@@ -250,7 +231,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2019-01-16T08:09:46.652Z" itemprop="dateUpdated">2019-01-16 16:09:46</time>
+    Last updated: <time datetime="2019-01-22T15:00:32.304Z" itemprop="dateUpdated">2019-01-22 23:00:32</time>
 </span><br>
 
 
@@ -284,7 +265,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/01/16/torchvision-models/&title=《torchvision.models.md》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/01/22/PyTorch-学习笔记/&title=《PyTorch 学习笔记》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -294,22 +275,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/01/16/torchvision-models/&title=《torchvision.models.md》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/01/22/PyTorch-学习笔记/&title=《PyTorch 学习笔记》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/01/16/torchvision-models/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/01/22/PyTorch-学习笔记/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《torchvision.models.md》 — Go Further&url=http://yoursite.com/2019/01/16/torchvision-models/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《PyTorch 学习笔记》 — Go Further&url=http://yoursite.com/2019/01/22/PyTorch-学习笔记/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2019/01/16/torchvision-models/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2019/01/22/PyTorch-学习笔记/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -329,21 +310,14 @@
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between">
-  
-    <div class="waves-block waves-effect prev">
-      <a href="/2019/01/22/PyTorch-学习笔记/" id="post-prev" class="post-nav-link">
-        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">PyTorch 学习笔记</h4>
-      </a>
-    </div>
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/2019/01/09/Pokemon-Model/" id="post-next" class="post-nav-link">
+      <a href="/2019/01/16/torchvision-models/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">Pokémon_Model</h4>
+        <h4 class="title">torchvision.models.md</h4>
       </a>
     </div>
   
@@ -440,7 +414,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/01/16/torchvision-models/&title=《torchvision.models.md》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/01/22/PyTorch-学习笔记/&title=《PyTorch 学习笔记》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -450,22 +424,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/01/16/torchvision-models/&title=《torchvision.models.md》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/01/22/PyTorch-学习笔记/&title=《PyTorch 学习笔记》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/01/16/torchvision-models/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/01/22/PyTorch-学习笔记/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《torchvision.models.md》 — Go Further&url=http://yoursite.com/2019/01/16/torchvision-models/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《PyTorch 学习笔记》 — Go Further&url=http://yoursite.com/2019/01/22/PyTorch-学习笔记/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2019/01/16/torchvision-models/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2019/01/22/PyTorch-学习笔记/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -476,7 +450,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACKklEQVR42u3aS5LCMAxFUfa/aXraE5z7JEOV5ZsRFQj2yUClj18vfL2X1/r3/+98+nZ9f9slQ4aMYxlki+ttdVb59G38+mTIkHEB49PC68/8qfWK6VoyZMiQQf6uliamW5QhQ4aMfsAl6SNPMWtUGTJk3MMgRSZvnNUC6I9qcRkyZBzI4M2y33/+ynxDhgwZRzHe4bVrnMBDKtqVDBkyRjN4gOPHI74xNkD7kSFDxgWM9BhELTdLk8KgZJUhQ8ZoBt9uGnw77TYSylHvUIYMGUMZJNjtGh7wVDIOuDJkyLiGUTtswVt1aVL4AJMhQ8ZQRlqgpsGRkPjYIO4IypAh43BG2t7iIZJvfb1dVNbKkCFjNKMWtdJmXK2FV2v5yZAhYx6jv2Q6JCDhNQ3KMmTIuIHRObdQS+PSEcLDHRkyZFzA6LTpU3BaHqPDFjJkyBjNSHvspGVfXLgxrpAhQ8ZsRq2I7edj/CkUmmXIkDGasWuLfCvpgDMYXsqQIWM0ozMe4MllWqCSdbdNOWTIkHEIg7fP0oJ211Gzh5coQ4aMCxh8lEjSu04rrXjIQ4YMGUMZ7/AizTKO5C8LDSxlyJAxlLEtZuPAyp/aOxCVIUPG6QweZGvtMF7EtgKuDBkyLmB0GmE8iewEYpTnypAhQ8Y3Ro94uw8pqQwZMmSEB7xqd9Ji+OGwhQwZMsYx+LZIkckHCbWhpgwZMm5jdErH9PhF54hGJzGVIUPGsYw/30d0chnC3TIAAAAASUVORK5CYII=" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACK0lEQVR42u3ay25jIRAFwPz/TzvbkeLgc2hnJEOxsq4dLpVFi358fcXr8WPlv//3yc/P679688LAwPhYxmO51i9Yv/i3HdbPk2+fvBEDA+MCRnKIPLAmvPXR87NhYGBgrENnvk8UNDEwMDDeymiDb5LcYmBgYKwZ+XWtDZHtPn+ei2NgYHwgI6+6///Pf9LfwMDA+CjGo1xtkyAJjm2QfXIqDAyMoxl5gNsrluVBvN0BAwPjHkZeGkvS1DZk5wnwCzAGBsYFjPkQ2DoQ54C2VIeBgXEPox2VaBsA7XBGmwBjYGDcydgb2MrbjZPG5IssHAMD41BGHvj2Go15Eps/2YzNGBgYhzL2mgRtepwwolwcAwPjaMZeUb4duWj/qmhhYmBgHM2YjDvshci2zfmi/YCBgXEBIwmObfqaJK5t67R+GQYGxhGMdmCiHfNqL5rtZfHJbhgYGMcx2mNNBr/y3epvMTAwLmDkN67kQjk6UFlow8DAuIGRJIrzVPZdTYWoCYqBgXEoo21etmuyf34NxcDAuIHRls8mDYC8FVr8IzAwMC5j5EW0djh1L3HdDLgYGBhHMB7l2ivAJSF7L23GwMC4gdEmovMxr8loLAYGxs2Mdmi1DYh5G2DUisDAwLiAMS+E7R10ksRiYGBg5GW1NlmdNAPeFnAxMDCOZiS/nLc228srBgbGDYwkiW2fr/dPLpF5+Q8DA+Nsxl7qOGkA7LUQJqkvBgbGxzK+AbzvnTvY1363AAAAAElFTkSuQmCC" alt="微信分享二维码">
 </div>
 
 

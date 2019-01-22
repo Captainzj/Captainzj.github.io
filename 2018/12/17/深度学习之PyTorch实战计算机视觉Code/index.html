@@ -20,15 +20,16 @@
     <meta name="theme-color" content="#142421">
     
     
-    <meta name="keywords" content="">
+    <meta name="keywords" content="PyTorch">
     <meta name="description" content="【阅读时间】XXX min XXX words【阅读内容】……">
+<meta name="keywords" content="PyTorch">
 <meta property="og:type" content="article">
 <meta property="og:title" content="深度学习之PyTorch实战计算机视觉Code">
 <meta property="og:url" content="http://yoursite.com/2018/12/17/深度学习之PyTorch实战计算机视觉Code/index.html">
 <meta property="og:site_name" content="Go Further">
 <meta property="og:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-16T03:49:02.552Z">
+<meta property="og:updated_time" content="2019-01-22T13:06:26.509Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="深度学习之PyTorch实战计算机视觉Code">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
@@ -223,10 +224,15 @@
 <h3 id="6-1-3-搭建一个简易神经网络"><a href="#6-1-3-搭建一个简易神经网络" class="headerlink" title="6.1.3 搭建一个简易神经网络"></a>6.1.3 搭建一个简易神经网络</h3><blockquote>
 <p>使用前向传播和后向传播实现了对这个模型的训练和对权重参数的优化</p>
 </blockquote>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line">batch_n = <span class="number">100</span> <span class="comment"># batch_n是在一个批次中输入数据的数量</span></span><br><span class="line">hidden_layer = <span class="number">100</span> <span class="comment"># hidden_layer定义经过隐藏层后保留的数据特征的个数</span></span><br><span class="line">input_data = <span class="number">1000</span> <span class="comment"># 输入数据包含的数据特征有input_data个</span></span><br><span class="line">output_data = <span class="number">10</span> <span class="comment"># 输出out_put个分类结果值</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># [100,1000] --[1000,100]-&gt;&gt; [100,100] --[100,10]-&gt;&gt; [100,10]</span></span><br><span class="line">x = torch.randn(batch_n, input_data) <span class="comment"># x: 100*1000</span></span><br><span class="line">y = torch.randn(batch_n, output_data) <span class="comment"># y: 100*10</span></span><br><span class="line"></span><br><span class="line">w1 = torch.randn(input_data, hidden_layer) <span class="comment"># w1: 1000*100</span></span><br><span class="line">w2 = torch.randn(hidden_layer, output_data) <span class="comment"># w2:100*10</span></span><br><span class="line"></span><br><span class="line">epoch_n = <span class="number">20</span>   <span class="comment"># 训练次数</span></span><br><span class="line">learning_rate = <span class="number">1e-6</span>  <span class="comment"># 学习率</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> epoch <span class="keyword">in</span> range(epoch_n):</span><br><span class="line">    h1 = x.mm(w1) <span class="comment">#100*100  </span></span><br><span class="line">    h1 = h1.clamp(min = <span class="number">0</span>)  <span class="comment"># ReLU activation Function</span></span><br><span class="line">    y_pred = h1.mm(w2) <span class="comment">#100*10  前向传播的预测结果</span></span><br><span class="line">    </span><br><span class="line">    loss = (y_pred - y).pow(<span class="number">2</span>).sum()   <span class="comment"># 均方误差函数计算loss</span></span><br><span class="line">    print(<span class="string">"Epoch:&#123;&#125;, Loss:&#123;:.4f&#125;"</span>.format(epoch,loss))  <span class="comment"># 可由输出观察到 Loss值逐渐减小</span></span><br><span class="line">    </span><br><span class="line">    <span class="string">'''</span></span><br><span class="line"><span class="string">    链式求导得w1、w2的梯度 grad_w1、grad_w2</span></span><br><span class="line"><span class="string">    '''</span></span><br><span class="line">    grad_y_pred = <span class="number">2</span>*(y_pred - y) <span class="comment"># 100*10</span></span><br><span class="line">    grad_w2 = h1.t().mm(grad_y_pred) <span class="comment"># 100*10</span></span><br><span class="line">    </span><br><span class="line">    grad_h = grad_y_pred.clone() <span class="comment"># 100*10</span></span><br><span class="line">    grad_h = grad_h.mm(w2.t()) <span class="comment"># 100*100 = 100*10 × 10*100</span></span><br><span class="line">    grad_h.clamp_(min=<span class="number">0</span>) </span><br><span class="line">    </span><br><span class="line">    grad_w1 = x.t().mm(grad_h) <span class="comment"># 1000*10 = 1000*100 × 100*10</span></span><br><span class="line">    w1 -= learning_rate*grad_w1 <span class="comment"># 1000*10</span></span><br><span class="line">w2 -= learning_rate*grad_w2 <span class="comment"># 100*10</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line">batch_n = <span class="number">100</span> <span class="comment"># batch_n是在一个批次中输入数据的数量</span></span><br><span class="line">hidden_layer = <span class="number">100</span> <span class="comment"># hidden_layer定义经过隐藏层后保留的数据特征的个数</span></span><br><span class="line">input_data = <span class="number">1000</span> <span class="comment"># 输入数据包含的数据特征有input_data个</span></span><br><span class="line">output_data = <span class="number">10</span> <span class="comment"># 输出out_put个分类结果值</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># [100,1000] --[1000,100]-&gt;&gt; [100,100] --[100,10]-&gt;&gt; [100,10]</span></span><br><span class="line">x = torch.randn(batch_n, input_data) <span class="comment"># x: 100*1000</span></span><br><span class="line">y = torch.randn(batch_n, output_data) <span class="comment"># y: 100*10</span></span><br><span class="line"></span><br><span class="line">w1 = torch.randn(input_data, hidden_layer) <span class="comment"># w1: 1000*100</span></span><br><span class="line">w2 = torch.randn(hidden_layer, output_data) <span class="comment"># w2:100*10</span></span><br><span class="line"></span><br><span class="line">epoch_n = <span class="number">20</span>   <span class="comment"># 训练次数</span></span><br><span class="line">learning_rate = <span class="number">1e-6</span>  <span class="comment"># 学习率</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> epoch <span class="keyword">in</span> range(epoch_n):</span><br><span class="line">    h1 = x.mm(w1) <span class="comment">#100*100  </span></span><br><span class="line">    h1 = h1.clamp(min = <span class="number">0</span>)  <span class="comment"># ReLU activation Function</span></span><br><span class="line">    y_pred = h1.mm(w2) <span class="comment">#100*10  前向传播的预测结果</span></span><br><span class="line">    </span><br><span class="line">    loss = (y_pred - y).pow(<span class="number">2</span>).sum()   <span class="comment"># 均方误差函数计算loss</span></span><br><span class="line">    print(<span class="string">"Epoch:&#123;&#125;, Loss:&#123;:.4f&#125;"</span>.format(epoch,loss))  <span class="comment"># 可由输出观察到 Loss值逐渐减小</span></span><br><span class="line">    </span><br><span class="line">    <span class="string">'''</span></span><br><span class="line"><span class="string">    链式求导得w1、w2的梯度 grad_w1、grad_w2</span></span><br><span class="line"><span class="string">    '''</span></span><br><span class="line">    grad_y_pred = <span class="number">2</span>*(y_pred - y) <span class="comment"># 100*10</span></span><br><span class="line">    grad_w2 = h1.t().mm(grad_y_pred) <span class="comment"># 100*10</span></span><br><span class="line">    </span><br><span class="line">    grad_h = grad_y_pred.clone() <span class="comment"># 100*10</span></span><br><span class="line">    grad_h = grad_h.mm(w2.t()) <span class="comment"># 100*100 = 100*10 × 10*100</span></span><br><span class="line">    grad_h.clamp_(min=<span class="number">0</span>) </span><br><span class="line">    </span><br><span class="line">    grad_w1 = x.t().mm(grad_h) <span class="comment"># 1000*10 = 1000*100 × 100*10</span></span><br><span class="line">    w1 -= learning_rate*grad_w1 <span class="comment"># 1000*10</span></span><br><span class="line">    w2 -= learning_rate*grad_w2 <span class="comment"># 100*10</span></span><br></pre></td></tr></table></figure>
 <h3 id="6-2-1-torch-autograd和Variable"><a href="#6-2-1-torch-autograd和Variable" class="headerlink" title="6.2.1 torch.autograd和Variable"></a>6.2.1 torch.autograd和Variable</h3><blockquote>
 <p>torch.autograd包可以使模型参数自动计算在优化过程中需要用到的梯度值，降低了实现后向传播代码的复杂度</p>
 </blockquote>
+<ol>
+<li>w1 = Variable(…, requires_grad = True)</li>
+<li>loss.backward() #让模型根据计算图自动计算每个节点的梯度值并根据需求进行保留</li>
+<li>w1.grad.data.zero_() #将grad置零</li>
+</ol>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="keyword">from</span> torch.autograd <span class="keyword">import</span> Variable</span><br><span class="line">batch_n = <span class="number">100</span></span><br><span class="line">hidden_layer = <span class="number">100</span></span><br><span class="line">input_data = <span class="number">1000</span></span><br><span class="line">output_data = <span class="number">10</span></span><br><span class="line"></span><br><span class="line">x = Variable(torch.randn(batch_n, input_data), requires_grad = <span class="keyword">False</span>)</span><br><span class="line">y = Variable(torch.randn(batch_n, output_data), requires_grad = <span class="keyword">False</span>)</span><br><span class="line"></span><br><span class="line">w1 = Variable(torch.randn(input_data, hidden_layer), requires_grad = <span class="keyword">True</span>)</span><br><span class="line">w2 = Variable(torch.randn(hidden_layer, output_data), requires_grad = <span class="keyword">True</span>)</span><br><span class="line"></span><br><span class="line">epoch_n = <span class="number">20</span></span><br><span class="line">learning_rate = <span class="number">1e-6</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> epoch <span class="keyword">in</span> range(epoch_n):</span><br><span class="line">    y_pred = x.mm(w1).clamp(min = <span class="number">0</span>).mm(w2)</span><br><span class="line">    loss = (y_pred - y).pow(<span class="number">2</span>).sum()</span><br><span class="line">    print(<span class="string">"Epoch:&#123;&#125;, Loss:&#123;:.4f&#125;"</span>.format(epoch,loss))</span><br><span class="line">    </span><br><span class="line">    loss.backward()  <span class="comment">#让模型根据计算图自动计算每个节点的梯度值并根据需求进行保留</span></span><br><span class="line">    </span><br><span class="line">    w1.data -= learning_rate*w1.grad.data  </span><br><span class="line">    w2.data -= learning_rate*w2.grad.data</span><br><span class="line">    </span><br><span class="line">    w1.grad.data.zero_()  <span class="comment"># 置零</span></span><br><span class="line">    w2.grad.data.zero_()  <span class="comment"># 若不置零，则计算的梯度值会被一直累加</span></span><br></pre></td></tr></table></figure>
 <h3 id="6-2-2-自定义传播函数"><a href="#6-2-2-自定义传播函数" class="headerlink" title="6.2.2 自定义传播函数"></a>6.2.2 自定义传播函数</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="keyword">from</span> torch.autograd <span class="keyword">import</span> Variable</span><br><span class="line">batch_n = <span class="number">64</span></span><br><span class="line">hidden_layer = <span class="number">100</span></span><br><span class="line">input_data = <span class="number">1000</span></span><br><span class="line">output_data = <span class="number">10</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Model</span><span class="params">(torch.nn.Module)</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        super(Model, self).__init__()</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">forward</span><span class="params">(self, input, w1, w2)</span>:</span></span><br><span class="line">        x = torch.mm(input, w1)</span><br><span class="line">        x = torch.clamp(x, min = <span class="number">0</span>)</span><br><span class="line">        x =torch.mm(x, w2)</span><br><span class="line">        <span class="keyword">return</span> x</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">backward</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line">    </span><br><span class="line">model = Model()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">x = Variable(torch.randn(batch_n, input_data), requires_grad = <span class="keyword">False</span>)</span><br><span class="line">y = Variable(torch.randn(batch_n, output_data), requires_grad = <span class="keyword">False</span>)</span><br><span class="line"></span><br><span class="line">w1 = Variable(torch.randn(input_data, hidden_layer), requires_grad = <span class="keyword">True</span>)</span><br><span class="line">w2 = Variable(torch.randn(hidden_layer, output_data) ,requires_grad = <span class="keyword">True</span>)</span><br><span class="line"></span><br><span class="line">epoch_n = <span class="number">30</span></span><br><span class="line">learning_rate = <span class="number">1e-6</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> epoch <span class="keyword">in</span> range(epoch_n):</span><br><span class="line">    y_pred = model(x, w1, w2)  <span class="comment"># y_pred = x.mm(w1).clamp(min = 0).mm(w2)</span></span><br><span class="line">    </span><br><span class="line">    loss = (y_pred - y).pow(<span class="number">2</span>).sum()</span><br><span class="line">    print(<span class="string">"Epoch:&#123;&#125;, Loss:&#123;:.4f&#125;"</span>.format(epoch,loss))</span><br><span class="line">    loss.backward()</span><br><span class="line">    </span><br><span class="line">    w1.data -= learning_rate * w1.grad.data</span><br><span class="line">    w2.data -= learning_rate * w2.grad.data</span><br><span class="line">    </span><br><span class="line">    w1.grad.data.zero_()</span><br><span class="line">    w2.grad.data.zero_()</span><br></pre></td></tr></table></figure>
 <h3 id="6-3-1-PyTorch之torch-nn"><a href="#6-3-1-PyTorch之torch-nn" class="headerlink" title="6.3.1 PyTorch之torch.nn"></a>6.3.1 PyTorch之torch.nn</h3><ul>
@@ -283,19 +289,24 @@ loss_fn = torch.nn.MSELoss()
         param.data -= param.grad.data*learning_rate
 </code></pre>
 <h3 id="6-3-2-PyTorch之torch-optim"><a href="#6-3-2-PyTorch之torch-optim" class="headerlink" title="6.3.2 PyTorch之torch.optim"></a>6.3.2 PyTorch之torch.optim</h3></li>
-<li><p><a href="https://pytorch.org/docs/stable/optim.html#torch.optim.Adam" target="_blank" rel="noopener">torch.optim.Adam()</a></p>
+<li><a href="https://pytorch.org/docs/stable/optim.html#torch.optim.Adam" target="_blank" rel="noopener">torch.optim.Adam()</a></li>
+</ul>
 <blockquote>
-<p>optimzer = torch.optim.Adam(models.parameters(), lr = learning_rate)<br>optimzer.step()</p>
+<ol>
+<li>optimzer = torch.optim.Adam(models.parameters(), lr = learning_rate)</li>
+<li>optimzer.step()</li>
+</ol>
 </blockquote>
-<pre><code class="python"><span class="keyword">import</span> torch
-<span class="keyword">from</span> torch.autograd <span class="keyword">import</span> Variable
-batch_n = <span class="number">100</span>
-hidden_layer = <span class="number">100</span>
-input_data = <span class="number">1000</span>
-output_data = <span class="number">10</span>
+<pre><code>```python
+import torch
+from torch.autograd import Variable
+batch_n = 100
+hidden_layer = 100
+input_data = 1000
+output_data = 10
 
-x = Variable(torch.randn(batch_n, input_data), requires_grad = <span class="keyword">False</span>)
-y = Variable(torch.randn(batch_n, output_data), requires_grad=<span class="keyword">False</span>)
+x = Variable(torch.randn(batch_n, input_data), requires_grad = False)
+y = Variable(torch.randn(batch_n, output_data), requires_grad=False)
 
 models = torch.nn.Sequential(
 torch.nn.Linear(input_data, hidden_layer),
@@ -303,25 +314,23 @@ torch.nn.ReLU(),
 torch.nn.Linear(hidden_layer, output_data)
 )
 
-epoch_n = <span class="number">10000</span>
-learning_rate = <span class="number">1e-4</span>
+epoch_n = 10000
+learning_rate = 1e-4
 loss_fn = torch.nn.MSELoss()
 
 optimzer = torch.optim.Adam(models.parameters(), lr = learning_rate)
 
-<span class="keyword">for</span> epoch <span class="keyword">in</span> range(epoch_n):
+for epoch in range(epoch_n):
     y_pred = models(x)
     loss = loss_fn(y_pred, y)
-    <span class="keyword">if</span> epoch%<span class="number">1000</span> == <span class="number">0</span>:
-        print(<span class="string">"Epoch:{}, Loss:{:.4f}"</span>.format(epoch,loss.data))
+    if epoch%1000 == 0:
+        print(&quot;Epoch:{}, Loss:{:.4f}&quot;.format(epoch,loss.data))
     optimzer.zero_grad()
 
     loss.backward()
     optimzer.step()
-</code></pre>
-</li>
-</ul>
-<h3 id="6-4-1-torch和torchvision"><a href="#6-4-1-torch和torchvision" class="headerlink" title="6.4.1 torch和torchvision"></a>6.4.1 torch和torchvision</h3><ul>
+``` 
+</code></pre><h3 id="6-4-1-torch和torchvision"><a href="#6-4-1-torch和torchvision" class="headerlink" title="6.4.1 torch和torchvision"></a>6.4.1 torch和torchvision</h3><ul>
 <li><code>torchvision</code>的主要功能是实现数据的处理、导入和预览</li>
 <li><a href="https://pytorch.org/docs/stable/torchvision/transforms.html#torchvision-transforms" target="_blank" rel="noopener"><code>torchvision.transforms</code></a> 指定导入数据集时需要对数据进行变换操作类型<br>例如，数据增强（对图片大小进行缩放、对图片进行水平或者垂直翻转…）可生成新的数据集</li>
 </ul>
@@ -333,7 +342,7 @@ optimzer = torch.optim.Adam(models.parameters(), lr = learning_rate)
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2019-01-16T03:49:02.552Z" itemprop="dateUpdated">2019-01-16 11:49:02</time>
+    Last updated: <time datetime="2019-01-22T13:06:26.509Z" itemprop="dateUpdated">2019-01-22 21:06:26</time>
 </span><br>
 
 
@@ -357,6 +366,8 @@ optimzer = torch.optim.Adam(models.parameters(), lr = learning_rate)
 
         <div class="post-footer">
             
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PyTorch/">PyTorch</a></li></ul>
+
 
             
 <div class="page-share-wrap">
