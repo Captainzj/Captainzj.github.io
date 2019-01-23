@@ -28,7 +28,7 @@
 <meta property="og:site_name" content="Go Further">
 <meta property="og:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-31T02:58:37.153Z">
+<meta property="og:updated_time" content="2019-01-23T12:22:45.437Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MachineLearning_Environment configuration">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
@@ -118,7 +118,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="検索">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -210,6 +210,14 @@
 </li>
 <li><p><a href="https://docs.anaconda.com/anaconda/install/linux/" target="_blank" rel="noopener">Install Anaconda on Linux</a></p>
 </li>
+<li><p>卸载anaconda</p>
+<ol>
+<li>在Mac OS上，卸载的过程即是删除软件包的过程。找到Anaconda的安装路径，直接拖入回收站。</li>
+<li><p>打开终端，输入 vi ~/.bash_profile ，进入当前用户的变量信息，找到Anaconda设置的变量信息(如下)，删除，vi输入：wq(保存退出)。</p>
+<figure class="highlight vim"><table><tr><td class="code"><pre><span class="line"># added by Anaconda2 <span class="number">4.2</span>.<span class="number">0</span> installer</span><br><span class="line">    </span><br><span class="line">export PATH=<span class="string">"/Applications/anaconda/bin:$PATH"</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
 </ul>
 <h4 id="TensorFlow"><a href="#TensorFlow" class="headerlink" title="TensorFlow"></a>TensorFlow</h4><p><a href="https://www.tensorflow.org/versions/r1.1/install/install_mac" target="_blank" rel="noopener">TensorFlow on MacOS</a></p>
 <ul>
@@ -295,7 +303,7 @@
     <div class="content">
         
 <span class="post-time">
-    最終更新：<time datetime="2018-12-31T02:58:37.153Z" itemprop="dateUpdated">2018-12-31 10:58:37</time>
+    Last updated: <time datetime="2019-01-23T12:22:45.437Z" itemprop="dateUpdated">2019-01-23 20:22:45</time>
 </span><br>
 
 
@@ -461,7 +469,7 @@
             
                 <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
             
-            <span>このブログの内容物は<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja">クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際ライセンスの下に提供されています</a></span>
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
         </p>
     </div>
     <div class="bottom">
