@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>PyQt5-Python-实战课程（五） | Go Further | Stay Hungry, Stay Foolish</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#142421">
+    
+    
+    <meta name="keywords" content="PyQt5">
+    <meta name="description" content="【阅读时间】XXX min XXX words【阅读内容】……">
+<meta name="keywords" content="PyQt5">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PyQt5-Python-实战课程（五）">
+<meta property="og:url" content="http://yoursite.com/2019/01/26/PyQt5-Python-实战课程（五）/index.html">
+<meta property="og:site_name" content="Go Further">
+<meta property="og:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2019/01/26/PyQt5-Python-实战课程（五）/DrawText.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/26/PyQt5-Python-实战课程（五）/DrawPoints.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/26/PyQt5-Python-实战课程（五）/DrawMultiLine.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/26/PyQt5-Python-实战课程（五）/DrawAll.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/26/PyQt5-Python-实战课程（五）/FillRect.png">
+<meta property="og:updated_time" content="2019-01-26T16:01:44.171Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PyQt5-Python-实战课程（五）">
+<meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
+<meta name="twitter:image" content="http://yoursite.com/2019/01/26/PyQt5-Python-实战课程（五）/DrawText.png">
+    
+        <link rel="alternate" type="application/atom+xml" title="Go Further" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">CaptainSE</h5>
+          <a href="mailto:841145636@qq.com" title="841145636@qq.com" class="mail">841145636@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                Home
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/Captainzj" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">PyQt5-Python-实战课程（五）</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">PyQt5-Python-实战课程（五）</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-01-26T14:45:28.000Z" itemprop="datePublished" class="page-time">
+  2019-01-26
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#绘图API"><span class="post-toc-number">1.</span> <span class="post-toc-text">绘图API</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#在窗口上绘制直线"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">在窗口上绘制直线</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#用像素点绘制正弦曲线"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">用像素点绘制正弦曲线</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#绘制不同类型的直线"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">绘制不同类型的直线</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#绘制各种图形"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">绘制各种图形</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#用画刷填充图形区域"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">用画刷填充图形区域</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-PyQt5-Python-实战课程（五）"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">PyQt5-Python-实战课程（五）</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2019-01-26 22:45:28" datetime="2019-01-26T14:45:28.000Z"  itemprop="datePublished">2019-01-26</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>【阅读时间】XXX min XXX words<br>【阅读内容】……</p>
+<a id="more"></a>
+<h2 id="绘图API"><a href="#绘图API" class="headerlink" title="绘图API"></a>绘图API</h2><p>绘图类型</p>
+<ol>
+<li>文本</li>
+<li>各种图形（直线，点，椭圆，弧，扇形，多边形等）</li>
+<li>图像</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 一般的绘制过程：必须在paintEvent事件方法中绘制各种元素</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">paintEvent</span><span class="params">(self, event)</span>:</span></span><br><span class="line">    painter = QPainter()    </span><br><span class="line"></span><br><span class="line">    painter.begin(self)</span><br><span class="line"></span><br><span class="line">    painter.drawText(...)</span><br><span class="line">    </span><br><span class="line">    painter.end()</span><br></pre></td></tr></table></figure>
+<h3 id="在窗口上绘制直线"><a href="#在窗口上绘制直线" class="headerlink" title="在窗口上绘制直线"></a>在窗口上绘制直线</h3><ul>
+<li>完整代码</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> QApplication,QWidget</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtGui <span class="keyword">import</span> QPainter,QColor,QFont</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtCore <span class="keyword">import</span> Qt</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DrawText</span><span class="params">(QWidget)</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        super(DrawText,self).__init__()</span><br><span class="line">        self.setWindowTitle(<span class="string">'在窗口上绘制文本'</span>)</span><br><span class="line">        self.resize(<span class="number">300</span>,<span class="number">200</span>)</span><br><span class="line">        self.text = <span class="string">"Python从菜鸟到高手"</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">paintEvent</span><span class="params">(self, event)</span>:</span> <span class="comment"># 伸缩窗口大小时，该方法会不断调用</span></span><br><span class="line">        painter = QPainter(self)</span><br><span class="line">        painter.begin(self)</span><br><span class="line">        painter.setPen(QColor(<span class="number">150</span>,<span class="number">43</span>,<span class="number">5</span>)) <span class="comment">#设置画笔颜色</span></span><br><span class="line">        painter.setFont(QFont(<span class="string">'SimSun'</span>,<span class="number">25</span>)) <span class="comment">#设置字体、大小</span></span><br><span class="line"></span><br><span class="line">        painter.drawText(event.rect(),Qt.AlignCenter,self.text) <span class="comment"># 设置绘制区域</span></span><br><span class="line">        painter.end()</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    app = QApplication(sys.argv)</span><br><span class="line">    main = DrawText()</span><br><span class="line">    main.show()</span><br><span class="line">    sys.exit(app.exec_())</span><br></pre></td></tr></table></figure>
+<p><strong>Presentation</strong></p>
+<center><br> <img src="/2019/01/26/PyQt5-Python-实战课程（五）/DrawText.png" width="500"><br></center>
+
+<h3 id="用像素点绘制正弦曲线"><a href="#用像素点绘制正弦曲线" class="headerlink" title="用像素点绘制正弦曲线"></a>用像素点绘制正弦曲线</h3><ul>
+<li>重点代码</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">painter.drawPoint(x,y)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>完整代码</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> sys,math</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtGui <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtCore <span class="keyword">import</span> Qt</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DrawPoints</span><span class="params">(QWidget)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        super(DrawPoints,self).__init__()</span><br><span class="line">        self.resize(<span class="number">300</span>,<span class="number">300</span>)</span><br><span class="line">        self.setWindowTitle(<span class="string">'在窗口上用像素点绘制2个周期的正弦曲线'</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">paintEvent</span><span class="params">(self, event)</span>:</span></span><br><span class="line">        painter = QPainter()</span><br><span class="line">        painter.begin(self)</span><br><span class="line">        painter.setPen(Qt.blue)</span><br><span class="line">        size = self.size()</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1000</span>):</span><br><span class="line">            x = <span class="number">100</span> * (<span class="number">-1</span> + <span class="number">2.0</span> * i/<span class="number">1000</span>) + size.width()/<span class="number">2.0</span></span><br><span class="line">            y = <span class="number">-50</span> * math.sin((x - size.width()/<span class="number">2.0</span>) * math.pi/<span class="number">50</span>) + size.height()/<span class="number">2.0</span></span><br><span class="line">            painter.drawPoint(x,y)  <span class="comment"># x ∈ (-2PI, 2PI)</span></span><br><span class="line"></span><br><span class="line">        painter.end()</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    app = QApplication(sys.argv)</span><br><span class="line">    main = DrawPoints()</span><br><span class="line">    main.show()</span><br><span class="line">    sys.exit(app.exec_())</span><br></pre></td></tr></table></figure>
+<p><strong>Presentation</strong></p>
+<center><br> <img src="/2019/01/26/PyQt5-Python-实战课程（五）/DrawPoints.png" width="500"><br></center>
+
+
+<h3 id="绘制不同类型的直线"><a href="#绘制不同类型的直线" class="headerlink" title="绘制不同类型的直线"></a>绘制不同类型的直线</h3><ul>
+<li>重点代码</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pen.setStyle(Qt.SolidLine) <span class="comment"># or Qt.DashLine or Qt.DashDotDotLine or Qt.DotLine or CustomDashLine etc.</span></span><br><span class="line">painter.setPen(pen)</span><br><span class="line">painter.drawLine(start_x, start_y, end_x, end_y)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>完整代码</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> sys,math</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtGui <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtCore <span class="keyword">import</span> Qt</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DrawMultiLine</span><span class="params">(QWidget)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        super(DrawMultiLine,self).__init__()</span><br><span class="line">        self.resize(<span class="number">300</span>,<span class="number">300</span>)</span><br><span class="line">        self.setWindowTitle(<span class="string">'设置Pen的样式'</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">paintEvent</span><span class="params">(self, event)</span>:</span></span><br><span class="line">        painter = QPainter()</span><br><span class="line">        painter.begin(self)</span><br><span class="line"></span><br><span class="line">        pen = QPen(Qt.red,<span class="number">3</span>,Qt.SolidLine)</span><br><span class="line">        painter.setPen(pen)</span><br><span class="line">        painter.drawLine(<span class="number">20</span>,<span class="number">40</span>,<span class="number">250</span>,<span class="number">40</span>) <span class="comment"># (start_x, start_y, end_x, end_y)</span></span><br><span class="line"></span><br><span class="line">        pen.setStyle(Qt.DashLine)</span><br><span class="line">        painter.setPen(pen)</span><br><span class="line">        painter.drawLine(<span class="number">20</span>, <span class="number">80</span>, <span class="number">250</span>, <span class="number">80</span>)</span><br><span class="line"></span><br><span class="line">        pen.setStyle(Qt.DashDotDotLine)</span><br><span class="line">        painter.setPen(pen)</span><br><span class="line">        painter.drawLine(<span class="number">20</span>, <span class="number">120</span>, <span class="number">250</span>, <span class="number">120</span>)</span><br><span class="line"></span><br><span class="line">        pen.setStyle(Qt.DotLine)</span><br><span class="line">        painter.setPen(pen)</span><br><span class="line">        painter.drawLine(<span class="number">20</span>, <span class="number">160</span>, <span class="number">250</span>, <span class="number">160</span>)</span><br><span class="line"></span><br><span class="line">        pen.setStyle(Qt.DashDotDotLine)</span><br><span class="line">        painter.setPen(pen)</span><br><span class="line">        painter.drawLine(<span class="number">20</span>, <span class="number">200</span>, <span class="number">250</span>, <span class="number">200</span>)</span><br><span class="line"></span><br><span class="line">        pen.setStyle(Qt.CustomDashLine)</span><br><span class="line">        pen.setDashPattern([<span class="number">1</span>,<span class="number">10</span>,<span class="number">5</span>,<span class="number">5</span>])</span><br><span class="line">        painter.setPen(pen)</span><br><span class="line">        painter.drawLine(<span class="number">20</span>, <span class="number">240</span>, <span class="number">250</span>, <span class="number">240</span>)</span><br><span class="line"></span><br><span class="line">        size = self.size()</span><br><span class="line"></span><br><span class="line">        painter.end()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    app = QApplication(sys.argv)</span><br><span class="line">    main = DrawMultiLine()</span><br><span class="line">    main.show()</span><br><span class="line">    sys.exit(app.exec_())</span><br></pre></td></tr></table></figure>
+<p><strong>Presentation</strong></p>
+<center><br> <img src="/2019/01/26/PyQt5-Python-实战课程（五）/DrawMultiLine.png" width="500"><br></center>
+
+<h3 id="绘制各种图形"><a href="#绘制各种图形" class="headerlink" title="绘制各种图形"></a>绘制各种图形</h3><ul>
+<li>类型<ol>
+<li>弧</li>
+<li>圆形</li>
+<li>椭圆</li>
+<li>矩形（正方形）</li>
+<li>多边形</li>
+<li>绘制图像</li>
+</ol>
+</li>
+</ul>
+<ul>
+<li>完整代码</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> sys,math</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtGui <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtCore <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DrawAll</span><span class="params">(QWidget)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        super(DrawAll,self).__init__()</span><br><span class="line">        self.resize(<span class="number">300</span>,<span class="number">600</span>)</span><br><span class="line">        self.setWindowTitle(<span class="string">'绘制各种图形'</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">paintEvent</span><span class="params">(self, event)</span>:</span></span><br><span class="line">        qp = QPainter()</span><br><span class="line"></span><br><span class="line">        qp.begin(self)</span><br><span class="line"></span><br><span class="line">        qp.setPen(Qt.blue)</span><br><span class="line">        <span class="comment"># 绘制弧</span></span><br><span class="line">        rect = QRect(<span class="number">0</span>,<span class="number">10</span>,<span class="number">100</span>,<span class="number">100</span>)</span><br><span class="line">        <span class="comment"># alen: 1个alen等于1/16度   45 * 16</span></span><br><span class="line">        qp.drawArc(rect,<span class="number">0</span>, <span class="number">50</span> * <span class="number">16</span>)</span><br><span class="line">        </span><br><span class="line">        qp.setPen(Qt.red)</span><br><span class="line">        <span class="comment"># 通过弧绘制圆</span></span><br><span class="line">        qp.drawArc(<span class="number">120</span>,<span class="number">10</span>,<span class="number">100</span>,<span class="number">100</span>,<span class="number">0</span>, <span class="number">360</span> * <span class="number">16</span>)</span><br><span class="line">        <span class="comment"># 绘制带弦的弧</span></span><br><span class="line">        qp.drawChord(<span class="number">10</span>,<span class="number">120</span>,<span class="number">100</span>,<span class="number">100</span>,<span class="number">12</span>,<span class="number">130</span>*<span class="number">16</span>)</span><br><span class="line">        <span class="comment"># 绘制扇形</span></span><br><span class="line">        qp.drawPie(<span class="number">10</span>,<span class="number">240</span>,<span class="number">100</span>,<span class="number">100</span>,<span class="number">12</span>,<span class="number">130</span>*<span class="number">16</span>)</span><br><span class="line">        <span class="comment"># 椭圆</span></span><br><span class="line">        qp.drawEllipse(<span class="number">120</span>,<span class="number">120</span>,<span class="number">150</span>,<span class="number">100</span>)</span><br><span class="line">        <span class="comment"># 绘制5边形</span></span><br><span class="line">        point1 = QPoint(<span class="number">140</span>,<span class="number">380</span>)</span><br><span class="line">        point2 = QPoint(<span class="number">270</span>,<span class="number">420</span>)</span><br><span class="line">        point3 = QPoint(<span class="number">290</span>,<span class="number">512</span>)</span><br><span class="line">        point4 = QPoint(<span class="number">290</span>,<span class="number">588</span>)</span><br><span class="line">        point5 = QPoint(<span class="number">200</span>,<span class="number">533</span>)</span><br><span class="line">        polygon = QPolygon([point1,point2,point3,point4,point5])</span><br><span class="line">        qp.drawPolygon(polygon)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 绘制图像</span></span><br><span class="line">        image = QImage(<span class="string">'./images/book1.png'</span>)</span><br><span class="line">        rect = QRect(<span class="number">10</span>, <span class="number">400</span>, image.width()/<span class="number">3</span>, image.height()/<span class="number">3</span>)</span><br><span class="line">        <span class="comment">#image.save('./images/book1.png')</span></span><br><span class="line">        qp.drawImage(rect,image)</span><br><span class="line"></span><br><span class="line">        qp.end()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    app = QApplication(sys.argv)</span><br><span class="line">    main = DrawAll()</span><br><span class="line">    main.show()</span><br><span class="line">    sys.exit(app.exec_())</span><br></pre></td></tr></table></figure>
+<p><strong>Presentation</strong></p>
+<center><br> <img src="/2019/01/26/PyQt5-Python-实战课程（五）/DrawAll.png" width="500"><br></center>
+
+<h3 id="用画刷填充图形区域"><a href="#用画刷填充图形区域" class="headerlink" title="用画刷填充图形区域"></a>用画刷填充图形区域</h3><ul>
+<li>重点代码</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">brush = QBrush(Qt.SolidPattern) <span class="comment"># or Qt.Dense1Pattern or Qt.Dense2Pattern or Qt.Dense3Pattern or Qt.HorPattern etc.</span></span><br><span class="line">qp.setBrush(brush)</span><br><span class="line">qp.drawRect(x, y, width, height)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>完整代码</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> sys,math</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtGui <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtCore <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">FillRect</span><span class="params">(QWidget)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        super(FillRect,self).__init__()</span><br><span class="line">        self.resize(<span class="number">500</span>,<span class="number">260</span>)</span><br><span class="line">        self.setWindowTitle(<span class="string">'用画刷填充区域'</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">paintEvent</span><span class="params">(self,e)</span>:</span></span><br><span class="line">        qp = QPainter()</span><br><span class="line">        qp.begin(self)</span><br><span class="line"></span><br><span class="line">        brush = QBrush(Qt.SolidPattern)</span><br><span class="line">        qp.setBrush(brush)</span><br><span class="line">        qp.drawRect(<span class="number">10</span>,<span class="number">15</span>,<span class="number">90</span>,<span class="number">60</span>) <span class="comment"># (x, y, width, height)</span></span><br><span class="line"></span><br><span class="line">        brush = QBrush(Qt.Dense1Pattern)</span><br><span class="line">        qp.setBrush(brush)</span><br><span class="line">        qp.drawRect(<span class="number">130</span>,<span class="number">15</span>,<span class="number">90</span>,<span class="number">60</span>)</span><br><span class="line"></span><br><span class="line">        brush = QBrush(Qt.Dense2Pattern)</span><br><span class="line">        qp.setBrush(brush)</span><br><span class="line">        qp.drawRect(<span class="number">250</span>,<span class="number">15</span>,<span class="number">90</span>,<span class="number">60</span>)</span><br><span class="line"></span><br><span class="line">        brush = QBrush(Qt.Dense3Pattern)</span><br><span class="line">        qp.setBrush(brush)</span><br><span class="line">        qp.drawRect(<span class="number">10</span>, <span class="number">105</span>, <span class="number">90</span>, <span class="number">60</span>)</span><br><span class="line"></span><br><span class="line">        brush = QBrush(Qt.HorPattern) <span class="comment"># Hor - Horizontal</span></span><br><span class="line">        qp.setBrush(brush)</span><br><span class="line">        qp.drawRect(<span class="number">130</span>, <span class="number">105</span>, <span class="number">90</span>, <span class="number">60</span>)</span><br><span class="line"></span><br><span class="line">        qp.end()</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    app = QApplication(sys.argv)</span><br><span class="line">    main = FillRect()</span><br><span class="line">    main.show()</span><br><span class="line">    sys.exit(app.exec_())</span><br></pre></td></tr></table></figure>
+<p><strong>Presentation</strong></p>
+<center><br> <img src="/2019/01/26/PyQt5-Python-实战课程（五）/FillRect.png" width="500"><br></center>
+
+
+
+
+
+
+
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2019-01-26T16:01:44.171Z" itemprop="dateUpdated">2019-01-27 00:01:44</time>
+</span><br>
+
+
+        
+    </div>
+    
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/avatar.jpg" alt="CaptainSE">
+            CaptainSE
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PyQt5/">PyQt5</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/01/26/PyQt5-Python-实战课程（五）/&title=《PyQt5-Python-实战课程（五）》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/01/26/PyQt5-Python-实战课程（五）/&title=《PyQt5-Python-实战课程（五）》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/01/26/PyQt5-Python-实战课程（五）/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《PyQt5-Python-实战课程（五）》 — Go Further&url=http://yoursite.com/2019/01/26/PyQt5-Python-实战课程（五）/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2019/01/26/PyQt5-Python-实战课程（五）/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2019/01/26/PyQt5-Python-实战课程（四）/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">PyQt5-Python-实战课程（四）</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢老板~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>CaptainSE &copy; 2015 - 2019</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/01/26/PyQt5-Python-实战课程（五）/&title=《PyQt5-Python-实战课程（五）》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/01/26/PyQt5-Python-实战课程（五）/&title=《PyQt5-Python-实战课程（五）》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/01/26/PyQt5-Python-实战课程（五）/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《PyQt5-Python-实战课程（五）》 — Go Further&url=http://yoursite.com/2019/01/26/PyQt5-Python-实战课程（五）/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2019/01/26/PyQt5-Python-实战课程（五）/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACuElEQVR42u3awU7DMBAE0P7/T4PECQRpZtZ26eHlFFFI/FIpu4z38YiPj6/j+/n34+rnvz+9uubvKzxfw+YDDw8Pb7T0ZHGzJV5dMwfkj/KPK+Dh4eEd4yXFIDnPC0OOb6+Gh4eH9z68lSUmjTUeHh4eXrK45NP2QeDh4eG9hrc3hE3CizwOztt3PDw8vNfwZhtg/3t+fH8PDw8Pb7SrnhxJw52HvPlPorXh4eHhHeDlbW7eRufLzYOP9i71vBgeHh5ezJu9iNswYiVcyL+l4nvDw8PD28prh0fzUYC27V6JhvHw8PBO8+oefKEwPMfkcW30EPHw8PCO8doi0W5EzcYF2jY6CnDx8PDwlnnrEW37Em/3+mcPDg8PD+8cr936Sm4/w+TFKbn7ZUuNh4eHt5W3PhqVt8WzsYCkjP04x8PDwzvAy4PalU2p/Mqzv71ZDx4eHt5WXruJlb+yV4arHrsOPDw8vMO8dsMpaZHbLbR2+OBmEAEPDw/vGC//tz+PXNdHB2Zv+MuZMjw8PLxNvPaV3YYCs3LStvU3BQwPDw9vK6+NFfKmOQ8pZsUmCpTx8PDwjvHatnhpEGp0r1k8gYeHh3eCl7enbZCaR8Btk10/Yjw8PLytvPYS7Ws6HzjYGwFfptR4eHh4m3h5gDsLCHYFH3XcjIeHh3eAt97y5ouYbWLlheTm9/Hw8PA28WaLXml/Z+NcS3UPDw8Pbysv34Zvo4cTpSV/uHh4eHjneB/lkReDnL3yiG/iEjw8PLwDvJWNqJVRrVmw+/y+sw02PDw8vBkvKQbtS7kd1WoBxVACHh4e3jHeysBTW392BccJHg8PD+8deCuPICk/eWCBh4eH9/68PDJoY4h8g61l4+Hh4Z3jzUYHWkw7grA+oICHh4d3gjcbaWoj12QAK2+X8zEFPDw8vK28T0m7iL1B8hryAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = 'Go Further | Stay Hungry, Stay Foolish';
+            clearTimeout(titleTime);
+        } else {
+            document.title = 'Go Further | Stay Hungry, Stay Foolish';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
