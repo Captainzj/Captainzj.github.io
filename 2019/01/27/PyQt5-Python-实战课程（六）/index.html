@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>PyQt5-Python-实战课程（六） | Go Further | Stay Hungry, Stay Foolish</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#142421">
+    
+    
+    <meta name="keywords" content="PyQt5">
+    <meta name="description" content="【阅读时间】XXX min XXX words【阅读内容】……">
+<meta name="keywords" content="PyQt5">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PyQt5-Python-实战课程（六）">
+<meta property="og:url" content="http://yoursite.com/2019/01/27/PyQt5-Python-实战课程（六）/index.html">
+<meta property="og:site_name" content="Go Further">
+<meta property="og:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2019/01/27/PyQt5-Python-实战课程（六）/DrapDrop.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/27/PyQt5-Python-实战课程（六）/ClipBoard.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/27/PyQt5-Python-实战课程（六）/QCalendarWidget.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/27/PyQt5-Python-实战课程（六）/QDateTimeEdit.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/27/PyQt5-Python-实战课程（六）/menuBar.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/27/PyQt5-Python-实战课程（六）/Toolbar.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/27/PyQt5-Python-实战课程（六）/StatusBar.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/27/PyQt5-Python-实战课程（六）/PrintSupport.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/27/PyQt5-Python-实战课程（六）/PrintDialog.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/27/PyQt5-Python-实战课程（六）/TabWidgetDemo.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/27/PyQt5-Python-实战课程（六）/QStackedWidget.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/27/PyQt5-Python-实战课程（六）/QDockWidget.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/27/PyQt5-Python-实战课程（六）/MultiWindows.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/27/PyQt5-Python-实战课程（六）/QScrollBar.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/27/PyQt5-Python-实战课程（六）/ShowTime.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/27/PyQt5-Python-实战课程（六）/AutoCloseWindow.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/27/PyQt5-Python-实战课程（六）/Counter.png">
+<meta property="og:updated_time" content="2019-01-28T08:22:52.436Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PyQt5-Python-实战课程（六）">
+<meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
+<meta name="twitter:image" content="http://yoursite.com/2019/01/27/PyQt5-Python-实战课程（六）/DrapDrop.png">
+    
+        <link rel="alternate" type="application/atom+xml" title="Go Further" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">CaptainSE</h5>
+          <a href="mailto:841145636@qq.com" title="841145636@qq.com" class="mail">841145636@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                Home
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/Captainzj" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">PyQt5-Python-实战课程（六）</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">PyQt5-Python-实战课程（六）</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-01-27T07:55:37.000Z" itemprop="datePublished" class="page-time">
+  2019-01-27
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#拖拽与剪贴板"><span class="post-toc-number">1.</span> <span class="post-toc-text">拖拽与剪贴板</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#让控件支持拖拽动作"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">让控件支持拖拽动作</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#使用剪贴板"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">使用剪贴板</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#日历和时间"><span class="post-toc-number">2.</span> <span class="post-toc-text">日历和时间</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#日历控件"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">日历控件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#设置不同风格的日期和时间"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">设置不同风格的日期和时间</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#日期和时间控件的高级操作"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">日期和时间控件的高级操作</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#菜单、工具栏和状态栏"><span class="post-toc-number">3.</span> <span class="post-toc-text">菜单、工具栏和状态栏</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#创建和使用菜单"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">创建和使用菜单</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#创建和使用工具栏"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">创建和使用工具栏</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#创建和使用状态栏"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">创建和使用状态栏</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#打印"><span class="post-toc-number">4.</span> <span class="post-toc-text">打印</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#使用打印机"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">使用打印机</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#显示打印对话框"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">显示打印对话框</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#堆栈窗口控件（QStackedWidget）"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">堆栈窗口控件（QStackedWidget）</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-PyQt5-Python-实战课程（六）"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">PyQt5-Python-实战课程（六）</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2019-01-27 15:55:37" datetime="2019-01-27T07:55:37.000Z"  itemprop="datePublished">2019-01-27</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>【阅读时间】XXX min XXX words<br>【阅读内容】……</p>
+<a id="more"></a>
+<h2 id="拖拽与剪贴板"><a href="#拖拽与剪贴板" class="headerlink" title="拖拽与剪贴板"></a>拖拽与剪贴板</h2><h3 id="让控件支持拖拽动作"><a href="#让控件支持拖拽动作" class="headerlink" title="让控件支持拖拽动作"></a>让控件支持拖拽动作</h3><p><strong>Presentation</strong></p>
+<center><br> <img src="/2019/01/27/PyQt5-Python-实战课程（六）/DrapDrop.png" width="500"><br></center>
+
+<ul>
+<li>要点说明</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">A.setDragEnabled(<span class="keyword">True</span>)</span><br><span class="line">B.setAcceptDrops(<span class="keyword">True</span>)</span><br><span class="line"></span><br><span class="line">B需要两个事件</span><br><span class="line"><span class="number">1.</span> dragEnterEvent   <span class="comment">#将A拖到B触发</span></span><br><span class="line"><span class="number">2.</span> dropEvent        <span class="comment">#在B的区域放下A时触发</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>完整代码</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyComboBox</span><span class="params">(QComboBox)</span> :</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        super(MyComboBox,self).__init__()</span><br><span class="line">        self.setAcceptDrops(<span class="keyword">True</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">dragEnterEvent</span><span class="params">(self,e)</span>:</span></span><br><span class="line">        print(e)</span><br><span class="line">        <span class="keyword">if</span> e.mimeData().hasText():</span><br><span class="line">            e.accept()</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            e.ignore()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">dropEvent</span><span class="params">(self,e)</span>:</span></span><br><span class="line">        self.addItem(e.mimeData().text())</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DrapDropDemo</span><span class="params">(QWidget)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        super(DrapDropDemo,self).__init__()</span><br><span class="line">        self.setWindowTitle(<span class="string">'拖拽案例'</span>)</span><br><span class="line"></span><br><span class="line">        formLayout = QFormLayout()</span><br><span class="line">        formLayout.addRow(QLabel(<span class="string">"请将左边的文本拖拽到右边的下拉列表中"</span>))</span><br><span class="line">        lineEdit = QLineEdit()</span><br><span class="line">        lineEdit.setDragEnabled(<span class="keyword">True</span>)  <span class="comment"># 让QLineEdit控件可拖动</span></span><br><span class="line"></span><br><span class="line">        combo = MyComboBox()</span><br><span class="line">        formLayout.addRow(lineEdit,combo)</span><br><span class="line"></span><br><span class="line">        self.setLayout(formLayout)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    app = QApplication(sys.argv)</span><br><span class="line">    main = DrapDropDemo()</span><br><span class="line">    main.show()</span><br><span class="line">    sys.exit(app.exec_())</span><br></pre></td></tr></table></figure>
+<h3 id="使用剪贴板"><a href="#使用剪贴板" class="headerlink" title="使用剪贴板"></a>使用剪贴板</h3><p><strong>Presentation</strong></p>
+<center><br> <img src="/2019/01/27/PyQt5-Python-实战课程（六）/ClipBoard.png" width="500"><br></center>
+
+<ul>
+<li>要点代码</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">copyText</span><span class="params">(self)</span>:</span></span><br><span class="line">    clipboard = QApplication.clipboard()</span><br><span class="line">    clipboard.setText(<span class="string">'hello world'</span>)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">pasteText</span><span class="params">(self)</span>:</span></span><br><span class="line">    clipboard = QApplication.clipboard()</span><br><span class="line">    self.textLabel.setText(clipboard.text())</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">copyImage</span><span class="params">(self)</span>:</span></span><br><span class="line">    clipboard = QApplication.clipboard()</span><br><span class="line">    clipboard.setPixmap(QPixmap(<span class="string">'./images/book.png'</span>))</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">pasteImage</span><span class="params">(self)</span>:</span></span><br><span class="line">    clipboard = QApplication.clipboard()</span><br><span class="line">    self.imageLabel.setPixmap(clipboard.pixmap())</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">copyHtml</span><span class="params">(self)</span>:</span></span><br><span class="line">    mimeData = QMimeData()</span><br><span class="line">    mimeData.setHtml(<span class="string">'&lt;b&gt;Bold and &lt;font color=red&gt;Red&lt;/font&gt;&lt;/b&gt;'</span>)</span><br><span class="line">    clipboard = QApplication.clipboard()</span><br><span class="line">    clipboard.setMimeData(mimeData)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">pasteHtml</span><span class="params">(self)</span>:</span></span><br><span class="line">    clipboard = QApplication.clipboard()</span><br><span class="line">    mimeData = clipboard.mimeData()</span><br><span class="line">    <span class="keyword">if</span> mimeData.hasHtml():</span><br><span class="line">        self.textLabel.setText(mimeData.html())</span><br></pre></td></tr></table></figure>
+<ul>
+<li>完整代码</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtGui <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtCore <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ClipBoard</span><span class="params">(QDialog)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        super(ClipBoard,self).__init__()</span><br><span class="line">        textCopyButton = QPushButton(<span class="string">'复制文本'</span>)</span><br><span class="line">        textPasteButton = QPushButton(<span class="string">'粘贴文本'</span>)</span><br><span class="line"></span><br><span class="line">        htmlCopyButton = QPushButton(<span class="string">'复制HTML'</span>)</span><br><span class="line">        htmlPasteButton = QPushButton(<span class="string">'粘贴HTML'</span>)</span><br><span class="line"></span><br><span class="line">        imageCopyButton = QPushButton(<span class="string">'复制图像'</span>)</span><br><span class="line">        imagePasteButton = QPushButton(<span class="string">'粘贴图像'</span>)</span><br><span class="line"></span><br><span class="line">        self.textLabel  = QLabel(<span class="string">'默认文本'</span>)</span><br><span class="line">        self.imageLabel=QLabel()</span><br><span class="line">      <span class="comment">#  self.imageLabel.setPixmap(QPixmap('./images/book1.png'))</span></span><br><span class="line"></span><br><span class="line">        layout = QGridLayout()</span><br><span class="line">        layout.addWidget(textCopyButton,<span class="number">0</span>,<span class="number">0</span>)</span><br><span class="line">        layout.addWidget(imageCopyButton,<span class="number">0</span>,<span class="number">1</span>)</span><br><span class="line">        layout.addWidget(htmlCopyButton,<span class="number">0</span>,<span class="number">2</span>)</span><br><span class="line">        layout.addWidget(textPasteButton,<span class="number">1</span>,<span class="number">0</span>)</span><br><span class="line">        layout.addWidget(imagePasteButton,<span class="number">1</span>,<span class="number">1</span>)</span><br><span class="line">        layout.addWidget(htmlPasteButton,<span class="number">1</span>,<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">        layout.addWidget(self.textLabel,<span class="number">2</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>)</span><br><span class="line">        layout.addWidget(self.imageLabel,<span class="number">2</span>,<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">        self.setLayout(layout)</span><br><span class="line"></span><br><span class="line">        textCopyButton.clicked.connect(self.copyText)</span><br><span class="line">        textPasteButton.clicked.connect(self.pasteText)</span><br><span class="line"></span><br><span class="line">        htmlCopyButton.clicked.connect(self.copyHtml)</span><br><span class="line">        htmlPasteButton.clicked.connect(self.pasteHtml)</span><br><span class="line"></span><br><span class="line">        imageCopyButton.clicked.connect(self.copyImage)</span><br><span class="line">        imagePasteButton.clicked.connect(self.pasteImage)</span><br><span class="line"></span><br><span class="line">        self.setWindowTitle(<span class="string">'剪贴板演示'</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">copyText</span><span class="params">(self)</span>:</span></span><br><span class="line">        clipboard = QApplication.clipboard()</span><br><span class="line">        clipboard.setText(<span class="string">'hello world'</span>)</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">pasteText</span><span class="params">(self)</span>:</span></span><br><span class="line">        clipboard = QApplication.clipboard()</span><br><span class="line">        self.textLabel.setText(clipboard.text())</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">copyImage</span><span class="params">(self)</span>:</span></span><br><span class="line">        clipboard = QApplication.clipboard()</span><br><span class="line">        clipboard.setPixmap(QPixmap(<span class="string">'./images/book.png'</span>))</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">pasteImage</span><span class="params">(self)</span>:</span></span><br><span class="line">        clipboard = QApplication.clipboard()</span><br><span class="line">        self.imageLabel.setPixmap(clipboard.pixmap())</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">copyHtml</span><span class="params">(self)</span>:</span></span><br><span class="line">        mimeData = QMimeData()</span><br><span class="line">        mimeData.setHtml(<span class="string">'&lt;b&gt;Bold and &lt;font color=red&gt;Red&lt;/font&gt;&lt;/b&gt;'</span>)</span><br><span class="line">        clipboard = QApplication.clipboard()</span><br><span class="line">        clipboard.setMimeData(mimeData)</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">pasteHtml</span><span class="params">(self)</span>:</span></span><br><span class="line">        clipboard = QApplication.clipboard()</span><br><span class="line">        mimeData = clipboard.mimeData()</span><br><span class="line">        <span class="keyword">if</span> mimeData.hasHtml():</span><br><span class="line">            self.textLabel.setText(mimeData.html())</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    app = QApplication(sys.argv)</span><br><span class="line">    main = ClipBoard()</span><br><span class="line">    main.show()</span><br><span class="line">    sys.exit(app.exec_())</span><br></pre></td></tr></table></figure>
+<h2 id="日历和时间"><a href="#日历和时间" class="headerlink" title="日历和时间"></a>日历和时间</h2><h3 id="日历控件"><a href="#日历控件" class="headerlink" title="日历控件"></a>日历控件</h3><p><strong>Presentation</strong></p>
+<center><br> <img src="/2019/01/27/PyQt5-Python-实战课程（六）/QCalendarWidget.png" width="500"><br></center>
+
+<ul>
+<li>完整代码</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtCore <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyCalendar</span><span class="params">(QWidget)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        super(MyCalendar, self).__init__()</span><br><span class="line">        self.initUI()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">initUI</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.cal = QCalendarWidget(self)</span><br><span class="line">        self.cal.setMinimumDate(QDate(<span class="number">1988</span>,<span class="number">1</span>,<span class="number">1</span>))</span><br><span class="line">        self.cal.setMaximumDate(QDate(<span class="number">2088</span>,<span class="number">1</span>,<span class="number">1</span>))</span><br><span class="line">        self.cal.setGridVisible(<span class="keyword">True</span>)</span><br><span class="line">        self.cal.move(<span class="number">20</span>,<span class="number">20</span>)</span><br><span class="line">        self.cal.clicked.connect(self.showDate)</span><br><span class="line"></span><br><span class="line">        self.label = QLabel(self)</span><br><span class="line"></span><br><span class="line">        date = self.cal.selectedDate()</span><br><span class="line">        self.label.setText(date.toString(<span class="string">"yyyy-MM-dd dddd"</span>))</span><br><span class="line">        self.label.move(<span class="number">20</span>,<span class="number">300</span>)</span><br><span class="line"></span><br><span class="line">        self.resize(<span class="number">400</span>,<span class="number">350</span>)</span><br><span class="line">        self.setWindowTitle(<span class="string">"日历演示"</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">showDate</span><span class="params">(self,date)</span>:</span></span><br><span class="line">        <span class="comment">#self.label.setText((date.toString("yyyy-MM-dd dddd")))</span></span><br><span class="line">        self.label.setText((self.cal.selectedDate().toString(<span class="string">"yyyy-MM-dd dddd"</span>)))</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    app = QApplication(sys.argv)</span><br><span class="line">    main = MyCalendar()</span><br><span class="line">    main.show()</span><br><span class="line">    sys.exit(app.exec_())</span><br></pre></td></tr></table></figure>
+<h3 id="设置不同风格的日期和时间"><a href="#设置不同风格的日期和时间" class="headerlink" title="设置不同风格的日期和时间"></a>设置不同风格的日期和时间</h3><h3 id="日期和时间控件的高级操作"><a href="#日期和时间控件的高级操作" class="headerlink" title="日期和时间控件的高级操作"></a>日期和时间控件的高级操作</h3><p><strong>Presentation</strong></p>
+<center><br> <img src="/2019/01/27/PyQt5-Python-实战课程（六）/QDateTimeEdit.png" width="500"><br></center>
+
+<ul>
+<li>完整代码</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtCore <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DateTimeEdit</span><span class="params">(QWidget)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        super(DateTimeEdit, self).__init__()</span><br><span class="line">        self.initUI()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">initUI</span><span class="params">(self)</span>:</span></span><br><span class="line"></span><br><span class="line">        vlayout = QVBoxLayout()</span><br><span class="line"></span><br><span class="line">        dateTimeEdit1 = QDateTimeEdit()</span><br><span class="line">        dateTimeEdit1.setMinimumDate(QDate.currentDate().addDays(<span class="number">-365</span>))</span><br><span class="line">        dateTimeEdit1.setMaximumDate(QDate.currentDate().addDays(<span class="number">365</span>))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        dateTimeEdit2 = QDateTimeEdit(QDateTime.currentDateTime())</span><br><span class="line">        dateTimeEdit2.setCalendarPopup(<span class="keyword">True</span>)</span><br><span class="line"></span><br><span class="line">        dateEdit = QDateTimeEdit(QDate.currentDate()) <span class="comment"># 仅显示日期</span></span><br><span class="line">        timeEdit = QDateTimeEdit(QTime.currentTime()) <span class="comment"># 仅显示时间</span></span><br><span class="line"></span><br><span class="line">        dateTimeEdit1.setDisplayFormat(<span class="string">"yyyy-MM-dd  HH:mm:ss"</span>)</span><br><span class="line">        dateTimeEdit2.setDisplayFormat(<span class="string">"yyyy/MM/dd HH-mm-ss"</span>)</span><br><span class="line">        dateEdit.setDisplayFormat(<span class="string">"yyyy.MM.dd"</span>)</span><br><span class="line">        timeEdit.setDisplayFormat(<span class="string">"HH:mm:ss"</span>)</span><br><span class="line"></span><br><span class="line">        self.dateTimeEdit = dateTimeEdit1</span><br><span class="line">        dateTimeEdit1.dateChanged.connect(self.onDateChanged)</span><br><span class="line">        dateTimeEdit1.timeChanged.connect(self.onTimeChanged)</span><br><span class="line">        dateTimeEdit1.dateTimeChanged.connect(self.onDateTimeChanged)</span><br><span class="line"></span><br><span class="line">        vlayout.addWidget(dateTimeEdit1)</span><br><span class="line">        vlayout.addWidget(dateTimeEdit2)</span><br><span class="line">        vlayout.addWidget(dateEdit)</span><br><span class="line">        vlayout.addWidget(timeEdit)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        self.btn = QPushButton(<span class="string">'获取日期和时间'</span>)</span><br><span class="line">        self.btn.clicked.connect(self.onButtonClick)</span><br><span class="line">        vlayout.addWidget(self.btn)</span><br><span class="line"></span><br><span class="line">        self.setLayout(vlayout)</span><br><span class="line">        self.resize(<span class="number">300</span>,<span class="number">90</span>)</span><br><span class="line">        self.setWindowTitle(<span class="string">"设置不同风格的日期和时间"</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 日期变化</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">onDateChanged</span><span class="params">(self,date)</span>:</span></span><br><span class="line">        print(date)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 时间变化</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">onTimeChanged</span><span class="params">(self,time)</span>:</span></span><br><span class="line">        print(time)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 日期和时间变化</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">onDateTimeChanged</span><span class="params">(self,datetime)</span>:</span></span><br><span class="line">        print(datetime)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">onButtonClick</span><span class="params">(self)</span>:</span></span><br><span class="line">        datetime = self.dateTimeEdit.dateTime()</span><br><span class="line">        print(datetime)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 最大日期</span></span><br><span class="line">        print(self.dateTimeEdit.maximumDate())</span><br><span class="line">        <span class="comment"># 最大日期和时间</span></span><br><span class="line">        print(self.dateTimeEdit.maximumDateTime())</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 最小日期</span></span><br><span class="line">        print(self.dateTimeEdit.minimumDateTime())</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    app = QApplication(sys.argv)</span><br><span class="line">    main = DateTimeEdit()</span><br><span class="line">    main.show()</span><br><span class="line">    sys.exit(app.exec_())</span><br></pre></td></tr></table></figure>
+<h2 id="菜单、工具栏和状态栏"><a href="#菜单、工具栏和状态栏" class="headerlink" title="菜单、工具栏和状态栏"></a>菜单、工具栏和状态栏</h2><h3 id="创建和使用菜单"><a href="#创建和使用菜单" class="headerlink" title="创建和使用菜单"></a>创建和使用菜单</h3><p><strong>Presentation</strong></p>
+<center><br> <img src="/2019/01/27/PyQt5-Python-实战课程（六）/menuBar.png" width="500"><br></center>
+
+<ul>
+<li>完整代码</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Menu</span><span class="params">(QMainWindow)</span> :</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        super(Menu,self).__init__()</span><br><span class="line">        bar = self.menuBar()  <span class="comment"># 获取菜单栏</span></span><br><span class="line"></span><br><span class="line">        file = bar.addMenu(<span class="string">"文件"</span>)</span><br><span class="line">        file.addAction(<span class="string">"新建"</span>)</span><br><span class="line"></span><br><span class="line">        save = QAction(<span class="string">"保存"</span>,self)</span><br><span class="line">        save.setShortcut(<span class="string">"Ctrl + S"</span>)</span><br><span class="line">        save.triggered.connect(self.process)</span><br><span class="line">        file.addAction(save)</span><br><span class="line"></span><br><span class="line">        quit = QAction(<span class="string">"退出"</span>,self)</span><br><span class="line">        file.addAction(quit)</span><br><span class="line"></span><br><span class="line">        edit = bar.addMenu(<span class="string">"Edit"</span>)</span><br><span class="line">        edit.addAction(<span class="string">"copy"</span>)</span><br><span class="line">        edit.addAction(<span class="string">"paste"</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">process</span><span class="params">(self,a)</span>:</span></span><br><span class="line">        print(self.sender().text())</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    app = QApplication(sys.argv)</span><br><span class="line">    main = Menu()</span><br><span class="line">    main.show()</span><br><span class="line">    sys.exit(app.exec_())</span><br></pre></td></tr></table></figure>
+<h3 id="创建和使用工具栏"><a href="#创建和使用工具栏" class="headerlink" title="创建和使用工具栏"></a>创建和使用工具栏</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">工具栏默认按钮：<span class="string">'只显示图标，将文本作为悬停提示展示'</span></span><br><span class="line"></span><br><span class="line">工具栏按钮有<span class="number">3</span>中显示状态</span><br><span class="line"><span class="number">1.</span>  只显示图标 ToolButtonIconOnly = <span class="number">0</span></span><br><span class="line"><span class="number">2.</span>  只显示文本 ToolButtonTextOnly = <span class="number">1</span></span><br><span class="line"><span class="number">3.</span>  同时显示文本和图标 ToolButtonTextBesideIcon = <span class="number">2</span>/ ToolButtonTextUnderIcon = <span class="number">3</span>/ ToolButtonFollowStyle = <span class="number">4</span> ...</span><br></pre></td></tr></table></figure>
+<p><strong>Presentation</strong></p>
+<center><br> <img src="/2019/01/27/PyQt5-Python-实战课程（六）/Toolbar.png" width="500"><br></center>
+
+<ul>
+<li>完整代码</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtGui <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtCore <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Toolbar</span><span class="params">(QMainWindow)</span> :</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        super(Toolbar,self).__init__()</span><br><span class="line">        self.initUI()</span><br><span class="line">        </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">initUI</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.setWindowTitle(<span class="string">"工具栏例子"</span>)</span><br><span class="line">        self.resize(<span class="number">300</span>,<span class="number">200</span>)</span><br><span class="line"></span><br><span class="line">        tb1 = self.addToolBar(<span class="string">"File"</span>)</span><br><span class="line"></span><br><span class="line">        new = QAction(QIcon(<span class="string">'./images/new.png'</span>),<span class="string">"new"</span>,self)</span><br><span class="line">        tb1.addAction(new)</span><br><span class="line"></span><br><span class="line">        open = QAction(QIcon(<span class="string">'./images/open.png'</span>),<span class="string">"open"</span>,self)</span><br><span class="line">        tb1.addAction(open)</span><br><span class="line"></span><br><span class="line">        save = QAction(QIcon(<span class="string">'./images/save.png'</span>),<span class="string">"save"</span>,self)</span><br><span class="line">        tb1.addAction(save)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        tb2 = self.addToolBar(<span class="string">"File1"</span>)</span><br><span class="line"></span><br><span class="line">        new1 = QAction(QIcon(<span class="string">'./images/new.png'</span>),<span class="string">"新建"</span>,self)</span><br><span class="line">        tb2.addAction(new1)</span><br><span class="line"></span><br><span class="line">        tb2.setToolButtonStyle(Qt.ToolButtonTextUnderIcon) <span class="comment"># try more ToolButtonStyle</span></span><br><span class="line"></span><br><span class="line">        tb1.actionTriggered.connect(self.toolbtnpressed)</span><br><span class="line"></span><br><span class="line">        tb2.actionTriggered.connect(self.toolbtnpressed)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">toolbtnpressed</span><span class="params">(self,a)</span>:</span></span><br><span class="line">        print(<span class="string">"按下的工具栏按钮是"</span>,a.text())</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    app = QApplication(sys.argv)</span><br><span class="line">    main = Toolbar()</span><br><span class="line">    main.show()</span><br><span class="line">    sys.exit(app.exec_())</span><br></pre></td></tr></table></figure>
+<h3 id="创建和使用状态栏"><a href="#创建和使用状态栏" class="headerlink" title="创建和使用状态栏"></a>创建和使用状态栏</h3><p><strong>Presentation</strong></p>
+<center><br> <img src="/2019/01/27/PyQt5-Python-实战课程（六）/StatusBar.png" width="500"><br></center>
+
+<ul>
+<li>完整代码</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">StatusBar</span><span class="params">(QMainWindow)</span> :</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        super(StatusBar,self).__init__()</span><br><span class="line">        self.initUI()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">initUI</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.setWindowTitle(<span class="string">"状态栏演示"</span>)</span><br><span class="line">        self.resize(<span class="number">300</span>,<span class="number">200</span>)</span><br><span class="line"></span><br><span class="line">        bar = self.menuBar()  <span class="comment"># 菜单栏</span></span><br><span class="line">        file = bar.addMenu(<span class="string">"File"</span>)</span><br><span class="line">        file.addAction(<span class="string">"show"</span>)</span><br><span class="line">        file.triggered.connect(self.processTrigger)</span><br><span class="line"></span><br><span class="line">        self.setCentralWidget(QTextEdit())  <span class="comment"># no sense</span></span><br><span class="line"></span><br><span class="line">        self.statusBar = QStatusBar()</span><br><span class="line">        self.setStatusBar(self.statusBar)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">processTrigger</span><span class="params">(self,q)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> q.text() == <span class="string">"show"</span> :</span><br><span class="line">            self.statusBar.showMessage(q.text() + <span class="string">" 菜单被点击了"</span>,<span class="number">5000</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    app = QApplication(sys.argv)</span><br><span class="line">    main = StatusBar()</span><br><span class="line">    main.show()</span><br><span class="line">    sys.exit(app.exec_())</span><br></pre></td></tr></table></figure>
+<h2 id="打印"><a href="#打印" class="headerlink" title="打印"></a>打印</h2><h3 id="使用打印机"><a href="#使用打印机" class="headerlink" title="使用打印机"></a>使用打印机</h3><p><strong>Presentation</strong></p>
+<center><br> <img src="/2019/01/27/PyQt5-Python-实战课程（六）/PrintSupport.png" width="500"><br></center>
+
+
+<ul>
+<li>完整代码</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> PyQt5 <span class="keyword">import</span> QtGui, QtWidgets, QtPrintSupport</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">PrintSupport</span><span class="params">(QMainWindow)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line"></span><br><span class="line">        super(PrintSupport,self).__init__()</span><br><span class="line">        self.setGeometry(<span class="number">500</span>, <span class="number">200</span>, <span class="number">300</span>, <span class="number">300</span>)</span><br><span class="line">        self.button = QPushButton(<span class="string">'打印QTextEdit控件中的内容'</span>,self)</span><br><span class="line">        self.button.setGeometry(<span class="number">20</span>,<span class="number">20</span>,<span class="number">260</span>,<span class="number">30</span>)</span><br><span class="line"></span><br><span class="line">        self.editor = QTextEdit(<span class="string">'默认文本'</span>,self)</span><br><span class="line">        self.editor.setGeometry(<span class="number">20</span>,<span class="number">60</span>,<span class="number">260</span>,<span class="number">200</span>)</span><br><span class="line"></span><br><span class="line">        self.button.clicked.connect(self.<span class="keyword">print</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">print</span><span class="params">(self)</span>:</span></span><br><span class="line"></span><br><span class="line">        printer = QtPrintSupport.QPrinter()</span><br><span class="line">        painter = QtGui.QPainter()</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 将绘制的目标重定向(begin)到打印机(printer)</span></span><br><span class="line">        painter.begin(printer)</span><br><span class="line">        screen = self.editor.grab()  <span class="comment"># 获取屏幕</span></span><br><span class="line">        painter.drawPixmap(<span class="number">10</span>,<span class="number">10</span>,screen) <span class="comment"># 内容以图片形式打印</span></span><br><span class="line">        painter.end()</span><br><span class="line">        print(<span class="string">"print"</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    app = QtWidgets.QApplication(sys.argv)</span><br><span class="line">    gui = PrintSupport()</span><br><span class="line">    gui.show()</span><br><span class="line">    app.exec_()</span><br></pre></td></tr></table></figure>
+<h3 id="显示打印对话框"><a href="#显示打印对话框" class="headerlink" title="显示打印对话框"></a>显示打印对话框</h3><p><strong>Presentation</strong></p>
+<center><br> <img src="/2019/01/27/PyQt5-Python-实战课程（六）/PrintDialog.png" width="500"><br></center><br>- 要点代码<br><br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 打开文件  </span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">openFile</span><span class="params">(self)</span>:</span></span><br><span class="line">    fname = QFileDialog.getOpenFileName(self,<span class="string">'打开文本文件'</span>,<span class="string">'./'</span>)</span><br><span class="line">    <span class="keyword">if</span> fname[<span class="number">0</span>]:</span><br><span class="line">        <span class="keyword">with</span> open(fname[<span class="number">0</span>],<span class="string">'r'</span>,encoding=<span class="string">'utf-8'</span>,errors = <span class="string">'ignore'</span>) <span class="keyword">as</span> f:</span><br><span class="line">            self.editor.setText(f.read())</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示打印设置对话框</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">showSettingsDialog</span><span class="params">(self)</span>:</span></span><br><span class="line">    printDialog = QPageSetupDialog(self.printer,self)</span><br><span class="line">    printDialog.exec()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示打印对话框</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">showPrintDialog</span><span class="params">(self)</span>:</span></span><br><span class="line">    printdialog = QPrintDialog(self.printer,self)</span><br><span class="line">    <span class="keyword">if</span> QDialog.Accepted == printdialog.exec():</span><br><span class="line">        self.editor.print(self.printer)</span><br></pre></td></tr></table></figure><br><br>- 完整代码<br><br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> QWidget, QApplication, QPushButton, QTextEdit, QFileDialog, QDialog</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtPrintSupport <span class="keyword">import</span> QPageSetupDialog, QPrintDialog, QPrinter</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">PrintDialog</span><span class="params">(QWidget)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        super(PrintDialog,self).__init__()</span><br><span class="line">        self.printer = QPrinter()</span><br><span class="line">        self.initUI()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">initUI</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.setGeometry(<span class="number">300</span>, <span class="number">300</span>, <span class="number">500</span>, <span class="number">400</span>)</span><br><span class="line">        self.setWindowTitle(<span class="string">'打印对话框'</span>)</span><br><span class="line"></span><br><span class="line">        self.editor = QTextEdit(self)</span><br><span class="line">        self.editor.setGeometry(<span class="number">20</span>,<span class="number">20</span>,<span class="number">300</span>,<span class="number">270</span>)</span><br><span class="line"></span><br><span class="line">        self.openButton = QPushButton(<span class="string">'打开文件'</span>,self)</span><br><span class="line">        self.openButton.move(<span class="number">350</span>,<span class="number">20</span>)</span><br><span class="line"></span><br><span class="line">        self.settingsButton = QPushButton(<span class="string">'打印设置'</span>,self)</span><br><span class="line">        self.settingsButton.move(<span class="number">350</span>,<span class="number">50</span>)</span><br><span class="line"></span><br><span class="line">        self.printButton = QPushButton(<span class="string">'打印文档'</span>,self)</span><br><span class="line">        self.printButton.move(<span class="number">350</span>,<span class="number">80</span>)</span><br><span class="line"></span><br><span class="line">        self.openButton.clicked.connect(self.openFile)</span><br><span class="line">        self.settingsButton.clicked.connect(self.showSettingsDialog)</span><br><span class="line">        self.printButton.clicked.connect(self.showPrintDialog)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 打开文件</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">openFile</span><span class="params">(self)</span>:</span></span><br><span class="line">        fname = QFileDialog.getOpenFileName(self,<span class="string">'打开文本文件'</span>,<span class="string">'./'</span>)</span><br><span class="line">        <span class="keyword">if</span> fname[<span class="number">0</span>]:</span><br><span class="line">            <span class="keyword">with</span> open(fname[<span class="number">0</span>],<span class="string">'r'</span>,encoding=<span class="string">'utf-8'</span>,errors = <span class="string">'ignore'</span>) <span class="keyword">as</span> f:</span><br><span class="line">                self.editor.setText(f.read())</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 显示打印设置对话框</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">showSettingsDialog</span><span class="params">(self)</span>:</span></span><br><span class="line">        printDialog = QPageSetupDialog(self.printer,self)</span><br><span class="line">        printDialog.exec()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 显示打印对话框</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">showPrintDialog</span><span class="params">(self)</span>:</span></span><br><span class="line">        printdialog = QPrintDialog(self.printer,self)</span><br><span class="line">        <span class="keyword">if</span> QDialog.Accepted == printdialog.exec():</span><br><span class="line">            self.editor.print(self.printer)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    app = QApplication(sys.argv)</span><br><span class="line">    gui = PrintDialog()</span><br><span class="line">    gui.show()</span><br><span class="line">    sys.exit(app.exec_())</span><br></pre></td></tr></table></figure><br><br>## 容器控件<br>### 选项卡控件（QTabWidget）<br><strong>Presentation</strong><br><center><br> <img src="/2019/01/27/PyQt5-Python-实战课程（六）/TabWidgetDemo.png" width="500"><br></center>
+
+<ul>
+<li>完整代码</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TabWidgetDemo</span><span class="params">(QTabWidget)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, parent=None)</span>:</span></span><br><span class="line">        super(TabWidgetDemo, self).__init__(parent)</span><br><span class="line"></span><br><span class="line">        self.setWindowTitle(<span class="string">"选项卡控件：QTabWidget"</span>)</span><br><span class="line">        <span class="comment"># 创建用于显示控件的窗口</span></span><br><span class="line">        self.tab1 = QWidget()</span><br><span class="line">        self.tab2 = QWidget()</span><br><span class="line">        self.tab3 = QWidget()</span><br><span class="line"></span><br><span class="line">        self.addTab(self.tab1,<span class="string">'选项卡1'</span>)</span><br><span class="line">        self.addTab(self.tab2,<span class="string">'选项卡2'</span>)</span><br><span class="line">        self.addTab(self.tab3,<span class="string">'选项卡3'</span>)</span><br><span class="line"></span><br><span class="line">        self.tab1UI()</span><br><span class="line">        self.tab2UI()</span><br><span class="line">        self.tab3UI()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">tab1UI</span><span class="params">(self)</span>:</span></span><br><span class="line">        layout = QFormLayout()</span><br><span class="line">        layout.addRow(<span class="string">'姓名'</span>,QLineEdit())</span><br><span class="line">        layout.addRow(<span class="string">'地址'</span>,QLineEdit())</span><br><span class="line">        self.setTabText(<span class="number">0</span>,<span class="string">'联系方式'</span>)</span><br><span class="line">        self.tab1.setLayout(layout)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">tab2UI</span><span class="params">(self)</span>:</span></span><br><span class="line">        layout = QFormLayout()</span><br><span class="line">        sex = QHBoxLayout()</span><br><span class="line">        sex.addWidget(QRadioButton(<span class="string">'男'</span>))</span><br><span class="line">        sex.addWidget(QRadioButton(<span class="string">'女'</span>))</span><br><span class="line">        layout.addRow(QLabel(<span class="string">'性别'</span>),sex)</span><br><span class="line">        layout.addRow(<span class="string">'生日'</span>,QLineEdit())</span><br><span class="line">        self.setTabText(<span class="number">1</span>,<span class="string">'个人详细信息'</span>)</span><br><span class="line">        self.tab2.setLayout(layout)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">tab3UI</span><span class="params">(self)</span>:</span></span><br><span class="line">        layout = QHBoxLayout()</span><br><span class="line">        layout.addWidget(QLabel(<span class="string">'科目'</span>))</span><br><span class="line">        layout.addWidget(QCheckBox(<span class="string">'物理'</span>))</span><br><span class="line">        layout.addWidget(QCheckBox(<span class="string">'高数'</span>))</span><br><span class="line">        self.setTabText(<span class="number">2</span>,<span class="string">'教育程度'</span>)</span><br><span class="line">        self.tab3.setLayout(layout)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    app = QApplication(sys.argv)</span><br><span class="line">    demo = TabWidgetDemo()</span><br><span class="line">    demo.show()</span><br><span class="line">    sys.exit(app.exec_())</span><br></pre></td></tr></table></figure>
+<h3 id="堆栈窗口控件（QStackedWidget）"><a href="#堆栈窗口控件（QStackedWidget）" class="headerlink" title="堆栈窗口控件（QStackedWidget）"></a>堆栈窗口控件（QStackedWidget）</h3><p><strong>Presentation</strong></p>
+<center><br> <img src="/2019/01/27/PyQt5-Python-实战课程（六）/QStackedWidget.png" width="500"><br></center><br>- 要点说明<br>    - 左侧 <code>QListWidget()</code> ；右侧 <code>QStackedWidget()</code><br>    - <code>self.list.currentRowChanged.connect(self.display)</code><br><br>       <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">display</span><span class="params">(self,index)</span>:</span></span><br><span class="line">   self.stack.setCurrentIndex(index)</span><br></pre></td></tr></table></figure><br><br>- 完整代码<br><br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">StackedExample</span><span class="params">(QWidget)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        super(StackedExample, self).__init__()</span><br><span class="line">        self.setGeometry(<span class="number">300</span>, <span class="number">50</span>, <span class="number">10</span>, <span class="number">10</span>)</span><br><span class="line">        self.setWindowTitle(<span class="string">'堆栈窗口控件（QStackedWidget）'</span>)</span><br><span class="line"></span><br><span class="line">        self.list = QListWidget()</span><br><span class="line">        self.list.insertItem(<span class="number">0</span>,<span class="string">'联系方式'</span>)</span><br><span class="line">        self.list.insertItem(<span class="number">1</span>,<span class="string">'个人信息'</span>)</span><br><span class="line">        self.list.insertItem(<span class="number">2</span>,<span class="string">'教育程度'</span>)</span><br><span class="line"></span><br><span class="line">        self.stack1 = QWidget()</span><br><span class="line">        self.stack2 = QWidget()</span><br><span class="line">        self.stack3 = QWidget()</span><br><span class="line"></span><br><span class="line">        self.tab1UI()</span><br><span class="line">        self.tab2UI()</span><br><span class="line">        self.tab3UI()</span><br><span class="line"></span><br><span class="line">        self.stack = QStackedWidget()</span><br><span class="line">        self.stack.addWidget(self.stack1)</span><br><span class="line">        self.stack.addWidget(self.stack2)</span><br><span class="line">        self.stack.addWidget(self.stack3)</span><br><span class="line"></span><br><span class="line">        hbox = QHBoxLayout()</span><br><span class="line">        hbox.addWidget(self.list)</span><br><span class="line">        hbox.addWidget(self.stack)</span><br><span class="line">        self.setLayout(hbox)</span><br><span class="line"></span><br><span class="line">        self.list.currentRowChanged.connect(self.display)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">tab1UI</span><span class="params">(self)</span>:</span></span><br><span class="line">        layout = QFormLayout()</span><br><span class="line">        layout.addRow(<span class="string">'姓名'</span>,QLineEdit())</span><br><span class="line">        layout.addRow(<span class="string">'地址'</span>,QLineEdit())</span><br><span class="line">        self.stack1.setLayout(layout)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">tab2UI</span><span class="params">(self)</span>:</span></span><br><span class="line">        layout = QFormLayout()</span><br><span class="line">        sex = QHBoxLayout()</span><br><span class="line">        sex.addWidget(QRadioButton(<span class="string">'男'</span>))</span><br><span class="line">        sex.addWidget(QRadioButton(<span class="string">'女'</span>))</span><br><span class="line">        layout.addRow(QLabel(<span class="string">'性别'</span>),sex)</span><br><span class="line">        layout.addRow(<span class="string">'生日'</span>,QLineEdit())</span><br><span class="line">        self.stack2.setLayout(layout)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">tab3UI</span><span class="params">(self)</span>:</span></span><br><span class="line">        layout = QHBoxLayout()</span><br><span class="line">        layout.addWidget(QLabel(<span class="string">'科目'</span>))</span><br><span class="line">        layout.addWidget(QCheckBox(<span class="string">'物理'</span>))</span><br><span class="line">        layout.addWidget(QCheckBox(<span class="string">'高数'</span>))</span><br><span class="line">        self.stack3.setLayout(layout)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">display</span><span class="params">(self,index)</span>:</span></span><br><span class="line">        self.stack.setCurrentIndex(index)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    app = QApplication(sys.argv)</span><br><span class="line">    demo = StackedExample()</span><br><span class="line">    demo.show()</span><br><span class="line">    sys.exit(app.exec_())</span><br></pre></td></tr></table></figure><br><br><br><br>### 停靠控件（QDockWidget）<br><strong>Presentation</strong><br><center><br> <img src="/2019/01/27/PyQt5-Python-实战课程（六）/QDockWidget.png" width="500"><br></center><br>- 实例化： <code>self.items = QDockWidget(&#39;Dockable&#39;,self)</code><br><br>- 完整代码<br><br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtCore <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DockDemo</span><span class="params">(QMainWindow)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, parent=None)</span>:</span></span><br><span class="line">        super(DockDemo, self).__init__(parent)</span><br><span class="line"></span><br><span class="line">        self.setWindowTitle(<span class="string">"停靠控件（QDockWidget）"</span>)</span><br><span class="line">        self.setCentralWidget(QLineEdit())</span><br><span class="line"></span><br><span class="line">        layout = QHBoxLayout()</span><br><span class="line"></span><br><span class="line">        self.items = QDockWidget(<span class="string">'Dockable'</span>,self)</span><br><span class="line"></span><br><span class="line">        self.listWidget = QListWidget()</span><br><span class="line">        self.listWidget.addItem(<span class="string">'item1'</span>)</span><br><span class="line">        self.listWidget.addItem(<span class="string">'item2'</span>)</span><br><span class="line">        self.listWidget.addItem(<span class="string">'item3'</span>)</span><br><span class="line"></span><br><span class="line">        self.items.setWidget(self.listWidget)</span><br><span class="line"></span><br><span class="line">        self.items.setFloating(<span class="keyword">True</span>) <span class="comment"># 初始时为浮动状态</span></span><br><span class="line"></span><br><span class="line">        self.addDockWidget(Qt.RightDockWidgetArea,self.items)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    app = QApplication(sys.argv)</span><br><span class="line">    demo = DockDemo()</span><br><span class="line">    demo.show()</span><br><span class="line">    sys.exit(app.exec_())</span><br></pre></td></tr></table></figure><br><br><br>### 容纳多文档的窗口<br><strong>Presentation</strong><br><center><br> <img src="/2019/01/27/PyQt5-Python-实战课程（六）/MultiWindows.png" width="500"><br></center><br>- 要点说明： <code>QMdiArea</code>  、  <code>QMdiSubWindow</code><br><br>- 完整代码<br><br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MultiWindows</span><span class="params">(QMainWindow)</span>:</span></span><br><span class="line">    count = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, parent=None)</span>:</span></span><br><span class="line">        super(MultiWindows, self).__init__(parent)</span><br><span class="line"></span><br><span class="line">        self.setWindowTitle(<span class="string">"容纳多文档的窗口"</span>)</span><br><span class="line"></span><br><span class="line">        self.mdi = QMdiArea()</span><br><span class="line">        self.setCentralWidget(self.mdi)</span><br><span class="line"></span><br><span class="line">        bar = self.menuBar()</span><br><span class="line">        file = bar.addMenu(<span class="string">"File"</span>)</span><br><span class="line">        file.addAction(<span class="string">"New"</span>)</span><br><span class="line">        file.addAction(<span class="string">"cascade"</span>)</span><br><span class="line">        file.addAction(<span class="string">"Tiled"</span>)</span><br><span class="line"></span><br><span class="line">        file.triggered.connect(self.windowaction)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">windowaction</span><span class="params">(self,q)</span>:</span></span><br><span class="line">        print(q.text())</span><br><span class="line">        <span class="keyword">if</span> q.text() == <span class="string">"New"</span>:</span><br><span class="line">            MultiWindows.count = MultiWindows.count + <span class="number">1</span></span><br><span class="line">            sub = QMdiSubWindow()</span><br><span class="line">            sub.setWidget(QTextEdit())</span><br><span class="line">            sub.setWindowTitle(<span class="string">"子窗口"</span> + str(MultiWindows.count))</span><br><span class="line">            self.mdi.addSubWindow(sub)</span><br><span class="line">            sub.show()</span><br><span class="line">        <span class="keyword">elif</span> q.text() == <span class="string">"cascade"</span>: <span class="comment"># 层叠</span></span><br><span class="line">            self.mdi.cascadeSubWindows()</span><br><span class="line">        <span class="keyword">elif</span> q.text() == <span class="string">"Tiled"</span>:  <span class="comment"># 平铺</span></span><br><span class="line">            self.mdi.tileSubWindows()</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    app = QApplication(sys.argv)</span><br><span class="line">    demo = MultiWindows()</span><br><span class="line">    demo.show()</span><br><span class="line">    sys.exit(app.exec_())</span><br></pre></td></tr></table></figure><br><br><br>### 滚动条控件（QScrollBar）<br><strong>Presentation</strong><br><center><br> <img src="/2019/01/27/PyQt5-Python-实战课程（六）/QScrollBar.png" width="500"><br></center><br>- QScrollBar的作用<br>    1. 通过滚动条值的变化控制其他控件状态的变化<br>    2. 通过滚动条值的变化控制控件位置的变化<br><br>- 完整代码<br><br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtGui <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ScrollBar</span><span class="params">(QWidget)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        super(ScrollBar, self).__init__()</span><br><span class="line">        self.initUI()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">initUI</span><span class="params">(self)</span>:</span></span><br><span class="line">        hbox = QHBoxLayout()</span><br><span class="line">        self.label = QLabel(<span class="string">'拖动滚动条去改变文字颜色'</span>)</span><br><span class="line"></span><br><span class="line">        hbox.addWidget(self.label)</span><br><span class="line"></span><br><span class="line">        self.scrollbar1 = QScrollBar()</span><br><span class="line">        self.scrollbar1.setMaximum(<span class="number">255</span>)</span><br><span class="line">        self.scrollbar1.sliderMoved.connect(self.sliderMoved)</span><br><span class="line"></span><br><span class="line">        self.scrollbar2 = QScrollBar()</span><br><span class="line">        self.scrollbar2.setMaximum(<span class="number">255</span>)</span><br><span class="line">        self.scrollbar2.sliderMoved.connect(self.sliderMoved)</span><br><span class="line"></span><br><span class="line">        self.scrollbar3 = QScrollBar()</span><br><span class="line">        self.scrollbar3.setMaximum(<span class="number">255</span>)</span><br><span class="line">        self.scrollbar3.sliderMoved.connect(self.sliderMoved)</span><br><span class="line"></span><br><span class="line">        self.scrollbar4 = QScrollBar()</span><br><span class="line">        self.scrollbar4.setMaximum(<span class="number">255</span>)</span><br><span class="line">        self.scrollbar4.sliderMoved.connect(self.sliderMoved1)</span><br><span class="line">        </span><br><span class="line">        hbox.addWidget(self.scrollbar1)</span><br><span class="line">        hbox.addWidget(self.scrollbar2)</span><br><span class="line">        hbox.addWidget(self.scrollbar3)</span><br><span class="line">        hbox.addWidget(self.scrollbar4)</span><br><span class="line">        self.setGeometry(<span class="number">300</span>,<span class="number">300</span>,<span class="number">300</span>,<span class="number">200</span>)</span><br><span class="line"></span><br><span class="line">        self.setLayout(hbox)</span><br><span class="line"></span><br><span class="line">        self.y = self.label.pos().y()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">sliderMoved</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(self.scrollbar1.value(),self.scrollbar2.value(),self.scrollbar3.value())</span><br><span class="line">        palette = QPalette()</span><br><span class="line">        c = QColor(self.scrollbar1.value(),self.scrollbar2.value(),self.scrollbar3.value(),<span class="number">255</span>)</span><br><span class="line">        palette.setColor(QPalette.Foreground,c)</span><br><span class="line">        self.label.setPalette(palette)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">sliderMoved1</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.label.move(self.label.x(),self.y + self.scrollbar4.value())</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    app = QApplication(sys.argv)</span><br><span class="line">    demo = ScrollBar()</span><br><span class="line">    demo.show()</span><br><span class="line">    sys.exit(app.exec_())</span><br></pre></td></tr></table></figure><br><br><br><br><br>## 多线程<br>### 动态显示当前时间（QTimer）<br><strong>Presentation</strong><br><center><br> <img src="/2019/01/27/PyQt5-Python-实战课程（六）/ShowTime.png" width="500"><br></center><br>- <code>self.timer = QTimer()</code>  # 计时器<br>    - <code>self.timer.start(1000)</code><br>    - <code>self.timer.stop()</code><br><br><br>- 完整代码<br><br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> QWidget, QPushButton, QApplication, QGridLayout, QLabel</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtCore <span class="keyword">import</span> QTimer, QDateTime</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ShowTime</span><span class="params">(QWidget)</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, parent=None)</span>:</span></span><br><span class="line">        super(ShowTime, self).__init__(parent)</span><br><span class="line">        self.setWindowTitle(<span class="string">"动态显示当前时间"</span>)</span><br><span class="line"></span><br><span class="line">        self.label = QLabel(<span class="string">'显示当前时间'</span>)</span><br><span class="line">        self.startBtn = QPushButton(<span class="string">'开始'</span>)</span><br><span class="line">        self.endBtn = QPushButton(<span class="string">'结束'</span>)</span><br><span class="line">        layout= QGridLayout()</span><br><span class="line"></span><br><span class="line">        self.timer = QTimer()</span><br><span class="line">        self.timer.timeout.connect(self.showTime)</span><br><span class="line"></span><br><span class="line">        layout.addWidget(self.label,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>)</span><br><span class="line">        layout.addWidget(self.startBtn,<span class="number">1</span>,<span class="number">0</span>)</span><br><span class="line">        layout.addWidget(self.endBtn,<span class="number">1</span>,<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">        self.startBtn.clicked.connect(self.startTimer)</span><br><span class="line">        self.endBtn.clicked.connect(self.endTimer)</span><br><span class="line"></span><br><span class="line">        self.setLayout(layout)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">showTime</span><span class="params">(self)</span>:</span></span><br><span class="line">        time = QDateTime.currentDateTime()</span><br><span class="line">        timeDisplay = time.toString(<span class="string">"yyyy-MM-dd hh:mm:ss dddd"</span>)</span><br><span class="line">        self.label.setText(timeDisplay)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">startTimer</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.timer.start(<span class="number">1000</span>)</span><br><span class="line">        self.startBtn.setEnabled(<span class="keyword">False</span>)</span><br><span class="line">        self.endBtn.setEnabled(<span class="keyword">True</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">endTimer</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.timer.stop()</span><br><span class="line">        self.startBtn.setEnabled(<span class="keyword">True</span>)</span><br><span class="line">        self.endBtn.setEnabled(<span class="keyword">False</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    app = QApplication(sys.argv)</span><br><span class="line">    form = ShowTime()</span><br><span class="line">    form.show()</span><br><span class="line">    sys.exit(app.exec_())</span><br></pre></td></tr></table></figure><br><br><br>### 让窗口定时关闭<br><center><br> <img src="/2019/01/27/PyQt5-Python-实战课程（六）/AutoCloseWindow.png" width="500"><br></center><br>- <code>QTimer.singleShot(5000,app.quit)</code>  # 窗口在5秒后自动关闭!<br><br>- 完整代码<br><br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtCore <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    app = QApplication(sys.argv)</span><br><span class="line">    label = QLabel(<span class="string">'&lt;font color=red size=140&gt;&lt;b&gt;Hello World，窗口在5秒后自动关闭!&lt;/b&gt;&lt;/font&gt;'</span>)</span><br><span class="line">    label.setWindowFlags(Qt.SplashScreen | Qt.FramelessWindowHint) <span class="comment"># 闪屏 | 无框架窗口</span></span><br><span class="line">    label.show()</span><br><span class="line">    QTimer.singleShot(<span class="number">5000</span>,app.quit)</span><br><span class="line"></span><br><span class="line">    sys.exit(app.exec_())</span><br></pre></td></tr></table></figure><br><br>### 使用线程类（QThread）编写计数器<br><center><br> <img src="/2019/01/27/PyQt5-Python-实战课程（六）/Counter.png" width="500"><br></center>
+
+<ul>
+<li>完整代码</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtCore <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">sec = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">WorkThread</span><span class="params">(QThread)</span>:</span>  <span class="comment"># 自定义信号</span></span><br><span class="line">    timer = pyqtSignal()</span><br><span class="line">    end = pyqtSignal()</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">run</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">while</span> <span class="keyword">True</span>:</span><br><span class="line">            self.sleep(<span class="number">1</span>)  <span class="comment"># 休眠1秒</span></span><br><span class="line">            <span class="keyword">if</span> sec == <span class="number">5</span>:</span><br><span class="line">                self.end.emit()   <span class="comment"># 发送end信号，触发与end关联的槽方法，计数完成后发送一次信号</span></span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            self.timer.emit()   <span class="comment"># 发送timer信号，每隔1秒发送一次信号</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Counter</span><span class="params">(QWidget)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, parent=None)</span>:</span></span><br><span class="line">        super(Counter, self).__init__(parent)</span><br><span class="line"></span><br><span class="line">        self.setWindowTitle(<span class="string">"使用线程类（QThread）编写计数器"</span>)</span><br><span class="line">        self.resize(<span class="number">300</span>, <span class="number">120</span>)</span><br><span class="line"></span><br><span class="line">        layout = QVBoxLayout()</span><br><span class="line">        self.lcdNumber = QLCDNumber()  <span class="comment"># 模拟LED的数字显示效果</span></span><br><span class="line">        layout.addWidget(self.lcdNumber)</span><br><span class="line"></span><br><span class="line">        button = QPushButton(<span class="string">'开始计数'</span>)</span><br><span class="line">        layout.addWidget(button)</span><br><span class="line"></span><br><span class="line">        self.workThread = WorkThread()</span><br><span class="line"></span><br><span class="line">        self.workThread.timer.connect(self.countTime)</span><br><span class="line">        self.workThread.end.connect(self.end)</span><br><span class="line">        button.clicked.connect(self.work)</span><br><span class="line"></span><br><span class="line">        self.setLayout(layout)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">countTime</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">global</span> sec</span><br><span class="line">        sec += <span class="number">1</span></span><br><span class="line">        self.lcdNumber.display(sec)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">end</span><span class="params">(self)</span>:</span></span><br><span class="line">        QMessageBox.information(self,<span class="string">'消息'</span>,<span class="string">'计数结束'</span>,QMessageBox.Ok)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">work</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.workThread.start()</span><br><span class="line">        </span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    app = QApplication(sys.argv)</span><br><span class="line">    form = Counter()</span><br><span class="line">    form.show()</span><br><span class="line">    sys.exit(app.exec_())</span><br></pre></td></tr></table></figure>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2019-01-28T08:22:52.436Z" itemprop="dateUpdated">2019-01-28 16:22:52</time>
+</span><br>
+
+
+        
+    </div>
+    
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/avatar.jpg" alt="CaptainSE">
+            CaptainSE
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PyQt5/">PyQt5</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/01/27/PyQt5-Python-实战课程（六）/&title=《PyQt5-Python-实战课程（六）》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/01/27/PyQt5-Python-实战课程（六）/&title=《PyQt5-Python-实战课程（六）》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/01/27/PyQt5-Python-实战课程（六）/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《PyQt5-Python-实战课程（六）》 — Go Further&url=http://yoursite.com/2019/01/27/PyQt5-Python-实战课程（六）/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2019/01/27/PyQt5-Python-实战课程（六）/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2019/01/27/医疗影像文件读取方法/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">医疗影像文件读取方法</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2019/01/26/PyQt5-Python-实战课程（五）/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">PyQt5-Python-实战课程（五）</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢老板~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>CaptainSE &copy; 2015 - 2019</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/01/27/PyQt5-Python-实战课程（六）/&title=《PyQt5-Python-实战课程（六）》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/01/27/PyQt5-Python-实战课程（六）/&title=《PyQt5-Python-实战课程（六）》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/01/27/PyQt5-Python-实战课程（六）/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《PyQt5-Python-实战课程（六）》 — Go Further&url=http://yoursite.com/2019/01/27/PyQt5-Python-实战课程（六）/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2019/01/27/PyQt5-Python-实战课程（六）/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACt0lEQVR42u3a0UrsQBAEUP//p71wnwTZWNU9o4InT4uJ2TkR0m31vL3Fx/v/4+Pnj8fzNZ/PPv/k889fXX/swMPDwxst/dXxvNwE8OqeOeD527+4Px4eHt41XlIM2rPP1zyXmc3d8PDw8H4P79Ui8ma3fUx4eHh4f4HXNt/J2fZB4OHh4X0PLwkjNi/9Ng7OH8qxrAUPDw8v5s0GYD/7+fp8Dw8PD280VW9LRR7FbgZsxTrx8PDwLvBmoUO+Nep5ubM4o92+gIeHh3ePl/xyuwkgLy2zshEN4fDw8PCO8k7dbjYYy7cItOM3PDw8vHu8TWHYRA+zwjNs3PHw8PCO8vIvGL6UF9sFDhQnPDw8vGu8TVvcBrvtrL8tD3h4eHi3ebMWebaU/J5JccrXiYeHh3eD194uabjbgHg2bKvDXDw8PLxDvCRybdvfZNDVNtz5hgM8PDy8n+W1Q6z95qoZu/g74OHh4R068ia1DX/bUVn0us9jCDw8PLxv4eWv8ra93pSftvDg4eHh3eDlQe1mJDaLffeNPh4eHt49XjsGm22x2g/D2hgFDw8P7wYvf6HPwoWkCT426GondXh4eHgjXt6wtkucBbttzPHFNXh4eHgXePmgK2+dW8BmVlX/34CHh4e35s3CiH3wOguF880Hq6wFDw8PL36f5wFrXh42oW2Rpsw2XeHh4eGNeLMe/GyIsGmjo7qHh4eHd5Q3e8Xnw62kMMwYdTiCh4eHd4j3Xh43Rl/7Fvzl2vDw8PAu8PJjFkwMh/1lyZmFF3h4eHgbXju+yhedPNG25LSjNTw8PLx7vH2DO2u724fY4vHw8PB+A68diW3uk++AwMPDw/udvDwIyJvjhJ20zl+EEXh4eHgXeJswoj2bXD8bp70sDHh4eHhHebMBWFIk8uB184CKnWV4eHh4W94/ldH5PqhzpNcAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = 'Go Further | Stay Hungry, Stay Foolish';
+            clearTimeout(titleTime);
+        } else {
+            document.title = 'Go Further | Stay Hungry, Stay Foolish';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
