@@ -29,10 +29,29 @@
 <meta property="og:site_name" content="Go Further">
 <meta property="og:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-28T08:45:02.332Z">
+<meta property="og:image" content="http://yoursite.com/2019/01/28/PyQt5-Python-实战课程（七）/TableView.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/28/PyQt5-Python-实战课程（七）/ListView.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/28/PyQt5-Python-实战课程（七）/.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/28/PyQt5-Python-实战课程（七）/TableWidget.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/28/PyQt5-Python-实战课程（七）/PlaceControlInCell.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/28/PyQt5-Python-实战课程（七）/DataLocation.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/28/PyQt5-Python-实战课程（七）/CellFontAndColor.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/28/PyQt5-Python-实战课程（七）/ColumnSort.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/28/PyQt5-Python-实战课程（七）/CellTextAlignment.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/28/PyQt5-Python-实战课程（七）/Span.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/28/PyQt5-Python-实战课程（七）/CellSize.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/28/PyQt5-Python-实战课程（七）/CellImageText.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/28/PyQt5-Python-实战课程（七）/CellImageSize.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/28/PyQt5-Python-实战课程（七）/TableWidgetContextMenu.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/28/PyQt5-Python-实战课程（七）/BasicTreeWidget.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/28/PyQt5-Python-实战课程（七）/TreeEvent.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/28/PyQt5-Python-实战课程（七）/ModifyTree.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/28/PyQt5-Python-实战课程（七）/TreeView.png">
+<meta property="og:updated_time" content="2019-01-28T09:09:06.866Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PyQt5-Python-实战课程（七）">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
+<meta name="twitter:image" content="http://yoursite.com/2019/01/28/PyQt5-Python-实战课程（七）/TableView.png">
     
         <link rel="alternate" type="application/atom+xml" title="Go Further" href="/atom.xml">
     
@@ -119,7 +138,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="検索">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -184,7 +203,144 @@
         <div class="post-content" id="post-content" itemprop="postContent">
             <p>【阅读时间】XXX min XXX words<br>【阅读内容】……</p>
 <a id="more"></a>
-<h2 id="表格与树🌲"><a href="#表格与树🌲" class="headerlink" title="表格与树🌲"></a>表格与树🌲</h2><h3 id="显示二维表数据（QTableView控件）"><a href="#显示二维表数据（QTableView控件）" class="headerlink" title="显示二维表数据（QTableView控件）"></a>显示二维表数据（QTableView控件）</h3><h3 id="显示列数据（QListView控件）"><a href="#显示列数据（QListView控件）" class="headerlink" title="显示列数据（QListView控件）"></a>显示列数据（QListView控件）</h3><h3 id="扩展的列表控件（QListWidget）"><a href="#扩展的列表控件（QListWidget）" class="headerlink" title="扩展的列表控件（QListWidget）"></a>扩展的列表控件（QListWidget）</h3><h3 id="扩展的表格控件（QTableWidget）"><a href="#扩展的表格控件（QTableWidget）" class="headerlink" title="扩展的表格控件（QTableWidget）"></a>扩展的表格控件（QTableWidget）</h3><h3 id="在单元格中放置控件"><a href="#在单元格中放置控件" class="headerlink" title="在单元格中放置控件"></a>在单元格中放置控件</h3><h3 id="在表格中搜索Cell和行定位"><a href="#在表格中搜索Cell和行定位" class="headerlink" title="在表格中搜索Cell和行定位"></a>在表格中搜索Cell和行定位</h3><h3 id="设置单元格字体和颜色"><a href="#设置单元格字体和颜色" class="headerlink" title="设置单元格字体和颜色"></a>设置单元格字体和颜色</h3><h3 id="按表格的某一列排序"><a href="#按表格的某一列排序" class="headerlink" title="按表格的某一列排序"></a>按表格的某一列排序</h3><h3 id="设置单元格的文本对齐方式"><a href="#设置单元格的文本对齐方式" class="headerlink" title="设置单元格的文本对齐方式"></a>设置单元格的文本对齐方式</h3><h3 id="合并单元格"><a href="#合并单元格" class="headerlink" title="合并单元格"></a>合并单元格</h3><h3 id="设置单元格的尺寸"><a href="#设置单元格的尺寸" class="headerlink" title="设置单元格的尺寸"></a>设置单元格的尺寸</h3><h3 id="在单元格中实现图文混排的效果"><a href="#在单元格中实现图文混排的效果" class="headerlink" title="在单元格中实现图文混排的效果"></a>在单元格中实现图文混排的效果</h3><h3 id="改变单元格中图片的尺寸"><a href="#改变单元格中图片的尺寸" class="headerlink" title="改变单元格中图片的尺寸"></a>改变单元格中图片的尺寸</h3><h3 id="在表格中显示上下文菜单"><a href="#在表格中显示上下文菜单" class="headerlink" title="在表格中显示上下文菜单"></a>在表格中显示上下文菜单</h3><h3 id="树🌲控件（QTreeWidget）的基本用法"><a href="#树🌲控件（QTreeWidget）的基本用法" class="headerlink" title="树🌲控件（QTreeWidget）的基本用法"></a>树🌲控件（QTreeWidget）的基本用法</h3><h3 id="为树🌲节点添加响应事件"><a href="#为树🌲节点添加响应事件" class="headerlink" title="为树🌲节点添加响应事件"></a>为树🌲节点添加响应事件</h3><h3 id="增加、修改和删除树🌲控件中的节点"><a href="#增加、修改和删除树🌲控件中的节点" class="headerlink" title="增加、修改和删除树🌲控件中的节点"></a>增加、修改和删除树🌲控件中的节点</h3><h3 id="QTreeView控件与系统定制模式"><a href="#QTreeView控件与系统定制模式" class="headerlink" title="QTreeView控件与系统定制模式"></a>QTreeView控件与系统定制模式</h3>
+<h2 id="表格与树🌲"><a href="#表格与树🌲" class="headerlink" title="表格与树🌲"></a>表格与树🌲</h2><h3 id="显示二维表数据（QTableView控件）"><a href="#显示二维表数据（QTableView控件）" class="headerlink" title="显示二维表数据（QTableView控件）"></a>显示二维表数据（QTableView控件）</h3><p><strong>Presentation</strong></p>
+<p><center><br> <img src="/2019/01/28/PyQt5-Python-实战课程（七）/TableView.png" width="500"><br></center></p>
+<ul>
+<li>要点说明</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">显示二维表数据（QTableView控件）</span><br><span class="line"></span><br><span class="line">数据源</span><br><span class="line"></span><br><span class="line">Model</span><br><span class="line"></span><br><span class="line">需要创建QTableView实例和一个数据源（Model），然后将两者关联</span><br><span class="line"></span><br><span class="line">MVC：Model   Viewer   Controller</span><br><span class="line"></span><br><span class="line">MVC的目的是将后端的数据和前端页面的耦合度降低</span><br></pre></td></tr></table></figure>
+<ul>
+<li>完整代码</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="显示列数据（QListView控件）"><a href="#显示列数据（QListView控件）" class="headerlink" title="显示列数据（QListView控件）"></a>显示列数据（QListView控件）</h3><p><strong>Presentation</strong></p>
+<p><center><br> <img src="/2019/01/28/PyQt5-Python-实战课程（七）/ListView.png" width="500"><br></center></p>
+<ul>
+<li>要点说明</li>
+<li>完整代码</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="扩展的列表控件（QListWidget）"><a href="#扩展的列表控件（QListWidget）" class="headerlink" title="扩展的列表控件（QListWidget）"></a>扩展的列表控件（QListWidget）</h3><p><strong>Presentation</strong></p>
+<p><center><br> <img src="/2019/01/28/PyQt5-Python-实战课程（七）/.png" width="500"><br></center></p>
+<ul>
+<li>要点说明</li>
+<li>完整代码</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="扩展的表格控件（QTableWidget）"><a href="#扩展的表格控件（QTableWidget）" class="headerlink" title="扩展的表格控件（QTableWidget）"></a>扩展的表格控件（QTableWidget）</h3><p><strong>Presentation</strong></p>
+<p><center><br> <img src="/2019/01/28/PyQt5-Python-实战课程（七）/TableWidget.png" width="500"><br></center></p>
+<ul>
+<li>要点说明</li>
+<li>完整代码</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="在单元格中放置控件"><a href="#在单元格中放置控件" class="headerlink" title="在单元格中放置控件"></a>在单元格中放置控件</h3><p><strong>Presentation</strong></p>
+<p><center><br> <img src="/2019/01/28/PyQt5-Python-实战课程（七）/PlaceControlInCell.png" width="500"><br></center></p>
+<ul>
+<li>要点说明</li>
+<li>完整代码</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="在表格中搜索Cell和行定位"><a href="#在表格中搜索Cell和行定位" class="headerlink" title="在表格中搜索Cell和行定位"></a>在表格中搜索Cell和行定位</h3><p><strong>Presentation</strong></p>
+<p><center><br> <img src="/2019/01/28/PyQt5-Python-实战课程（七）/DataLocation.png" width="500"><br></center></p>
+<ul>
+<li>要点说明</li>
+<li>完整代码</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="设置单元格字体和颜色"><a href="#设置单元格字体和颜色" class="headerlink" title="设置单元格字体和颜色"></a>设置单元格字体和颜色</h3><p><strong>Presentation</strong></p>
+<p><center><br> <img src="/2019/01/28/PyQt5-Python-实战课程（七）/CellFontAndColor.png" width="500"><br></center></p>
+<ul>
+<li>要点说明</li>
+<li>完整代码</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="按表格的某一列排序"><a href="#按表格的某一列排序" class="headerlink" title="按表格的某一列排序"></a>按表格的某一列排序</h3><p><strong>Presentation</strong></p>
+<p><center><br> <img src="/2019/01/28/PyQt5-Python-实战课程（七）/ColumnSort.png" width="500"><br></center></p>
+<ul>
+<li>要点说明</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">按列排序</span><br><span class="line"></span><br><span class="line"><span class="number">1.</span> 按哪一列排序</span><br><span class="line"><span class="number">2.</span> 排序类型：升序或降序</span><br><span class="line"></span><br><span class="line">sortItems(columnIndex，orderType）</span><br></pre></td></tr></table></figure>
+<ul>
+<li>完整代码</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="设置单元格的文本对齐方式"><a href="#设置单元格的文本对齐方式" class="headerlink" title="设置单元格的文本对齐方式"></a>设置单元格的文本对齐方式</h3><p><strong>Presentation</strong></p>
+<p><center><br> <img src="/2019/01/28/PyQt5-Python-实战课程（七）/CellTextAlignment.png" width="500"><br></center></p>
+<ul>
+<li><p><code>setTextAlignment</code></p>
+<ul>
+<li><code>Qt.AlignRight</code>、  <code>Qt.AlignBottom</code></li>
+</ul>
+</li>
+<li><p>完整代码</p>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="合并单元格"><a href="#合并单元格" class="headerlink" title="合并单元格"></a>合并单元格</h3><p><strong>Presentation</strong></p>
+<p><center><br> <img src="/2019/01/28/PyQt5-Python-实战课程（七）/Span.png" width="500"><br></center></p>
+<ul>
+<li>要点说明</li>
+<li>完整代码</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="设置单元格的尺寸"><a href="#设置单元格的尺寸" class="headerlink" title="设置单元格的尺寸"></a>设置单元格的尺寸</h3><p><strong>Presentation</strong></p>
+<p><center><br> <img src="/2019/01/28/PyQt5-Python-实战课程（七）/CellSize.png" width="500"><br></center></p>
+<ul>
+<li>要点说明</li>
+<li>完整代码</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="在单元格中实现图文混排的效果"><a href="#在单元格中实现图文混排的效果" class="headerlink" title="在单元格中实现图文混排的效果"></a>在单元格中实现图文混排的效果</h3><p><strong>Presentation</strong></p>
+<p><center><br> <img src="/2019/01/28/PyQt5-Python-实战课程（七）/CellImageText.png" width="500"><br></center></p>
+<ul>
+<li>要点说明</li>
+<li>完整代码</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="改变单元格中图片的尺寸"><a href="#改变单元格中图片的尺寸" class="headerlink" title="改变单元格中图片的尺寸"></a>改变单元格中图片的尺寸</h3><p><strong>Presentation</strong></p>
+<p><center><br> <img src="/2019/01/28/PyQt5-Python-实战课程（七）/CellImageSize.png" width="500"><br></center></p>
+<ul>
+<li>要点说明</li>
+<li>完整代码</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="在表格中显示上下文菜单"><a href="#在表格中显示上下文菜单" class="headerlink" title="在表格中显示上下文菜单"></a>在表格中显示上下文菜单</h3><p><strong>Presentation</strong></p>
+<p><center><br> <img src="/2019/01/28/PyQt5-Python-实战课程（七）/TableWidgetContextMenu.png" width="500"><br></center></p>
+<ul>
+<li>要点说明</li>
+<li>完整代码</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="树🌲控件（QTreeWidget）的基本用法"><a href="#树🌲控件（QTreeWidget）的基本用法" class="headerlink" title="树🌲控件（QTreeWidget）的基本用法"></a>树🌲控件（QTreeWidget）的基本用法</h3><p><strong>Presentation</strong></p>
+<p><center><br> <img src="/2019/01/28/PyQt5-Python-实战课程（七）/BasicTreeWidget.png" width="500"><br></center></p>
+<ul>
+<li>要点说明</li>
+<li>完整代码</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="为树🌲节点添加响应事件"><a href="#为树🌲节点添加响应事件" class="headerlink" title="为树🌲节点添加响应事件"></a>为树🌲节点添加响应事件</h3><p><strong>Presentation</strong></p>
+<p><center><br> <img src="/2019/01/28/PyQt5-Python-实战课程（七）/TreeEvent.png" width="500"><br></center></p>
+<ul>
+<li>要点说明</li>
+<li>完整代码</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="增加、修改和删除树🌲控件中的节点"><a href="#增加、修改和删除树🌲控件中的节点" class="headerlink" title="增加、修改和删除树🌲控件中的节点"></a>增加、修改和删除树🌲控件中的节点</h3><p><strong>Presentation</strong></p>
+<p><center><br> <img src="/2019/01/28/PyQt5-Python-实战课程（七）/ModifyTree.png" width="500"><br></center></p>
+<ul>
+<li>要点说明</li>
+<li>完整代码</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="QTreeView控件与系统定制模式"><a href="#QTreeView控件与系统定制模式" class="headerlink" title="QTreeView控件与系统定制模式"></a>QTreeView控件与系统定制模式</h3><p><strong>Presentation</strong></p>
+<p><center><br> <img src="/2019/01/28/PyQt5-Python-实战课程（七）/TreeView.png" width="500"><br></center></p>
+<ul>
+<li>要点说明</li>
+<li>完整代码</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
         </div>
 
         <blockquote class="post-copyright">
@@ -192,7 +348,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2019-01-28T08:45:02.332Z" itemprop="dateUpdated">2019-01-28 16:45:02</time>
+    最終更新：<time datetime="2019-01-28T09:09:06.866Z" itemprop="dateUpdated">2019-01-28 17:09:06</time>
 </span><br>
 
 
@@ -353,7 +509,7 @@
             
                 <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
             
-            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+            <span>このブログの内容物は<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja">クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際ライセンスの下に提供されています</a></span>
         </p>
     </div>
     <div class="bottom">
