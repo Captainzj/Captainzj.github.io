@@ -43,7 +43,8 @@
 <meta property="og:image" content="http://yoursite.com/2019/01/31/PyQt5-Python-实战课程（八）/AutoSignalSlot.png">
 <meta property="og:image" content="http://yoursite.com/2019/01/31/PyQt5-Python-实战课程（八）/PartialSlotArg.png">
 <meta property="og:image" content="http://yoursite.com/2019/01/31/PyQt5-Python-实战课程（八）/MultiWindow1.png">
-<meta property="og:updated_time" content="2019-01-30T17:24:32.000Z">
+<meta property="og:image" content="http://yoursite.com/2019/01/31/PyQt5-Python-实战课程（八）/MultiWindow2.png">
+<meta property="og:updated_time" content="2019-02-15T15:38:46.099Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PyQt5-Python-实战课程（八）">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
@@ -173,7 +174,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#PyQt5与Web交互"><span class="post-toc-number">1.</span> <span class="post-toc-text">PyQt5与Web交互</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#用Web浏览器控件（QWebEngineView）显示网页"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">用Web浏览器控件（QWebEngineView）显示网页</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#显示嵌入Web页面"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">显示嵌入Web页面</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#JavaScript调用Python-API计算阶乘"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">JavaScript调用Python API计算阶乘</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#水平盒布局（QHBoxLayout）"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">水平盒布局（QHBoxLayout）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#垂直盒布局"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">垂直盒布局</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#让按钮永远在窗口的右下角"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">让按钮永远在窗口的右下角</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#栅格布局：进行表单UI设计"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">栅格布局：进行表单UI设计</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#拖动控件之间的边界（QSplitter）"><span class="post-toc-number">1.8.</span> <span class="post-toc-text">拖动控件之间的边界（QSplitter）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#自定义信号实现对象之间的通信"><span class="post-toc-number">1.9.</span> <span class="post-toc-text">自定义信号实现对象之间的通信</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#为类添加多个信号（重载形式的信号）"><span class="post-toc-number">1.10.</span> <span class="post-toc-text">为类添加多个信号（重载形式的信号）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#为窗口添加新号"><span class="post-toc-number">1.11.</span> <span class="post-toc-text">为窗口添加新号</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#信号与槽自动连接"><span class="post-toc-number">1.12.</span> <span class="post-toc-text">信号与槽自动连接</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#使用Partial对象为槽传递参数"><span class="post-toc-number">1.13.</span> <span class="post-toc-text">使用Partial对象为槽传递参数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#多窗口交互（1）：不使用信号和槽"><span class="post-toc-number">1.14.</span> <span class="post-toc-text">多窗口交互（1）：不使用信号和槽</span></a></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#PyQt5与Web交互"><span class="post-toc-number">1.</span> <span class="post-toc-text">PyQt5与Web交互</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#用Web浏览器控件（QWebEngineView）显示网页"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">用Web浏览器控件（QWebEngineView）显示网页</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#显示嵌入Web页面"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">显示嵌入Web页面</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#JavaScript调用Python-API计算阶乘"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">JavaScript调用Python API计算阶乘</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#水平盒布局（QHBoxLayout）"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">水平盒布局（QHBoxLayout）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#垂直盒布局"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">垂直盒布局</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#让按钮永远在窗口的右下角"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">让按钮永远在窗口的右下角</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#栅格布局：进行表单UI设计"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">栅格布局：进行表单UI设计</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#拖动控件之间的边界（QSplitter）"><span class="post-toc-number">1.8.</span> <span class="post-toc-text">拖动控件之间的边界（QSplitter）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#自定义信号实现对象之间的通信"><span class="post-toc-number">1.9.</span> <span class="post-toc-text">自定义信号实现对象之间的通信</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#为类添加多个信号（重载形式的信号）"><span class="post-toc-number">1.10.</span> <span class="post-toc-text">为类添加多个信号（重载形式的信号）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#为窗口添加新号"><span class="post-toc-number">1.11.</span> <span class="post-toc-text">为窗口添加新号</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#信号与槽自动连接"><span class="post-toc-number">1.12.</span> <span class="post-toc-text">信号与槽自动连接</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#使用Partial对象为槽传递参数"><span class="post-toc-number">1.13.</span> <span class="post-toc-text">使用Partial对象为槽传递参数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#多窗口交互（1）：不使用信号和槽"><span class="post-toc-number">1.14.</span> <span class="post-toc-text">多窗口交互（1）：不使用信号和槽</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#多窗口交互（2）：使用信号和槽"><span class="post-toc-number">1.15.</span> <span class="post-toc-text">多窗口交互（2）：使用信号和槽</span></a></li></ol></li></ol>
         </nav>
     </aside>
 
@@ -338,7 +339,18 @@
 <li><p>完整代码</p>
 </li>
 </ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">```</span><br><span class="line"></span><br><span class="line"><span class="comment">### 多窗口交互（2）：使用信号和槽</span></span><br><span class="line">**Presentation**</span><br><span class="line">&lt;center&gt;</span><br><span class="line"> &lt;img src = <span class="string">'./PyQt5-Python-实战课程（八）/MultiWindow2.png'</span> width=<span class="number">500</span>&gt;    </span><br><span class="line">&lt;/center&gt;</span><br><span class="line"></span><br><span class="line">- 要点说明</span><br><span class="line"></span><br><span class="line">- 完整代码</span><br><span class="line"></span><br><span class="line">```python</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="多窗口交互（2）：使用信号和槽"><a href="#多窗口交互（2）：使用信号和槽" class="headerlink" title="多窗口交互（2）：使用信号和槽"></a>多窗口交互（2）：使用信号和槽</h3><p><strong>Presentation</strong></p>
+<center><br> <img src="/2019/01/31/PyQt5-Python-实战课程（八）/MultiWindow2.png" width="500"><br></center>
+
+<ul>
+<li><p>要点说明</p>
+</li>
+<li><p>完整代码</p>
+</li>
+</ul>
+<pre><code class="python">
+</code></pre>
 
         </div>
 
@@ -347,7 +359,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2019-01-30T17:24:32.000Z" itemprop="dateUpdated">2019-01-31 01:24:32</time>
+    Last updated: <time datetime="2019-02-15T15:38:46.099Z" itemprop="dateUpdated">2019-02-15 23:38:46</time>
 </span><br>
 
 
