@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>PyQt5(Python)实战课程（上） | Go Further | Stay Hungry, Stay Foolish</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#142421">
+    
+    
+    <meta name="keywords" content="PyQt5">
+    <meta name="description" content="【阅读时间】XXX min XXX words【阅读内容】……">
+<meta name="keywords" content="PyQt5">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PyQt5(Python)实战课程（上）">
+<meta property="og:url" content="http://yoursite.com/2019/01/23/PyQt5-Python-实战课程（上）/index.html">
+<meta property="og:site_name" content="Go Further">
+<meta property="og:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2019/01/23/PyQt5-Python-实战课程（上）/QLabelDemo.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/23/PyQt5-Python-实战课程（上）/QLineEditEchoMode.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/23/PyQt5-Python-实战课程（上）/QLineEditValidator.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/23/PyQt5-Python-实战课程（上）/QLineEditMask.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/23/PyQt5-Python-实战课程（上）/QLineEditDemo.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/23/PyQt5-Python-实战课程（上）/QTextEditDemo.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/23/PyQt5-Python-实战课程（上）/QPushButtonDemo.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/23/PyQt5-Python-实战课程（上）/QRadioButtonDemo.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/23/PyQt5-Python-实战课程（上）/QCheckBoxDemo.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/23/PyQt5-Python-实战课程（上）/QComboBoxDemo.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/23/PyQt5-Python-实战课程（上）/QSpinBoxDemo.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/23/PyQt5-Python-实战课程（上）/QSliderDemo.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/23/PyQt5-Python-实战课程（上）/QDialogDemo.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/23/PyQt5-Python-实战课程（上）/QMessageBox.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/23/PyQt5-Python-实战课程（上）/QMessageBox1.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/23/PyQt5-Python-实战课程（上）/QMessageBox2.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/23/PyQt5-Python-实战课程（上）/QMessageBox3.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/23/PyQt5-Python-实战课程（上）/QMessageBox4.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/23/PyQt5-Python-实战课程（上）/QMessageBox5.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/23/PyQt5-Python-实战课程（上）/QInputDialogDemo.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/23/PyQt5-Python-实战课程（上）/QInputDialogDemo1.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/23/PyQt5-Python-实战课程（上）/QInputDialogDemo2.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/23/PyQt5-Python-实战课程（上）/QInputDialogDemo3.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/23/PyQt5-Python-实战课程（上）/QFontDialogDemo.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/23/PyQt5-Python-实战课程（上）/QColorDialogDemo.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/23/PyQt5-Python-实战课程（上）/QFileDialogDemo.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/23/PyQt5-Python-实战课程（上）/DrawText.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/23/PyQt5-Python-实战课程（上）/DrawPoints.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/23/PyQt5-Python-实战课程（上）/DrawMultiLine.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/23/PyQt5-Python-实战课程（上）/DrawAll.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/23/PyQt5-Python-实战课程（上）/FillRect.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/23/PyQt5-Python-实战课程（上）/DrapDrop.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/23/PyQt5-Python-实战课程（上）/ClipBoard.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/23/PyQt5-Python-实战课程（上）/QCalendarWidget.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/23/PyQt5-Python-实战课程（上）/QDateTimeEdit.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/23/PyQt5-Python-实战课程（上）/menuBar.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/23/PyQt5-Python-实战课程（上）/Toolbar.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/23/PyQt5-Python-实战课程（上）/StatusBar.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/23/PyQt5-Python-实战课程（上）/PrintSupport.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/23/PyQt5-Python-实战课程（上）/PrintDialog.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/23/PyQt5-Python-实战课程（上）/TabWidgetDemo.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/23/PyQt5-Python-实战课程（上）/QStackedWidget.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/23/PyQt5-Python-实战课程（上）/QDockWidget.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/23/PyQt5-Python-实战课程（上）/MultiWindows.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/23/PyQt5-Python-实战课程（上）/QScrollBar.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/23/PyQt5-Python-实战课程（上）/ShowTime.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/23/PyQt5-Python-实战课程（上）/AutoCloseWindow.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/23/PyQt5-Python-实战课程（上）/Counter.png">
+<meta property="og:updated_time" content="2019-02-24T12:38:15.947Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PyQt5(Python)实战课程（上）">
+<meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
+<meta name="twitter:image" content="http://yoursite.com/2019/01/23/PyQt5-Python-实战课程（上）/QLabelDemo.png">
+    
+        <link rel="alternate" type="application/atom+xml" title="Go Further" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">CaptainSE</h5>
+          <a href="mailto:841145636@qq.com" title="841145636@qq.com" class="mail">841145636@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                Home
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/Captainzj" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">PyQt5(Python)实战课程（上）</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="検索">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">PyQt5(Python)实战课程（上）</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-01-23T10:24:50.000Z" itemprop="datePublished" class="page-time">
+  2019-01-23
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#PyQt5-Python-实战课程（一）"><span class="post-toc-number">1.</span> <span class="post-toc-text">PyQt5(Python)实战课程（一）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#搭建环境"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">搭建环境</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#开发第一个基于PyQt5的桌面应用"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">开发第一个基于PyQt5的桌面应用</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#PyQt5-Python-实战课程（二）"><span class="post-toc-number">2.</span> <span class="post-toc-text">PyQt5(Python)实战课程（二）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Qt-Designer实战"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">Qt Designer实战</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#PyQt5-Python-实战课程（三）"><span class="post-toc-number">3.</span> <span class="post-toc-text">PyQt5(Python)实战课程（三）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#基本窗口控件"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">基本窗口控件</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#QLabel控件"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">QLabel控件</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#QLineEdit控件"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">QLineEdit控件</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#QTextEdit控件"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">QTextEdit控件</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Button控件"><span class="post-toc-number">3.5.</span> <span class="post-toc-text">Button控件</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#下拉列表控件（QComboBox）"><span class="post-toc-number">3.6.</span> <span class="post-toc-text">下拉列表控件（QComboBox）</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#计数器控件（QSpinBox）"><span class="post-toc-number">3.7.</span> <span class="post-toc-text">计数器控件（QSpinBox）</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#滑块控件（QSlider）"><span class="post-toc-number">3.8.</span> <span class="post-toc-text">滑块控件（QSlider）</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#PyQt5-Python-实战课程（四）"><span class="post-toc-number">4.</span> <span class="post-toc-text">PyQt5(Python)实战课程（四）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#对话框-QDialog"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">对话框 QDialog</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#PyQt5-Python-实战课程（五）"><span class="post-toc-number">5.</span> <span class="post-toc-text">PyQt5(Python)实战课程（五）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#绘图API"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">绘图API</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#PyQt5-Python-实战课程（六）"><span class="post-toc-number">6.</span> <span class="post-toc-text">PyQt5(Python)实战课程（六）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#拖拽与剪贴板"><span class="post-toc-number">6.1.</span> <span class="post-toc-text">拖拽与剪贴板</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#日历和时间"><span class="post-toc-number">6.2.</span> <span class="post-toc-text">日历和时间</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#菜单、工具栏和状态栏"><span class="post-toc-number">6.3.</span> <span class="post-toc-text">菜单、工具栏和状态栏</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#打印"><span class="post-toc-number">6.4.</span> <span class="post-toc-text">打印</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#容器控件"><span class="post-toc-number">6.5.</span> <span class="post-toc-text">容器控件</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#多线程"><span class="post-toc-number">6.6.</span> <span class="post-toc-text">多线程</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-PyQt5-Python-实战课程（上）"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">PyQt5(Python)实战课程（上）</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2019-01-23 18:24:50" datetime="2019-01-23T10:24:50.000Z"  itemprop="datePublished">2019-01-23</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>【阅读时间】XXX min XXX words<br>【阅读内容】……</p>
+<a id="more"></a>
+<p>声明：此系列笔记《PyQt5(Python)实战课程》参考于某网络平台课程，仅作个人学习整理之用。</p>
+<h3 id="PyQt5-Python-实战课程（一）"><a href="#PyQt5-Python-实战课程（一）" class="headerlink" title="PyQt5(Python)实战课程（一）"></a><a href="https://captainzj.github.io/2019/01/23/PyQt5-Python-实战课程（一）/" target="_blank" rel="noopener">PyQt5(Python)实战课程（一）</a></h3><h4 id="搭建环境"><a href="#搭建环境" class="headerlink" title="搭建环境"></a>搭建环境</h4><ol>
+<li>Python</li>
+<li>PyQt5模块</li>
+<li>PyCharm</li>
+</ol>
+<h4 id="开发第一个基于PyQt5的桌面应用"><a href="#开发第一个基于PyQt5的桌面应用" class="headerlink" title="开发第一个基于PyQt5的桌面应用"></a>开发第一个基于PyQt5的桌面应用</h4><h3 id="PyQt5-Python-实战课程（二）"><a href="#PyQt5-Python-实战课程（二）" class="headerlink" title="PyQt5(Python)实战课程（二）"></a><a href="https://captainzj.github.io/2019/01/23/PyQt5-Python-实战课程（二）/" target="_blank" rel="noopener">PyQt5(Python)实战课程（二）</a></h3><h4 id="Qt-Designer实战"><a href="#Qt-Designer实战" class="headerlink" title="Qt Designer实战"></a>Qt Designer实战</h4><ol>
+<li>安装和配置Qt Designer</li>
+<li>Qt Designer快速入门</li>
+<li>将.ui文件转换为.py文件</li>
+<li>在QtDesigner中使用水平布局</li>
+<li>在Qt Designer中使用垂直布局</li>
+<li>在Qt Designer中同时使用水平布局和垂直布局</li>
+<li>在Qt Designer中使用栅格布局</li>
+<li>控件尺寸的最大值和最小值</li>
+<li>尺寸策略</li>
+<li>设置控件之间的伙伴关系</li>
+<li>修改控件的Tab顺序</li>
+<li>在Qt Designer中完成信号与槽的设置</li>
+<li>在Qt Designer中为窗口添加菜单和工具栏</li>
+</ol>
+<h3 id="PyQt5-Python-实战课程（三）"><a href="#PyQt5-Python-实战课程（三）" class="headerlink" title="PyQt5(Python)实战课程（三）"></a><a href="https://captainzj.github.io/2019/01/24/PyQt5-Python-实战课程（三）/" target="_blank" rel="noopener">PyQt5(Python)实战课程（三）</a></h3><h4 id="基本窗口控件"><a href="#基本窗口控件" class="headerlink" title="基本窗口控件"></a>基本窗口控件</h4><ol>
+<li>创建主窗口</li>
+<li>让主窗口居中显示</li>
+<li>退出应用程序</li>
+<li>屏幕坐标系</li>
+<li>设置窗口和应用程序图标</li>
+<li>为控件添加提示消息</li>
+</ol>
+<h4 id="QLabel控件"><a href="#QLabel控件" class="headerlink" title="QLabel控件"></a>QLabel控件</h4><ol>
+<li><p>QLabel控件的基本用法</p>
+<center><br><img src="/2019/01/23/PyQt5-Python-实战课程（上）/QLabelDemo.png" style="zoom:50%"><br></center>
+
+<ul>
+<li>Qlabel常用方法<ul>
+<li>setAlignment(): 设置文本的对齐方式</li>
+<li>setIndent(): 设置文本缩进</li>
+<li>text(): 获取文本内容</li>
+<li>setBuddy(): 设置伙伴关系</li>
+<li>setText: 设置文本内容</li>
+<li>selectedText(): 返回所选择的字符</li>
+<li>setWordWrap(): 设置是否允许换行</li>
+</ul>
+</li>
+<li>Qlabel常用的信号（事件）<ul>
+<li>当鼠标滑过QLabel控件时触发：linkHovered</li>
+<li>当鼠标单击QLabel控件时触发：linkActivated</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>QLabel与伙伴控件</li>
+</ol>
+<h4 id="QLineEdit控件"><a href="#QLineEdit控件" class="headerlink" title="QLineEdit控件"></a>QLineEdit控件</h4><ol>
+<li><p>QLineEdit控件与回显模式（EchoMode）</p>
+ <center><br>      <img src="/2019/01/23/PyQt5-Python-实战课程（上）/QLineEditEchoMode.png" width="500"><br> </center> 
+
+<ul>
+<li>基本功能: 输入单行的文本</li>
+<li>EchoMode（回显模式）<ul>
+<li>Normal</li>
+<li>NoEcho（已输入字符，但屏幕上无回应）</li>
+<li>Password </li>
+<li>PasswordEchoOnEdit (Normal聚焦 -&gt;&gt; Password失焦)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>限制QLineEdit控件的输入（校验器）</p>
+ <center><br>  <img src="/2019/01/23/PyQt5-Python-实战课程（上）/QLineEditValidator.png" width="500"><br> </center>
+
+<p> 如限制只能输入整数、浮点数或满足一定条件的字符串</p>
+</li>
+<li><p>使用掩码限制QLineEdit控件的输入</p>
+ <center><br>  <img src="/2019/01/23/PyQt5-Python-实战课程（上）/QLineEditMask.png" width="500"><br> </center>
+</li>
+<li><p>QLineEdit控件综合案例</p>
+ <center><br>  <img src="/2019/01/23/PyQt5-Python-实战课程（上）/QLineEditDemo.png" width="500"><br> </center>
+
+</li>
+</ol>
+<h4 id="QTextEdit控件"><a href="#QTextEdit控件" class="headerlink" title="QTextEdit控件"></a>QTextEdit控件</h4><p>使用QTextEdit控件输入多行文本</p>
+<center><br> <img src="/2019/01/23/PyQt5-Python-实战课程（上）/QTextEditDemo.png" width="500"><br></center>
+
+<h4 id="Button控件"><a href="#Button控件" class="headerlink" title="Button控件"></a>Button控件</h4><ol>
+<li><p>按钮控件（QPushButton）</p>
+ <center><br>  <img src="/2019/01/23/PyQt5-Python-实战课程（上）/QPushButtonDemo.png" width="500"><br> </center>
+</li>
+<li><p>单选按钮控件（QRadioButton）</p>
+ <center><br>  <img src="/2019/01/23/PyQt5-Python-实战课程（上）/QRadioButtonDemo.png" width="500"><br> </center>
+</li>
+<li><p>复选框控件（QCheckBox）<br> <center><br>  <img src="/2019/01/23/PyQt5-Python-实战课程（上）/QCheckBoxDemo.png" width="500"><br> </center></p>
+<ul>
+<li>3种状态<ul>
+<li>未选中：0</li>
+<li>半选中：1</li>
+<li>选中  ：2</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="下拉列表控件（QComboBox）"><a href="#下拉列表控件（QComboBox）" class="headerlink" title="下拉列表控件（QComboBox）"></a>下拉列表控件（QComboBox）</h4><center><br> <img src="/2019/01/23/PyQt5-Python-实战课程（上）/QComboBoxDemo.png" width="500"><br></center>
+
+<ol>
+<li>如果将列表项添加到QComboBox控件中</li>
+<li>如何获取选中的列表项</li>
+</ol>
+<h4 id="计数器控件（QSpinBox）"><a href="#计数器控件（QSpinBox）" class="headerlink" title="计数器控件（QSpinBox）"></a>计数器控件（QSpinBox）</h4><center><br> <img src="/2019/01/23/PyQt5-Python-实战课程（上）/QSpinBoxDemo.png" width="500"><br></center>
+
+<h4 id="滑块控件（QSlider）"><a href="#滑块控件（QSlider）" class="headerlink" title="滑块控件（QSlider）"></a>滑块控件（QSlider）</h4><center><br> <img src="/2019/01/23/PyQt5-Python-实战课程（上）/QSliderDemo.png" width="500"><br></center>
+
+<h3 id="PyQt5-Python-实战课程（四）"><a href="#PyQt5-Python-实战课程（四）" class="headerlink" title="PyQt5(Python)实战课程（四）"></a><a href="https://captainzj.github.io/2019/01/26/PyQt5-Python-实战课程（四）/" target="_blank" rel="noopener">PyQt5(Python)实战课程（四）</a></h3><h4 id="对话框-QDialog"><a href="#对话框-QDialog" class="headerlink" title="对话框 QDialog"></a>对话框 QDialog</h4><ol>
+<li><p>使用QDialog显示通用对话框</p>
+ <center><br>  <img src="/2019/01/23/PyQt5-Python-实战课程（上）/QDialogDemo.png" width="500"><br> </center>
+</li>
+<li><p>显示不同类型的消息对话框</p>
+ <center><br> <img src="/2019/01/23/PyQt5-Python-实战课程（上）/QMessageBox.png" width="255"><br> <img src="/2019/01/23/PyQt5-Python-实战课程（上）/QMessageBox1.png" width="255"><br> <img src="/2019/01/23/PyQt5-Python-实战课程（上）/QMessageBox2.png" width="255"><br> <img src="/2019/01/23/PyQt5-Python-实战课程（上）/QMessageBox3.png" width="255"><br> <img src="/2019/01/23/PyQt5-Python-实战课程（上）/QMessageBox4.png" width="255"><br> <img src="/2019/01/23/PyQt5-Python-实战课程（上）/QMessageBox5.png" width="255"><br> </center>
+
+<ul>
+<li>消息对话框：QMessageBox<ol>
+<li>关于对话框</li>
+<li>错误对话框</li>
+<li>警告对话框</li>
+<li>提问对话框</li>
+<li>消息对话框</li>
+</ol>
+</li>
+<li>有2点差异<ol start="6">
+<li>显示的对话框图标可能不同</li>
+<li>显示的按钮是不一样的</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>用于输入列表、文本和数字的输入对话框</p>
+ <center><br>  <img src="/2019/01/23/PyQt5-Python-实战课程（上）/QInputDialogDemo.png" width="500"><br>  <img src="/2019/01/23/PyQt5-Python-实战课程（上）/QInputDialogDemo1.png" width="255"><br>  <img src="/2019/01/23/PyQt5-Python-实战课程（上）/QInputDialogDemo2.png" width="255"><br>  <img src="/2019/01/23/PyQt5-Python-实战课程（上）/QInputDialogDemo3.png" width="255"><br> </center>
+
+<ul>
+<li>输入对话框：QInputDialog<ul>
+<li>QInputDialog.getItem</li>
+<li>QInputDialog.getText</li>
+<li>QInputDialog.getInt</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>字体对话框（QFontDialog）</p>
+ <center><br>  <img src="/2019/01/23/PyQt5-Python-实战课程（上）/QFontDialogDemo.png" width="500"><br> </center>
+
+<ul>
+<li>重点方法：<code>font, ok = QFontDialog.getFont()</code></li>
+</ul>
+</li>
+<li><p>颜色对话框（QColorDialog）</p>
+ <center><br>  <img src="/2019/01/23/PyQt5-Python-实战课程（上）/QColorDialogDemo.png" width="500"><br> </center>
+</li>
+<li><p>文件对话框（QFileDialog）</p>
+ <center><br>  <img src="/2019/01/23/PyQt5-Python-实战课程（上）/QFileDialogDemo.png" width="500"><br> </center>
+
+
+</li>
+</ol>
+<h3 id="PyQt5-Python-实战课程（五）"><a href="#PyQt5-Python-实战课程（五）" class="headerlink" title="PyQt5(Python)实战课程（五）"></a><a href="https://captainzj.github.io/2019/01/26/PyQt5-Python-实战课程（五）/" target="_blank" rel="noopener">PyQt5(Python)实战课程（五）</a></h3><h4 id="绘图API"><a href="#绘图API" class="headerlink" title="绘图API"></a>绘图API</h4><pre><code>绘图类型
+1. 文本
+2. 各种图形（直线，点，椭圆，弧，扇形，多边形等）
+3. 图像
+</code></pre><ol>
+<li><p>在窗口上绘制直线</p>
+   <center><br>  <img src="/2019/01/23/PyQt5-Python-实战课程（上）/DrawText.png" width="500"><br> </center>
+</li>
+<li><p>用像素点绘制正弦曲线</p>
+ <center><br>  <img src="/2019/01/23/PyQt5-Python-实战课程（上）/DrawPoints.png" width="500"><br> </center>
+</li>
+<li><p>绘制不同类型的直线</p>
+ <center><br>  <img src="/2019/01/23/PyQt5-Python-实战课程（上）/DrawMultiLine.png" width="500"><br> </center>
+</li>
+<li><p>绘制各种图形<br> <center><br>  <img src="/2019/01/23/PyQt5-Python-实战课程（上）/DrawAll.png" width="500"><br> </center></p>
+<ul>
+<li>类型<ol>
+<li>弧</li>
+<li>圆形</li>
+<li>椭圆</li>
+<li>矩形（正方形）</li>
+<li>多边形</li>
+<li>绘制图像</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>用画刷填充图形区域</p>
+ <center><br>  <img src="/2019/01/23/PyQt5-Python-实战课程（上）/FillRect.png" width="500"><br> </center>
+
+</li>
+</ol>
+<h3 id="PyQt5-Python-实战课程（六）"><a href="#PyQt5-Python-实战课程（六）" class="headerlink" title="PyQt5(Python)实战课程（六）"></a><a href="https://captainzj.github.io/2019/01/27/PyQt5-Python-实战课程（六）/" target="_blank" rel="noopener">PyQt5(Python)实战课程（六）</a></h3><h4 id="拖拽与剪贴板"><a href="#拖拽与剪贴板" class="headerlink" title="拖拽与剪贴板"></a>拖拽与剪贴板</h4><ol>
+<li><p>让控件支持拖拽动作</p>
+ <center><br>  <img src="/2019/01/23/PyQt5-Python-实战课程（上）/DrapDrop.png" width="500"><br> </center>
+</li>
+<li><p>使用剪贴板</p>
+ <center><br>  <img src="/2019/01/23/PyQt5-Python-实战课程（上）/ClipBoard.png" width="500"><br> </center>
+
+</li>
+</ol>
+<h4 id="日历和时间"><a href="#日历和时间" class="headerlink" title="日历和时间"></a>日历和时间</h4><ol>
+<li>日历控件 <center><br>  <img src="/2019/01/23/PyQt5-Python-实战课程（上）/QCalendarWidget.png" width="500"><br> </center></li>
+<li><p>设置不同风格的日期和时间</p>
+</li>
+<li><p>日期和时间控件的高级操作</p>
+ <center><br>  <img src="/2019/01/23/PyQt5-Python-实战课程（上）/QDateTimeEdit.png" width="500"><br> </center>
+
+</li>
+</ol>
+<h4 id="菜单、工具栏和状态栏"><a href="#菜单、工具栏和状态栏" class="headerlink" title="菜单、工具栏和状态栏"></a>菜单、工具栏和状态栏</h4><ol>
+<li><p>创建和使用菜单</p>
+ <center><br>  <img src="/2019/01/23/PyQt5-Python-实战课程（上）/menuBar.png" width="500"><br> </center>
+</li>
+<li><p>创建和使用工具栏</p>
+ <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">工具栏默认按钮：<span class="string">'只显示图标，将文本作为悬停提示展示'</span></span><br><span class="line"></span><br><span class="line">工具栏按钮有<span class="number">3</span>中显示状态</span><br><span class="line"><span class="number">1.</span>  只显示图标 ToolButtonIconOnly = <span class="number">0</span></span><br><span class="line"><span class="number">2.</span>  只显示文本 ToolButtonTextOnly = <span class="number">1</span></span><br><span class="line"><span class="number">3.</span>  同时显示文本和图标 ToolButtonTextBesideIcon = <span class="number">2</span>/ ToolButtonTextUnderIcon = <span class="number">3</span>/ ToolButtonFollowStyle = <span class="number">4</span> ...</span><br></pre></td></tr></table></figure>
+ <center><br>  <img src="/2019/01/23/PyQt5-Python-实战课程（上）/Toolbar.png" width="500"><br> </center>
+</li>
+<li><p>创建和使用状态栏</p>
+ <center><br>  <img src="/2019/01/23/PyQt5-Python-实战课程（上）/StatusBar.png" width="500"><br> </center>
+
+</li>
+</ol>
+<h4 id="打印"><a href="#打印" class="headerlink" title="打印"></a>打印</h4><ol>
+<li><p>使用打印机</p>
+ <center><br>  <img src="/2019/01/23/PyQt5-Python-实战课程（上）/PrintSupport.png" width="500"><br> </center>
+</li>
+<li><p>显示打印对话框<br> <center><br>  <img src="/2019/01/23/PyQt5-Python-实战课程（上）/PrintDialog.png" width="500"><br> </center></p>
+<h4 id="容器控件"><a href="#容器控件" class="headerlink" title="容器控件"></a>容器控件</h4></li>
+<li>选项卡控件（QTabWidget） <center><br>  <img src="/2019/01/23/PyQt5-Python-实战课程（上）/TabWidgetDemo.png" width="500"><br> </center></li>
+<li>堆栈窗口控件（QStackedWidget） <center><br>  <img src="/2019/01/23/PyQt5-Python-实战课程（上）/QStackedWidget.png" width="500"><br> </center></li>
+<li>停靠控件（QDockWidget） <center><br>  <img src="/2019/01/23/PyQt5-Python-实战课程（上）/QDockWidget.png" width="500"><br> </center></li>
+<li>容纳多文档的窗口 <center><br>  <img src="/2019/01/23/PyQt5-Python-实战课程（上）/MultiWindows.png" width="500"><br> </center></li>
+<li><p>滚动条控件（QScrollBar）</p>
+ <center><br>  <img src="/2019/01/23/PyQt5-Python-实战课程（上）/QScrollBar.png" width="500"><br> </center>
+
+<ul>
+<li>QScrollBar的作用<ol>
+<li>通过滚动条值的变化控制其他控件状态的变化</li>
+<li>通过滚动条值的变化控制控件位置的变化<h4 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h4></li>
+</ol>
+</li>
+</ul>
+</li>
+<li>动态显示当前时间（QTimer） <center><br>  <img src="/2019/01/23/PyQt5-Python-实战课程（上）/ShowTime.png" width="500"><br> </center></li>
+<li>让窗口定时关闭 <center><br>  <img src="/2019/01/23/PyQt5-Python-实战课程（上）/AutoCloseWindow.png" width="500"><br> </center></li>
+<li>使用线程类（QThread）编写计数器 <center><br>  <img src="/2019/01/23/PyQt5-Python-实战课程（上）/Counter.png" width="500"><br> </center>
+</li>
+</ol>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最終更新：<time datetime="2019-02-24T12:38:15.947Z" itemprop="dateUpdated">2019-02-24 20:38:15</time>
+</span><br>
+
+
+        
+    </div>
+    
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/avatar.jpg" alt="CaptainSE">
+            CaptainSE
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PyQt5/">PyQt5</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/01/23/PyQt5-Python-实战课程（上）/&title=《PyQt5(Python)实战课程（上）》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/01/23/PyQt5-Python-实战课程（上）/&title=《PyQt5(Python)实战课程（上）》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/01/23/PyQt5-Python-实战课程（上）/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《PyQt5(Python)实战课程（上）》 — Go Further&url=http://yoursite.com/2019/01/23/PyQt5-Python-实战课程（上）/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2019/01/23/PyQt5-Python-实战课程（上）/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2019/01/23/PyQt5-Python-实战课程（下）/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">PyQt5(Python)实战课程（下）</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2019/01/22/PyTorch中文网-归档/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">PyTorch中文网_归档</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢老板~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>このブログの内容物は<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja">クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際ライセンスの下に提供されています</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>CaptainSE &copy; 2015 - 2019</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/01/23/PyQt5-Python-实战课程（上）/&title=《PyQt5(Python)实战课程（上）》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/01/23/PyQt5-Python-实战课程（上）/&title=《PyQt5(Python)实战课程（上）》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/01/23/PyQt5-Python-实战课程（上）/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《PyQt5(Python)实战课程（上）》 — Go Further&url=http://yoursite.com/2019/01/23/PyQt5-Python-实战课程（上）/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2019/01/23/PyQt5-Python-实战课程（上）/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACu0lEQVR42u3b0U7rMBAEUP7/p3ul+4qSzuzGBaGTJxTa2sdI8Xa8fH3F1+v/9f3O9/tX77165eviuvrt14kLDw8PbzT12TD3P19N636i96Pnc8bDw8M7zbvfDJKJJoO1U7+/k2xgeHh4eD/La4vv2UaSzAEPDw/vb/BaWD7FX7Ex4OHh4Y3CiPvhZ/g8tjieteDh4eHFvFmh/LM/Hzzfw8PDw1ucqieHYZtPbmH1bPHw8PAO8PK2gFmzVPL599FDGx9H3xjw8PDwFrx9gds2abWx7KblCw8PD+8ELzpAWjRCFcdUo42nLvfx8PDwHuXtw4INaVaOF40OeHh4eMd4+4OxTTHdxiJFYIGHh4f3QV7+QJ8Vx7MFrcNfPDw8vId4s+hhNt38vflCv7mDh4eHd4A3e4hvCtz8k/PIuE6p8fDw8Ba8NlqdxamzSCI/BrucOR4eHt4B3ixabdsIcmSywSSlPB4eHt453qw4zkvn/TFbHoKsYlw8PDy8rsOz+NfNNk7dtA7kZf19UY6Hh4d3grdpEcgn18a1eRy86ozAw8PDK3l5rJBHurM2gnaho6gXDw8P7xhvFg3MWg1mjQX5whXne3h4eHgLXtv8lMQQs7O4fCGGfw08PDy8h3j5Q3zTUFWnI+W40b6Hh4eHt+ZtHu5tY9bsiT07isPDw8M7x2snsR9+1krVBhZ4eHh4n+ed2AxmicGqyMbDw8M7wNsHu/cBRNsosF+gN+/Fw8PDW/Ne5dUGuG1c2wYTbxYIDw8P7wBvU/jmW0JyMJa/vg0p8PDw8E7wZptBG/7m7QVtC8Kb0fHw8PCO8drSNsFsGrNmJXjUdIWHh4f3Qd5TpXMeGT92yoeHh4f3a3h5aduGC5v5PLYx4OHh4R3IOTevn7UmtF8A8PDw8E7wNo1NeXywKcfb0Lm+8PDw8FLeP00d5CmXA/R3AAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = 'Go Further | Stay Hungry, Stay Foolish';
+            clearTimeout(titleTime);
+        } else {
+            document.title = 'Go Further | Stay Hungry, Stay Foolish';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
