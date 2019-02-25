@@ -35,7 +35,7 @@
 <meta property="og:image" content="http://yoursite.com/2018/12/03/DenseNet-Introduction/Figure4.jpg">
 <meta property="og:image" content="http://yoursite.com/2018/12/03/DenseNet-Introduction/Figure5.jpg">
 <meta property="og:image" content="http://yoursite.com/2018/12/03/DenseNet-Introduction/Table2.jpg">
-<meta property="og:updated_time" content="2018-12-03T15:26:59.000Z">
+<meta property="og:updated_time" content="2019-02-25T07:33:38.449Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DenseNet_Introduction">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
@@ -150,6 +150,8 @@
 </time>
 
 
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Paper/">Paper</a></li></ul>
+
             
         </h5>
     </div>
@@ -165,7 +167,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#概念介绍"><span class="post-toc-number">1.</span> <span class="post-toc-text">概念介绍</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Dense-block"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Dense block</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Transition-layer"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Transition layer</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Growth-rate"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">Growth rate</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Bottleneck-layers"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">Bottleneck layers </span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Compression"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">Compression</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#算法分析"><span class="post-toc-number">2.</span> <span class="post-toc-text">算法分析</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Model-compactness"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">Model compactness</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Implicit-Deep-Supervision"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">Implicit Deep Supervision</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Feature-Reuse"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">Feature Reuse</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#实现结果"><span class="post-toc-number">3.</span> <span class="post-toc-text">实现结果</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#概念介绍"><span class="post-toc-number">1.</span> <span class="post-toc-text">概念介绍</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Dense-block"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Dense block</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Transition-layer"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Transition layer</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Growth-rate"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">Growth rate</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Bottleneck-layers"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">Bottleneck layers </span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Compression"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">Compression</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#算法分析"><span class="post-toc-number">2.</span> <span class="post-toc-text">算法分析</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Model-compactness"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">Model compactness</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#实现结果"><span class="post-toc-number">3.</span> <span class="post-toc-text">实现结果</span></a></li></ol>
         </nav>
     </aside>
 
@@ -179,6 +181,8 @@
             <time class="post-time" title="2018-12-03 16:39:14" datetime="2018-12-03T08:39:14.000Z"  itemprop="datePublished">2018-12-03</time>
 
             
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Paper/">Paper</a></li></ul>
+
 
 
             
@@ -211,7 +215,7 @@
 <h5 id="Growth-rate"><a href="#Growth-rate" class="headerlink" title="Growth rate"></a><strong>Growth rate</strong></h5><p>​    论文里涉及到growth rate这个概念。它指的是一个dense block里各个层输出feature maps的通道数，在同一个dense block里bn-relu-conv输出的通道数都是一样的。如上图，它的growth rate=4。一般，为了不使网络变得太宽，以及增加参数的利用效率，growth rate一般不会设得太大。</p>
 <center><br>    <img src="/2018/12/03/DenseNet-Introduction/Table1.jpg"><br></center>
 
-<h5 id="Bottleneck-layers"><a href="#Bottleneck-layers" class="headerlink" title="Bottleneck layers "></a><strong>Bottleneck layers </strong></h5><p>​    在一个dense block里，尽管每层输出的通道数并不大（growth rate一般不会设得很大），但是输入是由前面层的feature maps串接起来的，所以输入的通道数会很大。为了提高计算效率，作者<code>引进1*1 conv层作为bottleneck layer，放置在每层的前面，用来降低通道数(减小参数量)</code>。带有bottleneck layer的DenseNet被称为DenseNet-B。</p>
+<h5 id="Bottleneck-layers"><a href="#Bottleneck-layers" class="headerlink" title="Bottleneck layers "></a><strong>Bottleneck layers </strong></h5><p>​    在一个dense block里，尽管每层输出的通道数并不大（growth rate一般不会设得很大），但是输入是由前面层的feature maps串接起来的，所以输入的通道数会很大。为了提高计算效率，作者<code>引进1*1 conv层作为bottleneck layer</code>，放置在每层的前面，用来降低通道数(减小参数量)。带有bottleneck layer的DenseNet被称为DenseNet-B。</p>
 <h5 id="Compression"><a href="#Compression" class="headerlink" title="Compression"></a><strong>Compression</strong></h5><p>​    如果transition layer对上一个dense block进行了通道数的降维（即压缩），则称这类DenseNet为    <code>DenseNet-C</code>。同时使用了bottleneck layer和compression的DenseNet称为<code>DenseNet-BC</code>。</p>
 <center><br>    <img src="/2018/12/03/DenseNet-Introduction/Figure4_left.png"><br></center>
 
@@ -223,12 +227,7 @@
 <p>上图是由三个dense block组成的，两个block之间的conv+pool为transition layer。dense block3后面的pooling是global average pooling，然后再接一个全连接层+softmax。</p>
 <hr>
 <h4 id="算法分析"><a href="#算法分析" class="headerlink" title="算法分析"></a><strong>算法分析</strong></h4><h5 id="Model-compactness"><a href="#Model-compactness" class="headerlink" title="Model compactness"></a>Model compactness</h5><p>由于DenseNet对输入进行cat操作,一个直观的影响就是每一层学到的feature map都能被之后所有层直接使用,这使得特征可以在整个网络中重用,也使得模型更加简洁.</p>
-<center><br><img src="/2018/12/03/DenseNet-Introduction/Figure4.jpg"><br></center>
-
-<p>从上图中我们可以看出DenseNet的参数效率:左图包含了对多种DenseNet结构参数和最终性能的统计,我们可以看出当模型实现相同的test error时,原始的DenseNet往往要比DenseNet-BC拥有2-3倍的参数量.中间图为DenseNet-BC与ResNet的对比,在相同的模型精度下,DenseNet-BC只需要ResNet约三分之一的参数数量.右图为1001层超过10M参数量的ResNet与100层只有0.8M参数量的DenseNet-BC在训练时的对比,虽然他们在约相同的训练epoch时收敛,但DenseNet-BC却只需要ResNet不足十分之一的参数量.</p>
-<h5 id="Implicit-Deep-Supervision"><a href="#Implicit-Deep-Supervision" class="headerlink" title="Implicit Deep Supervision"></a>Implicit Deep Supervision</h5><p>解释DenseNet为何拥有如此高性能的另一个原因是网络中的每一层不仅接受了原始网络中来自loss的监督,同时由于存在多个bypass与shortcut,网络的监督是多样的.Deep supervision的优势同样在deeply-supervised nets (DSN)中也被证实.(DSN中每一个Hidden layer都有一个分类器,强迫其学习一些有区分度的特征).与DSN不同的是,DenseNet拥有单一的loss function, 模型构造和梯度计算更加简易.</p>
-<h5 id="Feature-Reuse"><a href="#Feature-Reuse" class="headerlink" title="Feature Reuse"></a>Feature Reuse</h5><p>在设计初,DenseNet便被设计成让一层网络可以使用所有之前层网络feature map的网络结构,为了探索feature的复用情况,作者进行了相关实验.作者训练的L=40,K=12的DenseNet,对于任意Denseblock中的所有卷积层,计算之前某层feature map在该层权重的绝对值平均数.这一平均数表明了这一层对于之前某一层feature的利用率,下图为由该平均数绘制出的热力图:</p>
-<center><br><img src="/2018/12/03/DenseNet-Introduction/Figure5.jpg" style="zoom:60%"><br></center>
+<center><br><img src="/2018/12/03/DenseNet-Introduction/Figure4.jpg" width="500"><br></center><br>&gt; <code>左图</code>：DenseNet-BC 比 DenseNet 🐂🍺 （参数量更少）<br>&gt; <code>中间图</code>：DenseNet-BC 比 ResNet 🐂🍺 （参数量更少）<br>&gt; <code>右图</code>：DenseNet-BC 比 ResNet 🐂🍺 （在指定条件下，参数量更更少）<br><br>从上图中我们可以看出DenseNet的参数效率:<code>左图</code>包含了对多种DenseNet结构参数和最终性能的统计,我们可以看出当模型实现相同的test error时,原始的DenseNet往往要比DenseNet-BC拥有2-3倍的参数量.<code>中间图</code>为DenseNet-BC与ResNet的对比,在相同的模型精度下,DenseNet-BC只需要ResNet约三分之一的参数数量.<code>右图</code>为1001层超过10M参数量的ResNet与100层只有0.8M参数量的DenseNet-BC在训练时的对比,虽然他们在约相同的训练epoch时收敛,但DenseNet-BC却只需要ResNet不足十分之一的参数量.<br><br>##### Implicit Deep Supervision<br><br>解释DenseNet为何拥有如此高性能的另一个原因是网络中的每一层不仅接受了原始网络中来自loss的监督,同时由于<code>存在多个bypass与shortcut</code>,网络的监督是多样的.Deep supervision的优势同样在deeply-supervised nets (DSN)中也被证实.(DSN中每一个Hidden layer都有一个分类器,强迫其学习一些有区分度的特征).与DSN不同的是,DenseNet拥有单一的loss function, 模型构造和梯度计算更加简易.<br><br>##### Feature Reuse<br><br>在设计初,DenseNet便被设计成让一层网络可以使用所有之前层网络feature map的网络结构,为了探索feature的复用情况,作者进行了相关实验.作者训练的L=40,K=12的DenseNet,对于任意Denseblock中的所有卷积层,计算之前某层feature map在该层权重的绝对值平均数.这一平均数表明了这一层对于之前某一层feature的利用率,下图为由该平均数绘制出的热力图:<br><br><center><br><img src="/2018/12/03/DenseNet-Introduction/Figure5.jpg" style="zoom:60%"><br></center>
 
 <p>从图中我们可以得出以下结论:</p>
 <p>a) 一些较早层提取出的特征仍可能被较深层直接使用<br>b) 即使是Transition layer也会使用到之前Denseblock中所有层的特征<br>c) 第2-3个Denseblock中的层对之前Transition layer利用率很低,说明transition layer输出大量冗余特征.这也为DenseNet-BC提供了证据支持,即Compression的必要性.<br>d) 最后的分类层虽然使用了之前Denseblock中的多层信息,但更偏向于使用最后几个feature map的特征,说明在网络的最后几层,某些high-level的特征可能被产生.</p>
@@ -244,7 +243,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2018-12-03T15:26:59.000Z" itemprop="dateUpdated">2018-12-03 23:26:59</time>
+    Last updated: <time datetime="2019-02-25T07:33:38.449Z" itemprop="dateUpdated">2019-02-25 15:33:38</time>
 </span><br>
 
 
