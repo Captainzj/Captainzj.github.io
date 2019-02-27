@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-02-26T12:31:14.030Z</updated>
+  <updated>2019-02-26T13:51:08.582Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2019/02/25/PyQt4-For-Windows-10/"/>
     <id>http://yoursite.com/2019/02/25/PyQt4-For-Windows-10/</id>
     <published>2019-02-25T12:14:37.000Z</published>
-    <updated>2019-02-26T12:31:14.030Z</updated>
+    <updated>2019-02-26T13:51:08.582Z</updated>
     
     <content type="html"><![CDATA[<p>【阅读时间】XXX min XXX words<br>【阅读内容】……</p><a id="more"></a><h3 id="安装Python3-6"><a href="#安装Python3-6" class="headerlink" title="安装Python3.6"></a>安装Python3.6</h3><ul><li>教程：<a href="https://blog.51cto.com/5001660/2084273" target="_blank" rel="noopener">windows 10 64位安装Python3.6.4</a></li><li>下载地址：<a href="https://www.python.org/downloads/windows/" target="_blank" rel="noopener">https://www.python.org/downloads/windows/</a></li><li>虚拟机Parallels Desktop For Windows10 安装路径：<code>C:\Users\Captain\AppData\Local\Programs\Python\Python36</code></li></ul><h3 id="安装PyQt4"><a href="#安装PyQt4" class="headerlink" title="安装PyQt4"></a>安装PyQt4</h3><ul><li>教程：<a href="https://blog.csdn.net/Eppley/article/details/80240305" target="_blank" rel="noopener">Windows+Python 3.6环境下安装PyQt4</a></li><li>下载地址：<a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/#pyqt4" target="_blank" rel="noopener">http://www.lfd.uci.edu/~gohlke/pythonlibs/#pyqt4</a> <a href="https://blog.csdn.net/js1568/article/details/80391761" target="_blank" rel="noopener">Win10，Python 3.6环境下安装PyQt4</a></li><li><p>安装指令：<code>pip install PyQt4-4.11.4-cp36-cp36m-win_amd64.whl</code></p><center><br>  <img src="/2019/02/25/PyQt4-For-Windows-10/PyQt4ForWin10.png" width="500/"><br></center><ul><li>若执行指令”pip install PyQt4-4.11.4-cp36-cp36m-win_amd64.whl”后，提示”PyQt4-4.11.4-cp36-cp36m-win_amd64.whl is not a supported wheel on this platform.”  可能的原因是 pip 与 该.whl 版本不匹配 （pip 可能默认调用了Anaconda3的python 3.7版本） </li></ul></li></ul><h3 id="安装Anaconda-For-win10"><a href="#安装Anaconda-For-win10" class="headerlink" title="安装Anaconda For win10"></a>安装Anaconda For win10</h3><ul><li>教程：<a href="https://www.zhihu.com/question/50003671" target="_blank" rel="noopener">win10：Anaconda安装好后,如何安装pyqt4？</a></li><li>下载地址：<a href="https://stackoverflow.com/questions/21637922/how-to-install-pyqt4-in-anaconda" target="_blank" rel="noopener">How to install PyQt4 in anaconda?</a></li><li>虚拟机Parallels Desktop For Windows10 安装路径：<code>C:\Users\Captain\Anaconda3</code></li></ul><h3 id="安装其他软件"><a href="#安装其他软件" class="headerlink" title="安装其他软件"></a>安装其他软件</h3><p>虚拟机Parallels Desktop For Windows10 安装路径：</p><ul><li>百度网盘：<code>C:\Users\Captain\AppData\Roaming\baidu\BaiduNetdisk</code></li><li>迅雷：<code>C:\Program Files (x86)\Thunder Network\Thunder</code></li><li>VSCode：<code>C:\Users\Captain\AppData\Local\Programs\Microsoft VS Code</code></li></ul>]]></content>
     
@@ -34,7 +34,7 @@
       <category term="环境配置" scheme="http://yoursite.com/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
     
     
-      <category term="win0" scheme="http://yoursite.com/tags/win0/"/>
+      <category term="win10" scheme="http://yoursite.com/tags/win10/"/>
     
   </entry>
   
@@ -183,9 +183,9 @@
     <link href="http://yoursite.com/2019/01/30/%E8%AE%B8%E6%98%AF%E4%B8%80%E8%A7%82/"/>
     <id>http://yoursite.com/2019/01/30/许是一观/</id>
     <published>2019-01-30T13:36:18.000Z</published>
-    <updated>2019-02-23T03:21:41.341Z</updated>
+    <updated>2019-02-27T07:21:56.547Z</updated>
     
-    <content type="html"><![CDATA[<p>【阅读时间】XXX min XXX words<br>【阅读内容】……</p><a id="more"></a><h2 id="毒鸡汤"><a href="#毒鸡汤" class="headerlink" title="毒鸡汤"></a>毒鸡汤</h2><blockquote><p>干了这碗，好好拼命</p></blockquote><ul><li>所有的不顺意，都是因为自己「菜」</li><li>钱真的可以为所欲为，「请努力挣钱」</li><li>弱，即是罪</li></ul><h2 id="快意人生"><a href="#快意人生" class="headerlink" title="快意人生"></a>快意人生</h2><blockquote><p>开心自得便好，与他人何干</p></blockquote><ul><li>愿你出走半生，归来仍是少年</li><li>以梦为马，诗酒趁年华</li></ul><h2 id="孤狼"><a href="#孤狼" class="headerlink" title="孤狼"></a>孤狼</h2><blockquote><p>一个人才知道什么是自由，对吧</p></blockquote><ul><li>像我这种人就不适合谈恋爱，因为爱会唤醒我的占有欲、控制欲、疑心，也会勾引出我的狭隘、自私、敏感。而这每一种情绪，都足以令我和我爱的人痛苦。</li><li>我不想取悦别人，也不奢望会有人来哄我开心。我可以独自承受一切，我不需要任何人来陪伴。</li></ul><h2 id="心伤"><a href="#心伤" class="headerlink" title="心伤"></a>心伤</h2><blockquote><p>有情终被无情伤，何苦自陷不自拔</p></blockquote><ul><li>纵我心如红铁，难融你三尺冰寒</li><li>原本只知道「白茶清欢无别事，我在等风也等你」，后来才知晓了后半句「苦酒折柳今相离，无风无月也无你」</li></ul><h2 id="心动"><a href="#心动" class="headerlink" title="心动"></a>心动</h2><blockquote><p>愿有情人终成眷属，可我不想掺和</p></blockquote><ul><li>最是初见惊鸿，开在尘世繁艳</li></ul><h2 id="表白"><a href="#表白" class="headerlink" title="表白"></a>表白</h2><blockquote><p>假装一下 </p></blockquote><ul><li>我还是很喜欢你，像日月轮回交替，不理朝夕</li></ul><h2 id="恋爱"><a href="#恋爱" class="headerlink" title="恋爱"></a>恋爱</h2><blockquote><p>无聊的恋爱观…</p></blockquote><ul><li>天使就是为了整个世界放弃了你，而魔鬼是为了你放弃了整个世界</li></ul>]]></content>
+    <content type="html"><![CDATA[<p>【阅读时间】XXX min XXX words<br>【阅读内容】……</p><a id="more"></a><h2 id="毒鸡汤"><a href="#毒鸡汤" class="headerlink" title="毒鸡汤"></a>毒鸡汤</h2><blockquote><p>干了这碗，好好拼命</p></blockquote><ul><li>所有的不顺意，都是因为自己「菜」</li><li>钱真的可以为所欲为，「请努力挣钱」</li><li>弱，即是罪</li></ul><h2 id="快意人生"><a href="#快意人生" class="headerlink" title="快意人生"></a>快意人生</h2><blockquote><p>开心自得便好，与他人何干</p></blockquote><ul><li>愿你出走半生，归来仍是少年</li><li>以梦为马，诗酒趁年华</li></ul><h2 id="孤狼"><a href="#孤狼" class="headerlink" title="孤狼"></a>孤狼</h2><blockquote><p>一个人才知道什么是自由，对吧</p></blockquote><ul><li>像我这种人就不适合谈恋爱，因为爱会唤醒我的占有欲、控制欲、疑心，也会勾引出我的狭隘、自私、敏感。而这每一种情绪，都足以令我和我爱的人痛苦。</li><li>我不想取悦别人，也不奢望会有人来哄我开心。我可以独自承受一切，我不需要任何人来陪伴。</li><li>我怕我做的不好，让你觉得爱情不过如此</li></ul><h2 id="心伤"><a href="#心伤" class="headerlink" title="心伤"></a>心伤</h2><blockquote><p>有情终被无情伤，何苦自陷不自拔</p></blockquote><ul><li>纵我心如红铁，难融你三尺冰寒</li><li>原本只知道「白茶清欢无别事，我在等风也等你」，后来才知晓了后半句「苦酒折柳今相离，无风无月也无你」</li></ul><h2 id="心动"><a href="#心动" class="headerlink" title="心动"></a>心动</h2><blockquote><p>愿有情人终成眷属，可我不想掺和</p></blockquote><ul><li>最是初见惊鸿，开在尘世繁艳</li></ul><h2 id="表白"><a href="#表白" class="headerlink" title="表白"></a>表白</h2><blockquote><p>假装一下 </p></blockquote><ul><li>我还是很喜欢你，像日月轮回交替，不理朝夕</li></ul><h2 id="恋爱"><a href="#恋爱" class="headerlink" title="恋爱"></a>恋爱</h2><blockquote><p>无聊的恋爱观…</p></blockquote><ul><li>天使就是为了整个世界放弃了你，而魔鬼是为了你放弃了整个世界</li></ul>]]></content>
     
     <summary type="html">
     
