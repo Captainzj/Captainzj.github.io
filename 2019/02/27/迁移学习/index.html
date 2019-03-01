@@ -29,7 +29,7 @@
 <meta property="og:site_name" content="Go Further">
 <meta property="og:description" content="【阅读时间】XXX min XXX words【阅读内容】深度学习之PyTorch实战计算机视觉 第7章">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-28T15:11:45.427Z">
+<meta property="og:updated_time" content="2019-03-01T03:34:06.224Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="迁移学习-Introduction">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】深度学习之PyTorch实战计算机视觉 第7章">
@@ -185,7 +185,7 @@
             <p>【阅读时间】XXX min XXX words<br>【阅读内容】深度学习之PyTorch实战计算机视觉 第7章</p>
 <a id="more"></a>
 <p>如果我们用这么多资源训练的模型能够<code>解决同一类问题</code>，那么模型的性价比会提高很多，这就促使使用迁移模型解决同 一类问题的方法出现 。因为该方法的出现，我们通过对 一个训练好的模型进行细微调整，就能将其应用到相似的问题中，最后还能取得很好的效果 ; 另外，对于原始数据较少的问题，我们也能够通过采用迁移模型进行有效解决 ，所以，如果能够选取合适的迁移学习方法，则会对解决我们所面临的问题有很大的帮助 。</p>
-<p>建议可同时阅读 <a href="https://captainzj.github.io/2018/12/28/torchvision-pretrained-Model/" target="_blank" rel="noopener">torchvision_pretrained_Model</a></p>
+<p>建议可同时阅读 <a href="https://captainzj.github.io/2018/12/28/torchvision-pretrained-Model/" target="_blank" rel="noopener">torchvision_pretrained_Model</a>，并且请参考官方文档<a href="https://pytorch.org/tutorials/beginner/transfer_learning_tutorial.html" target="_blank" rel="noopener">Transfer Learning Tutorial</a>。</p>
 <h3 id="模型搭建和参数优化"><a href="#模型搭建和参数优化" class="headerlink" title="模型搭建和参数优化"></a>模型搭建和参数优化</h3><p>本节会先基于一个简化的VGGNet 架构搭建卷积神经网络模型井进行模型训练和参数优化，然后迁移一个完整的VGGI6架构的卷积神经网络模型，最后迁移一个ResNet50架构的卷积神经网络模型，并对比这三个模型在预测结果上的准确性和在泛化能力上的差异 。</p>
 <h4 id="自定义VGGNet"><a href="#自定义VGGNet" class="headerlink" title="自定义VGGNet"></a>自定义VGGNet</h4><p>我们首先需要搭建一个卷积神经网络模型， 考虑到训练时间的成本，我们基于VGG16架构来搭建一个简化版的VGGNet模型，这个简化版模型要求输入的图片大小全部<code>缩放到64×64</code>， 而在标准的VGGl6架构模型中输入的图片大小应当是224×224的; 同时简化版模型<code>删除了VGG16最后的三个卷积层和池化层</code>，也<code>改变了全连接层中的连接参数</code>，这一系列的改变都是为了减少整个模型参与训练的参数数量。<br>在搭建好模型后，通过 print 对搭建的模型进行打印输出来显示模型中的细节，打印输出的代码如下:</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">model = Models() </span><br><span class="line"><span class="keyword">print</span> (model)</span><br></pre></td></tr></table></figure>
@@ -195,11 +195,10 @@
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(torch.cuda.is_available ())   <span class="comment"># 若返回的值是True，这说明我们的GPUs已经具备了被使用的全部条件</span></span><br></pre></td></tr></table></figure>
 <p>观察输出结果可见，Training…<code>train Loss:0.1903 Acc:92.4450</code> Validing… <code>valid Loss:0.2874 Acc:88.0400</code> (Time) <code>855.5901200771332</code>（约为14分钟）<br>从结果可以看出，不仅验证测试集的准确率提升了近10%，而且耗时大幅下降。（使用GPU计算参数，效率有明显提升）</p>
 <h4 id="迁移-VGG16"><a href="#迁移-VGG16" class="headerlink" title="迁移 VGG16"></a>迁移 VGG16</h4><p>因为承担整个模型输出分类工作的是卷积神经网络模型中的<code>全连接层</code>，所以在迁移学习的过程 中调整最多的也是全连接层部分。其基本思路是<code>冻结</code>卷积神经网络中全连接层之前的全部网络层次，让这些被冻结的网络层次中的参数在模型的训练过程中不进行梯度更新 ，能够被优化的参数仅仅是没有被冻结的全连接层（即自定义修改的新的全连接层）的全部参数。</p>
-<p>下面看看具体的代码。首先，迁移过来的 VGG16架构模型在最后输出的结果是 1000 个 ，在我们的问题中只需两个输出结果，所以全连接层必须进行调整。模型调整的具体代码如下:</p>
+<p>下面看看具体的代码。首先，迁移过来的 VGG16架构模型在最后输出的结果是 1000 个 ，在我们的问题中只需两个输出结果，所以全连接层必须进行调整。模型调整的具体<a href="https://github.com/Captainzj/PyTorch_Practice/blob/master/chapter-7/chapter-7.ipynb" target="_blank" rel="noopener">code</a>如下:  </p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> parma <span class="keyword">in</span> model.parameters():</span><br><span class="line">    parma.requires_grad = <span class="keyword">False</span></span><br><span class="line"></span><br><span class="line">model.classifier = torch.nn.Sequential(torch.nn.Linear(<span class="number">25088</span>, <span class="number">4096</span>),</span><br><span class="line">                                           torch.nn.ReLU(),</span><br><span class="line">                                           torch.nn.Dropout(p=<span class="number">0.5</span>),</span><br><span class="line">                                           torch.nn.Linear(<span class="number">4096</span>, <span class="number">4096</span>),</span><br><span class="line">                                           torch.nn.ReLU(),</span><br><span class="line">                                           torch.nn.Dropout(p=<span class="number">0.5</span>),</span><br><span class="line">                                           torch.nn.Linear(<span class="number">4096</span>, <span class="number">2</span>))</span><br><span class="line"><span class="keyword">if</span> Use_gpu:</span><br><span class="line">    model = model.cuda()</span><br><span class="line"></span><br><span class="line">cost = torch.nn.CrossEntropyLoss()</span><br><span class="line">optimizer = torch.optim.Adam(model.classifier.parameters())</span><br></pre></td></tr></table></figure>
 <p>观察输出结果可见，Training…<code>train Loss:0.0033 Acc:99.8950</code> Validing… <code>valid Loss:0.0899 Acc:98.3200</code><br>准确率有明显提升，说明了迁移学习是一种提升棋型泛化能力的非常有效的方法。</p>
-<h4 id="迁移ResNet50"><a href="#迁移ResNet50" class="headerlink" title="迁移ResNet50"></a>迁移ResNet50</h4><p>模型迁移的代码为 <code>model = models.resnet50(pretrained=True)</code><br>对 ResNet50 的全连接层部分进行调整，代码调整如下:</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> parma <span class="keyword">in</span> model.parameters(): </span><br><span class="line">    parma . requires_grad = <span class="keyword">False</span></span><br><span class="line">    </span><br><span class="line">model.fc = torch.nn.Linear(<span class="number">2048</span>, <span class="number">2</span>)  <span class="comment"># 因为ResNet50中的全连接层只有一 层，所以对代码的调整非常简单</span></span><br></pre></td></tr></table></figure>
+<h4 id="迁移ResNet50"><a href="#迁移ResNet50" class="headerlink" title="迁移ResNet50"></a>迁移ResNet50</h4><p>模型迁移的代码为 <code>model = models.resnet50(pretrained=True)</code><br>对 ResNet50 的全连接层部分进行调整，具体<a href="https://github.com/Captainzj/PyTorch_Practice/blob/master/chapter-7/chapter-7.ipynb" target="_blank" rel="noopener">code</a>调整如下:<br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> parma <span class="keyword">in</span> model.parameters(): </span><br><span class="line">    parma . requires_grad = <span class="keyword">False</span></span><br><span class="line">    </span><br><span class="line">model.fc = torch.nn.Linear(<span class="number">2048</span>, <span class="number">2</span>)  <span class="comment"># 因为ResNet50中的全连接层只有一 层，所以对代码的调整非常简单</span></span><br></pre></td></tr></table></figure></p>
 <p>观察输出结果可见，Training…<code>train Loss:0.1349 Acc:95.8950</code> Validing… <code>valid Loss:0.0929 Acc:97.7400</code> -&gt;&gt; 准确率近似（略逊）于 VGG16</p>
 <h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><ol>
 <li>GPU训练优于CPU训练 </li>
@@ -214,7 +213,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2019-02-28T15:11:45.427Z" itemprop="dateUpdated">2019-02-28 23:11:45</time>
+    Last updated: <time datetime="2019-03-01T03:34:06.224Z" itemprop="dateUpdated">2019-03-01 11:34:06</time>
 </span><br>
 
 
@@ -293,7 +292,14 @@
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2019/03/01/PyTorch-官方文档-学习路线/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">PyTorch-官方文档-学习路线</h4>
+      </a>
+    </div>
   
 
   

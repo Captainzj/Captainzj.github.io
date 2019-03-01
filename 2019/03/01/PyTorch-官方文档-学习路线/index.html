@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>PyTorch-官方文档-学习路线 | Go Further | Stay Hungry, Stay Foolish</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#142421">
+    
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="【阅读时间】XXX min XXX words【阅读内容】……">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PyTorch-官方文档-学习路线">
+<meta property="og:url" content="http://yoursite.com/2019/03/01/PyTorch-官方文档-学习路线/index.html">
+<meta property="og:site_name" content="Go Further">
+<meta property="og:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-03-01T08:17:14.682Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PyTorch-官方文档-学习路线">
+<meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
+    
+        <link rel="alternate" type="application/atom+xml" title="Go Further" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">CaptainSE</h5>
+          <a href="mailto:841145636@qq.com" title="841145636@qq.com" class="mail">841145636@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                Home
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/Captainzj" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">PyTorch-官方文档-学习路线</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">PyTorch-官方文档-学习路线</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-03-01T03:54:25.000Z" itemprop="datePublished" class="page-time">
+  2019-03-01
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#DATA-LOADING-AND-PROCESSING-TUTORIAL"><span class="post-toc-number">1.</span> <span class="post-toc-text">DATA LOADING AND PROCESSING TUTORIAL</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Dataset-class"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Dataset class</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Transforms"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Transforms</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Iterating-through-the-dataset"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">Iterating through the dataset</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Afterword-torchvision"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">Afterword: torchvision</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#TRANSFER-LEARNING-TUTORIAL"><span class="post-toc-number">2.</span> <span class="post-toc-text">TRANSFER LEARNING TUTORIAL</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Load-Data"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">Load Data</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Training-the-model"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">Training the model</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Visualizing-the-model-predictions"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">Visualizing the model predictions</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Finetuning-the-convnet"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">Finetuning the convnet</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Train-and-evaluate"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">Train and evaluate</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#ConvNet-as-fixed-feature-extractor"><span class="post-toc-number">2.6.</span> <span class="post-toc-text">ConvNet as fixed feature extractor</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-PyTorch-官方文档-学习路线"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">PyTorch-官方文档-学习路线</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2019-03-01 11:54:25" datetime="2019-03-01T03:54:25.000Z"  itemprop="datePublished">2019-03-01</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>【阅读时间】XXX min XXX words<br>【阅读内容】……</p>
+<a id="more"></a>
+<h3 id="DATA-LOADING-AND-PROCESSING-TUTORIAL"><a href="#DATA-LOADING-AND-PROCESSING-TUTORIAL" class="headerlink" title="DATA LOADING AND PROCESSING TUTORIAL"></a><a href="https://pytorch.org/tutorials/beginner/data_loading_tutorial.html#" target="_blank" rel="noopener">DATA LOADING AND PROCESSING TUTORIAL</a></h3><p>Let’s quickly read the CSV and get the annotations in an (N, 2) array where N is the number of landmarks.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">landmarks_frame = pd.read_csv(<span class="string">'data/faces/face_landmarks.csv'</span>)</span><br><span class="line"></span><br><span class="line">n = <span class="number">65</span></span><br><span class="line">img_name = landmarks_frame.iloc[n, <span class="number">0</span>]  <span class="comment">#select the first column (image_name) in .csv file</span></span><br><span class="line">landmarks = landmarks_frame.iloc[n, <span class="number">1</span>:].as_matrix() <span class="comment">#select the rest datas in .csv file #landmarks.shape: (136,)</span></span><br><span class="line">landmarks = landmarks.astype(<span class="string">'float'</span>).reshape(<span class="number">-1</span>, <span class="number">2</span>) </span><br><span class="line"></span><br><span class="line">print(<span class="string">'Image name: &#123;&#125;'</span>.format(img_name))  </span><br><span class="line">print(<span class="string">'Landmarks shape: &#123;&#125;'</span>.format(landmarks.shape))</span><br><span class="line">print(<span class="string">'First 4 Landmarks: &#123;&#125;'</span>.format(landmarks[:<span class="number">4</span>]))</span><br></pre></td></tr></table></figure>
+<p>Out:</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">Image name: person-<span class="number">7</span>.jpg</span><br><span class="line">Landmarks shape: (<span class="number">68</span>, <span class="number">2</span>)</span><br><span class="line">First <span class="number">4</span> Landmarks: [[<span class="number">32</span>. <span class="number">65</span>.]  <span class="comment"># 对应于 person-7.jpg</span></span><br><span class="line"> [<span class="number">33</span>. <span class="number">76</span>.]</span><br><span class="line"> [<span class="number">34</span>. <span class="number">86</span>.]</span><br><span class="line"> [<span class="number">34</span>. <span class="number">97</span>.]]</span><br></pre></td></tr></table></figure>
+<h4 id="Dataset-class"><a href="#Dataset-class" class="headerlink" title="Dataset class"></a>Dataset class</h4><ul>
+<li><code>__len__</code>: so that <code>len(dataset)</code> returns the size of the dataset.</li>
+<li><code>__getitem__</code>: to support the indexing such that <code>dataset[i]</code> can be used to get $ith$ sample</li>
+</ul>
+<h4 id="Transforms"><a href="#Transforms" class="headerlink" title="Transforms"></a>Transforms</h4><ul>
+<li><code>Rescale</code>: to scale the image</li>
+<li><code>RandomCrop</code>: to crop from image randomly. This is data augmentation.</li>
+<li><code>ToTensor</code>: to convert the numpy images to torch images (we need to swap axes).</li>
+</ul>
+<h4 id="Iterating-through-the-dataset"><a href="#Iterating-through-the-dataset" class="headerlink" title="Iterating through the dataset"></a>Iterating through the dataset</h4><ul>
+<li><code>torch.utils.data.DataLoader</code>: an iterator which provides all these features (i. <code>Batching the data</code>   ii. <code>Shuffling the data</code>    iii. <code>Load the data in parallel using multiprocessing workers</code>).</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">transformed_dataset = FaceLandmarksDataset(csv_file=<span class="string">'data/faces/face_landmarks.csv'</span>,</span><br><span class="line">                                           root_dir=<span class="string">'data/faces/'</span>,</span><br><span class="line">                                           transform=transforms.Compose([</span><br><span class="line">                                               Rescale(<span class="number">256</span>),</span><br><span class="line">                                               RandomCrop(<span class="number">224</span>),</span><br><span class="line">                                               ToTensor()</span><br><span class="line">                                           ]))</span><br><span class="line">                                           </span><br><span class="line">dataloader = DataLoader(transformed_dataset, batch_size=<span class="number">4</span>,</span><br><span class="line">                        shuffle=<span class="keyword">True</span>, num_workers=<span class="number">4</span>) <span class="comment"># !!! &lt;class 'torch.utils.data.dataloader.DataLoader'&gt;  (inputs, labels)</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># Helper function to show a batch</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">show_landmarks_batch</span><span class="params">(sample_batched)</span>:</span></span><br><span class="line">    <span class="string">"""Show image with landmarks for a batch of samples."""</span></span><br><span class="line">    images_batch, landmarks_batch = \</span><br><span class="line">            sample_batched[<span class="string">'image'</span>], sample_batched[<span class="string">'landmarks'</span>]</span><br><span class="line">    batch_size = len(images_batch) <span class="comment"># batch_size: 4</span></span><br><span class="line">    im_size = images_batch.size(<span class="number">2</span>) <span class="comment">#images_batch.size(): torch.Size([4, 3, 224, 224])  #im_size: 224</span></span><br><span class="line"></span><br><span class="line">    grid = utils.make_grid(images_batch) <span class="comment"># &lt;class 'torch.Tensor'&gt;</span></span><br><span class="line">    plt.imshow(grid.numpy().transpose((<span class="number">1</span>, <span class="number">2</span>, <span class="number">0</span>))) <span class="comment"># transpose &lt;class 'numpy.ndarray'&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(batch_size):</span><br><span class="line">        plt.scatter(landmarks_batch[i, :, <span class="number">0</span>].numpy() + i * im_size, <span class="comment"># x  #landmarks_batch.size(): torch.Size([4, 68, 2])</span></span><br><span class="line">                    landmarks_batch[i, :, <span class="number">1</span>].numpy(),<span class="comment"># y</span></span><br><span class="line">                    s=<span class="number">10</span>, marker=<span class="string">'.'</span>, c=<span class="string">'r'</span>)</span><br><span class="line"></span><br><span class="line">        plt.title(<span class="string">'Batch from dataloader'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i_batch, sample_batched <span class="keyword">in</span> enumerate(dataloader):</span><br><span class="line">    print(i_batch, sample_batched[<span class="string">'image'</span>].size(),  <span class="comment"># torch.Size([4, 3, 224, 224])</span></span><br><span class="line">          sample_batched[<span class="string">'landmarks'</span>].size()) <span class="comment"># torch.Size([4, 68, 2])</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># observe 4th batch and stop.</span></span><br><span class="line">    <span class="keyword">if</span> i_batch == <span class="number">3</span>:</span><br><span class="line">        plt.figure()</span><br><span class="line">        show_landmarks_batch(sample_batched)</span><br><span class="line">        plt.axis(<span class="string">'off'</span>)</span><br><span class="line">        plt.ioff()</span><br><span class="line">        plt.show()</span><br><span class="line">        <span class="keyword">break</span></span><br></pre></td></tr></table></figure>
+<h4 id="Afterword-torchvision"><a href="#Afterword-torchvision" class="headerlink" title="Afterword: torchvision"></a>Afterword: torchvision</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="keyword">from</span> torchvision <span class="keyword">import</span> transforms, datasets</span><br><span class="line"></span><br><span class="line">data_transform = transforms.Compose([</span><br><span class="line">        transforms.RandomSizedCrop(<span class="number">224</span>),</span><br><span class="line">        transforms.RandomHorizontalFlip(), <span class="comment">#  operate on PIL.Image</span></span><br><span class="line">        transforms.ToTensor(),</span><br><span class="line">        transforms.Normalize(mean=[<span class="number">0.485</span>, <span class="number">0.456</span>, <span class="number">0.406</span>],</span><br><span class="line">                             std=[<span class="number">0.229</span>, <span class="number">0.224</span>, <span class="number">0.225</span>])</span><br><span class="line">    ])</span><br><span class="line">    </span><br><span class="line"><span class="comment"># ImageFolder is one of the more generic datasets available in torchvision.</span></span><br><span class="line">hymenoptera_dataset = datasets.ImageFolder(root=<span class="string">'hymenoptera_data/train'</span>,</span><br><span class="line">                                           transform=data_transform)</span><br><span class="line">                                           </span><br><span class="line">dataset_loader = torch.utils.data.DataLoader(hymenoptera_dataset,</span><br><span class="line">                                             batch_size=<span class="number">4</span>, shuffle=<span class="keyword">True</span>,</span><br><span class="line">                                             num_workers=<span class="number">4</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="TRANSFER-LEARNING-TUTORIAL"><a href="#TRANSFER-LEARNING-TUTORIAL" class="headerlink" title="TRANSFER LEARNING TUTORIAL"></a><a href="https://pytorch.org/tutorials/beginner/transfer_learning_tutorial.html" target="_blank" rel="noopener">TRANSFER LEARNING TUTORIAL</a></h3><p>These two major transfer learning scenarios look as follows:</p>
+<ul>
+<li><strong>Finetuning the convnet</strong>: Instead of random initializaion, we initialize the network with <code>a pretrained network</code>, like the one that is trained on imagenet 1000 dataset. Rest of the training looks as usual.</li>
+<li><strong>ConvNet as fixed feature extractor</strong>: Here, we will <code>freeze the weights</code> for all of the network except that of the final fully connected layer. This last fully connected layer is replaced with a new one with random weights and only this layer is trained.</li>
+</ul>
+<h4 id="Load-Data"><a href="#Load-Data" class="headerlink" title="Load Data"></a>Load Data</h4><h4 id="Training-the-model"><a href="#Training-the-model" class="headerlink" title="Training the model"></a>Training the model</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">train_model</span><span class="params">(model, criterion, optimizer, scheduler, num_epochs=<span class="number">25</span>)</span>:</span></span><br><span class="line">    since = time.time()</span><br><span class="line"></span><br><span class="line">    best_model_wts = copy.deepcopy(model.state_dict()) <span class="comment"># 深拷贝？</span></span><br><span class="line">    best_acc = <span class="number">0.0</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> epoch <span class="keyword">in</span> range(num_epochs):</span><br><span class="line">        print(<span class="string">'Epoch &#123;&#125;/&#123;&#125;'</span>.format(epoch, num_epochs - <span class="number">1</span>))</span><br><span class="line">        print(<span class="string">'-'</span> * <span class="number">10</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># Each epoch has a training and validation phase</span></span><br><span class="line">        <span class="keyword">for</span> phase <span class="keyword">in</span> [<span class="string">'train'</span>, <span class="string">'val'</span>]:</span><br><span class="line">            <span class="keyword">if</span> phase == <span class="string">'train'</span>:</span><br><span class="line">                scheduler.step()  <span class="comment"># ？</span></span><br><span class="line">                model.train()  <span class="comment"># Set model to training mode</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                model.eval()   <span class="comment"># Set model to evaluate mode</span></span><br><span class="line"></span><br><span class="line">            running_loss = <span class="number">0.0</span></span><br><span class="line">            running_corrects = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">            <span class="comment"># Iterate over data.</span></span><br><span class="line">            <span class="keyword">for</span> inputs, labels <span class="keyword">in</span> dataloaders[phase]:</span><br><span class="line">                inputs = inputs.to(device) <span class="comment"># ？</span></span><br><span class="line">                labels = labels.to(device)</span><br><span class="line"></span><br><span class="line">                <span class="comment"># zero the parameter gradients</span></span><br><span class="line">                optimizer.zero_grad()</span><br><span class="line"></span><br><span class="line">                <span class="comment"># forward</span></span><br><span class="line">                <span class="comment"># track history if only in train</span></span><br><span class="line">                <span class="keyword">with</span> torch.set_grad_enabled(phase == <span class="string">'train'</span>):</span><br><span class="line">                    outputs = model(inputs)</span><br><span class="line">                    _, preds = torch.max(outputs, <span class="number">1</span>) <span class="comment"># ？</span></span><br><span class="line">                    loss = criterion(outputs, labels) <span class="comment"># ？</span></span><br><span class="line"></span><br><span class="line">                    <span class="comment"># backward + optimize only if in training phase</span></span><br><span class="line">                    <span class="keyword">if</span> phase == <span class="string">'train'</span>:</span><br><span class="line">                        loss.backward()</span><br><span class="line">                        optimizer.step() </span><br><span class="line"></span><br><span class="line">                <span class="comment"># statistics</span></span><br><span class="line">                running_loss += loss.item() * inputs.size(<span class="number">0</span>)</span><br><span class="line">                running_corrects += torch.sum(preds == labels.data)</span><br><span class="line"></span><br><span class="line">            epoch_loss = running_loss / dataset_sizes[phase]</span><br><span class="line">            epoch_acc = running_corrects.double() / dataset_sizes[phase]</span><br><span class="line"></span><br><span class="line">            print(<span class="string">'&#123;&#125; Loss: &#123;:.4f&#125; Acc: &#123;:.4f&#125;'</span>.format(</span><br><span class="line">                phase, epoch_loss, epoch_acc))</span><br><span class="line"></span><br><span class="line">            <span class="comment"># deep copy the model</span></span><br><span class="line">            <span class="keyword">if</span> phase == <span class="string">'val'</span> <span class="keyword">and</span> epoch_acc &gt; best_acc:</span><br><span class="line">                best_acc = epoch_acc</span><br><span class="line">                best_model_wts = copy.deepcopy(model.state_dict())</span><br><span class="line"></span><br><span class="line">        print()</span><br><span class="line"></span><br><span class="line">    time_elapsed = time.time() - since</span><br><span class="line">    print(<span class="string">'Training complete in &#123;:.0f&#125;m &#123;:.0f&#125;s'</span>.format(</span><br><span class="line">        time_elapsed // <span class="number">60</span>, time_elapsed % <span class="number">60</span>))</span><br><span class="line">    print(<span class="string">'Best val Acc: &#123;:4f&#125;'</span>.format(best_acc))</span><br><span class="line"></span><br><span class="line">    <span class="comment"># load best model weights</span></span><br><span class="line">    model.load_state_dict(best_model_wts)</span><br><span class="line">    <span class="keyword">return</span> model</span><br></pre></td></tr></table></figure>
+<h4 id="Visualizing-the-model-predictions"><a href="#Visualizing-the-model-predictions" class="headerlink" title="Visualizing the model predictions"></a>Visualizing the model predictions</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">was_training = model.training  <span class="comment"># record the last model mode</span></span><br></pre></td></tr></table></figure>
+<h4 id="Finetuning-the-convnet"><a href="#Finetuning-the-convnet" class="headerlink" title="Finetuning the convnet"></a>Finetuning the convnet</h4><p>Load a pretrained model and <code>reset</code> final fully connected layer.<br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">model_ft = models.resnet18(pretrained=<span class="keyword">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Parameters of newly constructed modules have requires_grad=True by default</span></span><br><span class="line">num_ftrs = model_ft.fc.in_features  <span class="comment"># ？</span></span><br><span class="line">model_ft.fc = nn.Linear(num_ftrs, <span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">model_ft = model_ft.to(device)</span><br><span class="line"></span><br><span class="line">criterion = nn.CrossEntropyLoss()</span><br><span class="line"></span><br><span class="line"><span class="comment"># Observe that all parameters are being optimized</span></span><br><span class="line">optimizer_ft = optim.SGD(model_ft.parameters(), lr=<span class="number">0.001</span>, momentum=<span class="number">0.9</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Decay LR by a factor of 0.1 every 7 epochs</span></span><br><span class="line">exp_lr_scheduler = lr_scheduler.StepLR(optimizer_ft, step_size=<span class="number">7</span>, gamma=<span class="number">0.1</span>)</span><br></pre></td></tr></table></figure></p>
+<h4 id="Train-and-evaluate"><a href="#Train-and-evaluate" class="headerlink" title="Train and evaluate"></a>Train and evaluate</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Train and evaluate</span></span><br><span class="line">model_ft = train_model(model_ft, criterion, optimizer_ft, exp_lr_scheduler,</span><br><span class="line">                       num_epochs=<span class="number">25</span>)</span><br><span class="line"><span class="comment"># visualize</span></span><br><span class="line">visualize_model(model_ft)</span><br></pre></td></tr></table></figure>
+<h4 id="ConvNet-as-fixed-feature-extractor"><a href="#ConvNet-as-fixed-feature-extractor" class="headerlink" title="ConvNet as fixed feature extractor"></a>ConvNet as fixed feature extractor</h4><p>Here, we need to <code>freeze</code> all the network except the final layer. We need to set <code>requires_grad == False</code> to freeze the parameters so that the gradients are not computed in <code>backward()</code>.<br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">model_conv = torchvision.models.resnet18(pretrained=<span class="keyword">True</span>)</span><br><span class="line"><span class="keyword">for</span> param <span class="keyword">in</span> model_conv.parameters():</span><br><span class="line">    param.requires_grad = <span class="keyword">False</span></span><br></pre></td></tr></table></figure></p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2019-03-01T08:17:14.682Z" itemprop="dateUpdated">2019-03-01 16:17:14</time>
+</span><br>
+
+
+        
+    </div>
+    
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/avatar.jpg" alt="CaptainSE">
+            CaptainSE
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/03/01/PyTorch-官方文档-学习路线/&title=《PyTorch-官方文档-学习路线》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/03/01/PyTorch-官方文档-学习路线/&title=《PyTorch-官方文档-学习路线》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/03/01/PyTorch-官方文档-学习路线/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《PyTorch-官方文档-学习路线》 — Go Further&url=http://yoursite.com/2019/03/01/PyTorch-官方文档-学习路线/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2019/03/01/PyTorch-官方文档-学习路线/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2019/02/27/迁移学习/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">迁移学习-Introduction</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢老板~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>CaptainSE &copy; 2015 - 2019</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/03/01/PyTorch-官方文档-学习路线/&title=《PyTorch-官方文档-学习路线》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/03/01/PyTorch-官方文档-学习路线/&title=《PyTorch-官方文档-学习路线》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/03/01/PyTorch-官方文档-学习路线/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《PyTorch-官方文档-学习路线》 — Go Further&url=http://yoursite.com/2019/03/01/PyTorch-官方文档-学习路线/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2019/03/01/PyTorch-官方文档-学习路线/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACsklEQVR42u3aO27DMBAFwNz/0kkbwJHy9kPZxagyHEfaUUEuHvfrK76+f12/v3n9fP/Xq/u83uH+6csXHh4e3qD01+se0GPfl3uFv//+8p54eHh4x3hbj+khk/+9v+fl93h4eHgfwEuW+LzEpL1ONio8PDy8z+TNF+u80LwePDw8vHfxkja3F8ImUW/190eyFjw8PLyYN1mU3/X5yPkeHh4e3vhUvRq25st0dfvpVYuHh4d3gjeJXPPRqN4AQe8Q7o8n4uHh4a3y8qOmatRbjRWqrywKOPDw8PAO83qH+tVSepFrM57Aw8PDO8CrJp/JAyaNcq9ZLxyt4eHh4a3y5uOnvShh3mpH2wweHh7eAV6yHE+OrJLAIs+eF4au8PDw8Ma8vFGuNsTVcnvHaf/Ug4eHh7fKmzevvdInQXAh/sDDw8Nb5fUO5qsjU704uNrE4+Hh4b2LN4kbJsNVkwTl8pd4eHh4j/DmTfZkrKo3UFVuqfHw8PAGvGoDXUiFB7+cv4J/Umo8PDy8AW8y5HTfNPfa68mQ1h+vAA8PD+8Ar3qwlAe7W//bGzXAw8PDe4ZXHb3qLdPV4arqMAEeHh7eM7xem9sLbbeo1egZDw8Pb4u3NW5VjR565VZrwMPDwzvNywenCo1sa7iqt9ng4eHhPcNLlvW1nj1uynsvGg8PD+8ZXj4EkD8sH0ToNfeFQzs8PDy8A7xqgFtuZ4u/nGw2o8QFDw8PL65zHgpUxwV2B7yOZx54eHh4g6sHzpF5IDJv6PHw8PDmvGQz2D2gyhf9fMALDw8P73leL4zIo4q89Mmh2nKMi4eHhzfmVUOEfAuZv4KFjQEPDw/vAC9/Bb0IuDkccH83PDw8vGO8PIxIQtXesp437oUIGA8PD+8ALz8A6w1C9baiZFRrbZgADw8PL+X9APyRNcqYb6YMAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = 'Go Further | Stay Hungry, Stay Foolish';
+            clearTimeout(titleTime);
+        } else {
+            document.title = 'Go Further | Stay Hungry, Stay Foolish';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
