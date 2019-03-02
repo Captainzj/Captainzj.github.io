@@ -29,7 +29,7 @@
 <meta property="og:site_name" content="Go Further">
 <meta property="og:description" content="【阅读时间】XXX min XXX words【阅读内容】NiftyNet开源平台的使用 – 配置文件">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-02T08:07:15.851Z">
+<meta property="og:updated_time" content="2019-03-02T13:06:58.664Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="NiftyNet-Configuration-file">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】NiftyNet开源平台的使用 – 配置文件">
@@ -157,6 +157,13 @@
 
 <div class="container body-wrap">
     
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#运行NiftyNet工作流"><span class="post-toc-number">1.</span> <span class="post-toc-text">运行NiftyNet工作流</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#配置文件"><span class="post-toc-number">2.</span> <span class="post-toc-text">配置文件</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Configuration-File-Structure"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">Configuration-File-Structure</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Section-Arguments"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">Section_Arguments</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Input-data-source"><span class="post-toc-number">2.2.1.</span> <span class="post-toc-text">[Input data source]</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#System"><span class="post-toc-number">2.2.2.</span> <span class="post-toc-text">[System]</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#NETWORK"><span class="post-toc-number">2.2.3.</span> <span class="post-toc-text">[NETWORK]</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Volume-normalisation"><span class="post-toc-number">2.2.4.</span> <span class="post-toc-text">[Volume-normalisation]</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#TRAINING"><span class="post-toc-number">2.2.5.</span> <span class="post-toc-text">[TRAINING]</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Validation-during-training"><span class="post-toc-number">2.2.6.</span> <span class="post-toc-text">[Validation during training]</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Data-augmentation-during-training"><span class="post-toc-number">2.2.7.</span> <span class="post-toc-text">[Data augmentation during training]</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#INFERENCE"><span class="post-toc-number">2.2.8.</span> <span class="post-toc-text">[INFERENCE]</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#EVALUATION"><span class="post-toc-number">2.2.9.</span> <span class="post-toc-text">[EVALUATION]</span></a></li></ol></li></ol></li></ol>
+        </nav>
+    </aside>
+
 
 <article id="post-NiftyNet-Configuration-file"
   class="post-article article-type-post fade" itemprop="blogPost">
@@ -182,6 +189,145 @@
             <p>【阅读时间】XXX min XXX words<br>【阅读内容】<a href="https://www.cnblogs.com/zhhfan/p/9806900.html" target="_blank" rel="noopener">NiftyNet开源平台的使用 – 配置文件</a></p>
 <a id="more"></a>
 <p>官方文档：<a href="https://niftynet.readthedocs.io/en/latest/config_spec.html" target="_blank" rel="noopener">https://niftynet.readthedocs.io/en/latest/config_spec.html</a></p>
+<h3 id="运行NiftyNet工作流"><a href="#运行NiftyNet工作流" class="headerlink" title="运行NiftyNet工作流"></a>运行NiftyNet工作流</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">python net_run.py [train|inference|evaluation] -c &lt;path_to/config.ini&gt; -a &lt;application&gt;</span><br><span class="line"><span class="meta">#</span> net_run命令也支持命令行参数，以`--&lt;name&gt; &lt;value&gt;`或`--&lt;name&gt;=&lt;value&gt;`的形式表示。输入的参数将取代系统默认的和配置文件中的参数。</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>[train|inference|evaluation]</code><ul>
+<li>train：使用提供的数据 更新 已存在的网络模型</li>
+<li>inference：根据提供的数据生成响应（加载已存在的网络模型）</li>
+<li>evaluation：？？</li>
+</ul>
+</li>
+<li><code>-c &lt;path_to/config.ini&gt;</code>：指定配置文件路径</li>
+<li><code>-a &lt;application&gt;</code>：指定应用种类（常见种类如下表👇）</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">application参数</th>
+<th style="text-align:left"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">图像分割 <small> [SEGMENTATION] </small></td>
+<td style="text-align:left"><code>net_segment -c ...</code></td>
+</tr>
+<tr>
+<td style="text-align:left">图像回归 <small> [REGRESSION] </small></td>
+<td style="text-align:left"><code>net_regress -c ...</code></td>
+</tr>
+<tr>
+<td style="text-align:left">自动编码 <small> [AUTOENCODER] </small></td>
+<td style="text-align:left"><code>net_autoencoder -c ...</code></td>
+</tr>
+<tr>
+<td style="text-align:left">生成对抗网络 <small> [GAN] </small></td>
+<td style="text-align:left"><code>net_gan -c ...</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h3><p>每个网络想要运行<strong>必须</strong>包含一个<code>config.ini</code>配置文件，用来设置训练/测试所用的全部参数。</p>
+<h4 id="Configuration-File-Structure"><a href="#Configuration-File-Structure" class="headerlink" title="Configuration-File-Structure"></a>Configuration-File-Structure</h4><p>每个配置文件中包含的sections: </p>
+<ul>
+<li>[SYSTEM]  </li>
+<li>[NETWORK]  </li>
+<li>[APPLICATION] （custom👇）<ul>
+<li><code>[GAN]</code> – 生成对抗网络  </li>
+<li><code>[SEGMENTATION]</code> – 分割网络  </li>
+<li><code>[REGRESSION]</code> – 回归网络  </li>
+<li><code>[AUTOENCODER]</code> – 自动编码网络 </li>
+</ul>
+</li>
+<li>[TRAINING]   （可选—when need train）</li>
+<li>[INFERENCE]   （可选—when need inference）</li>
+</ul>
+<h4 id="Section-Arguments"><a href="#Section-Arguments" class="headerlink" title="Section_Arguments"></a>Section_Arguments</h4><h5 id="Input-data-source"><a href="#Input-data-source" class="headerlink" title="[Input data source]"></a>[Input data source]</h5><p><small></small></p>
+<ul>
+<li>csv_file:  输入图像路径  </li>
+<li>path_to_search: 搜索图像的单个或多个文件，如果有多个用逗号分开  </li>
+<li>filename_contains:  匹配文件名的关键词  </li>
+<li>filename_not_contains:  排除文件名的关键词  </li>
+<li>filename_removefromid:  从文件命中抽取主题id的正则表达式，被匹配的模式将从文件名中移除并生成主题id。  </li>
+<li>interp_order:  插值法，当设定采样方法为resize时，需要该参数对图片进行上采样或下采样，0表示最近插值，1表示双线性插值，3表示三次样条插值，默认为3  </li>
+<li>pixdim：  如果被指定，输入volum在被喂给网络之前将被重采样成voxel尺寸  </li>
+<li>axcodes：  如果被指定，输入volum在被喂给网络之前将被调整为坐标码(axes code)  </li>
+<li>spatial_window_size:  输入到网络中的图片尺寸，需指明三个维度，第一个和第二个分别表示图片的长和宽，第三个如果为1表示使用2d卷积，否则使用3d卷积  </li>
+<li>loader：  图片读取器，默认值None将尝试所有可得到的读取器<br>　　读取器支持的类型有：<br>　　nibabel  支持.nii医学文件格式<br>　　simpleitk  支持.dcm和.mhd格式的医疗图像<br>　　opencv  支持.jpg等常见图像，读取后通道顺序为BGR<br>　　skimage  支持.jpg等常见图像<br>　　pillow  支持.jpg等常见图像，读取后通道顺序为RGB<br></li>
+</ul>
+<p>　　</p>
+<h5 id="System"><a href="#System" class="headerlink" title="[System]"></a>[System]</h5><p><small></small></p>
+<ul>
+<li>cuda_devices:  设置tensorflow的CUDA_VISIBLE_DEVICES变量  </li>
+<li>num_threads:  设置训练的预处理线程数  </li>
+<li>num_gpus:  设置训练的GPU的数量  </li>
+<li>model_dir:  训练模型的保存和加载路径  </li>
+<li>dataset_split_file:  文件分配科目到子集  </li>
+<li>event_handler:  事件处理器<br></li>
+</ul>
+<h5 id="NETWORK"><a href="#NETWORK" class="headerlink" title="[NETWORK]"></a>[NETWORK]</h5><p><small></small></p>
+<ul>
+<li>name:  niftynet/network中的网络类或用户自定义的模块  </li>
+<li>activation_function:  网络的激活函数集合  </li>
+<li>batch_size:  设置每次迭代图像窗口的数量  </li>
+<li>smaller_final_batch_mode:  当batch_size的窗口采样器总数是不可见的时支持最后的batch使用不同的模式<br>　　可选类型有：<br>　　drop:  终止剩余的batch<br>　　pad: 用-1填补最后更小的batch<br>　　dynamic: 直接输出剩余的batch </li>
+<li>reg_type:  可训练的正规化参数的类型  </li>
+<li>decay:  正规化的强度，用于预防过拟合  </li>
+<li>volume_padding_size:  图片的填补值  </li>
+<li>window_sampling:  进入网络的图片的采样方法<br>　　uniform:  输出的图片保持原本大小<br>　　weighted:  对成比例的voxel的采样到累积直方图的似然<br>　　balanced:  每个标签都被采样的可能性同样<br>　　resize:  将进入网络的图片首先resize到spatial_window_size </li>
+<li>queue_length:  NiftyNet会设置两个队列，一个负责从数据集中读取数据并扰乱，另一个从前一个队列中读取batch_size张图片输入网络，这个参数是指第一个队列的长度，最小值为batch_size * 2.5  </li>
+<li>keep_prob: 如果失活被网络支持的话，每个元素存活的可能性<br></li>
+</ul>
+<h5 id="Volume-normalisation"><a href="#Volume-normalisation" class="headerlink" title="[Volume-normalisation]"></a>[Volume-normalisation]</h5><p><small></small></p>
+<ul>
+<li>normalisation:  指示直方图标准化是否应该被应用于数据  </li>
+<li>whitening:  只是被加载的图片是否应该被增白，如果是，输入I，返回(I - mean(I)) / std(I)  </li>
+<li>histogram_ref_file:  标准化参数的文件  </li>
+<li>norm_file:  基于直方图的标准化的直方图landmark类型  </li>
+<li>cutoff:  下级和上级的基于直方图的标准化的截断  </li>
+<li>normalise_foreground_only:  指示一个mask是否需要被基于前景或多样前景进行计算，如设置True，所有的标准化步骤都将被应用于生成前景区  </li>
+<li>foreground_type:  生成一个前景mask，并且它只用于前景  </li>
+<li>mutimod_foreground_type:  结合前景mask和多模态的策略<br>　　可选类型：<br>　　or:  可得到的masks的合集<br>　　and:  可得到的mask的交集<br>　　all:  mask从每个模态独立计算<br></li>
+</ul>
+<h5 id="TRAINING"><a href="#TRAINING" class="headerlink" title="[TRAINING]"></a>[TRAINING]</h5><p><small></small></p>
+<ul>
+<li>optimiser:  计算图梯度优化器的类型，支持adagrade，adam，gradientdescent，momentum，rmsprop，nesterov  </li>
+<li>sample_per_volume：每张图的采样次数  </li>
+<li>lr:  学习率  </li>
+<li>loss_type:  loss函数的类型，支持segmentation,regression,autoencoder,gan  </li>
+<li>starting_iter:  设置重新训练模型的迭代次数  </li>
+<li>save_every_n:  保存当前模型的频率，0为不保存  </li>
+<li>tensorboard_every_n:  计算图中的元素和写到tensorboard上的频率  </li>
+<li>max_iter:  最大训练迭代次数<br></li>
+</ul>
+<h5 id="Validation-during-training"><a href="#Validation-during-training" class="headerlink" title="[Validation during training]"></a>[Validation during training]</h5><p><small></small></p>
+<ul>
+<li>validation_every_n:  每n次迭代运行一次验证迭代  </li>
+<li>validation_max_iter:  验证迭代运行的次数  </li>
+<li>exclude_fraction_for_validation:  用于验证的数据集的比例  </li>
+<li>exclude_fraction_for_inference:  用于推断的数据集的比例<br></li>
+</ul>
+<h5 id="Data-augmentation-during-training"><a href="#Data-augmentation-during-training" class="headerlink" title="[Data augmentation during training]"></a>[Data augmentation during training]</h5><p><small></small></p>
+<ul>
+<li>rotation_angle:  指示输入的图片旋转一个随机的旋转  </li>
+<li>scaling_percentage:  指示一个随机的缩放比例(-50,50)  </li>
+<li>random_flipping_axes:  可以翻转增强数据的轴(???)<br></li>
+</ul>
+<h5 id="INFERENCE"><a href="#INFERENCE" class="headerlink" title="[INFERENCE]"></a>[INFERENCE]</h5><p><small></small></p>
+<ul>
+<li>spatial_window_size:  指示输入窗口的大小(int array)  </li>
+<li>border:  一个用于修剪输出窗口大小的边界值(int tuple)，如设置(3,3,3)，将把一个(64*64*64)的窗口修剪为(58*58*58)  </li>
+<li>inference_iter:  指定已训练的模型用于推测(integer)  </li>
+<li>save_seg_dir:  预测目录的名字  </li>
+<li>output_postfix:  向每一个输出文件的名称后添加后缀  </li>
+<li>output_interp_order:  网络输出的推断顺序  </li>
+<li>dataset_to_infer:  字符串指定计算推理的数据集（‘training’, ‘validation’, ‘inference’）<br></li>
+</ul>
+<h5 id="EVALUATION"><a href="#EVALUATION" class="headerlink" title="[EVALUATION]"></a>[EVALUATION]</h5><p><small></small></p>
+<ul>
+<li>save_csv_dir:  存储输出的csv文件的路径  </li>
+<li>evaluations:  要计算的评价指标列表以逗号分隔的字符串表示，每个应用程序可能的评估指标列表可用于回归评估、分段评估和分类评估  </li>
+<li>evaluation_units:  描述在分割的情况下应该如何进行评估<br>　　foreground:  只对一个标签<br>　　label：  对每一个标签度量<br>　　cc:  对每个连接组件度量<br></li>
+</ul>
 
         </div>
 
@@ -190,7 +336,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2019-03-02T08:07:15.851Z" itemprop="dateUpdated">2019-03-02 16:07:15</time>
+    Last updated: <time datetime="2019-03-02T13:06:58.664Z" itemprop="dateUpdated">2019-03-02 21:06:58</time>
 </span><br>
 
 
