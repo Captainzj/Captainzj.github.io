@@ -29,7 +29,7 @@
 <meta property="og:site_name" content="Go Further">
 <meta property="og:description" content="【阅读时间】XXX min XXX words【阅读内容】深度学习之PyTorch实战计算机视觉 第7章">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-01T03:34:06.224Z">
+<meta property="og:updated_time" content="2019-03-02T06:37:28.737Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="迁移学习-Introduction">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】深度学习之PyTorch实战计算机视觉 第7章">
@@ -185,7 +185,7 @@
             <p>【阅读时间】XXX min XXX words<br>【阅读内容】深度学习之PyTorch实战计算机视觉 第7章</p>
 <a id="more"></a>
 <p>如果我们用这么多资源训练的模型能够<code>解决同一类问题</code>，那么模型的性价比会提高很多，这就促使使用迁移模型解决同 一类问题的方法出现 。因为该方法的出现，我们通过对 一个训练好的模型进行细微调整，就能将其应用到相似的问题中，最后还能取得很好的效果 ; 另外，对于原始数据较少的问题，我们也能够通过采用迁移模型进行有效解决 ，所以，如果能够选取合适的迁移学习方法，则会对解决我们所面临的问题有很大的帮助 。</p>
-<p>建议可同时阅读 <a href="https://captainzj.github.io/2018/12/28/torchvision-pretrained-Model/" target="_blank" rel="noopener">torchvision_pretrained_Model</a>，并且请参考官方文档<a href="https://pytorch.org/tutorials/beginner/transfer_learning_tutorial.html" target="_blank" rel="noopener">Transfer Learning Tutorial</a>。</p>
+<p>建议可同时阅读 <a href="https://captainzj.github.io/2018/12/28/torchvision-pretrained-Model/" target="_blank" rel="noopener">torchvision_pretrained_Model</a>，并且请参考官方文档<a href="https://pytorch.org/tutorials/beginner/transfer_learning_tutorial.html" target="_blank" rel="noopener">Transfer Learning Tutorial</a>。 </p>
 <h3 id="模型搭建和参数优化"><a href="#模型搭建和参数优化" class="headerlink" title="模型搭建和参数优化"></a>模型搭建和参数优化</h3><p>本节会先基于一个简化的VGGNet 架构搭建卷积神经网络模型井进行模型训练和参数优化，然后迁移一个完整的VGGI6架构的卷积神经网络模型，最后迁移一个ResNet50架构的卷积神经网络模型，并对比这三个模型在预测结果上的准确性和在泛化能力上的差异 。</p>
 <h4 id="自定义VGGNet"><a href="#自定义VGGNet" class="headerlink" title="自定义VGGNet"></a>自定义VGGNet</h4><p>我们首先需要搭建一个卷积神经网络模型， 考虑到训练时间的成本，我们基于VGG16架构来搭建一个简化版的VGGNet模型，这个简化版模型要求输入的图片大小全部<code>缩放到64×64</code>， 而在标准的VGGl6架构模型中输入的图片大小应当是224×224的; 同时简化版模型<code>删除了VGG16最后的三个卷积层和池化层</code>，也<code>改变了全连接层中的连接参数</code>，这一系列的改变都是为了减少整个模型参与训练的参数数量。<br>在搭建好模型后，通过 print 对搭建的模型进行打印输出来显示模型中的细节，打印输出的代码如下:</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">model = Models() </span><br><span class="line"><span class="keyword">print</span> (model)</span><br></pre></td></tr></table></figure>
@@ -213,7 +213,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2019-03-01T03:34:06.224Z" itemprop="dateUpdated">2019-03-01 11:34:06</time>
+    Last updated: <time datetime="2019-03-02T06:37:28.737Z" itemprop="dateUpdated">2019-03-02 14:37:28</time>
 </span><br>
 
 
