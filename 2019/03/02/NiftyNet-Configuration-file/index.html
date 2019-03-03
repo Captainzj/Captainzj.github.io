@@ -189,7 +189,7 @@
             <p>【阅读时间】XXX min XXX words<br>【阅读内容】<a href="https://www.cnblogs.com/zhhfan/p/9806900.html" target="_blank" rel="noopener">NiftyNet开源平台的使用 – 配置文件</a></p>
 <a id="more"></a>
 <p>官方文档：<a href="https://niftynet.readthedocs.io/en/latest/config_spec.html" target="_blank" rel="noopener">https://niftynet.readthedocs.io/en/latest/config_spec.html</a></p>
-<h3 id="运行NiftyNet工作流"><a href="#运行NiftyNet工作流" class="headerlink" title="运行NiftyNet工作流"></a>运行NiftyNet工作流</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">python net_run.py [train|inference|evaluation] -c &lt;path_to/config.ini&gt; -a &lt;application&gt;</span><br><span class="line"><span class="meta">#</span> net_run命令也支持命令行参数，以`--&lt;name&gt; &lt;value&gt;`或`--&lt;name&gt;=&lt;value&gt;`的形式表示。输入的参数将取代系统默认的和配置文件中的参数。</span><br></pre></td></tr></table></figure>
+<h3 id="运行NiftyNet工作流"><a href="#运行NiftyNet工作流" class="headerlink" title="运行NiftyNet工作流"></a>运行NiftyNet工作流</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">python net_run.py [train|inference|evaluation] -c &lt;path_to/config.ini&gt; -a &lt;application&gt;</span><br><span class="line"><span class="meta">#</span><span class="bash"> net_run命令也支持命令行参数，以`--&lt;name&gt; &lt;value&gt;`或`--&lt;name&gt;=&lt;value&gt;`的形式表示。输入的参数将取代系统默认的和配置文件中的参数。</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li><code>[train|inference|evaluation]</code><ul>
 <li>train：使用提供的数据 更新 已存在的网络模型</li>
