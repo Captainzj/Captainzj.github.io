@@ -30,7 +30,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2018/12/31/visdom-Tutorial/vis.text().png">
 <meta property="og:image" content="http://yoursite.com/2018/12/31/visdom-Tutorial/demo.png">
-<meta property="og:updated_time" content="2019-03-03T04:34:25.395Z">
+<meta property="og:updated_time" content="2019-03-03T09:21:39.805Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="visdom_Tutorial">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
@@ -121,7 +121,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="検索">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -191,7 +191,7 @@
             <p>【阅读时间】XXX min XXX words<br>【阅读内容】……</p>
 <a id="more"></a>
 <p>Github linkage: <a href="https://github.com/facebookresearch" target="_blank" rel="noopener">facebookresearch</a>/<a href="https://github.com/facebookresearch/visdom" target="_blank" rel="noopener">visdom</a></p>
-<p>Tutorial：<a href="https://www.pytorchtutorial.com/pytorch-visdom/" target="_blank" rel="noopener">PyTorch 可视化工具 Visdom 介绍</a></p>
+<p>Tutorial：<a href="https://www.pytorchtutorial.com/pytorch-visdom/" target="_blank" rel="noopener">PyTorch 可视化工具 Visdom 介绍</a>、<a href="https://www.pytorchtutorial.com/using-visdom-for-visualization-in-pytorch/" target="_blank" rel="noopener">使用 Visdom 在 PyTorch 中进行可视化</a></p>
 <h2 id="Setup"><a href="#Setup" class="headerlink" title="Setup"></a>Setup</h2><h3 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span> Install Python server and client，如果您使用python的话，装这一个就可以了。</span><br><span class="line"><span class="meta">$</span> pip install visdom</span><br></pre></td></tr></table></figure>
 <h3 id="Startup"><a href="#Startup" class="headerlink" title="Startup"></a>Startup</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span> visdom</span><br><span class="line"><span class="meta">#</span> or (The visdom command is equivalent to running python -m visdom.server)</span><br><span class="line"><span class="meta">$</span> python -m visdom.server</span><br></pre></td></tr></table></figure>
 <blockquote>
@@ -230,8 +230,8 @@
 <p>I’m closing the issue because <a href="https://github.com/facebookresearch/visdom/pull/242" target="_blank" rel="noopener">#242</a> fixed the issue in the error logging. Thanks for reporting!</p>
 <blockquote>
 <p>After adding the codes, please re-install the visdom</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;</span>$ pip3 uninstall visdom</span><br><span class="line"><span class="meta">&gt;</span>$ pip3 install -e .</span><br><span class="line"><span class="meta">&gt;</span>$ python3 setup.py install</span><br><span class="line"><span class="meta">&gt;</span></span><br></pre></td></tr></table></figure>
 </blockquote>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span> pip3 uninstall visdom</span><br><span class="line"><span class="meta">$</span> pip3 install -e .</span><br><span class="line"><span class="meta">$</span> python3 setup.py install</span><br></pre></td></tr></table></figure>
 <p>Details :</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">➜  'visdom-master' pip3 uninstall visdom</span><br><span class="line">Uninstalling visdom-0.1.8.5:</span><br><span class="line">  Would remove:</span><br><span class="line">    /Library/Frameworks/Python.framework/Versions/3.6/bin/visdom</span><br><span class="line">    /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/visdom.egg-link</span><br><span class="line">Proceed (y/n)? y</span><br><span class="line">  Successfully uninstalled visdom-0.1.8.5</span><br><span class="line">➜  'visdom-master' pip uninstall visdom</span><br><span class="line">Skipping visdom as it is not installed.</span><br><span class="line">➜  'visdom-master' pip3 install -e .</span><br><span class="line">Looking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple</span><br><span class="line">Obtaining file:///Users/Captain/Desktop/visdom-master</span><br><span class="line">Requirement already satisfied: numpy&gt;=1.8 in /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages (from visdom==0.1.8.5) (1.14.5)</span><br><span class="line">...</span><br><span class="line">Installing collected packages: visdom</span><br><span class="line">  Running setup.py develop for visdom</span><br><span class="line">Successfully installed visdom</span><br><span class="line">➜  'visdom-master' python3 setup.py install</span><br><span class="line">running install</span><br><span class="line">running bdist_egg</span><br><span class="line">running egg_info</span><br><span class="line">writing py/visdom.egg-info/PKG-INFO</span><br><span class="line">...</span><br><span class="line">Using /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages</span><br><span class="line">Searching for idna==2.8</span><br><span class="line">Best match: idna 2.8</span><br><span class="line">Adding idna 2.8 to easy-install.pth file</span><br><span class="line"></span><br><span class="line">Using /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages</span><br><span class="line">Finished processing dependencies for visdom==0.1.8.5</span><br><span class="line">➜  'visdom-master'</span><br></pre></td></tr></table></figure>
 <h3 id="No-LuaRocks-module-found-for-mnist"><a href="#No-LuaRocks-module-found-for-mnist" class="headerlink" title="No LuaRocks module found for mnist"></a>No LuaRocks module found for mnist</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">➜  <span class="string">'visdom-master'</span> th example/demo2.lua</span><br><span class="line">| running on CPU...</span><br><span class="line">/Users/Captain/torch/install/bin/luajit: /Users/Captain/torch/install/share/lua/<span class="number">5.1</span>/trepl/init.lua:<span class="number">389</span>: module <span class="string">'mnist'</span> <span class="keyword">not</span> found:No LuaRocks module found <span class="keyword">for</span> mnist</span><br><span class="line">	no field package.preload[<span class="string">'mnist'</span>]</span><br><span class="line">	no file <span class="string">'/Users/Captain/.luarocks/share/lua/5.1/mnist.lua'</span></span><br><span class="line">	no file <span class="string">'/Users/Captain/.luarocks/share/lua/5.1/mnist/init.lua'</span></span><br><span class="line">	...</span><br><span class="line">stack traceback:</span><br><span class="line">	[C]: <span class="keyword">in</span> function <span class="string">'error'</span></span><br><span class="line">	/Users/Captain/torch/install/share/lua/<span class="number">5.1</span>/trepl/init.lua:<span class="number">389</span>: <span class="keyword">in</span> function <span class="string">'require'</span></span><br><span class="line">	example/demo2.lua:<span class="number">29</span>: <span class="keyword">in</span> function <span class="string">'getIterator'</span></span><br><span class="line">	example/demo2.lua:<span class="number">53</span>: <span class="keyword">in</span> main chunk</span><br><span class="line">	[C]: <span class="keyword">in</span> function <span class="string">'dofile'</span></span><br><span class="line">	...tain/torch/install/lib/luarocks/rocks/trepl/scm<span class="number">-1</span>/bin/th:<span class="number">150</span>: <span class="keyword">in</span> main chunk</span><br><span class="line">	[C]: at <span class="number">0x0109dd2360</span></span><br></pre></td></tr></table></figure>
@@ -245,7 +245,7 @@
     <div class="content">
         
 <span class="post-time">
-    最終更新：<time datetime="2019-03-03T04:34:25.395Z" itemprop="dateUpdated">2019-03-03 12:34:25</time>
+    Last updated: <time datetime="2019-03-03T09:21:39.805Z" itemprop="dateUpdated">2019-03-03 17:21:39</time>
 </span><br>
 
 
@@ -411,7 +411,7 @@
             
                 <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
             
-            <span>このブログの内容物は<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja">クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際ライセンスの下に提供されています</a></span>
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
         </p>
     </div>
     <div class="bottom">
