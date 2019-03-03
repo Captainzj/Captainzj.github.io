@@ -14,24 +14,23 @@
     
     
     
-    <title>Tensorboard_Morvan | Go Further | Stay Hungry, Stay Foolish</title>
+    <title>PyTorch_可视化之TensorboardX | Go Further | Stay Hungry, Stay Foolish</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#142421">
     
     
-    <meta name="keywords" content="Morvan">
+    <meta name="keywords" content="">
     <meta name="description" content="【阅读时间】XXX min XXX words【阅读内容】……">
-<meta name="keywords" content="Morvan">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Tensorboard_Morvan">
-<meta property="og:url" content="http://yoursite.com/2018/12/01/Tensorboard-Morvan/index.html">
+<meta property="og:title" content="PyTorch_可视化之TensorboardX">
+<meta property="og:url" content="http://yoursite.com/2019/03/03/PyTorch-可视化之TensorboardX/index.html">
 <meta property="og:site_name" content="Go Further">
 <meta property="og:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-01T14:15:06.000Z">
+<meta property="og:updated_time" content="2019-03-03T06:36:49.416Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Tensorboard_Morvan">
+<meta name="twitter:title" content="PyTorch_可视化之TensorboardX">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
     
         <link rel="alternate" type="application/atom+xml" title="Go Further" href="/atom.xml">
@@ -113,7 +112,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">Tensorboard_Morvan</div>
+        <div class="flex-col header-title ellipsis">PyTorch_可视化之TensorboardX</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -135,13 +134,15 @@
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">Tensorboard_Morvan</h1>
+        <h1 class="title">PyTorch_可视化之TensorboardX</h1>
         <h5 class="subtitle">
             
-                <time datetime="2018-12-01T14:08:52.000Z" itemprop="datePublished" class="page-time">
-  2018-12-01
+                <time datetime="2019-03-03T04:33:11.000Z" itemprop="datePublished" class="page-time">
+  2019-03-03
 </time>
 
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/PyTorch/">PyTorch</a></li></ul>
 
             
         </h5>
@@ -155,16 +156,25 @@
 
 <div class="container body-wrap">
     
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Tensorboard"><span class="post-toc-number">1.</span> <span class="post-toc-text">Tensorboard</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#TensorboardX"><span class="post-toc-number">2.</span> <span class="post-toc-text">TensorboardX</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Installation"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">Installation</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#demo"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">demo</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#View"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">View</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#PyTorch-可视化工具-Visdom-介绍"><span class="post-toc-number">3.</span> <span class="post-toc-text">PyTorch 可视化工具 Visdom 介绍</span></a></li></ol>
+        </nav>
+    </aside>
 
-<article id="post-Tensorboard-Morvan"
+
+<article id="post-PyTorch-可视化之TensorboardX"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">Tensorboard_Morvan</h1>
+        <h1 class="post-card-title">PyTorch_可视化之TensorboardX</h1>
         <div class="post-meta">
-            <time class="post-time" title="2018-12-01 22:08:52" datetime="2018-12-01T14:08:52.000Z"  itemprop="datePublished">2018-12-01</time>
+            <time class="post-time" title="2019-03-03 12:33:11" datetime="2019-03-03T04:33:11.000Z"  itemprop="datePublished">2019-03-03</time>
 
             
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/PyTorch/">PyTorch</a></li></ul>
+
 
 
             
@@ -177,12 +187,17 @@
         <div class="post-content" id="post-content" itemprop="postContent">
             <p>【阅读时间】XXX min XXX words<br>【阅读内容】……</p>
 <a id="more"></a>
-<p>链接：<a href="https://morvanzhou.github.io/tutorials/machine-learning/tensorflow/4-1-tensorboard1/" target="_blank" rel="noopener">https://morvanzhou.github.io/tutorials/machine-learning/tensorflow/4-1-tensorboard1/</a></p>
+<h2 id="Tensorboard"><a href="#Tensorboard" class="headerlink" title="Tensorboard"></a>Tensorboard</h2><p>链接：<a href="https://morvanzhou.github.io/tutorials/machine-learning/tensorflow/4-1-tensorboard1/" target="_blank" rel="noopener">https://morvanzhou.github.io/tutorials/machine-learning/tensorflow/4-1-tensorboard1/</a></p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">(tensorflow) ➜  Morvan_Tensorflow tensorboard --logdir logs</span><br><span class="line">TensorBoard 1.11.0 at http://MacBook-Pro:6006 (Press CTRL+C to quit)</span><br></pre></td></tr></table></figure>
 <ul>
 <li>Chrome</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">http://0.0.0.0:6006</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">http://0.0.0.0:6006</span><br></pre></td></tr></table></figure>
+<h2 id="TensorboardX"><a href="#TensorboardX" class="headerlink" title="TensorboardX"></a>TensorboardX</h2><p>详细内容，访问文档：<a href="https://tensorboardx.readthedocs.io/en/latest/index.html" target="_blank" rel="noopener">https://tensorboardx.readthedocs.io/en/latest/index.html</a><br>源代码：<a href="https://github.com/lanpa/tensorboardX" target="_blank" rel="noopener">https://github.com/lanpa/tensorboardX</a><br>参考：<a href="https://www.pytorchtutorial.com/pytorch-tensorboardx/" target="_blank" rel="noopener">https://www.pytorchtutorial.com/pytorch-tensorboardx/</a></p>
+<h3 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip install tensorboardX</span><br></pre></td></tr></table></figure>
+<h3 id="demo"><a href="#demo" class="headerlink" title="demo"></a>demo</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#-*-coding:utf-8-*-</span></span><br><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="keyword">import</span> torchvision</span><br><span class="line"><span class="keyword">from</span> torch.autograd <span class="keyword">import</span> Variable</span><br><span class="line"><span class="keyword">from</span> tensorboardX <span class="keyword">import</span> SummaryWriter</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 模拟输入数据</span></span><br><span class="line">input_data = Variable(torch.rand(<span class="number">16</span>, <span class="number">3</span>, <span class="number">224</span>, <span class="number">224</span>))</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 从torchvision中导入已有模型</span></span><br><span class="line">model = torchvision.models.resnet18()</span><br><span class="line"><span class="comment"># print(model)</span></span><br><span class="line"> </span><br><span class="line"><span class="comment"># 声明writer对象，保存的文件夹，异己名称</span></span><br><span class="line">writer = SummaryWriter(log_dir=\<span class="string">'./log\', comment=\'resnet18\')</span></span><br><span class="line"><span class="string">with writer:   # necessary</span></span><br><span class="line"><span class="string">    writer.add_graph(model, (input_data,))</span></span><br></pre></td></tr></table></figure>
+<h3 id="View"><a href="#View" class="headerlink" title="View"></a>View</h3><p>在对应路径下运行tensorboard<br><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">(pytorch) ➜  Desktop  tensorboard --logdir log</span><br><span class="line">TensorBoard 1.12.0 at http://MacBook-Pro:6006 (Press CTRL+C to quit)</span><br></pre></td></tr></table></figure></p>
+<h2 id="PyTorch-可视化工具-Visdom-介绍"><a href="#PyTorch-可视化工具-Visdom-介绍" class="headerlink" title="PyTorch 可视化工具 Visdom 介绍"></a>PyTorch 可视化工具 Visdom 介绍</h2><p>可参考 <a href="https://captainzj.github.io/2018/12/31/visdom-Tutorial/" target="_blank" rel="noopener">https://captainzj.github.io/2018/12/31/visdom-Tutorial/</a></p>
 
         </div>
 
@@ -191,7 +206,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2018-12-01T14:15:06.000Z" itemprop="dateUpdated">2018-12-01 22:15:06</time>
+    Last updated: <time datetime="2019-03-03T06:36:49.416Z" itemprop="dateUpdated">2019-03-03 14:36:49</time>
 </span><br>
 
 
@@ -215,8 +230,6 @@
 
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Morvan/">Morvan</a></li></ul>
-
 
             
 <div class="page-share-wrap">
@@ -225,7 +238,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/12/01/Tensorboard-Morvan/&title=《Tensorboard_Morvan》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/03/03/PyTorch-可视化之TensorboardX/&title=《PyTorch_可视化之TensorboardX》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -235,22 +248,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/12/01/Tensorboard-Morvan/&title=《Tensorboard_Morvan》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/03/03/PyTorch-可视化之TensorboardX/&title=《PyTorch_可视化之TensorboardX》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/12/01/Tensorboard-Morvan/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/03/03/PyTorch-可视化之TensorboardX/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Tensorboard_Morvan》 — Go Further&url=http://yoursite.com/2018/12/01/Tensorboard-Morvan/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《PyTorch_可视化之TensorboardX》 — Go Further&url=http://yoursite.com/2019/03/03/PyTorch-可视化之TensorboardX/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/12/01/Tensorboard-Morvan/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2019/03/03/PyTorch-可视化之TensorboardX/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -270,21 +283,14 @@
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between">
-  
-    <div class="waves-block waves-effect prev">
-      <a href="/2018/12/02/ResNet-Introduction/" id="post-prev" class="post-nav-link">
-        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">ResNet_Introduction</h4>
-      </a>
-    </div>
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/2018/12/01/Matplotlib-Python3-Morvan/" id="post-next" class="post-nav-link">
+      <a href="/2019/03/02/NiftyNet-Process/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">Matplotlib_Python3_Morvan</h4>
+        <h4 class="title">NiftyNet-Process</h4>
       </a>
     </div>
   
@@ -381,7 +387,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/12/01/Tensorboard-Morvan/&title=《Tensorboard_Morvan》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/03/03/PyTorch-可视化之TensorboardX/&title=《PyTorch_可视化之TensorboardX》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -391,22 +397,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/12/01/Tensorboard-Morvan/&title=《Tensorboard_Morvan》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/03/03/PyTorch-可视化之TensorboardX/&title=《PyTorch_可视化之TensorboardX》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/12/01/Tensorboard-Morvan/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/03/03/PyTorch-可视化之TensorboardX/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Tensorboard_Morvan》 — Go Further&url=http://yoursite.com/2018/12/01/Tensorboard-Morvan/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《PyTorch_可视化之TensorboardX》 — Go Further&url=http://yoursite.com/2019/03/03/PyTorch-可视化之TensorboardX/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/12/01/Tensorboard-Morvan/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2019/03/03/PyTorch-可视化之TensorboardX/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -417,7 +423,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACKElEQVR42u3aQXLDIAwF0Nz/0um2namdL4lkYvxYddwaeF6oCOnxiMfzdJz//e8nR789f75sYGBgXJaRbLG38NEM5/Mnb/2zIgYGxg0YySbyYJrPvGoGDAwMjGYQDIJpvi4GBgbGJOCeB+Lk3SSUY2BgYCRJ5oSXbOtDuTgGBsYFGfmt++d/fkt9AwMD41KMZ3EkCe3ksNgbGBgYezPyADcvBoyu0oL9YGBg7MqYlBsnwTH/BElijIGBsTcjf7l6mJuUQvMA/eL/BgYGxtaMXhyrFgx6q2NgYNyZMQ+y1RBcCKZJCMbAwLgBIwmUaxspqs0WL0IwBgbGpoxlCWSrtDmh/pkHAwPjBowkBFcPavkM1RLpixImBgbGpozq8W5t6Kw2bRx2i2BgYGzKmLRTTBLgamhe0GyBgYFxWUb1Or6XyvZghcs+DAyMrRnnIylA5hf6q2JjnhhjYGDswVh1gOtdpS1rtsDAwNiaUb2Cf8dlXP4JopYLDAyMrRn5AlVqNaAnB9bDgIuBgbE1Y7KtVW0W1Q+3+OtiYGB8PSPZXK89Ik9r87cKnSMYGBgXZzyLo3q5lgfcXuKKgYFxB0Y+8iNgnsT22jUwMDDuyegF2bzEWOjvqBYDej0gGBgYl2UUruCD4mVS2pwXBjAwMDDmTRi9A1/vOQYGBkYv+Tw/Jk4+wWF9AwMDY2tGksROSpvvKCdgYGDch1FNHdeWOQuHv0F7BwYGxmUZP6+CapgzfZeBAAAAAElFTkSuQmCC" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACsUlEQVR42u3aQY7CMAwFUO5/aUaaLVC+7RhYvKxQpyV5RYoztm+3eNz/x+OVx+uP99+L49X3v5rrwMDDw8NrLT2ZLJn4ekGvXso1L//rk1eAh4eHt8bLN/dkodWl56EoXzMeHh7eL/CSReev45qXz4WHh4f3y7ze5t5LPeDh4eH9Pq/6z38vvZsEnnzew7kWPDw8vJhXLYD9wufF+h4eHh7eoKo+CQbzoFINBk+ewsPDw1vgJaWm6+nzhfZKX732hUIlDQ8PD2+BNznUVl9c/goKrxsPDw9vgTdf3KRY1QPM2xHw8PDw5rze1lzdpvMjci/RjIeHh/cZ3ryEXz2aJ0nbeYjCw8PD2+MlmPzwmh+mC1ErIL2ZFw8PD+8QL0999pqi8nCSt70W2hrw8PDwFnin2gKSov6kqetAGwEeHh7eIV6yiGr6IE9nJM/2Grbw8PDwPslLML2tP28vyI/Xzfw0Hh4e3phX3bJ7B+WvdUPg4eHhHeXlgOpTbw67rQasyY+Bh4eHd4pXLXrliYbbYPSSFG/qe3h4eHgf5FWL+qeuzNPEeHh4eJ/h5WX75M5qGexwSQwPDw9vgZcXn5LGrFPNWNWw9OYpPDw8vGVetcng+tU0FzRIJePh4eFt8+6tkWOqx988BVxoF8DDw8Nb4FVTqNV78uv5DxAllPHw8PAWeL0J5tR8u5+kffHw8PA2eL0ifbOQ3zocVw/ZT+IeHh4e3jIvSUP0ErjJ5t5rFHi5Tjw8PLwFXj6SEv6kYDb5PAkneHh4eD1er9yVN0XlCYhTaZFRdMLDw8OLedVereo2PSmnjdoI8PDw8L7KS9IEeQCYnP1XAgMeHh7eGq+asJikdOfJXzw8PLw9XvJ11ZCQP1VtICg0eOHh4eEt8JotTdUNupXgyJO8o4GHh4eX8v4ABw/aT8NmujkAAAAASUVORK5CYII=" alt="微信分享二维码">
 </div>
 
 
