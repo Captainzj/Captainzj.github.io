@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>vtk-Introduction | Go Further | Stay Hungry, Stay Foolish</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#142421">
+    
+    
+    <meta name="keywords" content="vtk">
+    <meta name="description" content="【阅读时间】XXX min XXX words【阅读内容】……">
+<meta name="keywords" content="vtk">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vtk-Introduction">
+<meta property="og:url" content="http://yoursite.com/2019/03/08/vtk-Introduction/index.html">
+<meta property="og:site_name" content="Go Further">
+<meta property="og:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2019/03/08/vtk-Introduction/vtk_example.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/08/vtk-Introduction/transform.RotateWXYZ(90,%200,%200,%201).png">
+<meta property="og:image" content="http://yoursite.com/2019/03/08/vtk-Introduction/transform.RotateWXYZ(90,%201,%200,%201).png">
+<meta property="og:image" content="http://yoursite.com/2019/03/08/vtk-Introduction/transform.RotateWXYZ(90,%201,%201,%201).png">
+<meta property="og:updated_time" content="2019-03-08T16:04:47.322Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="vtk-Introduction">
+<meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
+<meta name="twitter:image" content="http://yoursite.com/2019/03/08/vtk-Introduction/vtk_example.png">
+    
+        <link rel="alternate" type="application/atom+xml" title="Go Further" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">CaptainSE</h5>
+          <a href="mailto:841145636@qq.com" title="841145636@qq.com" class="mail">841145636@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                Home
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/Captainzj" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">vtk-Introduction</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">vtk-Introduction</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-03-08T11:04:27.000Z" itemprop="datePublished" class="page-time">
+  2019-03-08
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Python/">Python</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Install"><span class="post-toc-number">1.</span> <span class="post-toc-text">Install</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Demo"><span class="post-toc-number">2.</span> <span class="post-toc-text">Demo</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Example"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">Example</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#文件读取"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">文件读取</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#图像旋转"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">图像旋转</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#平面切割"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">平面切割</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#鼠标事件监听"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">鼠标事件监听</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-vtk-Introduction"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">vtk-Introduction</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2019-03-08 19:04:27" datetime="2019-03-08T11:04:27.000Z"  itemprop="datePublished">2019-03-08</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Python/">Python</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>【阅读时间】XXX min XXX words<br>【阅读内容】……</p>
+<a id="more"></a>
+<p>参考：<a href="https://lorensen.github.io/VTKExamples/site/Python/" target="_blank" rel="noopener">VTKExamples</a>、<a href="https://vtk.org/documentation/" target="_blank" rel="noopener">User’s Guide</a>、<a href="https://www.cnblogs.com/zhhfan/p/10312170.html" target="_blank" rel="noopener">Python vtk学习</a></p>
+<h2 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip install vtk</span><br></pre></td></tr></table></figure>
+<h2 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h2><h3 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h3><center><br><img src="/2019/03/08/vtk-Introduction/vtk_example.png" width="500"><br></center>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> vtk</span><br><span class="line"></span><br><span class="line"><span class="comment"># 箭头源</span></span><br><span class="line">arrow_source = vtk.vtkArrowSource()</span><br><span class="line"><span class="comment"># 映射器</span></span><br><span class="line">mapper = vtk.vtkPolyDataMapper()</span><br><span class="line"><span class="comment"># 映射器添加数据源</span></span><br><span class="line">mapper.SetInputConnection(arrow_source.GetOutputPort())</span><br><span class="line"></span><br><span class="line"><span class="comment"># 演员（执行者）</span></span><br><span class="line">actor = vtk.vtkActor()</span><br><span class="line"><span class="comment"># 演员添加映射器</span></span><br><span class="line">actor.SetMapper(mapper)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 渲染器</span></span><br><span class="line">ren = vtk.vtkRenderer()</span><br><span class="line"><span class="comment"># 渲染器添加演员</span></span><br><span class="line">ren.AddActor(actor)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 绘制窗口</span></span><br><span class="line">renWin = vtk.vtkRenderWindow()</span><br><span class="line"><span class="comment"># 绘制窗口添加渲染器</span></span><br><span class="line">renWin.AddRenderer(ren)</span><br><span class="line"><span class="comment"># 窗口读取渲染器生成的图形</span></span><br><span class="line">renWin.Render()   </span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建窗口交互器</span></span><br><span class="line">iren = vtk.vtkRenderWindowInteractor()</span><br><span class="line">iren.SetRenderWindow(renWin)</span><br><span class="line">iren.Initialize()</span><br><span class="line">iren.Start()</span><br></pre></td></tr></table></figure>
+<h3 id="文件读取"><a href="#文件读取" class="headerlink" title="文件读取"></a>文件读取</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">read_data</span><span class="params">(file_name)</span>:</span></span><br><span class="line">    reader = vtk.vtkSTLReader()  <span class="comment"># 读取STL文件</span></span><br><span class="line">    reader.SetFileName(file_name)</span><br><span class="line">    <span class="keyword">return</span> reader</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">文件类型</th>
+<th style="text-align:center">读取方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">STL</td>
+<td style="text-align:center">vtkSTLReader()</td>
+</tr>
+<tr>
+<td style="text-align:center">SLC</td>
+<td style="text-align:center">vtkSLCReader()</td>
+</tr>
+<tr>
+<td style="text-align:center">VTP</td>
+<td style="text-align:center">vtkXMLPolyDataReader()</td>
+</tr>
+<tr>
+<td style="text-align:center">UnstructuredGrid</td>
+<td style="text-align:center">vtkNamedColors()</td>
+</tr>
+<tr>
+<td style="text-align:center">ExodusData</td>
+<td style="text-align:center">vtkExodusIIReader()</td>
+</tr>
+</tbody>
+</table>
+<h3 id="图像旋转"><a href="#图像旋转" class="headerlink" title="图像旋转"></a>图像旋转</h3><p>transform.RotateWXYZ(90, 0, 0, 1) 👇 横置→竖置</p>
+<center><br><img src="/2019/03/08/vtk-Introduction/transform.RotateWXYZ(90, 0, 0, 1).png" width="500"><br></center>
+
+<p>transform.RotateWXYZ(90, 1, 0, 1) 👇 正方形对角线</p>
+<center><br><img src="/2019/03/08/vtk-Introduction/transform.RotateWXYZ(90, 1, 0, 1).png" width="500"><br></center>
+
+<p>transform.RotateWXYZ(90, 1, 1, 1) 👇 立方体对角线 </p>
+<center><br><img src="/2019/03/08/vtk-Introduction/transform.RotateWXYZ(90, 1, 1, 1).png" width="500"><br></center>
+
+<p>代码详情 👇</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> vtk</span><br><span class="line"></span><br><span class="line">arrow_source = vtk.vtkArrowSource()</span><br><span class="line">mapper = vtk.vtkPolyDataMapper()</span><br><span class="line"></span><br><span class="line"><span class="comment"># transform</span></span><br><span class="line">transform = vtk.vtkTransform()</span><br><span class="line"><span class="comment"># transform.RotateWXYZ(angle, x, y, z)  # x,y,z旋转(0,1)表示是否旋转</span></span><br><span class="line">transform.RotateWXYZ(<span class="number">90</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>) <span class="comment"># (90, 1, 0, 1) / (90, 1, 1, 1)  </span></span><br><span class="line">transformFilter = vtk.vtkTransformPolyDataFilter()</span><br><span class="line">transformFilter.SetTransform(transform)</span><br><span class="line">transformFilter.SetInputConnection(arrow_source.GetOutputPort())</span><br><span class="line">transformFilter.Update()</span><br><span class="line">mapper.SetInputConnection(transformFilter.GetOutputPort())</span><br><span class="line"></span><br><span class="line">actor = vtk.vtkActor()</span><br><span class="line">actor.SetMapper(mapper)</span><br><span class="line">ren = vtk.vtkRenderer()</span><br><span class="line">ren.AddActor(actor)</span><br><span class="line">renWin = vtk.vtkRenderWindow()</span><br><span class="line">renWin.AddRenderer(ren)</span><br><span class="line">renWin.Render()</span><br><span class="line">iren = vtk.vtkRenderWindowInteractor()</span><br><span class="line">iren.SetRenderWindow(renWin)</span><br><span class="line">iren.Initialize()</span><br><span class="line">renWin.Render()</span><br><span class="line">iren.Start()</span><br></pre></td></tr></table></figure>
+<ul>
+<li>缩放</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">set_scale</span><span class="params">(x, y, z)</span>:</span></span><br><span class="line">    actor.SetScale(x, y, z)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>平移</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add_position</span><span class="params">(x, y, z)</span>:</span></span><br><span class="line">    actor.AddPosition(x, y, z)</span><br></pre></td></tr></table></figure>
+<h3 id="平面切割"><a href="#平面切割" class="headerlink" title="平面切割"></a>平面切割</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">cut</span><span class="params">(file_name)</span>:</span></span><br><span class="line">    reader = read_data(file_name)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 定义切割平面</span></span><br><span class="line">    clipPlane = vtk.vtkPlane()</span><br><span class="line">    clipPlane.SetNormal(<span class="number">1.0</span>, <span class="number">-1.0</span>, <span class="number">-1.0</span>)</span><br><span class="line">    clipPlane.SetOrigin(<span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 平面切割三维数据</span></span><br><span class="line">    clipper = vtk.vtkClipPolyData()</span><br><span class="line">    clipper.SetInputConnection(reader.GetOutputPort())</span><br><span class="line">    clipper.SetClipFunction(clipPlane)</span><br><span class="line">    clipper.InsideOutOn()  <span class="comment"># ?</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 定义mapper和actor</span></span><br><span class="line">    superMapper = vtk.vtkPolyDataMapper()</span><br><span class="line">    superMapper.SetInputConnection(clipper.GetOutputPort())</span><br><span class="line">    superActor = vtk.vtkActor()</span><br><span class="line">    <span class="comment"># 设置偏转角度</span></span><br><span class="line">    set_origin(superActor, <span class="number">-50</span>, <span class="number">-75</span>, <span class="number">120</span>)</span><br><span class="line">    superActor.SetMapper(superMapper)</span><br><span class="line">    superActor.GetProperty().SetColor(colors.GetColor3d(<span class="string">"Cyan"</span>))</span><br><span class="line">    only_show(superActor)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>设置演员初始方向</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">set_origin</span><span class="params">(actor, x, y, z)</span>:</span></span><br><span class="line">    actor.SetOrientation(x, y, z)</span><br></pre></td></tr></table></figure>
+<h3 id="鼠标事件监听"><a href="#鼠标事件监听" class="headerlink" title="鼠标事件监听"></a>鼠标事件监听</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 监听事件</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyEvent</span><span class="params">(vtk.vtkInteractorStyleTrackballCamera)</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, parent=None)</span>:</span></span><br><span class="line">        self.AddObserver(<span class="string">"MiddleButtonPressEvent"</span>, self.middle_button_press_event)</span><br><span class="line">        self.AddObserver(<span class="string">"MiddleButtonReleaseEvent"</span>, self.middle_button_release_event)</span><br><span class="line">        self.AddObserver(<span class="string">"LeftButtonPressEvent"</span>, self.left_button_press_event)</span><br><span class="line">        self.AddObserver(<span class="string">"LeftButtonReleaseEvent"</span>, self.left_button_release_event)</span><br><span class="line">        self.AddObserver(<span class="string">"RightButtonPressEvent"</span>, self.right_button_press_event)</span><br><span class="line">        self.AddObserver(<span class="string">"RightButtonReleaseEvent"</span>, self.right_button_release_event)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">middle_button_press_event</span><span class="params">(self, obj, event)</span>:</span></span><br><span class="line">        print(<span class="string">"Middle Button pressed"</span>)</span><br><span class="line">        self.OnMiddleButtonDown()</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">middle_button_release_event</span><span class="params">(self, obj, event)</span>:</span></span><br><span class="line">        print(<span class="string">"Middle Button released"</span>)</span><br><span class="line">        self.OnMiddleButtonUp()</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">left_button_press_event</span><span class="params">(self, obj, event)</span>:</span></span><br><span class="line">        print(<span class="string">"Left Button pressed"</span>)</span><br><span class="line">        self.OnLeftButtonDown()</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">left_button_release_event</span><span class="params">(self, obj, event)</span>:</span></span><br><span class="line">        print(<span class="string">"Left Button released"</span>)</span><br><span class="line">        self.OnLeftButtonUp()</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">right_button_press_event</span><span class="params">(self, obj, event)</span>:</span></span><br><span class="line">        print(<span class="string">"right Button pressed"</span>)</span><br><span class="line">        self.OnRightButtonDown()</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">right_button_release_event</span><span class="params">(self, obj, event)</span>:</span></span><br><span class="line">        print(<span class="string">"right Button released"</span>)</span><br><span class="line">        self.OnLeftButtonUp()</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 引入上一段代码调用</span></span><br><span class="line">iren.SetInteractorStyle(MyEvent())</span><br></pre></td></tr></table></figure>
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2019-03-08T16:04:47.322Z" itemprop="dateUpdated">2019-03-09 00:04:47</time>
+</span><br>
+
+
+        
+    </div>
+    
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/avatar.jpg" alt="CaptainSE">
+            CaptainSE
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vtk/">vtk</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/03/08/vtk-Introduction/&title=《vtk-Introduction》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/03/08/vtk-Introduction/&title=《vtk-Introduction》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/03/08/vtk-Introduction/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《vtk-Introduction》 — Go Further&url=http://yoursite.com/2019/03/08/vtk-Introduction/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2019/03/08/vtk-Introduction/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2019/03/04/PyQt5-2-exe/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">PyQt5_2_exe/app</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢老板~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>CaptainSE &copy; 2015 - 2019</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/03/08/vtk-Introduction/&title=《vtk-Introduction》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/03/08/vtk-Introduction/&title=《vtk-Introduction》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/03/08/vtk-Introduction/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《vtk-Introduction》 — Go Further&url=http://yoursite.com/2019/03/08/vtk-Introduction/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2019/03/08/vtk-Introduction/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACI0lEQVR42u3awW7rMAwEwP7/T+dd36FxdkWngKXRqXACS6MCCkXy5ycer2C8+/7/T959ev38toGBgfFYRrK4tYnfveH6efLpLzNiYGAcwEgWkU+cvzmZK3kDBgYGxvWrk2P3GpzMi4GBgdG+LkEmIWb+KQYGBsZawJdfdO8NQzEwME5j5Fn3v//7K/UNDAyMRzFe5Zgk/ZMnawMDA2NvRn7AtQu96+BO1oOBgbE34/oYzZ+0rWN5qSA57jEwME5mTFJjkxJCi8TAwDiZMS9eJq0Yk2YLDAyMExjz0mNbCl1Lw0WrwsDA2JqRTzBp4WoLDNdbUxQ1MTAwHs5olfmBmC99jfrLJRYDA2NrxjzIu/cSm2zHh7s4BgbGdoy1JV6HhtdLn5QBPiTaMDAwNmXUKfiy8aLdiLy9AwMD4wRGGwi2zVstrN3oD78eGBgYWzDyEK0tD7SJtuQnYfR/wMDAeCyjTYfNr6xtMeCGnhEMDIwtGGutD/n3F9P9ZbsYBgbG3oy85aJu2PqTMicGBsY5jPaSObkATy69b9kYGBgHMNYuonmCLG/UWAtbMTAwdmW8ypEHhZOtqakYGBhbM9rrYh7SfaPBoi1/YmBg7MTID9n8mG4TeTccuBgYGAcwvnF+5w0TLRIDAwOjXXpe/my3oEj5YWBgYNwa2LUhY0TCwMA4gDFvm0gSc22Rsji+MTAwtmaMro5LlYd5aXNU38DAwHgS4x/JTrJQFsFNpgAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = 'Go Further | Stay Hungry, Stay Foolish';
+            clearTimeout(titleTime);
+        } else {
+            document.title = 'Go Further | Stay Hungry, Stay Foolish';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
