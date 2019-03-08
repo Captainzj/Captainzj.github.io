@@ -33,8 +33,8 @@
 <meta property="og:image" content="http://yoursite.com/2019/01/27/医疗影像文件读取方法/DcmViewer_demo.png">
 <meta property="og:image" content="http://yoursite.com/2019/01/27/医疗影像文件读取方法/DcmViewer_3d.png">
 <meta property="og:image" content="http://yoursite.com/2019/01/27/医疗影像文件读取方法/nii_example.png">
-<meta property="og:image" content="http://yoursite.com/2019/01/27/医疗影像文件读取方法/show">
-<meta property="og:updated_time" content="2019-03-08T16:28:31.029Z">
+<meta property="og:image" content="http://yoursite.com/2019/01/27/医疗影像文件读取方法/show_slice_image.png">
+<meta property="og:updated_time" content="2019-03-08T16:44:12.189Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="医疗影像文件读取方法">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
@@ -166,7 +166,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Medical-Image-File-Formats"><span class="post-toc-number">1.</span> <span class="post-toc-text">Medical Image File Formats</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#PyQt5-DcmViewer"><span class="post-toc-number">1.0.1.</span> <span class="post-toc-text">PyQt5_DcmViewer</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#PyQt5-DcmViewer-3d"><span class="post-toc-number">1.0.2.</span> <span class="post-toc-text">PyQt5_DcmViewer_3d</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#pydicom"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">pydicom</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#读取患者信息"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">读取患者信息</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#设置窗口窗位"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">设置窗口窗位</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Others"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Others</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#nifti数据（nii）"><span class="post-toc-number">2.</span> <span class="post-toc-text">nifti数据（nii）</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Medical-Image-File-Formats"><span class="post-toc-number">1.</span> <span class="post-toc-text">Medical Image File Formats</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#DCM"><span class="post-toc-number">2.</span> <span class="post-toc-text">DCM</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Relevant-Software"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">Relevant Software</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#SimpleITK读取并显示dcm文件"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">SimpleITK读取并显示dcm文件</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#PyQt5-DcmViewer"><span class="post-toc-number">2.2.1.</span> <span class="post-toc-text">PyQt5_DcmViewer</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#PyQt5-DcmViewer-3d"><span class="post-toc-number">2.2.2.</span> <span class="post-toc-text">PyQt5_DcmViewer_3d</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#pydicom"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">pydicom</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#读取患者信息"><span class="post-toc-number">2.3.1.</span> <span class="post-toc-text">读取患者信息</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#设置窗口窗位"><span class="post-toc-number">2.3.2.</span> <span class="post-toc-text">设置窗口窗位</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Others"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">Others</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#nifti数据（nii）"><span class="post-toc-number">3.</span> <span class="post-toc-text">nifti数据（nii）</span></a></li></ol>
         </nav>
     </aside>
 
@@ -194,7 +194,17 @@
         <div class="post-content" id="post-content" itemprop="postContent">
             <p>【阅读时间】XXX min XXX words<br>【阅读内容】……</p>
 <a id="more"></a>
-<h2 id="Medical-Image-File-Formats"><a href="#Medical-Image-File-Formats" class="headerlink" title="Medical Image File Formats"></a>Medical Image File Formats</h2><center><br> <img src="/2019/01/27/医疗影像文件读取方法/SummaryOfFileFormatsCharacteristics.png" width="500"><br></center><br><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3948928/" target="_blank" rel="noopener">Medical Image File Formats 2014 Apr</a><br><br><br>## DCM<br><br>### Relevant Software<br><br>- <a href="https://inobitec.com/eng/downloads/dicomviewer/" target="_blank" rel="noopener">Inobitec DICOM Viewer</a><br>- Mango<br><br><br>### SimpleITK读取并显示dcm文件<br><br><strong>Presentation</strong><br><center><br> <img src="/2019/01/27/医疗影像文件读取方法/SimpleITK_dcm.png" width="500"><br></center>
+<h2 id="Medical-Image-File-Formats"><a href="#Medical-Image-File-Formats" class="headerlink" title="Medical Image File Formats"></a>Medical Image File Formats</h2><p><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3948928/" target="_blank" rel="noopener">Medical Image File Formats 2014 Apr</a></p>
+<center><br> <img src="/2019/01/27/医疗影像文件读取方法/SummaryOfFileFormatsCharacteristics.png" width="500"><br></center>
+
+
+
+<h2 id="DCM"><a href="#DCM" class="headerlink" title="DCM"></a>DCM</h2><h3 id="Relevant-Software"><a href="#Relevant-Software" class="headerlink" title="Relevant Software"></a>Relevant Software</h3><ul>
+<li><a href="https://inobitec.com/eng/downloads/dicomviewer/" target="_blank" rel="noopener">Inobitec DICOM Viewer</a></li>
+<li>Mango</li>
+</ul>
+<h3 id="SimpleITK读取并显示dcm文件"><a href="#SimpleITK读取并显示dcm文件" class="headerlink" title="SimpleITK读取并显示dcm文件"></a>SimpleITK读取并显示dcm文件</h3><p><strong>Presentation</strong></p>
+<center><br> <img src="/2019/01/27/医疗影像文件读取方法/SimpleITK_dcm.png" width="500"><br></center>
 
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> SimpleITK <span class="keyword">as</span> sitk</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">image = sitk.ReadImage(<span class="string">r"./729427_20181010_CT_5_249_011.dcm"</span>) <span class="comment"># type(image) &lt;class 'SimpleITK.SimpleITK.Image'&gt;</span></span><br><span class="line">image_array = np.squeeze(sitk.GetArrayFromImage(image))  <span class="comment"># type(image_array) -&gt;&gt; &lt;class 'numpy.ndarray'&gt;  image_array.shape -&gt;&gt; (512, 512)</span></span><br><span class="line">plt.imshow(image_array)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 <h4 id="PyQt5-DcmViewer"><a href="#PyQt5-DcmViewer" class="headerlink" title="PyQt5_DcmViewer"></a>PyQt5_DcmViewer</h4><p><strong>Presentation</strong></p>
@@ -237,9 +247,9 @@
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="/2019/01/27/医疗影像文件读取方法/show" alt="show slice image" title="slice">
+                    <img src="/2019/01/27/医疗影像文件读取方法/show_slice_image.png" alt="show slice image" title="">
                 </div>
-                <div class="image-caption">slice</div>
+                <div class="image-caption">show slice image</div>
             </figure>
 <p><strong>data.header 👇</strong></p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&lt;class 'nibabel.nifti1.Nifti1Header'&gt; object, endian='&gt;'</span><br><span class="line">sizeof_hdr      : <span class="number">348</span></span><br><span class="line">data_type       : <span class="string">b''</span></span><br><span class="line">db_name         : <span class="string">b'011_S_0010'</span></span><br><span class="line">...</span><br><span class="line">quatern_b       : <span class="number">0.70710677</span></span><br><span class="line">quatern_c       : <span class="number">-1.0713779e-09</span></span><br><span class="line">quatern_d       : <span class="number">-0.70710677</span></span><br><span class="line">qoffset_x       : <span class="number">94.87749</span></span><br><span class="line">qoffset_y       : <span class="number">165.8339</span></span><br><span class="line">qoffset_z       : <span class="number">115.27711</span></span><br><span class="line">...</span><br></pre></td></tr></table></figure>
@@ -251,7 +261,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2019-03-08T16:28:31.029Z" itemprop="dateUpdated">2019-03-09 00:28:31</time>
+    Last updated: <time datetime="2019-03-08T16:44:12.189Z" itemprop="dateUpdated">2019-03-09 00:44:12</time>
 </span><br>
 
 
