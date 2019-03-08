@@ -31,7 +31,7 @@
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/5267500-47b425d8cdc1ff7d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/5267500-508b820355abe639.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://yoursite.com/2018/12/27/Medical-Data-Format/SummaryOfFileFormatsCharacteristics.png">
-<meta property="og:updated_time" content="2019-03-08T16:37:34.949Z">
+<meta property="og:updated_time" content="2019-03-08T16:41:16.478Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="医学数据格式">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
@@ -163,7 +163,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#医学图像数据类型"><span class="post-toc-number">1.</span> <span class="post-toc-text">医学图像数据类型</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#MRI"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">MRI</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#CT"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">CT</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#PET"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">PET</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#医学图像数据格式"><span class="post-toc-number">2.</span> <span class="post-toc-text">医学图像数据格式</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#DICOM"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">DICOM</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#NII"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">NII</span></a></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#医学图像数据类型"><span class="post-toc-number">1.</span> <span class="post-toc-text">医学图像数据类型</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#MRI"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">MRI</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#PET"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">PET</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#CT"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">CT</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#医学图像数据格式"><span class="post-toc-number">2.</span> <span class="post-toc-text">医学图像数据格式</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#DICOM"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">DICOM</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#NII"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">NII</span></a></li></ol></li></ol>
         </nav>
     </aside>
 
@@ -192,31 +192,6 @@
             <p>【阅读时间】XXX min XXX words<br>【阅读内容】……</p>
 <a id="more"></a>
 <p>参考：<a href="https://zhuanlan.zhihu.com/p/30915590" target="_blank" rel="noopener">医学图像处理与深度学习[知乎]</a></p>
-<table>
-<thead>
-<tr>
-<th>数据格式</th>
-<th>含义（字段）</th>
-<th>头部-&gt; 内容</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>DICOM</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>nii</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
 <table>
 <thead>
 <tr>
@@ -250,7 +225,6 @@
                 <div class="image-caption"></div>
             </figure>
 <p>MRI – <code>核磁共振成像</code>是根据有磁矩的原子核在磁场作用下，能产生能级间的跃迁的原理采用的技术。</p>
-<h3 id="CT"><a href="#CT" class="headerlink" title="CT"></a>CT</h3><p>CT扫描的测量单位是Hounsfield单位（HU），它是放射性强度的量度。 <a href="https://web.archive.org/web/20070926231241/http://www.intl.elsevierhealth.com/e-books/pdf/940.pdf" target="_blank" rel="noopener">Introduction to CT physics</a>每个像素被分配一个数值（CT值），它是相应体素中所有<code>衰减值</code>的平均值。 将这个数字与水的衰减值进行比较，并在戈弗雷·豪斯菲尔德爵士（Sir Godfrey Hounsfield）之后以胡恩斯菲尔德单位（Hounsfield units，HU）的任意单位的比例显示。</p>
 <h3 id="PET"><a href="#PET" class="headerlink" title="PET"></a>PET</h3><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
@@ -259,6 +233,7 @@
                 <div class="image-caption"></div>
             </figure>
 <p>正电子发射计算机断层扫描的大致方法是，将某种物质，一般是生物生命代谢中必须的物质，如：葡萄糖、蛋白质、核酸、脂肪酸，标记上短寿命的放射性核素（如18F，11C等），注入人体后，通过对于该物质在代谢中的聚集，来反映生命代谢活动的情况，从而达到诊断的目的。</p>
+<h3 id="CT"><a href="#CT" class="headerlink" title="CT"></a>CT</h3><p>CT扫描的测量单位是Hounsfield单位（HU），它是放射性强度的量度。 <a href="https://web.archive.org/web/20070926231241/http://www.intl.elsevierhealth.com/e-books/pdf/940.pdf" target="_blank" rel="noopener">Introduction to CT physics</a>每个像素被分配一个数值（CT值），它是相应体素中所有<code>衰减值</code>的平均值。 将这个数字与水的衰减值进行比较，并在戈弗雷·豪斯菲尔德爵士（Sir Godfrey Hounsfield）之后以胡恩斯菲尔德单位（Hounsfield units，HU）的任意单位的比例显示。<br>Modalities（多模态）：T1、T2、b1000、b2000、adc</p>
 <h2 id="医学图像数据格式"><a href="#医学图像数据格式" class="headerlink" title="医学图像数据格式"></a>医学图像数据格式</h2><center><br> <img src="/2018/12/27/Medical-Data-Format/SummaryOfFileFormatsCharacteristics.png" width="600"><br></center>
 
 <h3 id="DICOM"><a href="#DICOM" class="headerlink" title="DICOM"></a>DICOM</h3><p>医学图像采用数字成像和通信（DICOM）作为存储和交换医学图像数据的标准解决方案。该格式具有关于患者的PHI（受保护的健康信息），例如姓名，性别，年龄。医学影像设备创建DICOM文件。医生使用DICOM查看器，可显示DICOM图像的计算机软件应用程序，读取和诊断图像中的发现。关于DICOM标准细节，在这里推荐一个很好的博客<a href="http://link.zhihu.com/?target=http%3A//dicomiseasy.blogspot.com" target="_blank" rel="noopener">http://dicomiseasy.blogspot.com</a></p>
@@ -280,7 +255,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2019-03-08T16:37:34.949Z" itemprop="dateUpdated">2019-03-09 00:37:34</time>
+    Last updated: <time datetime="2019-03-08T16:41:16.478Z" itemprop="dateUpdated">2019-03-09 00:41:16</time>
 </span><br>
 
 
