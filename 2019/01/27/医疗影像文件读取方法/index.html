@@ -34,7 +34,7 @@
 <meta property="og:image" content="http://yoursite.com/2019/01/27/医疗影像文件读取方法/nrrd_image.png">
 <meta property="og:image" content="http://yoursite.com/2019/01/27/医疗影像文件读取方法/nii_example.png">
 <meta property="og:image" content="http://yoursite.com/2019/01/27/医疗影像文件读取方法/show_slice_image.png">
-<meta property="og:updated_time" content="2019-03-10T11:00:16.351Z">
+<meta property="og:updated_time" content="2019-03-10T11:13:54.722Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="医疗影像文件读取方法">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
@@ -232,7 +232,7 @@
 <h2 id="NRRD"><a href="#NRRD" class="headerlink" title="NRRD"></a>NRRD</h2><h3 id="Relevant-Software-1"><a href="#Relevant-Software-1" class="headerlink" title="Relevant Software"></a>Relevant Software</h3><ul>
 <li><a href="https://download.slicer.org/" target="_blank" rel="noopener">Slicer4</a></li>
 </ul>
-<h3 id="pynrrd库"><a href="#pynrrd库" class="headerlink" title="pynrrd库"></a>pynrrd库</h3><p><a href="https://pypi.org/project/pynrrd/" target="_blank" rel="noopener">pynrrd_description</a>  👉 Example usage </p>
+<h3 id="pynrrd库"><a href="#pynrrd库" class="headerlink" title="pynrrd库"></a>pynrrd库</h3><p><a href="https://pypi.org/project/pynrrd/" target="_blank" rel="noopener">pynrrd_description</a>  👉 Example usage    注：when <code>write.data.shape(512,512,115)</code> 耗时近310s</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> nrrd</span><br><span class="line"></span><br><span class="line"><span class="comment"># Some sample numpy data</span></span><br><span class="line">data = np.zeros((<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>))</span><br><span class="line">filename = <span class="string">'testdata.nrrd'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Write to a NRRD file</span></span><br><span class="line">nrrd.write(filename, data)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Read the data back from file</span></span><br><span class="line">readdata, header = nrrd.read(filename)</span><br><span class="line">print(readdata.shape)</span><br><span class="line">print(header)</span><br></pre></td></tr></table></figure>
 <p><a href="https://blog.csdn.net/github_33934628/article/details/78897565" target="_blank" rel="noopener">医疗影像数据预处理-nrrd</a></p>
 <center><br><img src="/2019/01/27/医疗影像文件读取方法/nrrd_image.png" width="400"><br></center><br>visualization  👇<br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> nrrd</span><br><span class="line"></span><br><span class="line">nrrd_filename = <span class="string">'./testdata_even.nrrd'</span></span><br><span class="line">nrrd_data, nrrd_options = nrrd.read(nrrd_filename)</span><br><span class="line"></span><br><span class="line"><span class="comment"># visualization</span></span><br><span class="line">nrrd_image = Image.fromarray(nrrd_data[:,:,<span class="number">29</span>]*<span class="number">1.5</span>)  <span class="comment">#nrrd_data[:,:,29] 表示截取第30张切片</span></span><br><span class="line">nrrd_image.show() <span class="comment"># 显示这图片</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># save nrrd_image to "image.png"</span></span><br><span class="line">nrrd_image = nrrd_image.convert(<span class="string">"RGB"</span>)</span><br><span class="line">nrrd_array = np.asarray(nrrd_image)</span><br><span class="line">nrrd_image.save(<span class="string">"./nrrd_image.png"</span>, <span class="string">"PNG"</span>)</span><br></pre></td></tr></table></figure><br><br>## nifti数据（nii）<br><br><br>### nibabel库<br><br><center><br><img src="/2019/01/27/医疗影像文件读取方法/nii_example.png" width="400"><br></center>
@@ -256,7 +256,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2019-03-10T11:00:16.351Z" itemprop="dateUpdated">2019-03-10 19:00:16</time>
+    Last updated: <time datetime="2019-03-10T11:13:54.722Z" itemprop="dateUpdated">2019-03-10 19:13:54</time>
 </span><br>
 
 
