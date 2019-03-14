@@ -28,7 +28,7 @@
 <meta property="og:site_name" content="Go Further">
 <meta property="og:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-23T12:22:45.000Z">
+<meta property="og:updated_time" content="2019-03-14T04:07:02.866Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MachineLearning_Environment configuration">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
@@ -118,7 +118,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -157,7 +157,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Anaconda"><span class="post-toc-number">1.</span> <span class="post-toc-text">Anaconda</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#TensorFlow"><span class="post-toc-number">2.</span> <span class="post-toc-text">TensorFlow</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Therno"><span class="post-toc-number">3.</span> <span class="post-toc-text">Therno</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Keras"><span class="post-toc-number">4.</span> <span class="post-toc-text">Keras</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#pip"><span class="post-toc-number">5.</span> <span class="post-toc-text">pip</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Jupyter-notebook"><span class="post-toc-number">6.</span> <span class="post-toc-text">Jupyter notebook</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Anaconda"><span class="post-toc-number">1.</span> <span class="post-toc-text">Anaconda</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#TensorFlow"><span class="post-toc-number">2.</span> <span class="post-toc-text">TensorFlow</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Therno"><span class="post-toc-number">3.</span> <span class="post-toc-text">Therno</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Keras"><span class="post-toc-number">4.</span> <span class="post-toc-text">Keras</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#pip"><span class="post-toc-number">5.</span> <span class="post-toc-text">pip</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Jupyter-notebook"><span class="post-toc-number">6.</span> <span class="post-toc-text">Jupyter notebook</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#PyTorch"><span class="post-toc-number">7.</span> <span class="post-toc-text">PyTorch</span></a></li></ol>
         </nav>
     </aside>
 
@@ -295,6 +295,11 @@
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line">print(sys.executable)</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
+<h4 id="PyTorch"><a href="#PyTorch" class="headerlink" title="PyTorch"></a>PyTorch</h4><ul>
+<li>查看pytorch版本的方法</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line">print(torch.__version__)  <span class="comment">#注意是双下划线</span></span><br></pre></td></tr></table></figure>
+<p>Details 👇<br><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">(pyqt) ➜  ~ python</span><br><span class="line">Python 3.6.2 |Continuum Analytics, Inc.| (default, Jul 20 2017, 13:14:59)</span><br><span class="line">[GCC 4.2.1 Compatible Apple LLVM 6.0 (clang-600.0.57)] on darwin</span><br><span class="line">Type "help", "copyright", "credits" or "license" for more information.</span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; import torch</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; <span class="built_in">print</span>(torch.__version__)</span></span><br><span class="line">1.0.1.post2</span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt;</span></span><br></pre></td></tr></table></figure></p>
 
         </div>
 
@@ -303,7 +308,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2019-01-23T12:22:45.000Z" itemprop="dateUpdated">2019-01-23 20:22:45</time>
+    Last updated: <time datetime="2019-03-14T04:07:02.866Z" itemprop="dateUpdated">2019-03-14 12:07:02</time>
 </span><br>
 
 
@@ -469,7 +474,7 @@
             
                 <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
             
-            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
         </p>
     </div>
     <div class="bottom">

@@ -31,7 +31,7 @@
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/5267500-47b425d8cdc1ff7d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/5267500-508b820355abe639.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://yoursite.com/2018/12/27/Medical-Data-Format/SummaryOfFileFormatsCharacteristics.png">
-<meta property="og:updated_time" content="2019-03-08T16:50:33.661Z">
+<meta property="og:updated_time" content="2019-03-13T12:55:48.686Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="医学数据格式">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
@@ -122,7 +122,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -191,7 +191,7 @@
         <div class="post-content" id="post-content" itemprop="postContent">
             <p>【阅读时间】XXX min XXX words<br>【阅读内容】……</p>
 <a id="more"></a>
-<p>参考：<a href="https://zhuanlan.zhihu.com/p/30915590" target="_blank" rel="noopener">医学图像处理与深度学习[知乎]</a></p>
+<p>阅读链接🔗：<a href="https://zhuanlan.zhihu.com/p/30915590" target="_blank" rel="noopener">医学图像处理与深度学习[知乎]</a>、<a href="https://www.cnblogs.com/zhhfan/p/9862569.html" target="_blank" rel="noopener">医学图像了解</a></p>
 <h2 id="医学图像数据类型"><a href="#医学图像数据类型" class="headerlink" title="医学图像数据类型"></a>医学图像数据类型</h2><h3 id="MRI"><a href="#MRI" class="headerlink" title="MRI"></a>MRI</h3><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
@@ -211,9 +211,12 @@
 <h3 id="CT"><a href="#CT" class="headerlink" title="CT"></a>CT</h3><p>CT扫描的测量单位是Hounsfield单位（HU），它是放射性强度的量度。 <a href="https://web.archive.org/web/20070926231241/http://www.intl.elsevierhealth.com/e-books/pdf/940.pdf" target="_blank" rel="noopener">Introduction to CT physics</a>每个像素被分配一个数值（CT值），它是相应体素中所有<code>衰减值</code>的平均值。 将这个数字与水的衰减值进行比较，并在戈弗雷·豪斯菲尔德爵士（Sir Godfrey Hounsfield）之后以胡恩斯菲尔德单位（Hounsfield units，HU）的任意单位的比例显示。<br>扫描区域：腹部CT、胸部、全身CT<br>Modalities（多模态）：T1、T2、b1000、b2000、adc</p>
 <h2 id="医学图像数据格式"><a href="#医学图像数据格式" class="headerlink" title="医学图像数据格式"></a>医学图像数据格式</h2><center><br> <img src="/2018/12/27/Medical-Data-Format/SummaryOfFileFormatsCharacteristics.png" width="600"><br></center>
 
-<h3 id="DICOM"><a href="#DICOM" class="headerlink" title="DICOM"></a>DICOM</h3><p>医学图像采用数字成像和通信（DICOM）作为存储和交换医学图像数据的标准解决方案。该格式具有关于患者的PHI（受保护的健康信息），例如姓名，性别，年龄。医学影像设备创建DICOM文件。医生使用DICOM查看器，可显示DICOM图像的计算机软件应用程序，读取和诊断图像中的发现。关于DICOM标准细节，在这里推荐一个很好的博客<a href="http://link.zhihu.com/?target=http%3A//dicomiseasy.blogspot.com" target="_blank" rel="noopener">http://dicomiseasy.blogspot.com</a></p>
+<h3 id="DICOM"><a href="#DICOM" class="headerlink" title="DICOM"></a>DICOM</h3><p>医学图像采用数字成像和通信（DICOM）作为存储和交换医学图像数据的标准解决方案。该格式具有关于患者的PHI（受保护的健康信息），例如姓名，性别，年龄。医学影像设备创建DICOM文件。医生使用DICOM查看器，可显示DICOM图像的计算机软件应用程序，读取和诊断图像中的发现。</p>
 <ul>
-<li>获得DICOM 数据库</li>
+<li><p>阅读链接：<a href="https://www.cnblogs.com/zhhfan/p/9936945.html" target="_blank" rel="noopener">dcm医疗图像解析</a>、<a href="http://dicomiseasy.blogspot.com/" target="_blank" rel="noopener">Dicom is Easy</a></p>
+</li>
+<li><p>获得DICOM 数据库</p>
+</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">- kaggle competitions and Datasets</span><br><span class="line">- Dicom Library</span><br><span class="line">- Osirix Datasets</span><br><span class="line">- Visible Human Datasets</span><br><span class="line">- The Zubal Phantom</span><br><span class="line">- 杜克大学他们有公开的数据集</span><br></pre></td></tr></table></figure>
 <ul>
@@ -230,7 +233,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2019-03-08T16:50:33.661Z" itemprop="dateUpdated">2019-03-09 00:50:33</time>
+    Last updated: <time datetime="2019-03-13T12:55:48.686Z" itemprop="dateUpdated">2019-03-13 20:55:48</time>
 </span><br>
 
 
@@ -396,7 +399,7 @@
             
                 <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
             
-            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
         </p>
     </div>
     <div class="bottom">

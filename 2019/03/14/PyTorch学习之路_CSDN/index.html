@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>PyTorch学习之路_CSDN | Go Further | Stay Hungry, Stay Foolish</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#142421">
+    
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="【阅读时间】XXX min XXX words【阅读内容】转载于 AI之路">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PyTorch学习之路_CSDN">
+<meta property="og:url" content="http://yoursite.com/2019/03/14/PyTorch学习之路_CSDN/index.html">
+<meta property="og:site_name" content="Go Further">
+<meta property="og:description" content="【阅读时间】XXX min XXX words【阅读内容】转载于 AI之路">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-03-14T12:22:21.754Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PyTorch学习之路_CSDN">
+<meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】转载于 AI之路">
+    
+        <link rel="alternate" type="application/atom+xml" title="Go Further" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">CaptainSE</h5>
+          <a href="mailto:841145636@qq.com" title="841145636@qq.com" class="mail">841145636@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                Home
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/Captainzj" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">PyTorch学习之路_CSDN</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">PyTorch学习之路_CSDN</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-03-14T09:03:30.000Z" itemprop="datePublished" class="page-time">
+  2019-03-14
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#PyTorch学习之路（level1）——训练一个图像分类模型"><span class="post-toc-number">1.</span> <span class="post-toc-text">PyTorch学习之路（level1）——训练一个图像分类模型</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数据导入部分"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">数据导入部分</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#data-transforms"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">data_transforms</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#torch-utils-data-DataLoader"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">torch.utils.data.DataLoader</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#torch-utils-data-Dataset"><span class="post-toc-number">1.1.3.</span> <span class="post-toc-text">torch.utils.data.Dataset</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Variable"><span class="post-toc-number">1.1.3.1.</span> <span class="post-toc-text">Variable</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#导入模型"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">导入模型</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#定义损失函数"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">定义损失函数</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#定义优化函数"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">定义优化函数</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#定义学习率的变化策略"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">定义学习率的变化策略</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#训练"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">训练</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#PyTorch学习之路（level2）——自定义数据读取"><span class="post-toc-number">2.</span> <span class="post-toc-text">PyTorch学习之路（level2）——自定义数据读取</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ImageFolder"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">ImageFolder</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#初始化init"><span class="post-toc-number">2.1.1.</span> <span class="post-toc-text">初始化init</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#获取图像getitem"><span class="post-toc-number">2.1.2.</span> <span class="post-toc-text">获取图像getitem</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#default-loader函数"><span class="post-toc-number">2.1.2.1.</span> <span class="post-toc-text">default_loader函数</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#pil-loader方法"><span class="post-toc-number">2.1.2.1.1.</span> <span class="post-toc-text">pil_loader方法</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#accimage-loader方法"><span class="post-toc-number">2.1.2.1.2.</span> <span class="post-toc-text">accimage_loader方法</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#数据集数量len"><span class="post-toc-number">2.1.3.</span> <span class="post-toc-text">数据集数量len</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#自定义数据读取接口"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">自定义数据读取接口</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#保存模型"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">保存模型</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-PyTorch学习之路_CSDN"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">PyTorch学习之路_CSDN</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2019-03-14 17:03:30" datetime="2019-03-14T09:03:30.000Z"  itemprop="datePublished">2019-03-14</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>【阅读时间】XXX min XXX words<br>【阅读内容】转载于 <a href="https://blog.csdn.net/u014380165" target="_blank" rel="noopener">AI之路</a></p>
+<a id="more"></a>
+<h2 id="PyTorch学习之路（level1）——训练一个图像分类模型"><a href="#PyTorch学习之路（level1）——训练一个图像分类模型" class="headerlink" title="PyTorch学习之路（level1）——训练一个图像分类模型"></a><a href="https://blog.csdn.net/u014380165/article/details/78525273" target="_blank" rel="noopener">PyTorch学习之路（level1）——训练一个图像分类模型</a></h2><h3 id="数据导入部分"><a href="#数据导入部分" class="headerlink" title="数据导入部分"></a>数据导入部分</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">data_dir = <span class="string">'/data'</span></span><br><span class="line">image_datasets = &#123;x: datasets.ImageFolder(</span><br><span class="line">                    os.path.join(data_dir, x),</span><br><span class="line">                    data_transforms[x])， </span><br><span class="line">                    <span class="keyword">for</span> x <span class="keyword">in</span> [<span class="string">'train'</span>, <span class="string">'val'</span>]&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="data-transforms"><a href="#data-transforms" class="headerlink" title="data_transforms"></a>data_transforms</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">data_transforms = &#123;</span><br><span class="line">    <span class="string">'train'</span>: transforms.Compose([</span><br><span class="line">        transforms.RandomSizedCrop(<span class="number">224</span>),  <span class="comment"># 输入对象是PIL Image</span></span><br><span class="line">        transforms.RandomHorizontalFlip(),</span><br><span class="line">        transforms.ToTensor(),</span><br><span class="line">        transforms.Normalize([<span class="number">0.485</span>, <span class="number">0.456</span>, <span class="number">0.406</span>], [<span class="number">0.229</span>, <span class="number">0.224</span>, <span class="number">0.225</span>])</span><br><span class="line">    ]),</span><br><span class="line">    <span class="string">'val'</span>: transforms.Compose([</span><br><span class="line">        transforms.Scale(<span class="number">256</span>),  <span class="comment"># 目前已经被transforms.Resize类取代</span></span><br><span class="line">        transforms.CenterCrop(<span class="number">224</span>),</span><br><span class="line">        transforms.ToTensor(),</span><br><span class="line">        transforms.Normalize([<span class="number">0.485</span>, <span class="number">0.456</span>, <span class="number">0.406</span>], [<span class="number">0.229</span>, <span class="number">0.224</span>, <span class="number">0.225</span>])</span><br><span class="line">    ]),</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="torch-utils-data-DataLoader"><a href="#torch-utils-data-DataLoader" class="headerlink" title="torch.utils.data.DataLoader"></a>torch.utils.data.DataLoader</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">dataloders = &#123;x: torch.utils.data.DataLoader(image_datasets[x], batch_size=<span class="number">4</span>, shuffle=<span class="keyword">True</span>, num_workers=<span class="number">4</span>) <span class="keyword">for</span> x <span class="keyword">in</span> [<span class="string">'train'</span>, <span class="string">'val'</span>]&#125;</span><br></pre></td></tr></table></figure>
+<p><code>torchvision.datasets.ImageFolder</code>仅返回list，list是不能作为模型输入的，因此在PyTorch中需要用另一个类来封装list，那就是：torch.utils.data.DataLoader。（list → Tensor）</p>
+<h4 id="torch-utils-data-Dataset"><a href="#torch-utils-data-Dataset" class="headerlink" title="torch.utils.data.Dataset"></a>torch.utils.data.Dataset</h4><ul>
+<li>这是一个抽象类，在pytorch中所有和数据相关的类（例如，torchvision.datasets.ImageFolder、torch.util.data.DataLoader）都要继承这个类来实现。</li>
+<li>当你的数据不是按照一个类别一个文件夹这种方式存储时，你就要自定义一个类来读取数据，自定义的这个类必须继承自torch.utils.data.Dataset这个基类，最后同样用torch.utils.data.DataLoader封装成Tensor。</li>
+</ul>
+<h5 id="Variable"><a href="#Variable" class="headerlink" title="Variable"></a>Variable</h5><p>将Tensor数据类型封装成Variable数据类型，便可以作为模型的输入了 👇<br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> data <span class="keyword">in</span> dataloders[<span class="string">'train'</span>]:  <span class="comment"># type(dataloaders): Dictionary</span></span><br><span class="line">   inputs, labels = data   <span class="comment"># type(input) / type(labels): Tensor</span></span><br><span class="line"></span><br><span class="line">   <span class="keyword">if</span> use_gpu:</span><br><span class="line">       inputs = Variable(inputs.cuda())</span><br><span class="line">       labels = Variable(labels.cuda())</span><br><span class="line">   <span class="keyword">else</span>:</span><br><span class="line">       inputs, labels = Variable(inputs), Variable(labels)</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>Tensor + gradient_Info → Variable</li>
+<li><p>Variable.data → Tensor</p>
+<ul>
+<li>Tensor: torch.tensor</li>
+<li>Variable: torch.autograd.Variable</li>
+</ul>
+</li>
+</ul>
+<h3 id="导入模型"><a href="#导入模型" class="headerlink" title="导入模型"></a>导入模型</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">model = models.resnet18(pretrained=<span class="keyword">True</span>)  <span class="comment"># 加载噫预训练的模型参数</span></span><br><span class="line">num_ftrs = model.fc.in_features  <span class="comment"># 获取全连接层的输入channel个数</span></span><br><span class="line">model.fc = nn.Linear(num_ftrs, <span class="number">2</span>) <span class="comment"># 替换最后的全连接层为你所需要的输出</span></span><br></pre></td></tr></table></figure>
+<h3 id="定义损失函数"><a href="#定义损失函数" class="headerlink" title="定义损失函数"></a>定义损失函数</h3><p>使用交叉熵函数 👇<br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">criterion = nn.CrossEntropyLoss()</span><br></pre></td></tr></table></figure></p>
+<h4 id="定义优化函数"><a href="#定义优化函数" class="headerlink" title="定义优化函数"></a>定义优化函数</h4><p>Adam的优化方式 👇<br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">optimizer = optim.SGD(model.parameters(), lr=<span class="number">0.001</span>, momentum=<span class="number">0.9</span>)</span><br></pre></td></tr></table></figure></p>
+<h3 id="定义学习率的变化策略"><a href="#定义学习率的变化策略" class="headerlink" title="定义学习率的变化策略"></a>定义学习率的变化策略</h3><p>使用torch.optim.lr_scheduler模块的StepLR类 👇<br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"> <span class="comment"># 每隔step_size个epoch就将学习率降为原来的gamma倍</span></span><br><span class="line">scheduler = lr_scheduler.StepLR(optimizer, step_size=<span class="number">7</span>, gamma=<span class="number">0.1</span>)</span><br></pre></td></tr></table></figure></p>
+<h3 id="训练"><a href="#训练" class="headerlink" title="训练"></a>训练</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 在每个epoch开始时都要更新学习率（according to 学习率的变化策略）</span></span><br><span class="line">scheduler.step()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置模型状态为训练状态</span></span><br><span class="line">model.train(<span class="keyword">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将网络中的所有梯度置0</span></span><br><span class="line">optimizer.zero_grad()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 网络的前向传播</span></span><br><span class="line">outputs = model(inputs)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将输出的outputs和原来导入的labels作为loss函数的输入就可以得到损失</span></span><br><span class="line">loss = criterion(outputs, labels)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Get 模型预测该样本属于哪个类别的信息</span></span><br><span class="line">_, preds = torch.max(outputs.data, <span class="number">1</span>)  <span class="comment"># 第二个参数1是代表dim的意思，也就是取每一行的最大值，其实就是我们常见的取概率最大的那个index</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 回传损失</span></span><br><span class="line">loss.backward()  <span class="comment"># 注意: 这是在训练的时候才会有的操作，测试时候只有forward过程</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 根据回传过程中计算得到的梯度更新参数</span></span><br><span class="line">optimizer.step()</span><br><span class="line"><span class="comment"># 查看各个层的梯度和权值信息</span></span><br><span class="line"><span class="comment"># optimizer.param_groups[0][‘params’]</span></span><br></pre></td></tr></table></figure>
+<p>完整代码：<a href="https://github.com/miraclewkf/ImageClassification-PyTorch/blob/master/level1/train.py" target="_blank" rel="noopener">ImageClassification-PyTorch</a></p>
+<h2 id="PyTorch学习之路（level2）——自定义数据读取"><a href="#PyTorch学习之路（level2）——自定义数据读取" class="headerlink" title="PyTorch学习之路（level2）——自定义数据读取"></a><a href="https://blog.csdn.net/u014380165/article/details/78634829" target="_blank" rel="noopener">PyTorch学习之路（level2）——自定义数据读取</a></h2><h3 id="ImageFolder"><a href="#ImageFolder" class="headerlink" title="ImageFolder"></a>ImageFolder</h3><h4 id="初始化init"><a href="#初始化init" class="headerlink" title="初始化init"></a>初始化<strong>init</strong></h4><ul>
+<li><p><code>__init__</code>方法</p>
+  <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, root, transform=None, target_transform=None,loader=default_loader)</span></span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol>
+<li><p>通过find_classes函数得到分类的类别名（classes）和类别名与数字类别的映射关系字典（class_to_idx）</p>
+ <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">classes, class_to_idx = find_classes(root)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>通过make_dataset函数得到imags，这个imags是一个列表，其中每个值是一个tuple，每个tuple包含两个元素：图像路径和标签。</p>
+ <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">imgs = make_dataset(root, class_to_idx)</span><br><span class="line"><span class="keyword">if</span> len(imgs) == <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">raise</span>(RuntimeError(<span class="string">"Found 0 images in subfolders of: "</span> + root + <span class="string">"\n"</span></span><br><span class="line">                           <span class="string">"Supported image extensions are: "</span> + <span class="string">","</span>.join(IMG_EXTENSIONS)))</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>剩下的就是一些赋值操作了</p>
+ <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">self.root = root</span><br><span class="line">self.imgs = imgs</span><br><span class="line">self.classes = classes</span><br><span class="line">self.class_to_idx = class_to_idx</span><br><span class="line">self.transform = transform</span><br><span class="line">self.target_transform = target_transform</span><br><span class="line">self.loader = loader</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h4 id="获取图像getitem"><a href="#获取图像getitem" class="headerlink" title="获取图像getitem"></a>获取图像<strong>getitem</strong></h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">__getitem__</span><span class="params">(self, index)</span>:</span></span><br><span class="line">    </span><br><span class="line">    path, target = self.imgs[index]</span><br><span class="line">        img = self.loader(path)   <span class="comment"># 重点  #  self.loader = default_loader 👇 有解析</span></span><br><span class="line">        <span class="keyword">if</span> self.transform <span class="keyword">is</span> <span class="keyword">not</span> <span class="keyword">None</span>:</span><br><span class="line">            img = self.transform(img)</span><br><span class="line">        <span class="keyword">if</span> self.target_transform <span class="keyword">is</span> <span class="keyword">not</span> <span class="keyword">None</span>:</span><br><span class="line">            target = self.target_transform(target)</span><br><span class="line">    </span><br><span class="line">        <span class="keyword">return</span> img, target</span><br></pre></td></tr></table></figure>
+<h5 id="default-loader函数"><a href="#default-loader函数" class="headerlink" title="default_loader函数"></a>default_loader函数</h5><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">default_loader</span><span class="params">(path)</span>:</span></span><br><span class="line">    <span class="keyword">from</span> torchvision <span class="keyword">import</span> get_image_backend</span><br><span class="line">    <span class="keyword">if</span> get_image_backend() == <span class="string">'accimage'</span>:</span><br><span class="line">        <span class="keyword">return</span> accimage_loader(path)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> pil_loader(path)</span><br></pre></td></tr></table></figure>
+<h6 id="pil-loader方法"><a href="#pil-loader方法" class="headerlink" title="pil_loader方法"></a>pil_loader方法</h6><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">pil_loader</span><span class="params">(path)</span>:</span></span><br><span class="line">    <span class="keyword">with</span> open(path, <span class="string">'rb'</span>) <span class="keyword">as</span> f:</span><br><span class="line">        <span class="keyword">with</span> Image.open(f) <span class="keyword">as</span> img:</span><br><span class="line">            <span class="keyword">return</span> img.convert(<span class="string">'RGB'</span>)</span><br></pre></td></tr></table></figure>
+<h6 id="accimage-loader方法"><a href="#accimage-loader方法" class="headerlink" title="accimage_loader方法"></a>accimage_loader方法</h6><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">accimage_loader</span><span class="params">(path)</span>:</span></span><br><span class="line">    <span class="keyword">import</span> accimage</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        <span class="keyword">return</span> accimage.Image(path)</span><br><span class="line">    <span class="keyword">except</span> IOError:</span><br><span class="line">        <span class="comment"># Potentially a decoding problem, fall back to PIL.Image</span></span><br><span class="line">        <span class="keyword">return</span> pil_loader(path)</span><br></pre></td></tr></table></figure>
+<h4 id="数据集数量len"><a href="#数据集数量len" class="headerlink" title="数据集数量len"></a>数据集数量<strong>len</strong></h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">__len__</span><span class="params">(self)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> len(self.imgs)</span><br></pre></td></tr></table></figure>
+<h3 id="自定义数据读取接口"><a href="#自定义数据读取接口" class="headerlink" title="自定义数据读取接口"></a>自定义数据读取接口</h3><p>思路：</p>
+<ol>
+<li>在PyTorch中和数据读取相关的类基本都要继承一个基类：<code>torch.utils.data.Dataset</code></li>
+<li>改写其中的<code>__init__</code>、<code>__len__</code>、<code>__getitem__</code>等方法即可</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">img_path: [&apos;train&apos;, &apos;val&apos;]</span><br><span class="line">txt_path: [&apos;train.txt&apos;, &apos;val.txt&apos;]</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">customData</span><span class="params">(Dataset)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, img_path, txt_path, dataset = <span class="string">''</span>, data_transforms=None, loader = default_loader)</span>:</span></span><br><span class="line">    <span class="comment"># self.img_name和self.img_label的读取方式就跟你数据的存放方式有关，你可以根据你实际数据的维护方式做调整</span></span><br><span class="line">        <span class="keyword">with</span> open(txt_path) <span class="keyword">as</span> input_file:</span><br><span class="line">            lines = input_file.readlines()</span><br><span class="line">            self.img_name = [os.path.join(img_path, line.strip().split(<span class="string">'\t'</span>)[<span class="number">0</span>]) <span class="keyword">for</span> line <span class="keyword">in</span> lines]</span><br><span class="line">            self.img_label = [int(line.strip().split(<span class="string">'\t'</span>)[<span class="number">-1</span>]) <span class="keyword">for</span> line <span class="keyword">in</span> lines]</span><br><span class="line">            </span><br><span class="line">        self.data_transforms = data_transforms</span><br><span class="line">        self.dataset = dataset</span><br><span class="line">        self.loader = loader</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__len__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> len(self.img_name)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__getitem__</span><span class="params">(self, item)</span>:</span></span><br><span class="line">        img_name = self.img_name[item]</span><br><span class="line">        label = self.img_label[item]</span><br><span class="line">        img = self.loader(img_name)     <span class="comment"># 采用default_loader方法来读取图像</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> self.data_transforms <span class="keyword">is</span> <span class="keyword">not</span> <span class="keyword">None</span>:</span><br><span class="line">            <span class="keyword">try</span>:</span><br><span class="line">                <span class="comment"># 在Transform中将每张图像都封装成Tensor</span></span><br><span class="line">                img = self.data_transforms[self.dataset](img)</span><br><span class="line">            <span class="keyword">except</span>:</span><br><span class="line">                print(<span class="string">"Cannot transform image: &#123;&#125;"</span>.format(img_name))</span><br><span class="line">        <span class="keyword">return</span> img, label</span><br></pre></td></tr></table></figure>
+<p>数据读取接口的使用 👇<br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># call</span></span><br><span class="line">image_datasets = &#123;x: customData(img_path=<span class="string">'/ImagePath'</span>,</span><br><span class="line">                                    txt_path=(<span class="string">'/TxtFile/'</span> + x + <span class="string">'.txt'</span>),</span><br><span class="line">                                    data_transforms=data_transforms,</span><br><span class="line">                                    dataset=x) <span class="keyword">for</span> x <span class="keyword">in</span> [<span class="string">'train'</span>, <span class="string">'val'</span>]&#125;</span><br><span class="line">     </span><br><span class="line"><span class="comment"># DataLoader (list → Tensor)，将这个batch的图像数据和标签都分别封装成Tensor</span></span><br><span class="line">dataloders = &#123;x: torch.utils.data.DataLoader(image_datasets[x],</span><br><span class="line">                                                 batch_size=batch_size,</span><br><span class="line">                                                 shuffle=<span class="keyword">True</span>) <span class="keyword">for</span> x <span class="keyword">in</span> [<span class="string">'train'</span>, <span class="string">'val'</span>]&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="保存模型"><a href="#保存模型" class="headerlink" title="保存模型"></a>保存模型</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">torch.save(model, <span class="string">'output/resnet_epoch&#123;&#125;.pkl'</span>.format(epoch)) <span class="comment"># 如果这个output文件夹没有，可以手动新建一个或者在代码里面新建</span></span><br></pre></td></tr></table></figure>
+<p>完整代码：<a href="https://github.com/miraclewkf/ImageClassification-PyTorch/blob/master/level2/train_customData.py" target="_blank" rel="noopener">train_customData.py
+</a></p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2019-03-14T12:22:21.754Z" itemprop="dateUpdated">2019-03-14 20:22:21</time>
+</span><br>
+
+
+        
+    </div>
+    
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/avatar.jpg" alt="CaptainSE">
+            CaptainSE
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/03/14/PyTorch学习之路_CSDN/&title=《PyTorch学习之路_CSDN》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/03/14/PyTorch学习之路_CSDN/&title=《PyTorch学习之路_CSDN》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】转载于 AI之路" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/03/14/PyTorch学习之路_CSDN/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《PyTorch学习之路_CSDN》 — Go Further&url=http://yoursite.com/2019/03/14/PyTorch学习之路_CSDN/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2019/03/14/PyTorch学习之路_CSDN/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2019/03/13/面经总结/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">面经总结</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢老板~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>CaptainSE &copy; 2015 - 2019</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/03/14/PyTorch学习之路_CSDN/&title=《PyTorch学习之路_CSDN》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/03/14/PyTorch学习之路_CSDN/&title=《PyTorch学习之路_CSDN》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】转载于 AI之路" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/03/14/PyTorch学习之路_CSDN/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《PyTorch学习之路_CSDN》 — Go Further&url=http://yoursite.com/2019/03/14/PyTorch学习之路_CSDN/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2019/03/14/PyTorch学习之路_CSDN/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJUlEQVR42u3aS3KDQAwFQN//0mTrqgT8pJmkAmpWrhgCzULW7/WKj+PteP9Lcn5+7fczNx8YGBi3ZRyXx973dPZ/kvuenYOBgTGHcXbL5HPybfJw1/f68MwYGBgYQYhMEr4kiGNgYGDsYuShs1f6YmBgYPSK2BVqwkiSyw21OAYGxg0ZeZvs7z//ynwDAwPjVoyjeOQBsVqm5kH2h3thYGA8mlFN166bbnmZuh5wMTAwpjHWy8VeyE5eQTJywMDAmMCopoArQbm3EHaNxMDAmMPIlyTyQrQ8hoxDLQYGxhxGNX/sLYpVQ3mZh4GBMYCRLzrk4bKKX1nOwMDAmMBIWmzVkUB1vaw6fjhNDTEwMB7NWGmB9VYu8rD7AYyBgTGAsTT5DDK0vJFXLZILvwYYGBi3ZVTLyL2jgjw0b6vIMTAwbs7Y275PCtQ8NP/izggGBsa/Z6ykbr1FjfXWW1TEYmBgPJTRGwbk3ybBNG/MYWBgzGGsjwGSsJsXunlKetpuw8DAGMPYNYZMmne7WoEYGBgTGHkC18NXy91ykoqBgTGSUV0XWx8S9K7FwMB4NuMoHr3xZPW9lscSGBgYj2b0QmQO7q185UUvBgbGHMbeB8qL2PWA2xwMYGBg3JaRN9ryVYn8QXsrGhgYGBhJilYtXHcNLzEwMDCqj9tbHauyP4RpDAyMAYzqWljvzF1DTQwMjGmMaumYkHpLYPm1S/MNDAyMOzG+AIQcS6kPJ+npAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = 'Go Further | Stay Hungry, Stay Foolish';
+            clearTimeout(titleTime);
+        } else {
+            document.title = 'Go Further | Stay Hungry, Stay Foolish';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
