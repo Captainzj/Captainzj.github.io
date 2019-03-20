@@ -29,7 +29,7 @@
 <meta property="og:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2019/03/13/DeepLiver-model-note/nvidia-smi.png">
-<meta property="og:updated_time" content="2019-03-14T13:53:37.664Z">
+<meta property="og:updated_time" content="2019-03-20T05:41:04.035Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DeepLiver_model_note">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
@@ -120,7 +120,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="検索">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -192,7 +192,7 @@
 <li>调用 <code>add_argument()</code> 方法添加参数</li>
 <li>使用 <code>parse_args()</code> 解析添加的参数</li>
 </ol>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> argparse</span><br><span class="line"><span class="comment"># 创建 ArgumentParser() 对象</span></span><br><span class="line">parser = argparse.ArgumentParser(description=<span class="string">'U-Net 2d'</span>) </span><br><span class="line"><span class="comment"># 调用 add_argument() 方法添加参数</span></span><br><span class="line">parser.add_argument(<span class="string">'--resume'</span>, <span class="string">'-m'</span>, default=<span class="string">''</span>, metavar=<span class="string">'RESUME'</span>,help=<span class="string">'model parameters to load'</span>)   <span class="comment"># 可选参数</span></span><br><span class="line">parser.add_argument(<span class="string">'--save_dir'</span>, default=<span class="string">''</span>, type=str, metavar=<span class="string">'PATH'</span>,help=<span class="string">'path to save checkpoint files'</span>) <span class="comment"># 可选参数</span></span><br><span class="line">parser.add_argument(<span class="string">'--test'</span>, default=<span class="number">0</span>, type=int, metavar=<span class="string">'TEST'</span>,help=<span class="string">'1 do test evaluation, 0 not'</span>) <span class="comment"># 可选参数</span></span><br><span class="line"><span class="comment"># 使用 parse_args() 解析添加的参数</span></span><br><span class="line">args = parser.parse_args()</span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> args.integer</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> argparse</span><br><span class="line"><span class="comment"># 创建 ArgumentParser() 对象</span></span><br><span class="line">parser = argparse.ArgumentParser(description=<span class="string">'U-Net 2d'</span>) </span><br><span class="line"><span class="comment"># 调用 add_argument() 方法添加参数</span></span><br><span class="line">parser.add_argument(<span class="string">'--resume'</span>, <span class="string">'-m'</span>, default=<span class="string">''</span>, metavar=<span class="string">'RESUME'</span>,help=<span class="string">'model parameters to load'</span>)   <span class="comment"># 可选参数</span></span><br><span class="line">parser.add_argument(<span class="string">'--save_dir'</span>, default=<span class="string">''</span>, type=str, metavar=<span class="string">'PATH'</span>,help=<span class="string">'path to save checkpoint files'</span>) <span class="comment"># 可选参数</span></span><br><span class="line">parser.add_argument(<span class="string">'--test'</span>, default=<span class="number">0</span>, type=int, metavar=<span class="string">'TEST'</span>,help=<span class="string">'1 do test evaluation, 0 not'</span>) <span class="comment"># 可选参数</span></span><br><span class="line"><span class="comment"># 使用 parse_args() 解析添加的参数</span></span><br><span class="line">args = parser.parse_args()</span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> args.resume</span><br></pre></td></tr></table></figure>
 <ul>
 <li>metavar - 在 usage 说明中的参数名称，对于必选参数默认就是参数名称，对于可选参数默认是全大写的参数名称.</li>
 </ul>
@@ -233,7 +233,7 @@ $$</p>
     <div class="content">
         
 <span class="post-time">
-    最終更新：<time datetime="2019-03-14T13:53:37.664Z" itemprop="dateUpdated">2019-03-14 21:53:37</time>
+    Last updated: <time datetime="2019-03-20T05:41:04.035Z" itemprop="dateUpdated">2019-03-20 13:41:04</time>
 </span><br>
 
 
@@ -399,7 +399,7 @@ $$</p>
             
                 <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
             
-            <span>このブログの内容物は<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja">クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際ライセンスの下に提供されています</a></span>
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
         </p>
     </div>
     <div class="bottom">
