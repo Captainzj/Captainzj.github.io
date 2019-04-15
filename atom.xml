@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-15T12:14:33.325Z</updated>
+  <updated>2019-04-15T12:22:46.746Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://yoursite.com/2019/04/15/Win10-Ubuntu18-04/"/>
     <id>http://yoursite.com/2019/04/15/Win10-Ubuntu18-04/</id>
     <published>2019-04-15T11:49:13.000Z</published>
-    <updated>2019-04-15T12:14:33.325Z</updated>
+    <updated>2019-04-15T12:22:46.746Z</updated>
     
-    <content type="html"><![CDATA[<p>【阅读时间】XXX min XXX words<br>【阅读内容】……</p><a id="more"></a><h3 id="Windows10-安装"><a href="#Windows10-安装" class="headerlink" title="Windows10 安装"></a>Windows10 安装</h3><ul><li>选择最新版本的多版本（家庭版\企业版\专业版）镜像烧录启动盘</li></ul><h3 id="Ubuntu18-04-安装"><a href="#Ubuntu18-04-安装" class="headerlink" title="Ubuntu18.04 安装"></a>Ubuntu18.04 安装</h3><ul><li>安装前，于win10系统 「此电脑（右键） - 管理 - 存储/磁盘管理」对欲安装Ubuntu系统的磁盘分区进行压缩卷操作</li><li>使用UltraISO烧录镜像时，需选择便携启动</li><li>使用启动盘安装过程，前期无脑Continue；直至选择安装类型（方式），选底部「else something」<ul><li>固态硬盘<ul><li>/ 根目录：32768MB(32G)  主分区（划重点）</li><li>swap：32768MB(32G)  逻辑分区</li><li>EFI：1024MB(1G) 逻辑分区</li></ul></li><li>机械硬盘<ul><li>/home：976GB 逻辑分区  </li></ul></li></ul></li></ul>]]></content>
+    <content type="html"><![CDATA[<p>【阅读时间】XXX min XXX words<br>【阅读内容】……</p><a id="more"></a><h3 id="Windows10-安装"><a href="#Windows10-安装" class="headerlink" title="Windows10 安装"></a>Windows10 安装</h3><ul><li>选择最新版本的多版本（家庭版\企业版\专业版）镜像烧录启动盘</li></ul><h3 id="Ubuntu18-04-安装"><a href="#Ubuntu18-04-安装" class="headerlink" title="Ubuntu18.04 安装"></a>Ubuntu18.04 安装</h3><ul><li>安装前，于win10系统 「此电脑（右键） - 管理 - 存储/磁盘管理」对欲安装Ubuntu系统的磁盘分区进行压缩卷操作</li><li>使用UltraISO烧录镜像时，需选择便携启动</li><li>使用启动盘安装过程，前期无脑Continue；直至选择安装类型（方式），选底部「else something」<ul><li>固态硬盘<ul><li>/ 根目录：32768MB(32G)  主分区（划重点）</li><li>swap：32768MB(32G)  逻辑分区</li><li>EFI：1024MB(1G) 逻辑分区</li></ul></li><li>机械硬盘<ul><li>/home：976GB 逻辑分区  </li></ul></li></ul></li><li>（划重点）若开机欲由Ubuntu引导，须选用EFI所在盘符作为loader；若需由Windows引导boot，选「Win Boot Manager」所在盘符作为loader</li></ul><h3 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h3><p>装机BUG，「推倒重来」是最优解    </p>]]></content>
     
     <summary type="html">
     
