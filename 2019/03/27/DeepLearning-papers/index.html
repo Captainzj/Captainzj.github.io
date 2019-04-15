@@ -32,7 +32,7 @@
 <meta property="og:image" content="https://img-blog.csdn.net/20150714193600011?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">
 <meta property="og:image" content="https://img-blog.csdn.net/20150714195109640?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">
 <meta property="og:image" content="http://yoursite.com/2019/03/27/DeepLearning-papers/Figure1.png">
-<meta property="og:updated_time" content="2019-03-27T13:56:31.474Z">
+<meta property="og:updated_time" content="2019-03-27T17:18:13.709Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DeepLearing_papers">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
@@ -239,7 +239,7 @@
 <li><a href="https://github.com/fourmi1995/IronSegExperiment-FC-DenseNet.git" target="_blank" rel="noopener">https://github.com/fourmi1995/IronSegExperiment-FC-DenseNet.git</a></li>
 <li><a href="https://github.com/SimJeg/FC-DenseNet" target="_blank" rel="noopener">https://github.com/SimJeg/FC-DenseNet</a></li>
 </ul>
-<h5 id="参考笔记-1"><a href="#参考笔记-1" class="headerlink" title="参考笔记"></a>参考笔记</h5><p><a href="https://zhuanlan.zhihu.com/p/31730274" target="_blank" rel="noopener">【CV-Semantic Segmentation】FC-DenseNet阅读笔记</a></p>
+<h5 id="参考笔记-1"><a href="#参考笔记-1" class="headerlink" title="参考笔记"></a>参考笔记</h5><p><a href="https://www.cnblogs.com/fourmi/p/9881741.html" target="_blank" rel="noopener">论文阅读笔记</a>、<a href="https://zhuanlan.zhihu.com/p/31730274" target="_blank" rel="noopener">【CV-Semantic Segmentation】FC-DenseNet阅读笔记</a></p>
 <h5 id="简述-1"><a href="#简述-1" class="headerlink" title="简述"></a>简述</h5><p><center><br><img src="/2019/03/27/DeepLearning-papers/Figure1.png" width="300"><br></center><br>本论文将DenseNets扩展为FCNs，再加上上采样路径来恢复输入分辨率。在特征图上采样过程中，增加上采样通道无疑会增加计算量和参数个数，为了消除该影响，我们<code>仅在dense模块后增加上采样通道</code>，这使得每种分辨率的dense模块<code>上采样通道与池化层个数无关</code>，通过下采样和上采样间的跨层连接，高分辨率的信息得以传递。</p>
 <p><strong>主要贡献：</strong><br>（1）改进DenseNet结构为FCN用于分割，同时缓解了feature map数量的激增。<br>（2）根据dense block提出的上采样结构，比普通的上采样方式效果好很多。<br>（3）该模型不需要预训练模型和后处理过程。</p>
 
@@ -250,7 +250,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2019-03-27T13:56:31.474Z" itemprop="dateUpdated">2019-03-27 21:56:31</time>
+    Last updated: <time datetime="2019-03-27T17:18:13.709Z" itemprop="dateUpdated">2019-03-28 01:18:13</time>
 </span><br>
 
 
@@ -327,7 +327,14 @@
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2019/04/15/Win10-Ubuntu18-04/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Win10+Ubuntu18.04.md</h4>
+      </a>
+    </div>
   
 
   
