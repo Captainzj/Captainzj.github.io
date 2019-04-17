@@ -28,7 +28,7 @@
 <meta property="og:site_name" content="Go Further">
 <meta property="og:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-16T15:55:59.959Z">
+<meta property="og:updated_time" content="2019-04-17T02:55:34.195Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Win10+Ubuntu18.04.md">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
@@ -206,13 +206,17 @@
 </li>
 </ul>
 </li>
-<li>（划重点）若开机欲由Ubuntu引导，须选用EFI所在盘符作为loader；若需由Windows引导boot，选「Win Boot Manager」所在盘符作为loader<ul>
+<li><p>（划重点）若开机欲由Ubuntu引导，须选用EFI所在盘符作为loader；若需由Windows引导boot，选「Win Boot Manager」所在盘符作为loader</p>
+<ul>
 <li>若重启时，默认为Windows自启，无Ubuntu引导，使用EasyBCD添加开机引导项</li>
 </ul>
 </li>
+<li><p>强烈推荐：换清华源</p>
+</li>
 </ul>
 <h3 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h3><p>装机BUG，「推倒重来」是最优解    </p>
-<h2 id="Ubuntu-深度学习环境配置"><a href="#Ubuntu-深度学习环境配置" class="headerlink" title="Ubuntu 深度学习环境配置"></a>Ubuntu 深度学习环境配置</h2><h3 id="NVIDIA驱动安装"><a href="#NVIDIA驱动安装" class="headerlink" title="NVIDIA驱动安装"></a>NVIDIA驱动安装</h3><p>参考：<a href="https://blog.csdn.net/wf19930209/article/details/81877822" target="_blank" rel="noopener">Linux安装NVIDIA显卡驱动的正确姿势</a>、<a href="https://blog.csdn.net/tjuyanming/article/details/80862290" target="_blank" rel="noopener">Ubuntu 18.04 NVIDIA驱动安装总结</a><br>NVIDIA 驱动程序下载：<a href="https://www.nvidia.cn/Download/index.aspx?lang=cn" target="_blank" rel="noopener">https://www.nvidia.cn/Download/index.aspx?lang=cn</a></p>
+<h2 id="Ubuntu-深度学习环境配置"><a href="#Ubuntu-深度学习环境配置" class="headerlink" title="Ubuntu 深度学习环境配置"></a>Ubuntu 深度学习环境配置</h2><p><a href="https://blog.csdn.net/u013066730/article/details/80980940" target="_blank" rel="noopener">nvidia驱动，cuda，cudnn关系</a></p>
+<h3 id="NVIDIA驱动安装"><a href="#NVIDIA驱动安装" class="headerlink" title="NVIDIA驱动安装"></a>NVIDIA驱动安装</h3><p>参考：<a href="https://blog.csdn.net/wf19930209/article/details/81877822" target="_blank" rel="noopener">Linux安装NVIDIA显卡驱动的正确姿势</a>、<a href="https://blog.csdn.net/tjuyanming/article/details/80862290" target="_blank" rel="noopener">Ubuntu 18.04 NVIDIA驱动安装总结</a><br>NVIDIA 驱动程序下载：<a href="https://www.nvidia.cn/Download/index.aspx?lang=cn" target="_blank" rel="noopener">https://www.nvidia.cn/Download/index.aspx?lang=cn</a></p>
 <ul>
 <li><p>禁用nouveau</p>
   <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">1. 编辑黑名单配置文件 `$ sudo gedit /etc/modprobe.d/blacklist.conf`</span><br><span class="line">2. 文件末添加</span><br><span class="line">    `blacklist nouveau`</span><br><span class="line">    `options nouveau modeset=0`</span><br><span class="line">3. 更新initramfs   `$ sudo update-initramfs -u`</span><br><span class="line">4. 重启            `$ reboot`</span><br><span class="line">5. 重启后执行 `$ lsmod | grep nouveau` （无输出即可）</span><br></pre></td></tr></table></figure>
@@ -257,28 +261,28 @@
  <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span>注意，根据自己的版本，修改cuda-10.0...</span><br><span class="line">export PATH=/usr/local/cuda-10.0/bin$&#123;PATH:+:$PATH&#125;&#125;   </span><br><span class="line">export LD_LIBRARY_PATH=/usr/local/cuda-10.0/lib64$&#123;LD_LIBRARY_PATH:+:$&#123;LD_LIBRARY_PATH&#125;&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>打开<code>/etc/profile</code>，文末加上以下代码：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">export PATH=/usr/local/cuda/bin:$PATH</span><br></pre></td></tr></table></figure>
+ <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">export PATH=/usr/local/cuda/bin:$PATH</span><br></pre></td></tr></table></figure>
+ <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span> source /etc/profile</span><br><span class="line"><span class="meta">$</span> source ~/.bashrc</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装第三方依赖</p>
+ <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span> sudo apt-get install g++ freeglut3-dev build-essential libx11-dev libxmu-dev libxi-dev libglu1-mesa libglu1-mesa-dev</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span> source /etc/profile</span><br><span class="line"><span class="meta">$</span> source ~/.bashrc</span><br></pre></td></tr></table></figure>
-<ol start="4">
-<li>安装第三方依赖<h4 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h4></li>
-</ol>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span> nvcc -V   #查看CUDA的版本</span><br></pre></td></tr></table></figure>
+<h4 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span> nvcc -V   #查看CUDA的版本</span><br></pre></td></tr></table></figure>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span> run Sample </span><br><span class="line"><span class="meta">$</span> cd /usr/local/cuda/samples/2_Graphics/volumeRender</span><br><span class="line"><span class="meta">$</span> sudo make</span><br><span class="line"><span class="meta">$</span> ./volumeRender</span><br></pre></td></tr></table></figure>
-<h3 id="cuDNN-安装"><a href="#cuDNN-安装" class="headerlink" title="cuDNN 安装"></a>cuDNN 安装</h3><p>参考：<a href="https://blog.csdn.net/m0_37924639/article/details/78785699" target="_blank" rel="noopener">Linux下CUDA+CUDNN+TensorFlow安装笔记</a>、<a href="https://blog.csdn.net/qq_32408773/article/details/84112166" target="_blank" rel="noopener">Ubuntu18.04安装CUDA10、CUDNN</a><br><a href="https://developer.nvidia.com/rdp/cudnn-download" target="_blank" rel="noopener">cuDNN Download</a></p>
-<p>进入CUDNN安装包所在目录，执行以下命令：</p>
+<h3 id="cuDNN-安装"><a href="#cuDNN-安装" class="headerlink" title="cuDNN 安装"></a>cuDNN 安装</h3><p>参考：<a href="https://blog.csdn.net/m0_37924639/article/details/78785699" target="_blank" rel="noopener">Linux下CUDA+CUDNN+TensorFlow安装笔记</a>、<a href="https://blog.csdn.net/qq_32408773/article/details/84112166" target="_blank" rel="noopener">Ubuntu18.04安装CUDA10、CUDNN</a><br>cuDNN Download：<a href="https://developer.nvidia.com/rdp/cudnn-download" target="_blank" rel="noopener">https://developer.nvidia.com/rdp/cudnn-download</a></p>
+<p>下载<code>cuDNN Runtime Library for Ubuntu18.04 (Deb)</code>、<code>cuDNN Developer Library for Ubuntu18.04 (Deb)</code>、<code>cuDNN Code Samples and User Guide for Ubuntu18.04 (Deb)</code>，进入CUDNN安装包所在目录，执行以下命令：</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo dpkg -i runtime包.deb</span><br><span class="line">sudo dpkg -i developer包.deb</span><br><span class="line">sudo dpkg -i 代码sample包.deb</span><br></pre></td></tr></table></figure>
 <p>至此，CUDNN安装完成</p>
 <hr>
-<p>下载完成后解压<br><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span> sudo tar -xvzf cudnn-10.0-linux-x64-v7.5.0.56.tgz</span><br></pre></td></tr></table></figure></p>
+<p>下载<code>cuDNN Library for Linux</code>完成后解压：<br><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span> sudo tar -xvzf cudnn-10.0-linux-x64-v7.5.0.56.tgz</span><br></pre></td></tr></table></figure></p>
 <p>进入文件夹：<br><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo cp cuda/include/cudnn.h /usr/local/cuda/include/ </span><br><span class="line">sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64/ </span><br><span class="line">sudo chmod a+r /usr/local/cuda/include/cudnn.h </span><br><span class="line">sudo chmod a+r /usr/local/cuda/lib64/libcudnn*</span><br></pre></td></tr></table></figure></p>
 <p>在终端查看CUDNN版本：<br><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /usr/local/cuda/include/cudnn.h | grep CUDNN_MAJOR -A 2</span><br></pre></td></tr></table></figure></p>
 <p>参考：<a href="https://blog.csdn.net/weixin_40859436/article/details/83152249" target="_blank" rel="noopener">Ubuntu18.04+RTX2080+cuda10+tensorflow</a>、<a href="https://blog.csdn.net/u010801439/article/details/80483036" target="_blank" rel="noopener">真实机下 ubuntu 18.04 安装GPU +CUDA+cuDNN 以及其版本选择（亲测非常实用）</a></p>
 <h2 id="Ubuntu-常用软件"><a href="#Ubuntu-常用软件" class="headerlink" title="Ubuntu 常用软件"></a>Ubuntu 常用软件</h2><h3 id="TeamViewer"><a href="#TeamViewer" class="headerlink" title="TeamViewer"></a>TeamViewer</h3><ol>
-<li>下载*.deb package 14.2.2558 <a href="https://www.teamviewer.com/zhcn/download/linux/" target="_blank" rel="noopener">https://www.teamviewer.com/zhcn/download/linux/</a></li>
+<li>下载*.deb package <a href="https://www.teamviewer.com/zhcn/download/linux/" target="_blank" rel="noopener">https://www.teamviewer.com/zhcn/download/linux/</a></li>
 <li><p>命令行安装</p>
- <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo dpkg -i teamviewer-host_14.2.8352_amd64.deb</span><br><span class="line">sudo apt install -f</span><br></pre></td></tr></table></figure>
+ <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo dpkg -i teamviewer_14.2.8352_amd64.deb</span><br><span class="line">sudo apt install -f  # 若提示缺少依赖，运行此命令</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>启动teamviewer</p>
  <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span> teamviewer</span><br></pre></td></tr></table></figure>
@@ -299,7 +303,7 @@
     <div class="content">
         
 <span class="post-time">
-    最終更新：<time datetime="2019-04-16T15:55:59.959Z" itemprop="dateUpdated">2019-04-16 23:55:59</time>
+    最終更新：<time datetime="2019-04-17T02:55:34.195Z" itemprop="dateUpdated">2019-04-17 10:55:34</time>
 </span><br>
 
 
