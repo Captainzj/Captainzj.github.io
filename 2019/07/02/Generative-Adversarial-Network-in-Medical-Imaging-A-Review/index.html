@@ -14,24 +14,23 @@
     
     
     
-    <title>gitNode_js | Go Further | Stay Hungry, Stay Foolish</title>
+    <title>Generative Adversarial Network in Medical Imaging: A Review | Go Further | Stay Hungry, Stay Foolish</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#142421">
     
     
-    <meta name="keywords" content="Node.js">
+    <meta name="keywords" content="">
     <meta name="description" content="【阅读时间】XXX min XXX words【阅读内容】……">
-<meta name="keywords" content="Node.js">
 <meta property="og:type" content="article">
-<meta property="og:title" content="gitNode_js">
-<meta property="og:url" content="http://yoursite.com/2018/10/28/gitNode-js/index.html">
+<meta property="og:title" content="Generative Adversarial Network in Medical Imaging: A Review">
+<meta property="og:url" content="http://yoursite.com/2019/07/02/Generative-Adversarial-Network-in-Medical-Imaging-A-Review/index.html">
 <meta property="og:site_name" content="Go Further">
 <meta property="og:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-28T13:41:39.000Z">
+<meta property="og:updated_time" content="2019-07-02T06:23:17.676Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="gitNode_js">
+<meta name="twitter:title" content="Generative Adversarial Network in Medical Imaging: A Review">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
     
         <link rel="alternate" type="application/atom+xml" title="Go Further" href="/atom.xml">
@@ -113,7 +112,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">gitNode_js</div>
+        <div class="flex-col header-title ellipsis">Generative Adversarial Network in Medical Imaging: A Review</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -135,13 +134,15 @@
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">gitNode_js</h1>
+        <h1 class="title">Generative Adversarial Network in Medical Imaging: A Review</h1>
         <h5 class="subtitle">
             
-                <time datetime="2018-10-28T13:40:14.000Z" itemprop="datePublished" class="page-time">
-  2018-10-28
+                <time datetime="2019-07-02T06:18:42.000Z" itemprop="datePublished" class="page-time">
+  2019-07-02
 </time>
 
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Paper/">Paper</a></li></ul>
 
             
         </h5>
@@ -156,15 +157,17 @@
 <div class="container body-wrap">
     
 
-<article id="post-gitNode-js"
+<article id="post-Generative-Adversarial-Network-in-Medical-Imaging-A-Review"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">gitNode_js</h1>
+        <h1 class="post-card-title">Generative Adversarial Network in Medical Imaging: A Review</h1>
         <div class="post-meta">
-            <time class="post-time" title="2018-10-28 21:40:14" datetime="2018-10-28T13:40:14.000Z"  itemprop="datePublished">2018-10-28</time>
+            <time class="post-time" title="2019-07-02 14:18:42" datetime="2019-07-02T06:18:42.000Z"  itemprop="datePublished">2019-07-02</time>
 
             
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Paper/">Paper</a></li></ul>
+
 
 
             
@@ -177,8 +180,6 @@
         <div class="post-content" id="post-content" itemprop="postContent">
             <p>【阅读时间】XXX min XXX words<br>【阅读内容】……</p>
 <a id="more"></a>
-<p><a href="http://nodejs.cn/api/child_process.html" target="_blank" rel="noopener">Node.js v10.15.0 文档</a></p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> child_process = <span class="built_in">require</span>(<span class="string">'child_process'</span>);</span><br><span class="line"><span class="keyword">let</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(path.resolve(__dirname, <span class="string">'../portal_build'</span>))</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> iocmds = [</span><br><span class="line">    <span class="string">`cp -r dist ../portal_build`</span>,</span><br><span class="line">    <span class="string">`cp -r views ../portal_build`</span>,</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> cmds = [</span><br><span class="line">    <span class="string">`git add .`</span>,</span><br><span class="line">    <span class="string">`git commit -m 'update in <span class="subst">$&#123;<span class="keyword">new</span> <span class="built_in">Date</span>()&#125;</span>'`</span>,</span><br><span class="line">    <span class="string">`git push`</span></span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> iocmd <span class="keyword">of</span> iocmds) &#123;</span><br><span class="line">    child_process.execSync(iocmd, (err, stdout, stderr) =&gt; &#123;</span><br><span class="line">        <span class="keyword">if</span> (err) <span class="keyword">return</span> <span class="built_in">console</span>.log(err)</span><br><span class="line">        <span class="built_in">console</span>.log(stdout)</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> cmd <span class="keyword">of</span> cmds) &#123;</span><br><span class="line">    child_process.execSync(cmd, &#123;</span><br><span class="line">        cwd: <span class="string">'/Users/Captain/Downloads/Github/Learning_DenseNet'</span></span><br><span class="line">    &#125;, (err, stdout, stderr) =&gt; &#123;</span><br><span class="line">        <span class="keyword">if</span> (err) <span class="keyword">return</span> <span class="built_in">console</span>.log(err)</span><br><span class="line">        <span class="built_in">console</span>.log(stdout)</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
         </div>
 
@@ -187,7 +188,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2018-12-28T13:41:39.000Z" itemprop="dateUpdated">2018-12-28 21:41:39</time>
+    Last updated: <time datetime="2019-07-02T06:23:17.676Z" itemprop="dateUpdated">2019-07-02 14:23:17</time>
 </span><br>
 
 
@@ -211,8 +212,6 @@
 
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node-js/">Node.js</a></li></ul>
-
 
             
 <div class="page-share-wrap">
@@ -221,7 +220,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/10/28/gitNode-js/&title=《gitNode_js》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/07/02/Generative-Adversarial-Network-in-Medical-Imaging-A-Review/&title=《Generative Adversarial Network in Medical Imaging: A Review》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -231,22 +230,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/10/28/gitNode-js/&title=《gitNode_js》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/07/02/Generative-Adversarial-Network-in-Medical-Imaging-A-Review/&title=《Generative Adversarial Network in Medical Imaging: A Review》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/10/28/gitNode-js/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/07/02/Generative-Adversarial-Network-in-Medical-Imaging-A-Review/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《gitNode_js》 — Go Further&url=http://yoursite.com/2018/10/28/gitNode-js/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Generative Adversarial Network in Medical Imaging: A Review》 — Go Further&url=http://yoursite.com/2019/07/02/Generative-Adversarial-Network-in-Medical-Imaging-A-Review/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/10/28/gitNode-js/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2019/07/02/Generative-Adversarial-Network-in-Medical-Imaging-A-Review/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -266,21 +265,14 @@
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between">
-  
-    <div class="waves-block waves-effect prev">
-      <a href="/2018/10/29/NiftyNet-Introduction/" id="post-prev" class="post-nav-link">
-        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">NiftyNet Introduction</h4>
-      </a>
-    </div>
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/2018/10/28/ADNI-Introduction/" id="post-next" class="post-nav-link">
+      <a href="/2019/04/15/Win10-Ubuntu18-04/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">ADNI_Introduction</h4>
+        <h4 class="title">Win10+Ubuntu18.04.md</h4>
       </a>
     </div>
   
@@ -377,7 +369,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/10/28/gitNode-js/&title=《gitNode_js》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/07/02/Generative-Adversarial-Network-in-Medical-Imaging-A-Review/&title=《Generative Adversarial Network in Medical Imaging: A Review》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -387,22 +379,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/10/28/gitNode-js/&title=《gitNode_js》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/07/02/Generative-Adversarial-Network-in-Medical-Imaging-A-Review/&title=《Generative Adversarial Network in Medical Imaging: A Review》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/10/28/gitNode-js/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/07/02/Generative-Adversarial-Network-in-Medical-Imaging-A-Review/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《gitNode_js》 — Go Further&url=http://yoursite.com/2018/10/28/gitNode-js/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Generative Adversarial Network in Medical Imaging: A Review》 — Go Further&url=http://yoursite.com/2019/07/02/Generative-Adversarial-Network-in-Medical-Imaging-A-Review/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/10/28/gitNode-js/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2019/07/02/Generative-Adversarial-Network-in-Medical-Imaging-A-Review/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -413,7 +405,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAAByUlEQVR42u3aS4rDMBAFwNz/0h6Y1YCJ5z3JkhMorUIi2+UsGvXn9YrX8bvO3/xd19eed15fNbVwcXGnucflOu85Pyzf+e4vSAy4uLj7ue3t8ggzE9RwcXE/nzvzax4KcXFxv52bJzC4uLjfyE2Sn5mqxQO5Gi4u7gS3LZiu+LywvouLi1tyj3LdW2Ctn46Li7uFO1PEzMujUUoTJEu4uLh7uPnwRLJ/rLE6eMTBxcVdzM0pxUFkovD6z+EGFxd3C7dtoI61WpODTlHZxcXFXczNX6AtbeTEKA3DxcXdwh0LamNFkLFxjTpvw8XFnea2B5QkWUraJ4OlE1xc3I3cJDy15ZKxaDo4QYaLi3srd6bVkSdIbXAsJLi4uMu4ecmjTZbacY2o9YuLi7uY25ZH25RpbIjz7cvj4uI+yk0aG9eBqT3uRGEOFxd3C/fetkcdmMp74uLi7uEe5WrbKmNRKBrZxMXFXcZtbz1WVK2bqUOBDxcX915um8zk5ZKZlmo9hIGLi7uA2waa+WGLqZkRXFzcj+EmDdT8NDLWXMHFxf1Mbn40SdokCR0XF/cp7r1N07bdUtwNFxd3C7ctmM60UmaGunBxcbdwfwC9ZjPSO6sHBgAAAABJRU5ErkJggg==" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAADK0lEQVR42u3aQXIbMQwEQP//08o1VclKA2DlEqHekytWlmj6MCLAn5/4eVw8zz+TvOfvf3/++epaNzzY2NjYh7AfT59/y0qKfv5/r2pISHltL7YGGxsbex07KSUvsRd48/BLLNjY2NjYeaRVgzBn5FGKjY2NjZ2ETRWcbFbC/qUAw8bGxj6EnWOqRfSCrbc1b+mlYWNjY388O5+Kfv7Pb5lvY2NjY38w+1F88gNMLw57V4LKCmxsbOxF7PmVnfddzcnTJ7ms+Z+qsLGxsVewe2PX6gAgOd70gq0XeNjY2Nib2PlVmKTQfJRbjaX5ECJ6MzY2Nvax7OTre7Wg3t5XB8O9ww82Njb2t7GrDaPJMODe6zijAMPGxsY+ij2JmV6j5x1jg16/CBsbG/t0dhIz1RKrI4feAGA0eMDGxsZexE6OGfnWTFpFSQ3JU/gTYmNjYy9iV3l58PQ2dzIwKF8ewsbGxj6cXW0ePV+g2gaqll59AzY2NjZ2r1kzv14zubiT1IyNjY29lT3fjryIaiMp377okIONjY29mp0fP5Ih7l0XgCZjg8v5NjY2NvYKdq+FlH/1T1o8+RWfatBiY2NjfwM7D7Beu783DMhbTtWWFjY2NvY+djJSzY8K+cK9AUAvPl8kNjY2NvY6drWhk0dONeryFlU+QrgMMGxsbOxj2fMDwF0j2+owYHRAwsbGxl7E7pVVHc3mIXRXsEVXfLCxsbFXsJMl89jIt+muA0x1mIGNjY29lT16RfECzWTQ22szXV7ZwcbGxl7Bvqvc3mGmF055Kyoa9GJjY2OvYOeXY6rB1is9qa36/p/81djY2NgHsnsRNW/Zz2MsqedyRWxsbOyl7Hnk5OA8XQs5nL8BGxsbewX7UXzy0e98yyZB1ZxvY2NjYx/IrgbA83LzI0r52NBaqzpCxsbGxj6XXQ2t+W8njPzw8+K32NjY2OvY+ch28uW+N+LtrRhd1sHGxsb+enb1Dkz++bxRlb/ntgDDxsbGPpydY0ZXaoIYGx1UsLGxsdexe42hyUi4NzboHY1GN5WwsbGxP55dbQYl7N6W9SpJNre6CjY2NvYh7D87iTZhfUtEuQAAAABJRU5ErkJggg==" alt="微信分享二维码">
 </div>
 
 
