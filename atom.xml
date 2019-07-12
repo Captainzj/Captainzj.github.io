@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-07-02T12:08:24.231Z</updated>
+  <updated>2019-07-12T10:10:04.488Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AD_Papers</title>
+    <link href="http://yoursite.com/2019/07/10/AD-Papers/"/>
+    <id>http://yoursite.com/2019/07/10/AD-Papers/</id>
+    <published>2019-07-10T10:37:04.000Z</published>
+    <updated>2019-07-12T10:10:04.488Z</updated>
+    
+    <content type="html"><![CDATA[<p>【阅读时间】XXX min XXX words<br>【阅读内容】……</p><a id="more"></a><h4 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h4><ul><li>氟脱氧葡萄糖正电子发射断层扫描（FDG-PET），提供了大脑代谢活动的定量测量，可以在结构变化发生之前识别与AD相关的变化，具有可接受的敏感性和准确性。 </li><li>ASL(Arterial Spin Labeling)：动脉自旋标记，三维伪连续ASL扫描的自动分类可以高精度地检测AD患者（&gt; 82％）</li></ul><table><thead><tr><th style="text-align:center">No</th><th>Data Source</th><th>Data Type</th><th>Method</th><th>Experiment</th></tr></thead><tbody><tr><td style="text-align:center"><a href="https://arxiv.org/abs/1710.04782" target="_blank" rel="noopener">1</a></td><td>ADNI</td><td>PET</td><td>M-CNN</td><td>AD vs NC(93.58),<br>sMCI vs pMCI(81.55),<br>tf sMCI vs pMCI(82.51)</td></tr><tr><td style="text-align:center"></td><td></td><td></td><td></td><td></td></tr><tr><td style="text-align:center"></td><td></td><td></td><td></td></tr></tbody></table><h4 id="1-Multiscale-deep-neural-network-based-analysis-of-FDG-PET-images-for-the-early-diagnosis-of-Alzheimer’s-disease"><a href="#1-Multiscale-deep-neural-network-based-analysis-of-FDG-PET-images-for-the-early-diagnosis-of-Alzheimer’s-disease" class="headerlink" title="1. Multiscale deep neural network based analysis of FDG-PET images for the early diagnosis of Alzheimer’s disease"></a>1. <a href="https://arxiv.org/abs/1710.04782" target="_blank" rel="noopener">Multiscale deep neural network based analysis of FDG-PET images for the early diagnosis of Alzheimer’s disease</a></h4><p>提出了一种新的深度学习框架，使用FDG-PET代谢成像来识别MCI的受试者（患有前AD症状的），并将其与其他MCI（非AD /非进展）受试者区分开来。 我们的多尺度深度神经网络仅使用来自单一模态（FDG-PET代谢数据）的测量获得82.51％的分类准确度，优于最近文献中公布的其他可比较的FDG-PET分类器。</p><h5 id="数据说明"><a href="#数据说明" class="headerlink" title="数据说明"></a>数据说明</h5><ul><li><p>来源：ADNI（<a href="http://adni.loni.usc.edu）" target="_blank" rel="noopener">http://adni.loni.usc.edu）</a></p></li><li><p>该论文对迄今为止（21 February 2018）为该项工作发布的最大数据集（1051名受试者的代谢情况）提出了最全面的方法验证，图像严格遵循标准化的成像协议</p><ul><li><p>受试者的人口统计学和临床信息：NC组 304项、sMCI组 409项、pMCI组 112项、AD组 226项</p><p><img src="/Users/Captain/Downloads/Captainzj.github.io/source/_posts/AD-Papers/1-Table-1.png" alt="受试者的人口统计学和临床信息"></p></li><li><p>质量控制：1）通过训练有素且专业的神经病理学家对每个脑图像的每个FreeSurfer分段进行手动质量评估。此外，通过手动编辑校正脑膜，白质，皮质或皮质下分割中的任何错误，并重新运行Freesurfer，直到T1 MR图像分割变得准确。2）可视化代谢度量</p></li></ul></li></ul><h5 id="主要贡献"><a href="#主要贡献" class="headerlink" title="主要贡献"></a>主要贡献</h5><ul><li>提出了一种新的多尺度深度神经网络框架，以学习基于AD病理学的代谢变化模式，作为正常对照（NC）代谢模式的判别; （该论文是第一个利用深度学习开发多尺度FDG-PET分类器的论文）</li><li>发现通过从NC和AD个体转移样本，深层结构可以在早期诊断任务中获得更好的判别能力</li><li>证明了具有不同验证设置的多分类器”投票“预测，可以使所提出的方法更加稳定和稳健，并提高其分类性能</li></ul><h5 id="细节"><a href="#细节" class="headerlink" title="细节"></a>细节</h5><ul><li><p><em>Image processing</em></p><ul><li><em>ROI segmentation</em>：Each T1 structural MRI image was segmented into gray matter and white matter using the freely available <code>FreeSurfer 5.3 package</code> with default parameter settings</li><li><em>Patch parcellation</em>： The technique used for this subdivision is a previously published technique where each ROI can be clustered using their spatial coordinates via a <code>k-means clustering algorithm</code></li><li><em>Coregistration</em>：The <code>FDG-PET</code> image and <code>skull-stripped MRI</code> scan of each target were then co-registered using the<code>FSL-FLIRT</code> program</li><li><em>Normalization</em>：The mean intensity in the <code>brainstem region</code> is hence calculated and used to divide the metabolism measures for all the other ROIs in the brain for each subject.</li><li><em>Visualization of metabolism measures</em>：perform visual <code>quality control</code> of the measures across the database</li></ul></li><li><p><em>Multiscale Deep Neural Network</em></p><ul><li>Unsupervised pre-training.</li><li>Supervised fine-tuning. </li><li>Dropout strategy.</li><li>Early stopping strategy.</li></ul></li><li><p><em>Instance-transfer learning</em>：the networks trained with transferred instances displayed better discriminative ability</p></li><li><p><em>Ensemble classifiers</em>：词袋法</p></li><li><p><em>Experimental setup</em>：Three binary classification experiments, (i) <code>NC vs AD</code>, (ii) <code>sMCI vs pMCI</code> and (iii) sMCI vs pMCI with transfer learning from NC and AD</p></li><li><p><strong>Results</strong></p><ul><li><p><em>Multiscale classification</em>：二分类实验中，粗精度的预测准确率优于细精度</p></li><li><p><em>Ensemble classifier design</em>：稳健</p></li></ul></li><li><p><strong>Discussion</strong></p><ul><li><em>Comparison with state-of-the-art methods</em>：我们提出的基于深度学习的方法显示sMCI和pMCI之间的分类准确性更高，无论是使用单一模式还是多模式研究</li><li><em>Multiscale classification</em>：与单一尺度特征相比，使用所有多尺度特征（包括从每个单尺度特征获得的判别信息）的组合分类性能产生了更高的精度结果。这表明在连锁多尺度特征上训练的网络（图2）仍然能够学习本文中使用的从小到大的补丁大小的隐藏模式。</li><li><em>Ensemble classifier</em>：集合分类器的准确性高于单个分类器的平均值，这表明具有不同训练和验证集的分集的集合分类器可以产生更稳健和稳定的分类器，因此可以改善分类性能更好的普遍性。</li></ul></li><li><p><strong>Conclusion</strong></p></li></ul><p>在本文中，我们使用<code>多尺度贴片FDG-PET深度学习</code>功能提出了一种新的AD早期诊断框架。所提出的框架利用<code>转移学习方法</code>和<code>集合分类器策略</code>来改善深度神经网络在区分sMCI和pMCI主体的任务中的性能。在1051名受试者的FDG-PET图像的大型数据库上进行的实验提供了支持三种断言的证据。 （1）所提出的方法，使用仅来自<code>单一FDG-PET模态</code>的特征，能够胜过在sMCI和pMCI分类任务中采用多模态特征的现有方法。 （2）所提出的网络可以从<code>多尺度特征</code>中学习判别模式，以提供具有更好判别性能的更健壮的分类器。 （3）使用不同验证集的<code>多个集成分类器</code>可以使网络更加健壮和稳定，并在统计上提高其分类性能。<br>对于未来的工作，将所提出的框架扩展到包含来自多种模态的信息是自然的，假设所得到的深度神经网络将从多个模态数据中学习更多信息，从而进一步改进所获得的分类准确度。尽管sMCI vs pMCI实验常用于验证近期研究（包括我们的研究）中方法的鉴别能力，但我们只能知道那些sMCI受试者在研究进展中时保持稳定并且可以转化为AD或其他神经退行性疾病。因此，在将来临床诊断的sMCI受试者的基本事实可能不完全准确，因此可能在分类中引入噪声/偏倚。幸运的是，随着更多数据的收集，分类系统将更好地捕获这些和其他噪声和可变性来源，我们提出的深度学习集合分类器可能非常适合这种情况。</p><h4 id="2-Application-of-Machine-Learning-to-Arterial-Spin-Labeling-in-Mild-Cognitive-Impairment-and-Alzheimer’s-Disease"><a href="#2-Application-of-Machine-Learning-to-Arterial-Spin-Labeling-in-Mild-Cognitive-Impairment-and-Alzheimer’s-Disease" class="headerlink" title="2. Application of Machine Learning to Arterial Spin Labeling in Mild Cognitive Impairment and Alzheimer’s Disease"></a>2. <a href="https://pubs.rsna.org/doi/full/10.1148/radiol.2016152703" target="_blank" rel="noopener">Application of Machine Learning to Arterial Spin Labeling in Mild Cognitive Impairment and Alzheimer’s Disease</a></h4><p>关于动脉自旋标记（ASL）的机器学习在治疗轻度认知障碍和阿尔茨海默病中的应用</p><p>本研究调查了ASL灌注图的多变量模式识别分析（SVM）是否可用于阿尔茨海默病（AD），轻度认知障碍（MCI）和主观认知衰退（SCD）患者的分类和单一主题预测。 W-score方法可以消除性别和年龄的混杂影响。</p><h5 id="细节-1"><a href="#细节-1" class="headerlink" title="细节"></a>细节</h5><p>ABSTRACT</p><ul><li>Purpose：<ul><li><code>ASL</code> → discrimination AD\MCI\SCD</li><li><code>W-score</code> → remove confounding effects of gender and age</li></ul></li><li>Materials and Methods<ul><li>Training of a Support Vector Machine (<code>SVM</code>) classifier used diagnostic status and perfusion maps.</li></ul></li><li>Results</li><li>Conclusion</li></ul><ol><li><p>INTRODUCTION</p></li><li><p>MATERIALS AND METHODS</p><ol><li><em>Participants</em></li><li><em>Data Acquisition</em></li><li><em>Preprocessing of MR imaging data</em></li><li><em>W-score maps</em>：<code>[(measured perfusion) – (predicted perfusion)] / (standard deviation of residuals)</code>.</li><li><em>SVM: Multivariate Pattern Recognition in Training-Set</em>：SVM接受了 leave-one-out交叉验证框架的训练，以区分AD患者，MCI患者和SCD患者。我们通过比较<code>两个患者组（SCD）</code>的W-得分图来评估分类器的诊断值。通过区分<code>AD和MCI</code>的患者的W-得分图来评估分类器对疾病进展的敏感性。最后，使用<code>MCIc和MCI</code>患者的Wscore图进行探索性分类训练，以研究分类器是否显示预后价值。</li><li><em>SVM: Prediction in new Subjects</em>:<code>Discrimination maps</code></li><li><em>Statistical Analysis</em>: <code>Evaluation</code></li></ol></li><li>RESULTS<ol><li><em>Participant Characteristics</em>:  数据集中受试者MMSE评分差异小</li><li><em>Training of the classifiers</em>：i. AD vs. SCD  ii. AD vs. MCI  iii. MCI vs. SCD </li><li><em>Predictions: assessment of generalisability</em>: <code>use of discrimination weights</code> i. AD vs. SCD  ii. AD vs. MCI  iii. MCI vs. SCD </li><li><em>Exploratory analyses: classifying MCI subgroups</em>: i. MCIc vs. SCD ii. MCIc vs. MCIs; use of the <code>AD vs. SCD training discrimination weights</code> for MCIc vs. SCD;The use of the same discrimination weights in MCIc vs. MCIs </li></ol></li><li>DISCUSSION</li><li>CONCLUSION：Using <code>automated methods</code>（即SVM）, age- and gender adjusted（W-score校准） ASL perfusion maps（特殊模态） can be used to classify and predict diagnoses of AD, MCI-converters, stable MCI patients and SCD subjects with good accuracy and AUC values.</li></ol><h4 id="3-Reproducible-evaluation-of-classification-methods-in-Alzheimer’s-disease"><a href="#3-Reproducible-evaluation-of-classification-methods-in-Alzheimer’s-disease" class="headerlink" title="3. [Reproducible evaluation of classification methods in Alzheimer’s disease:"></a>3. [Reproducible evaluation of classification methods in Alzheimer’s disease:</h4><p>Framework and application to MRI and PET data](<a href="https://arxiv.org/abs/1808.06452" target="_blank" rel="noopener">https://arxiv.org/abs/1808.06452</a>)</p><p>阿尔茨海默病分类方法的<code>再现评估</code>：MRI和PET数据的框架和应用</p><p>在本文中，我们使用三个公开可用的数据集（ADNI，AIBL和OASIS）提出了AD中<code>可再现</code>和客观分类实验的框架。该框架包括：i）将三个数据集自动转换为标准格式（BIDS）; ii）模块化的预处理流水线，特征提取和分类方法，以及评估框架，为不同组件的基准测试提供基准。</p><p>对于所有分类任务，FDG PET优于T1 MRI。</p><p>All the code of the framework and the experiments is publicly available: general- purpose tools have been integrated into the <a href="www.clinica.run">Clinica software</a> and the paper-specific code is available at: <a href="https://gitlab.icm-institute.org/aramislab/AD-ML" target="_blank" rel="noopener">https://gitlab.icm-institute.org/aramislab/AD-ML</a>.</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;【阅读时间】XXX min XXX words&lt;br&gt;【阅读内容】……&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Paper" scheme="http://yoursite.com/categories/Paper/"/>
+    
+    
+      <category term="ADNI" scheme="http://yoursite.com/tags/ADNI/"/>
+    
+  </entry>
   
   <entry>
     <title>Generative Adversarial Network in Medical Imaging A Review</title>
@@ -395,24 +417,6 @@
     </summary>
     
       <category term="精诊科技" scheme="http://yoursite.com/categories/%E7%B2%BE%E8%AF%8A%E7%A7%91%E6%8A%80/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Frequently-used Software/ISO</title>
-    <link href="http://yoursite.com/2019/02/15/Frequently-used-Software-ISO/"/>
-    <id>http://yoursite.com/2019/02/15/Frequently-used-Software-ISO/</id>
-    <published>2019-02-15T08:36:19.000Z</published>
-    <updated>2019-02-15T14:55:38.744Z</updated>
-    
-    <content type="html"><![CDATA[<p>【阅读时间】XXX min XXX words<br>【阅读内容】……</p><a id="more"></a><h4 id="Windows-镜像"><a href="#Windows-镜像" class="headerlink" title="Windows 镜像"></a>Windows 镜像</h4><p><a href="http://msdn.itellyou.cn" target="_blank" rel="noopener">MSDN, 我告诉你</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;【阅读时间】XXX min XXX words&lt;br&gt;【阅读内容】……&lt;/p&gt;
-    
-    </summary>
     
     
   </entry>
