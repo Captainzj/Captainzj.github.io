@@ -29,7 +29,7 @@
 <meta property="og:site_name" content="Go Further">
 <meta property="og:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-17T12:57:41.227Z">
+<meta property="og:updated_time" content="2019-07-17T14:46:52.326Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AD预处理工具">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
@@ -158,7 +158,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Install"><span class="post-toc-number">1.</span> <span class="post-toc-text">Install</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#FSL"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">FSL</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#FreeSurfer"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">FreeSurfer</span></a></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#FSL"><span class="post-toc-number">1.</span> <span class="post-toc-text">FSL</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Installation"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Installation</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#FreeSurfer"><span class="post-toc-number">2.</span> <span class="post-toc-text">FreeSurfer</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Installation-1"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">Installation</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Test-your-FreeSurfer-Installation"><span class="post-toc-number">2.1.1.</span> <span class="post-toc-text">Test your FreeSurfer Installation</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Preparation"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">Preparation</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#FreeSurfer-Tutorials"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">FreeSurfer Tutorials</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Introduction-to-FreeSurfer-Output"><span class="post-toc-number">2.3.1.</span> <span class="post-toc-text">Introduction to FreeSurfer Output</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#FAQ"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">FAQ</span></a></li></ol></li></ol>
         </nav>
     </aside>
 
@@ -184,20 +184,50 @@
         <div class="post-content" id="post-content" itemprop="postContent">
             <p>【阅读时间】XXX min XXX words<br>【阅读内容】……</p>
 <a id="more"></a>
-<h2 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h2><h3 id="FSL"><a href="#FSL" class="headerlink" title="FSL"></a>FSL</h3><ul>
-<li><p><a href="http://learning-archive.org/wp-content/uploads/2017/09/Ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85AFNI%E5%92%8CFSL.pdf" target="_blank" rel="noopener">Ubuntu下安装AFNI和FSL</a>  </p>
+<h2 id="FSL"><a href="#FSL" class="headerlink" title="FSL"></a>FSL</h2><h3 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h3><p><a href="http://learning-archive.org/wp-content/uploads/2017/09/Ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85AFNI%E5%92%8CFSL.pdf" target="_blank" rel="noopener">Ubuntu下安装AFNI和FSL</a>  </p>
 <p><strong>Notice: </strong> <code>source .profile</code></p>
-</li>
-</ul>
-<h3 id="FreeSurfer"><a href="#FreeSurfer" class="headerlink" title="FreeSurfer"></a>FreeSurfer</h3><ul>
+<h2 id="FreeSurfer"><a href="#FreeSurfer" class="headerlink" title="FreeSurfer"></a>FreeSurfer</h2><h3 id="Installation-1"><a href="#Installation-1" class="headerlink" title="Installation"></a>Installation</h3><ul>
 <li><p><a href="https://surfer.nmr.mgh.harvard.edu/fswiki/DownloadAndInstall" target="_blank" rel="noopener">FreeSurfer Download and Install</a></p>
 </li>
-<li><p>解决Freesurfer的license问题：可以在<a href="http://surfer.nmr.mgh.harvard.edu/registration.html" target="_blank" rel="noopener">官网</a>注册，邮箱会收到license.txt文件，拷贝至FreeSurfer解压目录。比如，我的license已经注册并下载，放在~/Downloads文件夹下。可以执行如下命令拷贝：</p>
+<li><p>解决Freesurfer的license问题：可以在<a href="http://surfer.nmr.mgh.harvard.edu/registration.html" target="_blank" rel="noopener">官网</a>注册，邮箱会收到license.txt文件，拷贝至FreeSurfer解压目录。比如，我的license已经注册并下载，放在~/Downloads文件夹下。可以执行如下命令拷贝：参考于<a href="https://www.jianshu.com/p/4db8227cbb81" target="_blank" rel="noopener">FSL/FreeSurfer安装教程</a></p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">~/Downloads$ sudo cp license.txt /usr/local/freesurfer/</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>更改subjects文件夹权限</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span> sudo chmod -R 777 /usr/local/freesurfer/subjects</span><br></pre></td></tr></table></figure>
 </li>
+</ul>
+<h4 id="Test-your-FreeSurfer-Installation"><a href="#Test-your-FreeSurfer-Installation" class="headerlink" title="Test your FreeSurfer Installation"></a>Test your FreeSurfer Installation</h4><ul>
+<li><p><strong>Example 1:</strong> Convert the sample-001.mgz to nifti format.</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span>&gt; cp $FREESURFER_HOME/subjects/sample-001.mgz .</span><br><span class="line"><span class="meta">$</span>&gt; mri_convert sample-001.mgz sample-001.nii.gz</span><br><span class="line">...</span><br><span class="line">reading from sample-001.mgz...</span><br><span class="line">TR=7.25, TE=3.22, TI=600.00, flip angle=7.00</span><br><span class="line">i_ras = (-0, -1, -0)</span><br><span class="line">j_ras = (-0, 0, -1)</span><br><span class="line">k_ras = (-1, 0, 0)</span><br><span class="line">writing to sample-001.nii.gz...</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Example 2:</strong> Perform a full recon-all on the nifti file.</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span>&gt; export SUBJECTS_DIR=&lt;path to subject directory&gt; # SUBJECTS_DIR变量为存储数据的目录</span><br><span class="line"><span class="meta">$</span>&gt; recon-all -i sample-001.nii.gz -s bert -all (creates a folder called bert in SUBJECTS_DIR)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Process your own data with a command such as this:</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">recon-all \</span><br><span class="line">  -i  &lt;one slice in the anatomical dicom series&gt; \</span><br><span class="line">  -s  &lt;subject id that you make up&gt; \</span><br><span class="line">  -sd &lt;directory to put the subject folder in&gt; \</span><br><span class="line">  -all</span><br></pre></td></tr></table></figure>
+<p>where the input (-i) file is a single file representing a <code>T1-weighted</code> data set. If you have DICOM images, you must find a file in the T1 series to pass. You can do this with the dcmunack command.</p>
+</li>
+<li><p><strong>Example 3:</strong> Perform a full recon-all on a pre-existing subject folder</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span>&gt; export SUBJECTS_DIR=&lt;path to subject directory&gt;</span><br><span class="line"><span class="meta">$</span>&gt; recon-all -s bert -all</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Example 4:</strong> View the output volumes, surfaces and subcortical segmentation of the fully recon-ed subject bert.</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span>&gt; cd $SUBJECTS_DIR</span><br><span class="line"><span class="meta">$</span>&gt; freeview -v \</span><br><span class="line">    bert/mri/T1.mgz \</span><br><span class="line">    bert/mri/wm.mgz \</span><br><span class="line">    bert/mri/brainmask.mgz \</span><br><span class="line">    bert/mri/aseg.mgz:colormap=lut:opacity=0.2 \</span><br><span class="line">    -f \</span><br><span class="line">    bert/surf/lh.white:edgecolor=blue \</span><br><span class="line">    bert/surf/lh.pial:edgecolor=red \</span><br><span class="line">    bert/surf/rh.white:edgecolor=blue \</span><br><span class="line">    bert/surf/rh.pial:edgecolor=red</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p><code>freeview.bin: error while loading shared libraries: libpng12.so.0: cannot open shared object file: No such file or directory</code>：Download the shared library from <a href="https://packages.ubuntu.com/xenial/amd64/libpng12-0/download" target="_blank" rel="noopener">https://packages.ubuntu.com/xenial/amd64/libpng12-0/download</a></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo dpkg -i libpng12-0_1.2.54-1ubuntu1.1_amd64.deb</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>freeview.bin: error while loading shared libraries: libjpeg.so.62: cannot open shared object file: No such file or directory</code></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo apt install libjpeg62</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Preparation"><a href="#Preparation" class="headerlink" title="Preparation"></a>Preparation</h3><ul>
+<li><a href="https://surfer.nmr.mgh.harvard.edu/fswiki/FsTutorial/Data" target="_blank" rel="noopener">FreeSurfer Tutorial Datasets</a></li>
+</ul>
+<h3 id="FreeSurfer-Tutorials"><a href="#FreeSurfer-Tutorials" class="headerlink" title="FreeSurfer Tutorials"></a><a href="https://surfer.nmr.mgh.harvard.edu/fswiki/Tutorials" target="_blank" rel="noopener">FreeSurfer Tutorials</a></h3><h4 id="Introduction-to-FreeSurfer-Output"><a href="#Introduction-to-FreeSurfer-Output" class="headerlink" title="Introduction to FreeSurfer Output"></a><a href="https://surfer.nmr.mgh.harvard.edu/fswiki/FsTutorial/OutputData_freeview" target="_blank" rel="noopener">Introduction to FreeSurfer Output</a></h4><h3 id="FAQ"><a href="#FAQ" class="headerlink" title="FAQ"></a>FAQ</h3><ul>
+<li>Runtime is so long. Can we use GPU accelerate？</li>
 </ul>
 
         </div>
@@ -207,7 +237,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2019-07-17T12:57:41.227Z" itemprop="dateUpdated">2019-07-17 20:57:41</time>
+    Last updated: <time datetime="2019-07-17T14:46:52.326Z" itemprop="dateUpdated">2019-07-17 22:46:52</time>
 </span><br>
 
 
