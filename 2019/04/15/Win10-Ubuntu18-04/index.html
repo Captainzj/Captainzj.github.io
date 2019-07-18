@@ -28,7 +28,7 @@
 <meta property="og:site_name" content="Go Further">
 <meta property="og:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-24T12:52:15.362Z">
+<meta property="og:updated_time" content="2019-07-18T08:54:46.328Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Win10+Ubuntu18.04.md">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
@@ -357,17 +357,17 @@
 <li>Install torch==0.3.1</li>
 </ul>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> pip install --upgrade pip</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> pip install torch==0.3.1</span></span><br></pre></td></tr></table></figure>
-<h3 id="Shadowsocks"><a href="#Shadowsocks" class="headerlink" title="Shadowsocks"></a>Shadowsocks</h3><p>参考链接：<a href="https://blog.csdn.net/neninee/article/details/86531359" target="_blank" rel="noopener">Ubuntu 18.04 下安装shadowsocks</a></p>
+<h3 id="Shadowsocks"><a href="#Shadowsocks" class="headerlink" title="Shadowsocks"></a>Shadowsocks</h3><p>参考链接：<a href="https://ywnz.com/linuxjc/2687.html" target="_blank" rel="noopener">Ubuntu 18.04 下安装shadowsocks</a></p>
 <p>1.下载所需工具</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo apt-get install python-pip</span><br><span class="line">sudo pip install shadowsocks</span><br></pre></td></tr></table></figure>
 <p>2.配置</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo gedit /etc/shadowsocks.json</span><br></pre></td></tr></table></figure>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    "server":"xxxxxxxxxx",</span><br><span class="line">    "server_port":xxxx,</span><br><span class="line">    "local_address": "127.0.0.1",</span><br><span class="line">    "local_port":1080,</span><br><span class="line">    "password":"xxxxxxxx",</span><br><span class="line">    "timeout":520,</span><br><span class="line">    "method":"aes-256-cfb"</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>3.启动</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo sslocal -c /etc/shadowsocks.json</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo sslocal -c /etc/shadowsocks.json</span><br><span class="line"><span class="meta">#</span><span class="bash"> 教程：sudo sslocal -c /etc/shadowsocks.json -d start</span></span><br></pre></td></tr></table></figure>
 <p>4.系统配置</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">Socks 主机： 127.0.0.1 1080</span><br></pre></td></tr></table></figure>
-<p>Firefox 同理配置即可</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">Socks 主机： 127.0.0.1 1080  # Firefox 同理配置即可</span><br></pre></td></tr></table></figure>
+<p>启动后，等待十分钟左右，方正常工作</p>
 
         </div>
 
@@ -376,7 +376,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2019-05-24T12:52:15.362Z" itemprop="dateUpdated">2019-05-24 20:52:15</time>
+    Last updated: <time datetime="2019-07-18T08:54:46.328Z" itemprop="dateUpdated">2019-07-18 16:54:46</time>
 </span><br>
 
 

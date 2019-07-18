@@ -29,7 +29,7 @@
 <meta property="og:site_name" content="Go Further">
 <meta property="og:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-17T14:46:52.326Z">
+<meta property="og:updated_time" content="2019-07-18T05:37:51.219Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AD预处理工具">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
@@ -202,6 +202,7 @@
 </li>
 <li><p><strong>Example 2:</strong> Perform a full recon-all on the nifti file.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span>&gt; export SUBJECTS_DIR=&lt;path to subject directory&gt; # SUBJECTS_DIR变量为存储数据的目录</span><br><span class="line"><span class="meta">$</span>&gt; recon-all -i sample-001.nii.gz -s bert -all (creates a folder called bert in SUBJECTS_DIR)</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">...</span><br><span class="line">Started at 2019年 07月 17日 星期三 20:54:07 CST </span><br><span class="line">Ended   at 2019年 07月 18日 星期四 02:37:36 CST</span><br><span class="line"><span class="meta">#</span>@#%# recon-all-run-time-hours 5.725</span><br><span class="line">recon-all -s bert finished without error at 2019年 07月 18日 星期四 02:37:36 CST</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
 <ul>
 <li>Process your own data with a command such as this:</li>
 </ul>
@@ -210,9 +211,10 @@
 </li>
 <li><p><strong>Example 3:</strong> Perform a full recon-all on a pre-existing subject folder</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span>&gt; export SUBJECTS_DIR=&lt;path to subject directory&gt;</span><br><span class="line"><span class="meta">$</span>&gt; recon-all -s bert -all</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">...</span><br><span class="line">Started at 2019年 07月 17日 星期三 21:38:11 CST </span><br><span class="line">Ended   at 2019年 07月 18日 星期四 02:40:42 CST</span><br><span class="line"><span class="meta">#</span>@#%# recon-all-run-time-hours 5.042</span><br><span class="line">recon-all -s bert finished without error at 2019年 07月 18日 星期四 02:40:42 CST</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
 </li>
 <li><p><strong>Example 4:</strong> View the output volumes, surfaces and subcortical segmentation of the fully recon-ed subject bert.</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span>&gt; cd $SUBJECTS_DIR</span><br><span class="line"><span class="meta">$</span>&gt; freeview -v \</span><br><span class="line">    bert/mri/T1.mgz \</span><br><span class="line">    bert/mri/wm.mgz \</span><br><span class="line">    bert/mri/brainmask.mgz \</span><br><span class="line">    bert/mri/aseg.mgz:colormap=lut:opacity=0.2 \</span><br><span class="line">    -f \</span><br><span class="line">    bert/surf/lh.white:edgecolor=blue \</span><br><span class="line">    bert/surf/lh.pial:edgecolor=red \</span><br><span class="line">    bert/surf/rh.white:edgecolor=blue \</span><br><span class="line">    bert/surf/rh.pial:edgecolor=red</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span>&gt; cd $SUBJECTS_DIR</span><br><span class="line"><span class="meta">$</span>&gt; freeview -v \</span><br><span class="line">    bert/mri/T1.mgz \</span><br><span class="line">    bert/mri/wm.mgz \</span><br><span class="line">    bert/mri/brainmask.mgz \</span><br><span class="line">    bert/mri/aseg.mgz:colormap=lut:opacity=0.2 \</span><br><span class="line">    -f \</span><br><span class="line">    bert/surf/lh.white:edgecolor=blue \</span><br><span class="line">    bert/surf/lh.pial:edgecolor=red \</span><br><span class="line">    bert/surf/rh.white:edgecolor=blue \</span><br><span class="line">    bert/surf/rh.pial:edgecolor=red</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> -v -- Volumes  # -f -- Surfaces</span><br></pre></td></tr></table></figure>
 <ul>
 <li><p><code>freeview.bin: error while loading shared libraries: libpng12.so.0: cannot open shared object file: No such file or directory</code>：Download the shared library from <a href="https://packages.ubuntu.com/xenial/amd64/libpng12-0/download" target="_blank" rel="noopener">https://packages.ubuntu.com/xenial/amd64/libpng12-0/download</a></p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo dpkg -i libpng12-0_1.2.54-1ubuntu1.1_amd64.deb</span><br></pre></td></tr></table></figure>
@@ -237,7 +239,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2019-07-17T14:46:52.326Z" itemprop="dateUpdated">2019-07-17 22:46:52</time>
+    Last updated: <time datetime="2019-07-18T05:37:51.219Z" itemprop="dateUpdated">2019-07-18 13:37:51</time>
 </span><br>
 
 
@@ -316,7 +318,14 @@
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2019/07/18/Application-of-Machine-Learning-to-Arterial-Spin-Labeling-in-Mild-Cognitive-Impairment-and-Alzheimer-Disease-翻译/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Application-of-Machine-Learning-to-Arterial-Spin-Labeling-in-Mild-Cognitive-Impairment-and-Alzheimer-Disease-翻译</h4>
+      </a>
+    </div>
   
 
   
