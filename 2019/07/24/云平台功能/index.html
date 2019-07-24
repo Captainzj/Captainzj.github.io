@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>云平台功能 | Go Further | Stay Hungry, Stay Foolish</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#142421">
+    
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="【阅读时间】XXX min XXX words【阅读内容】……">
+<meta property="og:type" content="article">
+<meta property="og:title" content="云平台功能">
+<meta property="og:url" content="http://yoursite.com/2019/07/24/云平台功能/index.html">
+<meta property="og:site_name" content="Go Further">
+<meta property="og:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-07-24T03:45:34.070Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="云平台功能">
+<meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
+    
+        <link rel="alternate" type="application/atom+xml" title="Go Further" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">CaptainSE</h5>
+          <a href="mailto:841145636@qq.com" title="841145636@qq.com" class="mail">841145636@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                Home
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/Captainzj" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">云平台功能</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">云平台功能</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-07-24T02:59:41.000Z" itemprop="datePublished" class="page-time">
+  2019-07-24
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#热力图叠加"><span class="post-toc-number">1.</span> <span class="post-toc-text">热力图叠加</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#npy-2-png-without-padding"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">.npy 2 .png without padding</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#背景透明化"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">背景透明化</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#扩展链接"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">扩展链接</span></a></li></ol></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-云平台功能"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">云平台功能</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2019-07-24 10:59:41" datetime="2019-07-24T02:59:41.000Z"  itemprop="datePublished">2019-07-24</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>【阅读时间】XXX min XXX words<br>【阅读内容】……</p>
+<a id="more"></a>
+<h3 id="热力图叠加"><a href="#热力图叠加" class="headerlink" title="热力图叠加"></a>热力图叠加</h3><h4 id="npy-2-png-without-padding"><a href="#npy-2-png-without-padding" class="headerlink" title=".npy 2 .png without padding"></a>.npy 2 .png without padding</h4><ul>
+<li><p><strong>Recommended:</strong> </p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">plt.imsave(savepath, img_array. cmap=<span class="string">'rainbow'</span>)  <span class="comment"># cmap -- colormap</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Others without padding:</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> scipy.misc</span><br><span class="line">scipy.misc.imsave(savepath, img_array) <span class="comment"># Use ``imageio.imwrite`` instead</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> imageio</span><br><span class="line">imageio.imwirte(savepath, img_array)  <span class="comment"># Lossy conversion from float64 to uint8</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> PIL.Image <span class="keyword">as</span> Image</span><br><span class="line">img = Image.fromarray(img_array.astype(<span class="string">'uint8'</span>)).convert(<span class="string">"RGB"</span>)</span><br><span class="line">img.save(savepath, cmap=<span class="string">'rainbow'</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Others with padding</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">plt.figure()</span><br><span class="line">plt.axis(<span class="string">'off'</span>)  <span class="comment"># 仅不可见，但依旧存在</span></span><br><span class="line">plt.imshow(img_array, cmap=<span class="string">'bone'</span>)</span><br><span class="line">plt.savefig(savepath, bbox_inched=<span class="string">'tight'</span>)</span><br><span class="line"><span class="comment"># plt.show()</span></span><br></pre></td></tr></table></figure>
+<p><a href="https://blog.csdn.net/jifaley/article/details/79687000" target="_blank" rel="noopener">plt.savefig() 输出图片去除旁边的空白区域</a> 未测试</p>
+</li>
+</ul>
+<h4 id="背景透明化"><a href="#背景透明化" class="headerlink" title="背景透明化"></a>背景透明化</h4><p>参考：<a href="https://blog.csdn.net/qq_40878431/article/details/82941982" target="_blank" rel="noopener"> Python PIL.Image之修改图片背景为透明</a></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> PIL.Image <span class="keyword">as</span> Image</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 以第一个像素为准，相同色改为透明</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">transparent_back</span><span class="params">(img)</span>:</span></span><br><span class="line">    img = img.convert(<span class="string">'RGBA'</span>)</span><br><span class="line">    L, H = img.size</span><br><span class="line">    color_0 = img.getpixel((<span class="number">0</span>,<span class="number">0</span>))</span><br><span class="line">    <span class="keyword">for</span> h <span class="keyword">in</span> range(H):</span><br><span class="line">        <span class="keyword">for</span> l <span class="keyword">in</span> range(L):</span><br><span class="line">            dot = (l,h)</span><br><span class="line">            color_1 = img.getpixel(dot)</span><br><span class="line">            <span class="keyword">if</span> color_1 == color_0:</span><br><span class="line">                color_1 = color_1[:<span class="number">-1</span>] + (<span class="number">0</span>,)</span><br><span class="line">                img.putpixel(dot,color_1)</span><br><span class="line">    <span class="keyword">return</span> img</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    img=Image.open(<span class="string">'round.png'</span>)</span><br><span class="line">    img=transparent_back(img)</span><br><span class="line">    img.save(<span class="string">'round2.png'</span>)</span><br></pre></td></tr></table></figure>
+<h5 id="扩展链接"><a href="#扩展链接" class="headerlink" title="扩展链接"></a>扩展链接</h5><ul>
+<li><p><a href="https://blog.csdn.net/JNingWei/article/details/78241973" target="_blank" rel="noopener">opencv: 图片 设置 透明度 并 叠加(cv2.addWeighted)</a></p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">cv2.addWeighted(src1, alpha, src2, beta, gamma[, dst[, dtype]]) → dst.</span><br></pre></td></tr></table></figure>
+<p>其中，<code>alpha</code> 为 <code>src1</code> 透明度，<code>beta</code> 为 <code>src2</code> 透明度.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># coding=utf-8</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 底板图案</span></span><br><span class="line">bottom_pic = <span class="string">'elegent.jpg'</span></span><br><span class="line"><span class="comment"># 上层图案</span></span><br><span class="line">top_pic = <span class="string">'lena.jpg'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line">bottom = cv2.imread(bottom_pic)</span><br><span class="line">top = cv2.imread(top_pic)</span><br><span class="line"><span class="comment"># 权重越大，透明度越低</span></span><br><span class="line">overlapping = cv2.addWeighted(bottom, <span class="number">0.8</span>, top, <span class="number">0.2</span>, <span class="number">0</span>)</span><br><span class="line"><span class="comment"># 保存叠加后的图片</span></span><br><span class="line">cv2.imwrite(<span class="string">'overlap(8:2).jpg'</span>, overlapping)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><a href="https://blog.csdn.net/m0_37606112/article/details/78632896" target="_blank" rel="noopener">opencv3.3.1+python3.6.3图像上添加背景透明logo</a></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">import cv2</span><br><span class="line">import numpy as np</span><br><span class="line">import math</span><br><span class="line"></span><br><span class="line">cv2.namedWindow("logo")  #定义一个窗口</span><br><span class="line">frame=cv2.imread('girl.png') #捕获图像1</span><br><span class="line">logo=cv2.imread('logo.jpg')</span><br><span class="line">logo_gray=cv2.cvtColor(logo,cv2.COLOR_BGR2GRAY)</span><br><span class="line">rows,cols,channels = logo.shape</span><br><span class="line"></span><br><span class="line">dx,dy=120,150  # roi初始坐标</span><br><span class="line">roi=frame[dx:dx+cols,dy:dy+rows]</span><br><span class="line">for i in range(cols):</span><br><span class="line">    for j in range(rows):</span><br><span class="line">        if (logo[i,j][0]+logo[i,j][1]+logo[i,j][2])&lt;=20:roi[i,j]=roi[i,j]</span><br><span class="line">        else:roi[i,j]=logo[i,j]</span><br><span class="line"><span class="meta">#</span><span class="bash">roi=cv2.addWeighted(logo,0.5,roi,0.5,1)</span></span><br><span class="line"><span class="meta">#</span><span class="bash">roi=cv2.add(logo,roi)</span></span><br><span class="line">frame[dx:dx+cols,dy:dy+rows]=roi</span><br><span class="line"></span><br><span class="line">cv2.imshow("logo",frame)#显示轮廓</span><br><span class="line"></span><br><span class="line">cv2.waitKey(0)</span><br><span class="line">cv2.destroyAllWindows()</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2019-07-24T03:45:34.070Z" itemprop="dateUpdated">2019-07-24 11:45:34</time>
+</span><br>
+
+
+        
+    </div>
+    
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/avatar.jpg" alt="CaptainSE">
+            CaptainSE
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/07/24/云平台功能/&title=《云平台功能》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/07/24/云平台功能/&title=《云平台功能》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/07/24/云平台功能/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《云平台功能》 — Go Further&url=http://yoursite.com/2019/07/24/云平台功能/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2019/07/24/云平台功能/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2019/07/19/Multimodal-Neuroimaging-Feature-Learning-for-Multiclass-Diagnosis-of-Alzheimer’s-Disease-翻译/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Multimodal-Neuroimaging-Feature-Learning-for-Multiclass-Diagnosis-of-Alzheimer’s-Disease-翻译</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢老板~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>CaptainSE &copy; 2015 - 2019</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/07/24/云平台功能/&title=《云平台功能》 — Go Further&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/07/24/云平台功能/&title=《云平台功能》 — Go Further&source=【阅读时间】XXX min XXX words【阅读内容】……" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/07/24/云平台功能/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《云平台功能》 — Go Further&url=http://yoursite.com/2019/07/24/云平台功能/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2019/07/24/云平台功能/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACMElEQVR42u3azW6EMAxF4Xn/l6ZSV10McK6dGZX4sEKDGvhSyfJPXi98Hb/X33v+y9nTs7ecPV1wyZAh47GM4/I6Y/SpZ6uR7XjzDTJkyBjA4J9FPqXGS0OzDBkyZFwvd/ZL56NrwV2GDBkyrj+IfxwP3DJkyJDRKWKDkhKvXwvQMmTImMaoDQa+c//x+YYMGTL+PeMIL7JO2nRLw/qbv5UhQ8bWDN5K4018Uuj2j3G8SF0rQ4aMjRhpwystO9OAy0P5zX9GhgwZWzC4lb+gBuA7fZPhypAhYwCjNh6opYbkF9SMkyFDxgBGmoqlLyOhuZOMypAhYw6Dv2ZVMCXro82SIUPG1oy1jTCeRPLBZxD0ZciQsTWDH3TgRyjImqsOZMiQIWNvRqcQTVtytbBLymkZMmTMYZB7zguaZSARvGHLkCFjJIOXjumxCX5PimQZMmRMYPA2WW14WduO2gBVhgwZezNuSsSwZZ9uTf+ghgwZMuYw+ACyHy5bKeB1WJchQ8Z2DF6UxrvSSBmDRpsMGTLGMD5d0KYjh3hcIUOGjK0ZBNNJH9cWyUFuK0OGjI0YR3ilLTBepvKS+M1TGTJkbM3ohDkefPsrLwDIkCHj4YzaiLHTpOOBm6ebMmTImMDgJWutrb/2MAfqHcqQIWMkg6dr6cCA980WBFwZMmQMYPDkr3awg4faVsCVIUPGAxl8GEBez49i9IepMmTImMBIC0gOSJNLvmULRpgyZMh4BuMHdmJ/rTia6uMAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = 'Go Further | Stay Hungry, Stay Foolish';
+            clearTimeout(titleTime);
+        } else {
+            document.title = 'Go Further | Stay Hungry, Stay Foolish';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
