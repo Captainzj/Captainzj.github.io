@@ -31,7 +31,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/Users/Captain/Downloads/Captainzj.github.io/source/_posts/FSL-Introduction/slicesdir-sample-001*.png">
 <meta property="og:image" content="http://yoursite.com/2019/07/15/FSL-Introduction/FSLeyes.png">
-<meta property="og:updated_time" content="2019-07-31T07:53:10.305Z">
+<meta property="og:updated_time" content="2019-07-31T13:38:45.992Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="FSL-Introduction">
 <meta name="twitter:description" content="【摘要】FSL is a comprehensive library of analysis tools for FMRI, MRI and DTI brain imaging data.">
@@ -288,8 +288,9 @@
 <ul>
 <li><strong>Registering T1-structural to MNI152</strong></li>
 </ul>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span> bet my_structural my_betted_structural  # output: my_betted_structural.nii.gz</span><br><span class="line"><span class="meta">$</span> flirt -ref $&#123;FSLDIR&#125;/data/standard/MNI152_T1_2mm_brain -in my_betted_structural -omat my_affine_transf.mat  # output: my_affine_transf.mat</span><br><span class="line"><span class="meta">$</span> fnirt --in=my_structural --aff=my_affine_transf.mat --cout=my_nonlinear_transf --config=T1_2_MNI152_2mm  # output: my_structural_to_MNI152_T1_2mm.log &amp;&amp; my_nonlinear_transf.nii.gz </span><br><span class="line"><span class="meta">$</span> applywarp --ref=$&#123;FSLDIR&#125;/data/standard/MNI152_T1_2mm --in=my_structural --warp=my_nonlinear_transf --out=my_warped_structural # output: my_warped_structural.nii.gz</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span> bet my_structural my_betted_structural  # output: my_betted_structural.nii.gz</span><br><span class="line"><span class="meta">$</span> flirt -ref $&#123;FSLDIR&#125;/data/standard/MNI152_T1_2mm_brain -in my_betted_structural -omat my_affine_transf.mat  # output: my_affine_transf.mat</span><br><span class="line"><span class="meta">$</span> fnirt --in=my_structural --aff=my_affine_transf.mat --cout=my_nonlinear_transf --config=T1_2_MNI152_2mm  # output: my_structural_to_MNI152_T1_2mm.log &amp;&amp; my_nonlinear_transf.nii.gz (about 3min)  # 非线性变换的输出</span><br><span class="line"><span class="meta">$</span> applywarp --ref=$&#123;FSLDIR&#125;/data/standard/MNI152_T1_2mm --in=my_structural --warp=my_nonlinear_transf --out=my_warped_structural # output: my_warped_structural.nii.gz  # 完成 struct-&gt;MNI152 映射</span><br></pre></td></tr></table></figure>
 <p>When you specify <code>--config=my_file</code>, ‘i.e.’ without explicit path or extension, <code>fnirt</code> will search for <code>./my_file</code>, <code>./my_file.cnf</code>, <code>${FSLDIR}/etc/flirtsch/my_fil</code>e and <code>${FSLDIR}/etc/flirtsch/my_file.cnf</code> in that order and use the first one that is found.</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span> bet my_structural my_betted_structural  # output: my_betted_structural.nii.gz</span><br><span class="line"><span class="meta">$</span> flirt -ref $&#123;FSLDIR&#125;/data/standard/MNI152_T1_2mm_brain -in my_betted_structural -omat my_affine_transf.mat  # output: my_affine_transf.mat</span><br><span class="line"><span class="meta">$</span> fnirt --in=my_betted_structural --aff=my_affine_transf.mat --cout=my_betted_nonlinear_transf --config=T1_2_MNI152_2mm  # output: my_betted_structural_to_MNI152_T1_2mm.log &amp;&amp; my_betted_nonlinear_transf.nii.gz (about 3min)</span><br><span class="line"><span class="meta">$</span> applywarp --ref=$&#123;FSLDIR&#125;/data/standard/MNI152_T1_2mm --in=my_betted_structural --warp=my_betted_nonlinear_transf --out=my_warped_betted_structural # output: my_warped_betted_structural.nii.gz</span><br></pre></td></tr></table></figure>
 <ul>
 <li><strong>Registering functional data (or any non-T1 image data) to MNI152 (via structural scan)</strong></li>
 </ul>
@@ -305,7 +306,7 @@
 <ul>
 <li><p>Step 0: Registering your functional data to the structural scan doing <em>e.g</em>. （FLIRT的作用）</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span> flirt -ref struct.nii -in func.nii -omat func2struct.mat -dof 6</span><br></pre></td></tr></table></figure>
-<p>Where the text-file func2struct.mat now contains the <code>rigid</code>(刚性) body transform that maps func.nii onto struct.nii.   <code>FLIRT，即刚性校准</code></p>
+<p>Where the text-file func2struct.mat now contains the <code>rigid</code>(刚性) body transform that maps <code>func.nii</code>onto <code>struct.nii</code>.   <code>FLIRT，即刚性校准</code> </p>
 </li>
 <li><p>Step 1: Get an intial affine transform mapping struct.nii onto the MNI152 template.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span> bet struct.nii betted_struct.nii </span><br><span class="line"><span class="meta">$</span> flirt -ref MNI152_T1_2mm_brain.nii -in betted_struct.nii -omat aff_struct2mni.mat</span><br></pre></td></tr></table></figure>
@@ -318,7 +319,61 @@
 <p>We are now feeding applywarp information both about the <code>struct-&gt;MNI152</code> mapping and about the <code>func-&gt;struct</code> mapping allowing it to map <code>from func to MNI152</code> in a single step.</p>
 </li>
 </ul>
-<h4 id="磁共振影像分析之-基于FSL的VBM分析-1-2"><a href="#磁共振影像分析之-基于FSL的VBM分析-1-2" class="headerlink" title="磁共振影像分析之: 基于FSL的VBM分析(1) (2)"></a>磁共振影像分析之: 基于FSL的VBM分析<a href="https://blog.csdn.net/happyhorizion/article/details/79886554" target="_blank" rel="noopener">(1)</a> <a href="https://blog.csdn.net/happyhorizion/article/details/80529235" target="_blank" rel="noopener">(2)</a></h4><h4 id="SIENA-amp-SIENAX"><a href="#SIENA-amp-SIENAX" class="headerlink" title="SIENA &amp; SIENAX"></a><a href="https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/SIENA" target="_blank" rel="noopener">SIENA &amp; SIENAX</a></h4><h4 id="核磁数据处理之-FSL数据快视"><a href="#核磁数据处理之-FSL数据快视" class="headerlink" title="核磁数据处理之: FSL数据快视"></a><a href="https://blog.csdn.net/happyhorizion/article/details/79855747" target="_blank" rel="noopener">核磁数据处理之: FSL数据快视</a></h4><blockquote>
+<p><strong>Questions：</strong></p>
+<ul>
+<li>what’s the difference between <code>func.nii</code> and <code>struct.nii</code> ?</li>
+</ul>
+<h4 id="磁共振影像分析之-基于FSL的VBM分析-1-2"><a href="#磁共振影像分析之-基于FSL的VBM分析-1-2" class="headerlink" title="磁共振影像分析之: 基于FSL的VBM分析(1) (2)"></a>磁共振影像分析之: 基于FSL的VBM分析<a href="https://blog.csdn.net/happyhorizion/article/details/79886554" target="_blank" rel="noopener">(1)</a> <a href="https://blog.csdn.net/happyhorizion/article/details/80529235" target="_blank" rel="noopener">(2)</a></h4><p>VBM (voxel-based morphometry )将每个人的大脑都形成一个<code>模板</code>, 避免了人与人之间较大的解剖学差异, 并将结果经过平滑处理, 使得每个体素都代表它和邻居的平均值, 然后对不同个体间进行体素水平的比较.</p>
+<p>VBM可以在体素水平上定量检测出脑组织的密度和体积,反映不同群体或者个体局部脑区的脑组织成分与特征的差异. 目前, VBM已经广泛应用与描绘大脑结构的细微变化. </p>
+<p>VBM的预处理流程可以大致总结为:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1) 从原始图像产生平均模板，也就是后文中提到的subject-specific模板 </span><br><span class="line">2) 配准：将所有的原始图像通过仿射变换配准到1）生成的模板上 </span><br><span class="line">3) 组织分割：灰质，白质和脑脊液 </span><br><span class="line">4) 保持体积调制 </span><br><span class="line">5) 平滑处理, 用各向同性的高斯核 </span><br><span class="line">6) 统计分析</span><br></pre></td></tr></table></figure>
+<p><strong>A - Prepare your data for the FSL-VBM study</strong></p>
+<p>It’s a good idea to consider your cross-subject statistical model <strong>before</strong> you run the FSL-VBM analysis. So you should at this point create your <code>design.mat</code> and <code>design.con</code> in your FSL-VBM directory; see the <a href="https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/Randomise" target="_blank" rel="noopener">randomise manual</a>.</p>
+<p><strong>B - Extracting brain information: fslvbm_1_bet</strong></p>
+<ul>
+<li><p>get <code>default</code> BET behaviour</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">fslvbm_1_bet -b</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><p>if your images include a lot of neck (which most of the time confounds混淆 the BET preprocessing).</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">fslvbm_1_bet -N</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><strong>C - Creating the template: fslvbm_2_template</strong></p>
+<ul>
+<li><p>create a template based on an <code>affine registration</code> of GM images to the GM ICBM-152 template (After flirt)</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">fslvbm_2_template -a</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>create a template based on a <code>non-linear registration</code> (After fnirt)</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">fslvbm_2_template -n</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><strong>D - Processing the native GM images: fslvbm_3_proc</strong></p>
+<blockquote>
+<p>统计分析组间差异</p>
+</blockquote>
+<ul>
+<li><p>By default fslvbm_3_proc concatenates the images in alphabetical order (following the names that they started with); make sure this matches the subject ordering assumed in your design.mat model.</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">fslvbm_3_proc</span><br></pre></td></tr></table></figure>
+<p>Please do not forget the final <strong>CHECK</strong> of the 4D image of modulated registered GM images “GM_mod_merg” using the movie loop in fslview.</p>
+<p><code>$FSLDIR/bin/fslvbm_3_proc. shell</code>脚本中, 采用cat命令配合EOF符号生成了另两个脚本: fslvbm3a 和fslvbm3b . 值得一提的是, 这里采用<code>fsl_sub</code>命令调用并行计算进行计算加速. 但是这个命令是基于<code>Sun grid cluster</code>的, 所以对于普通的台式机, 或者工作站, 建议将这一步去掉, <code>直接运行fslvbm3a或者fslvbm3b</code>.</p>
+</li>
+</ul>
+<p><strong>E - Obtaining and displaying your FSL-VBM results</strong></p>
+<ul>
+<li><p><strong>E1 - Running randomise and displaying TFCE-based thresholding results</strong></p>
+<p>1.为基于TFCE的分析选择最合适的平滑（例如，sigma = 3mm）。 如果要应用与已应用的平滑不同的平滑，可以使用以下方法（例如，sigma = 3.5mm）：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">fslmaths GM_mod_merg -s 3.5 GM_mod_merg_s3.5</span><br></pre></td></tr></table></figure>
+<p>2.选择了最合适的平滑（例如sigma = 3mm）后，运行randomise，例如：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">randomise -i GM_mod_merg_s3 -m GM_mask -o fslvbm -d design.mat -t design.con -T -n 5000</span><br></pre></td></tr></table></figure>
+<p>3.可以在FSLView中查看（1-p）校正的p值图像：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">fslview $FSLDIR/data/standard/MNI152_T1_2mm fslvbm_tfce_corrp_tstat1 -l Red-Yellow -b 0.949,1</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>E2 - Running randomise and displaying cluster-based thresholding results</strong></p>
+</li>
+</ul>
+<h4 id="SIENA-amp-SIENAX"><a href="#SIENA-amp-SIENAX" class="headerlink" title="SIENA &amp; SIENAX"></a><a href="https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/SIENA" target="_blank" rel="noopener">SIENA &amp; SIENAX</a></h4><h4 id="核磁数据处理之-FSL数据快视"><a href="#核磁数据处理之-FSL数据快视" class="headerlink" title="核磁数据处理之: FSL数据快视"></a><a href="https://blog.csdn.net/happyhorizion/article/details/79855747" target="_blank" rel="noopener">核磁数据处理之: FSL数据快视</a></h4><blockquote>
 <p>将其中一些切片拿出来在html中批量显示, 一个NifTI文件对应一排切片图像, 这样就可以到达快速检查的目的. </p>
 </blockquote>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span> slicesdir sample-001*</span><br><span class="line"></span><br><span class="line">sample-001_brain_fast_seg_1</span><br><span class="line">sample-001_brain_fast_seg</span><br><span class="line">sample-001_brain</span><br><span class="line">sample-001</span><br><span class="line"></span><br><span class="line">Finished. To view, point your web browser at</span><br><span class="line">file:/home/captain/Desktop/7_30_fsl/slicesdir/index.html</span><br></pre></td></tr></table></figure>
@@ -354,7 +409,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2019-07-31T07:53:10.305Z" itemprop="dateUpdated">2019-07-31 15:53:10</time>
+    Last updated: <time datetime="2019-07-31T13:38:45.992Z" itemprop="dateUpdated">2019-07-31 21:38:45</time>
 </span><br>
 
 
