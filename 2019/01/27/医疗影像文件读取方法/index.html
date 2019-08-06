@@ -35,7 +35,7 @@
 <meta property="og:image" content="http://yoursite.com/2019/01/27/医疗影像文件读取方法/nrrd_visualization_normal.png">
 <meta property="og:image" content="http://yoursite.com/2019/01/27/医疗影像文件读取方法/nii_example.png">
 <meta property="og:image" content="http://yoursite.com/2019/01/27/医疗影像文件读取方法/show_slice_image.png">
-<meta property="og:updated_time" content="2019-08-01T07:40:34.160Z">
+<meta property="og:updated_time" content="2019-08-01T09:47:42.890Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="医疗影像文件读取方法">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
@@ -253,6 +253,9 @@
 
 
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> nibabel <span class="keyword">as</span> nib</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line"><span class="comment"># show the nii_data.shape</span></span><br><span class="line">nii_file = <span class="string">"ADNI_011_S_0010_MR_MPR__GradWarp__B1_Correction__N3__Scaled_Br_20061208114538147_S8800_I32270.nii"</span></span><br><span class="line">data = nib.load(nii_file)   <span class="comment"># data.shape (192, 192, 160)  # data.affine.shape (4, 4)</span></span><br><span class="line">img = data.get_fdata()  </span><br><span class="line">img = np.squeeze(img)   <span class="comment"># img.shape (192, 192, 160)</span></span><br><span class="line"><span class="comment"># print(data.header) #数据头信息 </span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取slice信息生成图像</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">show_img</span><span class="params">(slices)</span>:</span></span><br><span class="line">    fig, axes = plt.subplots(<span class="number">1</span>, len(slices))</span><br><span class="line">    <span class="keyword">for</span> i, slice <span class="keyword">in</span> enumerate(slices):</span><br><span class="line">        axes[i].imshow(slice.T, cmap=<span class="string">"gray"</span>, origin=<span class="string">"lower"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#读取nifti文件中的slice数据</span></span><br><span class="line">data = nib.load(nii_file)</span><br><span class="line">img = data.get_fdata()</span><br><span class="line"></span><br><span class="line"><span class="comment">#获取单张slice数据</span></span><br><span class="line">slice_0 = img[<span class="number">26</span>, :, :]</span><br><span class="line">slice_1 = img[:, <span class="number">30</span>, :]</span><br><span class="line">slice_2 = img[:, :, <span class="number">16</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">#生成图表</span></span><br><span class="line">show_img([slice_0, slice_1, slice_2])</span><br><span class="line">plt.suptitle(<span class="string">"show slice image"</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>nib.load()</code>读取文件，会将图像向左旋转90°  （一般不推荐使用，使用<code>sitk.ReadImage()</code>即可）</li>
+</ul>
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
@@ -286,7 +289,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2019-08-01T07:40:34.160Z" itemprop="dateUpdated">2019-08-01 15:40:34</time>
+    Last updated: <time datetime="2019-08-01T09:47:42.890Z" itemprop="dateUpdated">2019-08-01 17:47:42</time>
 </span><br>
 
 
