@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-08-09T15:21:48.157Z</updated>
+  <updated>2019-08-13T13:37:24.573Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AD-Papers-2</title>
+    <link href="http://yoursite.com/2019/08/13/AD-Papers-2/"/>
+    <id>http://yoursite.com/2019/08/13/AD-Papers-2/</id>
+    <published>2019-08-13T12:01:33.000Z</published>
+    <updated>2019-08-13T13:37:24.573Z</updated>
+    
+    <content type="html"><![CDATA[<p>【阅读时间】XXX min XXX words<br>【阅读内容】……</p><a id="more"></a><h4 id="Alzheimer’s-amp-Dementia"><a href="#Alzheimer’s-amp-Dementia" class="headerlink" title="Alzheimer’s &amp; Dementia"></a>Alzheimer’s &amp; Dementia</h4><h5 id="A-deep-learning-model-for-early-prediction-of-Alzheimer’s-disease-dementia-based-on-hippocampal-MRI"><a href="#A-deep-learning-model-for-early-prediction-of-Alzheimer’s-disease-dementia-based-on-hippocampal-MRI" class="headerlink" title="A deep learning model for early prediction of Alzheimer’s disease dementia based on hippocampal MRI"></a><strong>A deep learning model for early prediction of Alzheimer’s disease dementia based on hippocampal MRI</strong></h5><blockquote><p>基于海马MRI的早期预测阿尔茨海默病痴呆的深度学习模型</p></blockquote><p><strong>Abstract</strong></p><p><strong>Introduction:</strong> 在基线时难以预测何时以及符合轻度认知障碍（MCI）标准的个体最终会进展为阿尔茨海默病（AD）痴呆症.</p><p><strong>Methods: </strong>基于2146名受试者的MRI扫描（803名用于训练，1343名用于验证）开发和验证深度学习方法，以在时间 - 事件分析设置中预测MCI受试者进展为AD痴呆。</p><p><strong>Results:</strong> 深度学习时间 - 事件模型预测个体受试者进展为AD痴呆，进展为439 ADNI测试MCI受试者的一致性指数（C指数）为0.762，随访时间为6至78个月（四分位数：[ 24,42,54]和40个AIBL测试MCI受试者的C指数为0.781，随访时间为18-54个月（四分位数：[18,36,54]）。预测的进展风险还将个体受试者聚集成亚组，其与AD痴呆的进展时间存在显着差异（p &lt;0.0002）。当基于深度学习的进展风险与基线临床测量相结合时，获得了用于预测AD痴呆进展的改善的表现（C-指数= 0.864）。</p><p><strong>Conclusion:</strong> 我们的方法提供了一种具有成本效益和准确的预后手段，并有可能促进临床试验中与可能在特定时间段内进展的个体的登记。</p><p><strong>Keywords:</strong> 深度学习;海马;时间分析;阿尔茨海默氏病</p><center><br>  <img src="/2019/08/13/AD-Papers-2/hippocampal_MRI_Fig_1.png" width="500"><br></center><h5 id="EARLY-PREDICTION-OF-ALZHEIMER’S-DISEASE-DEMENTIA-BASED-ON-BASELINE-HIPPOCAMPAL-MRI-AND-1-YEAR-FOLLOW-UP-COGNITIVE-MEASURES-USING-DEEP-RECURRENT-NEURAL-NETWORKS"><a href="#EARLY-PREDICTION-OF-ALZHEIMER’S-DISEASE-DEMENTIA-BASED-ON-BASELINE-HIPPOCAMPAL-MRI-AND-1-YEAR-FOLLOW-UP-COGNITIVE-MEASURES-USING-DEEP-RECURRENT-NEURAL-NETWORKS" class="headerlink" title="EARLY PREDICTION OF ALZHEIMER’S DISEASE DEMENTIA BASED ON BASELINE HIPPOCAMPAL MRI AND 1-YEAR FOLLOW-UP COGNITIVE MEASURES USING DEEP RECURRENT NEURAL NETWORKS"></a>EARLY PREDICTION OF ALZHEIMER’S DISEASE DEMENTIA BASED ON BASELINE HIPPOCAMPAL MRI AND 1-YEAR FOLLOW-UP COGNITIVE MEASURES USING DEEP RECURRENT NEURAL NETWORKS</h5><blockquote><p>基于基线海马MRI的阿尔茨海默病痴呆早期预测及使用深度回归神经网络的1年随访认知测量</p></blockquote><p><strong>ABSTRACT</strong></p><p>多模式生物学，成像和神经心理学标志物已经证明了区分阿尔茨海默病（AD）患者和认知正常老年人的有希望的表现。然而，仍然难以早期预测何时以及哪些轻度认知障碍（MCI）个体将转变为AD痴呆。通过模式分类研究表明，建立在<code>纵向数据上的模式分类器</code>可以获得比基于横截面数据的模式分类器更好的分类性能，我们开发了基于递归神经网络（<code>RNN</code>）的深度学习模型，以学习信息表示和时间动态对个体受试者进行纵向认知测量，并将其与基线海马MRI相结合，建立AD痴呆进展的预后模型。大量MCI受试者的实验结果表明，深度学习模型可以从纵向数据中学习信息量度，用于表征MCI受试者进展为AD痴呆的过程，预后模型可以高精度地早期<code>预测AD进展</code>。</p><center><br>  <img src="/2019/08/13/AD-Papers-2/DEEP_RECURRENT_NEURAL_NETWORKS_Fig_1.png" width="250"><br>  <img src="/2019/08/13/AD-Papers-2/DEEP_RECURRENT_NEURAL_NETWORKS_Fig_2.png" width="250"><br></center><h4 id="Elsevier-Medical-Image-Analysis"><a href="#Elsevier-Medical-Image-Analysis" class="headerlink" title="Elsevier(Medical Image Analysis)"></a>Elsevier(Medical Image Analysis)</h4><h5 id="Disease-prediction-using-graph-convolutional-networks-Application-to-Autism-Spectrum-Disorder-and-Alzheimer’s-disease"><a href="#Disease-prediction-using-graph-convolutional-networks-Application-to-Autism-Spectrum-Disorder-and-Alzheimer’s-disease" class="headerlink" title="Disease prediction using graph convolutional networks: Application to Autism Spectrum Disorder and Alzheimer’s disease"></a>Disease prediction using graph convolutional networks: Application to Autism Spectrum Disorder and Alzheimer’s disease</h5><blockquote><p>使用图卷积网络的疾病预测：应用于自闭症谱系障碍和阿尔茨海默病</p></blockquote><p><strong>ABSTRACT</strong></p><p>图被广泛用作自然框架，其捕获在图中表示为节点的各个元素之间的交互。在医学应用中，具体地，节点可以代表具有一组特征的潜在大群体（患者或健康对照）内的个体，而图形边缘以直观方式结合对象之间的关联。该表示允许在疾病分类任务中同时包含丰富的成像和非成像信息以及个体主题特征。以前基于图的方法用于在疾病预测的背景下进行监督或无监督学习仅关注于受试者之间的成对相似性，忽视个体特征和特征，或者更确切地说依赖于特定于受试者的成像特征向量并且不能模拟它们之间的相互作用。在本文中，我们对通用框架进行了全面评估，该框架利用成像和非成像信息，可用于大量人群的大脑分析。该框架利用图形卷积网络（<code>GCN</code>）并涉及将种群表示为稀疏图，其中其节点与基于成像的特征向量相关联，而表型信息被集成为边缘权重。广泛的评估探讨了该框架的每个组成部分对疾病预测绩效的影响，并进一步将其与不同的基线进行比较。框架性能在两个具有不同基础数据ABIDE和ADNI的大型数据集上进行测试，分别用于预测自闭症谱系障碍和转变为阿尔茨海默病。我们的分析表明，我们的新框架可以提高两个数据库的最新结果，ABIDE的分类准确率为70.4％，<code>ADNI的分类准确率为80.0％</code>。</p><center><br>  <img src="/2019/08/13/AD-Papers-2/graph_convolutional_networks_Fig_1.png" width="250"><br>  <img src="/2019/08/13/AD-Papers-2/graph_convolutional_networks_Fig_2_3.png" width="250"><br></center><h5 id="Fast-predictive-simple-geodesic-regression"><a href="#Fast-predictive-simple-geodesic-regression" class="headerlink" title="Fast predictive simple geodesic regression"></a>Fast predictive simple geodesic regression</h5><blockquote><p>快速预测简单测地回归</p></blockquote><p><strong>ABSTRACT</strong></p><p>可变形图像配准和回归是医学图像分析中的重要任务。但是，它们的计算成本很高，尤其是在分析包含数千个图像的大型数据集时。因此，通常使用集群计算，使得这些方法依赖于这种计算基础设施。随着研究规模的增加，甚至需要更大的计算资源。这限制了可变形图像配准和回归在临床应用中的使用以及作为其他图像分析方法的组合算法。因此，我们建议<code>使用快速预测方法来执行图像配准</code>。特别是，我们采用这些快速配准预测来近似简化的测地回归模型来捕捉<code>纵向大脑变化</code>。得到的方法比基于标准优化的回归模型<code>快</code>几个数量级，因此有助于在单个图形处理单元（GPU）上进行大规模分析。我们从ADNI数据集评估我们对3D脑磁共振图像（MRI）的结果。</p><center><br>  <img src="/2019/08/13/AD-Papers-2/geodesic_regression_Fig_1.png" width="450"><br>  <img src="/2019/08/13/AD-Papers-2/geodesic_regression_Fig_2.png" width="450"><br></center><h5 id="Landmark-based-deep-multi-instance-learning-for-brain-disease-diagnosis"><a href="#Landmark-based-deep-multi-instance-learning-for-brain-disease-diagnosis" class="headerlink" title="Landmark-based deep multi-instance learning for brain disease diagnosis"></a>Landmark-based deep multi-instance learning for brain disease diagnosis</h5>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;【阅读时间】XXX min XXX words&lt;br&gt;【阅读内容】……&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Paper" scheme="http://yoursite.com/categories/Paper/"/>
+    
+      <category term="ADNI" scheme="http://yoursite.com/categories/Paper/ADNI/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Multimodal-and-Multiscale-Deep-Neural-Networks-for-the-Early-Diagnosis-of-Alzheimer’s-Disease-using-structural-MR-and-FDG-PET-images</title>
@@ -411,24 +433,6 @@
     
     
       <category term="PyTorch" scheme="http://yoursite.com/tags/PyTorch/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>面经总结</title>
-    <link href="http://yoursite.com/2019/03/13/%E9%9D%A2%E7%BB%8F%E6%80%BB%E7%BB%93/"/>
-    <id>http://yoursite.com/2019/03/13/面经总结/</id>
-    <published>2019-03-13T12:56:45.000Z</published>
-    <updated>2019-03-13T12:59:17.618Z</updated>
-    
-    <content type="html"><![CDATA[<p>【阅读时间】XXX min XXX words<br>【阅读内容】……</p><a id="more"></a><h3 id="机器学习"><a href="#机器学习" class="headerlink" title="机器学习"></a>机器学习</h3><p><a href="https://blog.csdn.net/zongza/article/details/80167654" target="_blank" rel="noopener">【置顶】面试知识点</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;【阅读时间】XXX min XXX words&lt;br&gt;【阅读内容】……&lt;/p&gt;
-    
-    </summary>
-    
     
   </entry>
   
