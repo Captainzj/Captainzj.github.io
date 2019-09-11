@@ -28,7 +28,7 @@
 <meta property="og:site_name" content="Go Further">
 <meta property="og:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-11T09:15:58.933Z">
+<meta property="og:updated_time" content="2019-09-11T10:08:39.204Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Win10+Ubuntu18.04.md">
 <meta name="twitter:description" content="【阅读时间】XXX min XXX words【阅读内容】……">
@@ -118,7 +118,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="検索">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -357,6 +357,7 @@
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo snap install [pycharm-professional|pycharm-community] --classic</span><br></pre></td></tr></table></figure>
 <h3 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h3><p>ubuntu16.04 主题安装：<a href="https://blog.csdn.net/yato0514/article/details/78510363" target="_blank" rel="noopener">https://blog.csdn.net/yato0514/article/details/78510363</a></p>
 <p>【Ubuntu】Ubuntu16.04的主题和终端美化：<a href="https://blog.csdn.net/White_Idiot/article/details/78973575" target="_blank" rel="noopener">https://blog.csdn.net/White_Idiot/article/details/78973575</a></p>
+<p>Ubuntu16.04安装 oh-my-zsh：<a href="https://www.jianshu.com/p/4b4183ea452b" target="_blank" rel="noopener">https://www.jianshu.com/p/4b4183ea452b</a></p>
 <h3 id="Albert"><a href="#Albert" class="headerlink" title="Albert"></a>Albert</h3><p>Download: <a href="https://software.opensuse.org/download.html?project=home:manuelschneid3r&amp;package=albert" target="_blank" rel="noopener">https://software.opensuse.org/download.html?project=home:manuelschneid3r&amp;package=albert</a></p>
 <p>click the ‘Albert’ app ➜ setting ➜ 设置 <code>Hotkey</code> 、Theme: <code>Yosemite</code>、勾选Extensions服务</p>
 <h3 id="Ananconda3"><a href="#Ananconda3" class="headerlink" title="Ananconda3"></a>Ananconda3</h3><p>1.官网下载安装包<br>2.命令行安装</p>
@@ -387,6 +388,7 @@
 </ul>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span> pip install --upgrade pip</span><br><span class="line"><span class="meta">$</span> pip install torch==0.3.1</span><br></pre></td></tr></table></figure>
 <h2 id="Ubuntu-系统操作"><a href="#Ubuntu-系统操作" class="headerlink" title="Ubuntu 系统操作"></a>Ubuntu 系统操作</h2><h3 id="Ubuntu16-04-开放端口"><a href="#Ubuntu16-04-开放端口" class="headerlink" title="Ubuntu16.04 开放端口"></a>Ubuntu16.04 开放端口</h3><p><a href="https://blog.csdn.net/justheretobe/article/details/51843178" target="_blank" rel="noopener"><strong>ubuntu的ufw如何开放特定端口?</strong></a></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ubuntu16.04默认没有安装ssh，需要安装：</span><br><span class="line">1.sudo apt-get install openssh-server //安装命令</span><br><span class="line">2、ps -ef|grep ssh                            //查看启动ssh没有</span><br><span class="line">3、重启SSH服务：</span><br><span class="line">sudo /etc/init.d/ssh stop</span><br><span class="line">sudo /etc/init.d/ssh start</span><br><span class="line">4、客户端命令行登陆：ssh username@192.168.1.112 </span><br><span class="line">5、ssh配置文件位于/ etc/ssh/sshd_config，默认端口是22，你可以自己定义成其他端口号；</span><br></pre></td></tr></table></figure>
 
         </div>
 
@@ -395,7 +397,7 @@
     <div class="content">
         
 <span class="post-time">
-    最終更新：<time datetime="2019-09-11T09:15:58.933Z" itemprop="dateUpdated">2019-09-11 17:15:58</time>
+    Last updated: <time datetime="2019-09-11T10:08:39.204Z" itemprop="dateUpdated">2019-09-11 18:08:39</time>
 </span><br>
 
 
@@ -561,7 +563,7 @@
             
                 <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
             
-            <span>このブログの内容物は<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja">クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際ライセンスの下に提供されています</a></span>
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
         </p>
     </div>
     <div class="bottom">
