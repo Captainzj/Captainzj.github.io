@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-15T13:06:24.229Z</updated>
+  <updated>2019-09-19T12:55:00.132Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,13 +17,13 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Terminal_commands</title>
-    <link href="http://yoursite.com/2019/09/07/Terminal-commands/"/>
-    <id>http://yoursite.com/2019/09/07/Terminal-commands/</id>
+    <title>Common_Instructions</title>
+    <link href="http://yoursite.com/2019/09/07/Common_Instructions/"/>
+    <id>http://yoursite.com/2019/09/07/Common_Instructions/</id>
     <published>2019-09-07T08:51:49.000Z</published>
-    <updated>2019-09-15T13:06:24.229Z</updated>
+    <updated>2019-09-19T12:55:00.132Z</updated>
     
-    <content type="html"><![CDATA[<p>【阅读时间】XXX min XXX words<br>【阅读内容】……</p><a id="more"></a><h4 id="压缩-解压"><a href="#压缩-解压" class="headerlink" title="压缩\解压"></a>压缩\解压</h4><ul><li>tar</li></ul><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span> 压缩</span><br><span class="line">tar –zcvf file.tar.gz  file/</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 解压</span><br><span class="line">tar -zxvf file.tar.gz</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">-z：有gzip属性的</span><br><span class="line">-c: 建立压缩档案</span><br><span class="line">-x：解压</span><br><span class="line">-v：显示所有过程</span><br><span class="line">-f: 使用档案名字，切记，这个参数是最后一个参数，后面只能接档案名</span><br></pre></td></tr></table></figure><ul><li>zip</li></ul><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span> 压缩(-r: 递归压缩)</span><br><span class="line">zip -r mydata.zip mydata  </span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 解压至指定目录(mydatabak)</span><br><span class="line">unzip mydata.zip -d mydatabak</span><br></pre></td></tr></table></figure><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span> 删除压缩文件中smart.txt文件</span><br><span class="line">zip -d myfile.zip smart.txt</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 向压缩文件中myfile.zip中添加rpm_info.txt文件</span><br><span class="line">zip -m myfile.zip ./rpm_info.txt</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p>【阅读时间】XXX min XXX words<br>【阅读内容】……</p><a id="more"></a><h3 id="Terminal"><a href="#Terminal" class="headerlink" title="Terminal"></a>Terminal</h3><h4 id="压缩-解压"><a href="#压缩-解压" class="headerlink" title="压缩\解压"></a>压缩\解压</h4><ul><li>tar</li></ul><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span> 压缩</span><br><span class="line">tar –zcvf file.tar.gz  file/</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 解压</span><br><span class="line">tar -zxvf file.tar.gz</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">-z：有gzip属性的</span><br><span class="line">-c: 建立压缩档案</span><br><span class="line">-x：解压</span><br><span class="line">-v：显示所有过程</span><br><span class="line">-f: 使用档案名字，切记，这个参数是最后一个参数，后面只能接档案名</span><br></pre></td></tr></table></figure><ul><li>zip</li></ul><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span> 压缩(-r: 递归压缩)</span><br><span class="line">zip -r mydata.zip mydata  </span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 解压至指定目录(mydatabak)</span><br><span class="line">unzip mydata.zip -d mydatabak</span><br></pre></td></tr></table></figure><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span> 删除压缩文件中smart.txt文件</span><br><span class="line">zip -d myfile.zip smart.txt</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 向压缩文件中myfile.zip中添加rpm_info.txt文件</span><br><span class="line">zip -m myfile.zip ./rpm_info.txt</span><br></pre></td></tr></table></figure><h3 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h3><h4 id="删除目录"><a href="#删除目录" class="headerlink" title="删除目录"></a>删除目录</h4><ul><li>删除文件</li></ul><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line">os.remove(filepath)</span><br></pre></td></tr></table></figure><ul><li>递归删除目录</li></ul><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> shutil</span><br><span class="line">shutil.rmtree(dirpath)</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
